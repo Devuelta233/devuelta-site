@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Devuelta — Récupérez ce qui vous appartient</title>
+</head>
+<body>
+<header>
+<span class="logo">devuelta</span>
+<button id="exit" type="button">quitter</button>
+</header>
+<main>
+<p class="eyebrow">retrait de contenu · fr / es / en</p>
+<h1>Récupérez ce qui vous appartient.</h1>
+<p class="lede">On vous apprend d'abord à le faire vous-même. Si ça ne suffit pas, on prend le relais.</p>
+<p class="sub">Même si vous aviez accepté au départ. Même si c'est vous qui l'aviez publié.</p>
+<a href="#" class="cta"><strong>Commencer le diagnostic</strong><span>Gratuit, anonyme, 3 minutes</span></a>
+<a href="#" class="cta2">Voir les guides</a>
+<div class="eng">
+<p class="lbl">nos engagements</p>
+<ul>
+<li>Aucun traceur, aucun cookie</li>
+<li>Rien n'est envoyé sans votre accord</li>
+<li>Nous ne vous demanderons jamais vos images</li>
+<li>Un humain valide chaque étape</li>
+</ul>
+</div>
+<p class="urg">Situation urgente ou personne mineure</p>
+</main>
+<script>
+document.getElementById('exit').onclick=()=>location.replace('https://www.google.com');
+</script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F7F1EC;color:#2B2624;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:.5px solid #E0D5CB}
+.logo{font-size:17px;font-weight:500}
+#exit{font-size:12px;color:#B5502F;border:.5px solid #B5502F;border-radius:999px;padding:5px 12px;background:none}
+main{max-width:640px;margin:0 auto;padding:32px 20px 40px}
+.eyebrow{font-size:12px;color:#C98A3E;margin:0 0 12px}
+h1{font-size:28px;line-height:1.25;font-weight:500;margin:0 0 14px}
+.lede{font-size:16px;line-height:1.6;color:#5C524C;margin:0 0 8px}
+.sub{font-size:14px;line-height:1.6;color:#7A6E66;margin:0 0 24px}
+.cta{display:block;background:#B5502F;border-radius:8px;padding:16px 18px;text-decoration:none;margin-bottom:10px}
+.cta strong{display:block;font-size:16px;font-weight:500;color:#F7F1EC}
+.cta span{font-size:13px;color:#F0D8CD}
+.cta2{display:block;border:.5px solid #2B2624;border-radius:8px;padding:16px 18px;text-decoration:none;color:#2B2624;font-size:16px;font-weight:500;margin-bottom:24px}
+.eng{background:#EFE5DC;border-radius:8px;padding:20px 22px;margin-bottom:24px}
+.lbl{font-size:12px;color:#7A6E66;margin:0 0 12px}
+.eng ul{list-style:none;margin:0;padding:0}
+.eng li{font-size:14px;margin-bottom:10px;padding-left:22px;position:relative}
+.eng li:before{content:"✓";position:absolute;left:0;color:#B5502F}
+.urg{border-top:.5px solid #E0D5CB;padding-top:18px;font-size:13px;color:#B5502F;margin:0}
+</style>
+</body>
+</html>
