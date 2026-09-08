@@ -1,0 +1,6 @@
+{
+  "name": "devuelta-site",
+  "type": "module",
+  "scripts": { "build": "astro build" },
+  "dependencies": { "astro": "^4.16.0" }
+}
