@@ -1,4 +1,405 @@
 {
  "note": "Articles « le formulaire officiel n’a pas marché » : un article par semaine, vérifié sur les sources officielles. Ajouter à la fin de la liste.",
- "articles": []
+ "articles": [
+  {
+   "id": "google-faux-avis-voie-juridique",
+   "publie_le": "2026-10-15",
+   "verifie_le": "2026-10-15",
+   "situation": "faux-avis",
+   "plateformes": [
+    "google-maps"
+   ],
+   "slug": {
+    "fr": "google-refuse-retirer-faux-avis-voie-juridique",
+    "es": "google-no-elimina-resena-falsa-camino-legal",
+    "en": "google-wont-remove-fake-review-legal-route"
+   },
+   "titre": {
+    "fr": "Google refuse de retirer un faux avis : la voie juridique",
+    "es": "Google no elimina la reseña falsa: el camino legal",
+    "en": "Google won’t remove a fake review: the legal route"
+   },
+   "meta_description": {
+    "fr": "Signalement et appel refusés ? La demande de retrait pour motif juridique, les preuves à réunir, les recours du DSA et les délais pour agir en justice.",
+    "es": "¿Google rechazó tu denuncia y tu apelación? Cómo pedir la retirada por motivos legales, qué pruebas reunir, cómo reclamar en la UE y qué plazos hay.",
+    "en": "Report and appeal turned down? How to file Google’s legal removal request, what evidence to gather, your EU options and the deadlines for going to court."
+   },
+   "chapo": {
+    "fr": "Google ne retire un avis que s’il enfreint ses règles ou s’il est illégal. Si votre signalement et votre appel ont échoué, il reste la demande de retrait pour motif juridique, avec des preuves solides, et, dans l’Union européenne, des recours contre la décision de Google. Si l’avis est diffamatoire, agissez vite : le délai pour saisir la justice peut être très court (3 mois en France).",
+    "es": "Google solo elimina una reseña si infringe sus políticas o si es ilegal. Si tu denuncia y tu apelación no funcionaron, todavía puedes pedir la retirada por motivos legales, con pruebas sólidas, y, en la Unión Europea, recurrir la decisión de Google. Si la reseña es difamatoria, actúa rápido: el plazo para acudir a la justicia puede ser muy corto (3 meses en Francia).",
+    "en": "Google only removes a review if it breaks Google’s rules or the law. If your report and your appeal have failed, you can still file a legal removal request backed by solid evidence and, in the European Union, challenge Google’s decision. If the review is defamatory, act fast: the deadline to go to court can be very short (3 months in France)."
+   },
+   "sections": [
+    {
+     "titre": {
+      "fr": "Signaler ou faire une demande juridique : deux voies",
+      "es": "Denunciar o pedir la retirada legal: dos vías",
+      "en": "Reporting vs. a legal request: two routes"
+     },
+     "paragraphes": {
+      "fr": [
+       "Il existe deux façons de demander à Google de retirer un avis. Le signalement (bouton « Signaler ») vérifie si l’avis respecte les règles de Google Maps. La demande pour motif juridique vérifie s’il respecte la loi.",
+       "Ce sont deux procédures séparées. Google le précise : un signalement au titre de ses règles ne remplace pas une demande pour motif juridique.",
+       "Les règles de Google interdisent notamment : les avis qui ne reposent pas sur une expérience réelle ; ceux publiés sur la fiche d’un concurrent pour nuire à sa réputation ; ceux écrits en situation de conflit d’intérêts, par exemple par un employé ou un ancien employé ; les avis payés ; les avis publiés depuis plusieurs comptes par une même personne.",
+       "En revanche, Google accepte les avis qui décrivent une mauvaise expérience de façon respectueuse. Il ne prend pas parti dans un conflit entre un établissement et un client. Un avis négatif sincère, même sévère, n’est donc en général pas retiré."
+      ],
+      "es": [
+       "Hay dos formas de pedir a Google que elimine una reseña. La denuncia (botón «Denunciar») comprueba si la reseña cumple las políticas de Google Maps. La solicitud por motivos legales comprueba si cumple la ley.",
+       "Son dos procedimientos separados. Google lo aclara: una denuncia por sus políticas no sustituye a una solicitud por motivos legales.",
+       "Las políticas de Google prohíben, entre otras cosas: las reseñas que no se basan en una experiencia real; las que se publican en la ficha de un competidor para dañar su reputación; las escritas con un conflicto de intereses, por ejemplo por un empleado o un exempleado; las reseñas pagadas; y las que una misma persona publica desde varias cuentas.",
+       "En cambio, Google acepta las reseñas que describen una mala experiencia de forma respetuosa. Tampoco interviene en los conflictos entre empresas y clientes. Por eso, una reseña negativa sincera, aunque sea dura, en general no se elimina."
+      ],
+      "en": [
+       "There are two ways to ask Google to remove a review. A report (the “Report” button) checks whether the review follows Google Maps’ rules. A legal removal request checks whether it breaks the law.",
+       "They are separate processes. Google says so itself: reporting under its policies does not replace a legal request.",
+       "Google’s rules ban, among other things: reviews not based on a real experience; reviews posted on a competitor’s listing to harm its reputation; reviews written with a conflict of interest, for example by a current or former employee; paid reviews; and reviews posted from several accounts by one person.",
+       "On the other hand, Google allows reviews that describe a bad experience in a respectful way. It does not take sides in disputes between a business and a customer. So an honest negative review, even a harsh one, is generally not removed."
+      ]
+     },
+     "etapes": null
+    },
+    {
+     "titre": {
+      "fr": "D’abord : signaler l’avis, puis faire appel une fois",
+      "es": "Primero: denunciar la reseña y apelar una vez",
+      "en": "First: report the review, then appeal once"
+     },
+     "paragraphes": {
+      "fr": [
+       "Google conseille d’essayer cette voie avant toute demande juridique. Elle est gratuite et se fait depuis votre fiche d’établissement Google.",
+       "Pendant ce temps, répondez calmement ou ne répondez pas : votre réponse est publiée sous l’avis, à la vue de tous. N’y mettez ni insulte ni information personnelle sur le client.",
+       "N’achetez jamais d’avis pour compenser : c’est interdit. Si Google estime que le propriétaire d’une fiche a enfreint ses règles, il peut bloquer les nouveaux avis pendant un temps, masquer les avis existants ou afficher un avertissement aux clients."
+      ],
+      "es": [
+       "Google aconseja probar esta vía antes de cualquier solicitud legal. Es gratuita y se hace desde tu Perfil de Empresa en Google.",
+       "Mientras tanto, responde con calma o no respondas: tu respuesta se publica debajo de la reseña y todos pueden verla. No incluyas insultos ni datos personales del cliente.",
+       "Nunca compres reseñas para compensar: está prohibido. Si Google considera que el propietario de un perfil infringió sus políticas, puede bloquear las reseñas nuevas durante un tiempo, ocultar las existentes o mostrar una advertencia a los clientes."
+      ],
+      "en": [
+       "Google advises trying this route before any legal request. It is free and done from your Google Business Profile.",
+       "In the meantime, reply calmly or not at all: your reply is posted publicly under the review. Never include insults or personal details about the customer.",
+       "Never buy reviews to make up for it: it is banned. If Google finds that a business owner has broken its rules, it can block new reviews for a period, hide existing ones or show customers a warning."
+      ]
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez votre fiche d’établissement et cliquez sur « Voir les avis ». À côté de l’avis, cliquez sur « Signaler », choisissez le motif le plus juste, puis confirmez avec « Signaler ».",
+       "Suivez votre signalement dans l’outil de gestion des avis de Google (support.google.com/business/workflow/9945796). L’examen prend en général plusieurs jours.",
+       "Si le statut indique « Signalement examiné – Aucune règle enfreinte », vous pouvez faire appel une seule fois, depuis le même outil. Vous pouvez sélectionner jusqu’à 10 avis.",
+       "Si l’appel est transmis (statut « Escaladé »), la décision finale vous arrive par e-mail.",
+       "Si quelqu’un vous demande de l’argent pour retirer de mauvais avis, ne payez pas et ne négociez pas. Gardez les preuves et utilisez le formulaire de Google prévu pour ces tentatives d’extorsion (support.google.com/business/contact/merchant_extortion)."
+      ],
+      "es": [
+       "Abre tu Perfil de Empresa y selecciona «Leer reseñas». Junto a la reseña, selecciona «Denunciar», elige el motivo que mejor encaje y selecciona «Enviar denuncia».",
+       "Sigue tu denuncia en la herramienta de gestión de reseñas de Google (support.google.com/business/workflow/9945796). La evaluación suele tardar varios días.",
+       "Si el estado indica «Denuncia revisada: no hay infracción de las políticas», puedes apelar una sola vez desde la misma herramienta. Puedes seleccionar hasta 10 reseñas.",
+       "Si la apelación se deriva (estado «Derivado»), la decisión final te llegará por correo electrónico.",
+       "Si alguien te pide dinero para quitar reseñas negativas, no pagues ni negocies. Guarda las pruebas y usa el formulario de Google para estos intentos de extorsión (support.google.com/business/contact/merchant_extortion)."
+      ],
+      "en": [
+       "Open your Business Profile and select “Read reviews”. Next to the review, select “Report”, choose the reason that fits best and select “Send report”.",
+       "Follow your report in Google’s Reviews Management Tool (support.google.com/business/workflow/9945796). Checks usually take several days.",
+       "If the status says “Report reviewed – no policy violation”, you can appeal once, from the same tool. You can select up to 10 reviews.",
+       "If your appeal is escalated (status “Escalated”), the final decision arrives by email.",
+       "If someone asks you for money to remove bad reviews, do not pay and do not negotiate. Keep the evidence and use Google’s form for these extortion attempts (support.google.com/business/contact/merchant_extortion)."
+      ]
+     }
+    },
+    {
+     "titre": {
+      "fr": "Les preuves à réunir tout de suite",
+      "es": "Las pruebas que debes reunir ya",
+      "en": "The evidence to gather right now"
+     },
+     "paragraphes": {
+      "fr": [
+       "Pour la suite, Google doit comprendre votre dossier sans vous connaître. Réunissez vos preuves dès maintenant : l’auteur peut modifier ou supprimer son avis à tout moment."
+      ],
+      "es": [
+       "Para lo que viene después, Google tiene que entender tu caso sin conocerte. Reúne las pruebas desde ya: el autor puede editar o borrar su reseña en cualquier momento."
+      ],
+      "en": [
+       "For the next steps, Google needs to understand your case without knowing you. Gather your evidence now: the author can edit or delete the review at any time."
+      ]
+     },
+     "etapes": {
+      "fr": [
+       "Le lien exact de l’avis. Dans Google Maps, cherchez votre établissement et ouvrez « Avis ». À côté de l’avis, ouvrez « Plus », puis « Partager l’avis » et « Envoyer un lien ». Copiez le lien.",
+       "Des captures d’écran datées : l’avis, le nom et la photo du profil, et ses autres avis. Les règles de Google visent aussi les volumes ou les rythmes d’avis inhabituels.",
+       "Ce qui montre que la personne n’a jamais été cliente : aucune réservation, facture, rendez-vous ou paiement à ce nom ou à cette date ; un service décrit que vous ne proposez pas ; un jour où vous étiez fermé. Gardez ces documents pour votre dossier, ne les publiez jamais.",
+       "Une chronologie simple : date de l’avis, dates de vos signalements et de votre appel, numéros de référence, réponses de Google.",
+       "Tout message de l’auteur ou d’un tiers : menace, demande d’argent, lien avec un concurrent."
+      ],
+      "es": [
+       "El enlace exacto de la reseña. En Google Maps, busca tu negocio y abre «Reseñas». Junto a la reseña, selecciona «Más», luego «Compartir reseña» y «Enviar un enlace». Copia el enlace.",
+       "Capturas de pantalla con fecha: la reseña, el nombre y la foto del perfil, y sus otras reseñas. Las políticas de Google también se fijan en volúmenes o ritmos de reseñas fuera de lo normal.",
+       "Lo que demuestra que esa persona nunca fue cliente: ninguna reserva, factura, cita o pago a ese nombre o en esa fecha; un servicio que no ofreces; un día en que estabas cerrado. Guarda estos documentos para tu expediente y nunca los publiques.",
+       "Una cronología sencilla: fecha de la reseña, fechas de tus denuncias y de tu apelación, números de referencia y respuestas de Google.",
+       "Cualquier mensaje del autor o de otra persona: amenazas, peticiones de dinero, relación con un competidor."
+      ],
+      "en": [
+       "The exact link to the review. In Google Maps, search for your business and open “Reviews”. Next to the review, select “More”, then “Share review” and “Send a link”. Copy the link.",
+       "Dated screenshots: the review, the profile name and photo, and the profile’s other reviews. Google’s rules also target unusual volumes or patterns of reviews.",
+       "What shows the person was never a customer: no booking, invoice, appointment or payment under that name or on that date; a service described that you do not offer; a day when you were closed. Keep these documents in your file and never post them.",
+       "A simple timeline: date of the review, dates of your reports and appeal, reference numbers and Google’s replies.",
+       "Any message from the author or someone else: threats, demands for money, a link to a competitor."
+      ]
+     }
+    },
+    {
+     "titre": {
+      "fr": "Ensuite : la demande de retrait pour motif juridique",
+      "es": "Después: la solicitud de retirada por motivos legales",
+      "en": "Next: the legal removal request"
+     },
+     "paragraphes": {
+      "fr": [
+       "Si l’avis est illégal, par exemple diffamatoire, utilisez le formulaire juridique de Google. Ses règles s’appliquent partout dans le monde, mais Google peut aussi supprimer un contenu ou en limiter l’accès en vertu des lois locales.",
+       "Bon à savoir : Google peut envoyer une copie des demandes au projet Lumen, qui publie des demandes de retrait. Il ne lui transmet jamais vos coordonnées. Pour une demande pour diffamation, il ne partage en général pas votre nom. Pour une décision de justice, le nom du demandeur est partagé."
+      ],
+      "es": [
+       "Si la reseña es ilegal, por ejemplo difamatoria, usa el formulario legal de Google. Sus políticas se aplican en todo el mundo, pero Google también puede retirar un contenido o restringir el acceso a él según la legislación local.",
+       "Ten en cuenta que Google puede enviar una copia de las solicitudes al proyecto Lumen, que publica solicitudes de retirada. Nunca le envía tus datos de contacto. En una solicitud por difamación, en general no comparte tu nombre. En una resolución judicial, el nombre del solicitante sí se comparte."
+      ],
+      "en": [
+       "If the review is unlawful, for example defamatory, use Google’s legal form. Google’s policies apply worldwide, but Google can also remove content or restrict access to it under local laws.",
+       "Good to know: Google may send a copy of requests to the Lumen project, which publishes removal requests. It never shares your contact details with it. For a defamation request, it generally does not share your name. For a court order, the requester’s name is shared."
+      ]
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez la page d’aide « Signaler du contenu pour des raisons juridiques » (support.google.com/legal/answer/3110420) et cliquez sur « Créer une demande ».",
+       "Choisissez « Google Maps et produits associés », puis Google Maps, puis les fiches locales (fiches d’établissement).",
+       "Choisissez les motifs juridiques. Puis « Diffamation » si l’avis vous accuse d’un fait faux qui nuit à votre réputation, ou « Ordonnance du tribunal » si un juge a déjà déclaré l’avis illégal. Les intitulés peuvent changer ou s’afficher en anglais.",
+       "Collez le lien exact de l’avis, pas celui de votre fiche. Expliquez précisément ce qui est faux et pourquoi c’est illégal, en citant la loi de votre pays et vos preuves.",
+       "Gardez l’e-mail de confirmation et son numéro de référence. Surveillez votre messagerie : Google peut vous poser des questions."
+      ],
+      "es": [
+       "Abre la página de ayuda «Denunciar contenido por motivos legales» (support.google.com/legal/answer/3110420) y selecciona «Crear una solicitud».",
+       "Elige «Google Maps y productos relacionados», luego Google Maps y después las fichas locales (fichas de empresa y reseñas).",
+       "Elige los motivos legales. Luego, «Difamación» si la reseña te atribuye un hecho falso que daña tu reputación, o «Resolución judicial» si un juez ya declaró ilegal la reseña. Los nombres de las opciones pueden cambiar o aparecer en inglés.",
+       "Pega el enlace exacto de la reseña, no el de tu perfil. Explica con precisión qué es falso y por qué es ilegal, citando la ley de tu país y tus pruebas.",
+       "Guarda el correo de confirmación y su número de referencia. Revisa tu correo: Google puede hacerte preguntas."
+      ],
+      "en": [
+       "Open the “Report Content for Legal Reasons” help page (support.google.com/legal/answer/3110420) and select “Create a request”.",
+       "Choose “Google Maps, Waze and related products”, then Maps, then local listings (business listings).",
+       "Choose the legal reasons. Then pick “Defamation” if the review accuses you of something false that damages your reputation, or “Court order” if a judge has already ruled the review unlawful. Option names may change.",
+       "Paste the exact link to the review, not to your profile. Explain precisely what is false and why it is unlawful, citing your country’s law and your evidence.",
+       "Keep the confirmation email and its reference number. Watch your inbox: Google may ask you questions."
+      ]
+     }
+    },
+    {
+     "titre": {
+      "fr": "Délais et lois : ce qui change selon le pays",
+      "es": "Plazos y leyes: qué cambia según el país",
+      "en": "Deadlines and laws: what changes by country"
+     },
+     "paragraphes": {
+      "fr": [
+       "France. Accuser quelqu’un d’un fait précis qui porte atteinte à son honneur ou à sa réputation est une diffamation (loi du 29 juillet 1881, art. 29). Une simple critique d’un plat ou d’un service n’en est pas forcément une. Le délai pour saisir la justice est très court : 3 mois à partir de la publication (art. 65), 1 an si les propos sont racistes ou discriminatoires (art. 65-3). Un signalement à Google n’arrête pas ce délai.",
+       "Espagne. Accuser quelqu’un d’un délit en sachant que c’est faux, ou sans se soucier de la vérité, est une calomnie, « calumnia ». Une atteinte grave à sa dignité peut être une injure, « injuria » (Code pénal espagnol, art. 205 et 208). Seule la personne visée, ou son représentant légal, peut lancer la procédure, par une plainte formelle devant le juge (« querella », art. 215). Le délai est de 1 an (art. 131).",
+       "Union européenne. Depuis le 28 mai 2022, il est interdit à une entreprise de publier ou de faire publier de faux avis pour promouvoir des produits (directive (UE) 2019/2161). En France, c’est une pratique commerciale trompeuse (Code de la consommation, art. L121-4). Elle est punie de 2 ans de prison et 300 000 € d’amende, peines portées à 5 ans et 750 000 € quand elle est commise en ligne (art. L132-2). Cette règle sanctionne l’entreprise qui triche : ce n’est pas une procédure de retrait.",
+       "Amérique latine. Les règles et les délais changent d’un pays à l’autre. Le formulaire juridique de Google accepte les demandes fondées sur la loi locale. Si un juge de votre pays a déclaré l’avis illégal, utilisez l’option « Ordonnance du tribunal ». Consultez vite un avocat de votre pays.",
+       "États-Unis. Depuis le 21 octobre 2024, une règle de la Federal Trade Commission (FTC), l’agence fédérale qui protège notamment les consommateurs, encadre les avis (16 CFR Part 465). Elle interdit par exemple aux entreprises de créer ou de vendre de faux avis, d’acheter des avis positifs ou négatifs, et de faire retirer un avis négatif par des menaces juridiques sans fondement, de l’intimidation ou de fausses accusations. Elle vise les entreprises qui trichent : ce n’est pas une procédure de retrait, et vous ne pouvez pas l’invoquer vous-même en justice. Si un tribunal a déclaré l’avis illégal, transmettez sa décision avec l’option « Ordonnance du tribunal »."
+      ],
+      "es": [
+       "Francia. Atribuir a alguien un hecho concreto que daña su honor o su reputación es difamación (ley de 29 de julio de 1881, art. 29). Una simple crítica a un plato o a un servicio no lo es necesariamente. El plazo para acudir a la justicia es muy corto: 3 meses desde la publicación (art. 65), 1 año si las palabras son racistas o discriminatorias (art. 65-3). Denunciar la reseña ante Google no detiene ese plazo.",
+       "España. Acusar a alguien de un delito sabiendo que es falso, o sin importar si es verdad, es calumnia. Una ofensa grave a su dignidad puede ser injuria (Código Penal, arts. 205 y 208). Solo la persona ofendida, o su representante legal, puede iniciar el proceso con una querella, es decir, una denuncia formal ante el juzgado (art. 215). El plazo es de 1 año (art. 131).",
+       "Unión Europea. Desde el 28 de mayo de 2022 está prohibido que una empresa publique o encargue reseñas falsas para promocionar productos (Directiva (UE) 2019/2161). En Francia es una práctica comercial engañosa (Código de Consumo francés, art. L121-4). Se castiga con 2 años de prisión y 300 000 € de multa, penas que suben a 5 años y 750 000 € si se comete en internet (art. L132-2). Esta norma castiga a la empresa que hace trampa: no es un procedimiento de retirada.",
+       "América Latina. Las reglas y los plazos cambian de un país a otro. El formulario legal de Google acepta solicitudes basadas en la ley local. Si un juez de tu país declaró ilegal la reseña, usa la opción «Resolución judicial». Consulta pronto a un abogado de tu país.",
+       "Estados Unidos. Desde el 21 de octubre de 2024, una norma de la Comisión Federal de Comercio (FTC), la agencia federal que, entre otras cosas, protege a los consumidores, regula las reseñas (16 CFR Part 465). Prohíbe, por ejemplo, que las empresas creen o vendan reseñas falsas, compren reseñas positivas o negativas, o consigan que se retire una reseña negativa con amenazas legales sin fundamento, intimidación o acusaciones falsas. Va dirigida a las empresas que hacen trampa: no es un procedimiento de retirada y no puedes invocarla tú mismo ante un juez. Si un tribunal declaró ilegal la reseña, envía la sentencia con la opción «Resolución judicial»."
+      ],
+      "en": [
+       "France. Accusing someone of a specific fact that harms their honour or reputation is defamation (Law of 29 July 1881, Art. 29). Simply criticising a dish or a service is not necessarily defamation. The deadline to go to court is very short: 3 months from publication (Art. 65), or 1 year if the words are racist or discriminatory (Art. 65-3). Reporting the review to Google does not stop the clock.",
+       "Spain. Accusing someone of a crime while knowing it is false, or not caring whether it is true, is calumnia. A serious attack on their dignity can be injuria (Criminal Code, Arts. 205 and 208). Only the person targeted, or their legal representative, can start proceedings, through a querella, a formal complaint filed with the court (Art. 215). The deadline is 1 year (Art. 131).",
+       "European Union. Since 28 May 2022, businesses have been banned from posting or commissioning fake reviews to promote products (Directive (EU) 2019/2161). In France, this is a misleading commercial practice (Consumer Code, Art. L121-4). It is punishable by 2 years in prison and a €300,000 fine, raised to 5 years and €750,000 when committed online (Art. L132-2). This rule punishes businesses that cheat: it is not a removal procedure.",
+       "Latin America. Rules and deadlines vary from country to country. Google’s legal form accepts requests based on local law. If a judge in your country has ruled the review unlawful, use the “Court order” option. Talk to a lawyer in your country quickly.",
+       "United States. Since 21 October 2024, a rule from the Federal Trade Commission (FTC), the federal agency that protects consumers among other tasks, has covered reviews (16 CFR Part 465). For example, it bans businesses from creating or selling fake reviews, buying positive or negative reviews, and getting a negative review removed through groundless legal threats, intimidation or false accusations. It targets businesses that cheat: it is not a removal procedure, and you cannot sue anyone under it yourself. If a court has ruled the review unlawful, send the decision using the “Court order” option."
+      ]
+     },
+     "etapes": null
+    },
+    {
+     "titre": {
+      "fr": "Dans l’UE : contester la décision de Google",
+      "es": "En la UE: recurrir la decisión de Google",
+      "en": "In the EU: challenging Google’s decision"
+     },
+     "paragraphes": {
+      "fr": [
+       "Dans l’Union européenne, le règlement sur les services numériques (DSA) vous donne des recours en plus. Les plateformes doivent offrir un moyen simple de signaler les contenus illicites, traiter ces signalements en temps utile et informer la personne qui a signalé de leur décision (article 16). Pour un avis illégal, ce signalement passe par le formulaire juridique décrit plus haut."
+      ],
+      "es": [
+       "En la Unión Europea, el Reglamento de Servicios Digitales (DSA) te da vías adicionales. Las plataformas deben ofrecer una forma sencilla de denunciar contenidos ilícitos, tramitar esas denuncias a su debido tiempo e informar de su decisión a quien denunció (artículo 16). Para una reseña ilegal, esa denuncia se hace con el formulario legal descrito antes."
+      ],
+      "en": [
+       "In the European Union, the Digital Services Act (DSA) gives you extra options. Platforms must offer an easy way to report illegal content, handle these reports in a timely manner and tell the person who reported it about their decision (Article 16). For an unlawful review, you report it through the legal form described above."
+      ]
+     },
+     "etapes": {
+      "fr": [
+       "Recours interne (article 20). Si Google refuse, contestez sa décision par son système interne, quand il le propose : pour un signalement, c’est l’appel unique vu plus haut. Le DSA impose que ce recours soit gratuit et ouvert au moins 6 mois après la décision.",
+       "Organisme indépendant (article 21). Vous pouvez aussi saisir un organisme de règlement extrajudiciaire certifié. Pour Google Maps, la liste de la Commission européenne cite l’Appeals Centre Europe (dossiers en français, espagnol, anglais, allemand, italien, polonais ou néerlandais ; sans frais pour l’utilisateur à ce jour) et Platform Control (allemand et anglais).",
+       "Ces organismes vérifient surtout si Google a bien appliqué ses propres règles. Platform Control traite aussi les contenus illicites au regard du droit allemand. Ils doivent en principe décider en 90 jours au plus (180 jours pour un dossier complexe).",
+       "Leur décision ne s’impose pas à Google, mais la plateforme doit participer de bonne foi. Si l’organisme vous donne raison, c’est la plateforme qui paie les frais.",
+       "Vous pouvez aussi saisir la justice à tout moment, sans attendre la fin de ces recours. Gardez en tête les délais de votre pays."
+      ],
+      "es": [
+       "Reclamación interna (artículo 20). Si Google se niega, recurre su decisión en su sistema interno, cuando lo ofrezca: para una denuncia, es la apelación única que viste antes. El reglamento exige que esta vía sea gratuita y esté abierta al menos 6 meses después de la decisión.",
+       "Organismo independiente (artículo 21). También puedes acudir a un organismo certificado de resolución extrajudicial de litigios. Para Google Maps, la lista de la Comisión Europea incluye el Appeals Centre Europe (casos en español, francés, inglés, alemán, italiano, polaco o neerlandés; sin coste para el usuario por ahora) y Platform Control (alemán e inglés).",
+       "Estos organismos revisan sobre todo si Google aplicó bien sus propias políticas. Platform Control también trata contenidos ilícitos según el derecho alemán. En principio deben decidir en 90 días como máximo (180 días si el caso es complejo).",
+       "Su decisión no obliga a Google, pero la plataforma debe participar de buena fe. Si el organismo te da la razón, la plataforma paga los costes.",
+       "También puedes acudir a los tribunales en cualquier momento, sin esperar a que terminen estas vías. Ten en cuenta los plazos de tu país."
+      ],
+      "en": [
+       "Internal complaint (Article 20). If Google refuses, challenge its decision through its internal system, where it offers one: for a report, this is the one-time appeal described above. The DSA requires this to be free and open for at least 6 months after the decision.",
+       "Independent body (Article 21). You can also go to a certified out-of-court dispute settlement body. For Google Maps, the European Commission’s list names the Appeals Centre Europe (cases in English, French, Spanish, German, Italian, Polish or Dutch; no fee for users at present) and Platform Control (German and English).",
+       "These bodies mainly check whether Google applied its own rules correctly. Platform Control also handles content that is illegal under German law. They should normally decide within 90 days (180 days for complex cases).",
+       "Their decision is not binding on Google, but the platform must take part in good faith. If the body rules in your favour, the platform pays the fees.",
+       "You can also go to court at any stage, without waiting for these steps to end. Keep your country’s deadlines in mind."
+      ]
+     }
+    }
+   ],
+   "si_rien_ne_marche": {
+    "fr": "Si Google refuse malgré tout, Devuelta peut prendre le relais : nous préparons et suivons les démarches avec vous, du dossier de preuves aux recours auprès de Google.",
+    "es": "Si Google se niega de todos modos, Devuelta puede tomar el relevo: preparamos y seguimos contigo los trámites, desde el expediente de pruebas hasta los recursos ante Google.",
+    "en": "If Google still says no, Devuelta can take over: we prepare and follow up on the steps with you, from the evidence file to the appeals with Google."
+   },
+   "sources": [
+    {
+     "url": "https://support.google.com/business/answer/4596773",
+     "titre": "Report inappropriate reviews on your Business Profile – Google Business Profile Help"
+    },
+    {
+     "url": "https://support.google.com/business/workflow/9945796",
+     "titre": "Manage your Google Business reviews (Reviews Management Tool) – Google Business Profile Help"
+    },
+    {
+     "url": "https://support.google.com/contributionpolicy/answer/7400114",
+     "titre": "Prohibited & restricted content – Maps User Generated Content Policy Help"
+    },
+    {
+     "url": "https://support.google.com/contributionpolicy/answer/7445749",
+     "titre": "Report or Fix Content – Maps User Generated Content Policy Help"
+    },
+    {
+     "url": "https://support.google.com/contributionpolicy/answer/12648169",
+     "titre": "Appeal Maps user-generated content policy enforcement actions – Maps User Generated Content Policy Help"
+    },
+    {
+     "url": "https://support.google.com/contributionpolicy/answer/16426540",
+     "titre": "Legal Removals – Maps User Generated Content Policy Help"
+    },
+    {
+     "url": "https://support.google.com/business/answer/3474050",
+     "titre": "Manage customer reviews – Google Business Profile Help"
+    },
+    {
+     "url": "https://support.google.com/business/answer/14114287",
+     "titre": "Business Profile restrictions for policy violations – Google Business Profile Help"
+    },
+    {
+     "url": "https://support.google.com/business/answer/16404809",
+     "titre": "Report negative review extortion scams on your Business Profile – Google Business Profile Help"
+    },
+    {
+     "url": "https://support.google.com/legal/answer/3110420",
+     "titre": "Report Content for Legal Reasons – Google Legal Help"
+    },
+    {
+     "url": "https://support.google.com/legal/troubleshooter/1114905",
+     "titre": "Report Content On Google – Google Legal Help"
+    },
+    {
+     "url": "https://support.google.com/legal/answer/12158374",
+     "titre": "About Lumen – Google Legal Help"
+    },
+    {
+     "url": "https://support.google.com/european-union-digital-services-act-redress-options/answer/13535501",
+     "titre": "European Union Digital Services Act Resolution Options – Google"
+    },
+    {
+     "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+     "titre": "Regulation (EU) 2022/2065 (Digital Services Act), recitals 58-59 and Articles 16, 20, 21 – EUR-Lex"
+    },
+    {
+     "url": "https://digital-strategy.ec.europa.eu/en/faqs/digital-services-act-questions-and-answers",
+     "titre": "Digital Services Act: questions and answers – European Commission"
+    },
+    {
+     "url": "https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement",
+     "titre": "Out-of-court dispute settlement bodies under the Digital Services Act – European Commission"
+    },
+    {
+     "url": "https://www.appealscentre.eu/faqs",
+     "titre": "FAQs – Appeals Centre Europe"
+    },
+    {
+     "url": "https://platform-control.com/",
+     "titre": "Platform Control – certified out-of-court dispute settlement body (DSA Art. 21)"
+    },
+    {
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L2161",
+     "titre": "Directive (EU) 2019/2161 (Omnibus), Article 3(7) and Article 7 – EUR-Lex"
+    },
+    {
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044563107",
+     "titre": "Code de la consommation, article L121-4 (27° et 28°) – Légifrance"
+    },
+    {
+     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049532070",
+     "titre": "Code de la consommation, article L132-2 – Légifrance"
+    },
+    {
+     "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006419790",
+     "titre": "Loi du 29 juillet 1881 sur la liberté de la presse, article 29 – Légifrance"
+    },
+    {
+     "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006419866",
+     "titre": "Loi du 29 juillet 1881 sur la liberté de la presse, article 65 – Légifrance"
+    },
+    {
+     "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000043982552",
+     "titre": "Loi du 29 juillet 1881 sur la liberté de la presse, article 65-3 – Légifrance"
+    },
+    {
+     "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444",
+     "titre": "Ley Orgánica 10/1995 del Código Penal, artículos 131, 205, 208 y 215 (texto consolidado) – BOE"
+    },
+    {
+     "url": "https://www.ftc.gov/news-events/news/press-releases/2024/08/federal-trade-commission-announces-final-rule-banning-fake-reviews-testimonials",
+     "titre": "Federal Trade Commission Announces Final Rule Banning Fake Reviews and Testimonials (14 August 2024) – FTC"
+    },
+    {
+     "url": "https://www.ftc.gov/business-guidance/resources/consumer-reviews-testimonials-rule-questions-answers",
+     "titre": "The Consumer Reviews and Testimonials Rule: Questions and Answers – FTC"
+    }
+   ],
+   "liens_internes": [
+    {
+     "type": "situation",
+     "id": "faux-avis"
+    },
+    {
+     "type": "situation",
+     "id": "diffamation"
+    },
+    {
+     "type": "situation",
+     "id": "chantage"
+    },
+    {
+     "type": "guide",
+     "id": "fr-diffamation-loi-1881"
+    },
+    {
+     "type": "guide",
+     "id": "ue-dsa-notification-art16"
+    }
+   ]
+  }
+ ]
 }
