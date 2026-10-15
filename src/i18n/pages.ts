@@ -137,9 +137,9 @@ export const METHODE = {
   } as T3,
   pasTitre: { fr: 'Ce que nous ne sommes pas', es: 'Lo que no somos', en: 'What we are not' } as T3,
   pas: {
-    fr: 'Nous ne sommes pas un cabinet d’avocats et ne donnons pas de conseil juridique. Nous vous aidons à exercer vos droits. Si une action en justice devient nécessaire, nous vous le disons et vous orientons.',
-    es: 'No somos un despacho de abogados y no damos asesoría jurídica. Te ayudamos a ejercer tus derechos. Si hace falta una acción judicial, te lo decimos y te orientamos.',
-    en: "We are not a law firm and we don't give legal advice. We help you use your rights. If legal action becomes necessary, we tell you and point you in the right direction.",
+    fr: 'Nous ne sommes pas un cabinet d’avocats et ne donnons pas de conseil juridique. Notre travail est une assistance technique et administrative : repérer les liens et les hébergeurs, remplir les formulaires officiels, envoyer les demandes que vous avez choisies et approuvées, suivre les délais. Si une action en justice devient utile, nous vous orientons vers un avocat, avec qui vous traitez directement.',
+    es: 'No somos un despacho de abogados y no damos asesoría jurídica. Nuestro trabajo es una asistencia técnica y administrativa: localizar los enlaces y los alojamientos, rellenar los formularios oficiales, enviar las solicitudes que elegiste y aprobaste, vigilar los plazos. Si una acción judicial resulta útil, te orientamos hacia un abogado o abogada, con quien tratas directamente.',
+    en: 'We are not a law firm and we don’t give legal advice. Our work is technical and administrative assistance: finding the links and hosts, filling in the official forms, sending the requests you chose and approved, and tracking deadlines. If legal action becomes useful, we refer you to a lawyer, whom you deal with directly.',
   } as T3,
   confianceTitre: { fr: 'Pourquoi nous faire confiance', es: 'Por qué confiar en nosotros', en: 'Why you can trust us' } as T3,
   confiance: {
