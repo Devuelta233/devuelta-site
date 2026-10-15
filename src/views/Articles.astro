@@ -1,0 +1,42 @@
+---
+// Liste des articles « le formulaire officiel n'a pas marché ».
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { ARTICLES } from '../i18n/pages';
+import { articlePath, articlesPath, ARTICLES_SLUG, BASE, type Versions } from '../i18n/routes';
+import { articles, dateLisible } from '../data';
+import { LANGS, SITUATION_LABEL, type Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = articlesPath(lang);
+const versions = Object.fromEntries(LANGS.map((l) => [l, `${BASE[l]}${ARTICLES_SLUG[l]}/`])) as Versions;
+const liste = articles();
+---
+<Base
+  lang={lang}
+  titre={ARTICLES.seo[lang]}
+  description={ARTICLES.meta[lang]}
+  chemin={chemin}
+  versions={versions}
+  ariane={[{ nom: ARTICLES.nav[lang] }]}
+>
+  <div class="page-large">
+    <h1>{ARTICLES.h1[lang]}</h1>
+    <p class="lede">{ARTICLES.intro[lang]}</p>
+    <ul class="cartes deux">
+      {liste.map((a) => (
+        <li>
+          <a class="carte" href={articlePath(a.slug[lang], lang)}>
+            <span class="carte-titre">{a.titre[lang]}</span>
+            <span class="carte-texte">{a.chapo[lang]}</span>
+            <span class="carte-meta">{SITUATION_LABEL[a.situation][lang]} · {C.verifieLe[lang]} {dateLisible(a.verifie_le, lang)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </div>
+</Base>

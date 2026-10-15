@@ -302,3 +302,37 @@ export const NOT_FOUND = {
     en: "This page doesn't exist or has moved.",
   } as T3,
 };
+
+export const ARTICLES = {
+  seo: {
+    fr: 'Quand le formulaire officiel n’a pas marché : nos articles',
+    es: 'Cuando el formulario oficial no funcionó: nuestros artículos',
+    en: 'When the official form didn’t work: our articles',
+  } as T3,
+  h1: {
+    fr: 'Le formulaire officiel n’a pas marché ? Les étapes suivantes',
+    es: '¿El formulario oficial no funcionó? Los siguientes pasos',
+    en: 'The official form didn’t work? The next steps',
+  } as T3,
+  meta: {
+    fr: 'Plateforme qui refuse, demande ignorée, contenu qui revient : des articles vérifiés pour savoir quoi faire ensuite, avec les recours officiels.',
+    es: 'Plataforma que se niega, solicitud ignorada, contenido que vuelve: artículos verificados para saber qué hacer después, con los recursos oficiales.',
+    en: 'Platform says no, request ignored, content keeps coming back: checked articles on what to do next, with the official remedies.',
+  } as T3,
+  intro: {
+    fr: 'Chaque article reprend un blocage fréquent et les recours qui existent après un refus. Tout est vérifié sur les sources officielles, à la date indiquée.',
+    es: 'Cada artículo trata un bloqueo frecuente y los recursos que existen tras una negativa. Todo está verificado en las fuentes oficiales, en la fecha indicada.',
+    en: 'Each article covers a common dead end and the remedies that exist after a refusal. Everything is checked against official sources, on the date shown.',
+  } as T3,
+  publieLe: { fr: 'Publié le', es: 'Publicado el', en: 'Published on' } as T3,
+  sources: { fr: 'Sources officielles', es: 'Fuentes oficiales', en: 'Official sources' } as T3,
+  siRien: { fr: 'Si rien ne marche', es: 'Si nada funciona', en: 'If nothing works' } as T3,
+  aLire: { fr: 'À lire aussi', es: 'Para leer también', en: 'Read next' } as T3,
+  siPasMarche: {
+    fr: 'Si ça n’a pas marché',
+    es: 'Si no funcionó',
+    en: 'If it didn’t work',
+  } as T3,
+  nav: { fr: 'Articles', es: 'Artículos', en: 'Articles' } as T3,
+};
+

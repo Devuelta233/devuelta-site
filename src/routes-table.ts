@@ -1,8 +1,8 @@
 // Table de toutes les pages publiques du site, dans les trois langues.
 // Sert à construire les pages ET le plan du site (sitemap.xml).
 
-import { BASE, SLUGS, guidePath, page, plateformePath, situationPath, type PageFixe } from './i18n/routes';
-import { PLATEFORMES_VERIFIE_LE, URGENCES_VERIFIE_LE, guides, toutesLesPagesPlateforme, type ActionPlateforme, type Guide, type Plateforme } from './data';
+import { BASE, SLUGS, articlePath, articlesPath, guidePath, page, plateformePath, situationPath, type PageFixe } from './i18n/routes';
+import { PLATEFORMES_VERIFIE_LE, URGENCES_VERIFIE_LE, articles, guides, toutesLesPagesPlateforme, type ActionPlateforme, type Article, type Guide, type Plateforme } from './data';
 import { LANGS, SITUATIONS_REELLES, type Lang, type SituationReelle } from '../shared/vocab';
 
 export type PropsPage =
@@ -10,7 +10,9 @@ export type PropsPage =
   | { type: PageFixe; lang: Lang }
   | { type: 'situation'; lang: Lang; situation: SituationReelle }
   | { type: 'plateforme'; lang: Lang; situation: SituationReelle; plateforme: Plateforme; action: ActionPlateforme }
-  | { type: 'guide'; lang: Lang; guide: Guide };
+  | { type: 'guide'; lang: Lang; guide: Guide }
+  | { type: 'articles'; lang: Lang }
+  | { type: 'article'; lang: Lang; article: Article };
 
 export interface EntreeRoute {
   chemin: string; // avec / au début et à la fin
@@ -50,6 +52,13 @@ export function toutesLesRoutes(): EntreeRoute[] {
         priorite: 0.8,
         maj: jour(PLATEFORMES_VERIFIE_LE),
       });
+    }
+    const liste = articles();
+    if (liste.length > 0) {
+      out.push({ chemin: articlesPath(lang), props: { type: 'articles', lang }, groupe: 'articles', priorite: 0.7, maj: liste[0].verifie_le.slice(0, 10) });
+      for (const a of liste) {
+        out.push({ chemin: articlePath(a.slug[lang], lang), props: { type: 'article', lang, article: a }, groupe: `article:${a.id}`, priorite: 0.7, maj: jour(a.verifie_le) });
+      }
     }
     for (const g of guides()) {
       out.push({ chemin: guidePath(g.slug[lang], lang), props: { type: 'guide', lang, guide: g }, groupe: `guide:${g.id}`, priorite: 0.8, maj: jour(g.verifie_le) });

@@ -56,6 +56,16 @@ export function plateformePath(s: SituationReelle, plateforme: string, lang: Lan
   return `${situationPath(s, lang)}${plateforme}/`;
 }
 
+export const ARTICLES_SLUG: T3 = { fr: 'articles', es: 'articulos', en: 'articles' };
+
+export function articlesPath(lang: Lang): string {
+  return `${BASE[lang]}${ARTICLES_SLUG[lang]}/`;
+}
+
+export function articlePath(slug: string, lang: Lang): string {
+  return `${articlesPath(lang)}${slug}/`;
+}
+
 export function guidePath(slug: string, lang: Lang): string {
   return `${page('guides', lang)}${slug}/`;
 }

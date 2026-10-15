@@ -1,5 +1,6 @@
 // Accès aux données vérifiées (dossier shared/) pour construire les pages.
 
+import articlesData from '../../shared/articles.json';
 import guidesData from '../../shared/guides.json';
 import plateformesData from '../../shared/plateformes.json';
 import referentielData from '../../shared/referentiel.json';
@@ -135,3 +136,41 @@ export function dateLisible(iso: string | undefined | null, lang: Lang): string 
   if (Number.isNaN(d.getTime())) return iso;
   return new Intl.DateTimeFormat(LOCALES[lang], { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(d);
 }
+
+// Articles « le formulaire officiel n'a pas marché » ----------------------------------
+
+export interface SectionArticle {
+  titre: T3;
+  paragraphes: L3;
+  etapes?: L3 | null;
+}
+
+export interface Article {
+  id: string;
+  publie_le: string;
+  verifie_le: string;
+  situation: SituationReelle;
+  plateformes: string[];
+  slug: T3;
+  titre: T3;
+  meta_description: T3;
+  chapo: T3;
+  sections: SectionArticle[];
+  si_rien_ne_marche: T3;
+  sources: Array<{ url: string; titre: string }>;
+  liens_internes: Array<{ type: 'situation' | 'guide'; id: string }>;
+}
+
+const A = articlesData as { articles?: Article[] };
+
+/** Articles publiés, du plus récent au plus ancien. */
+export function articles(): Article[] {
+  return [...(A.articles ?? [])]
+    .filter((a) => (SITUATIONS_REELLES as readonly string[]).includes(a.situation))
+    .sort((a, b) => b.publie_le.localeCompare(a.publie_le));
+}
+
+export function articlesPour(situation: SituationReelle): Article[] {
+  return articles().filter((a) => a.situation === situation);
+}
+

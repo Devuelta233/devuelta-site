@@ -1,0 +1,130 @@
+---
+// Un article « le formulaire officiel n'a pas marché » : la réponse d'abord,
+// les étapes, l'escalade, puis les sources officielles.
+import Base from '../layouts/Base.astro';
+import SiCaBloque from '../components/SiCaBloque.astro';
+import { C } from '../i18n/commun';
+import { ARTICLES } from '../i18n/pages';
+import { SITUATIONS_TEXTE } from '../i18n/situations';
+import { articlePath, articlesPath, guidePath, situationPath, type Versions } from '../i18n/routes';
+import { articles, dateLisible, guides, type Article } from '../data';
+import { SITE_URL } from '../config';
+import { LANGS, SITUATIONS_REELLES, type Lang, type SituationReelle } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+  article: Article;
+}
+const { lang, article: a } = Astro.props;
+const chemin = articlePath(a.slug[lang], lang);
+const versions = Object.fromEntries(LANGS.map((l) => [l, articlePath(a.slug[l], l)])) as Versions;
+const parGuide = new Map(guides().map((g) => [g.id, g]));
+const liens = a.liens_internes
+  .map((l) => {
+    if (l.type === 'situation' && (SITUATIONS_REELLES as readonly string[]).includes(l.id)) {
+      const s = l.id as SituationReelle;
+      return { href: situationPath(s, lang), nom: SITUATIONS_TEXTE[s][lang].h1 };
+    }
+    const g = parGuide.get(l.id);
+    return g ? { href: guidePath(g.slug[lang], lang), nom: g.titre[lang] } : null;
+  })
+  .filter((x): x is { href: string; nom: string } => x !== null);
+const autres = articles()
+  .filter((x) => x.id !== a.id && x.situation === a.situation)
+  .slice(0, 3);
+const hote = (u: string) => {
+  try {
+    return new URL(u).hostname.replace(/^www\./, '');
+  } catch {
+    return u;
+  }
+};
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: a.titre[lang],
+    description: a.meta_description[lang],
+    inLanguage: lang,
+    url: `${SITE_URL}${chemin}`,
+    datePublished: a.publie_le,
+    dateModified: a.verifie_le,
+    author: { '@id': `${SITE_URL}/#organisation` },
+    publisher: { '@id': `${SITE_URL}/#organisation` },
+    citation: a.sources.map((s) => s.url),
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={a.titre[lang]}
+  description={a.meta_description[lang]}
+  chemin={chemin}
+  versions={versions}
+  jsonld={jsonld}
+  ariane={[{ nom: ARTICLES.nav[lang], href: articlesPath(lang) }, { nom: a.titre[lang] }]}
+>
+  <article class="page">
+    <h1>{a.titre[lang]}</h1>
+    <p class="fiche-meta">
+      <span>{ARTICLES.publieLe[lang]} {dateLisible(a.publie_le, lang)}</span>
+      <span>{C.verifieLe[lang]} <strong>{dateLisible(a.verifie_le, lang)}</strong></span>
+    </p>
+    <p class="lede">{a.chapo[lang]}</p>
+
+    {a.sections.map((s) => (
+      <section>
+        <h2>{s.titre[lang]}</h2>
+        {s.paragraphes[lang]?.map((p) => <p>{p}</p>)}
+        {s.etapes?.[lang]?.length ? (
+          <ol class="etapes">
+            {s.etapes[lang].map((e) => <li>{e}</li>)}
+          </ol>
+        ) : null}
+      </section>
+    ))}
+
+    <section class="encadre" aria-labelledby="si-rien">
+      <h2 id="si-rien" class="sans-marge">{ARTICLES.siRien[lang]}</h2>
+      <p>{a.si_rien_ne_marche[lang]}</p>
+    </section>
+
+    {(liens.length > 0 || autres.length > 0) && (
+      <section aria-labelledby="a-lire">
+        <h2 id="a-lire">{ARTICLES.aLire[lang]}</h2>
+        <ul class="cartes">
+          {liens.map((l) => (
+            <li>
+              <a class="carte" href={l.href}>
+                <span class="carte-titre">{l.nom}</span>
+              </a>
+            </li>
+          ))}
+          {autres.map((x) => (
+            <li>
+              <a class="carte" href={articlePath(x.slug[lang], lang)}>
+                <span class="carte-titre">{x.titre[lang]}</span>
+                <span class="carte-texte">{x.chapo[lang]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <SiCaBloque lang={lang} />
+
+    <section aria-labelledby="sources">
+      <h2 id="sources">{ARTICLES.sources[lang]}</h2>
+      <ul class="sources">
+        {a.sources.map((s) => (
+          <li>
+            <a href={s.url} rel="noopener noreferrer" target="_blank">{s.titre}</a> <span class="petit">({hote(s.url)})</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>

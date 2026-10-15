@@ -2,7 +2,9 @@
 import '../styles/global.css';
 import Spirale from '../components/Spirale.astro';
 import { C } from '../i18n/commun';
-import { BASE, page, type Versions } from '../i18n/routes';
+import { ARTICLES } from '../i18n/pages';
+import { BASE, articlesPath, page, type Versions } from '../i18n/routes';
+import { articles } from '../data';
 import { EMAIL, SITE_URL } from '../config';
 import { LANGS, type Lang } from '../../shared/vocab';
 
@@ -26,6 +28,7 @@ interface Props {
 
 const { lang, titre, description, chemin, versions = {}, jsonld = [], ariane = [], sansBandeau = false, titreComplet = false, noindex = false } = Astro.props;
 // Le nom du site n'est ajouté que s'il reste de la place (≈ 60 caractères affichés par Google).
+const avecArticles = articles().length > 0;
 const titreHtml = titreComplet || titre.length > 48 ? titre : `${titre} · Devuelta`;
 const canonique = `${SITE_URL}${chemin}`;
 const OG_LOCALE: Record<Lang, string> = { fr: 'fr_FR', es: 'es_ES', en: 'en_US' };
@@ -142,6 +145,7 @@ const nav = [
             <li><a href={page('diagnostic', lang)}>{C.nav.diagnostic[lang]}</a></li>
             <li><a href={page('que-faire', lang)}>{C.nav.queFaire[lang]}</a></li>
             <li><a href={page('guides', lang)}>{C.nav.guides[lang]}</a></li>
+            {avecArticles && <li><a href={articlesPath(lang)}>{ARTICLES.nav[lang]}</a></li>}
             <li><a href={page('urgence', lang)}>{C.nav.urgence[lang]}</a></li>
             <li><a href={page('confier', lang)}>{C.nav.confier[lang]}</a></li>
           </ul>

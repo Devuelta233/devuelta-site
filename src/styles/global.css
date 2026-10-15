@@ -1236,3 +1236,13 @@ button[disabled] {
   font-size: 1.4rem;
   margin-top: 2rem;
 }
+
+/* Sources officielles en fin d'article */
+.sources {
+  padding-left: 1.2rem;
+}
+
+.sources li {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+}

@@ -3,6 +3,8 @@
 // table des routes (src/routes-table.ts).
 import { toutesLesRoutes, type PropsPage } from '../routes-table';
 import Accueil from '../views/Accueil.astro';
+import ArticlePage from '../views/Article.astro';
+import Articles from '../views/Articles.astro';
 import Confier from '../views/Confier.astro';
 import Contact from '../views/Contact.astro';
 import Diagnostic from '../views/Diagnostic.astro';
@@ -37,3 +39,5 @@ const p = Astro.props as PropsPage;
 {p.type === 'situation' && <Situation lang={p.lang} situation={p.situation} />}
 {p.type === 'plateforme' && <PlateformeAction lang={p.lang} situation={p.situation} plateforme={p.plateforme} action={p.action} />}
 {p.type === 'guide' && <Guide lang={p.lang} guide={p.guide} />}
+{p.type === 'articles' && <Articles lang={p.lang} />}
+{p.type === 'article' && <ArticlePage lang={p.lang} article={p.article} />}
