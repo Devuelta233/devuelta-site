@@ -1,3 +1,4 @@
+import { typoProfonde } from '../../shared/typo';
 import type { Lang } from '../../shared/vocab';
 
 const FR = {
@@ -149,4 +150,4 @@ const EN: Textes = {
   obligatoire: 'required',
 };
 
-export const TEXTES_CONFIER: Record<Lang, Textes> = { fr: FR, es: ES, en: EN };
+export const TEXTES_CONFIER: Record<Lang, Textes> = typoProfonde({ fr: FR, es: ES, en: EN });

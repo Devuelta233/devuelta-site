@@ -167,6 +167,13 @@ function ParametresAdmin() {
           </Champ>
         </div>
         <h3>{t('attribution')}</h3>
+        <p class="o-muet">
+          {tr(
+            'Automatique = le premier membre actif qui parle la langue de la demande.',
+            'Automático = el primer miembro activo que habla el idioma de la solicitud.',
+            'Automatic = the first active member who speaks the request’s language.',
+          )}
+        </p>
         <div class="o-grille">
           {LANGS.map((l) => (
             <Champ label={l.toUpperCase()}>
@@ -294,13 +301,15 @@ function EtatSysteme() {
   if (enCours && !s) return <Chargement />;
   if (!s) return <MessageErreur texte={err} />;
   const derniere = s.tache?.derniere_execution;
-  const enRetard = !derniere || Date.now() - new Date(derniere).getTime() > 36 * 3600 * 1000;
+  const enRetard = !!derniere && Date.now() - new Date(derniere).getTime() > 36 * 3600 * 1000;
   return (
     <section class="o-encadre">
       <h2>{t('systeme')}</h2>
       <p>
         {t('derniereTache')} : <strong>{date(derniere, true)}</strong>{' '}
-        {enRetard ? (
+        {!derniere ? (
+          <Pastille ton="info">{tr('premier passage demain matin', 'primer pase mañana por la mañana', 'first run tomorrow morning')}</Pastille>
+        ) : enRetard ? (
           <Pastille ton="alerte">{tr('en retard : vérifiez Cloudflare', 'con retraso: revisa Cloudflare', 'late: check Cloudflare')}</Pastille>
         ) : (
           <Pastille ton="ok">OK</Pastille>

@@ -3,7 +3,7 @@
 import { useState } from 'preact/hooks';
 import { PAYS_LABEL, SITUATION_LABEL, isPays, isSituation } from '../../../shared/vocab';
 import { get, post } from '../api';
-import { code, date, langue, t } from '../i18n';
+import { code, date, langue, t, tr } from '../i18n';
 import { Champ, Chargement, LienExterne, MessageErreur, Pastille, aller, useAction, useCharger, valeur } from '../ui';
 
 interface Ligne {
@@ -23,6 +23,23 @@ interface Ligne {
 }
 
 const FILTRES = ['nouvelle', 'convertie', 'orientee', 'refusee', 'spam', ''];
+
+const NOMS: Record<string, string> = {
+  x: 'X (Twitter)',
+  'google-maps': 'Google Maps',
+  onlyfans: 'OnlyFans',
+  tiktok: 'TikTok',
+  youtube: 'YouTube',
+  linkedin: 'LinkedIn',
+  whatsapp: 'WhatsApp',
+  pornhub: 'Pornhub',
+  xvideos: 'XVideos',
+};
+
+export function nomPlateforme(id: string): string {
+  if (id === 'autre-site') return tr('Autre site', 'Otro sitio', 'Other site');
+  return NOMS[id] ?? id.charAt(0).toUpperCase() + id.slice(1).replace(/-/g, ' ');
+}
 
 export function ListeDemandes() {
   const [statut, setStatut] = useState('nouvelle');
@@ -121,12 +138,12 @@ export function DetailDemande({ id }: { id: string }) {
         <dd>{d.publie_par_soi === null ? t('inconnu') : d.publie_par_soi ? t('oui') : t('non')}</dd>
         <dt>{t('contactPar')}</dt>
         <dd>
-          {d.contact_mode} : <span class="o-mono">{d.contact_valeur}</span>
+          {d.contact_mode === 'whatsapp' ? 'WhatsApp' : t('email')} : <span class="o-mono">{d.contact_valeur}</span>
         </dd>
         {d.plateformes.length > 0 && (
           <>
-            <dt>{t('liens')}</dt>
-            <dd>{d.plateformes.join(', ')}</dd>
+            <dt>{tr('Plateformes', 'Plataformas', 'Platforms')}</dt>
+            <dd>{d.plateformes.map(nomPlateforme).join(', ')}</dd>
           </>
         )}
       </dl>

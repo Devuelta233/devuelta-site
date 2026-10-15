@@ -337,7 +337,8 @@ export async function executerTaches(env: Env): Promise<Record<string, unknown>>
     return r.verifies;
   });
   await etape('liens_officiels', () => verifierLiensOfficiels(env.DB));
-  await etape('indexnow', () => indexNow(env));
+  // En local, on ne signale rien aux moteurs : seul le vrai site le fait.
+  await etape('indexnow', () => (env.LOCAL === '1' ? Promise.resolve('ignoré en local') : indexNow(env)));
   await etape('alertes_reapparition', () => (reapparus.length ? notifier(env.DB, reapparus) : Promise.resolve(0)));
   await etape('resume_matin', () => resumeDuMatin(env.DB));
   await env.DB.prepare(

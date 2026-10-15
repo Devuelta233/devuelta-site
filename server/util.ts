@@ -5,6 +5,8 @@ export interface Env {
   ASSETS: Fetcher;
   SITE_URL?: string;
   HACHAGE_ITERATIONS?: string;
+  /** « 1 » sur un poste de développement : rien n'est envoyé aux moteurs de recherche. */
+  LOCAL?: string;
 }
 
 export class HttpError extends Error {

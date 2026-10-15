@@ -1,5 +1,6 @@
 // Interface de l'outil en trois langues : [français, espagnol, anglais].
 
+import { typo, typoProfonde } from '../../shared/typo';
 import type { Lang } from '../../shared/vocab';
 
 const navLang = (typeof navigator !== 'undefined' ? navigator.language : 'fr').slice(0, 2);
@@ -15,7 +16,7 @@ export const langue = {
   },
 };
 
-const D = {
+const D = typoProfonde({
   // Général
   chargement: ['Chargement…', 'Cargando…', 'Loading…'],
   enregistrer: ['Enregistrer', 'Guardar', 'Save'],
@@ -311,7 +312,7 @@ const D = {
   retentionDossier: ['Conservation après clôture (jours)', 'Conservación tras el cierre (días)', 'Retention after closing (days)'],
   retentionDemande: ['Conservation des demandes sans suite (jours)', 'Conservación de solicitudes sin continuidad (días)', 'Retention of unfollowed requests (days)'],
   attribution: ['Attribution automatique des demandes', 'Asignación automática de solicitudes', 'Automatic assignment of requests'],
-  parDefaut: ['Par défaut (premier membre de cette langue)', 'Por defecto (primer miembro de este idioma)', 'Default (first member speaking that language)'],
+  parDefaut: ['Automatique', 'Automático', 'Automatic'],
   exporter: ['Télécharger une sauvegarde complète (JSON)', 'Descargar una copia completa (JSON)', 'Download a full backup (JSON)'],
   purgeManuelle: ['Données arrivées à échéance', 'Datos vencidos', 'Data past retention'],
   purgerMaintenant: ['Supprimer définitivement maintenant', 'Borrar definitivamente ahora', 'Delete permanently now'],
@@ -346,7 +347,7 @@ const D = {
     'Conteo sin cookies ni identificadores: totales por día, nada más.',
     'Counted without cookies or identifiers: daily totals, nothing more.',
   ],
-};
+});
 
 export type Cle = keyof typeof D;
 
@@ -358,7 +359,7 @@ export function t(cle: Cle): string {
 
 /** Texte ponctuel propre à un écran : [français, espagnol, anglais]. */
 export function tr(fr: string, es: string, en: string): string {
-  return [fr, es, en][IDX[langue.value]];
+  return typo([fr, es, en][IDX[langue.value]]);
 }
 
 /** Position de la langue courante dans les tableaux [fr, es, en]. */
@@ -370,7 +371,7 @@ export function indexLangue(): number {
 
 const L = (fr: string, es: string, en: string) => [fr, es, en];
 
-const CODES: Record<string, string[]> = {
+const CODES: Record<string, string[]> = typoProfonde({
   // statuts de dossier
   ouvert: L('Ouvert', 'Abierto', 'Open'),
   'en-cours': L('En cours', 'En curso', 'In progress'),
@@ -439,14 +440,14 @@ const CODES: Record<string, string[]> = {
   'cx-mdp-incorrect': L('Mauvais mot de passe', 'Contraseña incorrecta', 'Wrong password'),
   'cx-code-incorrect': L('Mauvais code 2FA', 'Código 2FA incorrecto', 'Wrong 2FA code'),
   'cx-code-init-incorrect': L('Mauvais code d’installation', 'Código de instalación incorrecto', 'Wrong setup code'),
-};
+});
 
 export function code(c: string | null | undefined): string {
   if (!c) return '—';
   return CODES[c]?.[IDX[langue.value]] ?? c;
 }
 
-const ERREURS: Record<string, string[]> = {
+const ERREURS: Record<string, string[]> = typoProfonde({
   'identifiants-invalides': L('E-mail ou mot de passe incorrect.', 'Correo o contraseña incorrectos.', 'Wrong email or password.'),
   'trop-de-tentatives': L('Trop de tentatives. Réessayez dans 15 minutes.', 'Demasiados intentos. Inténtalo en 15 minutos.', 'Too many attempts. Try again in 15 minutes.'),
   'compte-bloque': L('Compte bloqué 15 minutes après plusieurs erreurs.', 'Cuenta bloqueada 15 minutos tras varios errores.', 'Account locked for 15 minutes after several errors.'),
@@ -471,7 +472,7 @@ const ERREURS: Record<string, string[]> = {
   'auto-desactivation': L('Vous ne pouvez pas désactiver votre propre compte.', 'No puedes desactivar tu propia cuenta.', 'You cannot disable your own account.'),
   'auto-retrogradation': L('Vous ne pouvez pas retirer votre propre rôle d’administrateur.', 'No puedes quitarte el rol de administrador.', 'You cannot remove your own admin role.'),
   'abonnement-invalide': L('Ce navigateur ne permet pas les alertes.', 'Este navegador no permite alertas.', 'This browser does not support alerts.'),
-};
+});
 
 export function erreur(e: unknown): string {
   const c = (e as { code?: string })?.code ?? '';
@@ -492,7 +493,7 @@ export function date(iso: string | null | undefined, avecHeure = false): string 
   }).format(d);
 }
 
-export const NDA: Record<Lang, { titre: string; points: string[]; fin: string }> = {
+export const NDA: Record<Lang, { titre: string; points: string[]; fin: string }> = typoProfonde({
   fr: {
     titre: 'Accord de confidentialité — EraseOps (version du 15 octobre 2026)',
     points: [
@@ -532,4 +533,4 @@ export const NDA: Record<Lang, { titre: string; points: string[]; fin: string }>
     ],
     fin: 'I know my actions in the tool are recorded in a log.',
   },
-};
+});

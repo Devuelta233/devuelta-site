@@ -411,6 +411,11 @@ input[type='file'] {
   margin-bottom: 0;
 }
 
+.o-encadre > :first-child,
+.o-carte > :first-child {
+  margin-top: 0;
+}
+
 .o-liste-cartes {
   list-style: none;
   margin: 0;
@@ -617,11 +622,10 @@ li.o-carte > .o-carte-corps:first-child {
 
 .o-onglets {
   display: flex;
-  gap: 0.25rem;
+  flex-wrap: wrap;
+  gap: 0 0.25rem;
   margin: 1rem 0;
-  overflow-x: auto;
   border-bottom: 2px solid var(--trait);
-  -webkit-overflow-scrolling: touch;
 }
 
 .o-onglets a {

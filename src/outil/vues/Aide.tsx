@@ -1,10 +1,11 @@
 // Règles et aide : ce que chaque membre doit savoir, dans sa langue.
 
+import { typoProfonde } from '../../../shared/typo';
 import { indexLangue } from '../i18n';
 
 type T3 = [string, string, string];
 
-const REGLES: T3[] = [
+const REGLES: T3[] = typoProfonde([
   [
     'Rien ne part sans validation humaine. L’outil prépare ; une personne relit, valide, puis envoie elle-même depuis team.devuelta@protonmail.com.',
     'Nada sale sin validación humana. La herramienta prepara; una persona revisa, valida y envía ella misma desde team.devuelta@protonmail.com.',
@@ -45,18 +46,18 @@ const REGLES: T3[] = [
     'Amenaza, chantaje o peligro: primero la policía o emergencias. Nunca se negocia, nunca se paga.',
     'Threats, blackmail or danger: police or emergency services first. Never negotiate, never pay.',
   ],
-];
+]);
 
-const AUTO: T3[] = [
+const AUTO: T3[] = typoProfonde([
   ['prépare les relances des démarches restées sans réponse (brouillons à valider) ;', 'prepara los recordatorios de gestiones sin respuesta (borradores por validar);', 'prepares follow-ups for steps with no reply (drafts to validate);'],
   ['contrôle les liens des dossiers et signale « semble retiré » ou « semble réapparu » (à confirmer par vous) ;', 'controla los enlaces de los casos e indica «parece retirado» o «parece reaparecido» (a confirmar por ti);', 'checks case links and flags “seems removed” or “seems back” (for you to confirm);'],
   ['supprime définitivement les données arrivées à échéance ;', 'borra definitivamente los datos vencidos;', 'permanently deletes data past its retention period;'],
   ['vérifie que les liens officiels du site fonctionnent ;', 'comprueba que los enlaces oficiales del sitio funcionan;', 'checks that the site’s official links work;'],
   ['signale les pages nouvelles ou modifiées aux moteurs de recherche ;', 'avisa a los buscadores de las páginas nuevas o modificadas;', 'notifies search engines of new or updated pages;'],
   ['envoie l’alerte du matin sur les téléphones de l’équipe.', 'envía la alerta de la mañana a los teléfonos del equipo.', 'sends the morning alert to the team’s phones.'],
-];
+]);
 
-const PARCOURS: T3[] = [
+const PARCOURS: T3[] = typoProfonde([
   ['Demande reçue (alerte sur le téléphone)', 'Solicitud recibida (alerta en el teléfono)', 'Request received (phone alert)'],
   ['Premier contact discret, qualification', 'Primer contacto discreto, calificación', 'Discreet first contact, qualification'],
   ['Ouvrir le dossier', 'Abrir el caso', 'Open the case'],
@@ -65,9 +66,9 @@ const PARCOURS: T3[] = [
   ['Courriers préparés → relus → validés → envoyés', 'Cartas preparadas → revisadas → validadas → enviadas', 'Letters prepared → reviewed → validated → sent'],
   ['Relances automatiques, contrôle des liens', 'Recordatorios automáticos, control de enlaces', 'Automatic follow-ups, link checks'],
   ['Résultat, clôture, suppression automatique des données', 'Resultado, cierre, borrado automático de los datos', 'Outcome, closing, automatic data deletion'],
-];
+]);
 
-const TEXTES = {
+const TEXTES = typoProfonde({
   titre: ['Règles et aide', 'Reglas y ayuda', 'Rules & help'] as T3,
   regles: ['Les règles (non négociables)', 'Las reglas (no negociables)', 'The rules (non-negotiable)'] as T3,
   auto: ['Ce que le système fait seul, chaque matin vers 5 h 30 (heure du Ghana)', 'Lo que el sistema hace solo, cada mañana hacia las 5:30 (hora de Ghana)', 'What the system does on its own, every morning around 5:30 (Ghana time)'] as T3,
@@ -94,7 +95,7 @@ const TEXTES = {
     '¿Una duda sobre un caso? Una nota en el caso para el equipo y se decide juntos. Mejor esperar una hora que enviar una carta equivocada.',
     'Unsure about a case? Leave a note in the case for the team, then decide together. Better to wait an hour than send a wrong letter.',
   ] as T3,
-};
+});
 
 export function Aide() {
   const i = indexLangue();

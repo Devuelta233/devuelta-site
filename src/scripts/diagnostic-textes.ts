@@ -1,5 +1,6 @@
 // Textes du diagnostic (fonctionne entièrement dans le navigateur).
 
+import { typoProfonde } from '../../shared/typo';
 import type { Lang } from '../../shared/vocab';
 
 const FR = {
@@ -181,5 +182,5 @@ const EN: Textes = {
   choisir: 'Choose an answer to continue.',
 };
 
-export const TEXTES_DIAGNOSTIC: Record<Lang, Textes> = { fr: FR, es: ES, en: EN };
+export const TEXTES_DIAGNOSTIC: Record<Lang, Textes> = typoProfonde({ fr: FR, es: ES, en: EN });
 export type TextesDiagnostic = Textes;

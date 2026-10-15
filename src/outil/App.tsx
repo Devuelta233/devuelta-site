@@ -29,6 +29,7 @@ function lireRoute(): Route {
   if (p[0] === 'demandes' && p[1]) return { vue: 'demande', id: p[1] };
   if (p[0] === 'dossiers' && p[1] === 'nouveau') return { vue: 'nouveau' };
   if (p[0] === 'dossiers' && p[1]) return { vue: 'dossier', id: p[1], onglet: p[2] };
+  if (p[0] === 'referentiel' && p[1]) return { vue: 'referentiel', id: p[1] };
   return { vue: p[0] || 'tableau' };
 }
 
@@ -108,7 +109,7 @@ function Espace({ etat, route, surDeconnexion }: { etat: Etat; route: Route; sur
       ecran = <FicheDossier id={route.id!} onglet={route.onglet} />;
       break;
     case 'referentiel':
-      ecran = <Referentiel />;
+      ecran = <Referentiel ouvert={route.id} />;
       break;
     case 'floutage':
       ecran = <Floutage />;

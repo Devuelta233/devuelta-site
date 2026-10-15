@@ -1,7 +1,8 @@
 // Référentiel des recours : la même source (shared/referentiel.json) que le site public.
 // Lecture seule ici ; une correction se fait dans le fichier, puis mise en ligne.
 
-import { useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
+import { typo } from '../../../shared/typo';
 import { get } from '../api';
 import { date, indexLangue, t, tr } from '../i18n';
 import { Chargement, LienExterne, MessageErreur, Pastille, useCharger, valeur } from '../ui';
@@ -16,7 +17,7 @@ interface Fiche {
   [k: string]: unknown;
 }
 
-const CATEGORIES: Record<string, [string, string, string]> = {
+export const CATEGORIES: Record<string, [string, string, string]> = {
   'contenu-intime': ['Contenu intime', 'Contenido íntimo', 'Intimate content'],
   deepfake: ['Deepfake', 'Deepfake', 'Deepfake'],
   usurpation: ['Usurpation / faux profil', 'Suplantación / perfil falso', 'Impersonation / fake profile'],
@@ -27,7 +28,7 @@ const CATEGORIES: Record<string, [string, string, string]> = {
   transversal: ['Transversal', 'Transversal', 'Cross-cutting'],
 };
 
-const STATUTS: Record<string, { ton: 'ok' | 'info' | 'alerte'; l: [string, string, string] }> = {
+export const STATUTS: Record<string, { ton: 'ok' | 'info' | 'alerte'; l: [string, string, string] }> = {
   verifie: { ton: 'ok', l: ['Vérifié', 'Verificado', 'Verified'] },
   a_approfondir: { ton: 'info', l: ['À approfondir', 'Por profundizar', 'Needs more work'] },
   a_surveiller: { ton: 'alerte', l: ['À surveiller', 'A vigilar', 'To watch'] },
@@ -62,12 +63,12 @@ function Valeur({ v }: { v: unknown }) {
     return (
       <ul>
         {v.map((x) => (
-          <li>{String(x)}</li>
+          <li>{typo(String(x))}</li>
         ))}
       </ul>
     );
   }
-  return <>{String(v)}</>;
+  return <>{typo(String(v))}</>;
 }
 
 function Source({ url }: { url: unknown }) {
@@ -83,13 +84,17 @@ function Source({ url }: { url: unknown }) {
   );
 }
 
-function CarteFiche({ f }: { f: Fiche }) {
-  const [ouvert, setOuvert] = useState(false);
+function CarteFiche({ f, cible }: { f: Fiche; cible: boolean }) {
+  const [ouvert, setOuvert] = useState(cible);
+  const zone = useRef<HTMLLIElement>(null);
+  useEffect(() => {
+    if (cible) zone.current?.scrollIntoView({ block: 'start' });
+  }, [cible]);
   const s = STATUTS[f.statut];
   const idx = indexLangue();
   const cat = CATEGORIES[f.categorie]?.[idx] ?? f.categorie;
   return (
-    <li class="o-carte">
+    <li class="o-carte" ref={zone}>
       <button type="button" class="o-carte-tete" aria-expanded={ouvert} onClick={() => setOuvert(!ouvert)}>
         <span>
           <strong>{f.pays}</strong> · {cat}
@@ -125,7 +130,7 @@ function CarteFiche({ f }: { f: Fiche }) {
   );
 }
 
-export function Referentiel() {
+export function Referentiel({ ouvert }: { ouvert?: string }) {
   const { donnees, err, enCours } = useCharger(() => get<{ fiches: Fiche[] }>('/referentiel'));
   const [categorie, setCategorie] = useState('');
   const [q, setQ] = useState('');
@@ -172,7 +177,7 @@ export function Referentiel() {
       </div>
       <ul class="o-liste-cartes">
         {fiches.map((f) => (
-          <CarteFiche f={f} />
+          <CarteFiche f={f} cible={f.id === ouvert} />
         ))}
       </ul>
       <p class="o-muet">

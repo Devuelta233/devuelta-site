@@ -4,8 +4,9 @@
 import { useEffect, useState } from 'preact/hooks';
 import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isSituation } from '../../../shared/vocab';
 import { del, get, patch, post } from '../api';
-import { code, date, langue, t } from '../i18n';
+import { code, date, indexLangue, langue, t, tr } from '../i18n';
 import { Champ, Chargement, Copier, LienExterne, MessageErreur, Pastille, jourInput, useAction, useCharger, valeur } from '../ui';
+import { CATEGORIES, STATUTS } from './Referentiel';
 
 interface Suggestion {
   code: string;
@@ -378,8 +379,12 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           <ul class="o-liste-simple">
             {d.fiches.map((fi) => (
               <li>
-                <a href={`#/referentiel/${fi.id}`}>{fi.id}</a> <Pastille ton={fi.statut === 'verifie' ? 'ok' : 'info'}>{fi.statut}</Pastille>
-                {fi.role_devuelta === 'orientation_uniquement' && <Pastille ton="alerte">orientation</Pastille>}
+                <a href={`#/referentiel/${fi.id}`}>
+                  {String(fi.pays ?? '')} · {CATEGORIES[String(fi.categorie)]?.[indexLangue()] ?? String(fi.categorie ?? '')}
+                </a>{' '}
+                <span class="o-muet o-mono">{fi.id}</span>{' '}
+                <Pastille ton={STATUTS[fi.statut]?.ton ?? 'info'}>{STATUTS[fi.statut]?.l[indexLangue()] ?? fi.statut}</Pastille>
+                {fi.role_devuelta === 'orientation_uniquement' && <Pastille ton="alerte">{tr('orientation seulement', 'solo orientación', 'referral only')}</Pastille>}
               </li>
             ))}
           </ul>
