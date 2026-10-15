@@ -1,6 +1,5 @@
 // Accès aux données vérifiées (dossier shared/) pour construire les pages.
 
-import articlesData from '../../shared/articles.json';
 import guidesData from '../../shared/guides.json';
 import plateformesData from '../../shared/plateformes.json';
 import referentielData from '../../shared/referentiel.json';
@@ -167,11 +166,16 @@ export interface Article {
   liens_internes: Array<{ type: 'situation' | 'guide'; id: string }>;
 }
 
-const A = articlesData as { articles?: Article[] };
+// Un fichier par article (shared/articles/<id>.json) : deux articles en attente
+// de validation ne modifient jamais le même fichier.
+const FICHIERS_ARTICLES = import.meta.glob('../../shared/articles/*.json', {
+  eager: true,
+  import: 'default',
+}) as Record<string, Article>;
 
 /** Articles publiés, du plus récent au plus ancien. */
 export function articles(): Article[] {
-  return [...(A.articles ?? [])]
+  return Object.values(FICHIERS_ARTICLES)
     .filter((a) => (SITUATIONS_REELLES as readonly string[]).includes(a.situation))
     .sort((a, b) => b.publie_le.localeCompare(a.publie_le));
 }

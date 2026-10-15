@@ -19,7 +19,7 @@ l'ordre de `docs/plan-articles.json` (premier sujet au statut `a-faire`).
 - Titres ≤ 60 caractères, `meta_description` ≤ 155, slugs en minuscules ASCII avec tirets.
 - Les tests (`npm test`) refusent un article non conforme : ils doivent passer.
 
-## Format (un objet ajouté à la fin de `shared/articles.json` → `articles`)
+## Format (un fichier par article : `shared/articles/<id>.json`)
 
 ```json
 {
@@ -54,9 +54,13 @@ l'ordre de `docs/plan-articles.json` (premier sujet au statut `a-faire`).
 
 ## Publication
 
-1. Branche `article-<id>`, article ajouté, statut du sujet passé à `a-valider`
-   dans `docs/plan-articles.json`.
+1. Branche `article-<id>` créée depuis `main`, fichier `shared/articles/<id>.json`
+   ajouté (le nom du fichier = l'`id`), statut du sujet passé à `a-valider` dans
+   `docs/plan-articles.json`. Ne jamais modifier le fichier d'un autre article.
 2. `npm ci && npm test && npm run build` doivent réussir.
-3. Demande de fusion vers `main`, avec dans la description la version française
-   lisible (titre, chapô, sections) et la liste des sources : Steven lit, puis
-   « Merge » publie le site automatiquement. Après fusion, passer le statut à `publie`.
+3. Demande de fusion vers `main` par l'API REST de GitHub (`gh api
+   repos/Devuelta233/devuelta-site/pulls -f title=… -f head=article-<id> -f base=main
+   -F body=@description.md` ; `gh pr create` n'est pas disponible), avec dans la
+   description la version française lisible (titre, chapô, sections) et la liste
+   des sources : Steven lit, puis « Merge » publie le site automatiquement. Après
+   fusion, le statut passe à `publie` (fait par la tâche de la semaine suivante).
