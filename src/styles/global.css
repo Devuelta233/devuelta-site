@@ -1246,3 +1246,9 @@ button[disabled] {
   margin: 0.35rem 0;
   overflow-wrap: anywhere;
 }
+
+/* Un lien ou une adresse très longs dans le texte passent à la ligne au lieu
+   d'élargir la page sur téléphone. */
+main {
+  overflow-wrap: anywhere;
+}
