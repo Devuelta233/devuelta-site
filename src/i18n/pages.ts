@@ -292,6 +292,12 @@ export const PLATEFORME_PAGE = {
   } as T3,
   autres: { fr: 'Même situation, autres plateformes', es: 'Misma situación, otras plataformas', en: 'Same situation, other platforms' } as T3,
   conseils: { fr: 'Avant de commencer', es: 'Antes de empezar', en: 'Before you start' } as T3,
+  mineursTitre: { fr: 'Si vous avez moins de 18 ans', es: 'Si tienes menos de 18 años', en: 'If you are under 18' } as T3,
+  mineursTexte: {
+    fr: 'Parlez-en à un adulte de confiance et, en cas de menace, à la police. Les services officiels gratuits de votre pays sont sur la page Aide urgente. Devuelta ne prend jamais en charge, ni ne facture, un dossier concernant une personne mineure.',
+    es: 'Habla con un adulto de confianza y, si hay amenazas, con la policía. Los servicios oficiales gratuitos de tu país están en la página Ayuda urgente. Devuelta nunca se encarga ni cobra un caso que afecte a una persona menor.',
+    en: 'Talk to a trusted adult and, if there are threats, to the police. Your country’s free official services are on the Urgent help page. Devuelta never takes on, or charges for, a case involving a minor.',
+  } as T3,
 };
 
 export const NOT_FOUND = {

@@ -35,6 +35,8 @@ const date = dateLisible(PLATEFORMES_VERIFIE_LE, lang);
 const intro = PLATEFORME_PAGE.intro[lang].replace('{p}', plateforme.nom).replace('{d}', date);
 const autres = actionsPour(situation).filter((x) => x.plateforme.id !== plateforme.id);
 const description = `${h1}. ${action.etapes[lang]?.[0] ?? ''}`.slice(0, 155);
+// Outil réservé aux images prises avant 18 ans : orientation seulement, jamais d'offre.
+const pourMineurs = plateforme.id === 'takeitdown';
 const hote = (u: string) => {
   try {
     return new URL(u).hostname.replace(/^www\./, '');
@@ -99,7 +101,15 @@ const jsonld = [
       );
     })}
 
-    <SiCaBloque lang={lang} />
+    {pourMineurs ? (
+      <section class="encadre alerte" aria-labelledby="mineurs">
+        <h2 id="mineurs" class="sans-marge">{PLATEFORME_PAGE.mineursTitre[lang]}</h2>
+        <p>{PLATEFORME_PAGE.mineursTexte[lang]}</p>
+        <p><a href={page('urgence', lang)}>{C.nav.urgence[lang]} →</a></p>
+      </section>
+    ) : (
+      <SiCaBloque lang={lang} />
+    )}
 
     {autres.length > 0 && (
       <section aria-labelledby="autres">
