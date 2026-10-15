@@ -57,6 +57,9 @@ l'ordre de `docs/plan-articles.json` (premier sujet au statut `a-faire`).
 1. Branche `article-<id>`, article ajouté, statut du sujet passé à `a-valider`
    dans `docs/plan-articles.json`.
 2. `npm ci && npm test && npm run build` doivent réussir.
-3. Demande de fusion vers `main`, avec dans la description la version française
-   lisible (titre, chapô, sections) et la liste des sources : Steven lit, puis
-   « Merge » publie le site automatiquement. Après fusion, passer le statut à `publie`.
+3. Demande de fusion vers `main` par l'API REST de GitHub (`gh api
+   repos/Devuelta233/devuelta-site/pulls -f title=… -f head=article-<id> -f base=main
+   -F body=@description.md` ; `gh pr create` n'est pas disponible), avec dans la
+   description la version française lisible (titre, chapô, sections) et la liste
+   des sources : Steven lit, puis « Merge » publie le site automatiquement. Après
+   fusion, le statut passe à `publie` (fait par la tâche de la semaine suivante).
