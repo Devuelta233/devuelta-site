@@ -9,7 +9,7 @@ export type PropsPage =
   | { type: 'accueil'; lang: Lang }
   | { type: PageFixe; lang: Lang }
   | { type: 'situation'; lang: Lang; situation: SituationReelle }
-  | { type: 'plateforme'; lang: Lang; situation: SituationReelle; plateforme: Plateforme; action: ActionPlateforme }
+  | { type: 'plateforme'; lang: Lang; situation: SituationReelle; plateforme: Plateforme; actions: ActionPlateforme[] }
   | { type: 'guide'; lang: Lang; guide: Guide }
   | { type: 'articles'; lang: Lang }
   | { type: 'article'; lang: Lang; article: Article };
@@ -47,7 +47,7 @@ export function toutesLesRoutes(): EntreeRoute[] {
     for (const x of toutesLesPagesPlateforme()) {
       out.push({
         chemin: plateformePath(x.situation, x.plateforme.id, lang),
-        props: { type: 'plateforme', lang, situation: x.situation, plateforme: x.plateforme, action: x.action },
+        props: { type: 'plateforme', lang, situation: x.situation, plateforme: x.plateforme, actions: x.actions },
         groupe: `plateforme:${x.situation}:${x.plateforme.id}`,
         priorite: 0.8,
         maj: jour(PLATEFORMES_VERIFIE_LE),

@@ -120,9 +120,15 @@ export function urlAction(a: ActionPlateforme, lang: Lang): string {
   return a.url_par_langue?.[lang] ?? a.url;
 }
 
-export function toutesLesPagesPlateforme(): Array<{ situation: SituationReelle; plateforme: Plateforme; action: ActionPlateforme }> {
-  const out: Array<{ situation: SituationReelle; plateforme: Plateforme; action: ActionPlateforme }> = [];
-  for (const s of SITUATIONS_REELLES) for (const x of actionsPour(s)) out.push({ situation: s, ...x });
+/** Une page par plateforme et par situation, avec toutes les démarches officielles qui s'y rapportent. */
+export function toutesLesPagesPlateforme(): Array<{ situation: SituationReelle; plateforme: Plateforme; actions: ActionPlateforme[] }> {
+  const out: Array<{ situation: SituationReelle; plateforme: Plateforme; actions: ActionPlateforme[] }> = [];
+  for (const s of SITUATIONS_REELLES) {
+    for (const p of plateformes()) {
+      const actions = p.actions.filter((x) => x.situation === s);
+      if (actions.length > 0) out.push({ situation: s, plateforme: p, actions });
+    }
+  }
   return out;
 }
 

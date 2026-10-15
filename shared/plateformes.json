@@ -1,1 +1,2856 @@
-{"verifie_le":"","plateformes":[]}
+{
+ "verifie_le": "2026-10-15",
+ "plateformes": [
+  {
+   "id": "facebook",
+   "nom": "Facebook",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Récupérer un compte Facebook piraté",
+      "es": "Recuperar una cuenta de Facebook hackeada",
+      "en": "Recover a hacked Facebook account"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez facebook.com/hacked, si possible sur un appareil déjà utilisé pour vous connecter.",
+       "Suivez les étapes affichées pour sécuriser votre compte.",
+       "Si vous n'avez plus accès à votre e-mail ou à votre numéro, allez sur facebook.com/login/identify et cherchez votre compte.",
+       "Choisissez « Aucun accès à ces options ? » (ou « Récupérer ») et suivez les instructions pour prouver que le compte est à vous.",
+       "Créez un nouveau mot de passe, difficile à deviner."
+      ],
+      "es": [
+       "Abre facebook.com/hacked, si puedes desde un dispositivo que ya usaste para iniciar sesión.",
+       "Sigue los pasos en pantalla para proteger tu cuenta.",
+       "Si ya no tienes acceso a tu correo o a tu número, entra en facebook.com/login/identify y busca tu cuenta.",
+       "Elige «¿Ya no tienes acceso?» (o «Recuperar») y sigue las instrucciones para demostrar que la cuenta es tuya.",
+       "Crea una contraseña nueva que sea difícil de adivinar."
+      ],
+      "en": [
+       "Open facebook.com/hacked, ideally on a device you've logged in with before.",
+       "Follow the on-screen steps to secure your account.",
+       "If you can't access your email or phone number anymore, go to facebook.com/login/identify and find your account.",
+       "Choose \"No longer have access to these?\" (or \"Recover\") and follow the prompts to prove the account is yours.",
+       "Set a new password that is hard to guess."
+      ]
+     },
+     "url": "https://www.facebook.com/hacked",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "facebook.com/hacked est le parcours officiel cité par l'article d'aide https://www.facebook.com/help/1216349518398524 (lu le 2026-10-15, étapes reprises de cet article). Le parcours lui-même est en JavaScript. Auto-localisé selon la langue du navigateur."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un faux profil depuis Facebook",
+      "es": "Reportar un perfil falso desde Facebook",
+      "en": "Report a fake profile from Facebook"
+     },
+     "etapes": {
+      "fr": [
+       "Allez sur le faux profil (ou demandez à un proche de vous envoyer son lien).",
+       "Cliquez sur « … » (Options) sous la photo de couverture.",
+       "Sélectionnez « Signaler le profil ».",
+       "Indiquez qu'il se fait passer pour vous et suivez les instructions."
+      ],
+      "es": [
+       "Ve al perfil falso (o pide a alguien que te envíe el enlace).",
+       "Haz clic en «…» (Opciones) debajo de la foto de portada.",
+       "Selecciona «Reportar perfil» («Denunciar perfil» en España).",
+       "Indica que se hace pasar por ti y sigue las instrucciones."
+      ],
+      "en": [
+       "Go to the fake profile (or ask a friend to send you its link).",
+       "Click \"…\" (Options) below the cover photo.",
+       "Select \"Report profile\".",
+       "Say it is pretending to be you and follow the prompts."
+      ]
+     },
+     "url": "https://www.facebook.com/help/174210519303259",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article d'aide lu le 2026-10-15. Sans compte ou si vous êtes bloqué, utiliser le formulaire 295309487309948 (action suivante). Auto-localisé."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Sans compte Facebook : formulaire d'usurpation d'identité",
+      "es": "Sin cuenta de Facebook: formulario de suplantación de identidad",
+      "en": "No Facebook account: impersonation report form"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire « Signaler le compte d'un imposteur ».",
+       "Confirmez que c'est vous qui êtes imité (ou que vous êtes son représentant légal).",
+       "Indiquez votre nom, votre e-mail et le lien du faux profil.",
+       "Ajoutez une photo de votre pièce d'identité, puis envoyez."
+      ],
+      "es": [
+       "Abre el formulario «Reportar una cuenta de impostor».",
+       "Confirma que eres la persona suplantada (o su representante legal).",
+       "Escribe tu nombre, tu correo y el enlace del perfil falso.",
+       "Sube una foto de tu documento de identidad y envía."
+      ],
+      "en": [
+       "Open the \"Report an Impostor Account\" form.",
+       "Confirm you are the person being impersonated (or their legal representative).",
+       "Enter your name, your email and the link to the fake profile.",
+       "Upload a photo of your ID, then send."
+      ]
+     },
+     "url": "https://www.facebook.com/help/contact/295309487309948",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire lu le 2026-10-15 (FR/ES/EN). Seule la personne usurpée ou son représentant légal peut l'utiliser ; pièce d'identité obligatoire. Auto-localisé."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler une photo ou vidéo intime publiée sans accord",
+      "es": "Reportar una foto o video íntimo publicado sin tu permiso",
+      "en": "Report an intimate photo or video shared without consent"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez la photo ou la vidéo concernée.",
+       "Appuyez sur « … » (Options), puis sur « Signaler ».",
+       "Choisissez le motif qui correspond (image intime) et suivez les instructions.",
+       "Si la section « Signaler des préjudices spécifiques » apparaît, appuyez sur « Remplir le formulaire » et ajoutez les liens.",
+       "Envoyez : Meta retire l'image si elle enfreint ses règles et bloque les copies identiques."
+      ],
+      "es": [
+       "Abre la foto o el video.",
+       "Toca «…» (Opciones) y luego «Reportar» («Denunciar» en España).",
+       "Elige el motivo que corresponda (imagen íntima) y sigue las instrucciones.",
+       "Si aparece la sección de daños específicos, toca «Completar el formulario» y añade los enlaces.",
+       "Envía: Meta elimina la imagen si infringe sus normas y bloquea las copias idénticas."
+      ],
+      "en": [
+       "Open the photo or video.",
+       "Tap \"…\" (Options), then \"Report\".",
+       "Pick the matching reason (intimate image) and follow the prompts.",
+       "If you see the \"Reporting Specific Harms\" section, tap \"Fill in the Form\" and add the links.",
+       "Submit: Meta removes the image if it breaks the rules and blocks identical copies."
+      ]
+     },
+     "url": "https://www.meta.com/help/policies/1437976901029950/",
+     "url_par_langue": {
+      "fr": "https://www.meta.com/fr-fr/help/policies/1437976901029950/",
+      "es": "https://www.meta.com/es-la/help/policies/1437976901029950/",
+      "en": "https://www.meta.com/help/policies/1437976901029950/"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Page Meta « Report NCII on Meta Platforms » (Facebook, Instagram, Threads), mise à jour début oct. 2026, lue en EN et FR. Le formulaire spécialisé (TAKE IT DOWN Act) et le formulaire sans compte ne sont ouverts qu'aux résidents des États-Unis ; ailleurs, signalement intégré. meta.com ne s'auto-localise pas : versions /fr-fr/ et /es-la/ vérifiées (200). Compléter avec StopNCII.org."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake sexuel ou une fausse image intime",
+      "es": "Reportar un deepfake sexual o una imagen íntima falsa",
+      "en": "Report a sexual deepfake or fake intimate image"
+     },
+     "etapes": {
+      "fr": [
+       "Faites une capture d'écran et copiez le lien de la publication.",
+       "Appuyez sur « … » (Options), puis sur « Signaler ».",
+       "Choisissez le motif lié aux images intimes : les deepfakes sont interdits au même titre.",
+       "Suivez les instructions et envoyez le signalement."
+      ],
+      "es": [
+       "Haz una captura de pantalla y copia el enlace de la publicación.",
+       "Toca «…» (Opciones) y luego «Reportar» («Denunciar» en España).",
+       "Elige el motivo de imágenes íntimas: los deepfakes están prohibidos igual.",
+       "Sigue las instrucciones y envía el reporte."
+      ],
+      "en": [
+       "Take a screenshot and copy the post's link.",
+       "Tap \"…\" (Options), then \"Report\".",
+       "Pick the intimate images reason: deepfakes are banned the same way.",
+       "Follow the prompts and submit the report."
+      ]
+     },
+     "url": "https://www.meta.com/help/policies/1437976901029950/",
+     "url_par_langue": {
+      "fr": "https://www.meta.com/fr-fr/help/policies/1437976901029950/",
+      "es": "https://www.meta.com/es-la/help/policies/1437976901029950/",
+      "en": "https://www.meta.com/help/policies/1437976901029950/"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "La page Meta précise que partager ou menacer de partager des images intimes, « y compris des deepfakes », est interdit ; même procédure que contenu-intime. La page Stop Sextortion de Meta demande aussi de signaler les contenus générés par IA."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler du harcèlement ou des attaques personnelles",
+      "es": "Reportar acoso o ataques personales",
+      "en": "Report bullying, harassment or personal attacks"
+     },
+     "etapes": {
+      "fr": [
+       "Faites des captures d'écran des publications avant tout.",
+       "Signalez la publication ou le profil avec « … » puis « Signaler ».",
+       "Bloquez la personne ou retirez-la de vos amis.",
+       "Ne répondez pas aux provocations et parlez-en à une personne de confiance.",
+       "En cas de danger immédiat, contactez la police."
+      ],
+      "es": [
+       "Antes que nada, haz capturas de pantalla de las publicaciones.",
+       "Reporta la publicación o el perfil con «…» y luego «Reportar» («Denunciar» en España).",
+       "Bloquea a la persona o elimínala de tus amigos.",
+       "No respondas a las provocaciones y habla con alguien de confianza.",
+       "Si estás en peligro inmediato, llama a la policía."
+      ],
+      "en": [
+       "First, take screenshots of the posts.",
+       "Report the post or profile with \"…\" then \"Report\".",
+       "Block or unfriend the person.",
+       "Don't respond to provocation, and talk to someone you trust.",
+       "If you're in immediate danger, contact the police."
+      ]
+     },
+     "url": "https://www.facebook.com/help/116326365118751",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « How to handle bullying, harassment, or personal attack » lu le 2026-10-15. Sans compte ou si vous êtes bloqué : formulaire « Signaler quelque chose » https://www.facebook.com/help/contact/485974059259751 (vérifié). Auto-localisé."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Formulaire de signalement pour diffamation",
+      "es": "Formulario de denuncia por difamación",
+      "en": "Defamation reporting form"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire et choisissez le pays où vous faites valoir vos droits.",
+       "Indiquez que vous signalez pour vous-même (ou en tant que représentant).",
+       "Donnez vos nom, adresse postale et e-mail.",
+       "Collez le lien de chaque publication et expliquez pourquoi elle est diffamatoire.",
+       "Envoyez ; joignez une décision de justice si vous en avez une."
+      ],
+      "es": [
+       "Abre el formulario y elige el país donde reclamas tus derechos.",
+       "Indica que reportas por ti mismo (o como representante).",
+       "Escribe tu nombre, dirección postal y correo.",
+       "Pega el enlace de cada publicación y explica por qué es difamatoria.",
+       "Envía; adjunta una orden judicial si la tienes."
+      ],
+      "en": [
+       "Open the form and pick the country where you claim your rights.",
+       "Say you are reporting for yourself (or as a representative).",
+       "Enter your name, mailing address and email.",
+       "Paste the link to each post and explain why it is defamatory.",
+       "Submit; attach a court order if you have one."
+      ]
+     },
+     "url": "https://www.facebook.com/help/contact/430253071144967",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire lu le 2026-10-15 (FR/ES/EN). Selon le pays choisi, Facebook peut exiger une décision de justice ; pour les États-Unis il refuse d'agir (Section 230). Réservé à la personne visée ou à son représentant. Auto-localisé."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Signaler une photo ou vidéo qui viole votre vie privée",
+      "es": "Reportar una foto o video que viola tu privacidad",
+      "en": "Report a photo or video that violates your privacy"
+     },
+     "etapes": {
+      "fr": [
+       "Utilisez le lien « Signaler » à côté de la photo ou de la vidéo : c'est le plus rapide.",
+       "Si vous êtes identifié dessus, retirez l'identification.",
+       "Si possible, demandez à la personne qui l'a publiée de la retirer.",
+       "Pour un enfant ou une personne que vous représentez légalement, utilisez le formulaire vie privée de la page."
+      ],
+      "es": [
+       "Usa el enlace «Reportar» junto a la foto o el video: es lo más rápido.",
+       "Si te etiquetaron, quita la etiqueta.",
+       "Si puedes, pide a quien la publicó que la elimine.",
+       "Si es de un niño o de alguien a quien representas legalmente, usa el formulario de privacidad de la página."
+      ],
+      "en": [
+       "Use the \"Report\" link next to the photo or video: it's the fastest way.",
+       "If you're tagged, remove the tag.",
+       "If you can, ask the person who posted it to take it down.",
+       "For a child or someone you legally represent, use the privacy form on the page."
+      ]
+     },
+     "url": "https://www.facebook.com/help/428478523862899",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Photos or Videos That Violate Your Privacy » lu le 2026-10-15. Facebook indique ne retirer pour motif de vie privée que dans des cas précis (mineurs, personnes représentées) ; adresse, téléphone ou documents d'identité publiés relèvent de la règle « Atteintes à la vie privée » des Standards de la communauté (signalement intégré). Auto-localisé."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Signaler une atteinte au droit d'auteur (photo, création)",
+      "es": "Reportar una infracción de derechos de autor (foto, obra)",
+      "en": "Report copyright infringement (photo, creative work)"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que vous êtes l'auteur de l'œuvre ou son représentant autorisé.",
+       "Ouvrez le formulaire de propriété intellectuelle et choisissez « Droit d'auteur ».",
+       "Collez les liens des publications qui reprennent votre œuvre.",
+       "Décrivez votre œuvre originale (lien ou description) et envoyez.",
+       "Sachez que votre nom et votre e-mail peuvent être transmis à la personne signalée."
+      ],
+      "es": [
+       "Comprueba que eres el autor de la obra o su representante autorizado.",
+       "Abre el formulario de propiedad intelectual y elige «Derechos de autor».",
+       "Pega los enlaces de las publicaciones que usan tu obra.",
+       "Describe tu obra original (enlace o descripción) y envía.",
+       "Ten en cuenta que tu nombre y tu correo pueden enviarse a la persona reportada."
+      ],
+      "en": [
+       "Make sure you own the work or are authorized to act for the owner.",
+       "Open the intellectual property form and choose \"Copyright\".",
+       "Paste the links to the posts that use your work.",
+       "Describe your original work (link or description) and submit.",
+       "Your name and email may be shared with the person you report."
+      ]
+     },
+     "url": "https://www.facebook.com/help/contact/1758255661104383",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Le lien redirige (200) vers le formulaire « Meta Intellectual Property Reporting Form » https://help.meta.com/requests/1523801815366035/ (rendu en JavaScript, champs non lisibles hors navigateur). Étapes vérifiées sur l'article https://www.facebook.com/help/1020633957973118. Une photo où vous apparaissez mais prise par un autre relève de la vie privée, pas du droit d'auteur."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Quelqu'un menace de publier vos photos ou messages privés",
+      "es": "Alguien amenaza con publicar tus fotos o mensajes privados",
+      "en": "Someone is threatening to share your private photos or messages"
+     },
+     "etapes": {
+      "fr": [
+       "Gardez des preuves : captures d'écran des messages et du profil.",
+       "Signalez le profil et les messages à Facebook.",
+       "Bloquez la personne.",
+       "Portez plainte auprès de la police.",
+       "Si vous avez moins de 18 ans, parlez-en à un adulte de confiance."
+      ],
+      "es": [
+       "Guarda pruebas: capturas de pantalla de los mensajes y del perfil.",
+       "Reporta el perfil y los mensajes a Facebook.",
+       "Bloquea a la persona.",
+       "Denúncialo ante la policía.",
+       "Si tienes menos de 18 años, habla con un adulto de confianza."
+      ],
+      "en": [
+       "Keep proof: screenshots of the messages and the profile.",
+       "Report the profile and messages to Facebook.",
+       "Block the person.",
+       "Report it to the police.",
+       "If you're under 18, talk to an adult you trust."
+      ]
+     },
+     "url": "https://www.facebook.com/help/1381617785483471",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article Facebook (rédigé avec Cyber Civil Rights Initiative et ConnectSafely) lu le 2026-10-15. Sans compte : option « Quelqu'un menace de partager des choses que je veux garder privées » du formulaire https://www.facebook.com/help/contact/485974059259751. Auto-localisé."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Sextorsion : les 5 réflexes conseillés par Meta",
+      "es": "Sextorsión: los 5 pasos que recomienda Meta",
+      "en": "Sextortion: Meta's 5 ways to respond"
+     },
+     "etapes": {
+      "fr": [
+       "Arrêtez de répondre et ne payez pas.",
+       "Bloquez la personne mais ne supprimez ni votre profil ni les messages : gardez tout.",
+       "Signalez les menaces et les images à la plateforme.",
+       "Parlez-en à une personne de confiance.",
+       "Si vous aviez moins de 18 ans sur les images, créez un dossier sur Take It Down."
+      ],
+      "es": [
+       "Deja de responder y no pagues.",
+       "Bloquea a la persona, pero no borres tu perfil ni los mensajes: guarda todo.",
+       "Reporta las amenazas y las imágenes a la plataforma.",
+       "Habla con alguien de confianza.",
+       "Si tenías menos de 18 años en las imágenes, abre un caso en Take It Down."
+      ],
+      "en": [
+       "Stop responding and don't pay.",
+       "Block the person, but don't delete your profile or messages: save everything.",
+       "Report the threats and images to the platform.",
+       "Talk to someone you trust.",
+       "If you were under 18 in the images, submit a case to Take It Down."
+      ]
+     },
+     "url": "https://www.meta.com/safety/topics/bullying-harassment/stop-sextortion/",
+     "url_par_langue": {
+      "fr": "https://www.meta.com/fr-fr/safety/topics/bullying-harassment/stop-sextortion/",
+      "es": "https://www.meta.com/es-la/safety/topics/bullying-harassment/stop-sextortion/",
+      "en": "https://www.meta.com/safety/topics/bullying-harassment/stop-sextortion/"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Centre de sécurité Meta (contenu Thorn), lu le 2026-10-15 ; valable pour Facebook, Instagram et Messenger. Page surtout orientée ados ; pour un adulte, StopNCII.org remplace Take It Down. Versions /fr-fr/ et /es-la/ vérifiées (200)."
+    },
+    {
+     "situation": "faux-avis",
+     "titre": {
+      "fr": "Signaler un faux avis sur une Page professionnelle",
+      "es": "Reportar una opinión falsa en una página de empresa",
+      "en": "Report a fake review on a business Page"
+     },
+     "etapes": {
+      "fr": [
+       "Sur la Page, cliquez sur « Avis » (sous « Détails »).",
+       "Cliquez sur « Voir tout » à côté de « Avis récents ».",
+       "Cliquez sur « … » (Options) en haut à droite de l'avis.",
+       "Sélectionnez « Signaler la publication » et suivez les instructions."
+      ],
+      "es": [
+       "En la página, haz clic en «Opiniones» (en «Detalles»).",
+       "Haz clic en «Ver todo» junto a «Opiniones recientes».",
+       "Haz clic en «…» (Opciones) arriba a la derecha de la opinión.",
+       "Selecciona «Reportar publicación» y sigue las instrucciones."
+      ],
+      "en": [
+       "On the Page, click \"Reviews\" (under \"Details\").",
+       "Click \"See all\" next to \"Recent reviews\".",
+       "Click \"…\" (Options) at the top right of the review.",
+       "Select \"Report post\" and follow the on-screen instructions."
+      ]
+     },
+     "url": "https://www.facebook.com/help/439579999521224",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Report a Recommendation or review about a business Page » lu le 2026-10-15 (FR/ES/EN). Les avis composés seulement d'étoiles ne peuvent pas être signalés ; les faux avis (spam) sont retirés selon l'article 500762053364226. Auto-localisé."
+    }
+   ]
+  },
+  {
+   "id": "instagram",
+   "nom": "Instagram",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Récupérer un compte Instagram piraté",
+      "es": "Recuperar una cuenta de Instagram hackeada",
+      "en": "Recover a hacked Instagram account"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez instagram.com/hacked dans le navigateur de votre téléphone ou ordinateur.",
+       "Si vous avez reçu un e-mail de security@mail.instagram.com, cliquez sur « Sécuriser mon compte » pour annuler le changement.",
+       "Sinon, sur l'écran de connexion, appuyez sur « Mot de passe oublié ? » et demandez un lien de connexion.",
+       "Si le lien ne suffit pas, demandez de l'aide depuis un mobile avec une adresse e-mail à laquelle vous seul avez accès.",
+       "Si on vous le demande, faites le selfie vidéo pour confirmer votre identité."
+      ],
+      "es": [
+       "Abre instagram.com/hacked en el navegador del teléfono o de la computadora.",
+       "Si recibiste un correo de security@mail.instagram.com, selecciona «proteger mi cuenta» para deshacer el cambio.",
+       "Si no, en la pantalla de inicio de sesión toca «¿Olvidaste tu contraseña?» y pide un enlace de inicio de sesión.",
+       "Si el enlace no basta, pide ayuda desde el móvil con un correo al que solo tú tengas acceso.",
+       "Si te lo piden, graba el video selfie para confirmar tu identidad."
+      ],
+      "en": [
+       "Open instagram.com/hacked in your phone or computer browser.",
+       "If you got an email from security@mail.instagram.com, select \"secure my account\" to undo the change.",
+       "Otherwise, on the login screen tap \"Forgot password?\" and request a login link.",
+       "If the link doesn't work, request support from a mobile device using an email only you can access.",
+       "If asked, record the video selfie to confirm your identity."
+      ]
+     },
+     "url": "https://www.instagram.com/hacked/",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page officielle « My Instagram was Hacked » (200). Étapes reprises de l'article d'aide https://help.instagram.com/149494825257596 lu le 2026-10-15 en EN/FR/ES. Auto-localisé."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un compte qui se fait passer pour vous",
+      "es": "Reportar una cuenta que se hace pasar por ti",
+      "en": "Report an account pretending to be you"
+     },
+     "etapes": {
+      "fr": [
+       "Allez sur le profil du faux compte.",
+       "Appuyez sur « … » (Options) à côté du nom de profil.",
+       "Appuyez sur « Signaler », puis « Signaler le compte ».",
+       "Choisissez « Il usurpe l'identité d'un tiers », puis le type d'usurpation, et suivez les instructions."
+      ],
+      "es": [
+       "Ve al perfil de la cuenta falsa.",
+       "Toca «…» (Opciones) junto al nombre de usuario.",
+       "Toca «Reportar» y luego «Reportar cuenta» («Denunciar» en España).",
+       "Elige «Finge ser otra persona», luego el tipo de suplantación, y sigue las instrucciones."
+      ],
+      "en": [
+       "Go to the fake account's profile.",
+       "Tap \"…\" (Options) next to the username.",
+       "Tap \"Report\", then \"Report Account\".",
+       "Choose \"It's pretending to be someone else\", pick the type, and follow the prompts."
+      ]
+     },
+     "url": "https://help.instagram.com/446663175382270",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article lu le 2026-10-15 (EN/FR/ES). Le signalement est anonyme. Sans compte : formulaire 636276399721841 (action suivante). Auto-localisé."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Sans compte Instagram : formulaire d'usurpation d'identité",
+      "es": "Sin cuenta de Instagram: formulario de suplantación de identidad",
+      "en": "No Instagram account: impersonation report form"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire et choisissez « Quelqu'un a créé un compte en se faisant passer pour moi ».",
+       "Indiquez votre nom, votre e-mail et le nom d'utilisateur du faux compte.",
+       "Ajoutez une photo de votre pièce d'identité.",
+       "Envoyez (un seul faux compte par formulaire)."
+      ],
+      "es": [
+       "Abre el formulario y elige que alguien creó una cuenta haciéndose pasar por ti.",
+       "Escribe tu nombre, tu correo y el nombre de usuario de la cuenta falsa.",
+       "Sube una foto de tu documento de identidad.",
+       "Envía (una sola cuenta falsa por formulario)."
+      ],
+      "en": [
+       "Open the form and choose \"Someone created an account pretending to be me\".",
+       "Enter your name, your email and the fake account's username.",
+       "Upload a photo of your ID.",
+       "Submit (one fake account per form)."
+      ]
+     },
+     "url": "https://help.instagram.com/contact/636276399721841",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « Report an Impersonation Account on Instagram or Threads » lu le 2026-10-15. Pièce d'identité obligatoire. Auto-localisé (titre traduit, certains textes restent en anglais)."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Une photo intime de vous a été publiée sans votre accord",
+      "es": "Publicaron una foto íntima tuya sin tu permiso",
+      "en": "An intimate photo of you was posted without your permission"
+     },
+     "etapes": {
+      "fr": [
+       "Faites une capture d'écran de la publication pour garder une preuve.",
+       "Signalez la publication (« … » puis « Signaler ») : c'est anonyme.",
+       "Sans compte Instagram, demandez à un proche de faire le signalement.",
+       "Bloquez la personne qui l'a publiée.",
+       "Contactez la police ou une association d'aide aux victimes."
+      ],
+      "es": [
+       "Haz una captura de pantalla de la publicación como prueba.",
+       "Reporta la publicación («…» y luego «Reportar»): es anónimo.",
+       "Si no tienes cuenta de Instagram, pide a alguien de confianza que la reporte.",
+       "Bloquea a quien la publicó.",
+       "Contacta a la policía o a una organización de apoyo a víctimas."
+      ],
+      "en": [
+       "Take a screenshot of the post to keep proof.",
+       "Report the post (\"…\" then \"Report\"): it's anonymous.",
+       "If you don't have an Instagram account, ask a friend to report it.",
+       "Block the person who posted it.",
+       "Contact the police or a victim support organization."
+      ]
+     },
+     "url": "https://help.instagram.com/1769410010008691",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article rédigé avec la Cyber Civil Rights Initiative, lu le 2026-10-15 (EN/FR). Instagram utilise ensuite la correspondance d'images pour bloquer les republications sur Instagram, Facebook et Messenger. Voir aussi la page Meta NCII (https://www.meta.com/fr-fr/help/policies/1437976901029950/) et StopNCII.org. Auto-localisé."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake sexuel ou une fausse image intime",
+      "es": "Reportar un deepfake sexual o una imagen íntima falsa",
+      "en": "Report a sexual deepfake or fake intimate image"
+     },
+     "etapes": {
+      "fr": [
+       "Faites une capture d'écran et copiez le lien de la publication.",
+       "Appuyez sur « … » (Options), puis sur « Signaler ».",
+       "Choisissez le motif lié aux images intimes : les deepfakes sont interdits au même titre.",
+       "Suivez les instructions et envoyez le signalement."
+      ],
+      "es": [
+       "Haz una captura de pantalla y copia el enlace de la publicación.",
+       "Toca «…» (Opciones) y luego «Reportar» («Denunciar» en España).",
+       "Elige el motivo de imágenes íntimas: los deepfakes están prohibidos igual.",
+       "Sigue las instrucciones y envía el reporte."
+      ],
+      "en": [
+       "Take a screenshot and copy the post's link.",
+       "Tap \"…\" (Options), then \"Report\".",
+       "Pick the intimate images reason: deepfakes are banned the same way.",
+       "Follow the prompts and submit the report."
+      ]
+     },
+     "url": "https://www.meta.com/help/policies/1437976901029950/",
+     "url_par_langue": {
+      "fr": "https://www.meta.com/fr-fr/help/policies/1437976901029950/",
+      "es": "https://www.meta.com/es-la/help/policies/1437976901029950/",
+      "en": "https://www.meta.com/help/policies/1437976901029950/"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Page Meta « Report NCII on Meta Platforms » (couvre Instagram et Threads), qui précise que les deepfakes sont interdits. Formulaire spécialisé sans compte réservé aux résidents des États-Unis (https://help.instagram.com/contact/1444860770142447 → « US_TIDA on Instagram/Threads »)."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler du harcèlement ou des propos blessants",
+      "es": "Reportar acoso o contenido ofensivo",
+      "en": "Report bullying or abusive content"
+     },
+     "etapes": {
+      "fr": [
+       "Faites des captures d'écran des publications ou commentaires.",
+       "Sur la publication, appuyez sur « … » puis « Signaler ».",
+       "Choisissez « Harcèlement ou contact indésirable » (ou « Fausses informations ») et suivez les instructions.",
+       "Pour signaler tout le compte : allez sur son profil, « … » puis « Signaler ».",
+       "Bloquez ensuite la personne."
+      ],
+      "es": [
+       "Haz capturas de pantalla de las publicaciones o comentarios.",
+       "En la publicación, toca «…» y luego «Reportar».",
+       "Elige «Bullying o contacto no deseado» (o «Información falsa») y sigue las instrucciones.",
+       "Para reportar toda la cuenta: ve a su perfil, «…» y luego «Reportar».",
+       "Después, bloquea a la persona."
+      ],
+      "en": [
+       "Take screenshots of the posts or comments.",
+       "On the post, tap \"…\" then \"Report\".",
+       "Choose \"Bullying or unwanted contact\" (or \"False information\") and follow the prompts.",
+       "To report the whole account: go to the profile, \"…\" then \"Report\".",
+       "Then block the person."
+      ]
+     },
+     "url": "https://help.instagram.com/192435014247952",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « How to report things » lu le 2026-10-15 (EN/FR/ES). Le formulaire sans compte cité par cet article (help.instagram.com/contact/419859403337390) renvoie une erreur 404 au 2026-10-15. Auto-localisé."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Formulaire de signalement pour diffamation",
+      "es": "Formulario de denuncia por difamación",
+      "en": "Defamation reporting form"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire et choisissez le pays où vous faites valoir vos droits.",
+       "Indiquez que vous signalez en votre nom (ou comme représentant).",
+       "Donnez vos nom, adresse postale et e-mail.",
+       "Collez le lien de chaque contenu et expliquez pourquoi il est diffamatoire.",
+       "Envoyez ; joignez une décision de justice si vous en avez une."
+      ],
+      "es": [
+       "Abre el formulario y elige el país donde reclamas tus derechos.",
+       "Indica que reportas en tu nombre (o como representante).",
+       "Escribe tu nombre, dirección postal y correo.",
+       "Pega el enlace de cada contenido y explica por qué es difamatorio.",
+       "Envía; adjunta una orden judicial si la tienes."
+      ],
+      "en": [
+       "Open the form and pick the country where you claim your rights.",
+       "Say you are reporting for yourself (or as a representative).",
+       "Enter your name, mailing address and email.",
+       "Paste the link to each piece of content and explain why it is defamatory.",
+       "Submit; attach a court order if you have one."
+      ]
+     },
+     "url": "https://help.instagram.com/contact/653100351788502",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « Defamation Reporting Form » (Instagram et Threads) lu le 2026-10-15. Selon le pays, Instagram exige une décision de justice ; rien pour les États-Unis (Section 230). Auto-localisé."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Signaler une atteinte à votre vie privée (photo ou vidéo de vous)",
+      "es": "Reportar una infracción de tu privacidad (foto o video tuyo)",
+      "en": "Report a privacy violation (photo or video of you)"
+     },
+     "etapes": {
+      "fr": [
+       "Copiez le lien (URL) de chaque publication concernée.",
+       "Ouvrez le formulaire et indiquez pour qui vous signalez (vous, un mineur, un adulte).",
+       "Donnez votre nom et un e-mail pour le suivi.",
+       "Collez les liens (un par ligne) et précisez si la personne avait moins de 18 ans.",
+       "Envoyez le formulaire."
+      ],
+      "es": [
+       "Copia el enlace (URL) de cada publicación.",
+       "Abre el formulario e indica por quién reportas (tú, un menor, un adulto).",
+       "Escribe tu nombre y un correo para el seguimiento.",
+       "Pega los enlaces (uno por línea) e indica si la persona tenía menos de 18 años.",
+       "Envía el formulario."
+      ],
+      "en": [
+       "Copy the link (URL) of each post.",
+       "Open the form and say who you're reporting for (you, a minor, an adult).",
+       "Enter your name and an email for updates.",
+       "Paste the links (one per line) and say whether the person was under 18.",
+       "Submit the form."
+      ]
+     },
+     "url": "https://help.instagram.com/contact/1024543072377373",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « Report a Violation of your Privacy on Instagram or Threads » lu le 2026-10-15 : réservé à votre image/vidéo ; sans URL le signalement n'est pas traité ; les mineurs de 13 ans et plus doivent le remplir eux-mêmes. Il affiche la mention « INSTAGRAM USA REPORTING CONTACT FORM » et des options non traduites : disponibilité hors États-Unis à confirmer. Pour une adresse ou un numéro publié, utiliser le signalement intégré."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Signaler une atteinte au droit d'auteur (photo, création)",
+      "es": "Reportar una infracción de derechos de autor (foto, obra)",
+      "en": "Report copyright infringement (photo, creative work)"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que vous êtes l'auteur de l'œuvre ou son représentant autorisé.",
+       "Ouvrez le formulaire de propriété intellectuelle et choisissez « Droit d'auteur ».",
+       "Collez les liens des publications qui reprennent votre œuvre.",
+       "Décrivez votre œuvre originale et envoyez.",
+       "Ce signalement n'est pas anonyme : votre nom peut être transmis à la personne signalée."
+      ],
+      "es": [
+       "Comprueba que eres el autor de la obra o su representante autorizado.",
+       "Abre el formulario de propiedad intelectual y elige «Derechos de autor».",
+       "Pega los enlaces de las publicaciones que usan tu obra.",
+       "Describe tu obra original y envía.",
+       "Este reporte no es anónimo: tu nombre puede enviarse a la persona reportada."
+      ],
+      "en": [
+       "Make sure you own the work or are authorized to act for the owner.",
+       "Open the intellectual property form and choose \"Copyright\".",
+       "Paste the links to the posts that use your work.",
+       "Describe your original work and submit.",
+       "This report is not anonymous: your name may be shared with the person you report."
+      ]
+     },
+     "url": "https://help.instagram.com/contact/552695131608132",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Redirige (200) vers le formulaire Meta https://help.meta.com/requests/1523801815366035/ (JavaScript). Étapes vérifiées sur l'article copyright https://help.instagram.com/126382350847838 et l'article de signalement (signalements anonymes sauf propriété intellectuelle)."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Quelqu'un vous fait chanter avec des images ou messages intimes",
+      "es": "Alguien te chantajea con imágenes o mensajes íntimos",
+      "en": "Someone is blackmailing you with intimate images or messages"
+     },
+     "etapes": {
+      "fr": [
+       "Signalez le profil et les messages à Instagram.",
+       "Bloquez la personne.",
+       "Portez plainte auprès de la police.",
+       "Parlez-en à une personne de confiance : ce n'est pas votre faute.",
+       "Faites-vous aider par une association spécialisée."
+      ],
+      "es": [
+       "Reporta el perfil y los mensajes a Instagram.",
+       "Bloquea a la persona.",
+       "Denúncialo ante la policía.",
+       "Habla con alguien de confianza: no es tu culpa.",
+       "Busca ayuda en una organización especializada."
+      ],
+      "en": [
+       "Report the profile and messages to Instagram.",
+       "Block the person.",
+       "Report it to the police.",
+       "Talk to someone you trust: it's not your fault.",
+       "Get help from a specialist support organization."
+      ]
+     },
+     "url": "https://help.instagram.com/1443273235892548",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article Instagram sur le chantage lu le 2026-10-15 (EN/ES). Voir aussi la page Meta Stop Sextortion (fiche Facebook) : ne pas payer, tout garder. Auto-localisé."
+    }
+   ]
+  },
+  {
+   "id": "whatsapp",
+   "nom": "WhatsApp",
+   "type": "messagerie",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Récupérer un compte WhatsApp volé ou piraté",
+      "es": "Recuperar una cuenta de WhatsApp robada o hackeada",
+      "en": "Recover a stolen or hacked WhatsApp account"
+     },
+     "etapes": {
+      "fr": [
+       "Gardez la carte SIM de votre numéro dans le téléphone : sans elle, impossible de récupérer le compte.",
+       "Dans WhatsApp, appuyez sur « Se reconnecter » > « Continuer » et saisissez votre numéro.",
+       "Entrez le code à 6 chiffres reçu par SMS ou appel : le pirate est déconnecté.",
+       "Ne donnez jamais ce code à personne. Si un code PIN inconnu est demandé, attendez 7 jours et réessayez.",
+       "Prévenez vos proches qu'on a pu se faire passer pour vous."
+      ],
+      "es": [
+       "Mantén en el teléfono la tarjeta SIM de tu número: sin ella no se puede recuperar la cuenta.",
+       "En WhatsApp, toca «Volver a iniciar sesión» > «Continuar» e ingresa tu número.",
+       "Ingresa el código de 6 dígitos que recibes por SMS o llamada: se cierra la sesión del intruso.",
+       "Nunca compartas ese código. Si te piden un PIN que no conoces, espera 7 días y vuelve a intentarlo.",
+       "Avisa a tus contactos de que alguien pudo hacerse pasar por ti."
+      ],
+      "en": [
+       "Keep your number's SIM card in the phone: without it the account can't be recovered.",
+       "In WhatsApp, tap \"Log back in\" > \"Continue\" and enter your number.",
+       "Enter the 6-digit code you get by SMS or call: the intruder is logged out.",
+       "Never share that code. If asked for a PIN you don't know, wait 7 days and try again.",
+       "Warn your contacts that someone may have pretended to be you."
+      ]
+     },
+     "url": "https://faq.whatsapp.com/1131652977717250",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Article « How to recover a compromised account » lu le 2026-10-15 (EN/FR/ES). Changer de mot de passe ne déconnecte pas l'intrus ; ne pas signaler votre propre compte avant de l'avoir récupéré (risque de bannissement). Auto-localisé ; le site ajoute ?cms_platform selon l'appareil."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un compte qui se fait passer pour vous",
+      "es": "Reportar una cuenta que se hace pasar por ti",
+      "en": "Report an account pretending to be you"
+     },
+     "etapes": {
+      "fr": [
+       "Faites des captures d'écran du profil et des messages.",
+       "Ouvrez la discussion avec ce compte, appuyez sur son nom puis sur « Signaler » (ou « Bloquer » en laissant « Signaler à WhatsApp » coché).",
+       "S'il revient avec un nouveau numéro, signalez et bloquez chaque numéro.",
+       "Prévenez vos contacts que ce compte n'est pas vous."
+      ],
+      "es": [
+       "Haz capturas de pantalla del perfil y de los mensajes.",
+       "Abre el chat con esa cuenta, toca su nombre y luego «Reportar» (o «Bloquear» dejando marcada la casilla «Reportar a WhatsApp»).",
+       "Si vuelve con otro número, reporta y bloquea cada número.",
+       "Avisa a tus contactos de que esa cuenta no eres tú."
+      ],
+      "en": [
+       "Take screenshots of the profile and messages.",
+       "Open the chat with that account, tap its name, then \"Report\" (or \"Block\" with \"Report to WhatsApp\" ticked).",
+       "If it comes back with a new number, report and block each number.",
+       "Tell your contacts that account is not you."
+      ]
+     },
+     "url": "https://faq.whatsapp.com/414631957536067",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « About reporting and blocking on WhatsApp » lu le 2026-10-15 : le signalement se fait uniquement dans l'appli ; WhatsApp reçoit jusqu'aux 5 derniers messages ; la personne n'est pas prévenue. WhatsApp n'a pas de formulaire d'usurpation dédié. Auto-localisé."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler l'envoi ou la diffusion d'images intimes",
+      "es": "Reportar el envío o la difusión de imágenes íntimas",
+      "en": "Report intimate images being sent or spread"
+     },
+     "etapes": {
+      "fr": [
+       "Faites d'abord des captures d'écran (numéro, date, nom du groupe).",
+       "Ouvrez la discussion ou le groupe et appuyez sur son nom, puis sur « Signaler ».",
+       "WhatsApp reçoit alors les 5 derniers messages, dont l'image ; la personne n'est pas prévenue.",
+       "Bloquez l'expéditeur ; dans un groupe, quittez-le et bloquez l'administrateur."
+      ],
+      "es": [
+       "Primero haz capturas de pantalla (número, fecha, nombre del grupo).",
+       "Abre el chat o el grupo, toca su nombre y luego «Reportar».",
+       "WhatsApp recibe los 5 últimos mensajes, incluida la imagen; la persona no recibe aviso.",
+       "Bloquea al remitente; en un grupo, sal y bloquea al administrador."
+      ],
+      "en": [
+       "First take screenshots (number, date, group name).",
+       "Open the chat or group, tap its name, then \"Report\".",
+       "WhatsApp then gets the last 5 messages, including the image; the person isn't notified.",
+       "Block the sender; in a group, leave it and block the admin."
+      ]
+     },
+     "url": "https://faq.whatsapp.com/414631957536067",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Même article que pour l'usurpation (signalement intégré, seul canal possible). WhatsApp ne conserve pas les messages : la preuve repose sur vos captures. Pour empêcher la diffusion ailleurs : StopNCII.org (adultes) ou Take It Down (mineurs)."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Chantage ou menaces sur WhatsApp : bloquer et signaler",
+      "es": "Chantaje o amenazas en WhatsApp: bloquear y reportar",
+      "en": "Blackmail or threats on WhatsApp: block and report"
+     },
+     "etapes": {
+      "fr": [
+       "Ne payez pas et ne répondez plus.",
+       "Faites des captures d'écran ou sauvegardez la discussion avant de bloquer.",
+       "Ouvrez la discussion, appuyez sur « Plus » > « Bloquer » > « Bloquer » en laissant « Signaler à WhatsApp » coché.",
+       "En cas de danger immédiat, appelez les secours ; portez plainte auprès de la police."
+      ],
+      "es": [
+       "No pagues y deja de responder.",
+       "Haz capturas de pantalla o una copia de seguridad del chat antes de bloquear.",
+       "Abre el chat, toca «Más» > «Bloquear» > «Bloquear» dejando marcada la casilla «Reportar a WhatsApp».",
+       "Si estás en peligro inmediato, llama a emergencias; denuncia ante la policía."
+      ],
+      "en": [
+       "Don't pay and stop replying.",
+       "Take screenshots or back up the chat before blocking.",
+       "Open the chat, tap \"More\" > \"Block\" > \"Block\" with \"Report to WhatsApp\" ticked.",
+       "If you're in immediate danger, call emergency services; report it to the police."
+      ]
+     },
+     "url": "https://faq.whatsapp.com/1142481766359885",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « How to block and report someone » lu le 2026-10-15 (EN/FR/ES, version Android). « Ne payez pas » vient de la page Meta Stop Sextortion (même groupe). Auto-localisé."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Signaler l'utilisation de votre photo ou œuvre (droit d'auteur)",
+      "es": "Reportar el uso de tu foto u obra (derechos de autor)",
+      "en": "Report use of your photo or work (copyright)"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire de propriété intellectuelle et choisissez « Copyright ».",
+       "Indiquez que vous êtes le titulaire des droits et donnez vos coordonnées.",
+       "Indiquez le numéro de téléphone du compte, ou le lien de la chaîne, qui utilise votre œuvre.",
+       "Joignez des captures d'écran (numéro, date, heure) et envoyez."
+      ],
+      "es": [
+       "Abre el formulario de propiedad intelectual y elige «Copyright».",
+       "Indica que eres el titular de los derechos y escribe tus datos.",
+       "Indica el número de teléfono de la cuenta, o el enlace del canal, que usa tu obra.",
+       "Adjunta capturas de pantalla (número, fecha, hora) y envía."
+      ],
+      "en": [
+       "Open the intellectual property form and choose \"Copyright\".",
+       "Say you are the rights owner and enter your details.",
+       "Give the phone number of the account, or the channel link, using your work.",
+       "Attach screenshots (number, date, time) and submit."
+      ]
+     },
+     "url": "https://www.whatsapp.com/contact/forms/5071674689613749/",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « WhatsApp Intellectual Property Contact Form » lu le 2026-10-15, lié depuis la politique PI https://www.whatsapp.com/legal/ip-policy. Couvre photo de profil, nom, statut « À propos » et contenus des chaînes. Votre nom et e-mail sont transmis à la personne signalée. Auto-localisé (titres), champs parfois en anglais."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Union européenne : signaler un contenu diffamatoire",
+      "es": "Unión Europea: reportar contenido difamatorio",
+      "en": "European Union: report defamatory content"
+     },
+     "etapes": {
+      "fr": [
+       "Préparez le numéro du compte (ou le lien de la chaîne) et des captures d'écran.",
+       "Ouvrez le formulaire « point de contact unique » pour l'UE.",
+       "Choisissez « I want to report defamatory content » (contenu diffamatoire).",
+       "Remplissez le formulaire qui s'ouvre ensuite et envoyez."
+      ],
+      "es": [
+       "Prepara el número de la cuenta (o el enlace del canal) y capturas de pantalla.",
+       "Abre el formulario de «punto de contacto único» para la UE.",
+       "Elige «I want to report defamatory content» (contenido difamatorio).",
+       "Completa el formulario que se abre después y envía."
+      ],
+      "en": [
+       "Have the account's number (or the channel link) and screenshots ready.",
+       "Open the EU \"single point of contact\" form.",
+       "Choose \"I want to report defamatory content\".",
+       "Fill in the form that opens next and submit."
+      ]
+     },
+     "url": "https://www.whatsapp.com/contact/forms/793493602612426",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « Single Point of Contact for Users in EU Member States » (DSA) lu le 2026-10-15 : options compte, vie privée, propriété intellectuelle, WhatsApp Business, chaîne, contenu diffamatoire, retrait légal. Chaque option redirige vers un sous-formulaire en JavaScript, non lisible hors navigateur. Hors UE : signalement intégré uniquement."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Union européenne : problème de vie privée ou demande de retrait légal",
+      "es": "Unión Europea: problema de privacidad o solicitud de retirada legal",
+      "en": "European Union: privacy issue or legal removal request"
+     },
+     "etapes": {
+      "fr": [
+       "Préparez des captures d'écran de ce qui est exposé (numéro, groupe ou chaîne).",
+       "Ouvrez le formulaire « point de contact unique » pour l'UE.",
+       "Choisissez « I have a Privacy related issue » (ou « I have a legal removal request »).",
+       "Remplissez le formulaire qui s'ouvre ensuite et envoyez."
+      ],
+      "es": [
+       "Prepara capturas de pantalla de lo que está expuesto (número, grupo o canal).",
+       "Abre el formulario de «punto de contacto único» para la UE.",
+       "Elige «I have a Privacy related issue» (o «I have a legal removal request»).",
+       "Completa el formulario que se abre después y envía."
+      ],
+      "en": [
+       "Have screenshots of what is exposed (number, group or channel) ready.",
+       "Open the EU \"single point of contact\" form.",
+       "Choose \"I have a Privacy related issue\" (or \"I have a legal removal request\").",
+       "Fill in the form that opens next and submit."
+      ]
+     },
+     "url": "https://www.whatsapp.com/contact/forms/793493602612426",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Même formulaire UE (DSA), lu le 2026-10-15 ; les sous-formulaires sont en JavaScript. Hors UE, le formulaire « Privacy Policy Questions » https://www.whatsapp.com/contact/forms/915483389072145/ ne sert qu'à exercer vos droits sur vos propres données WhatsApp ; pour des données publiées par un tiers, utiliser le signalement intégré."
+    }
+   ]
+  },
+  {
+   "id": "tiktok",
+   "nom": "TikTok",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Compte TikTok piraté : reprendre le contrôle",
+      "es": "Cuenta de TikTok hackeada: recuperar el control",
+      "en": "Hacked TikTok account: take back control"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, allez dans Profil > Menu ☰ > Paramètres et confidentialité.",
+       "Appuyez sur Compte > Mot de passe et changez-le.",
+       "Dans Compte > Informations du compte, associez votre numéro de téléphone.",
+       "Dans Sécurité et autorisations > Gérer les appareils, supprimez les appareils suspects."
+      ],
+      "es": [
+       "En la app, ve a Perfil > Menú ☰ > Ajustes y privacidad.",
+       "Pulsa Cuenta > Contraseña y cámbiala.",
+       "En Cuenta > Información de la cuenta, vincula tu número de teléfono.",
+       "En Seguridad y permisos > Administrar dispositivos, elimina los dispositivos sospechosos."
+      ],
+      "en": [
+       "In the app, go to Profile > Menu ☰ > Settings and privacy.",
+       "Tap Account > Password and change it.",
+       "In Account > Account information, link your phone number.",
+       "In Security & permissions > Manage devices, remove suspicious devices."
+      ]
+     },
+     "url": "https://www.tiktok.com/support/faq_detail?id=7581821084908067339",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « My account has been hacked » rendu en navigateur le 2026-10-15 (EN/FR/ES). L'ancienne URL support.tiktok.com/…/my-account-has-been-hacked redirige ici. Page rendue en JavaScript, auto-localisée. Si vous n'avez plus accès au compte : action suivante."
+    },
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Plus d'accès à votre compte TikTok : formulaire « Compte piraté »",
+      "es": "Sin acceso a tu cuenta de TikTok: formulario «Cuenta hackeada»",
+      "en": "Locked out of TikTok: \"Hacked account\" form"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire « Signaler un problème ».",
+       "Sujet : « Accès au compte/sécurité » ; catégorie : « Compte piraté ».",
+       "Confirmez que vous êtes le propriétaire et indiquez le nom d'utilisateur (@…).",
+       "Donnez un e-mail de contact, décrivez la situation et ajoutez des captures d'écran.",
+       "Cochez la déclaration et envoyez."
+      ],
+      "es": [
+       "Abre el formulario «Informar de un problema».",
+       "Tema: «Acceso y seguridad de tu cuenta»; categoría: «Cuenta pirateada».",
+       "Confirma que eres el propietario e indica el nombre de usuario (@…).",
+       "Escribe un correo de contacto, describe la situación y añade capturas de pantalla.",
+       "Marca la declaración y envía."
+      ],
+      "en": [
+       "Open the \"Report a problem\" form.",
+       "Topic: \"Account access / security\"; category: \"Hacked account\".",
+       "Confirm you own the account and enter the username (@…).",
+       "Give a contact email, describe what happened and add screenshots.",
+       "Tick the declaration and submit."
+      ]
+     },
+     "url": "https://www.tiktok.com/legal/report/feedback",
+     "url_par_langue": {
+      "fr": "https://www.tiktok.com/legal/report/feedback?lang=fr",
+      "es": "https://www.tiktok.com/legal/report/feedback?lang=es",
+      "en": "https://www.tiktok.com/legal/report/feedback?lang=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « Report a problem » parcouru en navigateur le 2026-10-15 en EN, FR (?lang=fr) et ES (?lang=es) ; libellés repris du formulaire. Cité par l'article « Report a technical problem » (faq_detail?id=7581820702655978040)."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un compte qui usurpe votre identité",
+      "es": "Denunciar una cuenta que suplanta tu identidad",
+      "en": "Report an account impersonating you"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, allez sur le profil et appuyez sur le bouton Partager en haut.",
+       "Appuyez sur « Signaler » > « Signaler un compte » > « Usurpe une identité ».",
+       "Choisissez « Moi », puis appuyez sur « Envoyer ».",
+       "Sans compte (hors États-Unis) : formulaire « Signaler un problème » > « Signaler une infraction potentielle » > « Violation de compte » > « Usurpation d'identité »."
+      ],
+      "es": [
+       "En la app, ve al perfil y pulsa el botón Compartir arriba.",
+       "Pulsa «Denunciar» > «Denunciar cuenta» > «Suplantación de identidad».",
+       "Elige «Yo» y pulsa «Enviar».",
+       "Sin cuenta (fuera de EE. UU.): formulario «Informar de un problema» > «Denuncia una posible infracción» > «Infracción de la cuenta» > «Suplantación de identidad»."
+      ],
+      "en": [
+       "In the app, go to the profile and tap the Share button at the top.",
+       "Tap \"Report\" > \"Report account\" > \"Pretending to Be Someone\".",
+       "Choose \"Me\", then tap \"Submit\".",
+       "No account (outside the US): \"Report a problem\" form > \"Report a potential violation\" > \"Account violation\" > \"Impersonation\"."
+      ]
+     },
+     "url": "https://www.tiktok.com/support/faq_detail?id=7611812701194639883",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Report an impersonation account » rendu le 2026-10-15 (EN/FR/ES). Formulaire hors États-Unis : https://www.tiktok.com/legal/report/feedback ; États-Unis : https://www.tiktok.com/legal/report/submit-requests (pièce d'identité). Si l'usurpation inclut des images intimes ou deepfakes, l'article renvoie au formulaire dédié. Auto-localisé."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler une image intime partagée sans votre accord",
+      "es": "Denunciar una imagen íntima compartida sin tu consentimiento",
+      "en": "Report an intimate image shared without your consent"
+     },
+     "etapes": {
+      "fr": [
+       "Ne commentez, ne partagez et ne téléchargez pas le contenu.",
+       "Dans l'appli, appuyez longuement sur la publication, puis sur « Signaler ».",
+       "Choisissez « Violence, abus et exploitation criminelle » > « Exploitation et abus sexuels », puis « Envoyer ».",
+       "Pour bloquer les republications : StopNCII.org si vous êtes majeur, Take It Down si vous étiez mineur."
+      ],
+      "es": [
+       "No comentes, compartas ni descargues el contenido.",
+       "En la app, mantén pulsada la publicación y pulsa «Denunciar».",
+       "Elige «Violencia, abuso y explotación criminal» > «Explotación y abuso sexual» y pulsa «Enviar».",
+       "Para frenar nuevas publicaciones: StopNCII.org si eres mayor de edad, Take It Down si eras menor."
+      ],
+      "en": [
+       "Don't comment on, share or download the content.",
+       "In the app, press and hold the post, then tap \"Report\".",
+       "Choose \"Violence, abuse, and criminal exploitation\" > \"Sexual exploitation and abuse\", then \"Submit\".",
+       "To stop re-uploads: StopNCII.org if you're an adult, Take It Down if you were under 18."
+      ]
+     },
+     "url": "https://www.tiktok.com/safety/en/community-support/sexual-assault-resources",
+     "url_par_langue": {
+      "fr": "https://www.tiktok.com/safety/fr/community-support/sexual-assault-resources",
+      "es": "https://www.tiktok.com/safety/es-419/community-support/sexual-assault-resources",
+      "en": "https://www.tiktok.com/safety/en/community-support/sexual-assault-resources"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Centre de sécurité TikTok « Sexual abuse » rendu le 2026-10-15 (EN/FR/ES-419) : couvre les abus sexuels par l'image, même si l'image d'origine a été prise avec consentement. Aux États-Unis, formulaire TAKE IT DOWN Act sans compte : https://www.tiktok.com/legal/report/US-take-it-down-act (vérifié)."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake sexuel",
+      "es": "Denunciar un deepfake sexual",
+      "en": "Report a sexual deepfake"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, appuyez longuement sur la publication, puis sur « Signaler ».",
+       "Choisissez « Violence, abus et exploitation criminelle » > « Exploitation et abus sexuels ».",
+       "Appuyez sur « Envoyer » : TikTok interdit ces contenus, réels ou générés par IA.",
+       "Aux États-Unis, vous pouvez aussi utiliser le formulaire dédié aux deepfakes explicites."
+      ],
+      "es": [
+       "En la app, mantén pulsada la publicación y pulsa «Denunciar».",
+       "Elige «Violencia, abuso y explotación criminal» > «Explotación y abuso sexual».",
+       "Pulsa «Enviar»: TikTok prohíbe este contenido, sea real o generado por IA.",
+       "En EE. UU. también puedes usar el formulario para deepfakes explícitos."
+      ],
+      "en": [
+       "In the app, press and hold the post, then tap \"Report\".",
+       "Choose \"Violence, abuse, and criminal exploitation\" > \"Sexual exploitation and abuse\".",
+       "Tap \"Submit\": TikTok bans this content, real or AI-generated.",
+       "In the US you can also use the explicit deepfake form."
+      ]
+     },
+     "url": "https://www.tiktok.com/safety/en/community-support/sexual-assault-resources",
+     "url_par_langue": {
+      "fr": "https://www.tiktok.com/safety/fr/community-support/sexual-assault-resources",
+      "es": "https://www.tiktok.com/safety/es-419/community-support/sexual-assault-resources",
+      "en": "https://www.tiktok.com/safety/en/community-support/sexual-assault-resources"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Même page : la définition TikTok des abus sexuels par l'image inclut « les images truquées ou modifiées, comme les deepfakes ». Formulaire américain (TAKE IT DOWN Act) : https://www.tiktok.com/legal/report/US-take-it-down-act, titre « Report child sexual abuse, nonconsensual intimate imagery, or explicit deepfakes »."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler du harcèlement, des attaques ou un doxing",
+      "es": "Denunciar acoso, ataques o doxing",
+      "en": "Report harassment, attacks or doxing"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, appuyez longuement sur la publication, puis sur « Signaler ».",
+       "Choisissez « Haine et harcèlement » > « Harcèlement et intimidation ».",
+       "Sélectionnez « J'ai été victime de harcèlement ou d'intimidation ».",
+       "Ajoutez des détails si besoin et appuyez sur « Envoyer ».",
+       "Pour un compte entier : profil > flèche en haut > « Signaler » > « Signaler un compte »."
+      ],
+      "es": [
+       "En la app, mantén pulsada la publicación y pulsa «Denunciar».",
+       "Elige «Odio e intimidación» > «Acoso e intimidación».",
+       "Selecciona «Fui acosado o intimidado».",
+       "Añade detalles si hace falta y pulsa «Enviar».",
+       "Para toda una cuenta: perfil > flecha arriba > «Denunciar» > «Denunciar cuenta»."
+      ],
+      "en": [
+       "In the app, press and hold the post, then tap \"Report\".",
+       "Choose \"Hate and harassment\" > \"Harassment and bullying\".",
+       "Select \"I have been bullied or harassed\".",
+       "Add details if needed and tap \"Submit\".",
+       "For a whole account: profile > arrow at the top > \"Report\" > \"Report account\"."
+      ]
+     },
+     "url": "https://www.tiktok.com/safety/en/community-support/bullying-prevention",
+     "url_par_langue": {
+      "fr": "https://www.tiktok.com/safety/fr/community-support/bullying-prevention",
+      "es": "https://www.tiktok.com/safety/es-419/community-support/bullying-prevention",
+      "en": "https://www.tiktok.com/safety/en/community-support/bullying-prevention"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Centre de sécurité « Bullying prevention » rendu le 2026-10-15 (EN/FR/ES-419) ; couvre attaques personnelles, harcèlement sexuel et doxing (publication d'infos personnelles). TikTok ne révèle pas votre identité. Pas de formulaire « diffamation » dédié trouvé (tiktok.com/legal/report/defamation = page introuvable)."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Formulaire vie privée TikTok (violation de vie privée, vos données)",
+      "es": "Formulario de privacidad de TikTok (infracción de privacidad, tus datos)",
+      "en": "TikTok privacy form (privacy violation, your data)"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire vie privée et appuyez sur « Continuer ».",
+       "Indiquez où se situe le problème et votre pays.",
+       "Donnez votre e-mail et, si vous en avez un, votre nom d'utilisateur.",
+       "Décrivez le contenu qui expose vos informations et envoyez."
+      ],
+      "es": [
+       "Abre el formulario de privacidad y pulsa «Continuar».",
+       "Indica dónde está el problema y tu país.",
+       "Escribe tu correo y, si tienes, tu nombre de usuario.",
+       "Describe el contenido que expone tu información y envía."
+      ],
+      "en": [
+       "Open the privacy form and tap \"Continue\".",
+       "Say where the privacy concern is and your country.",
+       "Enter your email and, if you have one, your username.",
+       "Describe the content exposing your information and submit."
+      ]
+     },
+     "url": "https://www.tiktok.com/legal/report/privacy",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page « Request privacy information » (signaler une violation de vie privée, demander vos données) rendue le 2026-10-15 ; elle redirige vers un formulaire selon la région (observé depuis les États-Unis : /legal/report/privacy/webform/us/en). Version UE non observée. Pour une adresse ou un numéro publiés, le signalement intégré « Harcèlement » couvre aussi le doxing."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Signaler une atteinte au droit d'auteur",
+      "es": "Denunciar una infracción de derechos de autor",
+      "en": "Report copyright infringement"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que vous êtes l'auteur de l'œuvre ou son représentant autorisé.",
+       "Dans l'appli : bouton Partager sur la publication > « Signaler » > « Contrefaçons et propriété intellectuelle ».",
+       "Sans compte : ouvrez le formulaire en ligne « Report copyright infringement ».",
+       "Donnez toutes les informations demandées et une preuve que l'œuvre est à vous, puis envoyez."
+      ],
+      "es": [
+       "Comprueba que eres el autor de la obra o su representante autorizado.",
+       "En la app: botón Compartir en la publicación > «Denunciar» > «Falsificaciones y propiedad intelectual».",
+       "Sin cuenta: abre el formulario en línea «Report copyright infringement».",
+       "Da toda la información pedida y una prueba de que la obra es tuya, y envía."
+      ],
+      "en": [
+       "Make sure you own the work or are authorized to act for the owner.",
+       "In the app: Share button on the post > \"Report\" > \"Counterfeits and intellectual property\".",
+       "No account: open the online \"Report copyright infringement\" form.",
+       "Give all requested details and proof the work is yours, then submit."
+      ]
+     },
+     "url": "https://www.tiktok.com/legal/report/Copyright",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Redirige vers https://ipr.tiktokforbusiness.com/legal/report/Copyright (formulaire « Report copyright infringement », rendu le 2026-10-15). Étapes tirées de l'article Copyright https://support.tiktok.com/en/safety-hc/account-and-user-safety/copyright. Les libellés FR/ES de l'appli sont notre traduction."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Sextorsion : menaces de diffuser des images intimes",
+      "es": "Sextorsión: amenazas de difundir imágenes íntimas",
+      "en": "Sextortion: threats to share intimate images"
+     },
+     "etapes": {
+      "fr": [
+       "Signalez la publication ou le compte : appui long > « Signaler » > « Violence, abus et exploitation criminelle ».",
+       "Si vous avez 18 ans ou plus, créez un dossier sur StopNCII.org.",
+       "Si vous aviez moins de 18 ans sur les images, utilisez Take It Down (NCMEC).",
+       "En cas de danger immédiat, appelez les secours."
+      ],
+      "es": [
+       "Denuncia la publicación o la cuenta: mantener pulsado > «Denunciar» > «Violencia, abuso y explotación criminal».",
+       "Si tienes 18 años o más, abre un caso en StopNCII.org.",
+       "Si tenías menos de 18 años en las imágenes, usa Take It Down (NCMEC).",
+       "Si estás en peligro inmediato, llama a emergencias."
+      ],
+      "en": [
+       "Report the post or account: press and hold > \"Report\" > \"Violence, abuse, and criminal exploitation\".",
+       "If you're 18 or over, create a case on StopNCII.org.",
+       "If you were under 18 in the images, use Take It Down (NCMEC).",
+       "If you're in immediate danger, call emergency services."
+      ]
+     },
+     "url": "https://www.tiktok.com/safety/en/community-support/sexual-assault-resources",
+     "url_par_langue": {
+      "fr": "https://www.tiktok.com/safety/fr/community-support/sexual-assault-resources",
+      "es": "https://www.tiktok.com/safety/es-419/community-support/sexual-assault-resources",
+      "en": "https://www.tiktok.com/safety/en/community-support/sexual-assault-resources"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Même page « Sexual abuse » (section Sextortion : « menacer de partager du contenu sexuel sans permission, généralement pour exiger argent, sexe ou plus de contenu »), rendue le 2026-10-15."
+    }
+   ]
+  },
+  {
+   "id": "x",
+   "nom": "X (Twitter)",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Compte X piraté ou compromis",
+      "es": "Cuenta de X hackeada o comprometida",
+      "en": "Hacked or compromised X account"
+     },
+     "etapes": {
+      "fr": [
+       "Si vous pouvez encore vous connecter : changez votre mot de passe et sécurisez l'adresse e-mail du compte.",
+       "Dans Paramètres > Applications, retirez l'accès aux applications que vous ne reconnaissez pas.",
+       "Si vous ne pouvez plus vous connecter : sur la page de connexion, choisissez « Mot de passe oublié ».",
+       "Toujours bloqué : remplissez le formulaire « compte piraté ou compromis » avec l'e-mail du compte, votre nom d'utilisateur et la date de votre dernier accès."
+      ],
+      "es": [
+       "Si todavía puedes iniciar sesión: cambia la contraseña y protege el correo de la cuenta.",
+       "En Configuración > Aplicaciones, quita el acceso a las aplicaciones que no reconozcas.",
+       "Si ya no puedes entrar: en la página de inicio de sesión, elige «Olvidé la contraseña».",
+       "Si sigues sin acceso: completa el formulario de cuenta hackeada o comprometida con el correo de la cuenta, tu nombre de usuario y la fecha de tu último acceso."
+      ],
+      "en": [
+       "If you can still log in: change your password and secure the account's email.",
+       "In Settings > Apps, revoke access for apps you don't recognize.",
+       "If you can't log in: on the login page, choose \"Forgot password\".",
+       "Still locked out: fill in the hacked or compromised account form with the account's email, your username and the date you last had access."
+      ]
+     },
+     "url": "https://help.x.com/en/safety-and-security/x-account-compromised",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/safety-and-security/twitter-account-hacked",
+      "es": "https://help.x.com/es/safety-and-security/x-account-compromised",
+      "en": "https://help.x.com/en/safety-and-security/x-account-compromised"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "help.x.com bloque curl (Cloudflare 403) : pages lues via WebFetch le 2026-10-15 (EN/FR/ES). Formulaire : https://help.x.com/forms/account-access/regain-access/hacked-or-compromised (existe, rendu en JavaScript). Les instructions sont envoyées à l'e-mail du compte ; si vous l'avez perdu, voir l'article sur l'e-mail inaccessible."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un compte qui usurpe votre identité",
+      "es": "Denunciar una cuenta que suplanta tu identidad",
+      "en": "Report an account impersonating you"
+     },
+     "etapes": {
+      "fr": [
+       "Pas besoin de compte X pour signaler une usurpation d'identité.",
+       "Ouvrez le formulaire d'usurpation d'identité indiqué sur la page (vous ou votre représentant autorisé).",
+       "Indiquez le compte qui se fait passer pour vous et suivez les étapes.",
+       "Si c'est quelqu'un d'autre qui est imité, signalez le compte depuis son profil (icône « Plus » > « Signaler »)."
+      ],
+      "es": [
+       "No necesitas una cuenta de X para denunciar una suplantación.",
+       "Abre el formulario de suplantación indicado en la página (tú o tu representante autorizado).",
+       "Indica la cuenta que se hace pasar por ti y sigue los pasos.",
+       "Si suplantan a otra persona, denuncia la cuenta desde su perfil (ícono «más» > «Denunciar»)."
+      ],
+      "en": [
+       "You don't need an X account to report impersonation.",
+       "Open the impersonation form linked on the page (you or your authorized representative).",
+       "Identify the account pretending to be you and follow the steps.",
+       "If someone else is being impersonated, report the account from its profile (\"more\" icon > \"Report\")."
+      ]
+     },
+     "url": "https://help.x.com/en/safety-and-security/report-x-impersonation",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/safety-and-security/report-x-impersonation",
+      "es": "https://help.x.com/es/safety-and-security/report-x-impersonation",
+      "en": "https://help.x.com/en/safety-and-security/report-x-impersonation"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Pages lues via WebFetch le 2026-10-15 (EN/FR/ES). Formulaire https://help.x.com/en/forms/authenticity/impersonation (version ES : /es/forms/authenticity/impersonation) rendu en JavaScript : ses champs (pièce d'identité ?) n'ont pas pu être lus."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler une photo ou vidéo intime publiée sans accord",
+      "es": "Denunciar una foto o un video íntimo publicado sin consentimiento",
+      "en": "Report an intimate photo or video posted without consent"
+     },
+     "etapes": {
+      "fr": [
+       "Sur le post, touchez l'icône du menu puis « Signaler le post ».",
+       "Choisissez l'option sur le contenu intime non autorisé (« Private or Non-Consensual Content »).",
+       "Indiquez s'il s'agit de vous ou d'une autre personne et ajoutez jusqu'à 5 posts.",
+       "Envoyez. Sur ordinateur, vous pouvez aussi utiliser le formulaire « informations privées »."
+      ],
+      "es": [
+       "En el post, toca el ícono del menú y luego «Denunciar post».",
+       "Elige la opción de contenido íntimo no autorizado («Private or Non-Consensual Content»).",
+       "Indica si se trata de ti o de otra persona y añade hasta 5 posts.",
+       "Envía. En la computadora también puedes usar el formulario de información privada."
+      ],
+      "en": [
+       "On the post, tap the menu icon, then \"Report post\".",
+       "Choose the non-consensual intimate content option (\"Private or Non-Consensual Content\").",
+       "Say whether it's you or someone else and add up to 5 posts.",
+       "Submit. On desktop you can also use the private information form."
+      ]
+     },
+     "url": "https://help.x.com/en/rules-and-policies/intimate-media",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/rules-and-policies/intimate-media",
+      "es": "https://help.x.com/es/rules-and-policies/intimate-media",
+      "en": "https://help.x.com/en/rules-and-policies/intimate-media"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Politique « Non-consensual nudity » lue via WebFetch le 2026-10-15. Les libellés du parcours diffèrent selon la langue (FR/ES : « Il contient une photo ou une vidéo sensible » > « Une photo ou une vidéo non autorisée » > « contenu intime non autorisé ») : étapes rédigées de façon générique. Formulaire bureau : https://help.x.com/en/forms/safety-and-sensitive-content/private-information (JavaScript). Aux États-Unis : formulaire TAKE IT DOWN Act sans compte https://help.x.com/forms/safety-and-sensitive-content/take-it-down (retrait sous 48 h)."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake ou une image intime générée par IA",
+      "es": "Denunciar un deepfake o una imagen íntima generada con IA",
+      "en": "Report a deepfake or AI-generated intimate image"
+     },
+     "etapes": {
+      "fr": [
+       "Faites une capture d'écran et copiez le lien du post.",
+       "Touchez l'icône du menu puis « Signaler le post ».",
+       "Choisissez l'option sur le contenu intime non autorisé : les deepfakes et images modifiées par IA sont couverts.",
+       "Indiquez s'il s'agit de vous et envoyez."
+      ],
+      "es": [
+       "Haz una captura de pantalla y copia el enlace del post.",
+       "Toca el ícono del menú y luego «Denunciar post».",
+       "Elige la opción de contenido íntimo no autorizado: incluye deepfakes e imágenes alteradas con IA.",
+       "Indica si se trata de ti y envía."
+      ],
+      "en": [
+       "Take a screenshot and copy the post's link.",
+       "Tap the menu icon, then \"Report post\".",
+       "Choose the non-consensual intimate content option: deepfakes and AI-edited images are covered.",
+       "Say whether it's you and submit."
+      ]
+     },
+     "url": "https://help.x.com/en/rules-and-policies/intimate-media",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/rules-and-policies/intimate-media",
+      "es": "https://help.x.com/es/rules-and-policies/intimate-media",
+      "en": "https://help.x.com/en/rules-and-policies/intimate-media"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "La politique couvre explicitement « AI-generated, deepfake, or digitally manipulated media ». Aux États-Unis : page https://help.x.com/en/rules-and-policies/us-tida (lue) et formulaire sans compte https://help.x.com/forms/safety-and-sensitive-content/take-it-down, retrait sous 48 h."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler des posts ou un compte abusifs",
+      "es": "Denunciar posts o una cuenta abusiva",
+      "en": "Report abusive posts or an account"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le post, touchez l'icône « Plus » puis « Signaler ».",
+       "Indiquez que cela vous concerne (« Moi-même »).",
+       "Décrivez le problème et ajoutez d'autres posts du même compte si on vous le propose.",
+       "Confirmez. Pour un compte entier : profil > « Plus » > « Signaler ».",
+       "En cas de menace, gardez une copie du signalement (« Email report ») pour la police."
+      ],
+      "es": [
+       "Abre el post, toca el ícono «más» y luego «Denunciar».",
+       "Indica que la denuncia se relaciona contigo («Conmigo»).",
+       "Describe el problema y añade otros posts de la misma cuenta si te lo piden.",
+       "Confirma. Para una cuenta entera: perfil > «más» > «Denunciar».",
+       "Si hay amenazas, guarda una copia de la denuncia («Email report») para la policía."
+      ],
+      "en": [
+       "Open the post, tap the \"more\" icon, then \"Report\".",
+       "Say it's about you (\"Myself\").",
+       "Describe the issue and add other posts from the account if asked.",
+       "Confirm. For a whole account: profile > \"more\" > \"Report\".",
+       "For threats, keep a copy of the report (\"Email report\") for the police."
+      ]
+     },
+     "url": "https://help.x.com/en/safety-and-security/report-abusive-behavior",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/safety-and-security/report-abusive-behavior",
+      "es": "https://help.x.com/es/safety-and-security/report-abusive-behavior",
+      "en": "https://help.x.com/en/safety-and-security/report-abusive-behavior"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article lu via WebFetch le 2026-10-15 (EN/FR/ES). L'option « Email report » est décrite dans la version EN. Formulaire abus : https://help.x.com/en/forms/safety-and-sensitive-content/abuse (JavaScript). X ne traite pas la diffamation comme règle à part ; pour un retrait légal, passer par le formulaire « Contact us » (https://help.x.com/en/forms)."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Signaler la publication de vos informations privées (doxxing)",
+      "es": "Denunciar la publicación de tu información privada (doxing)",
+      "en": "Report your private information being posted (doxxing)"
+     },
+     "etapes": {
+      "fr": [
+       "Sur le post, touchez l'icône du menu puis « Signaler le post ».",
+       "Choisissez « Les propos tenus sont inappropriés ou dangereux » puis « Des informations privées y sont dévoilées ».",
+       "Sélectionnez le type d'information (adresse, téléphone, pièce d'identité…) et à qui elle appartient.",
+       "Ajoutez jusqu'à 5 posts et envoyez. Sur ordinateur : formulaire « informations privées »."
+      ],
+      "es": [
+       "En el post, toca el ícono del menú y luego «Denunciar post».",
+       "Elige «Es abusivo o perjudicial» y luego «Incluye información privada».",
+       "Selecciona el tipo de información (dirección, teléfono, documento de identidad…) y de quién es.",
+       "Añade hasta 5 posts y envía. En la computadora: formulario de información privada."
+      ],
+      "en": [
+       "On the post, tap the menu icon, then \"Report post\".",
+       "Choose the abusive or harmful option, then the one about private information.",
+       "Select the type of information (address, phone, ID…) and whose it is.",
+       "Add up to 5 posts and submit. On desktop: the private information form."
+      ]
+     },
+     "url": "https://help.x.com/en/rules-and-policies/personal-information",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/rules-and-policies/personal-information",
+      "es": "https://help.x.com/es/rules-and-policies/personal-information",
+      "en": "https://help.x.com/en/rules-and-policies/personal-information"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Politique « Private information and doxxing » lue via WebFetch le 2026-10-15 : couvre adresse, pièces d'identité, téléphone, e-mail, données bancaires et de santé, photos privées. Les étapes viennent des versions FR/ES (la version EN ne les détaille plus). Tout le monde peut signaler un partage clairement abusif ; sinon X peut exiger la personne concernée ou son représentant. Formulaire : https://help.twitter.com/forms/private_information."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Déposer une réclamation pour droit d'auteur (DMCA)",
+      "es": "Presentar un reclamo por derechos de autor (DMCA)",
+      "en": "File a copyright (DMCA) complaint"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que vous êtes titulaire des droits ou autorisé à agir pour lui.",
+       "Ouvrez le formulaire droit d'auteur (DMCA) du Centre d'assistance X.",
+       "Identifiez votre œuvre et collez le lien direct de chaque post (un lien de profil ne suffit pas).",
+       "Donnez vos coordonnées, signez de votre nom complet et confirmez les déclarations.",
+       "Sachez qu'une copie de la réclamation, avec votre nom, est envoyée à la personne visée."
+      ],
+      "es": [
+       "Comprueba que eres el titular de los derechos o que estás autorizado a actuar en su nombre.",
+       "Abre el formulario de derechos de autor (DMCA) del Centro de ayuda de X.",
+       "Identifica tu obra y pega el enlace directo de cada post (un enlace al perfil no basta).",
+       "Da tus datos de contacto, firma con tu nombre completo y confirma las declaraciones.",
+       "Ten en cuenta que la persona denunciada recibe una copia del reclamo con tu nombre."
+      ],
+      "en": [
+       "Make sure you own the rights or are authorized to act for the owner.",
+       "Open the X Help Center copyright (DMCA) form.",
+       "Identify your work and paste the direct link to each post (a profile link isn't enough).",
+       "Give your contact details, sign with your full name and confirm the statements.",
+       "A copy of the complaint, including your name, is sent to the reported user."
+      ]
+     },
+     "url": "https://help.x.com/en/rules-and-policies/copyright-policy",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/rules-and-policies/copyright-policy",
+      "es": "https://help.x.com/es/rules-and-policies/copyright-policy",
+      "en": "https://help.x.com/en/rules-and-policies/copyright-policy"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Politique lue via WebFetch le 2026-10-15 ; les sections « informations nécessaires » et « informations transmises » n'étaient lisibles que dans la version ES. Formulaire DMCA : https://help.x.com/en/forms/ipi/dmca (existe, JavaScript). Pour ne pas exposer vos coordonnées, X suggère de passer par un agent/représentant."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Menace de publier vos images intimes",
+      "es": "Amenaza de publicar tus imágenes íntimas",
+      "en": "Threat to post your intimate images"
+     },
+     "etapes": {
+      "fr": [
+       "Gardez des captures d'écran des messages et du compte.",
+       "Signalez le message ou le compte avec l'option sur le contenu intime non autorisé : menacer de le publier est interdit.",
+       "Bloquez le compte.",
+       "Si vous vous sentez en danger, contactez la police en donnant tous les détails."
+      ],
+      "es": [
+       "Guarda capturas de pantalla de los mensajes y de la cuenta.",
+       "Denuncia el mensaje o la cuenta con la opción de contenido íntimo no autorizado: amenazar con publicarlo está prohibido.",
+       "Bloquea la cuenta.",
+       "Si te sientes en peligro, contacta a la policía con todos los detalles."
+      ],
+      "en": [
+       "Keep screenshots of the messages and the account.",
+       "Report the message or account with the non-consensual intimate content option: threatening to post it is banned.",
+       "Block the account.",
+       "If you feel in danger, contact the police with all the details."
+      ]
+     },
+     "url": "https://help.x.com/en/rules-and-policies/intimate-media",
+     "url_par_langue": {
+      "fr": "https://help.x.com/fr/rules-and-policies/intimate-media",
+      "es": "https://help.x.com/es/rules-and-policies/intimate-media",
+      "en": "https://help.x.com/en/rules-and-policies/intimate-media"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "La politique interdit de « menacer de partager » des contenus intimes. Les conseils captures / blocage / police viennent de l'article X « About online abuse » (https://help.x.com/en/safety-and-security/cyber-bullying-and-online-abuse, lu via WebFetch). X n'a pas de page dédiée à la sextorsion."
+    }
+   ]
+  },
+  {
+   "id": "youtube",
+   "nom": "YouTube",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Récupérer une chaîne YouTube piratée",
+      "es": "Recuperar un canal de YouTube hackeado",
+      "en": "Recover a hacked YouTube channel"
+     },
+     "etapes": {
+      "fr": [
+       "Récupérez d'abord le compte Google lié à la chaîne : suivez la procédure de récupération du compte Google.",
+       "Répondez au mieux aux questions, puis choisissez un nouveau mot de passe solide.",
+       "Annulez tout de suite les changements faits par le pirate et supprimez les vidéos qui ne sont pas à vous.",
+       "Demandez aux autres gestionnaires de la chaîne de sécuriser aussi leur compte.",
+       "Si la chaîne a été supprimée, faites appel avec le formulaire indiqué une fois le compte récupéré."
+      ],
+      "es": [
+       "Primero recupera la cuenta de Google vinculada al canal: sigue el proceso de recuperación de cuenta de Google.",
+       "Responde las preguntas lo mejor que puedas y elige una contraseña nueva y segura.",
+       "Revierte de inmediato los cambios del hacker y borra los videos que no subiste tú.",
+       "Pide a los demás administradores del canal que también protejan su cuenta.",
+       "Si el canal fue cerrado, apela con el formulario indicado cuando recuperes la cuenta."
+      ],
+      "en": [
+       "First recover the Google Account linked to the channel: follow the Google Account recovery steps.",
+       "Answer the questions as best you can, then choose a new strong password.",
+       "Undo the hacker's changes right away and delete any videos you didn't upload.",
+       "Ask the channel's other managers to secure their accounts too.",
+       "If the channel was terminated, appeal with the linked form once the account is recovered."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/76187",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/76187?hl=fr",
+      "es": "https://support.google.com/youtube/answer/76187?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/76187?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Article « Recover a hacked YouTube channel » lu le 2026-10-15 (versions hl=fr et hl=es-419 vérifiées). Assistance limitée aux piratages de moins de 9 mois. Les créateurs éligibles (Programme Partenaire) peuvent contacter le Creator Support."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler une chaîne qui se fait passer pour vous",
+      "es": "Denunciar un canal que se hace pasar por ti",
+      "en": "Report a channel impersonating you"
+     },
+     "etapes": {
+      "fr": [
+       "Connectez-vous à YouTube et ouvrez la page de la chaîne.",
+       "Cliquez sur « …plus » dans la description de la chaîne.",
+       "Cliquez sur « Signaler l'utilisateur », puis choisissez « Signaler l'utilisateur ».",
+       "Sélectionnez le motif (usurpation d'identité), ajoutez des détails et envoyez."
+      ],
+      "es": [
+       "Accede a YouTube y abre la página del canal.",
+       "Haz clic en «…más» en la descripción del canal.",
+       "Haz clic en «Denunciar usuario» y elige «Denunciar usuario».",
+       "Selecciona el motivo (suplantación de identidad), añade detalles y envía."
+      ],
+      "en": [
+       "Sign in to YouTube and open the channel page.",
+       "Click \"…more\" in the channel description.",
+       "Click \"Report user\", then choose \"Report user\".",
+       "Select the reason (impersonation), add details and submit."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/2802027",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/2802027?hl=fr",
+      "es": "https://support.google.com/youtube/answer/2802027?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/2802027?hl=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Section « Report a channel » de l'article de signalement, lue le 2026-10-15 (EN/FR/ES). Règlement sur l'usurpation : https://support.google.com/youtube/answer/2801947 ; si une IA imite votre visage ou votre voix, passer par la procédure vie privée (action deepfake)."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Réclamation vie privée : vidéo ou image de vous publiée sans accord",
+      "es": "Reclamo de privacidad: video o imagen tuya publicada sin permiso",
+      "en": "Privacy complaint: video or image of you posted without permission"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez la procédure et avancez avec « Continuer » en confirmant que vous voulez envoyer une réclamation.",
+       "YouTube conseille de contacter d'abord la personne qui a publié : faites-le seulement si c'est sans risque.",
+       "À l'étape 6, choisissez « Quelqu'un a partagé mon image personnelle ou mon nom complet sans mon autorisation ».",
+       "Cliquez sur « Signaler une atteinte à la vie privée », collez les liens et expliquez en quoi on vous reconnaît.",
+       "Seuls vous, un parent ou un représentant légal pouvez déposer cette réclamation."
+      ],
+      "es": [
+       "Abre el proceso y avanza con «Continuar», confirmando que quieres enviar un reclamo.",
+       "YouTube aconseja contactar primero a quien lo publicó: hazlo solo si no es arriesgado.",
+       "En el paso 6, elige «Otra persona compartió mi imagen personal o nombre completo sin mi permiso».",
+       "Haz clic en «Denuncia infracciones de la privacidad», pega los enlaces y explica cómo se te reconoce.",
+       "Solo tú, tu madre/padre o tutor, o un representante legal pueden enviar el reclamo."
+      ],
+      "en": [
+       "Open the process and move on with \"Continue\", confirming you want to file a complaint.",
+       "YouTube suggests contacting the uploader first: only do it if it's safe.",
+       "At step 6, choose \"Someone shared my personal image or full name without my permission\".",
+       "Click \"Report privacy violation\", paste the links and explain how you can be identified.",
+       "Only you, a parent or guardian, or a legal representative can file it."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/142443",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/142443?hl=fr",
+      "es": "https://support.google.com/youtube/answer/142443?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/142443?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Parcours en 6 étapes parcouru en navigateur le 2026-10-15 (EN/FR/ES) jusqu'au formulaire https://support.google.com/youtube/contact/privacy_complaint (connexion conseillée mais pas obligatoire). La vidéo peut aussi être signalée pour contenu sexuel (Plus > Signaler) : le règlement harcèlement interdit les images intimes non consenties."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler une vidéo qui imite ou falsifie votre visage ou votre voix (IA)",
+      "es": "Denunciar un video que imita o falsifica tu cara o tu voz (IA)",
+      "en": "Report a video that fakes your face or voice (AI)"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez la procédure de réclamation vie privée et avancez avec « Continuer ».",
+       "Confirmez les étapes (réclamation, règlement consulté, avertissement).",
+       "À l'étape 6, choisissez « Quelqu'un a modifié ou falsifié ma voix ou mon image sans mon autorisation ».",
+       "Cliquez sur « Signaler une atteinte à la vie privée », collez les liens et expliquez en quoi on vous reconnaît."
+      ],
+      "es": [
+       "Abre el proceso de reclamo de privacidad y avanza con «Continuar».",
+       "Confirma los pasos (reclamo, lineamientos revisados, advertencia).",
+       "En el paso 6, elige «Otra persona cambió o simuló mi voz o imagen sin mi permiso».",
+       "Haz clic en «Denuncia infracciones de la privacidad», pega los enlaces y explica cómo se te reconoce."
+      ],
+      "en": [
+       "Open the privacy complaint process and move on with \"Continue\".",
+       "Confirm the steps (complaint, guidelines reviewed, warning).",
+       "At step 6, choose \"Someone changed or faked my voice or image without my permission\".",
+       "Click \"Report privacy violation\", paste the links and explain how you can be identified."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/142443",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/142443?hl=fr",
+      "es": "https://support.google.com/youtube/answer/142443?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/142443?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Option dédiée aux contenus modifiés/synthétiques, vérifiée en navigateur le 2026-10-15 (libellés FR/ES relevés). Le règlement sur l'usurpation renvoie aussi les contenus IA imitant votre image vers cette procédure."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Faire retirer vos informations personnelles d'une vidéo ou d'un commentaire",
+      "es": "Hacer retirar tu información personal de un video o comentario",
+      "en": "Get your personal information removed from a video or comment"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez la procédure de réclamation vie privée et avancez avec « Continuer ».",
+       "Confirmez les étapes (réclamation, règlement consulté, avertissement).",
+       "À l'étape 6, choisissez « Quelqu'un a partagé d'autres informations personnelles à mon sujet sans mon autorisation ».",
+       "Cliquez sur « Signaler une atteinte à la vie privée », collez les liens et précisez où apparaissent vos informations."
+      ],
+      "es": [
+       "Abre el proceso de reclamo de privacidad y avanza con «Continuar».",
+       "Confirma los pasos (reclamo, lineamientos revisados, advertencia).",
+       "En el paso 6, elige «Alguien compartió otra información personal sobre mí sin mi permiso».",
+       "Haz clic en «Denuncia infracciones de la privacidad», pega los enlaces e indica dónde aparece tu información."
+      ],
+      "en": [
+       "Open the privacy complaint process and move on with \"Continue\".",
+       "Confirm the steps (complaint, guidelines reviewed, warning).",
+       "At step 6, choose \"Someone shared my other personal info without my permission\".",
+       "Click \"Report privacy violation\", paste the links and say where your information appears."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/142443",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/142443?hl=fr",
+      "es": "https://support.google.com/youtube/answer/142443?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/142443?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Vérifié en navigateur le 2026-10-15. YouTube tient compte de l'intérêt public, du consentement et du caractère déjà public de l'information. Le doxxing (adresse, téléphone, e-mail…) est aussi interdit par le règlement harcèlement (signalement possible via Plus > Signaler)."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler du harcèlement, des insultes ou des menaces",
+      "es": "Denunciar acoso, insultos o amenazas",
+      "en": "Report harassment, insults or threats"
+     },
+     "etapes": {
+      "fr": [
+       "Sous la vidéo (ou sur le commentaire), cliquez sur « Plus » puis « Signaler ».",
+       "Choisissez le motif lié au harcèlement et cliquez sur « Signaler ».",
+       "S'il y a beaucoup de contenus, signalez directement la chaîne.",
+       "En cas de menace précise contre vous, contactez la police."
+      ],
+      "es": [
+       "Debajo del video (o en el comentario), haz clic en «Más» y luego en «Denunciar».",
+       "Elige el motivo de hostigamiento y haz clic en «Denunciar».",
+       "Si hay mucho contenido, denuncia directamente el canal.",
+       "Si hay amenazas concretas contra ti, contacta a la policía."
+      ],
+      "en": [
+       "Below the video (or on the comment), click \"More\" then \"Report\".",
+       "Pick the harassment reason and click \"Report\".",
+       "If there's a lot of content, report the channel instead.",
+       "If specific threats are made against you, contact the police."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/2802268",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/2802268?hl=fr",
+      "es": "https://support.google.com/youtube/answer/2802268?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/2802268?hl=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Règlement « Harassment & cyberbullying » lu le 2026-10-15 ; étapes de signalement tirées de https://support.google.com/youtube/answer/2802027. Le signalement est anonyme. Pour une diffamation au sens juridique : formulaire légal Google (action suivante)."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Demande de retrait pour raisons juridiques (diffamation)",
+      "es": "Solicitud de retiro por motivos legales (difamación)",
+      "en": "Legal removal request (defamation)"
+     },
+     "etapes": {
+      "fr": [
+       "Cliquez sur « Créer une demande » et choisissez le produit (YouTube).",
+       "Choisissez le motif juridique (par exemple diffamation).",
+       "Dans le formulaire, collez l'URL exacte de chaque contenu, pas la page d'accueil.",
+       "Expliquez précisément ce qui est illégal et pourquoi, puis envoyez.",
+       "Vous recevez un e-mail avec un numéro de référence : surveillez vos e-mails."
+      ],
+      "es": [
+       "Haz clic en «Crear una solicitud» y elige el producto (YouTube).",
+       "Elige el motivo legal (por ejemplo, difamación).",
+       "En el formulario, pega la URL exacta de cada contenido, no la página principal.",
+       "Explica con precisión qué es ilegal y por qué, y envía.",
+       "Recibirás un correo con un número de referencia: revisa tu correo."
+      ],
+      "en": [
+       "Click \"Create a request\" and choose the product (YouTube).",
+       "Choose the legal reason (for example defamation).",
+       "In the form, paste the exact URL of each piece of content, not the home page.",
+       "Explain precisely what is unlawful and why, then submit.",
+       "You'll get an email with a reference number: keep an eye on your inbox."
+      ]
+     },
+     "url": "https://support.google.com/legal/answer/3110420",
+     "url_par_langue": {
+      "fr": "https://support.google.com/legal/answer/3110420?hl=fr",
+      "es": "https://support.google.com/legal/answer/3110420?hl=es-419",
+      "en": "https://support.google.com/legal/answer/3110420?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page Google « Report Content for Legal Reasons » lue le 2026-10-15 ; Google conseille de signaler d'abord le contenu dans le produit. Une demande distincte par produit Google. Le libellé exact du motif « diffamation » dans l'assistant n'a pas été relevé."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Demander la suppression d'une vidéo pour droit d'auteur",
+      "es": "Solicitar la eliminación de un video por derechos de autor",
+      "en": "Request a copyright removal"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que vous êtes titulaire des droits (ou son représentant) et pensez aux exceptions (citation, parodie…).",
+       "Connectez-vous à YouTube Studio et ouvrez « Détection de contenus ».",
+       "Cliquez sur « Nouvelle demande de suppression » et remplissez le formulaire.",
+       "Pour une image de bannière ou sans compte : écrivez à copyright@youtube.com avec vos coordonnées, la description de l'œuvre et les liens exacts.",
+       "Certaines de vos informations sont transmises à la personne qui a mis en ligne."
+      ],
+      "es": [
+       "Comprueba que eres el titular de los derechos (o su representante) y piensa en las excepciones (cita, parodia…).",
+       "Accede a YouTube Studio y abre «Detección de contenido».",
+       "Haz clic en «Nueva solicitud de eliminación» y completa el formulario.",
+       "Para una imagen de banner o sin cuenta: escribe a copyright@youtube.com con tus datos, la descripción de la obra y los enlaces exactos.",
+       "Parte de tu información se comparte con quien subió el contenido."
+      ],
+      "en": [
+       "Make sure you own the rights (or represent the owner) and consider exceptions (fair use, parody…).",
+       "Sign in to YouTube Studio and open \"Content detection\".",
+       "Click \"New removal request\" and fill in the form.",
+       "For a banner image or without an account: email copyright@youtube.com with your contact details, a description of the work and the exact links.",
+       "Some of your information is shared with the uploader."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/2807622",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/2807622?hl=fr",
+      "es": "https://support.google.com/youtube/answer/2807622?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/2807622?hl=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Submit a copyright removal request » lu le 2026-10-15 (libellés FR/ES de YouTube Studio relevés). Studio exige un compte Google ; l'e-mail/fax/courrier ne l'exige pas. Option pour bloquer les copies futures et retrait programmé à 7 jours."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Menaces ou chantage sur YouTube",
+      "es": "Amenazas o chantaje en YouTube",
+      "en": "Threats or blackmail on YouTube"
+     },
+     "etapes": {
+      "fr": [
+       "Ne répondez pas et gardez des captures d'écran.",
+       "Signalez le contenu ou le commentaire (« Plus » > « Signaler ») : le chantage et les menaces sont interdits.",
+       "Si plusieurs contenus sont concernés, signalez la chaîne.",
+       "Si des menaces précises sont faites contre vous, contactez la police."
+      ],
+      "es": [
+       "No respondas y guarda capturas de pantalla.",
+       "Denuncia el contenido o el comentario («Más» > «Denunciar»): el chantaje y las amenazas están prohibidos.",
+       "Si hay varios contenidos, denuncia el canal.",
+       "Si hay amenazas concretas contra ti, contacta a la policía."
+      ],
+      "en": [
+       "Don't reply, and keep screenshots.",
+       "Report the content or comment (\"More\" > \"Report\"): blackmail and threats are banned.",
+       "If there's more than one piece of content, report the channel.",
+       "If specific threats are made against you, contact the police."
+      ]
+     },
+     "url": "https://support.google.com/youtube/answer/2802268",
+     "url_par_langue": {
+      "fr": "https://support.google.com/youtube/answer/2802268?hl=fr",
+      "es": "https://support.google.com/youtube/answer/2802268?hl=es-419",
+      "en": "https://support.google.com/youtube/answer/2802268?hl=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Le règlement harcèlement cite « Stalking or attempting to blackmail users », les menaces et la diffusion d'images intimes non consenties. « Ne répondez pas / captures » = conseil Devuelta (non écrit sur cette page)."
+    }
+   ]
+  },
+  {
+   "id": "snapchat",
+   "nom": "Snapchat",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Compte Snapchat piraté ou compromis",
+      "es": "Cuenta de Snapchat hackeada o comprometida",
+      "en": "Hacked or compromised Snapchat account"
+     },
+     "etapes": {
+      "fr": [
+       "Changez votre mot de passe ; demandez un lien de réinitialisation par SMS ou e-mail si besoin.",
+       "Dans les réglages, vérifiez que l'e-mail et le numéro du compte sont bien les vôtres.",
+       "Mettez fin aux sessions ou appareils que vous ne reconnaissez pas.",
+       "Si vous n'avez plus accès au compte, utilisez le Snapchat Support Bot avec un e-mail auquel vous avez accès.",
+       "Ne donnez jamais votre mot de passe : Snapchat ne le demande jamais."
+      ],
+      "es": [
+       "Cambia la contraseña; pide un enlace para restablecerla por SMS o email si lo necesitas.",
+       "En Ajustes, comprueba que el email y el número de la cuenta son los tuyos.",
+       "Cierra las sesiones o dispositivos que no reconozcas.",
+       "Si ya no tienes acceso a la cuenta, usa el Snapchat Support Bot con un email al que tengas acceso.",
+       "Nunca compartas tu contraseña: Snapchat nunca te la pedirá."
+      ],
+      "en": [
+       "Change your password; request a reset link by SMS or email if needed.",
+       "In Settings, check that the account's email and phone number are yours.",
+       "End any sessions or devices you don't recognize.",
+       "If you can no longer access the account, use the Snapchat Support Bot with an email you can access.",
+       "Never share your password: Snapchat will never ask for it."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/articles/7012305621908",
+     "url_par_langue": {
+      "fr": "https://help.snapchat.com/hc/fr-fr/articles/7012305621908",
+      "es": "https://help.snapchat.com/hc/es/articles/7012305621908",
+      "en": "https://help.snapchat.com/hc/en-us/articles/7012305621908"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Articles « My account is compromised » et « I can't access my account » (23102718270996) lus le 2026-10-15 (EN/FR/ES). L'URL sans langue redirige vers la langue du navigateur (testé FR et ES)."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un compte qui se fait passer pour vous",
+      "es": "Denunciar una cuenta que se hace pasar por ti",
+      "en": "Report an account pretending to be you"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez l'écran du chat et appuyez longuement sur le nom du compte.",
+       "Appuyez sur « Gérer l'amitié », puis sur « Signaler ».",
+       "Choisissez le motif qui correspond et envoyez.",
+       "Sans l'appli : utilisez le formulaire web « Signaler un compte ou un contenu » avec le nom d'utilisateur du compte."
+      ],
+      "es": [
+       "Abre la pantalla del Chat y mantén pulsado el nombre de la cuenta.",
+       "Toca «Administrar amistad» y luego «Denunciar».",
+       "Elige el motivo que corresponda y envía.",
+       "Sin la app: usa el formulario web para denunciar una cuenta o contenido con el nombre de usuario de la cuenta."
+      ],
+      "en": [
+       "Open the Chat screen and press and hold the account's name.",
+       "Tap \"Manage Friendship\", then \"Report\".",
+       "Choose the matching reason and submit.",
+       "Without the app: use the \"Report Account or Content\" web form with the account's username."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/articles/7012399221652",
+     "url_par_langue": {
+      "fr": "https://help.snapchat.com/hc/fr-fr/articles/7012399221652",
+      "es": "https://help.snapchat.com/hc/es/articles/7012399221652",
+      "en": "https://help.snapchat.com/hc/en-us/articles/7012399221652"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « How do I report abuse, illegal content, or other violations » lu le 2026-10-15 (EN/FR/ES). Snapchat n'a pas d'article ni de formulaire dédié à l'usurpation (recherche dans son centre d'aide) ; le motif exact du menu n'a pas pu être vérifié. Formulaire web : https://help.snapchat.com/hc/requests/new?co=true&ticket_form_id=17471023300884 (rendu en navigateur)."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler des photos intimes partagées sans votre accord",
+      "es": "Denunciar fotos íntimas compartidas sin tu permiso",
+      "en": "Report intimate photos shared without your permission"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, appuyez longuement sur le contenu, puis sur « Signaler » ou « Signaler le Snap ».",
+       "Choisissez « Nudité et contenu sexuel » puis l'option indiquant qu'on a divulgué (ou menace de divulguer) vos photos nues.",
+       "Sur le web, ouvrez le formulaire de la page et choisissez « Ils partagent effectivement mes photos nues/intimes sans ma permission » sous « Signaler la violation ».",
+       "Remplissez les champs demandés et cliquez sur « Envoyer ».",
+       "Suivez le résultat dans « Mes signalements » ou par e-mail."
+      ],
+      "es": [
+       "En la app, mantén pulsado el contenido y toca «Denunciar» o «Denunciar Snap».",
+       "Elige «Desnudos y contenido sexual» y la opción que indica que filtraron (o amenazan con filtrar) tus desnudos.",
+       "En la web, abre el formulario de la página y elige «Están compartiendo mis imágenes de desnudos o íntimas sin mi permiso» en «Denunciar el incumplimiento».",
+       "Completa los campos requeridos y haz clic en «Enviar».",
+       "Sigue el resultado en «Mis denuncias» o por correo."
+      ],
+      "en": [
+       "In the app, press and hold the content, then tap \"Report\" or \"Report Snap\".",
+       "Choose \"Nudity and Sexual Content\", then the option saying your nudes were leaked (or someone threatens to leak them).",
+       "On the web, open the form on the page and choose \"They're actually sharing my nudes/intimate imagery without my permission\" under \"Report the violation\".",
+       "Fill in the required fields and click \"Submit\".",
+       "Track the outcome in \"My Reports\" or by email."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/articles/7012399221652#report-nonconsensual-intimate-imagery",
+     "url_par_langue": {
+      "fr": "https://help.snapchat.com/hc/fr-fr/articles/7012399221652#report-nonconsensual-intimate-imagery",
+      "es": "https://help.snapchat.com/hc/es/articles/7012399221652#report-nonconsensual-intimate-imagery",
+      "en": "https://help.snapchat.com/hc/en-us/articles/7012399221652#report-nonconsensual-intimate-imagery"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Section NCII de l'article de signalement lue le 2026-10-15 (EN/FR/ES) : formulaire web pré-rempli https://help.snapchat.com/hc/requests/new?co=true&tf_23701027754644=cf_report_violation_nudity_sexual_content_leak&ticket_form_id=17471023300884 (présenté au titre du TAKE IT DOWN Act et de lois locales, sans restriction de pays affichée). Le motif in-app « They leaked / are threatening to leak my nudes » vient de la page Snap sur la sextorsion (libellé FR/ES non vérifié dans l'appli)."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake ou un faux nu",
+      "es": "Denunciar un deepfake o un desnudo falso",
+      "en": "Report a deepfake or fake nude"
+     },
+     "etapes": {
+      "fr": [
+       "Faites une capture d'écran (nom d'utilisateur, date) sans partager le contenu.",
+       "Dans l'appli, appuyez longuement sur le contenu, puis « Signaler » et choisissez « Nudité et contenu sexuel ».",
+       "Sur le web, utilisez le formulaire de la page (« Ils partagent effectivement mes photos nues/intimes sans ma permission »).",
+       "Remplissez les champs, expliquez qu'il s'agit d'une image truquée et envoyez."
+      ],
+      "es": [
+       "Haz una captura de pantalla (nombre de usuario, fecha) sin compartir el contenido.",
+       "En la app, mantén pulsado el contenido, toca «Denunciar» y elige «Desnudos y contenido sexual».",
+       "En la web, usa el formulario de la página («Están compartiendo mis imágenes de desnudos o íntimas sin mi permiso»).",
+       "Completa los campos, explica que es una imagen falsa y envía."
+      ],
+      "en": [
+       "Take a screenshot (username, date) without sharing the content.",
+       "In the app, press and hold the content, tap \"Report\" and choose \"Nudity and Sexual Content\".",
+       "On the web, use the form on the page (\"They're actually sharing my nudes/intimate imagery without my permission\").",
+       "Fill in the fields, explain the image is fake, and submit."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/articles/7012399221652#report-nonconsensual-intimate-imagery",
+     "url_par_langue": {
+      "fr": "https://help.snapchat.com/hc/fr-fr/articles/7012399221652#report-nonconsensual-intimate-imagery",
+      "es": "https://help.snapchat.com/hc/es/articles/7012399221652#report-nonconsensual-intimate-imagery",
+      "en": "https://help.snapchat.com/hc/en-us/articles/7012399221652#report-nonconsensual-intimate-imagery"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "La section NCII cite le TAKE IT DOWN Act (qui vise explicitement les deepfakes) ; Snapchat n'a pas de formulaire séparé pour les deepfakes. Pas de mention explicite « IA » dans l'article : à confirmer par un test réel."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler du harcèlement, des insultes ou de la diffamation",
+      "es": "Denunciar acoso, insultos o difamación",
+      "en": "Report bullying, harassment or defamation"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, appuyez longuement sur le Snap, la Story ou le message, puis « Signaler ».",
+       "Pour un compte : chat > appui long sur le nom > « Gérer l'amitié » > « Signaler ».",
+       "Choisissez le motif (harcèlement, intimidation, diffamation) et envoyez.",
+       "Dans l'Union européenne, pour un contenu illégal : « Signaler » > « Contenu illégal (DSA ou OSA) »."
+      ],
+      "es": [
+       "En la app, mantén pulsado el Snap, la Historia o el mensaje y toca «Denunciar».",
+       "Para una cuenta: chat > mantén pulsado el nombre > «Administrar amistad» > «Denunciar».",
+       "Elige el motivo (acoso, bullying, difamación) y envía.",
+       "En la Unión Europea, para contenido ilegal: «Denunciar» > «Contenido ilegal (DSA u OSA)»."
+      ],
+      "en": [
+       "In the app, press and hold the Snap, Story or message, then tap \"Report\".",
+       "For an account: chat > press and hold the name > \"Manage Friendship\" > \"Report\".",
+       "Choose the reason (harassment, bullying, defamation) and submit.",
+       "In the European Union, for illegal content: \"Report\" > \"Illegal Content (DSA or OSA)\"."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/articles/7012399221652",
+     "url_par_langue": {
+      "fr": "https://help.snapchat.com/hc/fr-fr/articles/7012399221652",
+      "es": "https://help.snapchat.com/hc/es/articles/7012399221652",
+      "en": "https://help.snapchat.com/hc/en-us/articles/7012399221652"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "L'article liste « Bullying, harassment, and defamation » parmi les motifs. Formulaire UE (article 16 DSA) lié depuis l'article : https://help.snapchat.com/hc/requests/new?co=true&ticket_form_id=17470990658068&tf_45536461882772=region_eu — protégé par Cloudflare, non rendu lors de nos tests. Libellés FR/ES du menu « Contenu illégal » non vérifiés."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Signaler un compte ou un contenu qui expose vos informations (formulaire web)",
+      "es": "Denunciar una cuenta o contenido que expone tu información (formulario web)",
+      "en": "Report an account or content exposing your information (web form)"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire « Report Account or Content » : pas besoin de l'appli.",
+       "Indiquez pour qui vous signalez, votre nom (ou « none ») et un e-mail de contact.",
+       "Donnez le nom d'utilisateur du compte concerné.",
+       "Choisissez le motif dans « Signaler la violation », décrivez le problème avec le lien ou l'ID du contenu, puis envoyez."
+      ],
+      "es": [
+       "Abre el formulario «Report Account or Content»: no necesitas la app.",
+       "Indica por quién denuncias, tu nombre (o «none») y un correo de contacto.",
+       "Escribe el nombre de usuario de la cuenta en cuestión.",
+       "Elige el motivo en «Denunciar el incumplimiento», describe el problema con el enlace o ID del contenido y envía."
+      ],
+      "en": [
+       "Open the \"Report Account or Content\" form: no app needed.",
+       "Say who you're reporting for, your name (or \"none\") and a contact email.",
+       "Enter the username of the account involved.",
+       "Pick the reason under \"Report the violation\", describe the issue with the content's link or ID, then submit."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/requests/new?co=true&ticket_form_id=17471023300884",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire rendu en navigateur le 2026-10-15 (EN) : votre identité n'est pas transmise à la personne signalée. Lié depuis l'article de signalement (« report your safety concerns to us on the web »). Liste des motifs non lisible (menu dynamique) ; page parfois protégée par Cloudflare. Snapchat recommande aussi de signaler dans l'appli."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Signaler une atteinte au droit d'auteur",
+      "es": "Denunciar una infracción de derechos de autor",
+      "en": "Report copyright infringement"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que vous êtes l'auteur (ou son agent) et que ce n'est pas un usage autorisé (parodie, actualité…).",
+       "Ouvrez le formulaire « Report Copyright Infringement ».",
+       "Décrivez votre œuvre originale (lien) et l'endroit où elle est copiée (nom d'utilisateur, Story, lien).",
+       "Cochez les déclarations, recopiez la phrase demandée, signez avec votre nom et envoyez.",
+       "Vos informations peuvent être transmises à la personne signalée : passez par un agent si vous préférez."
+      ],
+      "es": [
+       "Comprueba que eres el autor (o su agente) y que no es un uso permitido (parodia, noticias…).",
+       "Abre el formulario «Report Copyright Infringement».",
+       "Describe tu obra original (enlace) y dónde está copiada (usuario, Historia, enlace).",
+       "Marca las declaraciones, copia la frase pedida, firma con tu nombre y envía.",
+       "Tu información puede enviarse a la persona denunciada: usa un agente si lo prefieres."
+      ],
+      "en": [
+       "Make sure you're the author (or their agent) and it isn't an allowed use (parody, news…).",
+       "Open the \"Report Copyright Infringement\" form.",
+       "Describe your original work (link) and where it's copied (username, Story, link).",
+       "Tick the statements, type the required sentence, sign with your name and submit.",
+       "Your details may be passed to the reported user: use an agent if you prefer."
+      ]
+     },
+     "url": "https://help.snapchat.com/hc/requests/new?co=true&ticket_form_id=71659",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire rendu en navigateur le 2026-10-15 (EN) ; lié depuis l'article https://help.snapchat.com/hc/articles/7012315652500. Si quelqu'un a partagé un Snap de vous (vie privée), Snapchat demande d'utiliser le signalement d'abus, pas ce formulaire."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Sextorsion : quelqu'un menace de diffuser vos nudes",
+      "es": "Sextorsión: alguien amenaza con difundir tus desnudos",
+      "en": "Sextortion: someone threatens to leak your nudes"
+     },
+     "etapes": {
+      "fr": [
+       "Ne répondez pas et ne cédez à aucune demande (argent, cartes cadeaux, photos).",
+       "Signalez le compte dans l'appli : « Nudité et contenu sexuel » > option « a divulgué / menace de divulguer mes nudes ».",
+       "Bloquez la personne.",
+       "Contactez une ligne d'aide (en France : 3018) et, si besoin, la police.",
+       "Si vous aviez moins de 18 ans sur les images, utilisez Take It Down (NCMEC)."
+      ],
+      "es": [
+       "No respondas ni cedas a ninguna exigencia (dinero, tarjetas regalo, fotos).",
+       "Denuncia la cuenta en la app: «Desnudos y contenido sexual» > opción «filtró / amenaza con filtrar mis desnudos».",
+       "Bloquea a la persona.",
+       "Contacta a una línea de ayuda y, si hace falta, a la policía.",
+       "Si tenías menos de 18 años en las imágenes, usa Take It Down (NCMEC)."
+      ],
+      "en": [
+       "Don't reply or give in to any demand (money, gift cards, photos).",
+       "Report the account in the app: \"Nudity and Sexual Content\" > \"They leaked / are threatening to leak my nudes\".",
+       "Block the person.",
+       "Contact a helpline and, if needed, the police.",
+       "If you were under 18 in the images, use Take It Down (NCMEC)."
+      ]
+     },
+     "url": "https://values.snap.com/safety/financial-sextortion",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page Snap « What you need to know about Financial Sextortion » lue le 2026-10-15 : motif in-app ajouté « They leaked / are threatening to leak my nudes », conseils « report, block, do not respond to or meet any demands, report to law enforcement », ressources par pays (France : 3018). Contenu en anglais seulement (?lang=fr-FR ne traduit que le menu)."
+    }
+   ]
+  },
+  {
+   "id": "telegram",
+   "nom": "Telegram",
+   "type": "messagerie",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Compte Telegram piraté ou téléphone volé",
+      "es": "Cuenta de Telegram hackeada o teléfono robado",
+      "en": "Hacked Telegram account or stolen phone"
+     },
+     "etapes": {
+      "fr": [
+       "Depuis un autre appareil où Telegram est ouvert : Paramètres > Confidentialité et sécurité > activez la vérification en deux étapes.",
+       "Allez dans Paramètres > Appareils (ou Sessions actives) et fermez les sessions inconnues ou de l'ancien téléphone.",
+       "Demandez à votre opérateur de bloquer l'ancienne carte SIM et de vous en donner une nouvelle avec le même numéro.",
+       "Sans autre appareil : attendez la nouvelle SIM, reconnectez-vous, puis fermez les autres sessions."
+      ],
+      "es": [
+       "Desde otro dispositivo con Telegram abierto: Ajustes > Privacidad y seguridad > activa la verificación en dos pasos.",
+       "Ve a Ajustes > Dispositivos (o Sesiones activas) y cierra las sesiones desconocidas o del teléfono anterior.",
+       "Pide a tu operador que bloquee la SIM anterior y te dé una nueva con el mismo número.",
+       "Sin otro dispositivo: espera la nueva SIM, vuelve a iniciar sesión y cierra las demás sesiones."
+      ],
+      "en": [
+       "From another device where Telegram is open: Settings > Privacy and Security > turn on Two-Step Verification.",
+       "Go to Settings > Devices (or Active Sessions) and end unknown sessions or the old phone's session.",
+       "Ask your phone provider to block the old SIM and give you a new one with the same number.",
+       "No other device: wait for the new SIM, log back in, then end the other sessions."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-my-phone-was-stolen-what-do-i-do",
+     "url_par_langue": {
+      "fr": "https://telegram.org/faq?setln=fr#q-mon-telephone-a-ete-vole-que-dois-je-faire",
+      "es": "https://telegram.org/faq?setln=es#p-mi-telefono-fue-robado-que-puedo-hacer",
+      "en": "https://telegram.org/faq?setln=en#q-my-phone-was-stolen-what-do-i-do"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "FAQ Telegram lue le 2026-10-15 (EN/FR/ES ; ancres propres à chaque langue, vérifiées). Telegram ne peut pas aider sans accès au numéro ou à une session ouverte : « qui a le numéro a le compte ». Pas d'article dédié au piratage hors vol de téléphone."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Quelqu'un se fait passer pour vous sur Telegram",
+      "es": "Alguien se hace pasar por ti en Telegram",
+      "en": "Someone is pretending to be you on Telegram"
+     },
+     "etapes": {
+      "fr": [
+       "Notez le nom d'utilisateur (@…) ou le lien t.me du faux compte et faites des captures.",
+       "Ouvrez le compte officiel @NoToScam dans Telegram (t.me/notoscam).",
+       "Expliquez que ce compte se fait passer pour vous et envoyez le lien.",
+       "Signalez aussi ses messages : touchez (ou appuyez longuement sur) un message > « Signaler »."
+      ],
+      "es": [
+       "Anota el nombre de usuario (@…) o el enlace t.me de la cuenta falsa y haz capturas.",
+       "Abre la cuenta oficial @NoToScam en Telegram (t.me/notoscam).",
+       "Explica que esa cuenta se hace pasar por ti y envía el enlace.",
+       "Reporta también sus mensajes: toca (o mantén pulsado) un mensaje > «Reportar»."
+      ],
+      "en": [
+       "Note the fake account's username (@…) or t.me link and take screenshots.",
+       "Open the official @NoToScam account in Telegram (t.me/notoscam).",
+       "Explain that this account is pretending to be you and send the link.",
+       "Also report its messages: tap (or press and hold) a message > \"Report\"."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-what-if-someone-is-pretending-to-be-me",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "FAQ « What if someone is pretending to be me? » → @NoToScam (https://t.me/notoscam, vérifié 200). Les comptes usurpateurs peuvent recevoir un label FAKE ou SCAM (guide DSA). Dans les FAQ FR/ES, cette mention figure dans la réponse sur le contenu illégal (pas d'ancre dédiée) : pas d'url_par_langue."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Faire retirer une photo ou vidéo intime publiée sur Telegram",
+      "es": "Hacer retirar una foto o video íntimo publicado en Telegram",
+      "en": "Get an intimate photo or video removed from Telegram"
+     },
+     "etapes": {
+      "fr": [
+       "Dans l'appli, touchez le message (Android), appuyez longuement (iPhone) ou faites un clic droit (ordinateur), puis « Signaler ».",
+       "Choisissez le motif qui correspond.",
+       "Vous pouvez aussi écrire à abuse@telegram.org en donnant les liens t.me/… ou @… du contenu.",
+       "Dans l'Union européenne, voyez aussi le guide DSA de Telegram pour signaler un contenu illégal."
+      ],
+      "es": [
+       "En la app, toca el mensaje (Android), mantenlo pulsado (iPhone) o haz clic derecho (computadora) y elige «Reportar».",
+       "Elige el motivo que corresponda.",
+       "También puedes escribir a abuse@telegram.org con los enlaces t.me/… o @… del contenido.",
+       "En la Unión Europea, consulta también la guía DSA de Telegram para denunciar contenido ilegal."
+      ],
+      "en": [
+       "In the app, tap the message (Android), press and hold it (iPhone) or right-click it (desktop), then \"Report\".",
+       "Choose the matching reason.",
+       "You can also email abuse@telegram.org with the t.me/… or @… links to the content.",
+       "In the European Union, also see Telegram's DSA guide to report illegal content."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down",
+     "url_par_langue": {
+      "fr": "https://telegram.org/faq?setln=fr#q-il-y-a-du-contenu-illegal-sur-telegram-comment-puis-je-le-fair",
+      "es": "https://telegram.org/faq?setln=es#p-hay-contenido-ilegal-en-telegram-como-puedo-quitarlo-de-ahi",
+      "en": "https://telegram.org/faq?setln=en#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "FAQ lue le 2026-10-15 (EN/FR/ES). Le guide DSA https://telegram.org/tos/eu-dsa interdit la « publication non consentie de contenus sexuels ». Telegram ne traite pas le contenu des groupes et discussions privés. L'e-mail ne nécessite pas de compte."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake sexuel ou un bot de « déshabillage »",
+      "es": "Denunciar un deepfake sexual o un bot para «desnudar»",
+      "en": "Report a sexual deepfake or \"undressing\" bot"
+     },
+     "etapes": {
+      "fr": [
+       "Copiez le lien t.me/… ou le @nom du canal, du groupe public ou du bot.",
+       "Signalez le message ou le canal dans l'appli (« Signaler ») avec le motif le plus proche.",
+       "Écrivez à abuse@telegram.org avec les liens et une courte explication.",
+       "Dans l'Union européenne, utilisez aussi le signalement de contenu illégal décrit dans le guide DSA."
+      ],
+      "es": [
+       "Copia el enlace t.me/… o el @nombre del canal, grupo público o bot.",
+       "Reporta el mensaje o el canal en la app («Reportar») con el motivo más cercano.",
+       "Escribe a abuse@telegram.org con los enlaces y una breve explicación.",
+       "En la Unión Europea, usa también la denuncia de contenido ilegal descrita en la guía DSA."
+      ],
+      "en": [
+       "Copy the t.me/… link or @name of the channel, public group or bot.",
+       "Report the message or channel in the app (\"Report\") with the closest reason.",
+       "Email abuse@telegram.org with the links and a short explanation.",
+       "In the European Union, also use the illegal content report described in the DSA guide."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down",
+     "url_par_langue": {
+      "fr": "https://telegram.org/faq?setln=fr#q-il-y-a-du-contenu-illegal-sur-telegram-comment-puis-je-le-fair",
+      "es": "https://telegram.org/faq?setln=es#p-hay-contenido-ilegal-en-telegram-como-puedo-quitarlo-de-ahi",
+      "en": "https://telegram.org/faq?setln=en#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Telegram n'a pas de règle ni de procédure spécifique aux deepfakes : même canal que le contenu illégal (bouton Signaler, abuse@telegram.org). Qualification « publication non consentie de contenus sexuels » = notre interprétation."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Vos informations personnelles publiées (doxing)",
+      "es": "Tu información personal publicada (doxing)",
+      "en": "Your personal information posted (doxing)"
+     },
+     "etapes": {
+      "fr": [
+       "Faites des captures et copiez les liens t.me/… des messages.",
+       "Signalez chaque message dans l'appli (« Signaler ») avec le motif qui correspond.",
+       "Écrivez à abuse@telegram.org avec les liens vers le contenu.",
+       "Dans l'Union européenne : signalement de contenu illégal ou bot @EURegulation (guide DSA)."
+      ],
+      "es": [
+       "Haz capturas y copia los enlaces t.me/… de los mensajes.",
+       "Reporta cada mensaje en la app («Reportar») con el motivo que corresponda.",
+       "Escribe a abuse@telegram.org con los enlaces al contenido.",
+       "En la Unión Europea: denuncia de contenido ilegal o bot @EURegulation (guía DSA)."
+      ],
+      "en": [
+       "Take screenshots and copy the t.me/… links of the messages.",
+       "Report each message in the app (\"Report\") with the matching reason.",
+       "Email abuse@telegram.org with links to the content.",
+       "In the European Union: illegal content report or the @EURegulation bot (DSA guide)."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down",
+     "url_par_langue": {
+      "fr": "https://telegram.org/faq?setln=fr#q-il-y-a-du-contenu-illegal-sur-telegram-comment-puis-je-le-fair",
+      "es": "https://telegram.org/faq?setln=es#p-hay-contenido-ilegal-en-telegram-como-puedo-quitarlo-de-ahi",
+      "en": "https://telegram.org/faq?setln=en#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Le guide DSA https://telegram.org/tos/eu-dsa (lu le 2026-10-15) interdit de « partager les données personnelles d'autrui pour l'intimider ou le harceler (doxing) » sur la partie publique de Telegram."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Union européenne : signaler un contenu illégal (DSA)",
+      "es": "Unión Europea: denunciar contenido ilegal (DSA)",
+      "en": "European Union: report illegal content (DSA)"
+     },
+     "etapes": {
+      "fr": [
+       "Signalez d'abord le message dans l'appli (« Signaler »).",
+       "Dans le guide DSA, ouvrez le lien « How to report illegal content ».",
+       "Donnez votre nom, vos coordonnées et une explication claire de pourquoi le contenu est illégal.",
+       "Pour contacter Telegram au titre du DSA, écrivez au bot @EURegulation."
+      ],
+      "es": [
+       "Primero reporta el mensaje en la app («Reportar»).",
+       "En la guía DSA, abre el enlace «How to report illegal content».",
+       "Da tu nombre, tus datos de contacto y una explicación clara de por qué el contenido es ilegal.",
+       "Para contactar a Telegram en virtud de la DSA, escribe al bot @EURegulation."
+      ],
+      "en": [
+       "First report the message in the app (\"Report\").",
+       "In the DSA guide, open the \"How to report illegal content\" link.",
+       "Give your name, contact details and a clear explanation of why the content is illegal.",
+       "To contact Telegram under the DSA, message the @EURegulation bot."
+      ]
+     },
+     "url": "https://telegram.org/tos/eu-dsa",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Guide « User guidance for the EU Digital Services Act » lu le 2026-10-15 (anglais seulement : ?setln=fr/es ne le traduit pas). Le formulaire https://telegram.org/dsa-report renvoie (302) vers l'accueil depuis notre connexion hors UE : contenu non vérifiable. Hors UE : seulement le bouton Signaler et abuse@telegram.org."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Votre œuvre est reprise par un canal ou un bot",
+      "es": "Un canal o bot usa tu obra",
+      "en": "A channel or bot is using your work"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez que le contenu est public (canal, bot, groupe public, stickers) : Telegram ne traite pas les discussions privées.",
+       "Copiez les liens t.me/… du contenu concerné.",
+       "Envoyez une plainte à dmca@telegram.org avec ces liens et la preuve que l'œuvre est à vous.",
+       "Seul le titulaire des droits ou son représentant peut envoyer cette demande."
+      ],
+      "es": [
+       "Comprueba que el contenido es público (canal, bot, grupo público, stickers): Telegram no atiende chats privados.",
+       "Copia los enlaces t.me/… del contenido.",
+       "Envía una queja a dmca@telegram.org con esos enlaces y la prueba de que la obra es tuya.",
+       "Solo el titular de los derechos o su representante puede enviarla."
+      ],
+      "en": [
+       "Check the content is public (channel, bot, public group, stickers): Telegram doesn't handle private chats.",
+       "Copy the t.me/… links to the content.",
+       "Send a complaint to dmca@telegram.org with the links and proof the work is yours.",
+       "Only the rights owner or their authorized agent can send it."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-a-bot-or-channel-is-infringing-on-my-copyright-what-do-i-do",
+     "url_par_langue": {
+      "fr": "https://telegram.org/faq?setln=fr#q-un-bot-ou-un-canal-porte-atteinte-a-mes-droits-d-39auteur-que",
+      "es": "https://telegram.org/faq?setln=es#p-un-bot-o-canal-esta-vulnerando-mis-derechos-de-autor-que-hago",
+      "en": "https://telegram.org/faq?setln=en#q-a-bot-or-channel-is-infringing-on-my-copyright-what-do-i-do"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "FAQ lue le 2026-10-15 (EN/FR/ES). « Preuve que l'œuvre est à vous » = ajout Devuelta (la FAQ ne détaille pas le contenu de la plainte)."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Menaces ou sextorsion sur Telegram",
+      "es": "Amenazas o sextorsión en Telegram",
+      "en": "Threats or sextortion on Telegram"
+     },
+     "etapes": {
+      "fr": [
+       "Ne payez pas et gardez des captures (nom d'utilisateur, messages, dates).",
+       "Signalez les messages dans l'appli : touchez ou appuyez longuement > « Signaler ».",
+       "Si des images sont publiées, écrivez à abuse@telegram.org avec les liens t.me/….",
+       "Portez plainte auprès de la police."
+      ],
+      "es": [
+       "No pagues y guarda capturas (nombre de usuario, mensajes, fechas).",
+       "Reporta los mensajes en la app: toca o mantén pulsado > «Reportar».",
+       "Si publican imágenes, escribe a abuse@telegram.org con los enlaces t.me/….",
+       "Denúncialo ante la policía."
+      ],
+      "en": [
+       "Don't pay, and keep screenshots (username, messages, dates).",
+       "Report the messages in the app: tap or press and hold > \"Report\".",
+       "If images get posted, email abuse@telegram.org with the t.me/… links.",
+       "Report it to the police."
+      ]
+     },
+     "url": "https://telegram.org/faq#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down",
+     "url_par_langue": {
+      "fr": "https://telegram.org/faq?setln=fr#q-il-y-a-du-contenu-illegal-sur-telegram-comment-puis-je-le-fair",
+      "es": "https://telegram.org/faq?setln=es#p-hay-contenido-ilegal-en-telegram-como-puedo-quitarlo-de-ahi",
+      "en": "https://telegram.org/faq?setln=en#q-there-39s-illegal-content-on-telegram-how-do-i-take-it-down"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Telegram n'a pas de page sur la sextorsion. Étapes 2-3 tirées de la FAQ ; « ne payez pas », captures et police = conseils Devuelta (cohérents avec Meta et Snap)."
+    }
+   ]
+  },
+  {
+   "id": "linkedin",
+   "nom": "LinkedIn",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Compte LinkedIn piraté (accès non autorisé)",
+      "es": "Cuenta de LinkedIn hackeada (acceso no autorizado)",
+      "en": "Hacked LinkedIn account (unauthorized access)"
+     },
+     "etapes": {
+      "fr": [
+       "Remplissez le formulaire « Report Unauthorized Account Access or Changes » (lien sur la page) : « My account », puis indiquez si vous êtes bloqué.",
+       "Ajoutez l'URL de votre profil, votre e-mail ou votre numéro.",
+       "LinkedIn vérifie que le compte est à vous, puis vous aide à le récupérer.",
+       "Si vous avez encore accès : changez le mot de passe, activez la validation en deux étapes et déconnectez les sessions inconnues.",
+       "Vérifiez les e-mails et numéros du compte et sécurisez votre boîte mail."
+      ],
+      "es": [
+       "Completa el formulario «Report Unauthorized Account Access or Changes» (enlace en la página): «My account» e indica si no puedes entrar.",
+       "Añade la URL de tu perfil, tu correo o tu número.",
+       "LinkedIn verifica que la cuenta es tuya y te ayuda a recuperarla.",
+       "Si aún tienes acceso: cambia la contraseña, activa la verificación en dos pasos y cierra las sesiones desconocidas.",
+       "Revisa los correos y números de la cuenta y protege tu correo."
+      ],
+      "en": [
+       "Fill in the \"Report Unauthorized Account Access or Changes\" form (linked on the page): \"My account\", then say whether you're locked out.",
+       "Add your profile URL, email or phone number.",
+       "LinkedIn checks the account is yours, then helps you regain access.",
+       "If you still have access: change your password, turn on two-step verification and sign out of unknown sessions.",
+       "Check the emails and phone numbers on the account and secure your email."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/answer/a1340402",
+     "url_par_langue": {
+      "fr": "https://www.linkedin.com/help/linkedin/answer/a1340402?lang=fr",
+      "es": "https://www.linkedin.com/help/linkedin/answer/a1340402?lang=es",
+      "en": "https://www.linkedin.com/help/linkedin/answer/a1340402?lang=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Article « Report a compromised account » lu le 2026-10-15. Formulaire https://www.linkedin.com/help/linkedin/ask/TS-RHA rendu en navigateur (sans connexion). Le formulaire est en anglais ; LinkedIn renvoie vers d'autres articles si vous avez perdu l'e-mail (a1377116) ou l'appareil de double authentification (a1335344). L'aide s'auto-localise aussi selon la langue du navigateur."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un faux profil ou une usurpation d'identité",
+      "es": "Denunciar un perfil falso o una suplantación",
+      "en": "Report a fake or impersonating profile"
+     },
+     "etapes": {
+      "fr": [
+       "Sur le profil, cliquez sur « Plus ».",
+       "Cliquez sur « Signaler / Bloquer », puis « Signaler [nom] ou le compte en intégralité ».",
+       "Choisissez « Cette personne usurpe l'identité de quelqu'un d'autre ».",
+       "Cliquez sur « Envoyer un rapport » : la personne ne saura pas qui l'a signalée."
+      ],
+      "es": [
+       "En el perfil, haz clic en «Más».",
+       "Haz clic en «Denunciar/Bloquear» y luego «Denunciar a [nombre] o toda la cuenta».",
+       "Elige «Esta persona se está haciendo pasar por alguien más».",
+       "Haz clic en «Enviar denuncia»: la persona no sabrá quién la denunció."
+      ],
+      "en": [
+       "On the profile, click \"More\".",
+       "Click \"Report / Block\", then \"Report [name] or entire account\".",
+       "Choose \"This person is impersonating someone\".",
+       "Click \"Submit report\": the person won't know who reported them."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/answer/a1338436",
+     "url_par_langue": {
+      "fr": "https://www.linkedin.com/help/linkedin/answer/a1338436?lang=fr",
+      "es": "https://www.linkedin.com/help/linkedin/answer/a1338436?lang=es",
+      "en": "https://www.linkedin.com/help/linkedin/answer/a1338436?lang=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Report fake profiles » lu le 2026-10-15 en EN, FR et ES (libellés repris). Sans compte LinkedIn : pas de formulaire public dédié trouvé (le formulaire d'aide TS-NFPI exige une connexion)."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler une publication ou un message inapproprié",
+      "es": "Denunciar una publicación o un mensaje inapropiado",
+      "en": "Report an inappropriate post or message"
+     },
+     "etapes": {
+      "fr": [
+       "Sur la publication, cliquez sur « Plus » puis « Signaler cette publication ».",
+       "Pour un message : Messagerie > conversation > « Plus » > « Signaler cette conversation ».",
+       "Choisissez le motif dans « Pourquoi signalez-vous ceci ? » et suivez les instructions.",
+       "Cliquez sur « Envoyer » ; vous pouvez ensuite bloquer la personne."
+      ],
+      "es": [
+       "En la publicación, haz clic en «Más» y luego «Denunciar esta publicación».",
+       "Para un mensaje: Mensajes > conversación > «Más» > «Denunciar esta conversación».",
+       "Elige el motivo en «¿Por qué estás denunciando esto?» y sigue las instrucciones.",
+       "Haz clic en «Enviar»; luego puedes bloquear a la persona."
+      ],
+      "en": [
+       "On the post, click \"More\" then \"Report this post\".",
+       "For a message: Messaging > conversation > \"More\" > \"Report this conversation\".",
+       "Pick the reason under \"Why are you reporting this?\" and follow the steps.",
+       "Click \"Submit\"; you can then block the person."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/answer/a1344213",
+     "url_par_langue": {
+      "fr": "https://www.linkedin.com/help/linkedin/answer/a1344213?lang=fr",
+      "es": "https://www.linkedin.com/help/linkedin/answer/a1344213?lang=es",
+      "en": "https://www.linkedin.com/help/linkedin/answer/a1344213?lang=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Recognize and report spam, inappropriate, and abusive content » lu le 2026-10-15 (EN). Aucune page LinkedIn dédiée aux images intimes ou aux deepfakes trouvée : même procédure pour un deepfake. Libellés FR/ES traduits par nous (sauf « Pourquoi signalez-vous ceci ? » / « ¿Por qué estás denunciando esto? », relevés)."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Signaler du harcèlement sur LinkedIn",
+      "es": "Denunciar acoso en LinkedIn",
+      "en": "Report harassment on LinkedIn"
+     },
+     "etapes": {
+      "fr": [
+       "Cliquez sur « Plus » en haut à droite du message ou de la publication (ou à droite du commentaire).",
+       "Cliquez sur « Signaler cette publication » ou « Signaler ».",
+       "À la question « Pourquoi signalez-vous ceci ? », choisissez « Harcèlement ».",
+       "Bloquez ensuite le membre : profil > « Plus » > « Signaler / Bloquer » > « Bloquer »."
+      ],
+      "es": [
+       "Haz clic en «Más» arriba a la derecha del mensaje o la publicación (o a la derecha del comentario).",
+       "Haz clic en «Denunciar esta publicación» o «Denunciar».",
+       "Cuando se te pregunte «¿Por qué estás denunciando esto?», selecciona «Acoso».",
+       "Después bloquea al miembro: perfil > «Más» > «Denunciar/Bloquear» > «Bloquear»."
+      ],
+      "en": [
+       "Click \"More\" at the top right of the message or post (or to the right of the comment).",
+       "Click \"Report this post\" or \"Report\".",
+       "When asked \"Why are you reporting this?\", select \"Harassment\".",
+       "Then block the member: profile > \"More\" > \"Report/Block\" > \"Block\"."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/answer/a1336329",
+     "url_par_langue": {
+      "fr": "https://www.linkedin.com/help/linkedin/answer/a1336329?lang=fr",
+      "es": "https://www.linkedin.com/help/linkedin/answer/a1336329?lang=es",
+      "en": "https://www.linkedin.com/help/linkedin/answer/a1336329?lang=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Report harassment or a safety concern » lu le 2026-10-15 (EN/FR/ES). LinkedIn ne prévient pas la personne signalée. Pour des menaces : formulaire sans connexion (voir chantage)."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Menaces ou chantage : formulaire « harcèlement ou problème de sécurité »",
+      "es": "Amenazas o chantaje: formulario de acoso o problema de seguridad",
+      "en": "Threats or blackmail: harassment or safety concern form"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire « Reporting Harassment or a Safety Concern ».",
+       "Indiquez votre prénom, nom et e-mail.",
+       "Collez l'URL du profil de l'expéditeur.",
+       "Collez le contenu des messages ou joignez une capture d'écran, puis cliquez sur « Submit ».",
+       "En cas de danger immédiat, contactez la police."
+      ],
+      "es": [
+       "Abre el formulario «Reporting Harassment or a Safety Concern».",
+       "Escribe tu nombre, apellido y correo.",
+       "Pega la URL del perfil del remitente.",
+       "Pega el contenido de los mensajes o adjunta una captura de pantalla y haz clic en «Submit».",
+       "Si estás en peligro inmediato, contacta a la policía."
+      ],
+      "en": [
+       "Open the \"Reporting Harassment or a Safety Concern\" form.",
+       "Enter your first name, last name and email.",
+       "Paste the URL of the sender's profile.",
+       "Paste the message content or attach a screenshot, then click \"Submit\".",
+       "If you're in immediate danger, contact the police."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/ask/rhsc",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire rendu en navigateur le 2026-10-15 (anglais), lié depuis l'article a1336329 (« If someone is contacting you in a threatening or abusive way, please contact us »). Le conseil police vient du même article."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Contacter le délégué à la protection des données de LinkedIn",
+      "es": "Contactar al delegado de protección de datos de LinkedIn",
+      "en": "Contact LinkedIn's Data Protection Officer"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire du délégué à la protection des données (DPO).",
+       "Indiquez prénom, nom et e-mail.",
+       "Choisissez la catégorie, par exemple l'exercice de vos droits sur vos données.",
+       "Choisissez votre pays, décrivez votre demande et envoyez."
+      ],
+      "es": [
+       "Abre el formulario del delegado de protección de datos (DPO).",
+       "Escribe tu nombre, apellido y correo.",
+       "Elige la categoría, por ejemplo ejercer tus derechos sobre tus datos.",
+       "Elige tu país, describe tu solicitud y envía."
+      ],
+      "en": [
+       "Open the Data Protection Officer (DPO) form.",
+       "Enter your first name, last name and email.",
+       "Pick the category, for example exercising your data subject rights.",
+       "Choose your country, describe your request and submit."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/ask/TSO-DPO",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire « Contacting LinkedIn's Data Protection Officer » rendu le 2026-10-15 : pour les questions sur vos données personnelles LinkedIn (catégories : paramètres de confidentialité, connexion, compte restreint, piratage, droits des personnes). Pour des infos personnelles publiées par un autre membre : signaler la publication (action contenu-intime)."
+    },
+    {
+     "situation": "droit-auteur",
+     "titre": {
+      "fr": "Signaler une atteinte au droit d'auteur",
+      "es": "Denunciar una infracción de derechos de autor",
+      "en": "Report copyright infringement"
+     },
+     "etapes": {
+      "fr": [
+       "Si possible, contactez d'abord la personne pour régler le problème à l'amiable.",
+       "Ouvrez le formulaire « Reporting a Copyright Infringement ».",
+       "Indiquez vos nom et e-mail et précisez si vous êtes le titulaire ou son agent.",
+       "Décrivez l'œuvre et les contenus concernés, puis envoyez (déclaration sous peine de parjure)."
+      ],
+      "es": [
+       "Si puedes, contacta primero a la persona para resolverlo de forma amistosa.",
+       "Abre el formulario «Reporting a Copyright Infringement».",
+       "Escribe tu nombre y correo e indica si eres el titular o su agente.",
+       "Describe la obra y los contenidos en cuestión y envía (declaración bajo pena de perjurio)."
+      ],
+      "en": [
+       "If you can, contact the person first to settle it amicably.",
+       "Open the \"Reporting a Copyright Infringement\" form.",
+       "Enter your name and email and say whether you're the owner or their agent.",
+       "Describe the work and the infringing content, then submit (statement under penalty of perjury)."
+      ]
+     },
+     "url": "https://www.linkedin.com/help/linkedin/ask/TS-NCI",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire rendu le 2026-10-15 (anglais), lié depuis la politique https://www.linkedin.com/legal/copyright-policy. Seuls le titulaire ou son agent autorisé peuvent l'utiliser. Les champs après la relation au titulaire apparaissent dynamiquement (non tous relevés)."
+    }
+   ]
+  }
+ ]
+}

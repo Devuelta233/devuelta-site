@@ -22,7 +22,12 @@ const pages = (dossier) => fichiersHtml(dossier).filter((f) => f.endsWith(`${sep
 // 1. Typographie française dans le texte des pages (jamais dans les scripts,
 //    styles, champs ni attributs) : espace fine insécable avant ; : ! ? » et après «.
 const FINE = '\u202F';
-const typo = (t) => t.replace(/(?<=\S)[ \u00A0](?=[;:!?»])/g, FINE).replace(/«[ \u00A0]/g, `«${FINE}`);
+const typo = (t) =>
+  t
+    .replace(/(?<=\S)[ \u00A0](?=[;:!?»])/g, FINE)
+    .replace(/«[ \u00A0]/g, `«${FINE}`)
+    // Apostrophe typographique entre deux lettres (l’usurpation, don’t).
+    .replace(/(?<=\p{L})(?:'|&#39;)(?=\p{L})/gu, '’');
 let corrections = 0;
 for (const fichier of fichiersHtml(DIST)) {
   const html = readFileSync(fichier, 'utf8');

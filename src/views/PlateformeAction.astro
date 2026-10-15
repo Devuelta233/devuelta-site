@@ -1,8 +1,11 @@
 ---
+// Page « plateforme × situation » : la ou les démarches officielles de la
+// plateforme pour ce problème, vérifiées, avec le lien direct vers le formulaire.
 import Base from '../layouts/Base.astro';
 import SiCaBloque from '../components/SiCaBloque.astro';
 import { C } from '../i18n/commun';
 import { PLATEFORME_PAGE } from '../i18n/pages';
+import { SEO_PLATEFORME } from '../i18n/seo-plateformes';
 import { SITUATIONS_TEXTE } from '../i18n/situations';
 import { page, plateformePath, situationPath, type Versions } from '../i18n/routes';
 import { actionsPour, dateLisible, PLATEFORMES_VERIFIE_LE, urlAction, type ActionPlateforme, type Plateforme } from '../data';
@@ -13,27 +16,38 @@ interface Props {
   lang: Lang;
   situation: SituationReelle;
   plateforme: Plateforme;
-  action: ActionPlateforme;
+  actions: ActionPlateforme[];
 }
-const { lang, situation, plateforme, action } = Astro.props;
+const { lang, situation, plateforme, actions } = Astro.props;
+const [action, ...suivantes] = actions;
 const titreAction = action.titre[lang];
-const h1 = titreAction.toLowerCase().includes(plateforme.nom.toLowerCase()) ? titreAction : `${plateforme.nom} : ${titreAction.charAt(0).toLowerCase()}${titreAction.slice(1)}`;
-const h1Final = lang === 'fr' ? h1 : h1.replace(' : ', ': ');
+const deux = (s: string) => (lang === 'fr' ? s : s.replace(' : ', ': '));
+const h1Defaut = deux(
+  titreAction.toLowerCase().includes(plateforme.nom.toLowerCase()) ? titreAction : `${plateforme.nom} : ${titreAction.charAt(0).toLowerCase()}${titreAction.slice(1)}`,
+);
+const seo = SEO_PLATEFORME[`${situation}:${plateforme.id}`]?.[lang];
+const h1 = seo?.h1 ?? h1Defaut;
+const titre = seo?.titre ?? h1Defaut;
 const chemin = plateformePath(situation, plateforme.id, lang);
 const versions = Object.fromEntries(LANGS.map((l) => [l, plateformePath(situation, plateforme.id, l)])) as Versions;
 const st = SITUATIONS_TEXTE[situation][lang];
 const date = dateLisible(PLATEFORMES_VERIFIE_LE, lang);
 const intro = PLATEFORME_PAGE.intro[lang].replace('{p}', plateforme.nom).replace('{d}', date);
 const autres = actionsPour(situation).filter((x) => x.plateforme.id !== plateforme.id);
-const lien = urlAction(action, lang);
-const etapes = action.etapes[lang] ?? [];
-const description = `${h1Final}. ${etapes[0] ?? ''}`.slice(0, 155);
-// Pas de balisage HowTo : Google ne l'utilise plus (étapes numérotées en HTML suffisent).
+const description = `${h1}. ${action.etapes[lang]?.[0] ?? ''}`.slice(0, 155);
+const hote = (u: string) => {
+  try {
+    return new URL(u).hostname.replace(/^www\./, '');
+  } catch {
+    return u;
+  }
+};
+// Pas de balisage HowTo : Google ne l'utilise plus (des étapes numérotées en HTML suffisent).
 const jsonld = [
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: h1Final,
+    name: h1,
     inLanguage: lang,
     url: `${SITE_URL}${chemin}`,
     dateModified: PLATEFORMES_VERIFIE_LE || '2026-10-15',
@@ -43,7 +57,7 @@ const jsonld = [
 ---
 <Base
   lang={lang}
-  titre={h1Final}
+  titre={titre}
   description={description}
   chemin={chemin}
   versions={versions}
@@ -55,25 +69,35 @@ const jsonld = [
   ]}
 >
   <article class="page">
-    <h1>{h1Final}</h1>
+    <h1>{h1}</h1>
     <p class="lede">{intro}</p>
 
     <div class="encadre">
       <h2 class="sans-marge">{PLATEFORME_PAGE.conseils[lang]}</h2>
-      <p>{st.premiers[0]}</p>
+      <ul class="coche">
+        {st.premiers.map((p) => <li>{p}</li>)}
+      </ul>
     </div>
 
-    <h2>{PLATEFORME_PAGE.etapes[lang]}</h2>
-    <ol class="etapes">
-      {etapes.map((e) => <li>{e}</li>)}
-    </ol>
-    <div class="actions">
-      <a class="bouton principal" href={lien} rel="noopener noreferrer" target="_blank">
-        {C.ouvrirFormulaire[lang]}
-        <small>{new URL(lien).hostname.replace(/^www\./, '')} {C.nouvelOnglet[lang]}</small>
-      </a>
-    </div>
-    <p class="petit">{action.connexion_requise ? C.connexionRequise[lang] : C.pasDeConnexion[lang]} {C.verifieLe[lang]} {date}.</p>
+    {[action, ...suivantes].map((a, i) => {
+      const lien = urlAction(a, lang);
+      return (
+        <section aria-labelledby={`demarche-${i}`}>
+          <h2 id={`demarche-${i}`}>{i === 0 ? PLATEFORME_PAGE.etapes[lang] : deux(a.titre[lang])}</h2>
+          {i === 0 && suivantes.length > 0 && <p><strong>{deux(a.titre[lang])}</strong></p>}
+          <ol class="etapes">
+            {(a.etapes[lang] ?? []).map((e) => <li>{e}</li>)}
+          </ol>
+          <div class="actions">
+            <a class={`bouton ${i === 0 ? 'principal' : ''}`} href={lien} rel="noopener noreferrer" target="_blank">
+              {C.ouvrirFormulaire[lang]}
+              <small>{hote(lien)} {C.nouvelOnglet[lang]}</small>
+            </a>
+          </div>
+          <p class="petit">{a.connexion_requise ? C.connexionRequise[lang] : C.pasDeConnexion[lang]} {C.verifieLe[lang]} {date}.</p>
+        </section>
+      );
+    })}
 
     <SiCaBloque lang={lang} />
 

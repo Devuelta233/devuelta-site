@@ -1,1 +1,1781 @@
-{"verifie_le":"","pays":[],"international":[]}
+{
+  "verifie_le": "2026-10-15",
+  "pays": [
+    {
+      "code": "FR",
+      "nom": {
+        "fr": "France",
+        "es": "Francia",
+        "en": "France"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "17 – Police secours (ou 112)",
+          "telephone": "17",
+          "sms_ou_chat": "Le 112 (numéro d'urgence européen) fonctionne aussi. Si vous ne pouvez pas parler : SMS gratuit au 114, ou appli « Urgence 114 » / info.urgence114.fr (visio, tchat, SMS).",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "tout le monde",
+          "description": {
+            "fr": "En cas de danger immédiat ou d'infraction en cours, appelez le 17 ou le 112 ; si vous ne pouvez pas parler, envoyez un SMS au 114.",
+            "es": "Si estás en peligro inmediato o hay un delito en curso, llama al 17 o al 112; si no puedes hablar, envía un SMS al 114.",
+            "en": "If you are in immediate danger or a crime is happening, call 17 or 112; if you cannot speak, send a text to 114."
+          },
+          "verifie": true,
+          "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954"
+        },
+        {
+          "type": "urgence",
+          "nom": "3114 – Numéro national de prévention du suicide",
+          "telephone": "3114",
+          "sms_ou_chat": null,
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "personnes en détresse, proches inquiets, professionnels",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, des professionnels vous répondent à toute heure, gratuitement.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, hay profesionales que te atienden a cualquier hora, gratis.",
+            "en": "If blackmail or shame is making you think about suicide, trained professionals answer at any hour, for free."
+          },
+          "verifie": true,
+          "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "THESEE – Chantage en ligne / sextorsion (signalement ou plainte en ligne)",
+          "telephone": null,
+          "sms_ou_chat": "Plainte en ligne (majeurs uniquement) : https://demarches.service-public.gouv.fr/mademarche/arnaqueInternet/demarche?action=PLAINTE&type=CEL",
+          "url": "https://demarches.service-public.gouv.fr/mademarche/arnaqueInternet/demarche?action=SIGNALEMENT&type=CEL",
+          "horaires": null,
+          "gratuit": true,
+          "public": "signalement : majeurs et mineurs, toute nationalité ; plainte en ligne : majeurs uniquement",
+          "description": {
+            "fr": "Service officiel pour signaler ou porter plainte en ligne contre un chantage sexuel sur internet, si vous n'avez jamais rencontré l'auteur et qu'il vous a demandé de l'argent.",
+            "es": "Servicio oficial para avisar a la policía o denunciar en línea un chantaje sexual por internet, si nunca viste en persona al autor y te pidió dinero.",
+            "en": "Official service to report or file an online complaint about sexual blackmail on the internet, if you never met the person and they asked you for money."
+          },
+          "verifie": true,
+          "source": "https://www.justice.fr/fiche/arnaque-sentiments-escroquerie-chantage-sextorsion"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "Ma Sécurité – tchat avec un policier ou un gendarme",
+          "telephone": null,
+          "sms_ou_chat": "Tchat anonyme sur le site (bouton « J'ouvre le tchat »). Pour les mineurs (cyberharcèlement, sextorsion, chantage, revenge porn) : https://www.masecurite.interieur.gouv.fr/fr/orientation-police/cyberharcelement-chantage-en-ligne-mineurs",
+          "url": "https://www.masecurite.interieur.gouv.fr/fr",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "tout le monde (espace dédié aux moins de 18 ans)",
+          "description": {
+            "fr": "Vous pouvez échanger anonymement par écrit avec un policier ou un gendarme, qui vous oriente et vous aide à préparer une plainte.",
+            "es": "Puedes hablar por chat, de forma anónima, con un policía o gendarme que te orienta y te ayuda a preparar una denuncia.",
+            "en": "You can chat anonymously with a police officer or gendarme who will guide you and help you prepare a complaint."
+          },
+          "verifie": true,
+          "source": "https://www.masecurite.interieur.gouv.fr/fr"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "17Cyber – assistance en ligne pour les victimes de cybermalveillance",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://17cyber.gouv.fr/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "toute victime de cybermalveillance",
+          "description": {
+            "fr": "Diagnostic en ligne et conseils officiels (Police, Gendarmerie, Cybermalveillance.gouv.fr) si votre compte a été piraté ou si vous êtes victime d'une attaque en ligne.",
+            "es": "Diagnóstico en línea y consejos oficiales (Policía, Gendarmería, Cybermalveillance.gouv.fr) si te hackearon una cuenta o sufres un ataque en línea.",
+            "en": "Online diagnosis and official advice (Police, Gendarmerie, Cybermalveillance.gouv.fr) if your account was hacked or you face an online attack."
+          },
+          "verifie": true,
+          "source": "https://17cyber.gouv.fr/"
+        },
+        {
+          "type": "signalement-contenu",
+          "nom": "PHAROS – portail officiel de signalement des contenus illicites",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://www.internet-signalement.gouv.fr/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "majeurs et mineurs, victimes ou témoins",
+          "description": {
+            "fr": "Pour signaler à la police un contenu illégal visible publiquement (menaces, contenus pédocriminels, incitation à la violence…) ; ce n'est pas un service d'urgence ni pour un échange privé avec une personne que vous connaissez.",
+            "es": "Para avisar a la policía de un contenido ilegal publicado a la vista de todos (amenazas, abuso sexual infantil, incitación a la violencia…); no es un servicio de emergencia ni sirve para mensajes privados con alguien que conoces.",
+            "en": "To report illegal content that is publicly visible (threats, child sexual abuse material, incitement to violence…) to the police; it is not an emergency service and not for private messages from someone you know."
+          },
+          "verifie": true,
+          "source": "https://www.masecurite.interieur.gouv.fr/fr/demarches-en-ligne/portail-officiel-signalement-contenus-illicites-internet-pharos"
+        },
+        {
+          "type": "cyberharcelement",
+          "nom": "3018 – Harcèlement et violences numériques (association e-Enfance)",
+          "telephone": "3018",
+          "sms_ou_chat": "Tchat sur l'appli 3018 (App Store / Google Play), sur 3018.fr et via Messenger ; dispositif pour personnes sourdes ou malentendantes en semaine 9h-17h30.",
+          "url": "https://e-enfance.org/besoin-daide/",
+          "horaires": "7j/7, 9h-23h (heure de métropole)",
+          "gratuit": true,
+          "public": "jeunes (y compris 18-25 ans), parents et professionnels",
+          "description": {
+            "fr": "Écoute anonyme et aide concrète contre le cyberharcèlement, la diffusion d'images intimes, la sextorsion ou l'usurpation d'identité ; signaleur de confiance, le 3018 peut faire supprimer un contenu en quelques heures.",
+            "es": "Escucha anónima y ayuda concreta contra el ciberacoso, la difusión de imágenes íntimas, la sextorsión o la suplantación de identidad; como alertador de confianza, el 3018 puede lograr que se borre un contenido en pocas horas.",
+            "en": "Anonymous support and practical help against cyberbullying, shared intimate images, sextortion or impersonation; as a trusted flagger, 3018 can get content removed within hours."
+          },
+          "verifie": true,
+          "source": "https://e-enfance.org/besoin-daide/"
+        },
+        {
+          "type": "mineurs",
+          "nom": "119 – Allô Enfance en danger",
+          "telephone": "119",
+          "sms_ou_chat": "Tchat pour les enfants, adolescents et jeunes de moins de 21 ans sur allo119.gouv.fr ; formulaire en ligne pour les adultes (traité du lundi au vendredi, 8h-18h).",
+          "url": "https://www.allo119.gouv.fr/",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "enfants, adolescents, et adultes inquiets pour un enfant",
+          "description": {
+            "fr": "Si un enfant ou un adolescent est en danger (violences physiques, psychologiques ou sexuelles), appelez le 119 : l'appel est gratuit et n'apparaît pas sur la facture.",
+            "es": "Si un niño, niña o adolescente está en peligro (violencia física, psicológica o sexual), llama al 119: es gratis y no aparece en la factura.",
+            "en": "If a child or teenager is in danger (physical, psychological or sexual violence), call 119: it is free and does not show on the phone bill."
+          },
+          "verifie": true,
+          "source": "https://www.allo119.gouv.fr/besoin-daide"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "3919 – Violences Femmes Info",
+          "telephone": "3919",
+          "sms_ou_chat": "Accessible aux personnes sourdes et malentendantes via solidaritefemmes.org ou l'application Rogervoice.",
+          "url": "https://arretonslesviolences.gouv.fr/",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "femmes victimes de violences et témoins",
+          "description": {
+            "fr": "Écoute anonyme, information et orientation pour les femmes victimes de violences, y compris sexuelles ; ce n'est pas un service d'urgence.",
+            "es": "Escucha anónima, información y orientación para mujeres que sufren violencia, también sexual; no es un servicio de emergencias.",
+            "en": "Anonymous listening, information and referrals for women facing violence, including sexual violence; it is not an emergency service."
+          },
+          "verifie": true,
+          "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "116 006 – France Victimes",
+          "telephone": "116 006",
+          "sms_ou_chat": "Depuis l'étranger ou hors métropole : +33 1 80 52 33 76 (gratuit). E-mail : victimes@116006.fr",
+          "url": "https://www.france-victimes.fr/",
+          "horaires": "7j/7, 9h-20h (heure de Paris)",
+          "gratuit": true,
+          "public": "toute victime d'infraction",
+          "description": {
+            "fr": "Numéro national d'aide aux victimes : écoute et orientation vers une association d'aide aux victimes près de chez vous.",
+            "es": "Línea nacional de ayuda a víctimas: te escuchan y te orientan hacia una asociación de apoyo cerca de ti.",
+            "en": "National victim support line: they listen and connect you with a local victim support association."
+          },
+          "verifie": true,
+          "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1435"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "CNIL – Plainte en ligne",
+          "telephone": "01 53 73 22 22",
+          "sms_ou_chat": "Accueil téléphonique du lundi au vendredi, 9h30-17h (renseignements juridiques lun., mar., jeu. et ven., 10h-12h). Plainte via le téléservice de la CNIL (lien sur la page Service-Public).",
+          "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/R68480",
+          "horaires": "téléphone : lun-ven 9h30-17h",
+          "gratuit": true,
+          "public": "toute personne concernée par ses données personnelles",
+          "description": {
+            "fr": "Si un site ou un moteur de recherche refuse d'effacer ou de déréférencer vos données personnelles, vous pouvez porter plainte en ligne auprès de la CNIL.",
+            "es": "Si un sitio o un buscador se niega a borrar o desindexar tus datos personales, puedes presentar una queja en línea ante la CNIL.",
+            "en": "If a website or search engine refuses to delete or delist your personal data, you can file an online complaint with the CNIL."
+          },
+          "verifie": true,
+          "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F32239",
+          "note": "Démarche et coordonnées vérifiées sur service-public.gouv.fr (fiches R68480 et F32239, mise à jour du 07/08/2026) ; le site cnil.fr était en maintenance au moment de la vérification."
+        },
+        {
+          "type": "ncii",
+          "nom": "Point de Contact – signalement des cyberviolences (membre INHOPE)",
+          "telephone": null,
+          "sms_ou_chat": "Formulaire en ligne, application mobile ou extension de navigateur ; demande de rappel téléphonique sur pointdecontact.net/demande-de-rappel/",
+          "url": "https://www.pointdecontact.net/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "victimes et témoins, majeurs et mineurs",
+          "description": {
+            "fr": "Signalement anonyme et gratuit des images intimes diffusées sans consentement, de la sextorsion, des montages ou deepfakes et des contenus pédocriminels ; l'association contacte les plateformes pour obtenir le retrait.",
+            "es": "Denuncia anónima y gratuita de imágenes íntimas difundidas sin consentimiento, sextorsión, montajes o deepfakes y abuso sexual infantil; la asociación contacta a las plataformas para conseguir que se retire.",
+            "en": "Free, anonymous reporting of intimate images shared without consent, sextortion, fake or deepfake content and child sexual abuse material; the association contacts platforms to get it removed."
+          },
+          "verifie": true,
+          "source": "https://www.pointdecontact.net/champ_competences/"
+        }
+      ]
+    },
+    {
+      "code": "BE",
+      "nom": {
+        "fr": "Belgique",
+        "es": "Bélgica",
+        "en": "Belgium"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "101 – Police (112 : ambulance et pompiers)",
+          "telephone": "101",
+          "sms_ou_chat": "112 pour une ambulance ou les pompiers (gratuit dans toute l'Europe). Appli officielle « 112 BE ».",
+          "url": "https://112.be/fr",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "tout le monde",
+          "description": {
+            "fr": "Si vous êtes menacé·e ou en danger immédiat, appelez la police au 101 (ou le 112).",
+            "es": "Si te amenazan o estás en peligro inmediato, llama a la policía al 101 (o al 112).",
+            "en": "If you are threatened or in immediate danger, call the police on 101 (or 112)."
+          },
+          "verifie": true,
+          "source": "https://112.be/fr"
+        },
+        {
+          "type": "urgence",
+          "nom": "Centre de Prévention du Suicide – 0800 32 123",
+          "telephone": "0800 32 123",
+          "sms_ou_chat": null,
+          "url": "https://www.preventionsuicide.be/la-ligne-decoute-0800-32-123",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "personnes en crise suicidaire et leurs proches (Belgique francophone)",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, cette ligne anonyme et gratuite vous écoute jour et nuit.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, esta línea anónima y gratuita te escucha día y noche (en francés).",
+            "en": "If blackmail or shame is making you think about suicide, this free, anonymous line listens day and night (in French)."
+          },
+          "verifie": true,
+          "source": "https://www.preventionsuicide.be/la-ligne-decoute-0800-32-123"
+        },
+        {
+          "type": "ncii",
+          "nom": "Institut pour l'égalité des femmes et des hommes (IEFH) – violences sexuelles numériques",
+          "telephone": "0800 12 800",
+          "sms_ou_chat": "Choisir l'option 1 dans le menu. Signalement en ligne : https://aide.igvm-iefh.belgium.be/fr (aide.iefh.be).",
+          "url": "https://igvm-iefh.belgium.be/fr/themes/violences-sexuelles-numeriques",
+          "horaires": null,
+          "gratuit": true,
+          "public": "victimes majeures, témoins et proches (mineurs : voir Child Focus)",
+          "description": {
+            "fr": "Service public qui aide gratuitement et en toute confidentialité les victimes d'images intimes diffusées ou menacées de l'être, de sextorsion ou de deepnudes : conseils juridiques et aide au retrait des images (signaleur de confiance DSA).",
+            "es": "Organismo público que ayuda gratis y de forma confidencial a las víctimas de imágenes íntimas difundidas (o amenazas de difundirlas), sextorsión o deepnudes: asesoría legal y ayuda para retirar las imágenes.",
+            "en": "Public body that helps victims of shared (or threatened) intimate images, sextortion or deepnudes for free and confidentially: legal advice and help getting the images removed."
+          },
+          "verifie": true,
+          "source": "https://igvm-iefh.belgium.be/fr/presse/campagne-sur-les-violences-sexuelles-numeriques"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Child Focus – 116 000",
+          "telephone": "116 000",
+          "sms_ou_chat": "E-mail : 116000@childfocus.org. Signalement anonyme d'images d'abus sexuels d'enfants via le formulaire du site (membre INHOPE).",
+          "url": "https://childfocus.be/fr-be/Exploitation-Sexuelle/Sextorsion",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "mineurs victimes et leurs proches ; toute personne qui signale des images d'abus sexuels d'enfants",
+          "description": {
+            "fr": "Si un mineur est victime de sextorsion ou d'images intimes diffusées, Child Focus informe, oriente vers l'aide ou la police et traite les signalements d'images d'abus sexuels d'enfants.",
+            "es": "Si una persona menor de edad sufre sextorsión o difusión de imágenes íntimas, Child Focus informa, orienta hacia ayuda o la policía y recibe denuncias de imágenes de abuso sexual infantil.",
+            "en": "If a minor faces sextortion or shared intimate images, Child Focus gives information, refers to help or the police, and takes reports of child sexual abuse images."
+          },
+          "verifie": true,
+          "source": "https://childfocus.be/fr-be/Exploitation-Sexuelle/Sextorsion"
+        },
+        {
+          "type": "mineurs",
+          "nom": "103 – Écoute-Enfants (Fédération Wallonie-Bruxelles)",
+          "telephone": "103",
+          "sms_ou_chat": "Chat sur 103ecoute.be",
+          "url": "https://www.103ecoute.be/",
+          "horaires": "tous les jours, 10h-24h",
+          "gratuit": true,
+          "public": "enfants, ados, et adultes inquiets pour un enfant (Belgique francophone)",
+          "description": {
+            "fr": "Ligne d'écoute gratuite pour les enfants et les ados qui vivent une situation difficile, y compris le harcèlement.",
+            "es": "Línea gratuita de escucha para niños, niñas y adolescentes que viven una situación difícil, incluido el acoso (en francés).",
+            "en": "Free listening line for children and teenagers going through a hard time, including harassment (in French)."
+          },
+          "verifie": true,
+          "source": "https://www.103ecoute.be/"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "Écoute Violences Conjugales – 0800 30 030",
+          "telephone": "0800 30 030",
+          "sms_ou_chat": "Tchat sur ecouteviolencesconjugales.be",
+          "url": "https://www.ecouteviolencesconjugales.be/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "victimes, auteurs, témoins et professionnels (Belgique francophone)",
+          "description": {
+            "fr": "Ligne gratuite et anonyme pour parler des violences dans le couple (victimes, témoins ou auteurs), avec un répertoire des services d'aide près de chez vous.",
+            "es": "Línea gratuita y anónima para hablar de la violencia en la pareja (víctimas, testigos o agresores), con un directorio de servicios de ayuda cerca de ti (en francés).",
+            "en": "Free, anonymous line to talk about violence in a relationship (victims, witnesses or perpetrators), with a directory of local support services (in French)."
+          },
+          "verifie": true,
+          "source": "https://www.ecouteviolencesconjugales.be/"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "Autorité de protection des données (APD) – introduire une plainte",
+          "telephone": null,
+          "sms_ou_chat": "Une demande de médiation, plus rapide, est aussi possible.",
+          "url": "https://www.autoriteprotectiondonnees.be/citoyen/agir/introduire-une-plainte",
+          "horaires": null,
+          "gratuit": true,
+          "public": "toute personne dont les données personnelles sont traitées illégalement",
+          "description": {
+            "fr": "Si un site refuse d'effacer vos données personnelles, vous pouvez saisir l'APD ; exercez d'abord votre droit auprès du site et attendez un mois.",
+            "es": "Si un sitio se niega a borrar tus datos personales, puedes reclamar ante la APD; primero pide el borrado al sitio y espera un mes.",
+            "en": "If a website refuses to delete your personal data, you can complain to the APD; first ask the site yourself and wait one month."
+          },
+          "verifie": true,
+          "source": "https://www.autoriteprotectiondonnees.be/citoyen/agir/introduire-une-plainte"
+        }
+      ]
+    },
+    {
+      "code": "CH",
+      "nom": {
+        "fr": "Suisse",
+        "es": "Suiza",
+        "en": "Switzerland"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "117 – Police (112 : numéro d'urgence européen)",
+          "telephone": "117",
+          "sms_ou_chat": "Le 112 fonctionne aussi. Ambulance : 144.",
+          "url": "https://www.ch.ch/fr/police",
+          "horaires": "24h/24, 7j/7",
+          "gratuit": true,
+          "public": "tout le monde",
+          "description": {
+            "fr": "Si vous êtes menacé·e ou en danger immédiat, appelez la police au 117 (ou le 112).",
+            "es": "Si te amenazan o estás en peligro inmediato, llama a la policía al 117 (o al 112).",
+            "en": "If you are threatened or in immediate danger, call the police on 117 (or 112)."
+          },
+          "verifie": true,
+          "source": "https://www.ch.ch/fr/police"
+        },
+        {
+          "type": "urgence",
+          "nom": "143 – La Main Tendue",
+          "telephone": "143",
+          "sms_ou_chat": "Tchat et e-mail sur 143.ch",
+          "url": "https://www.143.ch/fr/",
+          "horaires": "jour et nuit",
+          "gratuit": false,
+          "public": "toute personne en détresse",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, des bénévoles formés vous écoutent de façon anonyme, jour et nuit (20 à 70 centimes par appel).",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, voluntarios formados te escuchan de forma anónima, día y noche (de 20 a 70 céntimos por llamada).",
+            "en": "If blackmail or shame is making you think about suicide, trained volunteers listen anonymously, day and night (20 to 70 centimes per call)."
+          },
+          "verifie": true,
+          "source": "https://www.ch.ch/fr/police"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "142 – Aide aux victimes (numéro national)",
+          "telephone": "142",
+          "sms_ou_chat": null,
+          "url": "https://www.aide-aux-victimes.ch/fr/",
+          "horaires": "24h/24",
+          "gratuit": true,
+          "public": "victimes de violence physique, psychique ou sexuelle en Suisse, et leurs proches",
+          "description": {
+            "fr": "Depuis le 1er mai 2026, l'aide aux victimes répond dans toute la Suisse au 142 : conseils gratuits, confidentiels et anonymes (menaces, harcèlement, violences sexuelles…) ; ce n'est pas un numéro d'urgence.",
+            "es": "Desde el 1 de mayo de 2026, la ayuda a víctimas atiende en toda Suiza en el 142: asesoría gratuita, confidencial y anónima (amenazas, acoso, violencia sexual…); no es un número de emergencias.",
+            "en": "Since 1 May 2026, victim support answers across Switzerland on 142: free, confidential and anonymous advice (threats, harassment, sexual violence…); it is not an emergency number."
+          },
+          "verifie": true,
+          "source": "https://www.aide-aux-victimes.ch/fr/ou-puis-je-trouver-de-laide/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "OFCS – Annoncer un cyberincident (Office fédéral de la cybersécurité)",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://www.report.ncsc.admin.ch/fr/",
+          "horaires": "annonces non traitées 24h/24",
+          "gratuit": true,
+          "public": "population, entreprises, autorités",
+          "description": {
+            "fr": "Signalez un incident en ligne (piratage, arnaque…) et recevez une première évaluation avec les mesures à prendre ; pour porter plainte pour sextorsion ou harcèlement, il faut aller dans un poste de police.",
+            "es": "Avisa de un incidente en línea (hackeo, estafa…) y recibe una primera evaluación con los pasos a seguir; para denunciar sextorsión o acoso tienes que ir a una comisaría.",
+            "en": "Report an online incident (hacking, scam…) and get a first assessment with next steps; to file a complaint for sextortion or harassment you must go to a police station."
+          },
+          "verifie": true,
+          "source": "https://www.report.ncsc.admin.ch/fr/"
+        },
+        {
+          "type": "mineurs",
+          "nom": "147 – Pro Juventute (conseils aux jeunes)",
+          "telephone": "147",
+          "sms_ou_chat": "WhatsApp : +41 800 147 000 (365 jours par an, 7h30-22h) ; e-mail via 147.ch",
+          "url": "https://www.147.ch/fr/",
+          "horaires": "téléphone 24h/24",
+          "gratuit": true,
+          "public": "enfants et jeunes",
+          "description": {
+            "fr": "Les jeunes peuvent parler à toute heure, gratuitement et en toute confidentialité, de leurs soucis petits ou grands ; l'appel n'apparaît pas sur la facture.",
+            "es": "Los y las jóvenes pueden hablar a cualquier hora, gratis y de forma confidencial, de cualquier problema, grande o pequeño; la llamada no aparece en la factura.",
+            "en": "Young people can talk at any hour, for free and in confidence, about any problem big or small; the call does not show on the phone bill."
+          },
+          "verifie": true,
+          "source": "https://www.147.ch/fr/conseils/147/"
+        },
+        {
+          "type": "mineurs",
+          "nom": "clickandstop.ch – signalement des violences sexuelles numériques envers les mineurs (Protection de l'enfance Suisse)",
+          "telephone": "058 433 33 50",
+          "sms_ou_chat": "Tchat sur le site ; formulaire de signalement anonyme des contenus pédocriminels.",
+          "url": "https://www.clickandstop.ch/fr/page-daccueil-1.html",
+          "horaires": "lun-mer 8h30-20h ; jeu 8h30-12h et 13h30-17h ; ven 8h30-11h30 (tél. et tchat), 13h30-20h (tchat uniquement)",
+          "gratuit": true,
+          "public": "enfants et ados concernés, parents, enseignants, professionnels",
+          "description": {
+            "fr": "Signalement anonyme des contenus d'abus sexuels sur mineurs, transmis aux autorités de poursuite, et conseils gratuits en cas de sextorsion, sexting ou cyberharcèlement d'un mineur.",
+            "es": "Denuncia anónima de contenido de abuso sexual infantil, que se envía a las autoridades, y asesoría gratuita si una persona menor sufre sextorsión, sexting no deseado o ciberacoso.",
+            "en": "Anonymous reporting of child sexual abuse content, passed on to prosecutors, plus free advice when a minor faces sextortion, sexting or cyberbullying."
+          },
+          "verifie": true,
+          "source": "https://www.clickandstop.ch/fr/page-daccueil-1.html"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "PFPDT – Préposé fédéral à la protection des données (dénonciation)",
+          "telephone": "058 462 43 95",
+          "sms_ou_chat": "Hotline protection des données du lundi au vendredi, 10h-11h30.",
+          "url": "https://www.edoeb.admin.ch/fr/denonciation-au-pfpdt",
+          "horaires": "hotline : lun-ven 10h-11h30",
+          "gratuit": null,
+          "public": "personnes concernées ou tiers",
+          "description": {
+            "fr": "Vous pouvez signaler au PFPDT une violation importante de la protection des données ; il n'exerce pas vos droits à votre place (pour un litige individuel, il faut passer par les tribunaux civils).",
+            "es": "Puedes avisar al PFPDT de una violación grave de la protección de datos; no ejerce tus derechos por ti (para un conflicto individual hay que ir a los tribunales civiles).",
+            "en": "You can report a serious data protection breach to the FDPIC; it does not exercise your rights for you (individual disputes go to the civil courts)."
+          },
+          "verifie": true,
+          "source": "https://www.edoeb.admin.ch/fr/denonciation-au-pfpdt"
+        }
+      ]
+    },
+    {
+      "code": "ES",
+      "nom": {
+        "fr": "Espagne",
+        "es": "España",
+        "en": "Spain"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "112 – Emergencias",
+          "telephone": "112",
+          "sms_ou_chat": null,
+          "url": "https://www.sanidad.gob.es/linea024/home.htm",
+          "horaires": "24 h, 365 días",
+          "gratuit": true,
+          "public": "todo el mundo",
+          "description": {
+            "fr": "En cas de danger immédiat ou d'urgence vitale, appelez le 112.",
+            "es": "Si estás en peligro inmediato o hay una emergencia vital, llama al 112.",
+            "en": "If you are in immediate danger or there is a life-threatening emergency, call 112."
+          },
+          "verifie": true,
+          "source": "https://www.sanidad.gob.es/linea024/home.htm"
+        },
+        {
+          "type": "urgence",
+          "nom": "024 – Línea de atención a la conducta suicida",
+          "telephone": "024",
+          "sms_ou_chat": "Chat en línea y acceso en lengua de signos desde la web del Ministerio de Sanidad.",
+          "url": "https://www.sanidad.gob.es/linea024/home.htm",
+          "horaires": "24 h, 365 días",
+          "gratuit": true,
+          "public": "personas con pensamientos suicidas, familiares y allegados",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, des professionnels vous écoutent gratuitement et de façon confidentielle, à toute heure.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, profesionales te escuchan gratis y de forma confidencial, a cualquier hora.",
+            "en": "If blackmail or shame is making you think about suicide, professionals listen for free and in confidence, at any hour."
+          },
+          "verifie": true,
+          "source": "https://www.sanidad.gob.es/linea024/home.htm"
+        },
+        {
+          "type": "ncii",
+          "nom": "AEPD – Canal Prioritario (retirada urgente de contenido sexual o violento)",
+          "telephone": null,
+          "sms_ou_chat": "Formulario: https://sedeaepd.gob.es/sede-electronica/procedures/claims/buzon-guiado/Q600 ; menores de 14 a 17 años: https://sedeaepd.gob.es/sede-electronica/canal-prioritario-menores",
+          "url": "https://www.aepd.es/canalprioritario",
+          "horaires": null,
+          "gratuit": true,
+          "public": "personas españolas o que están en España (la víctima o cualquiera que conozca la difusión); canal específico para menores de 14 a 17 años",
+          "description": {
+            "fr": "Pour demander à l'autorité espagnole de protection des données le retrait immédiat de photos, vidéos ou audios sexuels ou violents publiés sans consentement sur internet (pas pour WhatsApp, Telegram ou l'e-mail).",
+            "es": "Para pedir a la Agencia Española de Protección de Datos la retirada inmediata de fotos, vídeos o audios sexuales o violentos publicados en internet sin permiso (no sirve para WhatsApp, Telegram o correo).",
+            "en": "To ask Spain's data protection authority for the immediate removal of sexual or violent photos, videos or audio posted online without consent (not for WhatsApp, Telegram or email)."
+          },
+          "verifie": true,
+          "source": "https://www.aepd.es/preguntas-frecuentes/15-redes-sociales-difusion-ilegitima-contenidos-sensibles/FAQ-1502-en-que-casos-puedo-acudir-a-este-canal"
+        },
+        {
+          "type": "cyberharcelement",
+          "nom": "017 – Tu Ayuda en Ciberseguridad (INCIBE)",
+          "telephone": "017",
+          "sms_ou_chat": "WhatsApp: 900 116 117 · Telegram: @INCIBE017 · formulario web (respuesta por e-mail)",
+          "url": "https://www.incibe.es/linea-de-ayuda-en-ciberseguridad/",
+          "horaires": "todos los días, 8:00-23:00",
+          "gratuit": true,
+          "public": "ciudadanía, empresas, menores y su entorno (familias, educadores)",
+          "description": {
+            "fr": "Ligne nationale gratuite et confidentielle : des experts vous conseillent (technique, juridique, psychosocial) en cas de compte piraté, d'arnaque, de cyberharcèlement ou de sextorsion.",
+            "es": "Línea nacional gratuita y confidencial: personas expertas te asesoran (técnica, legal y psicosocialmente) si te hackean una cuenta, sufres una estafa, ciberacoso o sextorsión.",
+            "en": "Free, confidential national line: experts give technical, legal and emotional advice if your account is hacked or you face a scam, cyberbullying or sextortion."
+          },
+          "verifie": true,
+          "source": "https://www.incibe.es/linea-de-ayuda-en-ciberseguridad/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "Guardia Civil – denuncia telemática (sede electrónica)",
+          "telephone": null,
+          "sms_ou_chat": "Dudas: Oficina de Información y Atención al Ciudadano de la Guardia Civil, 900 101 062.",
+          "url": "https://web.guardiacivil.es/es/tramites/denuncias/denuncia-electronica/",
+          "horaires": "24 h, 7 días",
+          "gratuit": true,
+          "public": "adultos con firma electrónica",
+          "description": {
+            "fr": "Plainte en ligne possible seulement pour les escroqueries et paiements frauduleux sur internet ; pour des menaces, la sextorsion ou un contenu sexuel, il faut porter plainte en personne.",
+            "es": "La denuncia en línea solo sirve para estafas y cargos fraudulentos por internet; si hay amenazas, sextorsión o contenido sexual, tienes que denunciar en persona.",
+            "en": "Online complaints are only possible for internet scams and fraudulent charges; for threats, sextortion or sexual content you must report in person."
+          },
+          "verifie": true,
+          "source": "https://web.guardiacivil.es/es/tramites/denuncias/denuncia-electronica/"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Fundación ANAR – Teléfono/Chat de Ayuda a Niños/as y Adolescentes",
+          "telephone": "900 20 20 10",
+          "sms_ou_chat": "También 116 111. Chat en anar.org.",
+          "url": "https://www.anar.org/que-hacemos/telefono-chat-anar/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "niños, niñas y adolescentes",
+          "description": {
+            "fr": "Un ou une psychologue écoute gratuitement et de façon confidentielle tout mineur qui a un problème, y compris des violences, et l'aide à trouver une solution.",
+            "es": "Un o una psicóloga escucha gratis y de forma confidencial a cualquier menor que tenga un problema, también violencia, y le ayuda a encontrar una solución.",
+            "en": "A psychologist listens for free and in confidence to any child or teen with a problem, including violence, and helps find a solution."
+          },
+          "verifie": true,
+          "source": "https://www.anar.org/que-hacemos/telefono-chat-anar/"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "016 – Atención a todas las formas de violencia contra las mujeres",
+          "telephone": "016",
+          "sms_ou_chat": "WhatsApp: 600 000 016 (solo mensajes) · chat en violenciagenero.igualdad.gob.es · e-mail: 016-online@igualdad.gob.es",
+          "url": "https://violenciagenero.igualdad.gob.es/informacion-3/recursos/telefono016/",
+          "horaires": "24 h (asesoramiento jurídico de 8 a 22 h, todos los días)",
+          "gratuit": true,
+          "public": "mujeres víctimas de cualquier forma de violencia y su entorno",
+          "description": {
+            "fr": "Service gratuit et confidentiel du ministère de l'Égalité : information, conseil juridique et soutien psychologique immédiat, en 53 langues par téléphone.",
+            "es": "Servicio gratuito y confidencial del Ministerio de Igualdad: información, asesoría jurídica y apoyo psicológico inmediato, en 53 idiomas por teléfono.",
+            "en": "Free, confidential service from the Ministry of Equality: information, legal advice and immediate emotional support, in 53 languages by phone."
+          },
+          "verifie": true,
+          "source": "https://violenciagenero.igualdad.gob.es/informacion-3/recursos/telefono016/"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "AEPD – Agencia Española de Protección de Datos (sede electrónica)",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://sedeaepd.gob.es/sede-electronica/home",
+          "horaires": null,
+          "gratuit": true,
+          "public": "toda persona cuyos datos personales se traten en España",
+          "description": {
+            "fr": "Si un site ne répond pas dans le mois à votre demande d'effacement (« droit à l'oubli »), vous pouvez réclamer auprès de l'AEPD.",
+            "es": "Si un sitio no responde en un mes a tu solicitud de supresión («derecho al olvido»), puedes reclamar ante la AEPD.",
+            "en": "If a website does not answer your erasure request (\"right to be forgotten\") within a month, you can complain to the AEPD."
+          },
+          "verifie": true,
+          "source": "https://www.aepd.es/derechos-y-deberes/ejerce-tus-derechos"
+        }
+      ]
+    },
+    {
+      "code": "MX",
+      "nom": {
+        "fr": "Mexique",
+        "es": "México",
+        "en": "Mexico"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "911 – Número Nacional de Emergencias",
+          "telephone": "911",
+          "sms_ou_chat": "Para denunciar un delito de forma anónima (no emergencias): 089, gratuito, 24 h.",
+          "url": "https://sseguridad.edomex.gob.mx/telefonos_utilidad",
+          "horaires": "24 h, 365 días",
+          "gratuit": true,
+          "public": "todo el mundo",
+          "description": {
+            "fr": "En cas de danger immédiat, appelez le 911 (gratuit, même sans crédit) ; pour dénoncer un délit anonymement, le 089.",
+            "es": "Si estás en peligro inmediato, llama al 911 (gratis, incluso sin saldo); para denunciar un delito de forma anónima, marca el 089.",
+            "en": "If you are in immediate danger, call 911 (free, even with no credit); to report a crime anonymously, call 089."
+          },
+          "verifie": true,
+          "source": "https://tramites.nayarit.gob.mx/ciudadano/ficha/262"
+        },
+        {
+          "type": "urgence",
+          "nom": "Línea de la Vida – 800 911 2000",
+          "telephone": "800 911 2000",
+          "sms_ou_chat": null,
+          "url": "https://www.gob.mx/lineadelavida",
+          "horaires": "24 h",
+          "gratuit": true,
+          "public": "personas en crisis emocional, con ideas suicidas o problemas de adicciones, y su entorno",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, la ligne nationale de santé mentale vous répond à toute heure, gratuitement.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, la línea nacional de salud mental te atiende a cualquier hora, gratis.",
+            "en": "If blackmail or shame is making you think about suicide, the national mental health line answers at any hour, for free."
+          },
+          "verifie": true,
+          "source": "https://www.morelos.gob.mx/ultimas-noticias/brinda-secretaria-de-salud-atencion-gratuita-en-salud-mental"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "088 – Atención Ciudadana de la Guardia Nacional (ciberdelitos)",
+          "telephone": "088",
+          "sms_ou_chat": "Correo del CERT-MX (Guardia Nacional): cert-mx@gn.gob.mx",
+          "url": "https://www.gob.mx/gncertmx",
+          "horaires": "24 h, todos los días",
+          "gratuit": null,
+          "public": "todo el mundo",
+          "description": {
+            "fr": "Si vous êtes victime d'un délit en ligne (piratage, fraude, extorsion), la Garde nationale vous oriente pour porter plainte.",
+            "es": "Si sufres un delito en internet (hackeo, fraude, extorsión), la Guardia Nacional te orienta para presentar tu denuncia.",
+            "en": "If you are a victim of an online crime (hacking, fraud, extortion), the National Guard guides you on how to file a complaint."
+          },
+          "verifie": true,
+          "source": "https://www.gob.mx/cms/uploads/attachment/file/986967/RFC2350_CERT-MX.pdf"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Te Protejo México – reporte de violencia sexual contra menores (miembro de INHOPE)",
+          "telephone": null,
+          "sms_ou_chat": "Formulario en línea; ayuda: contactanos@teprotejomexico.org",
+          "url": "https://teprotejomexico.org/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "cualquier persona que quiera reportar violencia sexual contra menores de 18 años",
+          "description": {
+            "fr": "Plateforme anonyme et gratuite pour signaler des images d'abus sexuels sur mineurs, la sextorsion ou le grooming d'un mineur.",
+            "es": "Plataforma anónima y gratuita para reportar material de abuso sexual infantil, sextorsión o grooming contra menores de edad.",
+            "en": "Free, anonymous platform to report child sexual abuse material, sextortion or grooming of a minor."
+          },
+          "verifie": true,
+          "source": "https://teprotejomexico.org/"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "Línea de las Mujeres – 079, opción 1 (Secretaría de las Mujeres)",
+          "telephone": "079",
+          "sms_ou_chat": "Marca 079 y elige la opción 1.",
+          "url": "https://www.gob.mx/mujeres",
+          "horaires": "24 h, 365 días",
+          "gratuit": null,
+          "public": "mujeres víctimas de violencia, en todo México",
+          "description": {
+            "fr": "Ligne nationale d'orientation juridique et psychologique pour les femmes victimes de violence, qui peut transmettre le cas aux autorités compétentes.",
+            "es": "Línea nacional de orientación jurídica y psicológica para mujeres que viven violencia; puede canalizar tu caso a las autoridades competentes.",
+            "en": "National line offering legal and psychological guidance to women facing violence; it can refer your case to the right authorities."
+          },
+          "verifie": true,
+          "source": "https://noticiasc21.cdmx.gob.mx/noticia/semujeres-activa-linea-de-ayuda-marca-079-opcion-1-para-recibir-apoyo-inmediato"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "Consejo Ciudadano – Línea de Seguridad y Chat de Confianza",
+          "telephone": "55 5533 5533",
+          "sms_ou_chat": "También por WhatsApp al mismo número; app «No+Extorsiones».",
+          "url": "https://consejociudadanomx.org/",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "sobre todo personas en la Ciudad de México",
+          "description": {
+            "fr": "Organisme citoyen de Mexico qui offre gratuitement, 24h/24, un soutien psychologique et juridique et vous accompagne pour porter plainte (surtout à Mexico).",
+            "es": "Organismo ciudadano de la CDMX que ofrece gratis, 24/7, apoyo psicológico y legal y te acompaña a presentar una denuncia (sobre todo en la Ciudad de México).",
+            "en": "Mexico City citizen body offering free 24/7 psychological and legal support and help filing a complaint (mainly in Mexico City)."
+          },
+          "verifie": true,
+          "source": "https://consejociudadanomx.org/"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "Secretaría Anticorrupción y Buen Gobierno – Unidad de Protección de Datos Personales",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://www.gob.mx/buengobierno",
+          "horaires": null,
+          "gratuit": null,
+          "public": "toda persona cuyos datos personales use una empresa o una institución",
+          "description": {
+            "fr": "Depuis la disparition de l'INAI en 2025, c'est le ministère « Buen Gobierno » qui veille à ce que les entreprises respectent vos données personnelles.",
+            "es": "Desde que desapareció el INAI en 2025, la Secretaría Anticorrupción y Buen Gobierno vigila que las empresas respeten tus datos personales.",
+            "en": "Since INAI was abolished in 2025, the Ministry of Anti-Corruption and Good Government oversees how companies handle your personal data."
+          },
+          "verifie": false,
+          "source": "https://www.gob.mx/cms/uploads/attachment/file/1002460/inicio_trabajos_autoridades_garantes.pdf",
+          "note": "Rôle confirmé par un document officiel gob.mx du 12/05/2025 ; page de plainte en ligne non vérifiée (gob.mx inaccessible depuis l'outil). À compléter."
+        }
+      ]
+    },
+    {
+      "code": "AR",
+      "nom": {
+        "fr": "Argentine",
+        "es": "Argentina",
+        "en": "Argentina"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "911 – Central de Emergencias Nacional",
+          "telephone": "911",
+          "sms_ou_chat": null,
+          "url": "https://www.argentina.gob.ar/tema/emergencias",
+          "horaires": "24 h",
+          "gratuit": true,
+          "public": "todo el mundo",
+          "description": {
+            "fr": "En cas de danger immédiat, appelez le 911 pour la police ou une ambulance.",
+            "es": "Si estás en peligro inmediato, llama al 911 para pedir policía o ambulancia.",
+            "en": "If you are in immediate danger, call 911 for the police or an ambulance."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/tema/emergencias"
+        },
+        {
+          "type": "urgence",
+          "nom": "Centro de Asistencia al Suicida – 135 / 0800 345 1435",
+          "telephone": "0800 345 1435",
+          "sms_ou_chat": "135 (línea gratuita) o (011) 5275-1135; el 0800 345 1435 funciona desde todo el país.",
+          "url": "https://www.asistenciaalsuicida.org.ar/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "personas en crisis emocional y su entorno",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, appelez cette ligne de prévention du suicide, gratuite.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, llama a esta línea gratuita de prevención del suicidio.",
+            "en": "If blackmail or shame is making you think about suicide, call this free suicide prevention line."
+          },
+          "verifie": true,
+          "source": "https://www.asistenciaalsuicida.org.ar/"
+        },
+        {
+          "type": "cyberharcelement",
+          "nom": "Línea 137 – Violencia familiar, sexual y digital (Ministerio de Justicia)",
+          "telephone": "137",
+          "sms_ou_chat": "WhatsApp: +54 9 11 3133-1000. Opción 1 para violencia familiar, sexual o grooming.",
+          "url": "https://www.argentina.gob.ar/justicia/violencia-familiar-sexual",
+          "horaires": "24 h, 365 días",
+          "gratuit": true,
+          "public": "víctimas de violencia familiar, sexual o digital, y personas que sospechan grooming de un menor. Según el Ministerio, la Línea 137 funciona también en Misiones (Posadas, Garupá, Eldorado, Oberá) y Chaco (Resistencia); si el 137 no responde desde tu provincia, usa el WhatsApp.",
+          "description": {
+            "fr": "Ligne gratuite du ministère de la Justice : son équipe contre les violences numériques vous conseille et vous accompagne jusqu'au dépôt de plainte.",
+            "es": "Línea gratuita del Ministerio de Justicia: su Equipo Contra las Violencias Digitales te asesora y te acompaña hasta hacer la denuncia.",
+            "en": "Free Ministry of Justice line: its team against digital violence advises you and supports you all the way to filing a complaint."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/justicia/convosenlaweb/denuncia"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "UFECI – Unidad Fiscal Especializada en Ciberdelincuencia (Ministerio Público Fiscal)",
+          "telephone": "(011) 5071-0040",
+          "sms_ou_chat": "Denuncias por e-mail: denunciasufeci@mpf.gov.ar",
+          "url": "https://www.mpf.gob.ar/ufeci/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "todo el país",
+          "description": {
+            "fr": "Le parquet spécialisé en cybercriminalité reçoit les plaintes pour grooming et tout autre délit informatique, y compris par e-mail.",
+            "es": "La fiscalía especializada en ciberdelitos recibe denuncias por grooming y cualquier otro delito informático, también por e-mail.",
+            "en": "The specialised cybercrime prosecutors' unit takes complaints about grooming and any other computer crime, including by email."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/justicia/convosenlaweb/denuncia"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Línea 102 – Derechos de niñas, niños y adolescentes (SENAF)",
+          "telephone": "102",
+          "sms_ou_chat": null,
+          "url": "https://www.argentina.gob.ar/justicia/convosenlaweb/denuncia",
+          "horaires": "24 h, 365 días",
+          "gratuit": true,
+          "public": "niñas, niños, adolescentes y adultos preocupados por ellos; alcance nacional, atendido por equipos de cada provincia",
+          "description": {
+            "fr": "Ligne gratuite et confidentielle pour tout enfant ou adolescent dont les droits sont menacés, ou pour un adulte inquiet pour lui.",
+            "es": "Línea gratuita y confidencial para cualquier niña, niño o adolescente cuyos derechos estén en riesgo, o para un adulto preocupado.",
+            "en": "Free, confidential line for any child or teenager whose rights are at risk, or for a worried adult."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/justicia/convosenlaweb/denuncia"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "Línea 144 – Atención a personas en situación de violencia",
+          "telephone": "144",
+          "sms_ou_chat": "WhatsApp: +54 9 11 2771-6463 · app Línea 144 · videollamada para personas sordas e hipoacúsicas",
+          "url": "https://www.argentina.gob.ar/linea-144",
+          "horaires": "24 h, 365 días",
+          "gratuit": true,
+          "public": "personas en situación de violencia de género",
+          "description": {
+            "fr": "Écoute, soutien et conseils gratuits à toute heure pour les personnes victimes de violences de genre.",
+            "es": "Contención, atención y asesoramiento gratuitos a cualquier hora para personas en situación de violencia de género.",
+            "en": "Free support and advice at any hour for people facing gender-based violence."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/linea-144"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "Línea 149 – CENAVID (Centro de Asistencia a las Víctimas de Delitos)",
+          "telephone": "149",
+          "sms_ou_chat": null,
+          "url": "https://www.argentina.gob.ar/justicia/convosenlaweb/denuncia",
+          "horaires": "24 h, todo el año",
+          "gratuit": null,
+          "public": "víctimas de abuso sexual, desde cualquier parte del país",
+          "description": {
+            "fr": "Si vous avez subi des violences sexuelles, appelez le 149 depuis tout le pays : conseils juridiques et aide médicale et psychologique.",
+            "es": "Si sufriste abuso sexual, llama al 149 desde cualquier parte del país: asesoramiento jurídico y asistencia médica y psicológica.",
+            "en": "If you suffered sexual abuse, call 149 from anywhere in the country for legal advice and medical and psychological help."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/justicia/convosenlaweb/denuncia"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "AAIP – Denunciar incumplimientos de la Ley de Protección de Datos Personales",
+          "telephone": null,
+          "sms_ou_chat": "En línea por Trámites a Distancia (TAD) con clave fiscal nivel 2 o más; también en persona o por correo postal.",
+          "url": "https://www.argentina.gob.ar/servicio/denunciar-incumplimientos-de-la-ley-de-proteccion-de-datos-personales",
+          "horaires": null,
+          "gratuit": true,
+          "public": "personas que pidieron suprimir o corregir sus datos y no obtuvieron respuesta",
+          "description": {
+            "fr": "Si une entreprise refuse de supprimer vos données (ou ne répond pas sous 5 jours ouvrables), vous pouvez la dénoncer gratuitement à l'autorité de protection des données.",
+            "es": "Si una empresa se niega a suprimir tus datos (o no responde en 5 días hábiles), puedes denunciarla gratis ante la autoridad de protección de datos.",
+            "en": "If a company refuses to delete your data (or does not reply within 5 working days), you can report it to the data protection authority for free."
+          },
+          "verifie": true,
+          "source": "https://www.argentina.gob.ar/servicio/denunciar-incumplimientos-de-la-ley-de-proteccion-de-datos-personales"
+        }
+      ]
+    },
+    {
+      "code": "CO",
+      "nom": {
+        "fr": "Colombie",
+        "es": "Colombia",
+        "en": "Colombia"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "123 – Línea de atención y emergencias (Policía Nacional)",
+          "telephone": "123",
+          "sms_ou_chat": "Extorsión o secuestro: línea 165 (antisecuestro y antiextorsión de la Policía Nacional).",
+          "url": "https://www.policia.gov.co/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "todo el mundo",
+          "description": {
+            "fr": "En cas de danger immédiat, appelez le 123 ; en cas d'extorsion, la ligne spécialisée de la police est le 165.",
+            "es": "Si estás en peligro inmediato, llama al 123; si te están extorsionando, la línea especializada de la Policía es el 165.",
+            "en": "If you are in immediate danger, call 123; for extortion, the police's specialised line is 165."
+          },
+          "verifie": true,
+          "source": "https://www.policia.gov.co/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "CAI Virtual y ¡ADenunciar! (Policía Nacional y Fiscalía)",
+          "telephone": null,
+          "sms_ou_chat": "Chat en caivirtual.policia.gov.co · e-mail: caivirtual@policia.gov.co · denuncia en línea: https://adenunciar.policia.gov.co/Adenunciar/",
+          "url": "https://caivirtual.policia.gov.co/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "todo el mundo (si la víctima es menor, debe ir acompañada por un adulto o un defensor)",
+          "description": {
+            "fr": "Le centre cyber de la police : tchat de conseil et plainte en ligne pour les délits informatiques et l'extorsion (vous recevez un numéro de dossier par e-mail).",
+            "es": "El centro cibernético de la Policía: chat de orientación y denuncia en línea por delitos informáticos y extorsión (recibes un número de caso por correo).",
+            "en": "The police cyber centre: advice chat and online complaints for computer crimes and extortion (you get a case number by email)."
+          },
+          "verifie": true,
+          "source": "https://www.policia.gov.co/sistema-nacional-denuncia-virtual-adenunciar"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Línea 141 – ICBF (Instituto Colombiano de Bienestar Familiar)",
+          "telephone": "141",
+          "sms_ou_chat": "Chat ICBF en icbf.gov.co · línea gratuita nacional 01 8000 91 80 80 (lunes a viernes, 8:00-17:00)",
+          "url": "https://www.icbf.gov.co/",
+          "horaires": "24 h",
+          "gratuit": true,
+          "public": "niñas, niños, adolescentes y cualquier persona que quiera protegerlos",
+          "description": {
+            "fr": "Ligne nationale gratuite de protection de l'enfance (protection, urgence, orientation), à appeler si un mineur est en danger.",
+            "es": "Línea nacional gratuita de protección de la niñez (protección, emergencia y orientación): llama si una persona menor de edad está en peligro.",
+            "en": "Free national child protection line (protection, emergencies and guidance): call if a minor is in danger."
+          },
+          "verifie": true,
+          "source": "https://www.icbf.gov.co/"
+        },
+        {
+          "type": "signalement-contenu",
+          "nom": "Te Protejo Colombia (Red PaPaz)",
+          "telephone": null,
+          "sms_ou_chat": "Formulario de reporte en línea; puedes dejar tu correo si quieres respuesta.",
+          "url": "https://teprotejocolombia.org/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "cualquier persona que quiera reportar una situación que afecta a menores de 18 años",
+          "description": {
+            "fr": "Canal anonyme et confidentiel pour signaler des contenus d'exploitation sexuelle de mineurs ou du cyberharcèlement visant un mineur.",
+            "es": "Canal anónimo y confidencial para reportar material de explotación sexual de menores o ciberacoso contra una persona menor de edad.",
+            "en": "Anonymous, confidential channel to report child sexual exploitation material or online harassment of a minor."
+          },
+          "verifie": true,
+          "source": "https://teprotejocolombia.org/"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "Línea 155 – Orientación a personas víctimas de violencia basada en género",
+          "telephone": "155",
+          "sms_ou_chat": null,
+          "url": "https://www.policia.gov.co/sites/default/files/2025-08/linea-155-orientacion-a-personas-victimas-de-violencias-basadas-en-genero.pdf",
+          "horaires": "24 h",
+          "gratuit": true,
+          "public": "personas víctimas de violencia basada en género, en todo el país",
+          "description": {
+            "fr": "Ligne gratuite et confidentielle : orientation juridique et premiers secours psychologiques pour les victimes de violences de genre, avec mise en lien avec la police, le parquet ou l'ICBF.",
+            "es": "Línea gratuita y confidencial: orientación jurídica y primeros auxilios psicológicos para víctimas de violencia de género, con remisión a Policía, Fiscalía o ICBF.",
+            "en": "Free, confidential line: legal guidance and psychological first aid for victims of gender-based violence, with referral to the police, prosecutors or ICBF."
+          },
+          "verifie": true,
+          "source": "https://www.policia.gov.co/sites/default/files/2025-08/linea-155-orientacion-a-personas-victimas-de-violencias-basadas-en-genero.pdf"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "SIC – Denuncia por incumplimiento de habeas data y protección de datos personales",
+          "telephone": "01 8000 910165",
+          "sms_ou_chat": "Trámite en línea tras crear un usuario en «SIC Servicios en Línea».",
+          "url": "https://sedeelectronica.sic.gov.co/atencion-y-servicios-a-la-ciudadania/servicios/denuncia-por-el-presunto-incumplimiento-las-disposiciones-legales-relacionadas-con-el-habeas-data",
+          "horaires": "atención: lunes a viernes, 8:00-16:30",
+          "gratuit": true,
+          "public": "toda persona cuyos datos estén en bases públicas o privadas",
+          "description": {
+            "fr": "Si une entreprise ou un organisme ne respecte pas vos droits sur vos données personnelles, vous pouvez le dénoncer gratuitement à la SIC.",
+            "es": "Si una empresa o entidad no respeta tus derechos sobre tus datos personales, puedes denunciarla gratis ante la SIC.",
+            "en": "If a company or body does not respect your rights over your personal data, you can report it to the SIC for free."
+          },
+          "verifie": true,
+          "source": "https://sedeelectronica.sic.gov.co/atencion-y-servicios-a-la-ciudadania/servicios/denuncia-por-el-presunto-incumplimiento-las-disposiciones-legales-relacionadas-con-el-habeas-data"
+        }
+      ]
+    },
+    {
+      "code": "US",
+      "nom": {
+        "fr": "États-Unis",
+        "es": "Estados Unidos",
+        "en": "United States"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "911 – Emergency services",
+          "telephone": "911",
+          "sms_ou_chat": null,
+          "url": "https://www.ic3.gov/",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "everyone",
+          "description": {
+            "fr": "En cas de danger immédiat, appelez le 911 (ou la police locale).",
+            "es": "Si estás en peligro inmediato, llama al 911 (o a la policía local).",
+            "en": "If you or someone else is in immediate danger, call 911 (or your local police)."
+          },
+          "verifie": true,
+          "source": "https://www.ic3.gov/"
+        },
+        {
+          "type": "urgence",
+          "nom": "988 Suicide & Crisis Lifeline",
+          "telephone": "988",
+          "sms_ou_chat": "Call or text 988, or chat at 988lifeline.org (text and chat also available in Spanish).",
+          "url": "https://988lifeline.org/",
+          "horaires": "24/7/365",
+          "gratuit": true,
+          "public": "everyone",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, appelez ou écrivez au 988 : gratuit, confidentiel, à toute heure.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, llama o escribe al 988: gratis, confidencial, a cualquier hora (texto y chat en español).",
+            "en": "If blackmail or shame is making you think about suicide, call or text 988: free, confidential, any time."
+          },
+          "verifie": true,
+          "source": "https://988lifeline.org/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "FBI – Internet Crime Complaint Center (IC3)",
+          "telephone": null,
+          "sms_ou_chat": "Crimes against children go to NCMEC's CyberTipline instead.",
+          "url": "https://www.ic3.gov/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "victims of cyber-enabled crime (adults)",
+          "description": {
+            "fr": "Le portail du FBI pour signaler les crimes commis en ligne (arnaques, extorsion, piratage) ; pour un mineur, utilisez la CyberTipline du NCMEC.",
+            "es": "El portal del FBI para denunciar delitos cometidos por internet (estafas, extorsión, hackeo); si la víctima es menor, usa la CyberTipline del NCMEC.",
+            "en": "The FBI's main portal for reporting online crime (scams, extortion, hacking); for a minor, use NCMEC's CyberTipline."
+          },
+          "verifie": true,
+          "source": "https://www.ic3.gov/"
+        },
+        {
+          "type": "mineurs",
+          "nom": "NCMEC CyberTipline",
+          "telephone": "1-800-843-5678",
+          "sms_ou_chat": "Online report: https://report.cybertip.org/",
+          "url": "https://report.cybertip.org/",
+          "horaires": "24/7 (call center)",
+          "gratuit": null,
+          "public": "anyone reporting online exploitation of a child (sextortion, enticement, child sexual abuse material)",
+          "description": {
+            "fr": "Le service national pour signaler l'exploitation en ligne d'un mineur : sextorsion, sollicitation sexuelle, images d'abus sexuels.",
+            "es": "El servicio nacional para denunciar la explotación en línea de menores: sextorsión, captación sexual, imágenes de abuso sexual infantil.",
+            "en": "The national system for reporting online exploitation of children: sextortion, enticement, child sexual abuse material."
+          },
+          "verifie": true,
+          "source": "https://www.missingkids.org/gethelpnow/cybertipline"
+        },
+        {
+          "type": "ncii",
+          "nom": "CCRI Image Abuse Helpline (Cyber Civil Rights Initiative)",
+          "telephone": "1-844-878-2274",
+          "sms_ou_chat": "No help by email.",
+          "url": "https://cybercivilrights.org/",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "victim-survivors of image-based sexual abuse",
+          "description": {
+            "fr": "Ligne d'aide gratuite, jour et nuit, pour les victimes de violences sexuelles par l'image (images intimes diffusées ou menacées de l'être sans consentement).",
+            "es": "Línea de ayuda gratuita, día y noche, para víctimas de abuso sexual basado en imágenes (imágenes íntimas difundidas o amenazadas de difundir sin consentimiento).",
+            "en": "Free, round-the-clock helpline for victim-survivors of image-based sexual abuse (intimate images shared, or threatened to be shared, without consent)."
+          },
+          "verifie": true,
+          "source": "https://cybercivilrights.org/?p=6258"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "National Domestic Violence Hotline",
+          "telephone": "1-800-799-7233",
+          "sms_ou_chat": "Text START to 88788 · chat at thehotline.org",
+          "url": "https://www.thehotline.org/",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "people experiencing relationship abuse and their loved ones",
+          "description": {
+            "fr": "Ligne gratuite et confidentielle, 24h/24, pour les personnes qui subissent des violences dans leur couple, et pour leurs proches.",
+            "es": "Línea gratuita y confidencial, 24/7, para personas que sufren violencia en su relación de pareja y para sus seres queridos.",
+            "en": "Free, confidential 24/7 line for people experiencing relationship abuse and their loved ones."
+          },
+          "verifie": true,
+          "source": "https://www.thehotline.org/"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "VictimConnect Resource Center",
+          "telephone": "1-855-484-2846",
+          "sms_ou_chat": "Call or text the same number, or chat online at victimconnect.org.",
+          "url": "https://victimconnect.org/",
+          "horaires": "24/7",
+          "gratuit": null,
+          "public": "victims and survivors of any crime",
+          "description": {
+            "fr": "Ligne anonyme et confidentielle, jour et nuit, pour connaître vos droits et vos options après un crime.",
+            "es": "Línea anónima y confidencial, día y noche, para conocer tus derechos y opciones después de un delito.",
+            "en": "Anonymous, confidential line, day and night, to learn your rights and options after a crime."
+          },
+          "verifie": true,
+          "source": "https://victimconnect.org/"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "FTC – IdentityTheft.gov",
+          "telephone": null,
+          "sms_ou_chat": "Fraud and scams: https://reportfraud.ftc.gov/",
+          "url": "https://www.identitytheft.gov/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "people whose identity or personal information was misused",
+          "description": {
+            "fr": "Il n'y a pas d'autorité générale de protection des données aux États-Unis ; en cas d'usurpation d'identité, ce site officiel de la FTC permet de signaler et d'obtenir un plan de rétablissement.",
+            "es": "En EE. UU. no hay una autoridad general de protección de datos; si usaron tu identidad, este sitio oficial de la FTC te permite denunciarlo y obtener un plan de recuperación.",
+            "en": "The US has no general data protection authority; if your identity was misused, this official FTC site lets you report it and get a recovery plan."
+          },
+          "verifie": true,
+          "source": "https://www.identitytheft.gov/"
+        }
+      ]
+    },
+    {
+      "code": "GB",
+      "nom": {
+        "fr": "Royaume-Uni",
+        "es": "Reino Unido",
+        "en": "United Kingdom"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "999 – Emergency (or 112) · 101 – Police non-emergency",
+          "telephone": "999",
+          "sms_ou_chat": "112 also works in the UK. Non-emergency police line: 101.",
+          "url": "https://www.gov.uk/contact-police",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "everyone",
+          "description": {
+            "fr": "Appelez le 999 si un crime est en cours ou si quelqu'un est en danger immédiat ; le 101 pour signaler un fait non urgent (appels gratuits).",
+            "es": "Llama al 999 si hay un delito en curso o alguien está en peligro inmediato; al 101 para algo que no es urgente (llamadas gratis).",
+            "en": "Call 999 if a crime is happening or someone is in immediate danger; call 101 for non-emergencies (both free)."
+          },
+          "verifie": true,
+          "source": "https://www.gov.uk/contact-police"
+        },
+        {
+          "type": "urgence",
+          "nom": "Samaritans – 116 123",
+          "telephone": "116 123",
+          "sms_ou_chat": null,
+          "url": "https://www.samaritans.org/how-we-can-help/contact-samaritan/",
+          "horaires": "any time, day or night",
+          "gratuit": true,
+          "public": "anyone in the UK and Ireland who is struggling",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, appelez gratuitement les Samaritans, jour et nuit, même sans crédit.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, llama gratis a Samaritans, día y noche, incluso sin saldo.",
+            "en": "If blackmail or shame is making you think about suicide, call Samaritans free, day or night, even with no credit."
+          },
+          "verifie": true,
+          "source": "https://www.samaritans.org/how-we-can-help/contact-samaritan/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "Report a crime online (police.uk – England & Wales)",
+          "telephone": "101",
+          "sms_ou_chat": "Scotland: https://www.scotland.police.uk/your-community/ · Northern Ireland: https://www.psni.police.uk/report",
+          "url": "https://www.police.uk/pu/contact-the-police/report-a-crime-incident/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "England and Wales (separate services for Scotland and Northern Ireland)",
+          "description": {
+            "fr": "Pour signaler en ligne à la police un crime non urgent (menaces, chantage, partage d'images intimes) ; l'Écosse et l'Irlande du Nord ont leur propre formulaire.",
+            "es": "Para denunciar en línea ante la policía un delito no urgente (amenazas, chantaje, difusión de imágenes íntimas); Escocia e Irlanda del Norte tienen su propio formulario.",
+            "en": "To report a non-urgent crime to the police online (threats, blackmail, shared intimate images); Scotland and Northern Ireland have their own forms."
+          },
+          "verifie": true,
+          "source": "https://www.gov.uk/contact-police"
+        },
+        {
+          "type": "ncii",
+          "nom": "Revenge Porn Helpline (SWGfL)",
+          "telephone": "0345 6000 459",
+          "sms_ou_chat": "Email via the website · \"Reiya\" chatbot for 24/7 advice · links to StopNCII.org",
+          "url": "https://revengepornhelpline.org.uk/",
+          "horaires": "Monday-Friday, 10:00-16:00 (excluding bank holidays)",
+          "gratuit": null,
+          "public": "adults (18+) living in the UK",
+          "description": {
+            "fr": "Ligne spécialisée pour les adultes victimes d'images intimes partagées ou menacées de l'être sans consentement : conseils et aide pour faire retirer les contenus.",
+            "es": "Línea especializada para adultos víctimas de imágenes íntimas difundidas o amenazadas de difundir sin consentimiento: asesoría y ayuda para retirar el contenido.",
+            "en": "Specialist helpline for adults whose intimate images were shared, or threatened to be shared, without consent: advice and help getting content removed."
+          },
+          "verifie": true,
+          "source": "https://revengepornhelpline.org.uk/"
+        },
+        {
+          "type": "ncii",
+          "nom": "Report Remove (Childline & Internet Watch Foundation)",
+          "telephone": null,
+          "sms_ou_chat": "Via the Childline website: choose your age range, create a Childline account to get updates, then report the image or video (handled by the IWF).",
+          "url": "https://www.childline.org.uk/info-advice/bullying-abuse-safety/online-mobile-safety/report-remove/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "young people under 18 in the UK",
+          "description": {
+            "fr": "Permet aux moins de 18 ans au Royaume-Uni de signaler en toute confidentialité une photo ou vidéo sexuelle d'eux pour la faire retirer d'internet.",
+            "es": "Permite a menores de 18 años en el Reino Unido denunciar de forma confidencial una foto o vídeo sexual suyo para que se retire de internet.",
+            "en": "Lets under-18s in the UK confidentially report a sexual image or video of themselves so it can be removed from the internet."
+          },
+          "verifie": true,
+          "source": "https://www.iwf.org.uk/our-technology/report-remove/"
+        },
+        {
+          "type": "cyberharcelement",
+          "nom": "Report Harmful Content (SWGfL)",
+          "telephone": null,
+          "sms_ou_chat": "Online reporting tool and chatbot.",
+          "url": "https://reportharmfulcontent.com/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "anyone who experienced or witnessed harm online (child-friendly advice for under-18s)",
+          "description": {
+            "fr": "Vous aide à signaler un contenu nuisible en ligne, avec les règles et les liens directs vers les outils de signalement de chaque plateforme ; pas pour les images sexuelles de mineurs (voir IWF).",
+            "es": "Te ayuda a denunciar contenido dañino en línea, con las normas y los enlaces directos a las herramientas de denuncia de cada plataforma; no sirve para imágenes sexuales de menores (ver IWF).",
+            "en": "Helps you report harmful content online, with each platform's rules and direct links to its reporting tools; not for sexual images of under-18s (see IWF)."
+          },
+          "verifie": true,
+          "source": "https://reportharmfulcontent.com/"
+        },
+        {
+          "type": "mineurs",
+          "nom": "CEOP Safety Centre (National Crime Agency)",
+          "telephone": null,
+          "sms_ou_chat": "Not ready to report? Talk to Childline anonymously (online or by phone).",
+          "url": "https://www.ceop.police.uk/Safety-Centre/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "children, young people and adults worried about a child",
+          "description": {
+            "fr": "Pour signaler à des conseillers de protection de l'enfance de la police un abus sexuel en ligne ou une personne qui communique de façon inquiétante avec un mineur.",
+            "es": "Para denunciar ante asesores policiales de protección infantil un abuso sexual en línea o a alguien que se comunica de forma preocupante con una persona menor.",
+            "en": "To report online sexual abuse, or someone communicating with a child in a worrying way, to police child protection advisors."
+          },
+          "verifie": true,
+          "source": "https://www.ceop.police.uk/Safety-Centre/"
+        },
+        {
+          "type": "signalement-contenu",
+          "nom": "Internet Watch Foundation (IWF) – report child sexual abuse imagery",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://report.iwf.org.uk/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "anyone (anonymous)",
+          "description": {
+            "fr": "Signalement anonyme d'images ou vidéos d'abus sexuels sur mineurs, y compris générées par IA, pour les faire retirer.",
+            "es": "Denuncia anónima de imágenes o vídeos de abuso sexual infantil, incluidos los generados por IA, para que se retiren.",
+            "en": "Anonymous reporting of child sexual abuse images or videos, including AI-generated ones, so they can be removed."
+          },
+          "verifie": true,
+          "source": "https://www.iwf.org.uk/en/uk-report/"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "National Domestic Abuse Helpline (Refuge)",
+          "telephone": "0808 2000 247",
+          "sms_ou_chat": "Live chat and BSL support on the website.",
+          "url": "https://www.nationaldahelpline.org.uk/",
+          "horaires": "24 hours a day",
+          "gratuit": true,
+          "public": "people experiencing domestic abuse and those supporting them",
+          "description": {
+            "fr": "Ligne gratuite et confidentielle, 24h/24, pour les violences conjugales et intrafamiliales : conseils et plan de sécurité.",
+            "es": "Línea gratuita y confidencial, 24 h, para la violencia doméstica: consejos y plan de seguridad.",
+            "en": "Free, confidential 24-hour helpline for domestic abuse: advice and safety planning."
+          },
+          "verifie": true,
+          "source": "https://www.nationaldahelpline.org.uk/"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "Victim Support",
+          "telephone": "08 08 16 89 111",
+          "sms_ou_chat": "Free 24/7 live chat for people affected by crime in England and Wales.",
+          "url": "https://www.victimsupport.org.uk/",
+          "horaires": "live chat 24/7",
+          "gratuit": true,
+          "public": "anyone affected by crime (live chat: England and Wales)",
+          "description": {
+            "fr": "Association d'aide aux victimes : écoute, explication de vos droits et options, et orientation vers un soutien local.",
+            "es": "Organización de ayuda a víctimas: te escuchan, te explican tus derechos y opciones y te orientan hacia apoyo local.",
+            "en": "Victim support charity: they listen, explain your rights and options, and connect you with local support."
+          },
+          "verifie": true,
+          "source": "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/live-chat/"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "ICO – Information Commissioner's Office (data protection complaint)",
+          "telephone": "0303 123 1113",
+          "sms_ou_chat": "Live chat on ico.org.uk.",
+          "url": "https://ico.org.uk/make-a-complaint/data-protection-complaints/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "anyone whose personal data was mishandled by an organisation",
+          "description": {
+            "fr": "Si une organisation refuse d'effacer ou maltraite vos données, plaignez-vous d'abord auprès d'elle, puis à l'ICO (traitement long : environ 10 mois pour les dossiers approfondis).",
+            "es": "Si una organización se niega a borrar tus datos o los usa mal, reclama primero ante ella y luego ante el ICO (trámite largo: unos 10 meses para casos detallados).",
+            "en": "If an organisation refuses to delete or misuses your data, complain to it first, then to the ICO (slow: about 10 months for detailed cases)."
+          },
+          "verifie": true,
+          "source": "https://ico.org.uk/make-a-complaint/data-protection-complaints/"
+        }
+      ]
+    },
+    {
+      "code": "CA",
+      "nom": {
+        "fr": "Canada",
+        "es": "Canadá",
+        "en": "Canada"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "9-1-1 – Urgences",
+          "telephone": "911",
+          "sms_ou_chat": null,
+          "url": "https://988.ca/fr",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "tout le monde",
+          "description": {
+            "fr": "Si votre vie est en danger, appelez immédiatement le 9-1-1.",
+            "es": "Si tu vida está en peligro, llama de inmediato al 9-1-1.",
+            "en": "If your life is in danger, call 9-1-1 right away."
+          },
+          "verifie": true,
+          "source": "https://988.ca/fr"
+        },
+        {
+          "type": "urgence",
+          "nom": "9-8-8 – Ligne d'aide en cas de crise suicidaire / Suicide Crisis Helpline",
+          "telephone": "988",
+          "sms_ou_chat": "Appel ou texto au 9-8-8 / call or text 9-8-8",
+          "url": "https://988.ca/fr",
+          "horaires": "24/7/365",
+          "gratuit": null,
+          "public": "toute personne en crise ou inquiète pour un proche",
+          "description": {
+            "fr": "Si le chantage ou la honte vous donne des idées noires, appelez ou textez le 9-8-8, à toute heure, tous les jours.",
+            "es": "Si el chantaje o la vergüenza te hacen pensar en hacerte daño, llama o escribe al 9-8-8 a cualquier hora, todos los días.",
+            "en": "If blackmail or shame is making you think about suicide, call or text 9-8-8 at any hour, any day."
+          },
+          "verifie": true,
+          "source": "https://988.ca/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "Signaler la cybercriminalité et la fraude (GRC et Centre antifraude du Canada)",
+          "telephone": "1-888-495-8501",
+          "sms_ou_chat": "Signalement en ligne, anonyme si vous le souhaitez : https://signalercyberetfraude.canada.ca/ (EN : https://reportcyberandfraud.canada.ca/). Contactez aussi votre police locale.",
+          "url": "https://signalercyberetfraude.canada.ca/",
+          "horaires": "téléphone : lun-ven, 10 h-16 h 45 (heure de l'Est), fermé les jours fériés",
+          "gratuit": true,
+          "public": "victimes ou témoins de fraude ou de cybercriminalité",
+          "description": {
+            "fr": "Système national pour signaler une fraude ou un cybercrime (ex. : piratage de compte) à la GRC et au Centre antifraude ; l'enquête reste du ressort de votre police locale, à prévenir aussi.",
+            "es": "Sistema nacional para denunciar fraude o ciberdelitos (p. ej., hackeo de una cuenta) a la Policía Montada (GRC/RCMP) y al Centro Antifraude; la investigación la hace tu policía local, a la que también debes avisar.",
+            "en": "National system to report fraud or cybercrime (e.g. a hacked account) to the RCMP and the Canadian Anti-Fraud Centre; your local police investigates, so contact them too."
+          },
+          "verifie": true,
+          "source": "https://antifraudcentre-centreantifraude.ca/report-signalez-fra.htm"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Cyberaide.ca / Cybertip.ca (Centre canadien de protection de l'enfance)",
+          "telephone": null,
+          "sms_ou_chat": "Formulaire de signalement en ligne.",
+          "url": "https://cyberaide.ca/fr/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "toute personne qui signale l'exploitation sexuelle d'un enfant en ligne",
+          "description": {
+            "fr": "La centrale nationale pour signaler l'exploitation sexuelle d'enfants en ligne, y compris la sextorsion de jeunes.",
+            "es": "La línea nacional para denunciar la explotación sexual infantil en línea, incluida la sextorsión de jóvenes.",
+            "en": "Canada's national tipline for reporting online sexual exploitation of children, including sextortion of young people."
+          },
+          "verifie": true,
+          "source": "https://www.cybertip.ca/en/"
+        },
+        {
+          "type": "ncii",
+          "nom": "AidezMoiSVP.ca / NeedHelpNow.ca (Centre canadien de protection de l'enfance)",
+          "telephone": null,
+          "sms_ou_chat": "Équipe de soutien joignable via le site ; en cas de crise : Jeunesse, J'écoute 1-800-668-6868.",
+          "url": "https://aidezmoisvp.ca/fr/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "jeunes dont une image intime prise avant 18 ans circule ou risque de circuler",
+          "description": {
+            "fr": "Aide les jeunes à faire retirer une photo intime d'eux prise avant 18 ans (avis aux plateformes, suspension de comptes) et à faire face à la sextorsion.",
+            "es": "Ayuda a jóvenes a retirar una foto íntima suya tomada antes de los 18 años (avisos a plataformas, suspensión de cuentas) y a enfrentar la sextorsión.",
+            "en": "Helps young people get an intimate image of themselves taken before age 18 removed (notices to platforms, account takedowns) and deal with sextortion."
+          },
+          "verifie": true,
+          "source": "https://needhelpnow.ca/en/"
+        },
+        {
+          "type": "ncii",
+          "nom": "Intimate Images Protection Service (Colombie-Britannique)",
+          "telephone": "1-833-688-4381",
+          "sms_ou_chat": "E-mail : protectyourimages@gov.bc.ca · plainte possible au Civil Resolution Tribunal : https://civilresolutionbc.ca/intimate-images",
+          "url": "https://www2.gov.bc.ca/gov/content/safety/public-safety/intimate-images",
+          "horaires": null,
+          "gratuit": true,
+          "public": "personnes en Colombie-Britannique (C.-B.) dont des images intimes ont été partagées ou menacées de l'être",
+          "description": {
+            "fr": "Service public de la C.-B. : soutien et aide pour faire supprimer des images intimes partagées sans consentement, y compris en cas de sextorsion.",
+            "es": "Servicio público de Columbia Británica: apoyo y ayuda para borrar imágenes íntimas compartidas sin consentimiento, también en casos de sextorsión.",
+            "en": "British Columbia government service: support and help getting intimate images shared without consent deleted, including in sextortion cases."
+          },
+          "verifie": true,
+          "source": "https://www2.gov.bc.ca/gov/content/safety/public-safety/intimate-images"
+        },
+        {
+          "type": "mineurs",
+          "nom": "Kids Help Phone / Jeunesse, J'écoute",
+          "telephone": "1-800-668-6868",
+          "sms_ou_chat": "Texto : CONNECT au 686868",
+          "url": "https://kidshelpphone.ca/",
+          "horaires": "24/7",
+          "gratuit": null,
+          "public": "enfants, ados et jeunes adultes partout au Canada",
+          "description": {
+            "fr": "Les jeunes peuvent parler ou écrire à un intervenant à toute heure, partout au Canada.",
+            "es": "Las y los jóvenes pueden hablar o escribir a una persona de apoyo a cualquier hora, en todo Canadá.",
+            "en": "Young people can call or text a counsellor at any hour, anywhere in Canada."
+          },
+          "verifie": true,
+          "source": "https://kidshelpphone.ca/"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "SOS violence conjugale (Québec)",
+          "telephone": "1 800 363-9010",
+          "sms_ou_chat": "Texto : 438-601-1211 · clavardage sur le site · courriel : sos@sosviolenceconjugale.ca",
+          "url": "https://sosviolenceconjugale.ca/fr",
+          "horaires": "24/7",
+          "gratuit": null,
+          "public": "personnes victimes de violence conjugale au Québec et leurs proches",
+          "description": {
+            "fr": "Ligne québécoise d'écoute et d'orientation pour la violence conjugale, joignable à toute heure.",
+            "es": "Línea de Quebec de escucha y orientación sobre violencia en la pareja, disponible a cualquier hora (en francés).",
+            "en": "Quebec helpline for intimate partner violence, available at any hour (mainly in French)."
+          },
+          "verifie": true,
+          "source": "https://sosviolenceconjugale.ca/fr"
+        },
+        {
+          "type": "aide-victimes",
+          "nom": "Répertoire des services aux victimes (Justice Canada)",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://www.justice.gc.ca/fra/jp-cj/victimes-victims/rsv-vsd/index.html",
+          "horaires": null,
+          "gratuit": true,
+          "public": "victimes d'actes criminels partout au Canada",
+          "description": {
+            "fr": "Carte officielle pour trouver un service d'aide aux victimes près de chez vous, dans chaque province et territoire.",
+            "es": "Mapa oficial para encontrar un servicio de ayuda a víctimas cerca de ti, en cada provincia y territorio.",
+            "en": "Official map to find a victim service near you, in every province and territory."
+          },
+          "verifie": true,
+          "source": "https://www.justice.gc.ca/eng/cj-jp/victims-victimes/vsd-rsv/index.html"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "Commissariat à la protection de la vie privée du Canada (CPVP / OPC)",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://www.priv.gc.ca/fr/signaler-des-preoccupations/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "toute personne dont les renseignements personnels ont été mal traités",
+          "description": {
+            "fr": "Adressez-vous d'abord à l'organisation ; si elle ne répond pas ou vous satisfait mal, vous pouvez porter plainte au Commissariat (délais de plusieurs mois).",
+            "es": "Primero reclama ante la organización; si no responde o no te convence, puedes presentar una queja ante el Comisionado (tarda varios meses).",
+            "en": "Raise the issue with the organisation first; if it does not reply or you are not satisfied, you can complain to the Commissioner (several months' delay)."
+          },
+          "verifie": true,
+          "source": "https://www.priv.gc.ca/en/report-a-concern/"
+        }
+      ]
+    },
+    {
+      "code": "GH",
+      "nom": {
+        "fr": "Ghana",
+        "es": "Ghana",
+        "en": "Ghana"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "Ghana Police Helpline – 191 / 18555",
+          "telephone": "191",
+          "sms_ou_chat": "Also 18555. The Police Cybercrime Unit (CID Headquarters, Accra, and the 25 regional commands) can be reached through these numbers for help on how to make a complaint.",
+          "url": "https://police.gov.gh/en/index.php/cyber-crime/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "everyone",
+          "description": {
+            "fr": "Si vous êtes en danger ou menacé·e, appelez la police au 191 ou au 18555 ; ces numéros orientent aussi vers l'unité cybercriminalité pour porter plainte.",
+            "es": "Si estás en peligro o te amenazan, llama a la policía al 191 o al 18555; también te orientan hacia la unidad de cibercrimen para denunciar.",
+            "en": "If you are in danger or being threatened, call the police on 191 or 18555; they also guide you to the Cybercrime Unit to make a complaint."
+          },
+          "verifie": true,
+          "source": "https://police.gov.gh/en/index.php/cyber-crime/"
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "Cyber Security Authority (CSA) / CERT-GH – Points of Contact",
+          "telephone": "292",
+          "sms_ou_chat": "Call or SMS 292 · WhatsApp 0501603111 · email report@csa.gov.gh · online form · \"CSA GHANA\" mobile app",
+          "url": "https://www.csa.gov.gh/report",
+          "horaires": null,
+          "gratuit": null,
+          "public": "everyone in Ghana",
+          "description": {
+            "fr": "L'autorité nationale de cybersécurité reçoit les signalements de publication d'images intimes sans consentement, de chantage en ligne, d'usurpation d'identité, de cyberharcèlement, d'abus d'enfants en ligne et de piratage.",
+            "es": "La autoridad nacional de ciberseguridad recibe denuncias por publicación de imágenes íntimas sin consentimiento, chantaje en línea, suplantación de identidad, ciberacoso, abuso infantil en línea y hackeo.",
+            "en": "The national cybersecurity authority takes reports of non-consensual intimate images, online blackmail, impersonation, cyberbullying, online child abuse and hacking."
+          },
+          "verifie": true,
+          "source": "https://www.csa.gov.gh/report"
+        },
+        {
+          "type": "mineurs",
+          "nom": "IWF Ghana Reporting Portal (child sexual abuse imagery)",
+          "telephone": null,
+          "sms_ou_chat": "Available in English, French, Arabic and Spanish.",
+          "url": "https://report.iwf.org.uk/gh",
+          "horaires": null,
+          "gratuit": true,
+          "public": "anyone (can be fully anonymous)",
+          "description": {
+            "fr": "Signalement anonyme d'images ou vidéos d'abus sexuels sur mineurs vues en ligne ; pour un enfant en danger, contactez la police.",
+            "es": "Denuncia anónima de imágenes o vídeos de abuso sexual infantil vistos en internet; si un niño está en peligro, contacta a la policía.",
+            "en": "Anonymous reporting of child sexual abuse images or videos seen online; if a child is at risk, contact the police."
+          },
+          "verifie": true,
+          "source": "https://report.iwf.org.uk/gh"
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "DOVVSU Helpline – Domestic Violence and Victim Support Unit (Ghana Police)",
+          "telephone": "055 100 0900",
+          "sms_ou_chat": null,
+          "url": "https://police.gov.gh/en/index.php/domestic-violence-victims-support-unit-dovvsu/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "victims of domestic violence and abuse (women, men and children)",
+          "description": {
+            "fr": "L'unité de la police qui accueille et accompagne les victimes de violences conjugales et d'abus, femmes, hommes et enfants.",
+            "es": "La unidad de la policía que atiende y acompaña a víctimas de violencia doméstica y abusos, mujeres, hombres y niños.",
+            "en": "The police unit that supports victims of domestic violence and abuse: women, men and children."
+          },
+          "verifie": true,
+          "source": "https://police.gov.gh/en/index.php/domestic-violence-victims-support-unit-dovvsu/"
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "Data Protection Commission (DPC) – File a complaint",
+          "telephone": "+233 25 630 1533",
+          "sms_ou_chat": "WhatsApp 0506177975 · info@dpc.gov.gh",
+          "url": "https://dpc.gov.gh/file-a-complaint/",
+          "horaires": "Mon-Fri 09:00-17:00",
+          "gratuit": null,
+          "public": "data subjects (anyone whose personal data is processed in Ghana)",
+          "description": {
+            "fr": "Si une organisation utilise ou publie vos données personnelles de façon abusive, vous pouvez déposer une plainte en ligne auprès de la Commission.",
+            "es": "Si una organización usa o publica tus datos personales de forma abusiva, puedes presentar una queja en línea ante la Comisión.",
+            "en": "If an organisation misuses or publishes your personal data, you can file a complaint online with the Commission."
+          },
+          "verifie": true,
+          "source": "https://dpc.gov.gh/"
+        }
+      ]
+    },
+    {
+      "code": "CI",
+      "nom": {
+        "fr": "Côte d'Ivoire",
+        "es": "Costa de Marfil",
+        "en": "Côte d'Ivoire"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "170 – Police Secours",
+          "telephone": "170",
+          "sms_ou_chat": "Gendarmerie nationale : 145 · Sapeurs-pompiers : 180 · SAMU : 185",
+          "url": "https://www.artci.ci/plan_de_numerotation/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "tout le monde",
+          "description": {
+            "fr": "Si vous êtes en danger immédiat, appelez Police Secours au 170 (appel gratuit) ; gendarmerie 145, pompiers 180, SAMU 185.",
+            "es": "Si estás en peligro inmediato, llama a Police Secours al 170 (llamada gratuita); gendarmería 145, bomberos 180, SAMU 185.",
+            "en": "If you are in immediate danger, call Police Secours on 170 (free call); gendarmerie 145, fire brigade 180, ambulance (SAMU) 185."
+          },
+          "verifie": true,
+          "source": "https://artci.ci/wp-content/uploads/2024/06/plan_de_numerotation_2014.pdf",
+          "note": "Source : Plan national de numérotation de l'ARTCI (liste des numéros d'urgence au 20/01/2014, document toujours publié sur artci.ci le 15/10/2026). Attention : le 110 y est attribué à la « lutte contre les abus des agents de police », pas aux urgences."
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "PLCC – Plateforme de Lutte Contre la Cybercriminalité",
+          "telephone": null,
+          "sms_ou_chat": null,
+          "url": "https://www.cybercrime.interieur.gouv.ci/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "à confirmer",
+          "description": {
+            "fr": "Plateforme publique de lutte contre la cybercriminalité ; coordonnées à confirmer avant publication.",
+            "es": "Plataforma pública de lucha contra el cibercrimen; datos de contacto por confirmar antes de publicar.",
+            "en": "Public anti-cybercrime platform; contact details to be confirmed before publishing."
+          },
+          "verifie": false,
+          "source": "https://www.cybercrime.interieur.gouv.ci/",
+          "note": "Site inaccessible depuis nos outils le 15/10/2026 (erreur réseau) : ni l'URL actuelle, ni les numéros de téléphone/WhatsApp, ni le périmètre n'ont pu être confirmés. Ne pas publier de numéro avant vérification manuelle."
+        },
+        {
+          "type": "mineurs",
+          "nom": "Allô 116 – Ligne verte « Allô enfant en détresse » (Direction de la Protection de l'Enfant)",
+          "telephone": "116",
+          "sms_ou_chat": "Signalement sur allo116.ci ou via l'application mobile Allô 116 (Play Store / App Store) · e-mail : infos@allo116.ci",
+          "url": "https://www.allo116.ci/",
+          "horaires": "24/7",
+          "gratuit": true,
+          "public": "enfants victimes et témoins d'abus",
+          "description": {
+            "fr": "Pour signaler un abus contre un enfant, comme victime ou comme témoin, et être orienté vers une aide immédiate ou un spécialiste.",
+            "es": "Para denunciar un abuso contra un niño o niña, como víctima o testigo, y recibir orientación hacia ayuda inmediata o un especialista.",
+            "en": "To report abuse of a child, as a victim or a witness, and be directed to immediate help or a specialist."
+          },
+          "verifie": true,
+          "source": "https://www.allo116.ci/",
+          "note": "Gratuité : 116 classé « numéro d'urgence » (urgence sociale) dans le plan national de numérotation ARTCI, dont les appels sont acheminés gratuitement ; présenté comme « Ligne Verte 116 » par Child Helpline International."
+        },
+        {
+          "type": "protection-donnees",
+          "nom": "ARTCI – Autorité de protection des données personnelles (Espace plaintes)",
+          "telephone": "+225 27 20 34 43 73",
+          "sms_ou_chat": "E-mail : courrier@artci.ci",
+          "url": "https://www.autoritedeprotection.ci/espace-plaintes/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "toute personne dont les données personnelles sont traitées en Côte d'Ivoire",
+          "description": {
+            "fr": "Formulaire en ligne pour porter plainte si un organisme ne respecte pas vos droits d'accès, d'opposition, de rectification ou de suppression de vos données.",
+            "es": "Formulario en línea para reclamar si una organización no respeta tus derechos de acceso, oposición, rectificación o supresión de tus datos.",
+            "en": "Online form to complain if an organisation does not respect your rights to access, object to, correct or delete your data."
+          },
+          "verifie": true,
+          "source": "https://www.autoritedeprotection.ci/espace-plaintes/"
+        }
+      ]
+    }
+  ],
+  "international": [
+    {
+      "type": "ncii",
+      "nom": "StopNCII.org (Revenge Porn Helpline / SWGfL)",
+      "telephone": null,
+      "sms_ou_chat": "Outil en ligne disponible dans plus de 30 langues, dont le français, l'espagnol et l'anglais.",
+      "url": "https://stopncii.org/",
+      "horaires": null,
+      "gratuit": true,
+      "public": "adultes (18 ans et plus) dont les images intimes ont été partagées ou risquent de l'être",
+      "description": {
+        "fr": "Crée sur votre appareil une empreinte numérique de vos images intimes, sans les envoyer, pour que les plateformes partenaires bloquent et retirent les copies ; ne couvre pas tout internet.",
+        "es": "Crea en tu dispositivo una huella digital de tus imágenes íntimas, sin enviarlas, para que las plataformas asociadas bloqueen y retiren las copias; no cubre todo internet.",
+        "en": "Creates a digital fingerprint of your intimate images on your own device, without uploading them, so partner platforms can block and remove copies; it does not cover the whole internet."
+      },
+      "verifie": true,
+      "source": "https://stopncii.org/how-it-works/"
+    },
+    {
+      "type": "ncii",
+      "nom": "Take It Down (NCMEC)",
+      "telephone": null,
+      "sms_ou_chat": "Service en ligne disponible en de nombreuses langues, dont le français et l'espagnol.",
+      "url": "https://takeitdown.ncmec.org/",
+      "horaires": null,
+      "gratuit": true,
+      "public": "personnes ayant des images nues ou sexuelles d'elles prises avant 18 ans (les adultes vont sur StopNCII.org)",
+      "description": {
+        "fr": "Service gratuit et anonyme pour faire retirer ou bloquer des images intimes prises quand vous aviez moins de 18 ans, sans envoyer les images à personne.",
+        "es": "Servicio gratuito y anónimo para retirar o bloquear imágenes íntimas tomadas cuando tenías menos de 18 años, sin enviárselas a nadie.",
+        "en": "Free, anonymous service to remove or block intimate images taken when you were under 18, without sending the images to anyone."
+      },
+      "verifie": true,
+      "source": "https://takeitdown.ncmec.org/"
+    },
+    {
+      "type": "signalement-contenu",
+      "nom": "INHOPE – trouver la hotline nationale pour signaler des contenus d'abus sexuels sur mineurs",
+      "telephone": null,
+      "sms_ou_chat": "Ne jamais envoyer de fichiers par e-mail : signalez l'adresse (URL) à la hotline de votre pays.",
+      "url": "https://inhope.org/what-we-do/how-to-report",
+      "horaires": null,
+      "gratuit": true,
+      "public": "toute personne qui tombe sur des contenus d'abus sexuels sur mineurs en ligne",
+      "description": {
+        "fr": "Carte du réseau mondial des hotlines : trouvez celle de votre pays et signalez anonymement l'adresse du contenu, qui sera analysé puis retiré avec la police.",
+        "es": "Mapa de la red mundial de líneas de denuncia: encuentra la de tu país y denuncia de forma anónima la dirección del contenido, que se analizará y retirará con la policía.",
+        "en": "Map of the global hotline network: find your country's hotline and anonymously report the content's address so it can be assessed and removed with the police."
+      },
+      "verifie": true,
+      "source": "https://inhope.org/what-we-do/how-to-report"
+    },
+    {
+      "type": "mineurs",
+      "nom": "Child Helpline International – trouver la ligne d'aide aux enfants de votre pays",
+      "telephone": null,
+      "sms_ou_chat": null,
+      "url": "https://childhelplineinternational.org/helplines/",
+      "horaires": null,
+      "gratuit": null,
+      "public": "enfants (18 ans et moins), jeunes (25 ans et moins) et adultes qui les aident",
+      "description": {
+        "fr": "Annuaire mondial des lignes d'écoute pour enfants et jeunes, pour trouver celle de votre pays.",
+        "es": "Directorio mundial de líneas de ayuda para niños, niñas y jóvenes, para encontrar la de tu país.",
+        "en": "Worldwide directory of child and youth helplines, to find the one in your country."
+      },
+      "verifie": true,
+      "source": "https://childhelplineinternational.org/helplines/"
+    }
+  ]
+}

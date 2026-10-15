@@ -13,9 +13,19 @@ interface Props {
 }
 const { lang } = Astro.props;
 const chemin = page('urgence', lang);
+// Les pays les plus proches du lecteur d'abord, selon la langue de la page.
+const PRIORITE: Record<Lang, string[]> = {
+  fr: ['FR', 'BE', 'CH', 'CA', 'CI'],
+  es: ['ES', 'MX', 'CO', 'AR'],
+  en: ['US', 'GB', 'CA', 'GH'],
+};
+const rang = (code: string) => {
+  const i = PRIORITE[lang].indexOf(code);
+  return i === -1 ? 99 : i;
+};
 const pays = urgencesPays()
   .filter((p) => p.ressources.length > 0)
-  .sort((a, b) => a.nom[lang].localeCompare(b.nom[lang], lang));
+  .sort((a, b) => rang(a.code) - rang(b.code) || a.nom[lang].localeCompare(b.nom[lang], lang));
 const intl = urgencesInternational();
 const date = dateLisible(URGENCES_VERIFIE_LE, lang);
 const ORDRE = ['urgence', 'ncii', 'cyberharcelement', 'mineurs', 'violences-femmes', 'signalement-contenu', 'police-en-ligne', 'aide-victimes', 'protection-donnees'];

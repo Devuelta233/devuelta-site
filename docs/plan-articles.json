@@ -1,0 +1,171 @@
+{
+ "note": "Plan des articles hebdomadaires. Statuts : a-faire, en-preparation, a-valider, publie. La tâche planifiée du lundi prend le premier sujet « a-faire ».",
+ "articles": [
+  {
+   "semaine": 1,
+   "id": "instagram-faux-compte-pas-supprime",
+   "situation": "usurpation",
+   "plateformes": [
+    "instagram"
+   ],
+   "titre": {
+    "fr": "Instagram ne supprime pas le faux compte : que faire ensuite",
+    "es": "Instagram no elimina la cuenta que te suplanta: qué hacer",
+    "en": "Instagram won't remove an impersonation account: next steps"
+   },
+   "angle": "Formulaire « usurpation » (pas le simple signalement), pièce d'identité, recours interne, DSA art. 20-21 en Europe, plainte.",
+   "statut": "en-preparation"
+  },
+  {
+   "semaine": 2,
+   "id": "instagram-recuperation-bloquee-selfie",
+   "situation": "piratage-compte",
+   "plateformes": [
+    "instagram"
+   ],
+   "titre": {
+    "fr": "Récupération Instagram bloquée (selfie vidéo) : que faire",
+    "es": "Me hackearon Instagram y no me deja verificar: qué hacer",
+    "en": "Instagram hacked and face verification fails: what to do"
+   },
+   "angle": "Boucles de vérification, comptes désactivés après piratage, quand et comment écrire à Meta.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 3,
+   "id": "google-faux-avis-voie-juridique",
+   "situation": "faux-avis",
+   "plateformes": [
+    "google-maps"
+   ],
+   "titre": {
+    "fr": "Google refuse de retirer un faux avis : la voie juridique",
+    "es": "Google no elimina la reseña falsa: el camino legal",
+    "en": "Google won't remove a fake review: the legal route"
+   },
+   "angle": "Signalement vs demande pour motif juridique, preuves, DSA, justice. Public : petites entreprises.",
+   "statut": "en-preparation"
+  },
+  {
+   "semaine": 4,
+   "id": "faux-profil-recree-recidive",
+   "situation": "usurpation",
+   "plateformes": [],
+   "titre": {
+    "fr": "Faux profil supprimé puis recréé : stopper la récidive",
+    "es": "Borraron el perfil falso y volvió a aparecer: qué hacer",
+    "en": "The fake account came back: how to stop it for good"
+   },
+   "angle": "Signalements groupés, preuves, plainte pour obtenir l'identité (seule la justice peut l'obtenir).",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 5,
+   "id": "resultats-vous-concernant-refuse-rgpd",
+   "situation": "donnees-personnelles",
+   "plateformes": [
+    "google"
+   ],
+   "titre": {
+    "fr": "« Résultats vous concernant » refusé : passer par le RGPD",
+    "es": "Google rechazó tu solicitud: derecho de supresión y AEPD",
+    "en": "Google denied your removal request: what to do next"
+   },
+   "angle": "Europe : RGPD art. 17 puis CNIL / AEPD ; Suisse : nLPD ; US/UK/CA : autres voies.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 6,
+   "id": "ne-viole-pas-nos-regles-contester-dsa",
+   "situation": "diffamation",
+   "plateformes": [],
+   "titre": {
+    "fr": "« Ne viole pas nos règles » : contester la décision (DSA)",
+    "es": "«No infringe nuestras normas»: cómo recurrir la decisión",
+    "en": "\"Doesn't violate our guidelines\": how to appeal"
+   },
+   "angle": "Recours interne obligatoire (DSA art. 20), organismes certifiés de règlement extrajudiciaire (art. 21).",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 7,
+   "id": "diffamation-delai-3-mois-plateforme",
+   "situation": "diffamation",
+   "plateformes": [],
+   "titre": {
+    "fr": "Diffamation : attendre la plateforme peut coûter 3 mois",
+    "es": "Difamación en redes: plazos para denunciar en cada país",
+    "en": "Online defamation: why waiting on the platform costs you"
+   },
+   "angle": "Délai de prescription de 3 mois en France (1 an si raciste ou discriminatoire) : ne pas l'épuiser en attendant un retrait.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 8,
+   "id": "telegram-ne-repond-pas-retrait",
+   "situation": "contenu-intime",
+   "plateformes": [
+    "telegram"
+   ],
+   "titre": {
+    "fr": "Telegram ne répond pas : faire retirer un contenu",
+    "es": "Telegram no responde: cómo denunciar un canal o grupo",
+    "en": "Telegram won't remove it: reporting channels and groups"
+   },
+   "angle": "Signalement in-app, adresses officielles de Telegram, police, DSA si applicable.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 9,
+   "id": "stopncii-na-pas-suffi",
+   "situation": "contenu-intime",
+   "plateformes": [],
+   "titre": {
+    "fr": "StopNCII n'a pas suffi : ce que l'outil fait et ne fait pas",
+    "es": "StopNCII no funcionó: qué hacer después",
+    "en": "StopNCII not working? What it covers and what to do next"
+   },
+   "angle": "Hachage, plateformes partenaires seulement, étapes suivantes.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 10,
+   "id": "contenu-republie-stopper-republications",
+   "situation": "contenu-intime",
+   "plateformes": [],
+   "titre": {
+    "fr": "Contenu republié sans cesse : stopper les republications",
+    "es": "Tu contenido vuelve a aparecer: cómo frenar las resubidas",
+    "en": "Your content keeps coming back: how to stop re-uploads"
+   },
+   "angle": "Hachage, filtres des moteurs, veille, DMCA si la personne est l'autrice.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 11,
+   "id": "deepfake-plateforme-dit-pas-reel",
+   "situation": "deepfake",
+   "plateformes": [],
+   "titre": {
+    "fr": "Deepfake : la plateforme dit que ce n'est pas réel",
+    "es": "Deepfake: la plataforma dice que no es una foto real",
+    "en": "Deepfake: the platform says it isn't a real photo"
+   },
+   "angle": "Catégories « image intime synthétique » (Meta, Google) au lieu du signalement standard ; plainte.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 12,
+   "id": "plateforme-ignore-signalement-recours",
+   "situation": "contenu-intime",
+   "plateformes": [],
+   "titre": {
+    "fr": "La plateforme ignore votre signalement : délais et recours",
+    "es": "La plataforma ignora tu denuncia: plazos y recursos",
+    "en": "Platform ignored your TAKE IT DOWN request? Report it"
+   },
+   "angle": "Délais DSA (Europe) ; plainte FTC si pas de retrait en 48 h (États-Unis) ; Ley Olimpia (Mexique).",
+   "statut": "a-faire"
+  }
+ ]
+}

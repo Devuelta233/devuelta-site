@@ -286,9 +286,9 @@ export const PLATEFORME_PAGE = {
   h1Prefix: { fr: '', es: '', en: '' } as T3,
   etapes: { fr: 'Les étapes', es: 'Los pasos', en: 'The steps' } as T3,
   intro: {
-    fr: 'Voici la démarche officielle de {p}, vérifiée le {d}. Suivez les étapes dans l’ordre.',
-    es: 'Este es el procedimiento oficial de {p}, verificado el {d}. Sigue los pasos en orden.',
-    en: "Here is {p}'s official process, checked on {d}. Follow the steps in order.",
+    fr: 'Voici la démarche officielle sur {p}, vérifiée le {d}. Suivez les étapes dans l’ordre.',
+    es: 'Este es el procedimiento oficial en {p}, verificado el {d}. Sigue los pasos en orden.',
+    en: 'Here is the official process on {p}, checked on {d}. Follow the steps in order.',
   } as T3,
   autres: { fr: 'Même situation, autres plateformes', es: 'Misma situación, otras plataformas', en: 'Same situation, other platforms' } as T3,
   conseils: { fr: 'Avant de commencer', es: 'Antes de empezar', en: 'Before you start' } as T3,
