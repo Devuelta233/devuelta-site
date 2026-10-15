@@ -90,7 +90,6 @@ describe('coordonnées publiques', () => {
 
 // Garde-fous des contenus publiés (guides et articles, y compris ceux ajoutés
 // automatiquement chaque semaine) : un contenu non conforme bloque la mise en ligne.
-import articlesData from '../shared/articles.json';
 import guidesData from '../shared/guides.json';
 import { SITUATIONS_REELLES } from '../shared/vocab';
 
@@ -116,9 +115,14 @@ describe('guides publiés', () => {
 });
 
 describe('articles publiés', () => {
-  const a = (articlesData as { articles: Array<Record<string, any>> }).articles;
+  const fichiers = import.meta.glob('../shared/articles/*.json', { eager: true, import: 'default' }) as Record<
+    string,
+    Record<string, any>
+  >;
+  const a = Object.values(fichiers);
   const idsGuides = new Set((guidesData as { fiches: Array<{ id: string }> }).fiches.map((x) => x.id));
-  it('identifiants et adresses uniques', () => {
+  it('un fichier par article, nommé <id>.json, identifiants et adresses uniques', () => {
+    for (const [chemin, x] of Object.entries(fichiers)) expect(chemin.endsWith(`/${x.id}.json`), chemin).toBe(true);
     expect(new Set(a.map((x) => x.id)).size).toBe(a.length);
     for (const l of LANGS) {
       const slugs = a.map((x) => x.slug[l]);
