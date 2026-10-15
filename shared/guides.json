@@ -9,7 +9,7 @@
     "en": "take-it-down-act-united-states"
    },
    "titre": {
-    "fr": "Take It Down Act : demander le retrait d'une image intime (48 h)",
+    "fr": "Take It Down Act : demander le retrait d’une image intime (48 h)",
     "es": "Ley TAKE IT DOWN: pedir la retirada de una imagen íntima (48 h)",
     "en": "TAKE IT DOWN Act: asking for an intimate image to be removed"
    },
@@ -19,23 +19,23 @@
     "en": "In the US, platforms must remove an intimate image posted without consent, real or AI-made, within 48 hours of a valid request. How to ask."
    },
    "resume": {
-    "fr": "Une loi fédérale américaine oblige les plateformes en ligne à retirer, au plus tard 48 heures après une demande valable, une image intime publiée sans votre accord, qu'elle soit réelle ou fabriquée par IA. Elle protège toute personne reconnaissable sur l'image.",
+    "fr": "Une loi fédérale américaine oblige les plateformes en ligne à retirer, au plus tard 48 heures après une demande valable, une image intime publiée sans votre accord, qu’elle soit réelle ou fabriquée par IA. Elle protège toute personne reconnaissable sur l’image.",
     "es": "Una ley federal de EE. UU. obliga a las plataformas en línea a retirar, como máximo 48 horas después de una solicitud válida, una imagen íntima publicada sin tu consentimiento, sea real o creada con IA. Protege a cualquier persona reconocible en la imagen.",
     "en": "A US federal law requires online platforms to remove an intimate image posted without your consent, whether real or AI-generated, no later than 48 hours after a valid request. It protects anyone who can be recognised in the image."
    },
    "pour_qui": {
-    "fr": "Vous êtes reconnaissable (visage ou signe distinctif) sur une photo ou une vidéo intime – nudité ou acte sexuel –, réelle ou fabriquée par IA, publiée sans votre accord sur un réseau social, un site de partage, un forum, une application ou un jeu en ligne soumis au droit américain. Une personne que vous autorisez (proche, avocat, association) peut faire la demande pour vous. Si l'image a été prise avant vos 18 ans, voyez aussi la page Take It Down (NCMEC).",
+    "fr": "Vous êtes reconnaissable (visage ou signe distinctif) sur une photo ou une vidéo intime – nudité ou acte sexuel –, réelle ou fabriquée par IA, publiée sans votre accord sur un réseau social, un site de partage, un forum, une application ou un jeu en ligne soumis au droit américain. Une personne que vous autorisez (proche, avocat, association) peut faire la demande pour vous. Si l’image a été prise avant vos 18 ans, voyez aussi la page Take It Down (NCMEC).",
     "es": "Eres reconocible (cara u otro rasgo distintivo) en una foto o un vídeo íntimo – desnudez o acto sexual –, real o creado con IA, publicado sin tu consentimiento en una red social, un sitio para compartir imágenes o vídeos, un foro, una aplicación o un juego en línea sujeto a la ley estadounidense. Una persona que autorices (familiar, abogado o abogada, asociación) puede hacer la solicitud por ti. Si la imagen se tomó antes de tus 18 años, consulta también la guía de Take It Down (NCMEC).",
     "en": "You can be recognised (face or another distinctive feature) in an intimate photo or video – nudity or sexual activity –, real or AI-made, posted without your consent on a social network, a photo or video sharing site, a forum, an app or an online game subject to US law. Someone you authorise (relative, lawyer, support organisation) can make the request for you. If the image was taken before you turned 18, also see the Take It Down (NCMEC) guide."
    },
    "etapes": {
     "fr": [
-     "Gardez des preuves sans repartager l'image : notez l'adresse exacte (URL) de chaque publication, le nom du compte et la date, et faites des captures d'écran. N'envoyez l'image à personne.",
+     "Gardez des preuves sans repartager l’image : notez l’adresse exacte (URL) de chaque publication, le nom du compte et la date, et faites des captures d’écran. N’envoyez l’image à personne.",
      "Cherchez sur la plateforme le lien de retrait des images intimes : la loi oblige chaque plateforme concernée à afficher clairement ce lien et à expliquer la démarche en langage simple.",
-     "Faites la demande par écrit avec les 4 éléments exigés par la loi : votre signature (manuscrite ou électronique), de quoi trouver l'image (le lien), une courte déclaration indiquant que vous pensez de bonne foi qu'elle a été publiée sans votre accord, et vos coordonnées.",
-     "Gardez la preuve de l'envoi, avec la date et l'heure. La plateforme doit retirer l'image au plus tard 48 heures après réception et faire des efforts raisonnables pour retirer les copies identiques qu'elle connaît.",
-     "Si l'image est encore en ligne après 48 heures, ou si vous n'avez trouvé aucun moyen de faire la demande, signalez la plateforme à la FTC sur TakeItDown.ftc.gov. La FTC ne retire pas les contenus elle-même, mais elle utilise ces signalements pour enquêter et poursuivre les plateformes.",
-     "Si quelqu'un vous menace ou vous fait du chantage, prévenez aussi la police. La FTC renvoie également vers le FBI (tips.fbi.gov) pour signaler les auteurs."
+     "Faites la demande par écrit avec les 4 éléments exigés par la loi : votre signature (manuscrite ou électronique), de quoi trouver l’image (le lien), une courte déclaration indiquant que vous pensez de bonne foi qu’elle a été publiée sans votre accord, et vos coordonnées.",
+     "Gardez la preuve de l’envoi, avec la date et l’heure. La plateforme doit retirer l’image au plus tard 48 heures après réception et faire des efforts raisonnables pour retirer les copies identiques qu’elle connaît.",
+     "Si l’image est encore en ligne après 48 heures, ou si vous n’avez trouvé aucun moyen de faire la demande, signalez la plateforme à la FTC sur TakeItDown.ftc.gov. La FTC ne retire pas les contenus elle-même, mais elle utilise ces signalements pour enquêter et poursuivre les plateformes.",
+     "Si quelqu’un vous menace ou vous fait du chantage, prévenez aussi la police. La FTC renvoie également vers le FBI (tips.fbi.gov) pour signaler les auteurs."
     ],
     "es": [
      "Guarda pruebas sin volver a compartir la imagen: anota la dirección exacta (URL) de cada publicación, el nombre de la cuenta y la fecha, y haz capturas de pantalla. No envíes la imagen a nadie.",
@@ -56,12 +56,12 @@
    },
    "a_preparer": {
     "fr": [
-     "L'adresse exacte (URL) de chaque photo ou vidéo et le nom du compte qui l'a publiée",
-     "Une courte phrase disant que vous n'avez pas consenti à cette publication",
+     "L’adresse exacte (URL) de chaque photo ou vidéo et le nom du compte qui l’a publiée",
+     "Une courte phrase disant que vous n’avez pas consenti à cette publication",
      "Votre signature, manuscrite ou électronique",
      "Vos coordonnées (au minimum une adresse e-mail)",
-     "Si vous agissez pour quelqu'un : son accord écrit",
-     "Des captures d'écran datées, ainsi que la date et l'heure de votre demande (utiles pour un signalement à la FTC)"
+     "Si vous agissez pour quelqu’un : son accord écrit",
+     "Des captures d’écran datées, ainsi que la date et l’heure de votre demande (utiles pour un signalement à la FTC)"
     ],
     "es": [
      "La dirección exacta (URL) de cada foto o vídeo y el nombre de la cuenta que lo publicó",
@@ -81,7 +81,7 @@
     ]
    },
    "delai": {
-    "fr": "La plateforme doit agir le plus vite possible et au plus tard 48 heures après avoir reçu une demande valable. Cette obligation s'applique depuis le 19 mai 2026.",
+    "fr": "La plateforme doit agir le plus vite possible et au plus tard 48 heures après avoir reçu une demande valable. Cette obligation s’applique depuis le 19 mai 2026.",
     "es": "La plataforma debe actuar lo antes posible y como máximo 48 horas después de recibir una solicitud válida. Esta obligación se aplica desde el 19 de mayo de 2026.",
     "en": "The platform must act as soon as possible and no later than 48 hours after receiving a valid request. This obligation has applied since 19 May 2026."
    },
@@ -92,12 +92,12 @@
    },
    "limites": {
     "fr": [
-     "La loi vise les sites et applications soumis au droit américain qui hébergent surtout des contenus publiés par leurs utilisateurs. Les e-mails, les fournisseurs d'accès à internet et les sites dont le contenu est surtout choisi par l'éditeur sont exclus.",
+     "La loi vise les sites et applications soumis au droit américain qui hébergent surtout des contenus publiés par leurs utilisateurs. Les e-mails, les fournisseurs d’accès à internet et les sites dont le contenu est surtout choisi par l’éditeur sont exclus.",
      "Pour les copies, la plateforme doit seulement faire des « efforts raisonnables » : toutes les copies ne disparaîtront pas forcément.",
-     "Un site installé hors des États-Unis peut ne pas se sentir concerné : il faudra alors d'autres recours (par exemple le DSA dans l'Union européenne).",
+     "Un site installé hors des États-Unis peut ne pas se sentir concerné : il faudra alors d’autres recours (par exemple le DSA dans l’Union européenne).",
      "La FTC ne supprime rien elle-même et ne règle pas les cas individuels : elle enquête sur les plateformes et peut les poursuivre.",
-     "Une demande incomplète (sans signature, sans lien ou sans coordonnées) risque d'être refusée.",
-     "Le retrait sur une plateforme n'efface pas l'image ailleurs sur internet."
+     "Une demande incomplète (sans signature, sans lien ou sans coordonnées) risque d’être refusée.",
+     "Le retrait sur une plateforme n’efface pas l’image ailleurs sur internet."
     ],
     "es": [
      "La ley se aplica a webs y aplicaciones sujetas a la ley estadounidense que alojan sobre todo contenidos publicados por sus usuarios. Quedan excluidos el correo electrónico, los proveedores de acceso a internet y los sitios cuyo contenido elige sobre todo el propio editor.",
@@ -118,7 +118,7 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "TAKE IT DOWN Act (loi fédérale américaine, Public Law 119-12, signée le 19 mai 2025), section 3 : procédure obligatoire de notification et de retrait, applicable depuis le 19 mai 2026 et contrôlée par la Federal Trade Commission (FTC). La loi couvre les images réelles et les « contrefaçons numériques », c'est-à-dire les images intimes fabriquées par IA ou par logiciel.",
+    "fr": "TAKE IT DOWN Act (loi fédérale américaine, Public Law 119-12, signée le 19 mai 2025), section 3 : procédure obligatoire de notification et de retrait, applicable depuis le 19 mai 2026 et contrôlée par la Federal Trade Commission (FTC). La loi couvre les images réelles et les « contrefaçons numériques », c’est-à-dire les images intimes fabriquées par IA ou par logiciel.",
     "es": "TAKE IT DOWN Act (ley federal de EE. UU., Public Law 119-12, firmada el 19 de mayo de 2025), sección 3: procedimiento obligatorio de notificación y retirada, aplicable desde el 19 de mayo de 2026 y supervisado por la Comisión Federal de Comercio (FTC). La ley cubre las imágenes reales y las «falsificaciones digitales», es decir, las imágenes íntimas creadas con IA o con programas informáticos.",
     "en": "TAKE IT DOWN Act (US federal law, Public Law 119-12, signed on 19 May 2025), section 3: mandatory notice-and-removal process, applicable since 19 May 2026 and enforced by the Federal Trade Commission (FTC). The law covers real images and “digital forgeries”, meaning intimate images created with AI or software."
    },
@@ -130,7 +130,7 @@
     {
      "url": "https://takeitdown.ftc.gov/",
      "titre": {
-      "fr": "FTC – signaler une plateforme qui n'a pas retiré l'image (formulaire officiel, en anglais ou en espagnol)",
+      "fr": "FTC – signaler une plateforme qui n’a pas retiré l’image (formulaire officiel, en anglais ou en espagnol)",
       "es": "FTC – denunciar a una plataforma que no retiró la imagen (formulario oficial, en español o inglés)",
       "en": "FTC – report a platform that did not remove the image (official form, English or Spanish)"
      }
@@ -189,23 +189,23 @@
     "en": "The EU Digital Services Act requires hosting services to examine your reports of illegal content. What to include and what to do next."
    },
    "resume": {
-    "fr": "Dans l'Union européenne, tout service qui héberge des contenus (réseau social, forum, site de partage…) doit permettre de lui signaler en ligne un contenu illicite, examiner ce signalement avec soin et vous informer de sa décision. Ce recours sert pour tout contenu contraire à la loi : image intime, faux profil, diffamation, données personnelles…",
+    "fr": "Dans l’Union européenne, tout service qui héberge des contenus (réseau social, forum, site de partage…) doit permettre de lui signaler en ligne un contenu illicite, examiner ce signalement avec soin et vous informer de sa décision. Ce recours sert pour tout contenu contraire à la loi : image intime, faux profil, diffamation, données personnelles…",
     "es": "En la Unión Europea, cualquier servicio que aloje contenidos (red social, foro, web para compartir…) debe permitir que le notifiques en línea un contenido ilícito, examinar tu aviso con diligencia e informarte de su decisión. Sirve para cualquier contenido contrario a la ley: imagen íntima, perfil falso, difamación, datos personales…",
     "en": "In the European Union, any service that hosts content (social network, forum, sharing site…) must let you report illegal content online, examine your notice carefully and tell you its decision. It works for any content that breaks the law: intimate images, fake profiles, defamation, personal data…"
    },
    "pour_qui": {
-    "fr": "Toute personne, même non visée directement, qui trouve sur un service utilisé dans l'UE un contenu contraire au droit de l'Union ou d'un pays de l'UE. Le service est concerné même si l'entreprise est installée hors de l'UE, dès lors qu'il est proposé à des utilisateurs dans l'UE.",
+    "fr": "Toute personne, même non visée directement, qui trouve sur un service utilisé dans l’UE un contenu contraire au droit de l’Union ou d’un pays de l’UE. Le service est concerné même si l’entreprise est installée hors de l’UE, dès lors qu’il est proposé à des utilisateurs dans l’UE.",
     "es": "Cualquier persona, aunque no sea la afectada directamente, que encuentre en un servicio usado en la UE un contenido contrario al Derecho de la Unión o de un país de la UE. El servicio está obligado aunque la empresa esté fuera de la UE, siempre que se ofrezca a usuarios en la UE.",
     "en": "Anyone, even if not directly targeted, who finds content on a service used in the EU that breaks EU law or the law of an EU country. The service is covered even if the company is based outside the EU, as long as it is offered to users in the EU."
    },
    "etapes": {
     "fr": [
-     "Copiez l'adresse exacte (URL) de chaque contenu et faites des captures d'écran datées.",
+     "Copiez l’adresse exacte (URL) de chaque contenu et faites des captures d’écran datées.",
      "Utilisez le formulaire de signalement de la plateforme (« Signaler », « Contenu illégal »…) : le DSA impose que les signalements puissent se faire en ligne, simplement.",
-     "Remplissez les 4 éléments prévus par l'article 16 : pourquoi le contenu est illicite (en citant si possible la loi en cause), l'URL exacte, votre nom et votre adresse e-mail, et une déclaration de bonne foi. Pour un contenu d'abus sexuel sur un enfant, vous pouvez signaler sans donner votre nom ni votre e-mail.",
-     "Gardez l'accusé de réception : si vous avez donné un e-mail, la plateforme doit vous l'envoyer dans les meilleurs délais, puis vous informer de sa décision et des recours possibles.",
+     "Remplissez les 4 éléments prévus par l’article 16 : pourquoi le contenu est illicite (en citant si possible la loi en cause), l’URL exacte, votre nom et votre adresse e-mail, et une déclaration de bonne foi. Pour un contenu d’abus sexuel sur un enfant, vous pouvez signaler sans donner votre nom ni votre e-mail.",
+     "Gardez l’accusé de réception : si vous avez donné un e-mail, la plateforme doit vous l’envoyer dans les meilleurs délais, puis vous informer de sa décision et des recours possibles.",
      "Si une plateforme en ligne refuse ou ne fait rien, utilisez son système interne de réclamation (gratuit, ouvert au moins 6 mois après la décision), puis, si besoin, un organisme de règlement extrajudiciaire certifié.",
-     "Si la plateforme ne respecte pas ses obligations, vous pouvez porter plainte auprès du coordinateur pour les services numériques de votre pays (en France l'Arcom, en Espagne la CNMC)."
+     "Si la plateforme ne respecte pas ses obligations, vous pouvez porter plainte auprès du coordinateur pour les services numériques de votre pays (en France l’Arcom, en Espagne la CNMC)."
     ],
     "es": [
      "Copia la dirección exacta (URL) de cada contenido y haz capturas de pantalla con fecha.",
@@ -217,7 +217,7 @@
     ],
     "en": [
      "Copy the exact address (URL) of each piece of content and take dated screenshots.",
-     "Use the platform's reporting form (“Report”, “Illegal content”…): the DSA requires that notices can be sent online, easily.",
+     "Use the platform’s reporting form (“Report”, “Illegal content”…): the DSA requires that notices can be sent online, easily.",
      "Fill in the 4 elements set out in Article 16: why the content is illegal (citing the relevant law if you can), the exact URL, your name and email address, and a good-faith statement. For child sexual abuse content, you can report without giving your name or email.",
      "Keep the acknowledgement of receipt: if you gave an email address, the platform must send it without undue delay, then tell you its decision and the ways to challenge it.",
      "If an online platform refuses or does nothing, use its internal complaint system (free, open for at least 6 months after the decision), then, if needed, a certified out-of-court dispute settlement body.",
@@ -226,10 +226,10 @@
    },
    "a_preparer": {
     "fr": [
-     "L'adresse exacte (URL) de chaque contenu, pas seulement le nom du compte",
-     "Une explication claire de la raison pour laquelle c'est illégal (image intime diffusée sans accord, usurpation d'identité, diffamation…)",
+     "L’adresse exacte (URL) de chaque contenu, pas seulement le nom du compte",
+     "Une explication claire de la raison pour laquelle c’est illégal (image intime diffusée sans accord, usurpation d’identité, diffamation…)",
      "Votre nom et votre adresse e-mail",
-     "Des captures d'écran datées",
+     "Des captures d’écran datées",
      "Une phrase de bonne foi, par exemple : « Je déclare de bonne foi que les informations et allégations de ce signalement sont exactes et complètes. »"
     ],
     "es": [
@@ -253,16 +253,16 @@
     "en": "The DSA sets no fixed deadline: the platform must handle your notice in a timely, diligent, non-arbitrary and objective manner and tell you its decision without undue delay. An out-of-court dispute settlement body must decide within 90 days at most (180 days for very complex disputes)."
    },
    "cout": {
-    "fr": "Gratuit. La réclamation interne est gratuite ; l'organisme de règlement extrajudiciaire est gratuit ou d'un coût symbolique pour vous, et ses frais sont à la charge de la plateforme s'il vous donne raison.",
+    "fr": "Gratuit. La réclamation interne est gratuite ; l’organisme de règlement extrajudiciaire est gratuit ou d’un coût symbolique pour vous, et ses frais sont à la charge de la plateforme s’il vous donne raison.",
     "es": "Gratuito. La reclamación interna es gratuita; el organismo de resolución extrajudicial es gratuito o tiene un coste simbólico para ti, y si te da la razón, sus tasas las paga la plataforma.",
     "en": "Free. The internal complaint is free; the out-of-court body is free or costs a nominal fee for you, and if it rules in your favour the platform pays its fees."
    },
    "limites": {
     "fr": [
      "Le DSA oblige à examiner sérieusement votre signalement, pas à retirer automatiquement : la plateforme peut refuser en expliquant pourquoi.",
-     "Il s'applique aux services proposés à des utilisateurs dans l'UE ; un site sans lien avec l'UE peut l'ignorer.",
-     "L'organisme de règlement extrajudiciaire ne peut pas imposer sa décision à la plateforme.",
-     "Signaler comme illicite un contenu que l'on sait légal peut être puni (en France : jusqu'à 1 an de prison et 15 000 € d'amende).",
+     "Il s’applique aux services proposés à des utilisateurs dans l’UE ; un site sans lien avec l’UE peut l’ignorer.",
+     "L’organisme de règlement extrajudiciaire ne peut pas imposer sa décision à la plateforme.",
+     "Signaler comme illicite un contenu que l’on sait légal peut être puni (en France : jusqu’à 1 an de prison et 15 000 € d’amende).",
      "Le retrait sur une plateforme ne supprime pas les copies publiées ailleurs."
     ],
     "es": [
@@ -282,7 +282,7 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Règlement (UE) 2022/2065 sur les services numériques (DSA) : article 16 (mécanismes de notification et d'action), article 17 (motivation des décisions), article 20 (réclamation interne), article 21 (règlement extrajudiciaire des litiges), article 53 (plainte auprès du coordinateur pour les services numériques). Applicable à tous les services intermédiaires depuis le 17 février 2024.",
+    "fr": "Règlement (UE) 2022/2065 sur les services numériques (DSA) : article 16 (mécanismes de notification et d’action), article 17 (motivation des décisions), article 20 (réclamation interne), article 21 (règlement extrajudiciaire des litiges), article 53 (plainte auprès du coordinateur pour les services numériques). Applicable à tous les services intermédiaires depuis le 17 février 2024.",
     "es": "Reglamento (UE) 2022/2065 de Servicios Digitales (DSA): artículo 16 (mecanismos de notificación y acción), artículo 17 (motivación de las decisiones), artículo 20 (sistema interno de reclamaciones), artículo 21 (resolución extrajudicial de litigios) y artículo 53 (reclamación ante el coordinador de servicios digitales). Aplicable a todos los servicios intermediarios desde el 17 de febrero de 2024.",
     "en": "Regulation (EU) 2022/2065, the Digital Services Act (DSA): Article 16 (notice and action mechanisms), Article 17 (statement of reasons), Article 20 (internal complaint handling), Article 21 (out-of-court dispute settlement), Article 53 (complaint to the Digital Services Coordinator). Applicable to all intermediary services since 17 February 2024."
    },
@@ -296,7 +296,7 @@
      "titre": {
       "fr": "Commission européenne – trouver le coordinateur pour les services numériques de votre pays",
       "es": "Comisión Europea – encontrar el coordinador de servicios digitales de tu país",
-      "en": "European Commission – find your country's Digital Services Coordinator"
+      "en": "European Commission – find your country’s Digital Services Coordinator"
      }
     },
     {
@@ -344,27 +344,27 @@
     "en": "Intimate images shared without your consent in France"
    },
    "meta_description": {
-    "fr": "En France, diffuser une image intime sans accord est un délit, même si vous l'aviez prise vous-même. Plateforme, plainte, PHAROS, CNIL : par où commencer.",
+    "fr": "En France, diffuser une image intime sans accord est un délit, même si vous l’aviez prise vous-même. Plateforme, plainte, PHAROS, CNIL : par où commencer.",
     "es": "En Francia, difundir una imagen íntima sin consentimiento es delito, aunque la hicieras tú. Plataforma, denuncia, PHAROS, CNIL: por dónde empezar.",
     "en": "In France, sharing an intimate image without consent is a crime, even if you took it yourself. Platform, police, PHAROS, CNIL: where to start."
    },
    "resume": {
-    "fr": "En France, diffuser sans votre accord une image ou un enregistrement à caractère sexuel est un délit, même si vous aviez accepté la prise de vue ou si vous l'aviez prise vous-même. Vous pouvez demander le retrait à la plateforme, porter plainte et, si le site ne répond pas, saisir la CNIL.",
+    "fr": "En France, diffuser sans votre accord une image ou un enregistrement à caractère sexuel est un délit, même si vous aviez accepté la prise de vue ou si vous l’aviez prise vous-même. Vous pouvez demander le retrait à la plateforme, porter plainte et, si le site ne répond pas, saisir la CNIL.",
     "es": "En Francia, difundir sin tu consentimiento una imagen o una grabación de carácter sexual es delito, aunque aceptaras que se tomara o la hicieras tú. Puedes pedir la retirada a la plataforma, presentar una denuncia y, si la web no responde, acudir a la CNIL (la autoridad francesa de protección de datos).",
     "en": "In France, sharing an image or recording of a sexual nature without your consent is a criminal offence, even if you agreed to it being taken or took it yourself. You can ask the platform to remove it, file a police complaint and, if the site does not respond, complain to the CNIL (the French data protection authority)."
    },
    "pour_qui": {
-    "fr": "Vous êtes majeur(e) et une photo, une vidéo ou un enregistrement intime de vous a été publié en ligne ou envoyé à d'autres personnes sans votre accord, en France ou sur un site accessible en France. Si l'image a été prise avant vos 18 ans, voyez aussi la page Take It Down et parlez-en à un adulte de confiance.",
+    "fr": "Vous êtes majeur(e) et une photo, une vidéo ou un enregistrement intime de vous a été publié en ligne ou envoyé à d’autres personnes sans votre accord, en France ou sur un site accessible en France. Si l’image a été prise avant vos 18 ans, voyez aussi la page Take It Down et parlez-en à un adulte de confiance.",
     "es": "Eres mayor de edad y una foto, un vídeo o una grabación íntima tuya se ha publicado en internet o se ha enviado a otras personas sin tu consentimiento, en Francia o en una web accesible desde Francia. Si la imagen se tomó antes de tus 18 años, consulta también la guía de Take It Down y habla con un adulto de confianza.",
     "en": "You are an adult and an intimate photo, video or recording of you has been posted online or sent to other people without your consent, in France or on a site accessible in France. If the image was taken before you turned 18, also see the Take It Down guide and talk to a trusted adult."
    },
    "etapes": {
     "fr": [
-     "Gardez des preuves sans repartager les images : captures d'écran avec l'adresse (URL) et la date, nom du compte, messages reçus. Ne transférez les images à personne.",
-     "Signalez le contenu à la plateforme ou à l'hébergeur via son formulaire (« Signaler », « contenu illégal »). Dans l'UE, il doit examiner votre signalement (DSA, article 16). Précisez qu'il s'agit d'une diffusion d'images à caractère sexuel sans consentement, punie par l'article 226-2-1 du Code pénal.",
-     "Portez plainte au commissariat, à la gendarmerie ou par courrier au procureur de la République. Si l'auteur est quelqu'un que vous connaissez (par exemple un ex), c'est la voie à privilégier : PHAROS ne traite pas les affaires privées avec une personne connue.",
-     "Si le contenu est visible par tous et que l'auteur est inconnu, vous pouvez aussi le signaler sur PHAROS (internet-signalement.gouv.fr), qui oriente vers les enquêteurs. En cas d'urgence, appelez le 17.",
-     "Demandez au site d'effacer vos images (droit à l'effacement du RGPD). Sans réponse satisfaisante au bout d'un mois, adressez une plainte à la CNIL avec la preuve de votre demande.",
+     "Gardez des preuves sans repartager les images : captures d’écran avec l’adresse (URL) et la date, nom du compte, messages reçus. Ne transférez les images à personne.",
+     "Signalez le contenu à la plateforme ou à l’hébergeur via son formulaire (« Signaler », « contenu illégal »). Dans l’UE, il doit examiner votre signalement (DSA, article 16). Précisez qu’il s’agit d’une diffusion d’images à caractère sexuel sans consentement, punie par l’article 226-2-1 du Code pénal.",
+     "Portez plainte au commissariat, à la gendarmerie ou par courrier au procureur de la République. Si l’auteur est quelqu’un que vous connaissez (par exemple un ex), c’est la voie à privilégier : PHAROS ne traite pas les affaires privées avec une personne connue.",
+     "Si le contenu est visible par tous et que l’auteur est inconnu, vous pouvez aussi le signaler sur PHAROS (internet-signalement.gouv.fr), qui oriente vers les enquêteurs. En cas d’urgence, appelez le 17.",
+     "Demandez au site d’effacer vos images (droit à l’effacement du RGPD). Sans réponse satisfaisante au bout d’un mois, adressez une plainte à la CNIL avec la preuve de votre demande.",
      "Pour limiter les nouvelles diffusions, vous pouvez créer une empreinte numérique de vos images avec StopNCII (sans envoyer les images). Pour être écouté(e) et orienté(e), appelez le 116 006 (aide aux victimes, gratuit)."
     ],
     "es": [
@@ -386,10 +386,10 @@
    },
    "a_preparer": {
     "fr": [
-     "L'adresse exacte (URL) de chaque publication",
-     "Des captures d'écran datées, avec l'URL visible",
+     "L’adresse exacte (URL) de chaque publication",
+     "Des captures d’écran datées, avec l’URL visible",
      "Le nom ou pseudo du compte qui a publié et les éventuels messages de menace",
-     "Une pièce d'identité (pour porter plainte)",
+     "Une pièce d’identité (pour porter plainte)",
      "Un court récit : comment les images ont été obtenues, quand et comment vous avez découvert la diffusion",
      "La preuve de vos demandes de retrait (accusés de réception), utile pour la CNIL"
     ],
@@ -411,22 +411,22 @@
     ]
    },
    "delai": {
-    "fr": "La loi française ne fixe pas de délai chiffré de retrait ; la plateforme doit traiter votre signalement avec diligence (DSA). Un site doit répondre à une demande d'effacement dans un délai d'un mois (RGPD) : passé ce délai, la CNIL peut être saisie.",
+    "fr": "La loi française ne fixe pas de délai chiffré de retrait ; la plateforme doit traiter votre signalement avec diligence (DSA). Un site doit répondre à une demande d’effacement dans un délai d’un mois (RGPD) : passé ce délai, la CNIL peut être saisie.",
     "es": "La ley francesa no fija un plazo concreto de retirada; la plataforma debe tratar tu aviso con diligencia (DSA). Una web debe responder a una solicitud de supresión en un mes (RGPD): pasado ese plazo, puedes acudir a la CNIL.",
     "en": "French law sets no fixed removal deadline; the platform must handle your notice diligently (DSA). A site must answer an erasure request within one month (GDPR): after that, you can complain to the CNIL."
    },
    "cout": {
-    "fr": "Gratuit (signalements, plainte, CNIL). L'aide d'un avocat est possible mais pas obligatoire.",
+    "fr": "Gratuit (signalements, plainte, CNIL). L’aide d’un avocat est possible mais pas obligatoire.",
     "es": "Gratuito (avisos, denuncia, CNIL). Puedes recurrir a un abogado o abogada, pero no es obligatorio.",
     "en": "Free (reports, police complaint, CNIL). A lawyer can help but is not required."
    },
    "limites": {
     "fr": [
      "PHAROS oriente les signalements vers les enquêteurs mais ne supprime pas lui-même les contenus, et il ne recontacte en général pas la personne qui signale.",
-     "Les enquêteurs peuvent parfois retarder volontairement un retrait pour les besoins de l'enquête.",
-     "Si l'hébergeur est à l'étranger, les démarches sont plus longues ; les autorités françaises n'ont pas de moyen direct de contrainte hors de l'Union européenne.",
-     "La plainte vise à faire poursuivre l'auteur : c'est une démarche distincte du retrait, qui peut prendre du temps.",
-     "La CNIL n'intervient qu'après une demande au site restée sans réponse satisfaisante pendant un mois."
+     "Les enquêteurs peuvent parfois retarder volontairement un retrait pour les besoins de l’enquête.",
+     "Si l’hébergeur est à l’étranger, les démarches sont plus longues ; les autorités françaises n’ont pas de moyen direct de contrainte hors de l’Union européenne.",
+     "La plainte vise à faire poursuivre l’auteur : c’est une démarche distincte du retrait, qui peut prendre du temps.",
+     "La CNIL n’intervient qu’après une demande au site restée sans réponse satisfaisante pendant un mois."
     ],
     "es": [
      "PHAROS remite los avisos a los investigadores, pero no retira los contenidos por sí mismo y, en general, no vuelve a contactar con quien avisa.",
@@ -445,9 +445,9 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Code pénal, article 226-2-1 (créé par la loi n° 2016-1321 du 7 octobre 2016) : diffuser sans accord un enregistrement ou un document à caractère sexuel, même obtenu avec le consentement de la personne ou par elle-même, est puni de 2 ans de prison et 60 000 € d'amende. Selon le cas, aussi : article 226-1 du Code pénal (atteinte à la vie privée), article 9 du Code civil (respect de la vie privée), article 17 du RGPD (effacement) et article 16 du DSA (signalement aux plateformes).",
+    "fr": "Code pénal, article 226-2-1 (créé par la loi n° 2016-1321 du 7 octobre 2016) : diffuser sans accord un enregistrement ou un document à caractère sexuel, même obtenu avec le consentement de la personne ou par elle-même, est puni de 2 ans de prison et 60 000 € d’amende. Selon le cas, aussi : article 226-1 du Code pénal (atteinte à la vie privée), article 9 du Code civil (respect de la vie privée), article 17 du RGPD (effacement) et article 16 du DSA (signalement aux plateformes).",
     "es": "Código Penal francés, artículo 226-2-1 (creado por la ley n.º 2016-1321 de 7 de octubre de 2016): difundir sin consentimiento una grabación o un documento de carácter sexual, aunque se obtuviera con el consentimiento de la persona o lo hiciera ella misma, se castiga con 2 años de prisión y 60 000 € de multa. Según el caso, también: artículo 226-1 del Código Penal (atentado contra la intimidad), artículo 9 del Código Civil francés (respeto de la vida privada), artículo 17 del RGPD (supresión) y artículo 16 de la DSA (avisos a las plataformas).",
-    "en": "French Criminal Code, Article 226-2-1 (created by Law No. 2016-1321 of 7 October 2016): sharing without consent a recording or document of a sexual nature, even if obtained with the person's consent or made by them, is punishable by 2 years in prison and a €60,000 fine. Depending on the case, also: Article 226-1 of the Criminal Code (invasion of privacy), Article 9 of the Civil Code (right to privacy), Article 17 of the GDPR (erasure) and Article 16 of the DSA (notices to platforms)."
+    "en": "French Criminal Code, Article 226-2-1 (created by Law No. 2016-1321 of 7 October 2016): sharing without consent a recording or document of a sexual nature, even if obtained with the person’s consent or made by them, is punishable by 2 years in prison and a €60,000 fine. Depending on the case, also: Article 226-1 of the Criminal Code (invasion of privacy), Article 9 of the Civil Code (right to privacy), Article 17 of the GDPR (erasure) and Article 16 of the DSA (notices to platforms)."
    },
    "source_officielle": {
     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033207318",
@@ -457,7 +457,7 @@
     {
      "url": "https://internet-signalement.gouv.fr/",
      "titre": {
-      "fr": "PHAROS – signaler un contenu illicite en ligne (ministère de l'Intérieur)",
+      "fr": "PHAROS – signaler un contenu illicite en ligne (ministère de l’Intérieur)",
       "es": "PHAROS – señalar un contenido ilícito en internet (Ministerio del Interior francés)",
       "en": "PHAROS – report illegal online content (French Ministry of the Interior)"
      }
@@ -531,21 +531,21 @@
     "en": "Since 2024, sharing a sexual montage or AI-made sexual content using your image or voice without consent is a crime in France. What to do."
    },
    "resume": {
-    "fr": "Depuis mai 2024, diffuser sans votre accord un montage à caractère sexuel, ou une image, une vidéo ou un son sexuel fabriqué par IA reproduisant votre visage ou votre voix, est un délit en France. Peu importe que le contenu soit faux : c'est justement ce que vise la loi.",
+    "fr": "Depuis mai 2024, diffuser sans votre accord un montage à caractère sexuel, ou une image, une vidéo ou un son sexuel fabriqué par IA reproduisant votre visage ou votre voix, est un délit en France. Peu importe que le contenu soit faux : c’est justement ce que vise la loi.",
     "es": "Desde mayo de 2024, en Francia es delito difundir sin tu consentimiento un montaje de carácter sexual, o una imagen, un vídeo o un audio sexual creado con IA que reproduzca tu cara o tu voz. Da igual que el contenido sea falso: es precisamente lo que castiga la ley.",
     "en": "Since May 2024, sharing without your consent a sexual montage, or a sexual image, video or audio made by AI that reproduces your face or voice, has been a criminal offence in France. It does not matter that the content is fake: that is exactly what the law targets."
    },
    "pour_qui": {
-    "fr": "Toute personne dont l'image ou la voix a été utilisée sans accord pour fabriquer un contenu sexuel (photomontage, « deepfake », faux nu, fausse voix) montré au public ou envoyé à quelqu'un, en France ou sur un site accessible en France. Si vous avez moins de 18 ans, parlez-en à un adulte de confiance et à la police, et voyez aussi la page Take It Down.",
+    "fr": "Toute personne dont l’image ou la voix a été utilisée sans accord pour fabriquer un contenu sexuel (photomontage, « deepfake », faux nu, fausse voix) montré au public ou envoyé à quelqu’un, en France ou sur un site accessible en France. Si vous avez moins de 18 ans, parlez-en à un adulte de confiance et à la police, et voyez aussi la page Take It Down.",
     "es": "Cualquier persona cuya imagen o voz se haya usado sin consentimiento para fabricar un contenido sexual (fotomontaje, «deepfake», desnudo falso, voz falsa) mostrado al público o enviado a alguien, en Francia o en una web accesible desde Francia. Si tienes menos de 18 años, habla con un adulto de confianza y con la policía, y consulta también la guía de Take It Down.",
     "en": "Anyone whose image or voice has been used without consent to make sexual content (photo montage, “deepfake”, fake nude, fake voice) shown to the public or sent to someone, in France or on a site accessible in France. If you are under 18, talk to a trusted adult and the police, and also see the Take It Down guide."
    },
    "etapes": {
     "fr": [
-     "Gardez des preuves sans repartager le contenu : URL, captures d'écran datées, nom du compte, messages éventuels.",
-     "Signalez le contenu à la plateforme en indiquant qu'il s'agit d'un montage à caractère sexuel diffusé sans consentement, puni par l'article 226-8-1 du Code pénal. Dans l'UE, la plateforme doit examiner votre signalement (DSA, article 16).",
-     "Portez plainte au commissariat, à la gendarmerie ou par courrier au procureur de la République. Si vous en avez une, une photo authentique peut aider à montrer qu'il s'agit d'un montage.",
-     "Si le contenu est visible par tous et que l'auteur est inconnu, vous pouvez aussi le signaler sur PHAROS (internet-signalement.gouv.fr). En cas d'urgence, appelez le 17.",
+     "Gardez des preuves sans repartager le contenu : URL, captures d’écran datées, nom du compte, messages éventuels.",
+     "Signalez le contenu à la plateforme en indiquant qu’il s’agit d’un montage à caractère sexuel diffusé sans consentement, puni par l’article 226-8-1 du Code pénal. Dans l’UE, la plateforme doit examiner votre signalement (DSA, article 16).",
+     "Portez plainte au commissariat, à la gendarmerie ou par courrier au procureur de la République. Si vous en avez une, une photo authentique peut aider à montrer qu’il s’agit d’un montage.",
+     "Si le contenu est visible par tous et que l’auteur est inconnu, vous pouvez aussi le signaler sur PHAROS (internet-signalement.gouv.fr). En cas d’urgence, appelez le 17.",
      "Demandez à Google de retirer ces faux contenus de ses résultats de recherche : il a une procédure dédiée aux contenus sexuels fabriqués.",
      "Si vous avez le fichier, StopNCII accepte aussi les deepfakes nus ou semi-nus de vous : cela aide à bloquer leur rediffusion sur les plateformes partenaires."
     ],
@@ -568,10 +568,10 @@
    },
    "a_preparer": {
     "fr": [
-     "L'adresse exacte (URL) de chaque publication",
-     "Des captures d'écran datées, avec l'URL visible",
+     "L’adresse exacte (URL) de chaque publication",
+     "Des captures d’écran datées, avec l’URL visible",
      "Le nom du compte qui publie et les messages éventuels",
-     "Une pièce d'identité (pour porter plainte)",
+     "Une pièce d’identité (pour porter plainte)",
      "Si possible, une photo authentique de vous, pour comparer"
     ],
     "es": [
@@ -590,21 +590,21 @@
     ]
    },
    "delai": {
-    "fr": "La loi ne fixe pas de délai chiffré de retrait ; dans l'UE, la plateforme doit traiter votre signalement avec diligence (DSA).",
+    "fr": "La loi ne fixe pas de délai chiffré de retrait ; dans l’UE, la plateforme doit traiter votre signalement avec diligence (DSA).",
     "es": "La ley no fija un plazo concreto de retirada; en la UE, la plataforma debe tratar tu aviso con diligencia (DSA).",
     "en": "The law sets no fixed removal deadline; in the EU, the platform must handle your notice diligently (DSA)."
    },
    "cout": {
-    "fr": "Gratuit (signalements, plainte). L'aide d'un avocat est possible mais pas obligatoire.",
+    "fr": "Gratuit (signalements, plainte). L’aide d’un avocat est possible mais pas obligatoire.",
     "es": "Gratuito (avisos, denuncia). Puedes recurrir a un abogado o abogada, pero no es obligatorio.",
     "en": "Free (reports, police complaint). A lawyer can help but is not required."
    },
    "limites": {
     "fr": [
-     "Ce délit existe depuis le 23 mai 2024 : pour des faits plus anciens, d'autres textes peuvent s'appliquer.",
-     "Il peut être difficile de démontrer qu'un contenu est fabriqué : gardez tous les éléments utiles.",
-     "Si le montage n'a pas de caractère sexuel, c'est un autre article qui s'applique (226-8), avec des peines plus faibles.",
-     "Les autorités françaises n'ont pas de moyen direct de contrainte sur un hébergeur installé hors de l'Union européenne.",
+     "Ce délit existe depuis le 23 mai 2024 : pour des faits plus anciens, d’autres textes peuvent s’appliquer.",
+     "Il peut être difficile de démontrer qu’un contenu est fabriqué : gardez tous les éléments utiles.",
+     "Si le montage n’a pas de caractère sexuel, c’est un autre article qui s’applique (226-8), avec des peines plus faibles.",
+     "Les autorités françaises n’ont pas de moyen direct de contrainte sur un hébergeur installé hors de l’Union européenne.",
      "Le retrait sur une plateforme ne supprime pas les copies déjà partagées ailleurs."
     ],
     "es": [
@@ -624,9 +624,9 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Code pénal, article 226-8-1 (créé par l'article 21 de la loi n° 2024-449 du 21 mai 2024, dite loi SREN) : diffuser sans consentement un montage à caractère sexuel réalisé avec l'image ou les paroles d'une personne, ou un contenu visuel ou sonore à caractère sexuel généré par un traitement algorithmique (IA) qui reproduit son image ou ses paroles, est puni de 2 ans de prison et 60 000 € d'amende, et de 3 ans et 75 000 € si la diffusion passe par un service en ligne. Pour un montage non sexuel : article 226-8.",
+    "fr": "Code pénal, article 226-8-1 (créé par l’article 21 de la loi n° 2024-449 du 21 mai 2024, dite loi SREN) : diffuser sans consentement un montage à caractère sexuel réalisé avec l’image ou les paroles d’une personne, ou un contenu visuel ou sonore à caractère sexuel généré par un traitement algorithmique (IA) qui reproduit son image ou ses paroles, est puni de 2 ans de prison et 60 000 € d’amende, et de 3 ans et 75 000 € si la diffusion passe par un service en ligne. Pour un montage non sexuel : article 226-8.",
     "es": "Código Penal francés, artículo 226-8-1 (creado por el artículo 21 de la ley n.º 2024-449 de 21 de mayo de 2024, llamada ley SREN): difundir sin consentimiento un montaje de carácter sexual hecho con la imagen o las palabras de una persona, o un contenido visual o sonoro de carácter sexual generado por un tratamiento algorítmico (IA) que reproduzca su imagen o sus palabras, se castiga con 2 años de prisión y 60 000 € de multa, y con 3 años y 75 000 € si se difunde a través de un servicio en línea. Para un montaje no sexual: artículo 226-8.",
-    "en": "French Criminal Code, Article 226-8-1 (created by Article 21 of Law No. 2024-449 of 21 May 2024, known as the SREN law): sharing without consent a sexual montage made with a person's image or words, or sexual visual or audio content generated by an algorithm (AI) that reproduces their image or words, is punishable by 2 years in prison and a €60,000 fine, rising to 3 years and €75,000 when shared through an online service. For a non-sexual montage: Article 226-8."
+    "en": "French Criminal Code, Article 226-8-1 (created by Article 21 of Law No. 2024-449 of 21 May 2024, known as the SREN law): sharing without consent a sexual montage made with a person’s image or words, or sexual visual or audio content generated by an algorithm (AI) that reproduces their image or words, is punishable by 2 years in prison and a €60,000 fine, rising to 3 years and €75,000 when shared through an online service. For a non-sexual montage: Article 226-8."
    },
    "source_officielle": {
     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049567458",
@@ -636,7 +636,7 @@
     {
      "url": "https://internet-signalement.gouv.fr/",
      "titre": {
-      "fr": "PHAROS – signaler un contenu illicite en ligne (ministère de l'Intérieur)",
+      "fr": "PHAROS – signaler un contenu illicite en ligne (ministère de l’Intérieur)",
       "es": "PHAROS – señalar un contenido ilícito en internet (Ministerio del Interior francés)",
       "en": "PHAROS – report illegal online content (French Ministry of the Interior)"
      }
@@ -684,17 +684,17 @@
     "en": "spain-aepd-priority-channel-intimate-images"
    },
    "titre": {
-    "fr": "Espagne : le Canal prioritaire de l'AEPD pour les images intimes",
+    "fr": "Espagne : le Canal prioritaire de l’AEPD pour les images intimes",
     "es": "Canal prioritario de la AEPD: retirar imágenes íntimas en España",
     "en": "Spain: the AEPD Priority Channel for intimate images"
    },
    "meta_description": {
-    "fr": "En Espagne, l'AEPD peut exiger en urgence le retrait de photos ou vidéos sexuelles ou violentes publiées sans accord. Conditions et démarche.",
+    "fr": "En Espagne, l’AEPD peut exiger en urgence le retrait de photos ou vidéos sexuelles ou violentes publiées sans accord. Conditions et démarche.",
     "es": "En España, la AEPD puede ordenar con urgencia la retirada de fotos o vídeos sexuales o violentos publicados sin permiso. Requisitos y pasos.",
     "en": "In Spain, the AEPD data protection authority can urgently order the removal of sexual or violent images posted without consent. How it works."
    },
    "resume": {
-    "fr": "En Espagne, l'autorité de protection des données (AEPD) dispose d'un « Canal prioritaire » pour demander le retrait urgent de photos, vidéos ou audios à caractère sexuel ou violent publiés en ligne sans consentement. Cette démarche est indépendante d'une plainte à la police ou au parquet.",
+    "fr": "En Espagne, l’autorité de protection des données (AEPD) dispose d’un « Canal prioritaire » pour demander le retrait urgent de photos, vidéos ou audios à caractère sexuel ou violent publiés en ligne sans consentement. Cette démarche est indépendante d’une plainte à la police ou au parquet.",
     "es": "En España, la Agencia Española de Protección de Datos (AEPD) tiene un Canal prioritario para pedir la retirada urgente de fotos, vídeos o audios de contenido sexual o violento publicados en internet sin consentimiento. Es independiente de la denuncia ante la policía o la fiscalía.",
     "en": "In Spain, the data protection authority (AEPD) runs a Priority Channel to request the urgent removal of sexual or violent photos, videos or audio posted online without consent. It is separate from a complaint to the police or the prosecutor."
    },
@@ -705,10 +705,10 @@
    },
    "etapes": {
     "fr": [
-     "Gardez des preuves sans retransférer le contenu : liens (URL) exacts, captures d'écran datées, nom du profil ou du compte.",
-     "Remplissez le formulaire du Canal prioritaire sur le site officiel de l'AEPD (sede electrónica) : indiquez où le contenu est publié (URL, ou réseau social et profil), décrivez brièvement les faits et précisez que vous n'avez pas consenti à la diffusion.",
-     "En parallèle, signalez le contenu à la plateforme avec son formulaire ; dans l'UE, elle doit examiner votre signalement (DSA, article 16).",
-     "Portez plainte auprès de la Policía Nacional, de la Guardia Civil, de la police régionale ou d'un tribunal : la démarche auprès de l'AEPD est indépendante de la plainte pénale.",
+     "Gardez des preuves sans retransférer le contenu : liens (URL) exacts, captures d’écran datées, nom du profil ou du compte.",
+     "Remplissez le formulaire du Canal prioritaire sur le site officiel de l’AEPD (sede electrónica) : indiquez où le contenu est publié (URL, ou réseau social et profil), décrivez brièvement les faits et précisez que vous n’avez pas consenti à la diffusion.",
+     "En parallèle, signalez le contenu à la plateforme avec son formulaire ; dans l’UE, elle doit examiner votre signalement (DSA, article 16).",
+     "Portez plainte auprès de la Policía Nacional, de la Guardia Civil, de la police régionale ou d’un tribunal : la démarche auprès de l’AEPD est indépendante de la plainte pénale.",
      "Si le contenu circule seulement par WhatsApp, Telegram ou une autre messagerie, ou par e-mail, le Canal prioritaire ne peut pas intervenir : adressez-vous directement à la police.",
      "Pour compliquer une nouvelle mise en ligne, vous pouvez utiliser StopNCII, qui crée une empreinte numérique de vos images sans les envoyer."
     ],
@@ -722,7 +722,7 @@
     ],
     "en": [
      "Keep evidence without forwarding the content: exact links (URLs), dated screenshots and the profile or account name.",
-     "Fill in the Priority Channel form on the AEPD's official e-office (sede electrónica): say where it is published (URL, or social network and profile), briefly describe what happened and state that you did not consent to it being shared.",
+     "Fill in the Priority Channel form on the AEPD’s official e-office (sede electrónica): say where it is published (URL, or social network and profile), briefly describe what happened and state that you did not consent to it being shared.",
      "At the same time, report the content to the platform using its form; in the EU, it must examine your notice (DSA, Article 16).",
      "File a complaint with the Policía Nacional, the Guardia Civil, the regional police or a court: the AEPD request is separate from the criminal complaint.",
      "If the content only circulates via WhatsApp, Telegram or another messaging app, or by email, the Priority Channel cannot act: go straight to the police.",
@@ -732,9 +732,9 @@
    "a_preparer": {
     "fr": [
      "Les liens (URL) exacts, ou le nom du réseau social et du profil",
-     "Une courte description des faits, en précisant que vous n'avez pas consenti à la diffusion",
-     "Des captures d'écran datées",
-     "Pour un dépôt en ligne : un moyen d'identification du système espagnol Cl@ve (certificat numérique, DNI électronique, Cl@ve PIN ou Cl@ve Permanente)",
+     "Une courte description des faits, en précisant que vous n’avez pas consenti à la diffusion",
+     "Des captures d’écran datées",
+     "Pour un dépôt en ligne : un moyen d’identification du système espagnol Cl@ve (certificat numérique, DNI électronique, Cl@ve PIN ou Cl@ve Permanente)",
      "Vos coordonnées"
     ],
     "es": [
@@ -748,12 +748,12 @@
      "The exact links (URLs), or the name of the social network and profile",
      "A short description of what happened, stating that you did not consent to it being shared",
      "Dated screenshots",
-     "To file online: a means of identification under Spain's Cl@ve system (digital certificate, electronic ID card, Cl@ve PIN or Cl@ve Permanente)",
+     "To file online: a means of identification under Spain’s Cl@ve system (digital certificate, electronic ID card, Cl@ve PIN or Cl@ve Permanente)",
      "Your contact details"
     ]
    },
    "delai": {
-    "fr": "L'AEPD présente le Canal prioritaire comme une voie de retrait urgent, mais ne publie pas de délai de réponse fixe.",
+    "fr": "L’AEPD présente le Canal prioritaire comme une voie de retrait urgent, mais ne publie pas de délai de réponse fixe.",
     "es": "La AEPD presenta el Canal prioritario como una vía de retirada urgente, pero no publica un plazo fijo de respuesta.",
     "en": "The AEPD presents the Priority Channel as an urgent removal route, but does not publish a fixed response time."
    },
@@ -764,11 +764,11 @@
    },
    "limites": {
     "fr": [
-     "Réservé aux contenus sexuels ou violents dans des situations d'une gravité exceptionnelle, et aux personnes espagnoles ou se trouvant en Espagne.",
+     "Réservé aux contenus sexuels ou violents dans des situations d’une gravité exceptionnelle, et aux personnes espagnoles ou se trouvant en Espagne.",
      "Ne fonctionne pas si le contenu circule seulement par messagerie instantanée (WhatsApp, Telegram…) ou par e-mail.",
-     "Sans identification électronique espagnole (Cl@ve), le site de l'AEPD prévoit un dépôt sur papier dans un registre officiel.",
-     "Si le site est hébergé hors d'Espagne, l'AEPD peut avoir besoin de la coopération d'autres autorités, et la démarche peut être plus longue.",
-     "Aucun délai de réponse n'est publié.",
+     "Sans identification électronique espagnole (Cl@ve), le site de l’AEPD prévoit un dépôt sur papier dans un registre officiel.",
+     "Si le site est hébergé hors d’Espagne, l’AEPD peut avoir besoin de la coopération d’autres autorités, et la démarche peut être plus longue.",
+     "Aucun délai de réponse n’est publié.",
      "Le retrait sur un site ne supprime pas les copies publiées ailleurs."
     ],
     "es": [
@@ -790,9 +790,9 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Code pénal espagnol, article 197.7 : diffuser sans autorisation des images ou enregistrements obtenus avec l'accord de la personne dans un domicile ou un autre lieu à l'abri des regards, quand cela porte gravement atteinte à son intimité, est puni de 3 mois à 1 an de prison ou d'une amende de 6 à 12 mois ; la personne qui les rediffuse après les avoir reçus peut être punie d'une amende de 1 à 3 mois, et la peine est aggravée si l'auteur est le conjoint ou l'ex-partenaire, si la victime est mineure ou handicapée, ou en cas de but lucratif. Selon le cas, l'article 173.1 (traitement dégradant) peut aussi s'appliquer. Le Canal prioritaire repose sur le droit de la protection des données (RGPD et loi organique 3/2018) et sur l'article 52 de la loi organique 8/2021 (LOPIVI), qui oblige l'AEPD à assurer un canal accessible et sûr.",
+    "fr": "Code pénal espagnol, article 197.7 : diffuser sans autorisation des images ou enregistrements obtenus avec l’accord de la personne dans un domicile ou un autre lieu à l’abri des regards, quand cela porte gravement atteinte à son intimité, est puni de 3 mois à 1 an de prison ou d’une amende de 6 à 12 mois ; la personne qui les rediffuse après les avoir reçus peut être punie d’une amende de 1 à 3 mois, et la peine est aggravée si l’auteur est le conjoint ou l’ex-partenaire, si la victime est mineure ou handicapée, ou en cas de but lucratif. Selon le cas, l’article 173.1 (traitement dégradant) peut aussi s’appliquer. Le Canal prioritaire repose sur le droit de la protection des données (RGPD et loi organique 3/2018) et sur l’article 52 de la loi organique 8/2021 (LOPIVI), qui oblige l’AEPD à assurer un canal accessible et sûr.",
     "es": "Código Penal, artículo 197.7: difundir sin autorización imágenes o grabaciones obtenidas con el consentimiento de la persona en un domicilio u otro lugar fuera de la mirada de terceros, cuando la divulgación menoscabe gravemente su intimidad, se castiga con prisión de 3 meses a 1 año o multa de 6 a 12 meses; quien las reenvía después de recibirlas puede ser castigado con multa de 1 a 3 meses, y la pena se agrava si el autor es el cónyuge o la pareja o expareja, si la víctima es menor o tiene una discapacidad necesitada de especial protección, o si hay ánimo de lucro. Según el caso, también puede aplicarse el artículo 173.1 (trato degradante). El Canal prioritario se basa en la normativa de protección de datos (RGPD y Ley Orgánica 3/2018) y en el artículo 52 de la Ley Orgánica 8/2021 (LOPIVI), que obliga a la AEPD a asegurar un canal accesible y seguro.",
-    "en": "Spanish Criminal Code, Article 197.7: sharing without authorisation images or recordings obtained with the person's consent at home or in another place out of sight of others, when this seriously harms their privacy, is punishable by 3 months to 1 year in prison or a fine of 6 to 12 months; anyone who re-shares them after receiving them can be fined (1 to 3 months), and the penalty is higher if the offender is the spouse or a current or former partner, if the victim is a minor or a person with a disability, or if done for profit. Depending on the case, Article 173.1 (degrading treatment) may also apply. The Priority Channel relies on data protection law (GDPR and Organic Law 3/2018) and on Article 52 of Organic Law 8/2021 (LOPIVI), which requires the AEPD to provide an accessible and secure channel."
+    "en": "Spanish Criminal Code, Article 197.7: sharing without authorisation images or recordings obtained with the person’s consent at home or in another place out of sight of others, when this seriously harms their privacy, is punishable by 3 months to 1 year in prison or a fine of 6 to 12 months; anyone who re-shares them after receiving them can be fined (1 to 3 months), and the penalty is higher if the offender is the spouse or a current or former partner, if the victim is a minor or a person with a disability, or if done for profit. Depending on the case, Article 173.1 (degrading treatment) may also apply. The Priority Channel relies on data protection law (GDPR and Organic Law 3/2018) and on Article 52 of Organic Law 8/2021 (LOPIVI), which requires the AEPD to provide an accessible and secure channel."
    },
    "source_officielle": {
     "url": "https://www.aepd.es/canalprioritario",
@@ -802,7 +802,7 @@
     {
      "url": "https://sedeaepd.gob.es/sede-electronica/procedures/claims/buzon-guiado/Q600",
      "titre": {
-      "fr": "Formulaire du Canal prioritaire (site officiel de l'AEPD, en espagnol)",
+      "fr": "Formulaire du Canal prioritaire (site officiel de l’AEPD, en espagnol)",
       "es": "Formulario del Canal prioritario (sede electrónica de la AEPD)",
       "en": "Priority Channel form (AEPD e-office, in Spanish)"
      }
@@ -854,28 +854,28 @@
     "en": "Under 18 in Spain: if an intimate image of you is shared"
    },
    "meta_description": {
-    "fr": "Mineur en Espagne et une photo ou vidéo intime de vous circule ? Ce n'est pas votre faute. Les canaux officiels de l'AEPD et qui prévenir.",
+    "fr": "Mineur en Espagne et une photo ou vidéo intime de vous circule ? Ce n’est pas votre faute. Les canaux officiels de l’AEPD et qui prévenir.",
     "es": "¿Tienes menos de 18 años y circula una foto o vídeo íntimo tuyo? No es tu culpa. Los canales oficiales de la AEPD y a quién avisar.",
     "en": "Under 18 in Spain and an intimate photo or video of you is going around? It is not your fault. The official AEPD channels and who to tell."
    },
    "resume": {
-    "fr": "Si vous avez moins de 18 ans et que des photos, vidéos ou audios intimes ou violents de vous sont publiés sans votre accord, ce n'est pas votre faute et de l'aide existe. En Espagne, l'autorité de protection des données (AEPD) a un formulaire spécial pour les mineurs afin de demander leur retrait.",
+    "fr": "Si vous avez moins de 18 ans et que des photos, vidéos ou audios intimes ou violents de vous sont publiés sans votre accord, ce n’est pas votre faute et de l’aide existe. En Espagne, l’autorité de protection des données (AEPD) a un formulaire spécial pour les mineurs afin de demander leur retrait.",
     "es": "Si tienes menos de 18 años y alguien publica fotos, vídeos o audios íntimos o violentos tuyos sin tu permiso, no es tu culpa y hay ayuda. En España, la Agencia Española de Protección de Datos (AEPD) tiene un formulario especial para menores para pedir que se retiren.",
     "en": "If you are under 18 and intimate or violent photos, videos or audio of you are posted without your permission, it is not your fault and help exists. In Spain, the data protection authority (AEPD) has a special form for minors to ask for them to be removed."
    },
    "pour_qui": {
-    "fr": "Les jeunes de 14 à 17 ans qui sont espagnols ou se trouvent en Espagne, quand des contenus sexuels ou violents sont publiés sur internet sans autorisation, qu'ils les concernent eux-mêmes ou une autre personne. Pour les moins de 14 ans, l'AEPD demande que ce soit le père, la mère ou le tuteur qui fasse la démarche.",
+    "fr": "Les jeunes de 14 à 17 ans qui sont espagnols ou se trouvent en Espagne, quand des contenus sexuels ou violents sont publiés sur internet sans autorisation, qu’ils les concernent eux-mêmes ou une autre personne. Pour les moins de 14 ans, l’AEPD demande que ce soit le père, la mère ou le tuteur qui fasse la démarche.",
     "es": "Chicas y chicos de 14 a 17 años que son españoles o están en España, cuando se publican en internet sin permiso contenidos sexuales o violentos, sean sobre ti o sobre otra persona. Si tienes menos de 14 años, la AEPD pide que lo comunique tu madre, tu padre o tu tutor.",
     "en": "Young people aged 14 to 17 who are Spanish or in Spain, when sexual or violent content is posted online without permission, whether it shows them or someone else. For under-14s, the AEPD asks that a parent or guardian make the request."
    },
    "etapes": {
     "fr": [
-     "Parlez-en dès que possible à un adulte de confiance (parent, tuteur, enseignant, personne référente de votre établissement). Vous n'avez pas à gérer cela seul(e).",
-     "Ne retransférez pas l'image et ne la montrez à personne, même pour demander de l'aide ou prouver quelque chose. Notez seulement où elle est publiée (l'adresse web ou le profil).",
-     "Utilisez le Canal prioritaire pour les mineurs de l'AEPD (14-17 ans) : il suffit d'indiquer où le contenu est publié et une adresse e-mail pour vous répondre ; aucun certificat numérique n'est demandé.",
+     "Parlez-en dès que possible à un adulte de confiance (parent, tuteur, enseignant, personne référente de votre établissement). Vous n’avez pas à gérer cela seul(e).",
+     "Ne retransférez pas l’image et ne la montrez à personne, même pour demander de l’aide ou prouver quelque chose. Notez seulement où elle est publiée (l’adresse web ou le profil).",
+     "Utilisez le Canal prioritaire pour les mineurs de l’AEPD (14-17 ans) : il suffit d’indiquer où le contenu est publié et une adresse e-mail pour vous répondre ; aucun certificat numérique n’est demandé.",
      "Prévenez la police (Policía Nacional, Guardia Civil ou police régionale), de préférence avec un adulte de confiance. En cas de danger, appelez le 112.",
-     "Si vous avez des questions, vous pouvez écrire au Canal Joven de l'AEPD (canaljoven@aepd.es ou WhatsApp au 616 172 204) ou appeler le 017, la ligne d'aide gratuite et confidentielle d'INCIBE.",
-     "Si l'image a été prise quand vous aviez moins de 18 ans et qu'elle est sur votre appareil, le service Take It Down (NCMEC) peut aider à freiner sa diffusion sur certaines plateformes, sans envoyer l'image."
+     "Si vous avez des questions, vous pouvez écrire au Canal Joven de l’AEPD (canaljoven@aepd.es ou WhatsApp au 616 172 204) ou appeler le 017, la ligne d’aide gratuite et confidentielle d’INCIBE.",
+     "Si l’image a été prise quand vous aviez moins de 18 ans et qu’elle est sur votre appareil, le service Take It Down (NCMEC) peut aider à freiner sa diffusion sur certaines plateformes, sans envoyer l’image."
     ],
     "es": [
      "Habla cuanto antes con un adulto de confianza (tu madre, tu padre, tu tutor, un profesor o la persona de referencia de tu centro). No tienes que pasar por esto sin apoyo.",
@@ -888,18 +888,18 @@
     "en": [
      "Talk as soon as you can to a trusted adult (parent, guardian, teacher or the support person at your school). You do not have to deal with this alone.",
      "Do not forward the image or show it to anyone, not even to ask for help or to prove something. Just note where it is posted (the web address or the profile).",
-     "Use the AEPD's Priority Channel for minors (ages 14–17): you only need to say where the content is posted and give an email address for the reply; no digital certificate is needed.",
+     "Use the AEPD’s Priority Channel for minors (ages 14–17): you only need to say where the content is posted and give an email address for the reply; no digital certificate is needed.",
      "Tell the police (Policía Nacional, Guardia Civil or regional police), ideally together with a trusted adult. If you are in danger, call 112.",
-     "If you have questions, you can write to the AEPD's Canal Joven (canaljoven@aepd.es or WhatsApp 616 172 204) or call 017, INCIBE's free and confidential helpline.",
+     "If you have questions, you can write to the AEPD’s Canal Joven (canaljoven@aepd.es or WhatsApp 616 172 204) or call 017, INCIBE’s free and confidential helpline.",
      "If the image was taken when you were under 18 and it is on your device, the Take It Down service (NCMEC) can help slow its spread on some platforms, without sending the image."
     ]
    },
    "a_preparer": {
     "fr": [
-     "Où le contenu est publié : l'adresse web (URL), ou le nom du réseau social et du profil",
-     "Une adresse e-mail où l'on peut vous répondre",
-     "Si vous le souhaitez : votre nom, votre DNI (carte d'identité) et un numéro de téléphone (ce n'est pas obligatoire)",
-     "Joindre l'image n'est pas nécessaire : le plus important, c'est l'endroit où elle est publiée"
+     "Où le contenu est publié : l’adresse web (URL), ou le nom du réseau social et du profil",
+     "Une adresse e-mail où l’on peut vous répondre",
+     "Si vous le souhaitez : votre nom, votre DNI (carte d’identité) et un numéro de téléphone (ce n’est pas obligatoire)",
+     "Joindre l’image n’est pas nécessaire : le plus important, c’est l’endroit où elle est publiée"
     ],
     "es": [
      "Dónde está publicado: la dirección web (URL), o el nombre de la red social y del perfil",
@@ -915,7 +915,7 @@
     ]
    },
    "delai": {
-    "fr": "L'AEPD traite ce canal comme une voie urgente, mais ne publie pas de délai de réponse fixe.",
+    "fr": "L’AEPD traite ce canal comme une voie urgente, mais ne publie pas de délai de réponse fixe.",
     "es": "La AEPD trata este canal como una vía urgente, pero no publica un plazo fijo de respuesta.",
     "en": "The AEPD treats this channel as an urgent route but does not publish a fixed response time."
    },
@@ -926,8 +926,8 @@
    },
    "limites": {
     "fr": [
-     "Si vous avez moins de 14 ans, c'est votre père, votre mère ou votre tuteur qui doit faire la démarche auprès de l'AEPD.",
-     "L'AEPD ne peut pas aider par ce canal si les images circulent seulement par WhatsApp, Telegram ou d'autres messages privés : dans ce cas, prévenez la police.",
+     "Si vous avez moins de 14 ans, c’est votre père, votre mère ou votre tuteur qui doit faire la démarche auprès de l’AEPD.",
+     "L’AEPD ne peut pas aider par ce canal si les images circulent seulement par WhatsApp, Telegram ou d’autres messages privés : dans ce cas, prévenez la police.",
      "Ce canal est réservé aux personnes espagnoles ou qui se trouvent en Espagne.",
      "Le retrait sur un site ne supprime pas les copies publiées ailleurs."
     ],
@@ -945,12 +945,12 @@
     ]
    },
    "attention": {
-    "fr": "Si quelqu'un vous menace ou vous demande d'autres photos, ne lui envoyez plus rien : gardez les messages et parlez-en tout de suite à un adulte de confiance et à la police.",
+    "fr": "Si quelqu’un vous menace ou vous demande d’autres photos, ne lui envoyez plus rien : gardez les messages et parlez-en tout de suite à un adulte de confiance et à la police.",
     "es": "Si alguien te amenaza o te pide más fotos, no le envíes nada más: guarda los mensajes y cuéntaselo ya a un adulto de confianza y a la policía.",
     "en": "If someone threatens you or asks for more photos, do not send anything else: keep the messages and tell a trusted adult and the police right away."
    },
    "base_legale": {
-    "fr": "En Espagne, l'article 197.7 du Code pénal punit la diffusion sans autorisation d'images intimes, avec une peine aggravée quand la victime est mineure. L'article 52 de la loi organique 8/2021 (LOPIVI) oblige l'AEPD à assurer un canal accessible et sûr pour signaler les contenus illicites en ligne.",
+    "fr": "En Espagne, l’article 197.7 du Code pénal punit la diffusion sans autorisation d’images intimes, avec une peine aggravée quand la victime est mineure. L’article 52 de la loi organique 8/2021 (LOPIVI) oblige l’AEPD à assurer un canal accessible et sûr pour signaler les contenus illicites en ligne.",
     "es": "En España, el artículo 197.7 del Código Penal castiga la difusión sin autorización de imágenes íntimas, con una pena agravada cuando la víctima es menor de edad. El artículo 52 de la Ley Orgánica 8/2021 (LOPIVI) obliga a la AEPD a asegurar un canal accesible y seguro para denunciar contenidos ilícitos en internet.",
     "en": "In Spain, Article 197.7 of the Criminal Code punishes sharing intimate images without authorisation, with a heavier penalty when the victim is a minor. Article 52 of Organic Law 8/2021 (LOPIVI) requires the AEPD to provide an accessible and secure channel for reporting illegal online content."
    },
@@ -970,7 +970,7 @@
     {
      "url": "https://www.tudecideseninternet.es/jovenes/si-tienes-problemas",
      "titre": {
-      "fr": "Canal Joven de l'AEPD : contact et aide (en espagnol)",
+      "fr": "Canal Joven de l’AEPD : contact et aide (en espagnol)",
       "es": "Canal Joven de la AEPD: contacto y ayuda",
       "en": "AEPD Canal Joven: contact and help (in Spanish)"
      }
@@ -978,9 +978,9 @@
     {
      "url": "https://www.incibe.es/el-017-se-ocupa",
      "titre": {
-      "fr": "017 : ligne d'aide gratuite et confidentielle d'INCIBE (en espagnol)",
+      "fr": "017 : ligne d’aide gratuite et confidentielle d’INCIBE (en espagnol)",
       "es": "017: línea de ayuda gratuita y confidencial de INCIBE",
-      "en": "017: INCIBE's free and confidential helpline (in Spanish)"
+      "en": "017: INCIBE’s free and confidential helpline (in Spanish)"
      }
     },
     {
@@ -1010,33 +1010,33 @@
     "en": "icann-complaint-domain-registrar"
    },
    "titre": {
-    "fr": "Le registrar d'un nom de domaine ne répond pas : saisir l'ICANN",
+    "fr": "Le registrar d’un nom de domaine ne répond pas : saisir l’ICANN",
     "es": "Si el registrador de un dominio no responde: reclamar a la ICANN",
     "en": "When a domain registrar ignores your abuse report: ICANN"
    },
    "meta_description": {
-    "fr": "Pour un site en .com, .net, .org…, le registrar doit traiter les signalements d'abus. S'il ne réagit pas, vous pouvez saisir l'ICANN. Mode d'emploi.",
+    "fr": "Pour un site en .com, .net, .org…, le registrar doit traiter les signalements d’abus. S’il ne réagit pas, vous pouvez saisir l’ICANN. Mode d’emploi.",
     "es": "En webs .com, .net, .org…, el registrador debe atender los avisos de abuso. Si no responde, puedes reclamar ante la ICANN. Cómo hacerlo.",
     "en": "For .com, .net, .org and similar sites, the registrar must handle abuse reports. If it does not, you can complain to ICANN. Here is how."
    },
    "resume": {
-    "fr": "Un site en .com, .net, .org ou dans une autre extension générique est réservé auprès d'un « registrar » (bureau d'enregistrement de noms de domaine). Son contrat avec l'ICANN l'oblige à recevoir les signalements d'abus, à enquêter et à y répondre de façon appropriée. S'il ne le fait pas, vous pouvez porter plainte auprès de l'ICANN.",
+    "fr": "Un site en .com, .net, .org ou dans une autre extension générique est réservé auprès d’un « registrar » (bureau d’enregistrement de noms de domaine). Son contrat avec l’ICANN l’oblige à recevoir les signalements d’abus, à enquêter et à y répondre de façon appropriée. S’il ne le fait pas, vous pouvez porter plainte auprès de l’ICANN.",
     "es": "Una web .com, .net, .org u otra extensión genérica se registra a través de un «registrador» (empresa que gestiona nombres de dominio). Su contrato con la ICANN le obliga a recibir avisos de abuso, investigarlos y responder de forma adecuada. Si no lo hace, puedes reclamar ante la ICANN.",
     "en": "A .com, .net, .org or other generic-extension site is registered through a “registrar” (a domain name registration company). Its contract with ICANN requires it to receive abuse reports, investigate them and respond appropriately. If it does not, you can complain to ICANN."
    },
    "pour_qui": {
-    "fr": "Toute personne qui a signalé un site illicite (faux site, contenu volé, image diffusée sans accord, hameçonnage…) au registrar de son nom de domaine générique, sans obtenir de réponse adaptée. À utiliser en dernier recours, après la plateforme et l'hébergeur.",
+    "fr": "Toute personne qui a signalé un site illicite (faux site, contenu volé, image diffusée sans accord, hameçonnage…) au registrar de son nom de domaine générique, sans obtenir de réponse adaptée. À utiliser en dernier recours, après la plateforme et l’hébergeur.",
     "es": "Cualquier persona que haya avisado al registrador de un dominio genérico sobre una web ilícita (web falsa, contenido robado, imagen difundida sin consentimiento, phishing…) sin obtener una respuesta adecuada. Es un último recurso, después de la plataforma y del proveedor de alojamiento.",
     "en": "Anyone who has reported an unlawful site (fake site, stolen content, image shared without consent, phishing…) to the registrar of its generic domain name without getting a proper response. A last resort, after the platform and the web host."
    },
    "etapes": {
     "fr": [
-     "Trouvez le registrar du site avec l'outil officiel ICANN Lookup (lookup.icann.org) : tapez le nom de domaine et notez le contact « abuse » du registrar.",
-     "Vérifiez l'extension : l'ICANN n'a autorité que sur les extensions génériques (.com, .net, .org, .info…). Pour .fr, .es, .us et les autres extensions nationales, adressez-vous au gestionnaire national de l'extension.",
-     "Envoyez au registrar un signalement clair : URL exactes, ce qui est illicite et pourquoi, captures d'écran. Depuis avril 2024, il doit vous envoyer ou afficher un accusé de réception indiquant son nom, le domaine et la date : gardez-le.",
-     "Laissez-lui un délai raisonnable pour enquêter : l'ICANN demande de ne pas porter plainte le jour même du signalement.",
-     "S'il ne réagit pas de façon appropriée, déposez une plainte en ligne avec le formulaire « Abuse/DNS Abuse (Registrar) » de l'ICANN, en joignant la preuve de votre signalement et tous les échanges. Vous pouvez demander que vos coordonnées ne soient pas transmises au registrar.",
-     "Vous recevez un e-mail avec un numéro de dossier ; répondez rapidement si l'ICANN vous demande des précisions."
+     "Trouvez le registrar du site avec l’outil officiel ICANN Lookup (lookup.icann.org) : tapez le nom de domaine et notez le contact « abuse » du registrar.",
+     "Vérifiez l’extension : l’ICANN n’a autorité que sur les extensions génériques (.com, .net, .org, .info…). Pour .fr, .es, .us et les autres extensions nationales, adressez-vous au gestionnaire national de l’extension.",
+     "Envoyez au registrar un signalement clair : URL exactes, ce qui est illicite et pourquoi, captures d’écran. Depuis avril 2024, il doit vous envoyer ou afficher un accusé de réception indiquant son nom, le domaine et la date : gardez-le.",
+     "Laissez-lui un délai raisonnable pour enquêter : l’ICANN demande de ne pas porter plainte le jour même du signalement.",
+     "S’il ne réagit pas de façon appropriée, déposez une plainte en ligne avec le formulaire « Abuse/DNS Abuse (Registrar) » de l’ICANN, en joignant la preuve de votre signalement et tous les échanges. Vous pouvez demander que vos coordonnées ne soient pas transmises au registrar.",
+     "Vous recevez un e-mail avec un numéro de dossier ; répondez rapidement si l’ICANN vous demande des précisions."
     ],
     "es": [
      "Encuentra el registrador de la web con la herramienta oficial ICANN Lookup (lookup.icann.org): escribe el nombre de dominio y anota el contacto «abuse» del registrador.",
@@ -1047,11 +1047,11 @@
      "Recibirás un correo con un número de expediente; responde rápido si la ICANN te pide más información."
     ],
     "en": [
-     "Find the site's registrar with ICANN's official Lookup tool (lookup.icann.org): enter the domain name and note the registrar's abuse contact.",
-     "Check the extension: ICANN only has authority over generic extensions (.com, .net, .org, .info…). For .fr, .es, .us and other country-code extensions, contact that country's registry.",
+     "Find the site’s registrar with ICANN’s official Lookup tool (lookup.icann.org): enter the domain name and note the registrar’s abuse contact.",
+     "Check the extension: ICANN only has authority over generic extensions (.com, .net, .org, .info…). For .fr, .es, .us and other country-code extensions, contact that country’s registry.",
      "Send the registrar a clear report: exact URLs, what is unlawful and why, screenshots. Since April 2024 it must send or display an acknowledgement showing its name, the domain and the date: keep it.",
      "Give it a reasonable time to investigate: ICANN asks you not to complain on the same day as your report.",
-     "If it does not respond appropriately, file an online complaint using ICANN's “Abuse/DNS Abuse (Registrar)” form, attaching proof of your report and all exchanges. You can ask for your contact details not to be shared with the registrar.",
+     "If it does not respond appropriately, file an online complaint using ICANN’s “Abuse/DNS Abuse (Registrar)” form, attaching proof of your report and all exchanges. You can ask for your contact details not to be shared with the registrar.",
      "You will receive an email with a case number; answer quickly if ICANN asks for more information."
     ]
    },
@@ -1060,8 +1060,8 @@
      "Le nom de domaine et les URL exactes concernées",
      "La copie de votre signalement au registrar et son accusé de réception",
      "Tous les échanges qui ont suivi",
-     "Des captures d'écran montrant le problème, avec l'URL visible",
-     "Une courte explication de ce que le registrar n'a pas fait"
+     "Des captures d’écran montrant le problème, avec l’URL visible",
+     "Une courte explication de ce que le registrar n’a pas fait"
     ],
     "es": [
      "El nombre de dominio y las URL exactas afectadas",
@@ -1079,7 +1079,7 @@
     ]
    },
    "delai": {
-    "fr": "Pas de délai fixe : le registrar doit prendre des mesures « raisonnables et rapides » pour enquêter et répondre ; l'ICANN traite la plainte selon sa complexité. Un examen sous 24 heures n'est prévu que pour les signalements venant des autorités (police, etc.).",
+    "fr": "Pas de délai fixe : le registrar doit prendre des mesures « raisonnables et rapides » pour enquêter et répondre ; l’ICANN traite la plainte selon sa complexité. Un examen sous 24 heures n’est prévu que pour les signalements venant des autorités (police, etc.).",
     "es": "No hay un plazo fijo: el registrador debe tomar medidas «razonables y rápidas» para investigar y responder; la ICANN tramita la reclamación según su complejidad. La revisión en 24 horas solo está prevista para avisos de autoridades (policía, etc.).",
     "en": "No fixed deadline: the registrar must take “reasonable and prompt steps” to investigate and respond; ICANN handles the complaint depending on its complexity. A 24-hour review only applies to reports from authorities (police, etc.)."
    },
@@ -1090,11 +1090,11 @@
    },
    "limites": {
     "fr": [
-     "L'ICANN ne contrôle pas le contenu d'internet et ne supprime jamais un contenu : elle peut seulement exiger du registrar qu'il respecte son contrat.",
-     "Les extensions nationales (.fr, .es, .us…) ne relèvent pas de l'ICANN.",
-     "Pour un contenu (en dehors de l'hameçonnage, des logiciels malveillants et des autres « abus DNS »), le registrar doit enquêter et répondre, mais il peut estimer que l'hébergeur est mieux placé pour agir.",
-     "Un registrar ne peut agir que sur le nom de domaine entier (par exemple en le suspendant), ce qui coupe tout le site : il peut préférer vous renvoyer vers l'hébergeur.",
-     "Sans preuve de votre signalement préalable au registrar, l'ICANN ne peut pas traiter la plainte."
+     "L’ICANN ne contrôle pas le contenu d’internet et ne supprime jamais un contenu : elle peut seulement exiger du registrar qu’il respecte son contrat.",
+     "Les extensions nationales (.fr, .es, .us…) ne relèvent pas de l’ICANN.",
+     "Pour un contenu (en dehors de l’hameçonnage, des logiciels malveillants et des autres « abus DNS »), le registrar doit enquêter et répondre, mais il peut estimer que l’hébergeur est mieux placé pour agir.",
+     "Un registrar ne peut agir que sur le nom de domaine entier (par exemple en le suspendant), ce qui coupe tout le site : il peut préférer vous renvoyer vers l’hébergeur.",
+     "Sans preuve de votre signalement préalable au registrar, l’ICANN ne peut pas traiter la plainte."
     ],
     "es": [
      "La ICANN no controla el contenido de internet y nunca elimina contenidos: solo puede exigir al registrador que cumpla su contrato.",
@@ -1105,7 +1105,7 @@
     ],
     "en": [
      "ICANN does not control internet content and never removes content: it can only require the registrar to honour its contract.",
-     "Country-code extensions (.fr, .es, .us…) are outside ICANN's remit.",
+     "Country-code extensions (.fr, .es, .us…) are outside ICANN’s remit.",
      "For content issues (other than phishing, malware and other “DNS Abuse”), the registrar must investigate and respond, but it may decide the web host is better placed to act.",
      "A registrar can only act on the whole domain (for example by suspending it), which takes the entire site offline: it may prefer to refer you to the web host.",
      "Without proof that you reported to the registrar first, ICANN cannot process the complaint."
@@ -1113,9 +1113,9 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Contrat d'accréditation des registrars de l'ICANN (RAA de 2013), section 3.18, modifiée le 5 avril 2024 : publier sur la page d'accueil un contact « abuse » (e-mail ou formulaire sans connexion), accuser réception, prendre des mesures raisonnables et rapides pour enquêter et répondre de façon appropriée aux signalements, et agir contre les « abus DNS » (hameçonnage, logiciels malveillants, botnets, pharming, spam servant à les diffuser). Ce n'est pas une loi mais un contrat privé, que l'ICANN fait respecter.",
+    "fr": "Contrat d’accréditation des registrars de l’ICANN (RAA de 2013), section 3.18, modifiée le 5 avril 2024 : publier sur la page d’accueil un contact « abuse » (e-mail ou formulaire sans connexion), accuser réception, prendre des mesures raisonnables et rapides pour enquêter et répondre de façon appropriée aux signalements, et agir contre les « abus DNS » (hameçonnage, logiciels malveillants, botnets, pharming, spam servant à les diffuser). Ce n’est pas une loi mais un contrat privé, que l’ICANN fait respecter.",
     "es": "Contrato de acreditación de registradores de la ICANN (RAA de 2013), sección 3.18, modificada el 5 de abril de 2024: publicar en la página de inicio un contacto de abuso (correo o formulario sin iniciar sesión), enviar acuse de recibo, tomar medidas razonables y rápidas para investigar y responder adecuadamente a los avisos, y actuar contra el «abuso del DNS» (phishing, malware, botnets, pharming y el spam que sirve para difundirlos). No es una ley, sino un contrato privado que la ICANN hace cumplir.",
-    "en": "ICANN's Registrar Accreditation Agreement (2013 RAA), section 3.18, amended on 5 April 2024: publish an abuse contact on the homepage (email or a web form with no login), acknowledge receipt, take reasonable and prompt steps to investigate and respond appropriately to reports, and act against “DNS Abuse” (phishing, malware, botnets, pharming, and spam used to deliver them). It is not a law but a private contract that ICANN enforces."
+    "en": "ICANN’s Registrar Accreditation Agreement (2013 RAA), section 3.18, amended on 5 April 2024: publish an abuse contact on the homepage (email or a web form with no login), acknowledge receipt, take reasonable and prompt steps to investigate and respond appropriately to reports, and act against “DNS Abuse” (phishing, malware, botnets, pharming, and spam used to deliver them). It is not a law but a private contract that ICANN enforces."
    },
    "source_officielle": {
     "url": "https://www.icann.org/compliance/complaint",
@@ -1125,9 +1125,9 @@
     {
      "url": "https://lookup.icann.org/",
      "titre": {
-      "fr": "ICANN Lookup – trouver le registrar d'un nom de domaine",
+      "fr": "ICANN Lookup – trouver le registrar d’un nom de domaine",
       "es": "ICANN Lookup – encontrar el registrador de un dominio",
-      "en": "ICANN Lookup – find a domain's registrar"
+      "en": "ICANN Lookup – find a domain’s registrar"
      }
     },
     {
@@ -1186,20 +1186,20 @@
     "en": "StopNCII creates a fingerprint of your intimate images on your device, without uploading them, so partner platforms can block them. Free."
    },
    "resume": {
-    "fr": "StopNCII.org est un outil gratuit qui crée sur votre téléphone ou votre ordinateur une « empreinte numérique » de vos images intimes (un code calculé à partir de l'image, qui permet de la reconnaître sans la voir), sans les envoyer. Les plateformes partenaires utilisent cette empreinte pour repérer et retirer ces images.",
+    "fr": "StopNCII.org est un outil gratuit qui crée sur votre téléphone ou votre ordinateur une « empreinte numérique » de vos images intimes (un code calculé à partir de l’image, qui permet de la reconnaître sans la voir), sans les envoyer. Les plateformes partenaires utilisent cette empreinte pour repérer et retirer ces images.",
     "es": "StopNCII.org es una herramienta gratuita que crea en tu móvil u ordenador una «huella digital» de tus imágenes íntimas (un código calculado a partir de la imagen que permite reconocerla sin verla), sin enviarlas. Las plataformas asociadas usan esa huella para detectar y retirar esas imágenes.",
     "en": "StopNCII.org is a free tool that creates a “digital fingerprint” of your intimate images on your phone or computer (a code calculated from the image that lets it be recognised without being seen), without uploading them. Partner platforms use this fingerprint to detect and remove those images."
    },
    "pour_qui": {
-    "fr": "Vous pouvez l'utiliser si vous êtes la personne sur l'image, si vous aviez au moins 18 ans quand elle a été prise et avez 18 ans ou plus aujourd'hui, si vous avez encore le fichier, et si l'image vous montre nu(e), à moitié nu(e) ou dans un acte sexuel. Les deepfakes de vous sont acceptés. Pour une image prise avant vos 18 ans, voyez la page Take It Down.",
+    "fr": "Vous pouvez l’utiliser si vous êtes la personne sur l’image, si vous aviez au moins 18 ans quand elle a été prise et avez 18 ans ou plus aujourd’hui, si vous avez encore le fichier, et si l’image vous montre nu(e), à moitié nu(e) ou dans un acte sexuel. Les deepfakes de vous sont acceptés. Pour une image prise avant vos 18 ans, voyez la page Take It Down.",
     "es": "Puedes usarla si eres la persona que aparece en la imagen, si tenías al menos 18 años cuando se tomó y tienes 18 o más ahora, si todavía tienes el archivo y si en la imagen apareces con desnudez total o parcial o en un acto sexual. Se aceptan deepfakes tuyos. Para una imagen tomada antes de tus 18 años, consulta la guía de Take It Down.",
     "en": "You can use it if you are the person in the image, were at least 18 when it was taken and are 18 or older now, still have the file, and the image shows you nude, semi-nude or in a sexual act. Deepfakes of you are accepted. For an image taken before you turned 18, see the Take It Down guide."
    },
    "etapes": {
     "fr": [
-     "Allez sur stopncii.org (disponible en français) et lancez la création d'un dossier.",
-     "Sélectionnez les photos ou vidéos sur votre appareil : l'empreinte est calculée sur place ; l'image elle-même ne quitte pas votre appareil.",
-     "Notez tout de suite votre numéro de dossier et votre code PIN dans un endroit sûr : s'ils sont perdus, ils ne peuvent pas être récupérés.",
+     "Allez sur stopncii.org (disponible en français) et lancez la création d’un dossier.",
+     "Sélectionnez les photos ou vidéos sur votre appareil : l’empreinte est calculée sur place ; l’image elle-même ne quitte pas votre appareil.",
+     "Notez tout de suite votre numéro de dossier et votre code PIN dans un endroit sûr : s’ils sont perdus, ils ne peuvent pas être récupérés.",
      "Les plateformes partenaires comparent les contenus publiés chez elles à votre empreinte et retirent les images correspondantes si elles enfreignent leurs règles.",
      "Suivez votre dossier avec votre numéro (comptez 3 à 5 jours pour voir des mises à jour). Vous pouvez aussi le retirer à tout moment.",
      "Si les images sont déjà en ligne, signalez-les aussi directement aux plateformes et utilisez les recours juridiques : StopNCII vient en complément."
@@ -1224,7 +1224,7 @@
    "a_preparer": {
     "fr": [
      "Les photos ou vidéos concernées, sur votre propre appareil",
-     "Pour une vidéo : quelques captures d'écran de la vidéo, à ajouter aussi (StopNCII le conseille, car une vidéo et sa miniature n'ont pas la même empreinte)",
+     "Pour une vidéo : quelques captures d’écran de la vidéo, à ajouter aussi (StopNCII le conseille, car une vidéo et sa miniature n’ont pas la même empreinte)",
      "Un endroit sûr pour noter votre numéro de dossier et votre code PIN"
     ],
     "es": [
@@ -1239,7 +1239,7 @@
     ]
    },
    "delai": {
-    "fr": "L'empreinte est créée immédiatement ; la recherche continue ensuite sur les plateformes partenaires. Les mises à jour de votre dossier peuvent prendre 3 à 5 jours.",
+    "fr": "L’empreinte est créée immédiatement ; la recherche continue ensuite sur les plateformes partenaires. Les mises à jour de votre dossier peuvent prendre 3 à 5 jours.",
     "es": "La huella se crea de inmediato; después la búsqueda continúa en las plataformas asociadas. Las novedades de tu caso pueden tardar de 3 a 5 días.",
     "en": "The fingerprint is created immediately; matching then continues on partner platforms. Updates to your case can take 3 to 5 days."
    },
@@ -1251,8 +1251,8 @@
    "limites": {
     "fr": [
      "Ne fonctionne que sur les plateformes partenaires : consultez la liste à jour sur le site (elle comprend notamment des services de Microsoft, dont Bing, et plusieurs sites pour adultes).",
-     "Ne retire rien de ce qui est déjà publié ailleurs : c'est un outil de prévention, à combiner avec des signalements et des recours juridiques.",
-     "Il faut avoir le fichier. En cas de chantage, des captures d'écran recadrées peuvent servir, mais elles ne protègent pas forcément contre la diffusion d'une vidéo.",
+     "Ne retire rien de ce qui est déjà publié ailleurs : c’est un outil de prévention, à combiner avec des signalements et des recours juridiques.",
+     "Il faut avoir le fichier. En cas de chantage, des captures d’écran recadrées peuvent servir, mais elles ne protègent pas forcément contre la diffusion d’une vidéo.",
      "Réservé aux personnes majeures, pour des images prises à 18 ans ou plus.",
      "StopNCII ne transmet aucun signalement à la police.",
      "Même si vous retirez votre dossier, les plateformes peuvent continuer à appliquer leurs règles aux images déjà repérées."
@@ -1276,7 +1276,7 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Ce n'est pas une voie légale mais un outil technique gratuit, géré par la Revenge Porn Helpline, qui fait partie de l'association britannique SWGfL. Il complète les recours juridiques (DSA, plainte, TAKE IT DOWN Act…) sans les remplacer.",
+    "fr": "Ce n’est pas une voie légale mais un outil technique gratuit, géré par la Revenge Porn Helpline, qui fait partie de l’association britannique SWGfL. Il complète les recours juridiques (DSA, plainte, TAKE IT DOWN Act…) sans les remplacer.",
     "es": "No es una vía legal, sino una herramienta técnica gratuita gestionada por la Revenge Porn Helpline, que forma parte de la organización benéfica británica SWGfL. Complementa las vías legales (DSA, denuncia, TAKE IT DOWN Act…) sin sustituirlas.",
     "en": "This is not a legal remedy but a free technical tool run by the Revenge Porn Helpline, part of the UK charity SWGfL. It complements legal routes (DSA, police complaint, TAKE IT DOWN Act…) without replacing them."
    },
@@ -1334,27 +1334,27 @@
     "en": "Intimate image taken before you were 18: Take It Down"
    },
    "meta_description": {
-    "fr": "Photo ou vidéo intime de vous prise avant 18 ans ? Le service Take It Down du NCMEC est gratuit et anonyme. Comment l'utiliser et qui prévenir.",
+    "fr": "Photo ou vidéo intime de vous prise avant 18 ans ? Le service Take It Down du NCMEC est gratuit et anonyme. Comment l’utiliser et qui prévenir.",
     "es": "¿Una foto o vídeo íntimo tuyo tomado antes de los 18 años? Take It Down (NCMEC) es gratuito y anónimo. Cómo usarlo y a quién avisar.",
-    "en": "An intimate photo or video of you taken before you were 18? NCMEC's Take It Down is free and anonymous. How to use it and who to tell."
+    "en": "An intimate photo or video of you taken before you were 18? NCMEC’s Take It Down is free and anonymous. How to use it and who to tell."
    },
    "resume": {
-    "fr": "Take It Down est un service gratuit et anonyme du National Center for Missing & Exploited Children (NCMEC), une organisation américaine de protection de l'enfance. Il aide à retirer ou à bloquer, sur les plateformes participantes, des photos ou vidéos de vous nu(e), à moitié nu(e) ou dans une situation sexuelle, prises avant vos 18 ans. Ce n'est jamais de votre faute.",
+    "fr": "Take It Down est un service gratuit et anonyme du National Center for Missing & Exploited Children (NCMEC), une organisation américaine de protection de l’enfance. Il aide à retirer ou à bloquer, sur les plateformes participantes, des photos ou vidéos de vous nu(e), à moitié nu(e) ou dans une situation sexuelle, prises avant vos 18 ans. Ce n’est jamais de votre faute.",
     "es": "Take It Down es un servicio gratuito y anónimo del National Center for Missing & Exploited Children (NCMEC), una organización estadounidense de protección de la infancia. Ayuda a retirar o bloquear, en las plataformas participantes, fotos o vídeos tuyos con desnudez total o parcial o en situaciones sexuales tomados antes de los 18 años. Nunca es tu culpa.",
     "en": "Take It Down is a free, anonymous service from the National Center for Missing & Exploited Children (NCMEC), a US child protection organisation. It helps remove or block, on participating platforms, nude, partially nude or sexual photos or videos of you taken before you were 18. It is never your fault."
    },
    "pour_qui": {
-    "fr": "Les personnes qui ont, sur leur propre appareil, une photo ou une vidéo de ce type prise quand elles avaient moins de 18 ans, et qui pensent qu'elle a été ou pourrait être publiée en ligne – qu'elles soient encore mineures ou adultes aujourd'hui.",
+    "fr": "Les personnes qui ont, sur leur propre appareil, une photo ou une vidéo de ce type prise quand elles avaient moins de 18 ans, et qui pensent qu’elle a été ou pourrait être publiée en ligne – qu’elles soient encore mineures ou adultes aujourd’hui.",
     "es": "Personas que tienen en su propio dispositivo una foto o un vídeo de este tipo tomado cuando eran menores de 18 años, y que creen que se ha publicado o podría publicarse en internet, tanto si todavía son menores como si ya son adultas.",
     "en": "People who have, on their own device, a photo or video like this taken when they were under 18 and who believe it has been or could be posted online – whether they are still minors or adults now."
    },
    "etapes": {
     "fr": [
-     "Parlez-en à un adulte de confiance (parent, membre de la famille, enseignant, infirmier ou infirmière scolaire) ; si vous êtes adulte aujourd'hui, à une personne de confiance. Vous n'avez pas à affronter cela seul(e).",
-     "Ne téléchargez pas l'image, ne l'envoyez pas et ne demandez à personne de vous l'envoyer pour utiliser le service : il fonctionne seulement avec des images déjà présentes sur votre appareil.",
-     "Sur takeitdown.ncmec.org (disponible en français), suivez les étapes et sélectionnez l'image : une empreinte numérique est calculée sur votre appareil ; l'image n'est jamais envoyée ni vue par personne.",
-     "Les plateformes participantes utilisent cette empreinte pour repérer l'image sur leurs services publics ou non chiffrés et la retirer.",
-     "Prévenez aussi la police. Si quelqu'un vous menace ou vous fait du chantage avec l'image, faites un signalement au CyberTipline du NCMEC (report.cybertip.org), même si vous avez déjà utilisé Take It Down.",
+     "Parlez-en à un adulte de confiance (parent, membre de la famille, enseignant, infirmier ou infirmière scolaire) ; si vous êtes adulte aujourd’hui, à une personne de confiance. Vous n’avez pas à affronter cela seul(e).",
+     "Ne téléchargez pas l’image, ne l’envoyez pas et ne demandez à personne de vous l’envoyer pour utiliser le service : il fonctionne seulement avec des images déjà présentes sur votre appareil.",
+     "Sur takeitdown.ncmec.org (disponible en français), suivez les étapes et sélectionnez l’image : une empreinte numérique est calculée sur votre appareil ; l’image n’est jamais envoyée ni vue par personne.",
+     "Les plateformes participantes utilisent cette empreinte pour repérer l’image sur leurs services publics ou non chiffrés et la retirer.",
+     "Prévenez aussi la police. Si quelqu’un vous menace ou vous fait du chantage avec l’image, faites un signalement au CyberTipline du NCMEC (report.cybertip.org), même si vous avez déjà utilisé Take It Down.",
      "Après votre demande, ne publiez pas ces images sur les réseaux sociaux : elles pourraient être repérées et votre compte bloqué."
     ],
     "es": [
@@ -1370,15 +1370,15 @@
      "Do not download the image, send it or ask anyone to send it to you in order to use the service: it only works with images already on your device.",
      "On takeitdown.ncmec.org (also in French and Spanish), follow the steps and select the image: a digital fingerprint is calculated on your device; the image is never sent or seen by anyone.",
      "Participating platforms use that fingerprint to find the image on their public or unencrypted services and remove it.",
-     "Also tell the police. If someone is threatening or blackmailing you with the image, make a report to NCMEC's CyberTipline (report.cybertip.org), even if you have already used Take It Down.",
+     "Also tell the police. If someone is threatening or blackmailing you with the image, make a report to NCMEC’s CyberTipline (report.cybertip.org), even if you have already used Take It Down.",
      "After your request, do not post these images on social media: they could be flagged and your account blocked."
     ]
    },
    "a_preparer": {
     "fr": [
-     "L'image ou la vidéo, uniquement si elle se trouve déjà sur votre propre appareil",
-     "Rien d'autre : ni nom ni pièce d'identité (le service est anonyme)",
-     "Si vous voulez de l'aide en plus, vous pouvez écrire à TakeItDown@ncmec.org (en anglais)"
+     "L’image ou la vidéo, uniquement si elle se trouve déjà sur votre propre appareil",
+     "Rien d’autre : ni nom ni pièce d’identité (le service est anonyme)",
+     "Si vous voulez de l’aide en plus, vous pouvez écrire à TakeItDown@ncmec.org (en anglais)"
     ],
     "es": [
      "La imagen o el vídeo, solo si ya está en tu propio dispositivo",
@@ -1392,9 +1392,9 @@
     ]
    },
    "delai": {
-    "fr": "L'empreinte est ajoutée à la liste du NCMEC dès votre envoi ; les plateformes participantes vérifient ensuite régulièrement. Le service étant anonyme, vous ne serez pas prévenu(e) si l'image est retrouvée.",
+    "fr": "L’empreinte est ajoutée à la liste du NCMEC dès votre envoi ; les plateformes participantes vérifient ensuite régulièrement. Le service étant anonyme, vous ne serez pas prévenu(e) si l’image est retrouvée.",
     "es": "La huella se añade a la lista del NCMEC en cuanto la envías; después, las plataformas participantes revisan periódicamente. Como el servicio es anónimo, no se te avisará si encuentran la imagen.",
-    "en": "The fingerprint is added to NCMEC's list as soon as you submit it; participating platforms then check regularly. Because the service is anonymous, you will not be told if the image is found."
+    "en": "The fingerprint is added to NCMEC’s list as soon as you submit it; participating platforms then check regularly. Because the service is anonymous, you will not be told if the image is found."
    },
    "cout": {
     "fr": "Gratuit.",
@@ -1404,8 +1404,8 @@
    "limites": {
     "fr": [
      "Fonctionne seulement sur les plateformes participantes (liste sur le site), et pas sur les services chiffrés, comme certaines messageries.",
-     "Ne peut pas empêcher que l'image soit publiée sur d'autres sites ; les plateformes peuvent aussi avoir du mal à retirer d'anciennes publications.",
-     "Il faut avoir l'image sur votre appareil.",
+     "Ne peut pas empêcher que l’image soit publiée sur d’autres sites ; les plateformes peuvent aussi avoir du mal à retirer d’anciennes publications.",
+     "Il faut avoir l’image sur votre appareil.",
      "Le service étant anonyme, il ne vous informe pas des résultats.",
      "Take It Down ne remplace pas un signalement à la police."
     ],
@@ -1425,12 +1425,12 @@
     ]
    },
    "attention": {
-    "fr": "Si quelqu'un vous menace ou vous demande d'autres images, n'envoyez plus rien : gardez les messages et parlez-en tout de suite à un adulte de confiance et à la police.",
+    "fr": "Si quelqu’un vous menace ou vous demande d’autres images, n’envoyez plus rien : gardez les messages et parlez-en tout de suite à un adulte de confiance et à la police.",
     "es": "Si alguien te amenaza o te pide más imágenes, no envíes nada más: guarda los mensajes y cuéntaselo enseguida a un adulto de confianza y a la policía.",
     "en": "If someone threatens you or asks for more images, do not send anything else: keep the messages and tell a trusted adult and the police right away."
    },
    "base_legale": {
-    "fr": "Ce n'est pas une voie légale mais un outil technique gratuit du NCMEC. Selon le NCMEC, une image intime d'une personne de moins de 18 ans peut être considérée, dans certains pays, comme du matériel d'abus sexuel sur enfant ; aux États-Unis, le TAKE IT DOWN Act punit aussi, dans certaines conditions, sa publication.",
+    "fr": "Ce n’est pas une voie légale mais un outil technique gratuit du NCMEC. Selon le NCMEC, une image intime d’une personne de moins de 18 ans peut être considérée, dans certains pays, comme du matériel d’abus sexuel sur enfant ; aux États-Unis, le TAKE IT DOWN Act punit aussi, dans certaines conditions, sa publication.",
     "es": "No es una vía legal, sino una herramienta técnica gratuita del NCMEC. Según el NCMEC, una imagen íntima de una persona menor de 18 años puede considerarse en algunos países material de abuso sexual infantil; en EE. UU., la ley TAKE IT DOWN Act también castiga, en determinadas condiciones, su publicación.",
     "en": "This is not a legal remedy but a free technical tool from NCMEC. According to NCMEC, an intimate image of someone under 18 may be considered child sexual abuse material in some jurisdictions; in the US, the TAKE IT DOWN Act also punishes publishing it, under certain conditions."
    },
@@ -1482,33 +1482,33 @@
     "en": "fake-profile-impersonation-france"
    },
    "titre": {
-    "fr": "Faux profil ou usurpation d'identité en ligne : que faire en France",
+    "fr": "Faux profil ou usurpation d’identité en ligne : que faire en France",
     "es": "Perfil falso o suplantación de identidad en internet en Francia",
     "en": "Fake profile or online impersonation: what to do in France"
    },
    "meta_description": {
-    "fr": "Un faux compte à votre nom ? En France, l'usurpation d'identité en ligne est un délit. Preuves, formulaire de la plateforme, plainte : les étapes.",
+    "fr": "Un faux compte à votre nom ? En France, l’usurpation d’identité en ligne est un délit. Preuves, formulaire de la plateforme, plainte : les étapes.",
     "es": "¿Un perfil falso con tu nombre? En Francia, suplantar la identidad en internet es delito. Pruebas, formulario de la plataforma y denuncia.",
-    "en": "A fake account in your name? In France, online impersonation is a crime. Evidence, the platform's form and a police complaint: the steps."
+    "en": "A fake account in your name? In France, online impersonation is a crime. Evidence, the platform’s form and a police complaint: the steps."
    },
    "resume": {
-    "fr": "Créer un faux profil à votre nom, ou utiliser vos données pour troubler votre tranquillité ou nuire à votre réputation, est un délit en France (usurpation d'identité). Vous pouvez faire supprimer le profil par la plateforme et porter plainte.",
+    "fr": "Créer un faux profil à votre nom, ou utiliser vos données pour troubler votre tranquillité ou nuire à votre réputation, est un délit en France (usurpation d’identité). Vous pouvez faire supprimer le profil par la plateforme et porter plainte.",
     "es": "Crear un perfil falso con tu nombre, o usar tus datos para perturbar tu tranquilidad o dañar tu reputación, es delito en Francia (usurpación de identidad). Puedes pedir a la plataforma que elimine el perfil y presentar una denuncia.",
     "en": "Creating a fake profile in your name, or using your personal data to disturb your peace or harm your reputation, is a criminal offence in France (identity theft). You can have the platform remove the profile and file a police complaint."
    },
    "pour_qui": {
-    "fr": "Toute personne dont le nom, les photos ou d'autres données sont utilisés sans accord pour se faire passer pour elle en ligne (faux compte, faux profil, messages envoyés en son nom), en France ou sur un service accessible en France.",
+    "fr": "Toute personne dont le nom, les photos ou d’autres données sont utilisés sans accord pour se faire passer pour elle en ligne (faux compte, faux profil, messages envoyés en son nom), en France ou sur un service accessible en France.",
     "es": "Cualquier persona cuyo nombre, fotos u otros datos se usen sin su permiso para hacerse pasar por ella en internet (cuenta falsa, perfil falso, mensajes enviados en su nombre), en Francia o en un servicio accesible desde Francia.",
     "en": "Anyone whose name, photos or other personal data are used without consent to pretend to be them online (fake account, fake profile, messages sent in their name), in France or on a service accessible in France."
    },
    "etapes": {
     "fr": [
-     "Avant tout signalement, figez les preuves : URL exacte du faux profil, captures d'écran datées avec l'URL visible, publications, nombre d'abonnés, messages envoyés à vos proches. Un profil supprimé emporte souvent ses preuves avec lui.",
-     "Utilisez le formulaire « usurpation d'identité » ou « faux compte » de la plateforme, souvent distinct du simple bouton « Signaler ». Joignez, si on vous le demande, une pièce d'identité et le lien de votre vrai profil.",
-     "Si la plateforme ne réagit pas, envoyez un signalement de contenu illicite au titre du DSA (article 16) en citant l'article 226-4-1 du Code pénal.",
+     "Avant tout signalement, figez les preuves : URL exacte du faux profil, captures d’écran datées avec l’URL visible, publications, nombre d’abonnés, messages envoyés à vos proches. Un profil supprimé emporte souvent ses preuves avec lui.",
+     "Utilisez le formulaire « usurpation d’identité » ou « faux compte » de la plateforme, souvent distinct du simple bouton « Signaler ». Joignez, si on vous le demande, une pièce d’identité et le lien de votre vrai profil.",
+     "Si la plateforme ne réagit pas, envoyez un signalement de contenu illicite au titre du DSA (article 16) en citant l’article 226-4-1 du Code pénal.",
      "Portez plainte au commissariat, à la gendarmerie ou par courrier au procureur de la République, avec toutes vos preuves (captures, adresses des pages, messages).",
-     "Vous pouvez aussi demander au responsable du site l'effacement de vos données (photos, nom) en vous appuyant sur le RGPD, puis saisir la CNIL si vous n'avez pas de réponse satisfaisante sous un mois.",
-     "Si le faux profil sert à arnaquer vos proches ou s'accompagne d'un piratage de vos comptes, prévenez votre entourage et consultez 17Cyber, le service public d'assistance aux victimes de cybermalveillance."
+     "Vous pouvez aussi demander au responsable du site l’effacement de vos données (photos, nom) en vous appuyant sur le RGPD, puis saisir la CNIL si vous n’avez pas de réponse satisfaisante sous un mois.",
+     "Si le faux profil sert à arnaquer vos proches ou s’accompagne d’un piratage de vos comptes, prévenez votre entourage et consultez 17Cyber, le service public d’assistance aux victimes de cybermalveillance."
     ],
     "es": [
      "Antes de denunciar, guarda las pruebas: URL exacta del perfil falso, capturas de pantalla con fecha y la URL visible, publicaciones, número de seguidores y mensajes enviados a tus contactos. Un perfil eliminado suele llevarse sus pruebas consigo.",
@@ -1520,19 +1520,19 @@
     ],
     "en": [
      "Before reporting anything, preserve the evidence: exact URL of the fake profile, dated screenshots with the URL visible, posts, number of followers, messages sent to your contacts. A deleted profile often takes its evidence with it.",
-     "Use the platform's “impersonation” or “fake account” form, which is often separate from the basic “Report” button. If asked, attach an ID document and the link to your real profile.",
+     "Use the platform’s “impersonation” or “fake account” form, which is often separate from the basic “Report” button. If asked, attach an ID document and the link to your real profile.",
      "If the platform does not act, send an illegal-content notice under the DSA (Article 16), citing Article 226-4-1 of the French Criminal Code.",
      "File a complaint at a police station or gendarmerie, or by letter to the public prosecutor (procureur de la République), with all your evidence (screenshots, page addresses, messages).",
-     "You can also ask the site's controller to erase your data (photos, name) under the GDPR, then complain to the CNIL if you get no satisfactory answer within a month.",
+     "You can also ask the site’s controller to erase your data (photos, name) under the GDPR, then complain to the CNIL if you get no satisfactory answer within a month.",
      "If the fake profile is used to scam your contacts or comes with a hack of your accounts, warn the people around you and use 17Cyber, the French public assistance service for victims of cybercrime."
     ]
    },
    "a_preparer": {
     "fr": [
-     "L'URL exacte du faux profil",
-     "Des captures d'écran datées, avec l'URL visible",
-     "Une copie de votre pièce d'identité marquée d'un filigrane (par exemple « copie pour [plateforme], [date] »), comme le conseille Service-Public.fr",
-     "Le lien de votre vrai profil, s'il existe",
+     "L’URL exacte du faux profil",
+     "Des captures d’écran datées, avec l’URL visible",
+     "Une copie de votre pièce d’identité marquée d’un filigrane (par exemple « copie pour [plateforme], [date] »), comme le conseille Service-Public.fr",
+     "Le lien de votre vrai profil, s’il existe",
      "Les messages ou témoignages de proches contactés par le faux profil"
     ],
     "es": [
@@ -1551,7 +1551,7 @@
     ]
    },
    "delai": {
-    "fr": "Pas de délai légal fixé pour la plateforme : elle doit agir avec diligence (DSA). Attention au délai de 3 mois si le faux profil publie des accusations précises contre vous (voir l'encadré).",
+    "fr": "Pas de délai légal fixé pour la plateforme : elle doit agir avec diligence (DSA). Attention au délai de 3 mois si le faux profil publie des accusations précises contre vous (voir l’encadré).",
     "es": "No hay un plazo legal fijado para la plataforma: debe actuar con diligencia (DSA). Atención al plazo de 3 meses si el perfil falso publica acusaciones concretas contra ti (ver el recuadro).",
     "en": "No legal deadline is set for the platform: it must act diligently (DSA). Watch out for the 3-month deadline if the fake profile publishes specific accusations against you (see the warning box)."
    },
@@ -1562,10 +1562,10 @@
    },
    "limites": {
     "fr": [
-     "Un signalement générique peut ne pas suffire : utilisez le formulaire dédié à l'usurpation et relancez si besoin.",
-     "Pour connaître l'identité de la personne derrière le faux profil, il faut en principe passer par la justice (plainte, enquête).",
+     "Un signalement générique peut ne pas suffire : utilisez le formulaire dédié à l’usurpation et relancez si besoin.",
+     "Pour connaître l’identité de la personne derrière le faux profil, il faut en principe passer par la justice (plainte, enquête).",
      "Si le profil est supprimé avant vos captures, les preuves peuvent disparaître.",
-     "Le délit suppose une intention : troubler votre tranquillité (ou celle d'autrui) ou porter atteinte à votre honneur ou à votre considération."
+     "Le délit suppose une intention : troubler votre tranquillité (ou celle d’autrui) ou porter atteinte à votre honneur ou à votre considération."
     ],
     "es": [
      "Un aviso genérico puede no bastar: usa el formulario específico de suplantación e insiste si hace falta.",
@@ -1577,18 +1577,18 @@
      "A generic report may not be enough: use the dedicated impersonation form and follow up if needed.",
      "To find out who is behind the fake profile, you generally have to go through the courts (complaint, investigation).",
      "If the profile is deleted before you take screenshots, the evidence may disappear.",
-     "The offence requires intent: to disturb your peace (or someone else's) or to harm your honour or reputation."
+     "The offence requires intent: to disturb your peace (or someone else’s) or to harm your honour or reputation."
     ]
    },
    "attention": {
-    "fr": "Si le faux profil vous attribue un fait précis qui porte atteinte à votre honneur (par exemple vous accuser d'un vol), il peut aussi s'agir de diffamation : le délai pour agir en justice n'est alors que de 3 mois à partir de la première mise en ligne (1 an si les propos sont racistes ou discriminatoires). Figez tout de suite les preuves et la date de publication.",
+    "fr": "Si le faux profil vous attribue un fait précis qui porte atteinte à votre honneur (par exemple vous accuser d’un vol), il peut aussi s’agir de diffamation : le délai pour agir en justice n’est alors que de 3 mois à partir de la première mise en ligne (1 an si les propos sont racistes ou discriminatoires). Figez tout de suite les preuves et la date de publication.",
     "es": "Si el perfil falso te atribuye un hecho concreto que daña tu honor (por ejemplo, acusarte de un robo), también puede tratarse de difamación: en Francia, el plazo para actuar ante la justicia es entonces de solo 3 meses desde la primera publicación (1 año si las palabras son racistas o discriminatorias). Guarda ya las pruebas y la fecha de publicación.",
     "en": "If the fake profile accuses you of a specific fact that harms your honour (for example theft), it may also be defamation: in France, the deadline to take legal action is then only 3 months from the first online publication (1 year if the words are racist or discriminatory). Preserve the evidence and the publication date straight away."
    },
    "base_legale": {
-    "fr": "Code pénal, article 226-4-1 : usurper l'identité d'un tiers ou utiliser des données permettant de l'identifier, en vue de troubler sa tranquillité ou celle d'autrui ou de porter atteinte à son honneur ou à sa considération, est puni d'1 an de prison et 15 000 € d'amende, y compris en ligne ; 2 ans et 30 000 € si l'auteur est le conjoint, le concubin ou le partenaire de PACS (y compris un ex, article 132-80). Selon le cas, aussi : DSA article 16, RGPD article 17 et article 9 du Code civil.",
+    "fr": "Code pénal, article 226-4-1 : usurper l’identité d’un tiers ou utiliser des données permettant de l’identifier, en vue de troubler sa tranquillité ou celle d’autrui ou de porter atteinte à son honneur ou à sa considération, est puni d’1 an de prison et 15 000 € d’amende, y compris en ligne ; 2 ans et 30 000 € si l’auteur est le conjoint, le concubin ou le partenaire de PACS (y compris un ex, article 132-80). Selon le cas, aussi : DSA article 16, RGPD article 17 et article 9 du Code civil.",
     "es": "Código Penal francés, artículo 226-4-1: usurpar la identidad de un tercero o usar datos que permitan identificarlo, para perturbar su tranquilidad o la de otros o dañar su honor o su consideración, se castiga con 1 año de prisión y 15 000 € de multa, también en internet; 2 años y 30 000 € si el autor es el cónyuge, la pareja de hecho o la pareja de PACS (incluida una expareja, artículo 132-80). Según el caso, también: DSA artículo 16, RGPD artículo 17 y artículo 9 del Código Civil francés.",
-    "en": "French Criminal Code, Article 226-4-1: taking someone's identity or using data that identifies them, in order to disturb their peace or that of others or to harm their honour or reputation, is punishable by 1 year in prison and a €15,000 fine, including online; 2 years and €30,000 if committed by a spouse, cohabiting partner or civil partner (including a former one, Article 132-80). Depending on the case, also: DSA Article 16, GDPR Article 17 and Article 9 of the Civil Code."
+    "en": "French Criminal Code, Article 226-4-1: taking someone’s identity or using data that identifies them, in order to disturb their peace or that of others or to harm their honour or reputation, is punishable by 1 year in prison and a €15,000 fine, including online; 2 years and €30,000 if committed by a spouse, cohabiting partner or civil partner (including a former one, Article 132-80). Depending on the case, also: DSA Article 16, GDPR Article 17 and Article 9 of the Civil Code."
    },
    "source_officielle": {
     "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042193593",
@@ -1598,7 +1598,7 @@
     {
      "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F37944",
      "titre": {
-      "fr": "Service-Public.fr – usurpation d'identité (fiche officielle)",
+      "fr": "Service-Public.fr – usurpation d’identité (fiche officielle)",
       "es": "Service-Public.fr – usurpación de identidad (ficha oficial, en francés)",
       "en": "Service-Public.fr – identity theft (official guide, in French)"
      }
@@ -1652,28 +1652,28 @@
     "en": "Online defamation in France: you only have 3 months to act"
    },
    "meta_description": {
-    "fr": "Avis, post ou commentaire qui vous accuse d'un fait précis ? En France, l'action en justice doit être engagée dans les 3 mois. Les bons réflexes.",
+    "fr": "Avis, post ou commentaire qui vous accuse d’un fait précis ? En France, l’action en justice doit être engagée dans les 3 mois. Les bons réflexes.",
     "es": "¿Una reseña, publicación o comentario te acusa de un hecho concreto? En Francia hay 3 meses para actuar ante la justicia. Qué hacer.",
     "en": "A review, post or comment accusing you of a specific fact? In France, legal action must start within 3 months of publication. What to do."
    },
    "resume": {
-    "fr": "En France, accuser publiquement quelqu'un d'un fait précis qui porte atteinte à son honneur ou à sa réputation est une diffamation, y compris dans un avis, un commentaire ou une publication en ligne. Vous pouvez demander le retrait à la plateforme, mais l'action en justice doit être engagée dans les 3 mois qui suivent la première mise en ligne.",
+    "fr": "En France, accuser publiquement quelqu’un d’un fait précis qui porte atteinte à son honneur ou à sa réputation est une diffamation, y compris dans un avis, un commentaire ou une publication en ligne. Vous pouvez demander le retrait à la plateforme, mais l’action en justice doit être engagée dans les 3 mois qui suivent la première mise en ligne.",
     "es": "En Francia, acusar públicamente a alguien de un hecho concreto que daña su honor o su reputación es difamación, también en una reseña, un comentario o una publicación en internet. Puedes pedir la retirada a la plataforma, pero la acción judicial debe iniciarse en los 3 meses siguientes a la primera publicación.",
     "en": "In France, publicly accusing someone of a specific fact that harms their honour or reputation is defamation, including in an online review, comment or post. You can ask the platform to remove it, but legal action must be started within 3 months of the first online publication."
    },
    "pour_qui": {
-    "fr": "Toute personne (ou entreprise) visée en ligne par l'affirmation d'un fait précis qui nuit à son honneur ou à sa réputation, dans un avis, un commentaire, une publication, une page ou un profil accessible au public. Une insulte sans fait précis relève de l'injure ; un message visible seulement par un cercle restreint (amis, groupe privé) peut être une diffamation non publique, moins sévèrement punie.",
+    "fr": "Toute personne (ou entreprise) visée en ligne par l’affirmation d’un fait précis qui nuit à son honneur ou à sa réputation, dans un avis, un commentaire, une publication, une page ou un profil accessible au public. Une insulte sans fait précis relève de l’injure ; un message visible seulement par un cercle restreint (amis, groupe privé) peut être une diffamation non publique, moins sévèrement punie.",
     "es": "Cualquier persona (o empresa) a la que en internet se le atribuya un hecho concreto que dañe su honor o su reputación, en una reseña, un comentario, una publicación, una página o un perfil accesible al público. Un insulto sin un hecho concreto es una injuria; un mensaje visible solo para un círculo reducido (amigos, grupo privado) puede ser difamación no pública, castigada con menos severidad.",
     "en": "Anyone (person or business) targeted online by a statement of a specific fact that harms their honour or reputation, in a review, comment, post, page or profile the public can see. An insult with no specific fact is a different offence (insult, “injure”); a message visible only to a small circle (friends, private group) may be non-public defamation, which is punished less severely."
    },
    "etapes": {
     "fr": [
-     "Notez tout de suite la date de première mise en ligne du message (et non la date où vous l'avez découvert) : c'est elle qui fait courir le délai de 3 mois.",
-     "Figez les preuves : URL, texte exact mot pour mot, date visible, nombre de vues ou de partages, captures d'écran. Si l'enjeu est important, un commissaire de justice (anciennement huissier) peut faire un constat, payant.",
-     "Demandez le retrait à la plateforme ou à l'hébergeur avec son formulaire de signalement (DSA, article 16), en citant la loi du 29 juillet 1881 (article 29).",
+     "Notez tout de suite la date de première mise en ligne du message (et non la date où vous l’avez découvert) : c’est elle qui fait courir le délai de 3 mois.",
+     "Figez les preuves : URL, texte exact mot pour mot, date visible, nombre de vues ou de partages, captures d’écran. Si l’enjeu est important, un commissaire de justice (anciennement huissier) peut faire un constat, payant.",
+     "Demandez le retrait à la plateforme ou à l’hébergeur avec son formulaire de signalement (DSA, article 16), en citant la loi du 29 juillet 1881 (article 29).",
      "Signalez les faits à la police ou à la gendarmerie : PHAROS ne traite pas la diffamation.",
-     "Pour faire poursuivre l'auteur, la justice doit être saisie dans les 3 mois. Seuls certains actes arrêtent ce délai, comme une citation directe (vous saisissez vous-même le tribunal) ou une demande d'enquête du procureur qui vise précisément les propos : un simple dépôt de plainte ne suffit pas toujours. La citation directe obéit à des règles très strictes, l'aide d'un avocat est fortement conseillée ; le 116 006 (aide aux victimes, gratuit) peut vous orienter.",
-     "Passé ce délai, d'autres voies restent parfois possibles : demande d'effacement (RGPD), usurpation d'identité, atteinte à la vie privée, signalement DSA."
+     "Pour faire poursuivre l’auteur, la justice doit être saisie dans les 3 mois. Seuls certains actes arrêtent ce délai, comme une citation directe (vous saisissez vous-même le tribunal) ou une demande d’enquête du procureur qui vise précisément les propos : un simple dépôt de plainte ne suffit pas toujours. La citation directe obéit à des règles très strictes, l’aide d’un avocat est fortement conseillée ; le 116 006 (aide aux victimes, gratuit) peut vous orienter.",
+     "Passé ce délai, d’autres voies restent parfois possibles : demande d’effacement (RGPD), usurpation d’identité, atteinte à la vie privée, signalement DSA."
     ],
     "es": [
      "Anota enseguida la fecha de la primera publicación del mensaje (no la fecha en que lo descubriste): a partir de ella corre el plazo de 3 meses.",
@@ -1688,17 +1688,17 @@
      "Preserve the evidence: URL, exact wording, visible date, number of views or shares, screenshots. If a lot is at stake, a commissaire de justice (formerly huissier, a court officer) can make a formal record, for a fee.",
      "Ask the platform or host to remove it using its reporting form (DSA, Article 16), citing the French Law of 29 July 1881 (Article 29).",
      "Report it to the police or gendarmerie: PHAROS does not handle defamation.",
-     "To have the author prosecuted, the courts must be involved within the 3 months. Only certain acts stop the clock, such as a direct summons (you bring the case to court yourself) or an investigation order from the prosecutor that specifically identifies the statements: simply filing a police complaint is not always enough. A direct summons follows very strict rules, so a lawyer's help is strongly advised; 116 006 (free victim support line in France) can guide you.",
+     "To have the author prosecuted, the courts must be involved within the 3 months. Only certain acts stop the clock, such as a direct summons (you bring the case to court yourself) or an investigation order from the prosecutor that specifically identifies the statements: simply filing a police complaint is not always enough. A direct summons follows very strict rules, so a lawyer’s help is strongly advised; 116 006 (free victim support line in France) can guide you.",
      "After the deadline, other routes may sometimes remain: an erasure request (GDPR), identity theft, invasion of privacy, a DSA notice."
     ]
    },
    "a_preparer": {
     "fr": [
      "La date de première publication, avec une capture où elle apparaît",
-     "L'URL et le texte exact, mot pour mot",
-     "Des captures d'écran datées, avec le nombre de vues, de partages et de commentaires",
-     "Le nom du compte ou de l'auteur, s'il est connu",
-     "Si l'enjeu le justifie, un constat de commissaire de justice (payant)"
+     "L’URL et le texte exact, mot pour mot",
+     "Des captures d’écran datées, avec le nombre de vues, de partages et de commentaires",
+     "Le nom du compte ou de l’auteur, s’il est connu",
+     "Si l’enjeu le justifie, un constat de commissaire de justice (payant)"
     ],
     "es": [
      "La fecha de la primera publicación, con una captura en la que aparezca",
@@ -1723,12 +1723,12 @@
    "cout": {
     "fr": "Signalement et plainte : gratuits. Constat de commissaire de justice, avocat et consignation (somme à verser pour une citation directe, fixée selon vos revenus) : payants.",
     "es": "Aviso y denuncia: gratuitos. El acta del commissaire de justice, el abogado y la consignación (cantidad que hay que depositar en una citación directa, fijada según tus ingresos): de pago.",
-    "en": "Reporting and filing a complaint: free. A commissaire de justice's record, a lawyer and the court deposit (required for a direct summons and set according to your income): paid."
+    "en": "Reporting and filing a complaint: free. A commissaire de justice’s record, a lawyer and the court deposit (required for a direct summons and set according to your income): paid."
    },
    "limites": {
     "fr": [
-     "Procédure très formelle : une erreur dans l'acte (faits mal précisés, mauvais article de loi) peut entraîner la nullité de la poursuite.",
-     "La frontière entre diffamation, injure et libre critique dépend des juges : une opinion ou un avis négatif sincère n'est pas forcément illégal.",
+     "Procédure très formelle : une erreur dans l’acte (faits mal précisés, mauvais article de loi) peut entraîner la nullité de la poursuite.",
+     "La frontière entre diffamation, injure et libre critique dépend des juges : une opinion ou un avis négatif sincère n’est pas forcément illégal.",
      "Laisser le message en ligne ne prolonge pas le délai, et changer seulement le nom de la page non plus.",
      "La personne poursuivie peut se défendre en prouvant sa bonne foi ou la vérité des faits.",
      "La plateforme peut refuser de retirer un contenu si son caractère illicite ne lui paraît pas évident."
@@ -1749,12 +1749,12 @@
     ]
    },
    "attention": {
-    "fr": "Délai très court : vous n'avez que 3 mois à partir de la première mise en ligne du message (1 an si les propos sont racistes ou discriminatoires) pour engager une action en justice. Un simple dépôt de plainte ne suffit pas toujours à arrêter ce délai. Notez la date de publication et faites-vous conseiller sans attendre.",
+    "fr": "Délai très court : vous n’avez que 3 mois à partir de la première mise en ligne du message (1 an si les propos sont racistes ou discriminatoires) pour engager une action en justice. Un simple dépôt de plainte ne suffit pas toujours à arrêter ce délai. Notez la date de publication et faites-vous conseiller sans attendre.",
     "es": "Plazo muy corto: solo tienes 3 meses desde la primera publicación del mensaje (1 año si las palabras son racistas o discriminatorias) para iniciar una acción judicial. Una simple denuncia no siempre basta para detener ese plazo. Anota la fecha de publicación y busca asesoramiento sin esperar.",
     "en": "Very short deadline: you only have 3 months from the first online publication of the message (1 year if the words are racist or discriminatory) to take legal action. Simply filing a police complaint does not always stop the clock. Note the publication date and get advice without delay."
    },
    "base_legale": {
-    "fr": "Loi du 29 juillet 1881 sur la liberté de la presse : article 29 (définition de la diffamation et de l'injure), article 23 (s'applique à tout moyen de communication au public par voie électronique), article 32 (diffamation envers un particulier : 12 000 € d'amende ; 1 an de prison et 45 000 € si elle est raciste ou discriminatoire), article 53 (formalités exigées à peine de nullité), article 65 (prescription de 3 mois) et article 65-3 (1 an pour les propos racistes ou discriminatoires). Cour de cassation, chambre criminelle, 11 juin 2024, n° 23-86.920 : le délai part de la première mise en ligne.",
+    "fr": "Loi du 29 juillet 1881 sur la liberté de la presse : article 29 (définition de la diffamation et de l’injure), article 23 (s’applique à tout moyen de communication au public par voie électronique), article 32 (diffamation envers un particulier : 12 000 € d’amende ; 1 an de prison et 45 000 € si elle est raciste ou discriminatoire), article 53 (formalités exigées à peine de nullité), article 65 (prescription de 3 mois) et article 65-3 (1 an pour les propos racistes ou discriminatoires). Cour de cassation, chambre criminelle, 11 juin 2024, n° 23-86.920 : le délai part de la première mise en ligne.",
     "es": "Ley francesa de 29 de julio de 1881 sobre la libertad de prensa: artículo 29 (definición de difamación e injuria), artículo 23 (se aplica a cualquier medio de comunicación al público por vía electrónica), artículo 32 (difamación contra un particular: multa de 12 000 €; 1 año de prisión y 45 000 € si es racista o discriminatoria), artículo 53 (requisitos formales bajo pena de nulidad), artículo 65 (prescripción de 3 meses) y artículo 65-3 (1 año para las expresiones racistas o discriminatorias). Tribunal de Casación francés, Sala de lo Penal, 11 de junio de 2024, n.º 23-86.920: el plazo empieza con la primera publicación en línea.",
     "en": "French Press Freedom Law of 29 July 1881: Article 29 (definition of defamation and insult), Article 23 (covers any means of electronic communication to the public), Article 32 (defamation of an individual: €12,000 fine; 1 year in prison and €45,000 if racist or discriminatory), Article 53 (formal requirements, on pain of nullity), Article 65 (3-month limitation period) and Article 65-3 (1 year for racist or discriminatory statements). French Court of Cassation, Criminal Chamber, 11 June 2024, No. 23-86.920: the deadline runs from the first online publication."
    },
@@ -1806,32 +1806,32 @@
     "en": "gdpr-right-to-erasure-personal-data"
    },
    "titre": {
-    "fr": "RGPD : demander l'effacement de vos données personnelles",
+    "fr": "RGPD : demander l’effacement de vos données personnelles",
     "es": "RGPD: pedir que se borren tus datos personales",
     "en": "GDPR: asking for your personal data to be erased"
    },
    "meta_description": {
-    "fr": "Dans l'UE, vous pouvez demander à un site d'effacer vos données personnelles : réponse sous un mois, gratuitement. Comment faire, et que faire si refus.",
+    "fr": "Dans l’UE, vous pouvez demander à un site d’effacer vos données personnelles : réponse sous un mois, gratuitement. Comment faire, et que faire si refus.",
     "es": "En la UE puedes pedir a una web que borre tus datos personales: respuesta en un mes y gratis. Cómo hacerlo y qué hacer si se niega.",
     "en": "In the EU you can ask a site to erase your personal data: a reply within one month, free of charge. How to ask and what to do if refused."
    },
    "resume": {
-    "fr": "Dans l'Union européenne, vous pouvez demander à un site, une entreprise ou un service d'effacer des données qui vous concernent (photo, nom, adresse, publication…) dans les cas prévus par le RGPD. Il doit vous répondre dans un délai d'un mois, et la démarche est gratuite.",
+    "fr": "Dans l’Union européenne, vous pouvez demander à un site, une entreprise ou un service d’effacer des données qui vous concernent (photo, nom, adresse, publication…) dans les cas prévus par le RGPD. Il doit vous répondre dans un délai d’un mois, et la démarche est gratuite.",
     "es": "En la Unión Europea puedes pedir a una web, una empresa o un servicio que borre datos que te conciernen (foto, nombre, dirección, publicación…) en los casos previstos por el RGPD. Debe responderte en un plazo de un mes y el trámite es gratuito.",
     "en": "In the European Union you can ask a website, company or service to erase data about you (photo, name, address, post…) in the cases set out in the GDPR. It must reply within one month, and it is free."
    },
    "pour_qui": {
-    "fr": "Toute personne dont des données personnelles sont traitées par un organisme établi dans l'UE, ou par un organisme hors UE qui propose ses services à des personnes dans l'UE ou suit leur comportement. Une donnée personnelle est toute information qui permet de vous identifier : nom, photo, vidéo, numéro, adresse…",
+    "fr": "Toute personne dont des données personnelles sont traitées par un organisme établi dans l’UE, ou par un organisme hors UE qui propose ses services à des personnes dans l’UE ou suit leur comportement. Une donnée personnelle est toute information qui permet de vous identifier : nom, photo, vidéo, numéro, adresse…",
     "es": "Cualquier persona cuyos datos personales trate una organización establecida en la UE, o una organización de fuera de la UE que ofrezca sus servicios a personas en la UE o siga su comportamiento. Un dato personal es cualquier información que permita identificarte: nombre, foto, vídeo, número, dirección…",
     "en": "Anyone whose personal data is processed by an organisation established in the EU, or by an organisation outside the EU that offers its services to people in the EU or monitors their behaviour. Personal data is any information that can identify you: name, photo, video, number, address…"
    },
    "etapes": {
     "fr": [
      "Trouvez le responsable du site ou du service : rubriques « mentions légales », « confidentialité », ou contact du délégué à la protection des données (DPO).",
-     "Écrivez-lui (formulaire, e-mail ou courrier) en citant l'article 17 du RGPD : listez précisément les données et les URL à effacer, et le motif (par exemple : vous retirez votre consentement, les données ne sont plus nécessaires, ou elles sont traitées illégalement).",
-     "Gardez une preuve de l'envoi et de sa date. Le responsable doit répondre au plus tard dans un mois ; il peut prolonger de 2 mois si la demande est complexe, mais doit vous prévenir dans le premier mois.",
-     "S'il refuse, il doit vous dire pourquoi et vous indiquer que vous pouvez saisir l'autorité de protection des données et la justice.",
-     "Sans réponse, ou en cas de refus que vous contestez, déposez une plainte auprès de l'autorité de protection des données de votre pays (CNIL en France, AEPD en Espagne), avec la preuve de votre demande. C'est gratuit et vous n'avez pas besoin d'avocat.",
+     "Écrivez-lui (formulaire, e-mail ou courrier) en citant l’article 17 du RGPD : listez précisément les données et les URL à effacer, et le motif (par exemple : vous retirez votre consentement, les données ne sont plus nécessaires, ou elles sont traitées illégalement).",
+     "Gardez une preuve de l’envoi et de sa date. Le responsable doit répondre au plus tard dans un mois ; il peut prolonger de 2 mois si la demande est complexe, mais doit vous prévenir dans le premier mois.",
+     "S’il refuse, il doit vous dire pourquoi et vous indiquer que vous pouvez saisir l’autorité de protection des données et la justice.",
+     "Sans réponse, ou en cas de refus que vous contestez, déposez une plainte auprès de l’autorité de protection des données de votre pays (CNIL en France, AEPD en Espagne), avec la preuve de votre demande. C’est gratuit et vous n’avez pas besoin d’avocat.",
      "Pour les résultats de recherche liés à votre nom, faites aussi une demande de déréférencement auprès des moteurs (voir la page dédiée)."
     ],
     "es": [
@@ -1847,7 +1847,7 @@
      "Write to them (form, email or letter) citing Article 17 of the GDPR: list precisely the data and URLs to be erased and your reason (for example: you withdraw your consent, the data is no longer needed, or it is being processed unlawfully).",
      "Keep proof of sending and its date. The controller must reply within one month at most; it can extend this by 2 months if the request is complex, but must tell you within the first month.",
      "If it refuses, it must tell you why and that you can go to the data protection authority and the courts.",
-     "If there is no reply, or a refusal you disagree with, file a complaint with your country's data protection authority (CNIL in France, AEPD in Spain), with proof of your request. It is free and you do not need a lawyer.",
+     "If there is no reply, or a refusal you disagree with, file a complaint with your country’s data protection authority (CNIL in France, AEPD in Spain), with proof of your request. It is free and you do not need a lawyer.",
      "For search results linked to your name, also ask the search engines to delist them (see the dedicated guide)."
     ]
    },
@@ -1855,9 +1855,9 @@
     "fr": [
      "Les URL exactes ou une description précise des données",
      "Le motif de votre demande (article 17 du RGPD)",
-     "Une preuve d'identité seulement si le responsable a un doute raisonnable sur qui vous êtes : n'envoyez pas plus que nécessaire",
-     "La preuve de l'envoi et la date de votre demande",
-     "Si vous agissez pour quelqu'un : son mandat écrit"
+     "Une preuve d’identité seulement si le responsable a un doute raisonnable sur qui vous êtes : n’envoyez pas plus que nécessaire",
+     "La preuve de l’envoi et la date de votre demande",
+     "Si vous agissez pour quelqu’un : son mandat écrit"
     ],
     "es": [
      "Las URL exactas o una descripción precisa de los datos",
@@ -1880,17 +1880,17 @@
     "en": "1 month from receipt of your request, extendable by 2 months if it is complex (the controller must then tell you within the first month)."
    },
    "cout": {
-    "fr": "Gratuit, y compris la plainte auprès de l'autorité de protection des données. Le responsable ne peut demander des frais, ou refuser, que si la demande est manifestement infondée ou excessive (par exemple répétée).",
+    "fr": "Gratuit, y compris la plainte auprès de l’autorité de protection des données. Le responsable ne peut demander des frais, ou refuser, que si la demande est manifestement infondée ou excessive (par exemple répétée).",
     "es": "Gratuito, incluida la reclamación ante la autoridad de protección de datos. El responsable solo puede cobrar, o negarse, si la solicitud es manifiestamente infundada o excesiva (por ejemplo, repetitiva).",
     "en": "Free, including the complaint to the data protection authority. The controller can only charge a fee, or refuse, if the request is manifestly unfounded or excessive (for example repetitive)."
    },
    "limites": {
     "fr": [
-     "Ce droit n'est pas absolu : il peut être refusé notamment au nom de la liberté d'expression et d'information, d'une obligation légale de conservation, d'une mission d'intérêt public, de la santé publique, de l'archivage ou de la recherche, ou pour se défendre en justice.",
-     "Le RGPD ne s'applique pas à un usage strictement personnel ou domestique entre particuliers.",
-     "Un organisme installé hors de l'UE qui ne s'adresse pas à des personnes dans l'UE peut échapper au RGPD.",
-     "L'effacement ne concerne que ce responsable : s'il a rendu les données publiques, il doit seulement prendre des mesures raisonnables pour prévenir les autres sites qui les ont copiées.",
-     "Les autorités (CNIL, AEPD) demandent d'avoir d'abord écrit au responsable et d'en garder la preuve."
+     "Ce droit n’est pas absolu : il peut être refusé notamment au nom de la liberté d’expression et d’information, d’une obligation légale de conservation, d’une mission d’intérêt public, de la santé publique, de l’archivage ou de la recherche, ou pour se défendre en justice.",
+     "Le RGPD ne s’applique pas à un usage strictement personnel ou domestique entre particuliers.",
+     "Un organisme installé hors de l’UE qui ne s’adresse pas à des personnes dans l’UE peut échapper au RGPD.",
+     "L’effacement ne concerne que ce responsable : s’il a rendu les données publiques, il doit seulement prendre des mesures raisonnables pour prévenir les autres sites qui les ont copiées.",
+     "Les autorités (CNIL, AEPD) demandent d’avoir d’abord écrit au responsable et d’en garder la preuve."
     ],
     "es": [
      "Este derecho no es absoluto: puede denegarse, entre otros motivos, por la libertad de expresión e información, una obligación legal de conservación, una misión de interés público, la salud pública, el archivo o la investigación, o para defenderse en un juicio.",
@@ -1909,7 +1909,7 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "Règlement (UE) 2016/679 (RGPD) : article 17 (droit à l'effacement, ses motifs et ses exceptions), article 12 (réponse sous 1 mois, prolongeable de 2 mois ; gratuité), article 19 (le responsable informe les destinataires de l'effacement) et article 77 (droit de déposer une plainte auprès d'une autorité de contrôle).",
+    "fr": "Règlement (UE) 2016/679 (RGPD) : article 17 (droit à l’effacement, ses motifs et ses exceptions), article 12 (réponse sous 1 mois, prolongeable de 2 mois ; gratuité), article 19 (le responsable informe les destinataires de l’effacement) et article 77 (droit de déposer une plainte auprès d’une autorité de contrôle).",
     "es": "Reglamento (UE) 2016/679 (RGPD): artículo 17 (derecho de supresión, sus motivos y excepciones), artículo 12 (respuesta en 1 mes, ampliable 2 meses; gratuidad), artículo 19 (el responsable comunica la supresión a los destinatarios) y artículo 77 (derecho a presentar una reclamación ante una autoridad de control).",
     "en": "Regulation (EU) 2016/679 (GDPR): Article 17 (right to erasure, its grounds and exceptions), Article 12 (reply within 1 month, extendable by 2 months; free of charge), Article 19 (the controller informs recipients of the erasure) and Article 77 (right to lodge a complaint with a supervisory authority)."
    },
@@ -1937,7 +1937,7 @@
     {
      "url": "https://www.aepd.es/areas-de-actuacion/internet-y-redes-sociales/eliminar-fotos-y-videos-de-internet",
      "titre": {
-      "fr": "AEPD – supprimer des photos et vidéos d'internet (Espagne, en espagnol)",
+      "fr": "AEPD – supprimer des photos et vidéos d’internet (Espagne, en espagnol)",
       "es": "AEPD – eliminar fotos y vídeos de internet",
       "en": "AEPD – removing photos and videos from the internet (Spain, in Spanish)"
      }
@@ -1972,32 +1972,32 @@
     "en": "search-engine-delisting-right-to-be-forgotten"
    },
    "titre": {
-    "fr": "Droit à l'oubli : faire déréférencer un lien de Google ou Bing",
+    "fr": "Droit à l’oubli : faire déréférencer un lien de Google ou Bing",
     "es": "Derecho al olvido: pedir a Google o Bing que quiten un enlace",
     "en": "Right to be forgotten: asking Google or Bing to delist a link"
    },
    "meta_description": {
-    "fr": "Dans l'UE, vous pouvez demander à un moteur de ne plus afficher un lien quand on tape votre nom. Formulaires, délais, limites : l'essentiel.",
+    "fr": "Dans l’UE, vous pouvez demander à un moteur de ne plus afficher un lien quand on tape votre nom. Formulaires, délais, limites : l’essentiel.",
     "es": "En la UE puedes pedir a un buscador que no muestre un enlace al buscar tu nombre. Formularios, plazos y límites: lo esencial.",
     "en": "In the EU you can ask a search engine to stop showing a link when people search your name. Forms, deadlines and limits: the essentials."
    },
    "resume": {
-    "fr": "Dans l'Union européenne, vous pouvez demander à un moteur de recherche de ne plus afficher, quand on tape votre nom, un lien vers une page qui vous concerne. On parle de « déréférencement » : la page reste sur le site d'origine, mais elle devient beaucoup plus difficile à trouver.",
+    "fr": "Dans l’Union européenne, vous pouvez demander à un moteur de recherche de ne plus afficher, quand on tape votre nom, un lien vers une page qui vous concerne. On parle de « déréférencement » : la page reste sur le site d’origine, mais elle devient beaucoup plus difficile à trouver.",
     "es": "En la Unión Europea puedes pedir a un buscador que deje de mostrar, cuando alguien busca tu nombre, un enlace a una página que te concierne. Es la «desindexación»: la página sigue en la web de origen, pero resulta mucho más difícil de encontrar.",
     "en": "In the European Union you can ask a search engine to stop showing, when people search your name, a link to a page about you. This is called “delisting”: the page stays on the original site, but becomes much harder to find."
    },
    "pour_qui": {
-    "fr": "Toute personne (ou son représentant légal) qui, en tapant son nom dans un moteur de recherche depuis l'UE, voit apparaître des pages contenant des informations personnelles inexactes, dépassées, excessives ou sensibles.",
+    "fr": "Toute personne (ou son représentant légal) qui, en tapant son nom dans un moteur de recherche depuis l’UE, voit apparaître des pages contenant des informations personnelles inexactes, dépassées, excessives ou sensibles.",
     "es": "Cualquier persona (o su representante legal) que, al buscar su nombre en un buscador desde la UE, ve aparecer páginas con información personal inexacta, desactualizada, excesiva o sensible.",
     "en": "Anyone (or their legal representative) who, when searching their name in a search engine from the EU, sees pages containing personal information that is inaccurate, outdated, excessive or sensitive."
    },
    "etapes": {
     "fr": [
      "Tapez votre nom (et ses variantes, avec et sans accents) dans chaque moteur et listez les URL exactes des résultats gênants.",
-     "Remplissez le formulaire de chaque moteur : Google (formulaire « droit à l'oubli » pour l'Europe) et Bing (formulaire de blocage des résultats en Europe). Une demande acceptée par un moteur ne vaut pas pour les autres.",
+     "Remplissez le formulaire de chaque moteur : Google (formulaire « droit à l’oubli » pour l’Europe) et Bing (formulaire de blocage des résultats en Europe). Une demande acceptée par un moteur ne vaut pas pour les autres.",
      "Pour chaque URL, expliquez en quoi le contenu vous concerne et pourquoi il ne devrait plus apparaître (information inexacte, ancienne, sensible, sans intérêt pour le public…).",
-     "Vous n'êtes pas obligé(e) d'obtenir d'abord la suppression sur le site d'origine. Mais la demander aussi reste utile : le déréférencement ne supprime rien.",
-     "En cas de refus, ou sans réponse dans un délai d'un mois, saisissez l'autorité de protection des données de votre pays (CNIL en France, AEPD en Espagne)."
+     "Vous n’êtes pas obligé(e) d’obtenir d’abord la suppression sur le site d’origine. Mais la demander aussi reste utile : le déréférencement ne supprime rien.",
+     "En cas de refus, ou sans réponse dans un délai d’un mois, saisissez l’autorité de protection des données de votre pays (CNIL en France, AEPD en Espagne)."
     ],
     "es": [
      "Busca tu nombre (y sus variantes, con y sin tildes) en cada buscador y apunta las URL exactas de los resultados que te perjudican.",
@@ -2008,10 +2008,10 @@
     ],
     "en": [
      "Search your name (and its variants, with and without accents) in each search engine and list the exact URLs of the unwanted results.",
-     "Fill in each search engine's form: Google (its European “right to be forgotten” form) and Bing (its form to block results in Europe). A request accepted by one engine does not apply to the others.",
+     "Fill in each search engine’s form: Google (its European “right to be forgotten” form) and Bing (its form to block results in Europe). A request accepted by one engine does not apply to the others.",
      "For each URL, explain how the content relates to you and why it should no longer appear (inaccurate, old, sensitive, of no public interest…).",
      "You do not have to get the content removed from the original site first. But asking for that too is useful: delisting does not delete anything.",
-     "If refused, or if you get no answer within a month, go to your country's data protection authority (CNIL in France, AEPD in Spain)."
+     "If refused, or if you get no answer within a month, go to your country’s data protection authority (CNIL in France, AEPD in Spain)."
     ]
    },
    "a_preparer": {
@@ -2019,8 +2019,8 @@
      "La liste des URL exactes, pour chaque moteur",
      "Le ou les noms tapés dans le moteur, avec leurs variantes",
      "Une courte explication pour chaque lien",
-     "Une pièce d'identité si le moteur la demande (Bing demande le nom tel qu'il figure sur un document officiel)",
-     "Si vous agissez pour quelqu'un : la preuve que vous êtes autorisé(e) à le faire"
+     "Une pièce d’identité si le moteur la demande (Bing demande le nom tel qu’il figure sur un document officiel)",
+     "Si vous agissez pour quelqu’un : la preuve que vous êtes autorisé(e) à le faire"
     ],
     "es": [
      "La lista de URL exactas, para cada buscador",
@@ -2038,7 +2038,7 @@
     ]
    },
    "delai": {
-    "fr": "Le RGPD prévoit une réponse dans un délai d'un mois, prolongeable de 2 mois si la demande est complexe. Le moteur peut vous demander des informations complémentaires avant de décider.",
+    "fr": "Le RGPD prévoit une réponse dans un délai d’un mois, prolongeable de 2 mois si la demande est complexe. Le moteur peut vous demander des informations complémentaires avant de décider.",
     "es": "El RGPD prevé una respuesta en un mes, ampliable 2 meses si la solicitud es compleja. El buscador puede pedirte más información antes de decidir.",
     "en": "The GDPR requires a reply within one month, extendable by 2 months if the request is complex. The search engine may ask you for more information before deciding."
    },
@@ -2049,10 +2049,10 @@
    },
    "limites": {
     "fr": [
-     "Le déréférencement ne supprime rien : la page reste en ligne et accessible en direct ou par d'autres recherches.",
-     "Il s'applique aux versions européennes du moteur, avec un blocage selon la localisation : depuis l'extérieur de l'UE, le lien peut rester visible.",
+     "Le déréférencement ne supprime rien : la page reste en ligne et accessible en direct ou par d’autres recherches.",
+     "Il s’applique aux versions européennes du moteur, avec un blocage selon la localisation : depuis l’extérieur de l’UE, le lien peut rester visible.",
      "Chaque moteur décide séparément : il faut refaire la demande moteur par moteur.",
-     "Refus possible si l'information présente un intérêt pour le public (rôle public, actualité récente, publication officielle…).",
+     "Refus possible si l’information présente un intérêt pour le public (rôle public, actualité récente, publication officielle…).",
      "Si le contenu est republié à une autre adresse, il faut une nouvelle demande.",
      "Pour les images intimes, réelles ou fausses, Google a aussi une procédure spécifique de retrait de ses résultats."
     ],
@@ -2075,7 +2075,7 @@
    },
    "attention": null,
    "base_legale": {
-    "fr": "RGPD, article 17 (droit à l'effacement), tel qu'interprété par la Cour de justice de l'UE : arrêt Google Spain du 13 mai 2014 (C-131/12 : droit de demander le déréférencement, même si l'information reste sur le site d'origine), arrêts du 24 septembre 2019 GC e.a. (C-136/17 : données sensibles) et Google c. CNIL (C-507/17 : portée limitée aux versions européennes), arrêt du 8 décembre 2022 (C-460/20 : pas besoin d'une décision de justice préalable pour contester une information inexacte). Conseil d'État, 27 mars 2020, n° 399922 : pas d'obligation de déréférencement mondial en l'état du droit.",
+    "fr": "RGPD, article 17 (droit à l’effacement), tel qu’interprété par la Cour de justice de l’UE : arrêt Google Spain du 13 mai 2014 (C-131/12 : droit de demander le déréférencement, même si l’information reste sur le site d’origine), arrêts du 24 septembre 2019 GC e.a. (C-136/17 : données sensibles) et Google c. CNIL (C-507/17 : portée limitée aux versions européennes), arrêt du 8 décembre 2022 (C-460/20 : pas besoin d’une décision de justice préalable pour contester une information inexacte). Conseil d’État, 27 mars 2020, n° 399922 : pas d’obligation de déréférencement mondial en l’état du droit.",
     "es": "RGPD, artículo 17 (derecho de supresión), según la interpretación del Tribunal de Justicia de la UE: sentencia Google Spain de 13 de mayo de 2014 (C-131/12: derecho a pedir la desindexación aunque la información siga en la web de origen), sentencias de 24 de septiembre de 2019 GC y otros (C-136/17: datos sensibles) y Google contra CNIL (C-507/17: alcance limitado a las versiones europeas), sentencia de 8 de diciembre de 2022 (C-460/20: no hace falta una resolución judicial previa para impugnar una información inexacta). Consejo de Estado francés, 27 de marzo de 2020, n.º 399922: no hay obligación de desindexación mundial según el derecho vigente.",
     "en": "GDPR Article 17 (right to erasure), as interpreted by the Court of Justice of the EU: Google Spain judgment of 13 May 2014 (C-131/12: right to request delisting even if the information stays on the original site), judgments of 24 September 2019 in GC and Others (C-136/17: sensitive data) and Google v CNIL (C-507/17: scope limited to European versions), judgment of 8 December 2022 (C-460/20: no prior court ruling needed to challenge inaccurate information). French Council of State, 27 March 2020, No. 399922: no obligation of worldwide delisting under current law."
    },
@@ -2087,7 +2087,7 @@
     {
      "url": "https://reportcontent.google.com/forms/rtbf",
      "titre": {
-      "fr": "Google – formulaire « droit à l'oubli » (Europe)",
+      "fr": "Google – formulaire « droit à l’oubli » (Europe)",
       "es": "Google – formulario de «derecho al olvido» (Europa)",
       "en": "Google – European “right to be forgotten” form"
      }
@@ -2144,7 +2144,7 @@
     "en": "dmca-takedown-notice-your-own-photo"
    },
    "titre": {
-    "fr": "DMCA : demander le retrait d'une photo dont vous êtes l'auteur",
+    "fr": "DMCA : demander le retrait d’une photo dont vous êtes l’auteur",
     "es": "DMCA: pedir la retirada de una foto o un vídeo que hiciste tú",
     "en": "DMCA: requesting removal of a photo or video you created"
    },
@@ -2154,22 +2154,22 @@
     "en": "Your selfie or a video you made posted without permission on a US service? How a DMCA takedown notice works, its rules and its limits."
    },
    "resume": {
-    "fr": "Le DMCA est une loi américaine sur le droit d'auteur. Si une photo ou une vidéo dont vous êtes l'auteur (par exemple un selfie) est publiée sans votre autorisation sur un service soumis au droit américain, vous pouvez envoyer une « notification DMCA » pour demander son retrait.",
+    "fr": "Le DMCA est une loi américaine sur le droit d’auteur. Si une photo ou une vidéo dont vous êtes l’auteur (par exemple un selfie) est publiée sans votre autorisation sur un service soumis au droit américain, vous pouvez envoyer une « notification DMCA » pour demander son retrait.",
     "es": "La DMCA es una ley estadounidense sobre derechos de autor. Si una foto o un vídeo que hiciste tú (por ejemplo, un selfi) se publica sin tu autorización en un servicio sujeto a la ley de EE. UU., puedes enviar una «notificación DMCA» para pedir su retirada.",
     "en": "The DMCA is a US copyright law. If a photo or video you created (for example a selfie) is posted without your permission on a service subject to US law, you can send a “DMCA notice” asking for it to be removed."
    },
    "pour_qui": {
-    "fr": "La personne qui détient le droit d'auteur sur l'œuvre – en général celle qui a pris la photo ou filmé la vidéo – ou quelqu'un autorisé à agir pour elle. Surtout utile face à des plateformes ou des hébergeurs soumis au droit américain.",
+    "fr": "La personne qui détient le droit d’auteur sur l’œuvre – en général celle qui a pris la photo ou filmé la vidéo – ou quelqu’un autorisé à agir pour elle. Surtout utile face à des plateformes ou des hébergeurs soumis au droit américain.",
     "es": "La persona titular de los derechos de autor de la obra –en general, quien hizo la foto o grabó el vídeo– o alguien autorizado para actuar en su nombre. Sobre todo útil frente a plataformas o proveedores de alojamiento sujetos a la ley estadounidense.",
     "en": "The person who holds the copyright in the work – usually whoever took the photo or shot the video – or someone authorised to act for them. Most useful with platforms or hosts subject to US law."
    },
    "etapes": {
     "fr": [
-     "Vérifiez que vous êtes bien l'auteur : si quelqu'un d'autre a pris la photo, c'est lui qui détient le droit d'auteur. Utilisez alors d'autres recours (vie privée, RGPD, image intime).",
-     "Trouvez l'« agent DMCA » désigné de l'hébergeur ou de la plateforme : formulaire « copyright » du service, ou annuaire officiel du Copyright Office américain. Évitez les adresses de support générales.",
-     "Rédigez la notification (en anglais si possible, pour un service américain) avec les 6 éléments prévus par la loi : votre signature ; l'œuvre concernée ; l'URL du contenu à retirer ; vos coordonnées ; une déclaration de bonne foi indiquant que cet usage n'est pas autorisé ; une déclaration que les informations sont exactes et, sous peine de parjure (faux serment), que vous êtes autorisé(e) à agir.",
-     "Avant d'envoyer, demandez-vous si l'usage pourrait être légal (courte citation, critique, parodie…) : une cour d'appel fédérale américaine a jugé qu'il faut examiner cet « usage loyal » (fair use) avant d'envoyer une notification.",
-     "Envoyez la notification et gardez-en une copie datée. Pour garder sa protection juridique, l'hébergeur doit retirer le contenu « rapidement » (sans délai chiffré).",
+     "Vérifiez que vous êtes bien l’auteur : si quelqu’un d’autre a pris la photo, c’est lui qui détient le droit d’auteur. Utilisez alors d’autres recours (vie privée, RGPD, image intime).",
+     "Trouvez l'« agent DMCA » désigné de l’hébergeur ou de la plateforme : formulaire « copyright » du service, ou annuaire officiel du Copyright Office américain. Évitez les adresses de support générales.",
+     "Rédigez la notification (en anglais si possible, pour un service américain) avec les 6 éléments prévus par la loi : votre signature ; l’œuvre concernée ; l’URL du contenu à retirer ; vos coordonnées ; une déclaration de bonne foi indiquant que cet usage n’est pas autorisé ; une déclaration que les informations sont exactes et, sous peine de parjure (faux serment), que vous êtes autorisé(e) à agir.",
+     "Avant d’envoyer, demandez-vous si l’usage pourrait être légal (courte citation, critique, parodie…) : une cour d’appel fédérale américaine a jugé qu’il faut examiner cet « usage loyal » (fair use) avant d’envoyer une notification.",
+     "Envoyez la notification et gardez-en une copie datée. Pour garder sa protection juridique, l’hébergeur doit retirer le contenu « rapidement » (sans délai chiffré).",
      "Déposez aussi vos autres signalements en parallèle (vie privée, image intime, DSA) : le DMCA ne les remplace pas."
     ],
     "es": [
@@ -2182,7 +2182,7 @@
     ],
     "en": [
      "Check that you are the author: if someone else took the photo, they hold the copyright. In that case, use other routes (privacy, GDPR, intimate image).",
-     "Find the host's or platform's designated “DMCA agent”: the service's copyright form, or the US Copyright Office's official directory. Avoid general support addresses.",
+     "Find the host’s or platform’s designated “DMCA agent”: the service’s copyright form, or the US Copyright Office’s official directory. Avoid general support addresses.",
      "Write the notice (in English for a US service) with the 6 elements the law requires: your signature; the work concerned; the URL of the content to remove; your contact details; a good-faith statement that the use is not authorised; and a statement that the information is accurate and, under penalty of perjury, that you are authorised to act.",
      "Before sending, ask yourself whether the use could be lawful (short quotation, criticism, parody…): a US federal appeals court has ruled that this “fair use” must be considered before sending a notice.",
      "Send the notice and keep a dated copy. To keep its legal protection, the host must remove the content “expeditiously” (no fixed deadline).",
@@ -2191,11 +2191,11 @@
    },
    "a_preparer": {
     "fr": [
-     "L'URL de chaque contenu à retirer",
-     "De quoi identifier votre œuvre : l'original de la photo ou de la vidéo, ou le lien vers sa publication d'origine",
+     "L’URL de chaque contenu à retirer",
+     "De quoi identifier votre œuvre : l’original de la photo ou de la vidéo, ou le lien vers sa publication d’origine",
      "Vos coordonnées : adresse, téléphone et e-mail",
      "Votre signature, manuscrite ou électronique",
-     "Les deux déclarations exigées (bonne foi ; exactitude et autorisation d'agir sous peine de parjure)"
+     "Les deux déclarations exigées (bonne foi ; exactitude et autorisation d’agir sous peine de parjure)"
     ],
     "es": [
      "La URL de cada contenido que hay que retirar",
@@ -2224,10 +2224,10 @@
    },
    "limites": {
     "fr": [
-     "Ne fonctionne que si vous détenez le droit d'auteur (en général l'auteur de la photo), pas si vous êtes seulement la personne photographiée.",
-     "La personne qui a publié peut répondre par une contre-notification : le contenu revient alors en ligne au bout de 10 à 14 jours ouvrés, sauf si vous engagez une action en justice pour l'en empêcher (en pratique aux États-Unis).",
-     "Votre nom et votre e-mail peuvent être transmis à la personne qui a publié le contenu (YouTube l'indique par exemple) ; un représentant, comme un avocat, peut envoyer la notification à votre place.",
-     "Affirmer sciemment quelque chose de faux dans une notification peut vous obliger à payer les dommages et les frais d'avocat de l'autre partie.",
+     "Ne fonctionne que si vous détenez le droit d’auteur (en général l’auteur de la photo), pas si vous êtes seulement la personne photographiée.",
+     "La personne qui a publié peut répondre par une contre-notification : le contenu revient alors en ligne au bout de 10 à 14 jours ouvrés, sauf si vous engagez une action en justice pour l’en empêcher (en pratique aux États-Unis).",
+     "Votre nom et votre e-mail peuvent être transmis à la personne qui a publié le contenu (YouTube l’indique par exemple) ; un représentant, comme un avocat, peut envoyer la notification à votre place.",
+     "Affirmer sciemment quelque chose de faux dans une notification peut vous obliger à payer les dommages et les frais d’avocat de l’autre partie.",
      "Le DMCA ne sert pas à faire retirer une critique ou un avis : ce serait un usage abusif.",
      "Une notification incomplète peut ne pas être prise en compte."
     ],
@@ -2243,7 +2243,7 @@
      "It only works if you hold the copyright (usually whoever took the photo), not if you are only the person photographed.",
      "The person who posted it can reply with a counter-notice: the content then comes back online after 10 to 14 business days, unless you take legal action to stop it (in practice, in the United States).",
      "Your name and email may be passed on to the person who posted the content (YouTube, for example, says so); a representative such as a lawyer can send the notice for you.",
-     "Knowingly stating something false in a notice can make you liable for the other side's damages and legal fees.",
+     "Knowingly stating something false in a notice can make you liable for the other side’s damages and legal fees.",
      "The DMCA is not for removing criticism or reviews: that would be an abuse.",
      "An incomplete notice may not be taken into account."
     ]
@@ -2254,7 +2254,7 @@
     "en": "If the person targeted sends a counter-notice, the content can come back online within 10 to 14 business days unless you take legal action in that time (in practice, in the United States). Prepare your other routes (privacy, intimate image, GDPR, DSA) in parallel."
    },
    "base_legale": {
-    "fr": "Digital Millennium Copyright Act, article 512 du titre 17 du Code des États-Unis (17 U.S.C. § 512) : § 512(c)(3) (contenu de la notification), § 512(g) (contre-notification et remise en ligne sous 10 à 14 jours ouvrés), § 512(f) (responsabilité en cas de fausse déclaration faite sciemment). Lenz v. Universal Music Corp., cour d'appel fédérale du 9e circuit, 17 mars 2016 : examen préalable du fair use.",
+    "fr": "Digital Millennium Copyright Act, article 512 du titre 17 du Code des États-Unis (17 U.S.C. § 512) : § 512(c)(3) (contenu de la notification), § 512(g) (contre-notification et remise en ligne sous 10 à 14 jours ouvrés), § 512(f) (responsabilité en cas de fausse déclaration faite sciemment). Lenz v. Universal Music Corp., cour d’appel fédérale du 9e circuit, 17 mars 2016 : examen préalable du fair use.",
     "es": "Digital Millennium Copyright Act, sección 512 del título 17 del Código de EE. UU. (17 U.S.C. § 512): § 512(c)(3) (contenido de la notificación), § 512(g) (contranotificación y reposición en 10 a 14 días hábiles), § 512(f) (responsabilidad por declaraciones falsas hechas a sabiendas). Lenz v. Universal Music Corp., Tribunal de Apelaciones del Noveno Circuito, 17 de marzo de 2016: examen previo del fair use.",
     "en": "Digital Millennium Copyright Act, Title 17 of the US Code, section 512 (17 U.S.C. § 512): § 512(c)(3) (content of the notice), § 512(g) (counter-notice and restoration within 10 to 14 business days), § 512(f) (liability for knowing misrepresentation). Lenz v. Universal Music Corp., US Court of Appeals for the Ninth Circuit, 17 March 2016: fair use must be considered first."
    },
@@ -2274,7 +2274,7 @@
     {
      "url": "https://reportcontent.google.com/forms/dmca_search",
      "titre": {
-      "fr": "Google – demande de retrait pour atteinte au droit d'auteur dans les résultats de recherche",
+      "fr": "Google – demande de retrait pour atteinte au droit d’auteur dans les résultats de recherche",
       "es": "Google – solicitud de retirada por derechos de autor en los resultados de búsqueda",
       "en": "Google – copyright removal request for Search results"
      }

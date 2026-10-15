@@ -814,6 +814,7 @@ function CourrierCarte({ c, recharger }: { c: Courrier; recharger: () => void })
   const [dest, setDest] = useState(c.destinataire ?? '');
   const [destEmail, setDestEmail] = useState(c.destinataire_email ?? '');
   const a = useAction();
+  const [approuve, setApprouve] = useState(false);
   useEffect(() => {
     setObjet(c.objet);
     setCorps(c.corps);
@@ -855,6 +856,12 @@ function CourrierCarte({ c, recharger }: { c: Courrier; recharger: () => void })
           </Champ>
           {incomplet && <p class="o-erreur">{t('aCompleter')}</p>}
           <p class="o-muet">{t('validerAide')}</p>
+          {c.modele !== 'mandat' && (
+            <label class="o-case">
+              <input type="checkbox" checked={approuve} onChange={() => setApprouve(!approuve)} />
+              <span>{t('approuveClient')}</span>
+            </label>
+          )}
           <div class="o-actions">
             {modifie && (
               <button
@@ -867,8 +874,8 @@ function CourrierCarte({ c, recharger }: { c: Courrier; recharger: () => void })
             )}
             <button
               class="o-bouton o-principal"
-              disabled={incomplet || modifie || a.occupe}
-              onClick={() => a.lancer(() => post(`/courriers/${c.id}/valider`), recharger)}
+              disabled={incomplet || modifie || a.occupe || (c.modele !== 'mandat' && !approuve)}
+              onClick={() => a.lancer(() => post(`/courriers/${c.id}/valider`, { approuve_client: c.modele !== 'mandat' && approuve }), recharger)}
             >
               ✓ {t('validerCourrier')}
             </button>

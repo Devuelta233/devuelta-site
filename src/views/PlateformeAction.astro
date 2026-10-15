@@ -28,14 +28,8 @@ const autres = actionsPour(situation).filter((x) => x.plateforme.id !== platefor
 const lien = urlAction(action, lang);
 const etapes = action.etapes[lang] ?? [];
 const description = `${h1Final}. ${etapes[0] ?? ''}`.slice(0, 155);
+// Pas de balisage HowTo : Google ne l'utilise plus (étapes numérotées en HTML suffisent).
 const jsonld = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    name: h1Final,
-    inLanguage: lang,
-    step: etapes.map((e, i) => ({ '@type': 'HowToStep', position: i + 1, text: e })),
-  },
   {
     '@context': 'https://schema.org',
     '@type': 'WebPage',

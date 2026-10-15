@@ -24,8 +24,8 @@ type ParLangue = Record<'fr' | 'es' | 'en', ContenuSituation>;
 export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
   'contenu-intime': {
     fr: {
-      h1: 'Photo ou vidéo intime diffusée sans votre accord : que faire ?',
-      seo: 'Photo intime diffusée : la faire retirer',
+      h1: 'Vos photos ou vidéos intimes ont été diffusées : que faire',
+      seo: 'Photos intimes diffusées sans consentement : que faire',
       meta: 'Une photo ou vidéo intime de vous circule en ligne ? Les démarches officielles, dans l’ordre, pour la faire retirer et éviter qu’elle se propage.',
       carte: 'Une image intime de vous circule en ligne.',
       intro:
@@ -57,8 +57,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     es: {
-      h1: 'Foto o video íntimo difundido sin tu permiso: qué hacer',
-      seo: 'Foto íntima difundida: cómo eliminarla',
+      h1: 'Filtraron tu pack o tus fotos íntimas: qué hacer ahora',
+      seo: 'Filtraron mis fotos íntimas: qué hacer y cómo borrarlas',
       meta: '¿Circula en internet una foto o un video íntimo tuyo? Los pasos oficiales, en orden, para que lo retiren y evitar que se siga compartiendo.',
       carte: 'Una imagen íntima tuya circula en internet.',
       intro:
@@ -90,8 +90,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     en: {
-      h1: 'Intimate photo or video shared without your consent: what to do',
-      seo: 'Intimate image shared online: get it removed',
+      h1: 'Your intimate images were shared without consent: what to do',
+      seo: 'Intimate images shared without consent: get them removed',
       meta: 'An intimate photo or video of you is online? The official steps, in order, to get it removed and stop it from spreading.',
       carte: 'An intimate image of you is online.',
       intro:
@@ -126,8 +126,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
 
   deepfake: {
     fr: {
-      h1: 'Montage ou deepfake intime : comment le faire retirer',
-      seo: 'Deepfake intime : comment le faire retirer',
+      h1: 'Un deepfake de vous circule : le faire retirer, porter plainte',
+      seo: 'Deepfake de vous : le faire supprimer et porter plainte',
       meta: 'Une fausse image intime de vous, créée par IA, circule ? Elle peut être retirée comme une vraie. Les démarches, plateforme par plateforme.',
       carte: 'Une fausse image de vous, créée par IA, circule.',
       intro:
@@ -154,8 +154,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     es: {
-      h1: 'Montaje o deepfake íntimo: cómo conseguir que lo retiren',
-      seo: 'Deepfake íntimo: cómo eliminarlo',
+      h1: 'Hicieron un deepfake de ti: cómo eliminarlo y denunciar',
+      seo: 'Deepfake de ti: cómo eliminarlo y denunciarlo',
       meta: '¿Circula una imagen íntima falsa tuya creada con IA? Se puede retirar igual que una real. Los pasos, plataforma por plataforma.',
       carte: 'Circula una imagen falsa tuya creada con IA.',
       intro:
@@ -182,8 +182,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     en: {
-      h1: 'Intimate deepfake or fake image: how to get it removed',
-      seo: 'Intimate deepfake: how to get it removed',
+      h1: 'Someone made a deepfake of you: report it and get it removed',
+      seo: 'How to report a deepfake of you (Instagram, TikTok, X)',
       meta: 'A fake intimate image of you, made with AI, is circulating? It can be removed just like a real one. The steps, platform by platform.',
       carte: 'A fake image of you, made with AI, is circulating.',
       intro:
@@ -213,8 +213,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
 
   usurpation: {
     fr: {
-      h1: 'Faux profil à votre nom : comment le faire supprimer',
-      seo: 'Faux profil à mon nom : le faire supprimer',
+      h1: 'Un faux profil à votre nom : le faire supprimer partout',
+      seo: 'Faux profil, usurpation d’identité en ligne : que faire',
       meta: 'Quelqu’un se fait passer pour vous sur Instagram, Facebook, TikTok… Les formulaires officiels pour faire supprimer un faux profil, même sans compte.',
       carte: 'Quelqu’un se fait passer pour vous.',
       intro:
@@ -241,8 +241,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     es: {
-      h1: 'Perfil falso con tu nombre: cómo conseguir que lo eliminen',
-      seo: 'Perfil falso con mi nombre: cómo eliminarlo',
+      h1: 'Suplantan tu identidad en redes sociales: qué hacer',
+      seo: 'Suplantación de identidad en redes sociales: qué hacer',
       meta: '¿Alguien se hace pasar por ti en Instagram, Facebook o TikTok? Los formularios oficiales para eliminar un perfil falso, incluso sin tener cuenta.',
       carte: 'Alguien se hace pasar por ti.',
       intro:
@@ -269,8 +269,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     en: {
-      h1: 'Fake profile in your name: how to get it taken down',
-      seo: 'Fake profile pretending to be me: remove it',
+      h1: 'A fake account is pretending to be you: get it removed',
+      seo: 'Someone is impersonating you online: what to do',
       meta: 'Someone is pretending to be you on Instagram, Facebook or TikTok? The official forms to get an impersonation account removed, even without an account.',
       carte: 'Someone is pretending to be you.',
       intro:
@@ -300,8 +300,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
 
   'piratage-compte': {
     fr: {
-      h1: 'Compte piraté : les étapes pour le récupérer',
-      seo: 'Compte piraté : comment le récupérer',
+      h1: 'Compte piraté : que faire, plateforme par plateforme',
+      seo: 'Compte piraté : que faire selon la plateforme',
       meta: 'Instagram, Facebook, TikTok, WhatsApp… votre compte est piraté ? Les pages officielles de récupération et les bons réflexes, étape par étape.',
       carte: 'Vous n’avez plus accès à votre compte.',
       intro:
@@ -328,8 +328,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     es: {
-      h1: 'Cuenta hackeada: los pasos para recuperarla',
-      seo: 'Me hackearon la cuenta: cómo recuperarla',
+      h1: 'Me hackearon la cuenta: qué hacer en cada plataforma',
+      seo: 'Me hackearon la cuenta: qué hacer según la red social',
       meta: 'Instagram, Facebook, TikTok, WhatsApp… ¿te hackearon la cuenta? Las páginas oficiales de recuperación y qué hacer, paso a paso.',
       carte: 'Ya no puedes entrar a tu cuenta.',
       intro:
@@ -356,8 +356,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     en: {
-      h1: 'Hacked account: the steps to get it back',
-      seo: 'Hacked account: how to recover it',
+      h1: 'Your account was hacked: what to do, platform by platform',
+      seo: 'Account hacked? What to do on each platform',
       meta: 'Instagram, Facebook, TikTok, WhatsApp… your account was hacked? The official recovery pages and what to do, step by step.',
       carte: "You can't get into your account anymore.",
       intro:
@@ -474,8 +474,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
 
   diffamation: {
     fr: {
-      h1: 'Diffamation ou harcèlement en ligne : que faire',
-      seo: 'Diffamation ou harcèlement en ligne : que faire',
+      h1: 'Harcèlement ou diffamation en ligne : que faire, étape par étape',
+      seo: 'Harcèlement sur les réseaux sociaux, diffamation : que faire',
       meta: 'Accusations fausses, insultes, messages répétés contre vous en ligne ? Les démarches pour faire retirer, les preuves à garder, et le délai de 3 mois à ne pas rater.',
       carte: 'On vous accuse ou on vous harcèle en ligne.',
       intro:
@@ -641,8 +641,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
 
   'droit-auteur': {
     fr: {
-      h1: 'Votre photo réutilisée sans accord : comment la faire retirer',
-      seo: 'Ma photo utilisée sans accord : la faire retirer',
+      h1: 'Quelqu’un utilise vos photos : comment les faire retirer',
+      seo: 'Quelqu’un utilise vos photos sans accord : que faire',
       meta: 'Une photo que vous avez prise est réutilisée sans votre accord ? Le droit d’auteur permet souvent un retrait rapide. Les démarches et leurs limites.',
       carte: 'Votre photo est utilisée sans votre accord.',
       intro:
@@ -664,8 +664,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     es: {
-      h1: 'Tu foto usada sin permiso: cómo conseguir que la retiren',
-      seo: 'Mi foto usada sin permiso: cómo retirarla',
+      h1: 'Alguien usa tus fotos sin permiso: qué hacer',
+      seo: 'Usan tus fotos sin permiso: cómo hacer que las quiten',
       meta: '¿Usan sin tu permiso una foto que tomaste tú? Los derechos de autor suelen permitir una retirada rápida. Los pasos y sus límites.',
       carte: 'Usan tu foto sin tu permiso.',
       intro:
@@ -687,8 +687,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     en: {
-      h1: 'Your photo used without permission: how to get it removed',
-      seo: 'My photo used without permission: remove it',
+      h1: 'Someone posted your photo without permission: get it removed',
+      seo: 'Someone posted your picture without permission: what to do',
       meta: 'A photo you took is being reused without your permission? Copyright often allows fast removal. The steps and their limits.',
       carte: 'Your photo is used without your permission.',
       intro:
@@ -713,8 +713,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
 
   chantage: {
     fr: {
-      h1: 'Chantage ou sextorsion : les bons réflexes',
-      seo: 'Chantage, sextorsion : que faire tout de suite',
+      h1: 'On menace de publier vos photos : que faire maintenant',
+      seo: 'Sextorsion, chantage aux photos : que faire maintenant',
       meta: 'Quelqu’un menace de publier des images de vous ? Ne payez pas. Les bons réflexes, les numéros d’aide et les outils pour bloquer la publication.',
       carte: 'Quelqu’un vous menace ou vous fait chanter.',
       intro:
@@ -739,8 +739,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     es: {
-      h1: 'Chantaje o sextorsión: qué hacer',
-      seo: 'Chantaje, sextorsión: qué hacer ahora mismo',
+      h1: '¿Te amenazan con publicar tus fotos? Qué hacer ahora mismo',
+      seo: 'Me amenazan con publicar mis fotos: qué hacer ahora',
       meta: '¿Alguien amenaza con publicar imágenes tuyas? No pagues. Qué hacer, los números de ayuda y las herramientas para bloquear la publicación.',
       carte: 'Alguien te amenaza o te chantajea.',
       intro:
@@ -765,8 +765,8 @@ export const SITUATIONS_TEXTE: Record<SituationReelle, ParLangue> = {
       ],
     },
     en: {
-      h1: 'Blackmail or sextortion: what to do',
-      seo: 'Blackmail, sextortion: what to do right now',
+      h1: 'Someone is blackmailing you with pictures: what to do now',
+      seo: 'Blackmailed with your pictures? What to do right now',
       meta: 'Someone is threatening to post images of you? Don’t pay. What to do, helplines, and the tools that block publication.',
       carte: 'Someone is threatening or blackmailing you.',
       intro:

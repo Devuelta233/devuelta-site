@@ -760,18 +760,23 @@ export async function modifierCourrier({ request, env, params, auth }: Ctx): Pro
   return json({ ok: true });
 }
 
-export async function validerCourrier({ env, params, auth }: Ctx): Promise<Response> {
+export async function validerCourrier({ request, env, params, auth }: Ctx): Promise<Response> {
   const { row, dossier } = await objetVisible(env.DB, auth.user, 'courriers', params.id);
   if (row.statut !== 'brouillon') throw new HttpError(409, 'courrier-non-brouillon');
   if (contientMarqueur(String(row.objet)) || contientMarqueur(String(row.corps))) throw new HttpError(422, 'courrier-incomplet');
-  if (String(row.modele) !== 'mandat' && !dossier.mandat_signe_le) {
+  const mandat = String(row.modele) === 'mandat';
+  if (!mandat && !dossier.mandat_signe_le) {
     // On n'écrit jamais au nom de quelqu'un sans son mandat signé, noté au dossier.
     throw new HttpError(422, 'mandat-manquant');
   }
+  // Le modèle est choisi et le texte approuvé par la personne elle-même :
+  // Devuelta fait de l'assistance technique et administrative, pas du conseil juridique.
+  const body = await readJson(request, 1_000).catch(() => ({}) as Record<string, unknown>);
+  if (!mandat && body.approuve_client !== true) throw new HttpError(422, 'approbation-client-manquante');
   const now = nowIso();
   await env.DB.batch([
     env.DB.prepare("UPDATE courriers SET statut = 'valide', valide_par = ?, valide_le = ?, maj_le = ? WHERE id = ?").bind(auth.user.id, now, now, row.id),
-    journalStmt(env.DB, { utilisateur_id: auth.user.id, action: 'courrier-valide', objet: 'courrier', objet_id: String(row.id), dossier_id: dossier.id, details: { modele: row.modele } }),
+    journalStmt(env.DB, { utilisateur_id: auth.user.id, action: 'courrier-valide', objet: 'courrier', objet_id: String(row.id), dossier_id: dossier.id, details: { modele: row.modele, approuve_client: !mandat } }),
   ]);
   return json({ ok: true });
 }

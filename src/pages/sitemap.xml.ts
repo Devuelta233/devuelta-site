@@ -12,7 +12,7 @@ export const GET: APIRoute = () => {
     const alternatives = (parGroupe.get(r.groupe) ?? [])
       .map((a) => `<xhtml:link rel="alternate" hreflang="${a.props.lang}" href="${esc(SITE_URL + a.chemin)}"/>`)
       .join('');
-    return `<url><loc>${esc(SITE_URL + r.chemin)}</loc><lastmod>2026-10-15</lastmod><priority>${r.priorite.toFixed(1)}</priority>${alternatives}</url>`;
+    return `<url><loc>${esc(SITE_URL + r.chemin)}</loc><lastmod>${r.maj}</lastmod><priority>${r.priorite.toFixed(1)}</priority>${alternatives}</url>`;
   });
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${lignes.join('\n')}\n</urlset>\n`;
   return new Response(xml, { headers: { 'Content-Type': 'application/xml; charset=utf-8' } });

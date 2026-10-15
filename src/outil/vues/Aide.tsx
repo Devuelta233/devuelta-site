@@ -7,9 +7,9 @@ type T3 = [string, string, string];
 
 const REGLES: T3[] = typoProfonde([
   [
-    'Rien ne part sans validation humaine. L’outil prépare ; une personne relit, valide, puis envoie elle-même depuis team.devuelta@protonmail.com.',
-    'Nada sale sin validación humana. La herramienta prepara; una persona revisa, valida y envía ella misma desde team.devuelta@protonmail.com.',
-    'Nothing goes out without human validation. The tool prepares; a person reviews, validates and sends it themselves from team.devuelta@protonmail.com.',
+    'Rien ne part sans double accord : la personne approuve le courrier, un membre de l’équipe le relit et le valide, puis l’envoie lui-même depuis team.devuelta@protonmail.com. L’outil ne fait que préparer.',
+    'Nada sale sin doble acuerdo: la persona aprueba la carta, un miembro del equipo la revisa y la valida, y luego la envía él mismo desde team.devuelta@protonmail.com. La herramienta solo prepara.',
+    'Nothing goes out without a double yes: the person approves the letter, a team member reviews and validates it, then sends it themselves from team.devuelta@protonmail.com. The tool only prepares.',
   ],
   [
     'Mandat signé avant tout courrier envoyé au nom de la personne.',
