@@ -48,9 +48,22 @@ export function domaineEnregistrable(host: string): string {
   return last2;
 }
 
-export function plateformeConnue(host: string): string | null {
+export function plateformeConnue(host: string, chemin = ''): string | null {
+  // Les fiches et avis Google Maps sont souvent sous google.xx/maps/… ou goo.gl/maps/…
+  if (/(^|\.)google\.[a-z.]+$/.test(host) && chemin.startsWith('/maps')) return 'google-maps';
+  if (/(^|\.)goo\.gl$/.test(host) && chemin.startsWith('/maps')) return 'google-maps';
   for (const [re, id] of PLATEFORMES) if (re.test(host)) return id;
   return null;
+}
+
+/** Plateforme d'un lien complet (hôte + chemin), ou null. */
+export function plateformeDuLien(lien: string): string | null {
+  try {
+    const u = new URL(lien);
+    return plateformeConnue(u.hostname.toLowerCase().replace(/^www\./, ''), u.pathname);
+  } catch {
+    return null;
+  }
 }
 
 interface VCardEntity {
@@ -134,7 +147,7 @@ export async function identifier(url: string): Promise<Identification> {
   const res: Identification = {
     hote,
     domaine,
-    plateforme: plateformeConnue(hote),
+    plateforme: plateformeDuLien(url),
     registrar: null,
     registrar_iana: null,
     registrar_abuse: null,

@@ -6,7 +6,7 @@ import { journalStmt, nextRef } from '../db';
 import { HttpError, cleanText, json, nowIso, readJson } from '../util';
 import { filtreDemandes, peutVoirDemande } from './access';
 import { identifierTousLesLiens } from './dossiers';
-import { hoteDe, plateformeConnue } from './identification';
+import { hoteDe, plateformeDuLien } from './identification';
 import type { Ctx } from './router';
 
 const STATUTS_MANUELS = ['nouvelle', 'orientee', 'refusee', 'spam'];
@@ -162,7 +162,7 @@ export async function convertir(ctx: Ctx): Promise<Response> {
     stmts.push(
       ctx.env.DB.prepare(
         "INSERT INTO contenus (id, dossier_id, url, domaine, plateforme, statut, origine, ajoute_le, ajoute_par) VALUES (?,?,?,?,?,'a-traiter','demande',?,?)",
-      ).bind(newId(), id, lien, hote, hote ? plateformeConnue(hote) : null, now, ctx.auth.user.id),
+      ).bind(newId(), id, lien, hote, plateformeDuLien(lien), now, ctx.auth.user.id),
     );
   }
   stmts.push(

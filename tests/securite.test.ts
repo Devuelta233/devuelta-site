@@ -126,3 +126,19 @@ describe('nettoyage des entrées', () => {
     expect(() => cleanText('', 10, { required: true })).toThrow('champ-manquant');
   });
 });
+
+import { plateformeDuLien } from '../server/outil/identification';
+
+describe('reconnaissance des plateformes', () => {
+  it('à partir du lien complet', () => {
+    expect(plateformeDuLien('https://www.google.com/maps/place/Commerce/@5.6,-0.2,17z')).toBe('google-maps');
+    expect(plateformeDuLien('https://maps.app.goo.gl/AbCdEf')).toBe('google-maps');
+    expect(plateformeDuLien('https://goo.gl/maps/xyz')).toBe('google-maps');
+    expect(plateformeDuLien('https://www.google.fr/search?q=nom')).toBe('google');
+    expect(plateformeDuLien('https://t.me/un_canal')).toBe('telegram');
+    expect(plateformeDuLien('https://www.instagram.com/p/abc/')).toBe('instagram');
+    expect(plateformeDuLien('https://m.facebook.com/profile.php?id=1')).toBe('facebook');
+    expect(plateformeDuLien('https://exemple-site.com/page')).toBeNull();
+    expect(plateformeDuLien('pas un lien')).toBeNull();
+  });
+});

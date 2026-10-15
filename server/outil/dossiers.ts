@@ -19,7 +19,7 @@ import { newId } from '../crypto';
 import { getParamInt, journalStmt, nextRef } from '../db';
 import { HttpError, addDays, bool, cleanEmail, cleanPhone, cleanText, cleanUrls, json, nowIso, readJson } from '../util';
 import { dossierVisible, filtreDossiers, objetVisible } from './access';
-import { hoteDe, identifier, plateformeConnue, type Identification } from './identification';
+import { hoteDe, identifier, plateformeDuLien, type Identification } from './identification';
 import { ETAPE_DU_MODELE, contientMarqueur, genererCourrier, resumeModeles, trouverModele } from './modeles';
 import { fichesPour, planPourLien } from './plan';
 import type { Ctx } from './router';
@@ -294,7 +294,7 @@ export async function creer({ request, env, auth, exec }: Ctx): Promise<Response
     stmts.push(
       env.DB.prepare(
         "INSERT INTO contenus (id, dossier_id, url, domaine, plateforme, statut, origine, ajoute_le, ajoute_par) VALUES (?,?,?,?,?,'a-traiter','manuel',?,?)",
-      ).bind(newId(), id, lien, hote, hote ? plateformeConnue(hote) : null, now, auth.user.id),
+      ).bind(newId(), id, lien, hote, plateformeDuLien(lien), now, auth.user.id),
     );
   }
   stmts.push(journalStmt(env.DB, { utilisateur_id: auth.user.id, action: 'dossier-cree', objet: 'dossier', objet_id: id, dossier_id: id, details: { ref } }));
@@ -456,7 +456,7 @@ export async function ajouterContenus({ request, env, params, auth, exec }: Ctx)
         d.id,
         url,
         hote,
-        hote ? plateformeConnue(hote) : null,
+        plateformeDuLien(url),
         // Les liens issus d'une recherche inversée attendent une validation humaine.
         origine === 'recherche-inversee' ? 'a-valider' : 'a-traiter',
         origine,
