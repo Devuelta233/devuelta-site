@@ -113,7 +113,7 @@ const D = typoProfonde({
   alertesConnexion: ['Connexions depuis un nouveau pays', 'Conexiones desde un país nuevo', 'Logins from a new country'],
   bientotSupprimes: ['Suppression automatique dans les 7 jours', 'Borrado automático en 7 días', 'Automatic deletion within 7 days'],
   dossiersOuverts: ['dossiers ouverts', 'casos abiertos', 'open cases'],
-  dontMiens: ['dont à moi', 'míos', 'mine'],
+  dontMiens: ['attribués à moi :', 'asignados a mí:', 'assigned to me:'],
   rienAFaire: ['Rien d’urgent. Beau travail.', 'Nada urgente. Buen trabajo.', 'Nothing urgent. Good work.'],
   relanceAuto: ['relance préparée automatiquement', 'recordatorio preparado automáticamente', 'follow-up prepared automatically'],
   notifActiver: ['Recevoir les alertes sur ce téléphone', 'Recibir alertas en este teléfono', 'Get alerts on this phone'],
