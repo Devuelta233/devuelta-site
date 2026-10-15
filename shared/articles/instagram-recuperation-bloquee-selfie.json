@@ -1,0 +1,259 @@
+{
+ "id": "instagram-recuperation-bloquee-selfie",
+ "publie_le": "2026-10-15",
+ "verifie_le": "2026-10-15",
+ "situation": "piratage-compte",
+ "plateformes": [
+  "instagram"
+ ],
+ "slug": {
+  "fr": "recuperation-instagram-bloquee-selfie-video",
+  "es": "me-hackearon-instagram-no-me-deja-verificar",
+  "en": "instagram-hacked-video-selfie-fails"
+ },
+ "titre": {
+  "fr": "Récupération Instagram bloquée (selfie vidéo) : que faire",
+  "es": "Me hackearon Instagram y no me deja verificar: qué hacer",
+  "en": "Instagram hacked and the video selfie fails: what to do"
+ },
+ "meta_description": {
+  "fr": "Compte Instagram piraté et selfie vidéo refusé ? Comment refaire la vérification, limiter les dégâts, contester une désactivation et porter plainte.",
+  "es": "¿Te hackearon Instagram y el video selfie no pasa? Cómo repetir la verificación, limitar los daños, reclamar una desactivación y denunciar.",
+  "en": "Instagram hacked and your video selfie was rejected? How to retry the check, limit the damage, challenge a disabled account and report it."
+ },
+ "chapo": {
+  "fr": "Si Instagram vous demande un selfie vidéo pour récupérer votre compte piraté, faites-le avec soin : l’examen peut prendre jusqu’à deux jours ouvrés, et en cas d’échec vous pouvez parfois le renvoyer depuis l’appli. Pendant l’attente, protégez vos proches et gardez des preuves. Si le compte finit désactivé et que vous êtes dans l’Union européenne, vous pouvez contester la décision, y compris devant un organisme indépendant gratuit.",
+  "es": "Si Instagram te pide un video selfie para recuperar tu cuenta hackeada, hazlo con cuidado: la revisión puede tardar hasta dos días hábiles y, si falla, a veces puedes volver a enviarlo desde la app. Mientras esperas, protege a tus contactos y guarda pruebas. Si la cuenta acaba desactivada y estás en la Unión Europea, puedes recurrir la decisión, también ante un organismo independiente y gratuito.",
+  "en": "If Instagram asks for a video selfie to recover your hacked account, take it carefully: the review can take up to two business days, and if it fails you may be able to resubmit it in the app. While you wait, protect your contacts and keep evidence. If the account ends up disabled and you are in the European Union, you can challenge the decision, including before a free independent body."
+ },
+ "sections": [
+  {
+   "titre": {
+    "fr": "Ce que le selfie vidéo vérifie (et ce qu’il ne fait pas)",
+    "es": "Qué comprueba el video selfie (y qué no hace)",
+    "en": "What the video selfie checks (and what it doesn’t)"
+   },
+   "paragraphes": {
+    "fr": [
+     "Instagram peut demander un selfie vidéo quand vous ne pouvez pas vous connecter avec des photos. La raison donnée : une photo ou une pièce d’identité peut être retouchée, une vidéo aide à confirmer que vous êtes une vraie personne.",
+     "Vous filmez une courte vidéo de vous en tournant la tête dans plusieurs directions. Selon Instagram, il n’utilise pas la reconnaissance faciale sur ces vidéos, et une personne peut examiner la vidéo pour confirmer que vous avez le droit d’accéder au compte.",
+     "L’examen peut prendre jusqu’à deux jours ouvrés, et le compte reste inaccessible pendant ce temps. Si c’est validé, vous recevez un e-mail avec un lien pour changer le mot de passe. La vidéo n’est jamais affichée sur Instagram et elle est supprimée sous 30 jours."
+    ],
+    "es": [
+     "Instagram puede pedirte un video selfie cuando no puedes iniciar sesión con fotos. El motivo que da: una foto o un documento se pueden retocar, y un video ayuda a confirmar que eres una persona real.",
+     "Grabas un video corto de ti girando la cabeza en varias direcciones. Según Instagram, no usa reconocimiento facial en estos videos, y una persona puede revisarlo para confirmar que tienes derecho a acceder a la cuenta.",
+     "La revisión puede tardar hasta dos días hábiles, y la cuenta sigue bloqueada mientras tanto. Si se aprueba, recibes un correo con un enlace para cambiar la contraseña. El video nunca se muestra en Instagram y se elimina en un plazo de 30 días."
+    ],
+    "en": [
+     "Instagram may ask for a video selfie when you can’t log in with photos. The reason it gives: a photo or an ID can be altered, and a video helps confirm you are a real person.",
+     "You record a short video of yourself turning your head in different directions. Instagram says it doesn’t use facial recognition on these videos, and a person may review the video to confirm you are allowed to access the account.",
+     "The review can take up to two business days, and the account stays inaccessible in the meantime. If you pass, you get an email with a link to reset your password. The video is never shown on Instagram and is deleted within 30 days."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "La vérification a échoué : refaire la démarche",
+    "es": "La verificación falló: vuelve a intentarlo",
+    "en": "The check failed: try again the right way"
+   },
+   "paragraphes": {
+    "fr": [
+     "En cas d’échec, Instagram envoie un e-mail à l’adresse sécurisée que vous avez indiquée, et vous pouvez parfois renvoyer la vidéo depuis l’appli. Si vous ne la renvoyez pas, vous risquez de ne pas pouvoir revenir sur le compte.",
+     "Meta indique que ses systèmes reconnaissent mieux l’appareil que vous utilisez d’habitude et les lieux familiers. Il est donc logique de refaire la démarche depuis votre téléphone et votre connexion habituels."
+    ],
+    "es": [
+     "Si falla, Instagram envía un correo a la dirección segura que indicaste, y a veces puedes volver a enviar el video desde la app. Si no lo reenvías, es posible que no puedas volver a entrar en la cuenta.",
+     "Meta indica que sus sistemas reconocen mejor el dispositivo que usas normalmente y los lugares habituales. Por eso tiene sentido repetir el proceso desde tu teléfono y tu conexión de siempre."
+    ],
+    "en": [
+     "If it fails, Instagram sends an email to the secure address you gave, and you may be able to resubmit the video in the app. If you don’t resubmit, you may not be able to get back into the account.",
+     "Meta says its systems now better recognize the device you usually use and familiar locations. So it makes sense to retry from your usual phone and your usual connection."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Utilisez une adresse e-mail que vous seul contrôlez, et surveillez aussi les courriers indésirables.",
+     "Refaites la vidéo dans un endroit bien éclairé, visage dégagé, en tournant lentement la tête comme demandé.",
+     "Si Instagram demande une pièce d’identité, vous avez en général au moins deux essais : envoyez une photo nette et lisible.",
+     "Attendez la réponse (jusqu’à deux jours ouvrés) avant de recommencer, et notez la date de chaque envoi."
+    ],
+    "es": [
+     "Usa un correo que solo tú controles y revisa también la carpeta de spam.",
+     "Repite el video en un lugar con buena luz, con la cara despejada, girando la cabeza despacio como se te pide.",
+     "Si Instagram te pide un documento de identidad, normalmente tienes al menos dos intentos: envía una foto nítida y legible.",
+     "Espera la respuesta (hasta dos días hábiles) antes de volver a intentarlo, y anota la fecha de cada envío."
+    ],
+    "en": [
+     "Use an email address that only you control, and check your spam folder too.",
+     "Record the video again in a well-lit place, face uncovered, turning your head slowly as asked.",
+     "If Instagram asks for an ID, you usually get at least two tries: send a sharp, readable photo.",
+     "Wait for the answer (up to two business days) before trying again, and write down the date of each attempt."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Pendant l’attente : limiter les dégâts",
+    "es": "Mientras esperas: limita los daños",
+    "en": "While you wait: limit the damage"
+   },
+   "paragraphes": {
+    "fr": [
+     "Le site officiel français Cybermalveillance.gouv.fr rappelle que les plateformes n’ont aucune obligation contractuelle de réactivité et qu’une récupération peut prendre plusieurs jours, voire plusieurs semaines. Ne restez pas sans rien faire en attendant."
+    ],
+    "es": [
+     "El sitio oficial francés Cybermalveillance.gouv.fr recuerda que las plataformas no tienen ninguna obligación contractual de rapidez y que recuperar una cuenta puede tardar varios días o incluso semanas. No te quedes de brazos cruzados mientras tanto."
+    ],
+    "en": [
+     "France’s official cybercrime help site, Cybermalveillance.gouv.fr, notes that platforms have no contractual obligation to respond quickly, and that recovery can take several days or even weeks. Don’t just wait in the meantime."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Faites des captures d’écran de tout ce qui est suspect (messages envoyés en votre nom, publications, e-mails de changement) avant que cela disparaisse.",
+     "Prévenez vos proches par un autre canal : le pirate peut leur demander de l’argent ou des codes en se faisant passer pour vous.",
+     "Changez le mot de passe de l’e-mail lié au compte et de tous les sites où vous utilisiez le même mot de passe, puis activez la double authentification.",
+     "Si vous avez payé avec ce compte ou si des achats sont possibles, prévenez votre banque."
+    ],
+    "es": [
+     "Haz capturas de pantalla de todo lo sospechoso (mensajes enviados en tu nombre, publicaciones, correos de cambio) antes de que desaparezca.",
+     "Avisa a tus contactos por otro canal: quien te hackeó puede pedirles dinero o códigos haciéndose pasar por ti.",
+     "Cambia la contraseña del correo vinculado a la cuenta y la de todos los sitios donde usabas la misma, y activa la verificación en dos pasos.",
+     "Si pagaste algo con esa cuenta o se pueden hacer compras, avisa a tu banco."
+    ],
+    "en": [
+     "Take screenshots of anything suspicious (messages sent in your name, posts, change-notification emails) before it disappears.",
+     "Warn your contacts through another channel: the hacker may ask them for money or codes while pretending to be you.",
+     "Change the password of the email linked to the account and of every site where you used the same password, then turn on two-factor authentication.",
+     "If you paid for anything through the account or purchases are possible, alert your bank."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Compte désactivé après le piratage : contester (UE)",
+    "es": "Cuenta desactivada tras el hackeo: reclamar (UE)",
+    "en": "Account disabled after the hack: challenge it (EU)"
+   },
+   "paragraphes": {
+    "fr": [
+     "Un piratage se termine parfois par une désactivation : Instagram prévient qu’une pièce d’identité refusée peut mener à un compte désactivé et à des données supprimées. Dans l’Union européenne, le règlement sur les services numériques (DSA) prévoit que vous puissiez contester ce type de décision auprès de la plateforme pendant au moins six mois, avec un examen par une personne quand la décision a été automatique.",
+     "Vous pouvez aussi saisir l’Appeals Centre Europe, un organisme indépendant de règlement des litiges qui examine les suspensions et désactivations de comptes Instagram. C’est gratuit pour l’utilisateur, ouvert aux personnes situées dans l’UE (pas en Suisse ni en Norvège pour l’instant), à condition que la décision date de moins de six mois. Ses décisions ne sont pas contraignantes, mais la plateforme doit coopérer de bonne foi."
+    ],
+    "es": [
+     "A veces un hackeo termina en desactivación: Instagram avisa de que un documento rechazado puede llevar a desactivar la cuenta y borrar sus datos. En la Unión Europea, el Reglamento de Servicios Digitales (DSA) prevé que puedas reclamar ante la plataforma contra este tipo de decisión durante al menos seis meses, con revisión por una persona cuando la decisión fue automática.",
+     "También puedes acudir a Appeals Centre Europe, un organismo independiente de resolución de litigios que revisa suspensiones y desactivaciones de cuentas de Instagram. Es gratis para el usuario, está abierto a personas que se encuentran en la UE (por ahora no en Suiza ni en Noruega) y la decisión debe tener menos de seis meses. Sus decisiones no son vinculantes, pero la plataforma debe colaborar de buena fe."
+    ],
+    "en": [
+     "A hack sometimes ends with the account disabled: Instagram warns that a rejected ID can lead to the account being disabled and its data deleted. In the European Union, the Digital Services Act (DSA) says you must be able to challenge this kind of decision with the platform for at least six months, with a human review when the decision was automated.",
+     "You can also go to Appeals Centre Europe, an independent dispute settlement body that reviews suspended and disabled Instagram accounts. It is free for users and open to people located in the EU (not Switzerland or Norway for now), as long as the decision is less than six months old. Its decisions are not binding, but the platform must engage in good faith."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Créez un compte sur le portail de l’Appeals Centre Europe.",
+     "Ouvrez un litige et choisissez l’option « La plateforme a suspendu un compte que je veux restaurer ».",
+     "Indiquez le nom d’utilisateur et la date de suspension, puis expliquez que le compte a été piraté, avec vos captures d’écran."
+    ],
+    "es": [
+     "Crea una cuenta en el portal de Appeals Centre Europe.",
+     "Abre un litigio y elige la opción de cuenta suspendida que quieres recuperar.",
+     "Indica el nombre de usuario y la fecha de suspensión, y explica que la cuenta fue hackeada, con tus capturas de pantalla."
+    ],
+    "en": [
+     "Create an account on the Appeals Centre Europe portal.",
+     "Open a dispute and choose the option for a suspended account you want restored.",
+     "Give the username and the suspension date, then explain that the account was hacked, with your screenshots."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Porter plainte et se faire aider",
+    "es": "Denunciar y pedir ayuda",
+    "en": "Report it and get help"
+   },
+   "paragraphes": {
+    "fr": [
+     "En France, il est recommandé de porter plainte au commissariat ou à la gendarmerie, avec vos preuves. Si le pirate exige de l’argent ou se sert de votre compte pour escroquer vos contacts, la plainte peut se faire en ligne sur la plateforme THESEE. L’association France Victimes répond gratuitement au 116 006.",
+     "Seule la justice peut obtenir l’identité de la personne derrière le piratage : ne comptez pas sur Instagram pour vous la donner.",
+     "Si la victime est mineure, appelez les lignes officielles et gratuites : le 3018 en France, la ligne 017 d’INCIBE en Espagne."
+    ],
+    "es": [
+     "En España, la Línea de Ayuda en Ciberseguridad de INCIBE, el 017, es gratuita y confidencial, y también atiende por WhatsApp y Telegram. Si quien te hackeó te pide dinero o usa tu cuenta para estafar a tus contactos, presenta una denuncia ante la policía con tus pruebas.",
+     "Solo la justicia puede obtener la identidad de la persona que está detrás del hackeo: no esperes que Instagram te la dé.",
+     "Si la víctima es menor de edad, acude a las líneas oficiales y gratuitas: el 017 de INCIBE en España, el 3018 en Francia."
+    ],
+    "en": [
+     "In the US, the FTC’s advice is to follow the platform’s recovery steps, scan your device for malware, sign out of all devices, check your recovery email and phone, and warn your friends not to click links sent from your account. If the hacker asks for money or scams your contacts, report it to the police with your evidence.",
+     "Only the courts can obtain the identity of the person behind the hack: don’t expect Instagram to give it to you.",
+     "If the victim is a minor, use the free official helplines: 3018 in France, INCIBE’s 017 line in Spain."
+    ]
+   },
+   "etapes": null
+  }
+ ],
+ "si_rien_ne_marche": {
+  "fr": "Si le selfie vidéo, la pièce d’identité et les recours n’ont rien donné, Devuelta peut reprendre votre dossier : nous relisons ce qui a été envoyé, préparons les recours encore ouverts et faisons le suivi avec vous, sans promesse de résultat.",
+  "es": "Si el video selfie, el documento y los recursos no han dado resultado, Devuelta puede retomar tu caso: revisamos lo que se envió, preparamos los recursos que siguen abiertos y hacemos el seguimiento contigo, sin prometer resultados.",
+  "en": "If the video selfie, the ID and the appeals have gone nowhere, Devuelta can take over your case: we review what was sent, prepare the remedies still open and follow up with you, with no promise of results."
+ },
+ "sources": [
+  {
+   "url": "https://help.instagram.com/1053588012132894",
+   "titre": "Instagram : pourquoi un selfie vidéo peut être demandé pour confirmer votre identité"
+  },
+  {
+   "url": "https://help.instagram.com/293775921768331/",
+   "titre": "Instagram : pourquoi on vous demande une pièce d’identité"
+  },
+  {
+   "url": "https://about.fb.com/news/2025/12/making-it-easier-to-access-account-support-on-facebook-and-instagram/",
+   "titre": "Meta : faciliter l’accès à l’assistance des comptes Facebook et Instagram (déc. 2025, mis à jour mars 2026)"
+  },
+  {
+   "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/que-faire-en-cas-de-piratage-de-compte-sur-les-reseaux-sociaux",
+   "titre": "Cybermalveillance.gouv.fr : que faire en cas de piratage de compte sur les réseaux sociaux ?"
+  },
+  {
+   "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/piratage-de-compte",
+   "titre": "Cybermalveillance.gouv.fr : piratage de compte, que faire ?"
+  },
+  {
+   "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX%3A32022R2065",
+   "titre": "Règlement (UE) 2022/2065 sur les services numériques (DSA), considérant 58"
+  },
+  {
+   "url": "https://www.appealscentre.eu/faqs/",
+   "titre": "Appeals Centre Europe : questions fréquentes"
+  },
+  {
+   "url": "https://www.appealscentre.eu/fr/le-centre-dappels-europe-commence-a-examiner-les-suspensions-de-comptes/",
+   "titre": "Appeals Centre Europe : examen des suspensions de comptes"
+  },
+  {
+   "url": "https://www.incibe.es/index.php/ciudadania/blog/me-han-robado-mi-cuenta-de-instagram-que-puedo-hacer",
+   "titre": "INCIBE : me han robado mi cuenta de Instagram, ¿qué puedo hacer?"
+  },
+  {
+   "url": "https://consumer.ftc.gov/articles/how-recover-your-hacked-email-or-social-media-account",
+   "titre": "FTC : How to recover your hacked email or social media account"
+  }
+ ],
+ "liens_internes": [
+  {
+   "type": "situation",
+   "id": "piratage-compte"
+  },
+  {
+   "type": "situation",
+   "id": "usurpation"
+  },
+  {
+   "type": "guide",
+   "id": "fr-usurpation-faux-profil"
+  }
+ ]
+}
