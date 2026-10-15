@@ -1,0 +1,66 @@
+# Mise en ligne automatique de getdevuelta.com (site + outil) à chaque
+# changement sur la branche main, ou à la demande (onglet Actions).
+# Le jeton Cloudflare est rangé dans les secrets du dépôt
+# (CLOUDFLARE_API_TOKEN) : il n'apparaît jamais dans le code.
+
+name: Mise en ligne
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: mise-en-ligne
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: 381946ed74159485b04c186b0347ff6f
+
+jobs:
+  deployer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Installation
+        run: npm ci --no-audit --no-fund
+
+      - name: Tests
+        run: npm test
+
+      - name: Construction du site
+        run: npm run build
+
+      - name: Jeton Cloudflare présent ?
+        if: env.CLOUDFLARE_API_TOKEN == ''
+        run: echo "::warning::Secret CLOUDFLARE_API_TOKEN absent : le site est construit mais pas mis en ligne."
+
+      - name: Mise en ligne sur Cloudflare
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx wrangler deploy
+
+      - name: Vérification du site en ligne
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: |
+          for i in $(seq 1 18); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://getdevuelta.com/ || true)
+            echo "essai $i : HTTP $code"
+            if [ "$code" = "200" ]; then break; fi
+            sleep 10
+          done
+          test "$code" = "200"
+          # Premier appel à l'API : crée les tables de la base si besoin.
+          curl -s -o /dev/null -w 'API : HTTP %{http_code}\n' https://getdevuelta.com/api/outil/session || true
+          echo "--- robots.txt servi ---"
+          curl -s https://getdevuelta.com/robots.txt | head -40
