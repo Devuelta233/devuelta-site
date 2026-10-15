@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // Devuelta : site public + outil interne (EraseOps), un seul Worker Cloudflare.
+  "name": "devuelta",
+  "main": "server/worker.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // Toutes les requêtes passent par le Worker : redirections d'adresse,
+    // en-têtes de sécurité et comptage de visites sans cookie.
+    "run_worker_first": true,
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "devuelta",
+      "database_id": "03f20132-197b-4409-8ef0-ffcbf001a132"
+    }
+  ],
+  // Tâche automatique quotidienne (heure UTC = heure du Ghana).
+  "triggers": { "crons": ["30 5 * * *"] },
+  "routes": [
+    { "pattern": "getdevuelta.com", "custom_domain": true },
+    { "pattern": "www.getdevuelta.com", "custom_domain": true }
+  ],
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": true },
+  "vars": {
+    "SITE_URL": "https://getdevuelta.com",
+    // Coût du hachage des mots de passe. 10 000 tient dans les limites de
+    // l'offre gratuite ; avec l'offre Workers Paid, passer à 210000 :
+    // les mots de passe sont re-hachés automatiquement à la connexion suivante.
+    "HACHAGE_ITERATIONS": "10000"
+  }
+}
