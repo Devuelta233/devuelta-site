@@ -10,9 +10,9 @@ import { FICHES, fichesAReverifier } from './plan';
 import type { Ctx } from './router';
 
 const TEXTES = {
-  fr: { titre: 'EraseOps', rien: 'Rien de nouveau.', demandes: 'demande(s) à traiter', echeances: 'échéance(s) aujourd’hui ou dépassée(s)', courriers: 'courrier(s) à valider', alertes: 'lien(s) à vérifier' },
-  es: { titre: 'EraseOps', rien: 'Nada nuevo.', demandes: 'solicitud(es) por atender', echeances: 'plazo(s) para hoy o vencido(s)', courriers: 'carta(s) por validar', alertes: 'enlace(s) por revisar' },
-  en: { titre: 'EraseOps', rien: 'Nothing new.', demandes: 'request(s) to handle', echeances: 'deadline(s) due or overdue', courriers: 'letter(s) to validate', alertes: 'link(s) to check' },
+  fr: { titre: 'EraseOps', rien: 'Rien de nouveau.', demandes: 'demande(s) à traiter', echeances: 'échéance(s) aujourd’hui ou dépassée(s)', courriers: 'courrier(s) à valider', alertes: 'lien(s) à vérifier', systeme: 'passage automatique à vérifier (Réglages)' },
+  es: { titre: 'EraseOps', rien: 'Nada nuevo.', demandes: 'solicitud(es) por atender', echeances: 'plazo(s) para hoy o vencido(s)', courriers: 'carta(s) por validar', alertes: 'enlace(s) por revisar', systeme: 'pase automático por revisar (Ajustes)' },
+  en: { titre: 'EraseOps', rien: 'Nothing new.', demandes: 'request(s) to handle', echeances: 'deadline(s) due or overdue', courriers: 'letter(s) to validate', alertes: 'link(s) to check', systeme: 'automatic run to check (Settings)' },
 };
 
 /** Texte neutre affiché par le téléphone : aucun nom, aucun détail de dossier. */
@@ -24,6 +24,10 @@ export async function resumeNotification({ env, auth }: Ctx): Promise<Response> 
   if (c.echeances) parts.push(`${c.echeances} ${t.echeances}`);
   if (c.courriers) parts.push(`${c.courriers} ${t.courriers}`);
   if (c.alertes) parts.push(`${c.alertes} ${t.alertes}`);
+  if (auth.user.role === 'admin') {
+    const tache = await env.DB.prepare("SELECT resultat FROM taches WHERE nom = 'quotidienne'").first<{ resultat: string | null }>();
+    if (tache?.resultat?.includes('"etapes_en_erreur"')) parts.push(t.systeme);
+  }
   return json({ ok: true, titre: t.titre, texte: parts.length ? parts.join(' · ') : t.rien, compteurs: c });
 }
 

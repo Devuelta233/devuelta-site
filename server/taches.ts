@@ -341,6 +341,15 @@ export async function executerTaches(env: Env): Promise<Record<string, unknown>>
   await etape('indexnow', () => (env.LOCAL === '1' ? Promise.resolve('ignoré en local') : indexNow(env)));
   await etape('alertes_reapparition', () => (reapparus.length ? notifier(env.DB, reapparus) : Promise.resolve(0)));
   await etape('resume_matin', () => resumeDuMatin(env.DB));
+  // Auto-surveillance : une étape en erreur prévient les administrateurs (texte neutre).
+  const enErreur = Object.entries(resultat).filter(([, v]) => v && typeof v === 'object' && 'erreur' in (v as object)).map(([k]) => k);
+  if (enErreur.length > 0) {
+    resultat.etapes_en_erreur = enErreur;
+    await etape('alerte_admin', async () => {
+      const admins = await env.DB.prepare("SELECT id FROM utilisateurs WHERE role = 'admin' AND actif = 1").all<{ id: string }>();
+      return notifier(env.DB, admins.results.map((a) => a.id));
+    });
+  }
   await env.DB.prepare(
     `INSERT INTO taches (nom, derniere_execution, resultat) VALUES ('quotidienne', ?, ?)
      ON CONFLICT(nom) DO UPDATE SET derniere_execution = excluded.derniere_execution, resultat = excluded.resultat`,
