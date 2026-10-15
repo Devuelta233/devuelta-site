@@ -1,0 +1,67 @@
+---
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { QUE_FAIRE, SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
+import { page, plateformePath, situationPath, versionsPage } from '../i18n/routes';
+import { plateformes } from '../data';
+import { SITUATION_LABEL, type Lang, type SituationReelle } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = page('que-faire', lang);
+const liste = plateformes().filter((p) => p.actions.length > 0);
+---
+<Base
+  lang={lang}
+  titre={QUE_FAIRE.seo[lang]}
+  description={QUE_FAIRE.meta[lang]}
+  chemin={chemin}
+  versions={versionsPage('que-faire')}
+  ariane={[{ nom: C.nav.queFaire[lang] }]}
+>
+  <div class="page-large">
+    <h1>{QUE_FAIRE.titre[lang]}</h1>
+    <p class="lede">{QUE_FAIRE.intro[lang]}</p>
+    <div class="actions">
+      <a class="bouton principal" href={page('diagnostic', lang)}>
+        {C.ctaDiagnostic[lang]}
+        <small>{C.ctaDiagnosticSous[lang]}</small>
+      </a>
+    </div>
+    <ul class="cartes deux trois">
+      {SITUATIONS_ORDRE.map((s) => (
+        <li>
+          <a class="carte" href={situationPath(s, lang)}>
+            <span class="carte-titre">{SITUATION_LABEL[s][lang]}</span>
+            <span class="carte-texte">{SITUATIONS_TEXTE[s][lang].carte}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    {liste.length > 0 && (
+      <section aria-labelledby="plateformes-titre">
+        <h2 id="plateformes-titre">{QUE_FAIRE.toutesPlateformes[lang]}</h2>
+        <ul class="cartes deux trois">
+          {liste.map((p) => (
+            <li>
+              <div class="carte">
+                <span class="carte-titre">{p.nom}</span>
+                <span class="carte-texte">
+                  {p.actions.map((a, i) => (
+                    <>
+                      {i > 0 && ' · '}
+                      <a href={plateformePath(a.situation as SituationReelle, p.id, lang)}>{SITUATION_LABEL[a.situation as SituationReelle]?.[lang] ?? a.titre[lang]}</a>
+                    </>
+                  ))}
+                </span>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</Base>

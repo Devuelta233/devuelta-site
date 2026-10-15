@@ -1,0 +1,39 @@
+---
+// Toutes les pages publiques, dans les trois langues, générées à partir de la
+// table des routes (src/routes-table.ts).
+import { toutesLesRoutes, type PropsPage } from '../routes-table';
+import Accueil from '../views/Accueil.astro';
+import Confier from '../views/Confier.astro';
+import Contact from '../views/Contact.astro';
+import Diagnostic from '../views/Diagnostic.astro';
+import Guide from '../views/Guide.astro';
+import Guides from '../views/Guides.astro';
+import Legal from '../views/Legal.astro';
+import Methode from '../views/Methode.astro';
+import PlateformeAction from '../views/PlateformeAction.astro';
+import QueFaire from '../views/QueFaire.astro';
+import Situation from '../views/Situation.astro';
+import Urgence from '../views/Urgence.astro';
+
+export function getStaticPaths() {
+  return toutesLesRoutes().map((r) => ({
+    params: { route: r.chemin === '/' ? undefined : r.chemin.replace(/^\/|\/$/g, '') },
+    props: r.props,
+  }));
+}
+
+const p = Astro.props as PropsPage;
+---
+{p.type === 'accueil' && <Accueil lang={p.lang} />}
+{p.type === 'diagnostic' && <Diagnostic lang={p.lang} />}
+{p.type === 'que-faire' && <QueFaire lang={p.lang} />}
+{p.type === 'guides' && <Guides lang={p.lang} />}
+{p.type === 'urgence' && <Urgence lang={p.lang} />}
+{p.type === 'methode' && <Methode lang={p.lang} />}
+{p.type === 'confier' && <Confier lang={p.lang} />}
+{p.type === 'contact' && <Contact lang={p.lang} />}
+{p.type === 'confidentialite' && <Legal lang={p.lang} quoi="confidentialite" />}
+{p.type === 'mentions' && <Legal lang={p.lang} quoi="mentions" />}
+{p.type === 'situation' && <Situation lang={p.lang} situation={p.situation} />}
+{p.type === 'plateforme' && <PlateformeAction lang={p.lang} situation={p.situation} plateforme={p.plateforme} action={p.action} />}
+{p.type === 'guide' && <Guide lang={p.lang} guide={p.guide} />}

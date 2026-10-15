@@ -12,12 +12,15 @@ function source(request: Request, host: string): string {
   try {
     const h = new URL(ref).hostname.replace(/^www\./, '').toLowerCase();
     if (h === host.replace(/^www\./, '')) return 'interne';
-    // On regroupe les grandes familles de provenance.
+    // On regroupe les grandes familles de provenance (moteurs, assistants IA, réseaux).
+    if (h === 'gemini.google.com') return 'gemini';
     if (/(^|\.)google\./.test(h)) return 'google';
     if (/(^|\.)bing\.com$/.test(h)) return 'bing';
     if (/(^|\.)duckduckgo\.com$/.test(h)) return 'duckduckgo';
     if (/(^|\.)(chatgpt\.com|openai\.com)$/.test(h)) return 'chatgpt';
     if (/(^|\.)perplexity\.ai$/.test(h)) return 'perplexity';
+    if (/(^|\.)claude\.ai$/.test(h)) return 'claude';
+    if (/(^|\.)copilot\.microsoft\.com$/.test(h)) return 'copilot';
     if (/(^|\.)(instagram\.com|l\.instagram\.com)$/.test(h)) return 'instagram';
     if (/(^|\.)(facebook\.com|fb\.com|m\.facebook\.com|l\.facebook\.com)$/.test(h)) return 'facebook';
     if (/(^|\.)tiktok\.com$/.test(h)) return 'tiktok';

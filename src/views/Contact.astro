@@ -1,0 +1,53 @@
+---
+import Base from '../layouts/Base.astro';
+import Contacts from '../components/Contacts.astro';
+import { C } from '../i18n/commun';
+import { CONTACT } from '../i18n/pages';
+import { page, versionsPage } from '../i18n/routes';
+import { EMAIL, WHATSAPP } from '../config';
+import { SITE_URL } from '../config';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: CONTACT.h1[lang],
+    inLanguage: lang,
+    url: `${SITE_URL}${page('contact', lang)}`,
+    mainEntity: {
+      '@id': `${SITE_URL}/#organisation`,
+      '@type': 'Organization',
+      name: 'Devuelta',
+      email: EMAIL,
+      telephone: WHATSAPP[lang].e164,
+    },
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={CONTACT.seo[lang]}
+  description={CONTACT.meta[lang]}
+  chemin={page('contact', lang)}
+  versions={versionsPage('contact')}
+  jsonld={jsonld}
+  ariane={[{ nom: CONTACT.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{CONTACT.h1[lang]}</h1>
+    <p class="lede">{CONTACT.intro[lang]}</p>
+    <Contacts lang={lang} />
+    <section class="encadre" aria-labelledby="discretion">
+      <h2 id="discretion" class="sans-marge">{CONTACT.discretionTitre[lang]}</h2>
+      <ul class="coche">
+        {CONTACT.discretion[lang].map((d) => <li>{d}</li>)}
+      </ul>
+    </section>
+    <p>{CONTACT.avant[lang]} <a href={page('diagnostic', lang)}>{C.ctaDiagnostic[lang]} →</a></p>
+  </article>
+</Base>

@@ -1,0 +1,116 @@
+---
+import Base from '../layouts/Base.astro';
+import SiCaBloque from '../components/SiCaBloque.astro';
+import { C } from '../i18n/commun';
+import { QUE_FAIRE, SITUATIONS_TEXTE } from '../i18n/situations';
+import { guidePath, page, plateformePath, situationPath, type Versions } from '../i18n/routes';
+import { actionsPour, dateLisible, guidesPour } from '../data';
+import { SITE_URL } from '../config';
+import { LANGS, type Lang, type SituationReelle } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+  situation: SituationReelle;
+}
+const { lang, situation } = Astro.props;
+const t = SITUATIONS_TEXTE[situation][lang];
+const chemin = situationPath(situation, lang);
+const versions = Object.fromEntries(LANGS.map((l) => [l, situationPath(situation, l)])) as Versions;
+const actions = actionsPour(situation);
+const recours = guidesPour(situation);
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: lang,
+    mainEntity: t.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.r },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: t.h1,
+    description: t.meta,
+    inLanguage: lang,
+    url: `${SITE_URL}${chemin}`,
+    dateModified: '2026-10-15',
+    publisher: { '@id': `${SITE_URL}/#organisation` },
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={t.seo}
+  description={t.meta}
+  chemin={chemin}
+  versions={versions}
+  jsonld={jsonld}
+  ariane={[{ nom: C.nav.queFaire[lang], href: page('que-faire', lang) }, { nom: t.seo }]}
+>
+  <article class="page">
+    <h1>{t.h1}</h1>
+    <p class="lede">{t.intro}</p>
+
+    <h2>{QUE_FAIRE.premiersTitre[lang]}</h2>
+    <ol class="etapes">
+      {t.premiers.map((p) => <li>{p}</li>)}
+    </ol>
+
+    {actions.length > 0 && (
+      <section aria-labelledby="plateformes">
+        <h2 id="plateformes">{QUE_FAIRE.plateformesTitre[lang]}</h2>
+        <ul class="cartes deux">
+          {actions.map(({ plateforme, action }) => (
+            <li>
+              <a class="carte" href={plateformePath(situation, plateforme.id, lang)}>
+                <span class="carte-titre">{plateforme.nom}</span>
+                <span class="carte-texte">{action.titre[lang]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="encadre" aria-labelledby="eviter">
+      <h2 id="eviter" class="sans-marge">{QUE_FAIRE.eviterTitre[lang]}</h2>
+      <ul class="coche croix">
+        {t.eviter.map((e) => <li>{e}</li>)}
+      </ul>
+    </section>
+
+    {recours.length > 0 && (
+      <section aria-labelledby="recours">
+        <h2 id="recours">{QUE_FAIRE.recoursTitre[lang]}</h2>
+        <ul class="cartes">
+          {recours.map((g) => (
+            <li>
+              <a class="carte" href={guidePath(g.slug[lang], lang)}>
+                <span class="carte-titre">{g.titre[lang]}</span>
+                <span class="carte-texte">{g.resume[lang]}</span>
+                <span class="carte-meta">{C.verifieLe[lang]} {dateLisible(g.verifie_le, lang)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <SiCaBloque lang={lang} />
+
+    <section class="faq" aria-labelledby="faq">
+      <h2 id="faq">{QUE_FAIRE.faqTitre[lang]}</h2>
+      {t.faq.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.r}</p>
+        </details>
+      ))}
+    </section>
+
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>

@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import Contacts from '../components/Contacts.astro';
+import Engagements from '../components/Engagements.astro';
+import { CONFIER } from '../i18n/pages';
+import { page, versionsPage } from '../i18n/routes';
+import { plateformes } from '../data';
+import { EMAIL, lienWhatsApp } from '../config';
+import type { Lang } from '../../shared/vocab';
+import type { DonneesConfier } from '../scripts/Confier';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const donnees: DonneesConfier = {
+  lang,
+  plateformes: plateformes()
+    .filter((p) => !['outil', 'moteur'].includes(p.type))
+    .map((p) => ({ id: p.id, nom: p.nom })),
+  liens: {
+    confidentialite: page('confidentialite', lang),
+    urgence: page('urgence', lang),
+    whatsapp: lienWhatsApp(lang),
+    email: EMAIL,
+  },
+};
+const sansJs = {
+  fr: 'Le formulaire a besoin de JavaScript. Écrivez-nous directement :',
+  es: 'El formulario necesita JavaScript. Escríbenos directamente:',
+  en: 'The form needs JavaScript. Write to us directly:',
+};
+---
+<Base
+  lang={lang}
+  titre={CONFIER.seo[lang]}
+  description={CONFIER.meta[lang]}
+  chemin={page('confier', lang)}
+  versions={versionsPage('confier')}
+  ariane={[{ nom: CONFIER.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{CONFIER.h1[lang]}</h1>
+    <p class="lede">{CONFIER.intro[lang]}</p>
+    <Engagements lang={lang} />
+    <div id="confier">
+      <p>{sansJs[lang]}</p>
+    </div>
+    <script type="application/json" id="donnees-confier" set:html={JSON.stringify(donnees).replace(/</g, '\\u003c')} />
+    <h2>{CONFIER.direct[lang]}</h2>
+    <Contacts lang={lang} />
+  </article>
+</Base>
+<script>
+  import '../scripts/confier-app';
+</script>

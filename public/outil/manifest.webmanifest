@@ -1,0 +1,17 @@
+{
+  "name": "EraseOps",
+  "short_name": "EraseOps",
+  "id": "/outil/",
+  "start_url": "/outil/",
+  "scope": "/outil/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#2B2624",
+  "theme_color": "#2B2624",
+  "lang": "fr",
+  "icons": [
+    { "src": "/outil/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/outil/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/outil/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

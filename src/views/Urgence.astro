@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import Contacts from '../components/Contacts.astro';
+import { C } from '../i18n/commun';
+import { URGENCE } from '../i18n/pages';
+import { SITUATIONS_TEXTE } from '../i18n/situations';
+import { page, versionsPage } from '../i18n/routes';
+import { dateLisible, URGENCES_VERIFIE_LE, urgencesInternational, urgencesPays, type Ressource } from '../data';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = page('urgence', lang);
+const pays = urgencesPays()
+  .filter((p) => p.ressources.length > 0)
+  .sort((a, b) => a.nom[lang].localeCompare(b.nom[lang], lang));
+const intl = urgencesInternational();
+const date = dateLisible(URGENCES_VERIFIE_LE, lang);
+const ORDRE = ['urgence', 'ncii', 'cyberharcelement', 'mineurs', 'violences-femmes', 'signalement-contenu', 'police-en-ligne', 'aide-victimes', 'protection-donnees'];
+const trier = (r: Ressource[]) => [...r].sort((a, b) => ORDRE.indexOf(a.type) - ORDRE.indexOf(b.type));
+const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
+---
+<Base
+  lang={lang}
+  titre={URGENCE.seo[lang]}
+  description={URGENCE.meta[lang]}
+  chemin={chemin}
+  versions={versionsPage('urgence')}
+  ariane={[{ nom: URGENCE.h1[lang] }]}
+  sansBandeau
+>
+  <article class="page">
+    <h1>{URGENCE.h1[lang]}</h1>
+    <div class="encadre sombre" role="note">
+      <p><strong>{URGENCE.danger[lang]}</strong></p>
+    </div>
+    <p class="lede">{URGENCE.intro[lang]}</p>
+
+    {pays.length > 0 && (
+      <nav aria-label={URGENCE.choisirPays[lang]}>
+        <ul class="pays-liste">
+          {pays.map((p) => <li><a href={`#pays-${p.code.toLowerCase()}`}>{p.nom[lang]}</a></li>)}
+        </ul>
+      </nav>
+    )}
+
+    <section class="encadre alerte" aria-labelledby="reflexes">
+      <h2 id="reflexes" class="sans-marge">{URGENCE.reflexesTitre[lang]}</h2>
+      <ol class="etapes">
+        {SITUATIONS_TEXTE.chantage[lang].premiers.map((p) => <li>{p}</li>)}
+      </ol>
+    </section>
+
+    {pays.map((p) => (
+      <section id={`pays-${p.code.toLowerCase()}`} aria-labelledby={`t-${p.code}`}>
+        <h2 id={`t-${p.code}`}>{p.nom[lang]}</h2>
+        {trier(p.ressources).map((r) => (
+          <div class="ressource">
+            <h3 class="sans-marge">
+              <span class="etiquette">{URGENCE.types[r.type]?.[lang] ?? r.type}</span>
+              {r.nom}
+            </h3>
+            {r.telephone && (
+              <p>
+                <a class="tel" href={telHref(r.telephone)}>{r.telephone}</a>
+                {r.gratuit && <span> · {URGENCE.gratuit[lang]}</span>}
+                {r.horaires && <span> · {r.horaires}</span>}
+              </p>
+            )}
+            <p>{r.description[lang]}</p>
+            {r.sms_ou_chat && <p class="petit">{r.sms_ou_chat}</p>}
+            {r.url && (
+              <p>
+                <a href={r.url} rel="noopener noreferrer" target="_blank">{URGENCE.site[lang]} : {new URL(r.url).hostname.replace(/^www\./, '')}</a>
+              </p>
+            )}
+          </div>
+        ))}
+      </section>
+    ))}
+
+    {intl.length > 0 && (
+      <section aria-labelledby="intl">
+        <h2 id="intl">{URGENCE.international[lang]}</h2>
+        {intl.map((r) => (
+          <div class="ressource">
+            <h3 class="sans-marge">{r.nom}</h3>
+            <p>{r.description[lang]}</p>
+            {r.url && (
+              <p>
+                <a href={r.url} rel="noopener noreferrer" target="_blank">{new URL(r.url).hostname.replace(/^www\./, '')}</a>
+              </p>
+            )}
+          </div>
+        ))}
+      </section>
+    )}
+    <p class="petit">{URGENCE.pasDeListe[lang]}</p>
+    {date && <p class="petit">{C.verifieLe[lang]} {date}.</p>}
+
+    <section class="encadre" aria-labelledby="traces">
+      <h2 id="traces" class="sans-marge">{URGENCE.tracesTitre[lang]}</h2>
+      <p>{URGENCE.traces[lang]}</p>
+    </section>
+
+    <h2>{C.ecrireTitre[lang]}</h2>
+    <Contacts lang={lang} />
+  </article>
+</Base>

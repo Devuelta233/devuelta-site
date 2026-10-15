@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import { NOT_FOUND } from '../i18n/pages';
+import { C } from '../i18n/commun';
+import { BASE, page } from '../i18n/routes';
+import { LANGS } from '../../shared/vocab';
+---
+<Base lang="fr" titre={NOT_FOUND.titre.fr} description={NOT_FOUND.texte.fr} chemin="/404/" noindex>
+  <article class="page">
+    {LANGS.map((l) => (
+      <section lang={l}>
+        <h1 class={l === 'fr' ? '' : 'h1-secondaire'}>{NOT_FOUND.titre[l]}</h1>
+        <p>{NOT_FOUND.texte[l]}</p>
+        <p>
+          <a href={BASE[l]}>{C.accueil[l]}</a> · <a href={page('diagnostic', l)}>{C.nav.diagnostic[l]}</a> · <a href={page('urgence', l)}>{C.nav.urgence[l]}</a>
+        </p>
+      </section>
+    ))}
+  </article>
+</Base>

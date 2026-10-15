@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { CONFIDENTIALITE, MAJ_LEGAL, MENTIONS } from '../i18n/legal';
+import { page, versionsPage } from '../i18n/routes';
+import { dateLisible } from '../data';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+  quoi: 'confidentialite' | 'mentions';
+}
+const { lang, quoi } = Astro.props;
+const doc = quoi === 'confidentialite' ? CONFIDENTIALITE : MENTIONS;
+const maj = { fr: 'Mis à jour le', es: 'Actualizado el', en: 'Updated on' }[lang];
+---
+<Base
+  lang={lang}
+  titre={doc.seo[lang]}
+  description={doc.meta[lang]}
+  chemin={page(quoi, lang)}
+  versions={versionsPage(quoi)}
+  ariane={[{ nom: doc.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{doc.h1[lang]}</h1>
+    <p class="petit">{maj} {dateLisible(MAJ_LEGAL, lang)}</p>
+    {doc.sections[lang].map((s) => (
+      <section>
+        <h2>{s.titre}</h2>
+        {s.paras.map((p) => <p>{p}</p>)}
+      </section>
+    ))}
+    {quoi === 'confidentialite' && (
+      <ul class="coche">
+        {C.engagements[lang].map((e) => <li>{e}</li>)}
+      </ul>
+    )}
+  </article>
+</Base>

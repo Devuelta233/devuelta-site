@@ -1,0 +1,56 @@
+---
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { GUIDES } from '../i18n/pages';
+import { guidePath, page, versionsPage } from '../i18n/routes';
+import { dateLisible, guides, type Guide } from '../data';
+import { PAYS_LABEL, isPays, type Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = page('guides', lang);
+
+function zone(g: Guide): string {
+  const p = g.pays[0] ?? 'INTL';
+  if (p === 'UE') return GUIDES.ue[lang];
+  if (p === 'INTL') return GUIDES.international[lang];
+  return isPays(p) ? PAYS_LABEL[p][lang] : p;
+}
+const groupes = new Map<string, Guide[]>();
+for (const g of guides()) {
+  const z = g.public_mineurs ? GUIDES.mineurs[lang] : zone(g);
+  groupes.set(z, [...(groupes.get(z) ?? []), g]);
+}
+---
+<Base
+  lang={lang}
+  titre={GUIDES.seo[lang]}
+  description={GUIDES.meta[lang]}
+  chemin={chemin}
+  versions={versionsPage('guides')}
+  ariane={[{ nom: C.nav.guides[lang] }]}
+>
+  <div class="page-large">
+    <h1>{GUIDES.h1[lang]}</h1>
+    <p class="lede">{GUIDES.intro[lang]}</p>
+    {[...groupes.entries()].map(([z, liste]) => (
+      <section>
+        <h2>{z}</h2>
+        <ul class="cartes deux trois">
+          {liste.map((g) => (
+            <li>
+              <a class="carte" href={guidePath(g.slug[lang], lang)}>
+                <span class="carte-titre">{g.titre[lang]}</span>
+                <span class="carte-texte">{g.resume[lang]}</span>
+                <span class="carte-meta">{C.verifieLe[lang]} {dateLisible(g.verifie_le, lang)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </div>
+</Base>

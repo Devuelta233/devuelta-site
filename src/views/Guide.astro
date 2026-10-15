@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import SiCaBloque from '../components/SiCaBloque.astro';
+import { C } from '../i18n/commun';
+import { GUIDES } from '../i18n/pages';
+import { guidePath, page, type Versions } from '../i18n/routes';
+import { dateLisible, type Guide } from '../data';
+import { SITE_URL } from '../config';
+import { LANGS, type Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+  guide: Guide;
+}
+const { lang, guide: g } = Astro.props;
+const chemin = guidePath(g.slug[lang], lang);
+const versions = Object.fromEntries(LANGS.map((l) => [l, guidePath(g.slug[l], l)])) as Versions;
+const date = dateLisible(g.verifie_le, lang);
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: g.titre[lang],
+    description: g.meta_description[lang],
+    inLanguage: lang,
+    url: `${SITE_URL}${chemin}`,
+    dateModified: g.verifie_le,
+    datePublished: '2026-10-15',
+    author: { '@id': `${SITE_URL}/#organisation` },
+    publisher: { '@id': `${SITE_URL}/#organisation` },
+    citation: g.source_officielle?.url,
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={g.titre[lang]}
+  description={g.meta_description[lang]}
+  chemin={chemin}
+  versions={versions}
+  jsonld={jsonld}
+  ariane={[{ nom: C.nav.guides[lang], href: page('guides', lang) }, { nom: g.titre[lang] }]}
+>
+  <article class="page">
+    <h1>{g.titre[lang]}</h1>
+    <p class="fiche-meta">
+      <span>{C.verifieLe[lang]} <strong>{date}</strong></span>
+      {g.source_officielle?.url && (
+        <span>
+          {C.sourceOfficielle[lang]} : <a href={g.source_officielle.url} rel="noopener noreferrer" target="_blank">{new URL(g.source_officielle.url).hostname.replace(/^www\./, '')}</a>
+        </span>
+      )}
+    </p>
+    <p class="lede">{g.resume[lang]}</p>
+
+    {g.attention?.[lang] && (
+      <div class="encadre alerte" role="note">
+        <p><strong>{GUIDES.attention[lang]} :</strong> {g.attention[lang]}</p>
+      </div>
+    )}
+
+    <div class="grille-infos">
+      <div>
+        <h3>{GUIDES.pourQui[lang]}</h3>
+        <p>{g.pour_qui[lang]}</p>
+      </div>
+      <div>
+        <h3>{GUIDES.delai[lang]}</h3>
+        <p>{g.delai[lang]}</p>
+      </div>
+      <div>
+        <h3>{GUIDES.cout[lang]}</h3>
+        <p>{g.cout[lang]}</p>
+      </div>
+      <div>
+        <h3>{GUIDES.baseLegale[lang]}</h3>
+        <p>{g.base_legale[lang]}</p>
+      </div>
+    </div>
+
+    <h2>{GUIDES.etapes[lang]}</h2>
+    <ol class="etapes">
+      {g.etapes[lang].map((e) => <li>{e}</li>)}
+    </ol>
+
+    {g.a_preparer[lang]?.length > 0 && (
+      <>
+        <h2>{GUIDES.preparer[lang]}</h2>
+        <ul class="coche">
+          {g.a_preparer[lang].map((e) => <li>{e}</li>)}
+        </ul>
+      </>
+    )}
+
+    {g.liens_utiles?.length > 0 && (
+      <>
+        <h2>{GUIDES.liensUtiles[lang]}</h2>
+        <ul class="cartes">
+          {g.liens_utiles.map((l) => (
+            <li>
+              <a class="carte" href={l.url} rel="noopener noreferrer" target="_blank">
+                <span class="carte-titre">{l.titre[lang]}</span>
+                <span class="carte-meta">{new URL(l.url).hostname.replace(/^www\./, '')} {C.nouvelOnglet[lang]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    <section class="encadre" aria-labelledby="limites">
+      <h2 id="limites" class="sans-marge">{GUIDES.limites[lang]}</h2>
+      <ul class="coche croix">
+        {g.limites[lang].map((e) => <li>{e}</li>)}
+      </ul>
+    </section>
+
+    {!g.public_mineurs && <SiCaBloque lang={lang} />}
+
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>

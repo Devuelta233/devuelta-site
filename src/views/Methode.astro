@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import Contacts from '../components/Contacts.astro';
+import { C } from '../i18n/commun';
+import { ACCUEIL, METHODE } from '../i18n/pages';
+import { page, versionsPage } from '../i18n/routes';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+<Base
+  lang={lang}
+  titre={METHODE.seo[lang]}
+  description={METHODE.meta[lang]}
+  chemin={page('methode', lang)}
+  versions={versionsPage('methode')}
+  ariane={[{ nom: METHODE.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{METHODE.h1[lang]}</h1>
+    <p class="lede">{METHODE.intro[lang]}</p>
+
+    <h2>{METHODE.dabordTitre[lang]}</h2>
+    <p>{METHODE.dabord[lang]}</p>
+    <div class="actions">
+      <a class="bouton principal" href={page('diagnostic', lang)}>
+        {C.ctaDiagnostic[lang]}
+        <small>{C.ctaDiagnosticSous[lang]}</small>
+      </a>
+    </div>
+
+    <h2>{ACCUEIL.echelleTitre[lang]}</h2>
+    <p>{ACCUEIL.echelleIntro[lang]}</p>
+    <ol class="echelle">
+      {ACCUEIL.echelle[lang].map((m) => <li>{m}</li>)}
+    </ol>
+
+    <h2>{METHODE.reglesTitre[lang]}</h2>
+    <ul class="coche">
+      {METHODE.regles[lang].map((r) => <li>{r}</li>)}
+    </ul>
+
+    <h2>{METHODE.prixTitre[lang]}</h2>
+    <p>{METHODE.prix[lang]}</p>
+
+    <h2>{METHODE.pasTitre[lang]}</h2>
+    <p>{METHODE.pas[lang]}</p>
+
+    <h2>{METHODE.confianceTitre[lang]}</h2>
+    <p>{METHODE.confiance[lang]} <a href="/referentiel.json">referentiel.json</a></p>
+
+    <h2>{C.ecrireTitre[lang]}</h2>
+    <Contacts lang={lang} />
+  </article>
+</Base>

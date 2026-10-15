@@ -1,0 +1,104 @@
+---
+import Base from '../layouts/Base.astro';
+import SiCaBloque from '../components/SiCaBloque.astro';
+import { C } from '../i18n/commun';
+import { PLATEFORME_PAGE } from '../i18n/pages';
+import { SITUATIONS_TEXTE } from '../i18n/situations';
+import { page, plateformePath, situationPath, type Versions } from '../i18n/routes';
+import { actionsPour, dateLisible, PLATEFORMES_VERIFIE_LE, urlAction, type ActionPlateforme, type Plateforme } from '../data';
+import { SITE_URL } from '../config';
+import { LANGS, SITUATION_LABEL, type Lang, type SituationReelle } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+  situation: SituationReelle;
+  plateforme: Plateforme;
+  action: ActionPlateforme;
+}
+const { lang, situation, plateforme, action } = Astro.props;
+const titreAction = action.titre[lang];
+const h1 = titreAction.toLowerCase().includes(plateforme.nom.toLowerCase()) ? titreAction : `${plateforme.nom} : ${titreAction.charAt(0).toLowerCase()}${titreAction.slice(1)}`;
+const h1Final = lang === 'fr' ? h1 : h1.replace(' : ', ': ');
+const chemin = plateformePath(situation, plateforme.id, lang);
+const versions = Object.fromEntries(LANGS.map((l) => [l, plateformePath(situation, plateforme.id, l)])) as Versions;
+const st = SITUATIONS_TEXTE[situation][lang];
+const date = dateLisible(PLATEFORMES_VERIFIE_LE, lang);
+const intro = PLATEFORME_PAGE.intro[lang].replace('{p}', plateforme.nom).replace('{d}', date);
+const autres = actionsPour(situation).filter((x) => x.plateforme.id !== plateforme.id);
+const lien = urlAction(action, lang);
+const etapes = action.etapes[lang] ?? [];
+const description = `${h1Final}. ${etapes[0] ?? ''}`.slice(0, 155);
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: h1Final,
+    inLanguage: lang,
+    step: etapes.map((e, i) => ({ '@type': 'HowToStep', position: i + 1, text: e })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: h1Final,
+    inLanguage: lang,
+    url: `${SITE_URL}${chemin}`,
+    dateModified: PLATEFORMES_VERIFIE_LE || '2026-10-15',
+    publisher: { '@id': `${SITE_URL}/#organisation` },
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={h1Final}
+  description={description}
+  chemin={chemin}
+  versions={versions}
+  jsonld={jsonld}
+  ariane={[
+    { nom: C.nav.queFaire[lang], href: page('que-faire', lang) },
+    { nom: SITUATION_LABEL[situation][lang], href: situationPath(situation, lang) },
+    { nom: plateforme.nom },
+  ]}
+>
+  <article class="page">
+    <h1>{h1Final}</h1>
+    <p class="lede">{intro}</p>
+
+    <div class="encadre">
+      <h2 class="sans-marge">{PLATEFORME_PAGE.conseils[lang]}</h2>
+      <p>{st.premiers[0]}</p>
+    </div>
+
+    <h2>{PLATEFORME_PAGE.etapes[lang]}</h2>
+    <ol class="etapes">
+      {etapes.map((e) => <li>{e}</li>)}
+    </ol>
+    <div class="actions">
+      <a class="bouton principal" href={lien} rel="noopener noreferrer" target="_blank">
+        {C.ouvrirFormulaire[lang]}
+        <small>{new URL(lien).hostname.replace(/^www\./, '')} {C.nouvelOnglet[lang]}</small>
+      </a>
+    </div>
+    <p class="petit">{action.connexion_requise ? C.connexionRequise[lang] : C.pasDeConnexion[lang]} {C.verifieLe[lang]} {date}.</p>
+
+    <SiCaBloque lang={lang} />
+
+    {autres.length > 0 && (
+      <section aria-labelledby="autres">
+        <h2 id="autres">{PLATEFORME_PAGE.autres[lang]}</h2>
+        <ul class="cartes deux">
+          {autres.map((x) => (
+            <li>
+              <a class="carte" href={plateformePath(situation, x.plateforme.id, lang)}>
+                <span class="carte-titre">{x.plateforme.nom}</span>
+                <span class="carte-texte">{x.action.titre[lang]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+    <p><a href={situationPath(situation, lang)}>← {st.seo}</a></p>
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>

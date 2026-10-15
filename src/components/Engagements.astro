@@ -1,0 +1,14 @@
+---
+import { C } from '../i18n/commun';
+import type { Lang } from '../../shared/vocab';
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+<section class="engagements" aria-labelledby="engagements-titre">
+  <h2 id="engagements-titre">{C.engagementsTitre[lang]}</h2>
+  <ul class="coche">
+    {C.engagements[lang].map((e) => <li>{e}</li>)}
+  </ul>
+</section>

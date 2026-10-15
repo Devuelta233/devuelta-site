@@ -1,0 +1,165 @@
+---
+import '../styles/global.css';
+import Spirale from '../components/Spirale.astro';
+import { C } from '../i18n/commun';
+import { BASE, page, type Versions } from '../i18n/routes';
+import { EMAIL, SITE_URL } from '../config';
+import { LANGS, type Lang } from '../../shared/vocab';
+
+export interface Miette {
+  nom: string;
+  href?: string;
+}
+
+interface Props {
+  lang: Lang;
+  titre: string;
+  description: string;
+  chemin: string;
+  versions?: Partial<Versions>;
+  jsonld?: Record<string, unknown>[];
+  ariane?: Miette[];
+  sansBandeau?: boolean;
+  titreComplet?: boolean;
+  noindex?: boolean;
+}
+
+const { lang, titre, description, chemin, versions = {}, jsonld = [], ariane = [], sansBandeau = false, titreComplet = false, noindex = false } = Astro.props;
+const titreHtml = titreComplet ? titre : `${titre} · Devuelta`;
+const canonique = `${SITE_URL}${chemin}`;
+const OG_LOCALE: Record<Lang, string> = { fr: 'fr_FR', es: 'es_ES', en: 'en_US' };
+const alternatives = LANGS.filter((l) => versions[l]).map((l) => ({ lang: l, href: `${SITE_URL}${versions[l]}` }));
+const xDefault = versions.fr ?? versions.en ?? null;
+const lienLangue = (l: Lang) => versions[l] ?? BASE[l];
+
+const ld: Record<string, unknown>[] = [...jsonld];
+if (ariane.length) {
+  ld.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{ nom: C.accueil[lang], href: BASE[lang] }, ...ariane].map((m, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: m.nom,
+      ...(m.href ? { item: `${SITE_URL}${m.href}` } : {}),
+    })),
+  });
+}
+
+const nav = [
+  { href: page('que-faire', lang), nom: C.nav.queFaire[lang] },
+  { href: page('guides', lang), nom: C.nav.guides[lang] },
+  { href: page('methode', lang), nom: C.nav.methode[lang] },
+  { href: page('contact', lang), nom: C.nav.contact[lang] },
+];
+---
+<!doctype html>
+<html lang={lang} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="only light" />
+    <meta name="theme-color" content="#F7F1EC" />
+    <title>{titreHtml}</title>
+    <meta name="description" content={description} />
+    {noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonique} />}
+    {alternatives.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+    {xDefault && <link rel="alternate" hreflang="x-default" href={`${SITE_URL}${xDefault}`} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Devuelta" />
+    <meta property="og:title" content={titre} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonique} />
+    <meta property="og:locale" content={OG_LOCALE[lang]} />
+    <meta property="og:image" content={`${SITE_URL}/og/devuelta-${lang}.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    {ld.map((o) => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
+  </head>
+  <body>
+    <a class="saut" href="#contenu">{C.allerContenu[lang]}</a>
+    <header class="entete">
+      <div class="entete-int">
+        <a class="marque" href={BASE[lang]} aria-label="Devuelta">
+          <Spirale class="marque-spirale" />
+          <span>devuelta</span>
+        </a>
+        <nav class="nav-principale" aria-label={C.menu[lang]}>
+          {nav.map((n) => <a href={n.href} aria-current={chemin === n.href ? 'page' : undefined}>{n.nom}</a>)}
+        </nav>
+        <nav class="langues" aria-label={C.langue[lang]}>
+          {LANGS.map((l) => (
+            <a href={lienLangue(l)} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>{l}</a>
+          ))}
+        </nav>
+        <button class="quitter" type="button" data-quitter title={C.quitterAide[lang]}>
+          <span aria-hidden="true">✕</span>{C.quitter[lang]}
+        </button>
+      </div>
+      <details class="menu-mobile">
+        <summary>{C.menu[lang]}</summary>
+        <nav aria-label={C.menu[lang]}>
+          <a href={page('diagnostic', lang)}>{C.nav.diagnostic[lang]}</a>
+          {nav.map((n) => <a href={n.href}>{n.nom}</a>)}
+          <a href={page('urgence', lang)}>{C.nav.urgence[lang]}</a>
+          <a href={page('confier', lang)}>{C.nav.confier[lang]}</a>
+        </nav>
+      </details>
+    </header>
+    {!sansBandeau && (
+      <div class="bandeau-urgence" role="note">
+        <p>{C.urgence[lang]} <a href={page('urgence', lang)}>{C.urgenceLien[lang]} →</a></p>
+      </div>
+    )}
+    <main id="contenu">
+      {ariane.length > 0 && (
+        <div class="page-large ariane-zone pas-imprimer">
+          <nav class="ariane" aria-label="Fil d’Ariane">
+            <ol>
+              <li><a href={BASE[lang]}>{C.accueil[lang]}</a></li>
+              {ariane.map((m) => <li>{m.href ? <a href={m.href}>{m.nom}</a> : <span aria-current="page">{m.nom}</span>}</li>)}
+            </ol>
+          </nav>
+        </div>
+      )}
+      <slot />
+    </main>
+    <footer class="pied">
+      <div class="pied-int">
+        <div>
+          <h2>Devuelta</h2>
+          <p>{C.piedTexte[lang]}</p>
+          <p><a href={`mailto:${EMAIL}`} data-evenement="email">{EMAIL}</a></p>
+        </div>
+        <div>
+          <h2>{C.nav.queFaire[lang]}</h2>
+          <ul>
+            <li><a href={page('diagnostic', lang)}>{C.nav.diagnostic[lang]}</a></li>
+            <li><a href={page('que-faire', lang)}>{C.nav.queFaire[lang]}</a></li>
+            <li><a href={page('guides', lang)}>{C.nav.guides[lang]}</a></li>
+            <li><a href={page('urgence', lang)}>{C.nav.urgence[lang]}</a></li>
+            <li><a href={page('confier', lang)}>{C.nav.confier[lang]}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Devuelta</h2>
+          <ul>
+            <li><a href={page('methode', lang)}>{C.nav.methode[lang]}</a></li>
+            <li><a href={page('contact', lang)}>{C.nav.contact[lang]}</a></li>
+            <li><a href={page('confidentialite', lang)}>{C.nav.confidentialite[lang]}</a></li>
+            <li><a href={page('mentions', lang)}>{C.nav.mentions[lang]}</a></li>
+            <li><a href="/referentiel.json">{C.nav.referentiel[lang]}</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="bas">© Devuelta · {C.engagements[lang][0]}</p>
+    </footer>
+    <script>
+      import '../scripts/site';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+---
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
+import { guidePath, page, situationPath, versionsPage } from '../i18n/routes';
+import { dateLisible, guides, PLATEFORMES_VERIFIE_LE, plateformes, urgencesInternational, urgencesPays, urlAction } from '../data';
+import { lienWhatsApp } from '../config';
+import { SITUATION_LABEL, type Lang } from '../../shared/vocab';
+import type { DonneesDiagnostic } from '../scripts/Diagnostic';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const T = {
+  seo: { fr: 'Diagnostic gratuit et anonyme', es: 'Diagnóstico gratis y anónimo', en: 'Free, anonymous diagnostic' },
+  meta: {
+    fr: 'Répondez à quelques questions : vous obtenez votre plan d’action, les formulaires officiels et les recours de votre pays. Rien n’est envoyé.',
+    es: 'Responde unas preguntas y obtén tu plan de acción, los formularios oficiales y los recursos de tu país. No se envía nada.',
+    en: 'Answer a few questions and get your action plan, the official forms and the remedies in your country. Nothing is sent.',
+  },
+  h1: { fr: 'Diagnostic', es: 'Diagnóstico', en: 'Diagnostic' },
+  intro: {
+    fr: 'Quelques questions, trois minutes. Vous obtenez un plan d’action clair, adapté à votre situation et à votre pays.',
+    es: 'Unas preguntas, tres minutos. Obtienes un plan de acción claro, adaptado a tu situación y a tu país.',
+    en: 'A few questions, three minutes. You get a clear action plan, adapted to your situation and your country.',
+  },
+  sansJs: {
+    fr: 'Le diagnostic a besoin de JavaScript. Vous pouvez aussi choisir directement votre situation :',
+    es: 'El diagnóstico necesita JavaScript. También puedes elegir directamente tu situación:',
+    en: 'The diagnostic needs JavaScript. You can also choose your situation directly:',
+  },
+};
+const donnees: DonneesDiagnostic = {
+  lang,
+  plateformes: plateformes().map((p) => ({
+    id: p.id,
+    nom: p.nom,
+    type: p.type,
+    actions: p.actions.map((a) => ({
+      situation: a.situation,
+      titre: a.titre[lang],
+      etapes: a.etapes[lang] ?? [],
+      url: urlAction(a, lang),
+      connexion_requise: a.connexion_requise,
+    })),
+  })),
+  guides: guides().map((g) => ({
+    titre: g.titre[lang],
+    resume: g.resume[lang],
+    href: guidePath(g.slug[lang], lang),
+    situations: g.situations,
+    pays: g.pays,
+    mineurs: g.public_mineurs,
+  })),
+  pays: urgencesPays().map((p) => ({
+    code: p.code,
+    nom: p.nom[lang],
+    ressources: p.ressources.map((r) => ({
+      type: r.type,
+      nom: r.nom,
+      telephone: r.telephone ?? null,
+      url: r.url ?? null,
+      description: r.description[lang],
+      gratuit: r.gratuit ?? null,
+      horaires: r.horaires ?? null,
+    })),
+  })),
+  international: urgencesInternational().map((r) => ({ type: r.type, nom: r.nom, url: r.url ?? null, description: r.description[lang] })),
+  liens: {
+    confier: page('confier', lang),
+    urgence: page('urgence', lang),
+    situations: Object.fromEntries(SITUATIONS_ORDRE.map((s) => [s, situationPath(s, lang)])),
+    whatsapp: lienWhatsApp(lang),
+  },
+  verifieLe: dateLisible(PLATEFORMES_VERIFIE_LE, lang),
+};
+---
+<Base
+  lang={lang}
+  titre={T.seo[lang]}
+  description={T.meta[lang]}
+  chemin={page('diagnostic', lang)}
+  versions={versionsPage('diagnostic')}
+  ariane={[{ nom: T.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{T.h1[lang]}</h1>
+    <p class="lede">{T.intro[lang]}</p>
+    <div id="diagnostic">
+      <noscript>
+        <p>{T.sansJs[lang]}</p>
+      </noscript>
+      <ul class="cartes deux">
+        {SITUATIONS_ORDRE.map((s) => (
+          <li>
+            <a class="carte" href={situationPath(s, lang)}>
+              <span class="carte-titre">{SITUATION_LABEL[s][lang]}</span>
+              <span class="carte-texte">{SITUATIONS_TEXTE[s][lang].carte}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <script type="application/json" id="donnees-diagnostic" set:html={JSON.stringify(donnees).replace(/</g, '\\u003c')} />
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>
+<script>
+  import '../scripts/diagnostic-app';
+</script>

@@ -1,0 +1,139 @@
+---
+import Base from '../layouts/Base.astro';
+import Contacts from '../components/Contacts.astro';
+import Engagements from '../components/Engagements.astro';
+import Spirale from '../components/Spirale.astro';
+import { C } from '../i18n/commun';
+import { ACCUEIL } from '../i18n/pages';
+import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
+import { BASE, guidePath, page, situationPath, versionsAccueil } from '../i18n/routes';
+import { dateLisible, guides } from '../data';
+import { EMAIL, SITE_URL, WHATSAPP } from '../config';
+import { SITUATION_LABEL, type Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const h1 = ACCUEIL.h1[lang];
+const listeGuides = guides().filter((g) => !g.public_mineurs).slice(0, 6);
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organisation`,
+    name: 'Devuelta',
+    url: SITE_URL,
+    logo: `${SITE_URL}/icons/icon-512.png`,
+    email: EMAIL,
+    slogan: ACCUEIL.h1[lang],
+    areaServed: ['FR', 'BE', 'CH', 'ES', 'MX', 'CO', 'AR', 'US', 'GB', 'CA'],
+    knowsLanguage: ['fr', 'es', 'en'],
+    contactPoint: (['fr', 'es', 'en'] as Lang[]).map((l) => ({
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      telephone: WHATSAPP[l].e164,
+      availableLanguage: l,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#site`,
+    name: 'Devuelta',
+    url: `${SITE_URL}${BASE[lang]}`,
+    inLanguage: lang,
+    publisher: { '@id': `${SITE_URL}/#organisation` },
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={`Devuelta — ${ACCUEIL.h1[lang].replace(/\.$/, '')}`}
+  titreComplet
+  description={ACCUEIL.meta[lang]}
+  chemin={BASE[lang]}
+  versions={versionsAccueil()}
+  jsonld={jsonld}
+>
+  <div class="page-large">
+    <section class="heros">
+      <div>
+        <p class="eyebrow">{ACCUEIL.eyebrow[lang]}</p>
+        <h1>{h1.replace(/\.$/, '')}<span class="point">.</span></h1>
+        <p class="lede">{ACCUEIL.lede[lang]}</p>
+        <p class="sous">{ACCUEIL.sous[lang]}</p>
+        <div class="actions">
+          <a class="bouton principal" href={page('diagnostic', lang)}>
+            {C.ctaDiagnostic[lang]}
+            <small>{C.ctaDiagnosticSous[lang]}</small>
+          </a>
+          <a class="bouton" href={page('que-faire', lang)}>{ACCUEIL.ctaQueFaire[lang]}</a>
+        </div>
+      </div>
+      <Spirale class="spirale-fond" />
+    </section>
+
+    <Engagements lang={lang} />
+
+    <section aria-labelledby="situations-titre">
+      <h2 id="situations-titre">{ACCUEIL.situationsTitre[lang]}</h2>
+      <ul class="cartes deux trois">
+        {SITUATIONS_ORDRE.map((s) => (
+          <li>
+            <a class="carte" href={situationPath(s, lang)}>
+              <span class="carte-titre">{SITUATION_LABEL[s][lang]}</span>
+              <span class="carte-texte">{SITUATIONS_TEXTE[s][lang].carte}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section aria-labelledby="comment-titre">
+      <h2 id="comment-titre">{ACCUEIL.commentTitre[lang]}</h2>
+      <ol class="trois-temps">
+        {ACCUEIL.comment[lang].map(([t, d], i) => (
+          <li>
+            <span class="num">0{i + 1}</span>
+            <strong>{t}</strong>
+            <span>{d}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="echelle-titre">
+      <h2 id="echelle-titre">{ACCUEIL.echelleTitre[lang]}</h2>
+      <p>{ACCUEIL.echelleIntro[lang]}</p>
+      <ol class="echelle">
+        {ACCUEIL.echelle[lang].map((m) => <li>{m}</li>)}
+      </ol>
+    </section>
+
+    {listeGuides.length > 0 && (
+      <section aria-labelledby="recours-titre">
+        <h2 id="recours-titre">{ACCUEIL.recoursTitre[lang]}</h2>
+        <p>{ACCUEIL.recoursIntro[lang]}</p>
+        <ul class="cartes deux trois">
+          {listeGuides.map((g) => (
+            <li>
+              <a class="carte" href={guidePath(g.slug[lang], lang)}>
+                <span class="carte-titre">{g.titre[lang]}</span>
+                <span class="carte-texte">{g.resume[lang]}</span>
+                <span class="carte-meta">{C.verifieLe[lang]} {dateLisible(g.verifie_le, lang)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p><a href={page('guides', lang)}>{ACCUEIL.tousLesRecours[lang]} →</a></p>
+      </section>
+    )}
+
+    <section aria-labelledby="contact-titre">
+      <h2 id="contact-titre">{ACCUEIL.contactTitre[lang]}</h2>
+      <p>{ACCUEIL.contactIntro[lang]}</p>
+      <Contacts lang={lang} />
+    </section>
+  </div>
+</Base>

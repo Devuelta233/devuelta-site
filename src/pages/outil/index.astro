@@ -1,0 +1,31 @@
+---
+// Coquille de l'outil interne EraseOps : aucune donnée dans la page, rien
+// d'indexable. Tout passe par l'API (/api/outil/…) après connexion.
+---
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="color-scheme" content="only light" />
+    <meta name="theme-color" content="#2B2624" />
+    <title>EraseOps</title>
+    <link rel="manifest" href="/outil/manifest.webmanifest" />
+    <link rel="icon" href="/outil/icone.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/outil/apple-touch-icon.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="EraseOps" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
+  <body>
+    <div id="outil">
+      <p class="o-chargement-initial">EraseOps…</p>
+      <noscript>EraseOps nécessite JavaScript. · EraseOps necesita JavaScript. · EraseOps needs JavaScript.</noscript>
+    </div>
+    <script>
+      import '../../outil/main';
+    </script>
+  </body>
+</html>

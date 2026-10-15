@@ -1,0 +1,24 @@
+---
+// L'encadré « Si ça ne marche pas » : l'échelle des recours et l'appel à l'action.
+import { C } from '../i18n/commun';
+import { ACCUEIL } from '../i18n/pages';
+import { page } from '../i18n/routes';
+import type { Lang } from '../../shared/vocab';
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+---
+<section class="encadre" aria-labelledby="bloque-titre">
+  <h2 id="bloque-titre" class="sans-marge">{C.siCaNeMarchePas[lang]}</h2>
+  <p>{C.siCaNeMarchePasTexte[lang]}</p>
+  <ol class="echelle">
+    {ACCUEIL.echelle[lang].map((m) => <li>{m}</li>)}
+  </ol>
+  <div class="actions">
+    <a class="bouton principal" href={page('confier', lang)}>
+      {C.ctaConfier[lang]}
+      <small>{C.ctaConfierSous[lang]}</small>
+    </a>
+  </div>
+</section>
