@@ -37,6 +37,11 @@ export const SEO_PLATEFORME: Record<string, Titres> = {
     es: { titre: 'Cómo eliminar tus datos personales de Google gratis', h1: 'Eliminar tus datos personales de Google e internet, gratis' },
     en: { titre: 'Remove personal information from Google Search (free)', h1: 'How to remove your personal information from Google, free' },
   },
+  'donnees-personnelles:pimeyes': {
+    fr: { titre: 'PimEyes : retirer vos photos des résultats (opt-out)', h1: 'PimEyes : retirer votre visage des résultats, étape par étape' },
+    es: { titre: 'PimEyes: cómo quitar tus fotos de los resultados', h1: 'PimEyes: quitar tu cara de los resultados, paso a paso' },
+    en: { titre: 'PimEyes opt-out: remove your photos from results', h1: 'PimEyes opt-out: remove your face from results, step by step' },
+  },
   'diffamation:facebook': {
     fr: { titre: 'Diffamation ou harcèlement sur Facebook : que faire', h1: 'Diffamation ou harcèlement sur Facebook : faire retirer, garder les preuves' },
     es: { titre: 'Me están difamando en Facebook: qué puedo hacer', h1: 'Te están difamando en Facebook: qué puedes hacer' },

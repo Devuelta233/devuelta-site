@@ -2,8 +2,10 @@
 // notes, journal. Rien n'est envoyé par l'outil : il prépare, l'humain valide.
 
 import { useEffect, useState } from 'preact/hooks';
+import { COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
 import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isSituation } from '../../../shared/vocab';
 import { del, get, patch, post } from '../api';
+import { extraireLiens } from '../liens';
 import { code, date, indexLangue, langue, t, tr } from '../i18n';
 import { Champ, Chargement, Copier, LienExterne, MessageErreur, Pastille, jourInput, useAction, useCharger, valeur } from '../ui';
 import { CATEGORIES, STATUTS } from './Referentiel';
@@ -256,6 +258,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           </button>
         </div>
       )}
+      <TarifDossier d={d} />
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (
         <div class="o-encadre o-alerte">
           <strong>{t('delaiCouperet')}</strong>
@@ -429,21 +432,111 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
   );
 }
 
+// Tarif : même grille que la page Tarifs du site (shared/tarifs.ts). La moitié
+// à l'ouverture, le solde au prorata des liens retirés.
+
+function TarifDossier({ d }: { d: Detail }) {
+  const lang = langue.value;
+  const liens = d.contenus.filter((c) => c.statut !== 'a-valider');
+  const n = liens.length;
+  const retires = liens.filter((c) => c.statut === 'retire').length;
+  const zone = zoneDuPays(d.dossier.pays);
+  const ligne = (z: Zone) => {
+    const p = calculerPrix(n, retires, z);
+    if (!p.formule || p.total === null || p.ouverture === null || p.soldeDu === null || p.soldeMaximum === null) return null;
+    const local = (eur: number) =>
+      z === 'reduite' ? ` (GH¢ ${nombre((eur * p.formule!.ghs) / p.total!, lang)} · ${nombre((eur * p.formule!.fcfa) / p.total!, lang)} F)` : '';
+    return (
+      <ul>
+        <li>
+          {tr('Total :', 'Total:', 'Total:')} <strong>{euros(p.total, lang)}</strong>
+          {local(p.total)}
+        </li>
+        <li>
+          {tr('À l’ouverture :', 'Al abrir el caso:', 'When the case opens:')} <strong>{euros(p.ouverture, lang)}</strong>
+          {local(p.ouverture)}
+        </li>
+        <li>
+          {tr('Solde dû à ce jour :', 'Saldo debido a la fecha:', 'Balance due so far:')} <strong>{euros(p.soldeDu, lang)}</strong>
+          {local(p.soldeDu)} —{' '}
+          {tr(
+            `${retires} lien(s) retiré(s) sur ${n}, solde maximum ${euros(p.soldeMaximum, lang)}`,
+            `${retires} enlace(s) retirado(s) de ${n}, saldo máximo ${euros(p.soldeMaximum, lang)}`,
+            `${retires} of ${n} link(s) removed, maximum balance ${euros(p.soldeMaximum, lang)}`,
+          )}
+        </li>
+      </ul>
+    );
+  };
+  let corps;
+  if (n === 0) {
+    corps = <p>{tr('Ajoutez et validez les liens pour calculer le tarif.', 'Añade y valida los enlaces para calcular el precio.', 'Add and approve the links to work out the price.')}</p>;
+  } else if (n > 15) {
+    corps = (
+      <p>
+        {tr('Plus de 15 liens : sur devis, à partir de', 'Más de 15 enlaces: con presupuesto, desde', 'More than 15 links: quoted, from')} {euros(DEVIS_A_PARTIR_DE, lang)} (
+        {tr('zone réduite :', 'zona reducida:', 'reduced zone:')} {euros(DEVIS_A_PARTIR_DE * COEF_ZONE_REDUITE, lang)}).
+      </p>
+    );
+  } else if (zone) {
+    corps = ligne(zone);
+  } else {
+    corps = (
+      <>
+        <p>{tr('Pays à préciser. Tarif standard :', 'País por precisar. Precio estándar:', 'Country to confirm. Standard price:')}</p>
+        {ligne('standard')}
+        <p>{tr('Afrique, Amérique latine et Caraïbes :', 'África, América Latina y Caribe:', 'Africa, Latin America and the Caribbean:')}</p>
+        {ligne('reduite')}
+      </>
+    );
+  }
+  return (
+    <section class="o-encadre o-info">
+      <strong>
+        {tr('Tarif', 'Precio', 'Price')} — {n} {tr('lien(s)', 'enlace(s)', 'link(s)')}
+        {zone === 'reduite' ? ` · ${tr('zone réduite (prix divisés par deux)', 'zona reducida (precios a mitad)', 'reduced zone (half price)')}` : ''}
+      </strong>
+      {corps}
+      <p class="o-muet">
+        {tr(
+          'Personne mineure : aucun paiement, orientation vers les services officiels gratuits. Cas difficile : devis possible avant de commencer.',
+          'Persona menor de edad: ningún pago, orientación hacia los servicios oficiales gratuitos. Caso difícil: presupuesto posible antes de empezar.',
+          'Minor: no payment, refer to official free services. Difficult case: a quote is possible before starting.',
+        )}
+      </p>
+    </section>
+  );
+}
+
 // Liens et plan ---------------------------------------------------------------------
 
 function OngletLiens({ d, recharger, preparer }: { d: Detail; recharger: () => void; preparer: (p: { modele: string; contenu_id: string | null }) => void }) {
   const [nouveaux, setNouveaux] = useState('');
   const [recherche, setRecherche] = useState(false);
   const a = useAction();
+  const detectes = extraireLiens(nouveaux);
   return (
     <div>
       {d.contenus.map((c) => (
         <Lien c={c} d={d} recharger={recharger} preparer={preparer} />
       ))}
       <section class="o-encadre">
-        <Champ label={t('ajouterLiens')}>
-          <textarea rows={3} value={nouveaux} onInput={(e) => setNouveaux(valeur(e))} placeholder="https://…" />
+        <Champ
+          label={t('ajouterLiens')}
+          aide={tr(
+            'Collez des liens, ou tout le texte d’un rapport PimEyes, d’un e-mail ou d’un message : les adresses sont repérées automatiquement.',
+            'Pega enlaces, o todo el texto de un informe de PimEyes, de un correo o de un mensaje: las direcciones se detectan automáticamente.',
+            'Paste links, or the whole text of a PimEyes report, an email or a message: addresses are picked out automatically.',
+          )}
+        >
+          <textarea rows={4} value={nouveaux} onInput={(e) => setNouveaux(valeur(e))} placeholder="https://…" />
         </Champ>
+        {nouveaux.trim() && (
+          <p class="o-muet">
+            {detectes.length} {tr('lien(s) repéré(s)', 'enlace(s) detectado(s)', 'link(s) found')}
+            {detectes.length > 100 ? ` — ${tr('100 au plus par envoi', '100 como máximo por envío', '100 at most per batch')}` : ''}
+          </p>
+        )}
         <label class="o-case">
           <input type="checkbox" checked={recherche} onChange={() => setRecherche(!recherche)} />
           <span>{t('origineRecherche')}</span>
@@ -451,10 +544,10 @@ function OngletLiens({ d, recharger, preparer }: { d: Detail; recharger: () => v
         <MessageErreur texte={a.err} />
         <button
           class="o-bouton o-principal"
-          disabled={!nouveaux.trim() || a.occupe}
+          disabled={detectes.length === 0 || detectes.length > 100 || a.occupe}
           onClick={() =>
             a.lancer(
-              () => post(`/dossiers/${d.dossier.id}/contenus`, { urls: nouveaux.split(/\s+/).filter(Boolean), origine: recherche ? 'recherche-inversee' : 'manuel' }),
+              () => post(`/dossiers/${d.dossier.id}/contenus`, { urls: detectes, origine: recherche ? 'recherche-inversee' : 'manuel' }),
               () => {
                 setNouveaux('');
                 setTimeout(recharger, 2500);

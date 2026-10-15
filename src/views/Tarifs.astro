@@ -1,0 +1,115 @@
+---
+// Page Tarifs : la grille vient de shared/tarifs.ts (la même que l'outil).
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { TARIFS } from '../i18n/pages';
+import { page, versionsPage } from '../i18n/routes';
+import { SITE_URL } from '../config';
+import { COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, euros, FORMULES, nombre, PART_OUVERTURE } from '../../shared/tarifs';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = page('tarifs', lang);
+const moitie = (n: number) => n * PART_OUVERTURE;
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: TARIFS.seo[lang],
+    serviceType: TARIFS.seo[lang],
+    url: `${SITE_URL}${chemin}`,
+    provider: { '@id': `${SITE_URL}/#organisation` },
+    offers: FORMULES.map((f) => ({
+      '@type': 'Offer',
+      name: TARIFS.formules[f.id][lang],
+      description: TARIFS.exemples[f.id][lang],
+      price: f.prix,
+      priceCurrency: 'EUR',
+    })),
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={TARIFS.seo[lang]}
+  description={TARIFS.meta[lang]}
+  chemin={chemin}
+  versions={versionsPage('tarifs')}
+  jsonld={jsonld}
+  ariane={[{ nom: TARIFS.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{TARIFS.h1[lang]}</h1>
+    <p class="lede">{TARIFS.intro[lang]}</p>
+
+    <ul class="formules">
+      {FORMULES.map((f) => (
+        <li class="formule">
+          <h2>{TARIFS.formules[f.id][lang]}</h2>
+          <p class="montant">{euros(f.prix, lang)}</p>
+          <p class="repartition">
+            <span><strong>{euros(moitie(f.prix), lang)}</strong> {TARIFS.colDemarrer[lang].toLowerCase()}</span>
+            <span><strong>{euros(f.prix - moitie(f.prix), lang)}</strong> {TARIFS.colSolde[lang].toLowerCase()}</span>
+          </p>
+          <p class="exemple">{TARIFS.exemples[f.id][lang]}</p>
+        </li>
+      ))}
+      <li class="formule devis">
+        <h2>{TARIFS.devisLigne[lang]}</h2>
+        <p class="repartition">
+          <strong>{TARIFS.devisPrix[lang].replace('{p}', euros(DEVIS_A_PARTIR_DE, lang))}</strong>
+          <span>{TARIFS.memeRegle[lang]}</span>
+        </p>
+      </li>
+    </ul>
+    <p class="petit">{TARIFS.devisAvant[lang]}</p>
+
+    <h2>{TARIFS.zoneTitre[lang]}</h2>
+    <p>{TARIFS.zoneTexte[lang]}</p>
+    <ul class="prix-zone">
+      {FORMULES.map((f) => (
+        <li>
+          <strong>{TARIFS.formules[f.id][lang]}</strong>
+          <span>
+            <span class="sans-coupure">{euros(f.prix * COEF_ZONE_REDUITE, lang)}</span> ·{' '}
+            <span class="sans-coupure">GH¢&nbsp;{nombre(f.ghs, lang)}</span> ·{' '}
+            <span class="sans-coupure">{nombre(f.fcfa, lang)}&nbsp;FCFA</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+
+    <h2>{TARIFS.pourquoiTitre[lang]}</h2>
+    <p>{TARIFS.pourquoi[lang]}</p>
+
+    <h2>{TARIFS.retireTitre[lang]}</h2>
+    <p>{TARIFS.retire[lang]}</p>
+
+    <h2>{TARIFS.inclusTitre[lang]}</h2>
+    <ul class="coche">
+      {TARIFS.inclus[lang].map((x) => <li>{x}</li>)}
+    </ul>
+
+    <h2>{TARIFS.gratuitTitre[lang]}</h2>
+    <ul class="coche">
+      {TARIFS.gratuit[lang].map((x) => <li>{x}</li>)}
+    </ul>
+
+    <h2>{TARIFS.paiementTitre[lang]}</h2>
+    <p>{TARIFS.paiement[lang]}</p>
+
+    <div class="actions">
+      <a class="bouton principal" href={page('confier', lang)}>
+        {C.ctaConfier[lang]}
+        <small>{C.ctaConfierSous[lang]}</small>
+      </a>
+      <a class="bouton" href={page('diagnostic', lang)}>
+        {C.ctaDiagnostic[lang]}
+        <small>{C.ctaDiagnosticSous[lang]}</small>
+      </a>
+    </div>
+  </article>
+</Base>

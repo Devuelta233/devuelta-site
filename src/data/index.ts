@@ -14,6 +14,8 @@ export interface ActionPlateforme {
   url_par_langue?: Partial<T3>;
   connexion_requise?: boolean;
   verifie?: boolean;
+  /** Limite ou précaution affichée sous les étapes (facultatif). */
+  a_savoir?: T3;
   note?: string;
 }
 

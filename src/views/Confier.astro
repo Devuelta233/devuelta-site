@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Contacts from '../components/Contacts.astro';
 import Engagements from '../components/Engagements.astro';
-import { CONFIER } from '../i18n/pages';
+import { CONFIER, METHODE } from '../i18n/pages';
 import { page, versionsPage } from '../i18n/routes';
 import { plateformes } from '../data';
 import { EMAIL, lienWhatsApp } from '../config';
@@ -42,6 +42,7 @@ const sansJs = {
   <article class="page">
     <h1>{CONFIER.h1[lang]}</h1>
     <p class="lede">{CONFIER.intro[lang]}</p>
+    <p>{CONFIER.prix[lang]} <a href={page('tarifs', lang)}>{METHODE.voirTarifs[lang]} →</a></p>
     <Engagements lang={lang} />
     <div id="confier">
       <p>{sansJs[lang]}</p>

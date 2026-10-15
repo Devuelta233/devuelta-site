@@ -317,6 +317,91 @@ p {
   transform: rotate(45deg);
 }
 
+/* Tarifs ------------------------------------------------------------------- */
+
+.formules {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0.75rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+  .formules {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.formule {
+  background: var(--papier);
+  border: 1px solid var(--trait);
+  border-radius: var(--rayon);
+  padding: 1rem 1.1rem 1.1rem;
+}
+
+.formule h2 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.formule .montant {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--terracotta);
+  margin: 0.35rem 0 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.formule .repartition {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.formule .exemple {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--texte-2);
+}
+
+.formule.devis {
+  background: var(--sable);
+  border-color: transparent;
+}
+
+@media (min-width: 40rem) {
+  .formule.devis {
+    grid-column: 1 / -1;
+  }
+}
+
+.formule.devis .repartition {
+  margin: 0.4rem 0 0;
+}
+
+.prix-zone {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.prix-zone li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--trait);
+}
+
+.sans-coupure {
+  white-space: nowrap;
+}
+
 .croix li::before {
   border: 0;
   width: 0.8rem;
