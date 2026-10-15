@@ -3052,6 +3052,48 @@
    ]
   },
   {
+   "id": "pornhub",
+   "nom": "Pornhub (Aylo)",
+   "type": "contenu-adulte",
+   "actions": [
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Demander le retrait d'une vidéo ou photo publiée sans votre consentement",
+      "es": "Pedir que retiren un video o foto publicado sin tu consentimiento",
+      "en": "Request removal of a video or photo posted without your consent"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire « Content Removal Request » (aucun compte nécessaire).",
+       "Indiquez votre e-mail, votre nom légal et les URL des contenus.",
+       "Choisissez « Non-Consensual Content » et « I am the person in the content » (ou votre lien avec la personne).",
+       "Tapez votre nom pour confirmer et envoyez.",
+       "Cliquez sur le lien de l'e-mail de vérification : les URL valides sont désactivées immédiatement."
+      ],
+      "es": [
+       "Abre el formulario «Content Removal Request» (no hace falta cuenta).",
+       "Escribe tu correo, tu nombre legal y las URL del contenido.",
+       "Elige «Non-Consensual Content» e «I am the person in the content» (o tu relación con la persona).",
+       "Escribe tu nombre para confirmar y envía.",
+       "Haz clic en el enlace del correo de verificación: las URL válidas se desactivan de inmediato."
+      ],
+      "en": [
+       "Open the \"Content Removal Request\" form (no account needed).",
+       "Enter your email, legal name and the content URLs.",
+       "Choose \"Non-Consensual Content\" and \"I am the person in the content\" (or your relationship to them).",
+       "Type your name to confirm and submit.",
+       "Click the link in the verification email: valid URLs are disabled right away."
+      ]
+     },
+     "url": "https://www.pornhub.com/content-removal",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire rendu en navigateur le 2026-10-15 (depuis les États-Unis). Le signalement est confidentiel ; un signalement anonyme est possible pour NCC/CSAM. Pornhub est bloqué ou soumis à vérification d'âge dans certains pays (dont la France) : l'accès au formulaire peut varier selon le pays. Les deepfakes ne sont pas cités explicitement sur le formulaire."
+    }
+   ]
+  },
+  {
    "id": "google",
    "nom": "Google (Recherche)",
    "type": "moteur",
@@ -3333,6 +3375,222 @@
      "connexion_requise": true,
      "verifie": true,
      "note": "Article « Report inappropriate reviews on your Business Profile » lu le 2026-10-15 (versions FR/ES vérifiées). Seuls les avis contraires aux règles Google sont retirés, pas les avis simplement négatifs. Libellés FR/ES traduits par nous. Pour un avis diffamatoire : demande légale Google (fiche Google, action diffamation)."
+    }
+   ]
+  },
+  {
+   "id": "bing",
+   "nom": "Bing / Microsoft",
+   "type": "moteur",
+   "actions": [
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Europe : demander à Bing de bloquer des résultats (droit à l'oubli)",
+      "es": "Europa: pedir a Bing que bloquee resultados (derecho al olvido)",
+      "en": "Europe: ask Bing to block search results (right to be forgotten)"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire « Request to Block Bing Search Results In Europe ».",
+       "Indiquez si la demande est pour vous ou pour quelqu'un d'autre, et votre nom légal complet.",
+       "Donnez votre pays de résidence en Europe et vos coordonnées.",
+       "Listez les URL et expliquez pourquoi elles sont inexactes, dépassées ou excessives, puis envoyez."
+      ],
+      "es": [
+       "Abre el formulario «Request to Block Bing Search Results In Europe».",
+       "Indica si la solicitud es para ti o para otra persona, y tu nombre legal completo.",
+       "Indica tu país de residencia en Europa y tus datos de contacto.",
+       "Enumera las URL y explica por qué son inexactas, desactualizadas o excesivas, y envía."
+      ],
+      "en": [
+       "Open the \"Request to Block Bing Search Results In Europe\" form.",
+       "Say whether it's for you or someone else, and give your full legal name.",
+       "Give your European country of residence and contact details.",
+       "List the URLs and explain why they're inaccurate, outdated or excessive, then submit."
+      ]
+     },
+     "url": "https://www.bing.com/webmaster/tools/eu-privacy-request",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire rendu le 2026-10-15 (partie 1 lue ; la suite non détaillée). Réservé aux résidents européens (arrêt CJUE 2014) ; un mineur peut le remplir seul ou via un parent. Pour un autre problème, Bing renvoie vers « Report a concern »."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Signaler un contenu à Microsoft / Bing (images intimes, contenus abusifs)",
+      "es": "Denunciar contenido a Microsoft / Bing (imágenes íntimas, contenido abusivo)",
+      "en": "Report content to Microsoft / Bing (intimate images, abusive content)"
+     },
+     "etapes": {
+      "fr": [
+       "Si possible, signalez d'abord depuis le produit (Bing, Xbox, Outlook…).",
+       "Sinon, ouvrez la page « Report a concern » et cliquez sur « Continue ».",
+       "Choisissez le type de problème et suivez le formulaire.",
+       "Pour une question de vie privée, utilisez plutôt le lien « Report a Privacy concern » de la page."
+      ],
+      "es": [
+       "Si puedes, denuncia primero desde el propio producto (Bing, Xbox, Outlook…).",
+       "Si no, abre la página «Report a concern» y haz clic en «Continue».",
+       "Elige el tipo de problema y sigue el formulario.",
+       "Para un tema de privacidad, usa mejor el enlace «Report a Privacy concern» de la página."
+      ],
+      "en": [
+       "If you can, report it inside the product first (Bing, Xbox, Outlook…).",
+       "Otherwise open the \"Report a concern\" page and click \"Continue\".",
+       "Choose the type of issue and follow the form.",
+       "For a privacy issue, use the page's \"Report a Privacy concern\" link instead."
+      ]
+     },
+     "url": "https://www.microsoft.com/digitalsafety/report-a-concern",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Les anciennes URL https://www.microsoft.com/en-us/concern/revengeporn et /concern/bing redirigent ici (vérifié le 2026-10-15). Seule la page d'accueil du parcours a été lue : les catégories proposées après « Continue » (dont images intimes non consenties) n'ont pas été vérifiées."
+    }
+   ]
+  },
+  {
+   "id": "stopncii",
+   "nom": "StopNCII.org",
+   "type": "outil",
+   "actions": [
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Empêcher la diffusion de vos images intimes (18 ans et plus)",
+      "es": "Impedir la difusión de tus imágenes íntimas (18 años o más)",
+      "en": "Stop your intimate images being shared (18 and over)"
+     },
+     "etapes": {
+      "fr": [
+       "Vérifiez les conditions : c'est vous sur l'image, vous aviez 18 ans ou plus, et vous avez encore l'image.",
+       "Cliquez sur « Create Your Case ».",
+       "Sélectionnez les images sur votre appareil : seule leur empreinte (hash) est envoyée, jamais l'image.",
+       "Notez votre numéro de dossier pour suivre le statut (« Check Case Status »).",
+       "Les plateformes partenaires utilisent l'empreinte pour détecter et retirer les copies."
+      ],
+      "es": [
+       "Comprueba las condiciones: eres tú en la imagen, tenías 18 años o más y aún tienes la imagen.",
+       "Haz clic en «Create Your Case».",
+       "Selecciona las imágenes en tu dispositivo: solo se envía su huella (hash), nunca la imagen.",
+       "Guarda tu número de caso para ver el estado («Check Case Status»).",
+       "Las plataformas asociadas usan la huella para detectar y retirar las copias."
+      ],
+      "en": [
+       "Check you qualify: it's you in the image, you were 18 or older, and you still have the image.",
+       "Click \"Create Your Case\".",
+       "Select the images on your device: only their fingerprint (hash) is shared, never the image.",
+       "Keep your case number to check its status (\"Check Case Status\").",
+       "Partner platforms use the fingerprint to detect and remove copies."
+      ]
+     },
+     "url": "https://stopncii.org/",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page d'accueil rendue le 2026-10-15 (opéré par le Revenge Porn Helpline / SWGfL). Utilisé par Meta, TikTok, Reddit et d'autres partenaires (sources : pages de ces plateformes). Le site propose un sélecteur de langue ; versions FR/ES non vérifiées."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Quelqu'un menace de partager vos images intimes : bloquez-les à l'avance",
+      "es": "Alguien amenaza con compartir tus imágenes íntimas: bloquéalas antes",
+      "en": "Someone threatens to share your intimate images: block them in advance"
+     },
+     "etapes": {
+      "fr": [
+       "Ne payez pas et gardez les preuves du chantage.",
+       "Si vous avez encore les images et que vous aviez 18 ans ou plus, cliquez sur « Create Your Case ».",
+       "Créez les empreintes depuis votre appareil : les images ne quittent pas votre téléphone.",
+       "Les plateformes partenaires bloqueront ces images si elles sont publiées."
+      ],
+      "es": [
+       "No pagues y guarda las pruebas del chantaje.",
+       "Si aún tienes las imágenes y tenías 18 años o más, haz clic en «Create Your Case».",
+       "Crea las huellas desde tu dispositivo: las imágenes no salen de tu teléfono.",
+       "Las plataformas asociadas bloquearán esas imágenes si se publican."
+      ],
+      "en": [
+       "Don't pay, and keep evidence of the blackmail.",
+       "If you still have the images and were 18 or older, click \"Create Your Case\".",
+       "Create the fingerprints on your device: the images never leave your phone.",
+       "Partner platforms will block those images if they get posted."
+      ]
+     },
+     "url": "https://stopncii.org/",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "La page d'accueil met en avant « What do you do if someone is threatening to share your intimate images? » (lu le 2026-10-15). « Ne payez pas » = conseil Devuelta, cohérent avec Meta/Snap."
+    }
+   ]
+  },
+  {
+   "id": "takeitdown",
+   "nom": "Take It Down (NCMEC)",
+   "type": "outil",
+   "actions": [
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Images intimes prises quand vous aviez moins de 18 ans",
+      "es": "Imágenes íntimas tomadas cuando tenías menos de 18 años",
+      "en": "Intimate images taken when you were under 18"
+     },
+     "etapes": {
+      "fr": [
+       "Ce service est pour les photos ou vidéos nues, partiellement nues ou sexuelles prises avant vos 18 ans (même si vous êtes adulte aujourd'hui).",
+       "Cliquez sur « Get Started » : c'est gratuit et vous pouvez rester anonyme.",
+       "Choisissez les images sur votre appareil : seule une empreinte (hash) est créée, vous n'envoyez l'image à personne.",
+       "Les plateformes participantes utilisent l'empreinte pour retirer ou bloquer les copies."
+      ],
+      "es": [
+       "Este servicio es para fotos o videos desnudos, semidesnudos o sexuales tomados antes de tus 18 años (aunque hoy seas adulto).",
+       "Haz clic en «Get Started»: es gratis y puedes ser anónimo.",
+       "Elige las imágenes en tu dispositivo: solo se crea una huella (hash), no envías la imagen a nadie.",
+       "Las plataformas participantes usan la huella para retirar o bloquear las copias."
+      ],
+      "en": [
+       "This is for nude, partially nude or sexual photos or videos taken before you turned 18 (even if you're an adult now).",
+       "Click \"Get Started\": it's free and you can stay anonymous.",
+       "Choose the images on your device: only a fingerprint (hash) is created, you don't send the image to anyone.",
+       "Participating platforms use the fingerprint to remove or block copies."
+      ]
+     },
+     "url": "https://takeitdown.ncmec.org/",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page d'accueil rendue le 2026-10-15 (service du National Center for Missing & Exploited Children). Pour des images prises à 18 ans ou plus, le site renvoie vers StopNCII.org. Sélecteur de langue présent (Français, Español) ; URLs localisées non vérifiées."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Un mineur (ou ex-mineur) menacé avec ses photos intimes",
+      "es": "Un menor (o exmenor) amenazado con sus fotos íntimas",
+      "en": "A minor (or former minor) threatened with their intimate photos"
+     },
+     "etapes": {
+      "fr": [
+       "Ne cédez pas aux menaces et parlez-en à un adulte de confiance.",
+       "Cliquez sur « Get Started » sur Take It Down.",
+       "Créez l'empreinte des images depuis votre appareil, sans les envoyer.",
+       "Signalez aussi le compte qui vous menace sur la plateforme concernée."
+      ],
+      "es": [
+       "No cedas a las amenazas y habla con un adulto de confianza.",
+       "Haz clic en «Get Started» en Take It Down.",
+       "Crea la huella de las imágenes desde tu dispositivo, sin enviarlas.",
+       "Denuncia también la cuenta que te amenaza en la plataforma."
+      ],
+      "en": [
+       "Don't give in to threats, and tell an adult you trust.",
+       "Click \"Get Started\" on Take It Down.",
+       "Create the images' fingerprint on your device, without sending them.",
+       "Also report the account threatening you on the platform."
+      ]
+     },
+     "url": "https://takeitdown.ncmec.org/",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Take It Down cite l'exemple « you sent a picture to someone, but now they're threatening you » (page lue le 2026-10-15). Étapes 1 et 4 : conseils cohérents avec la page Meta Stop Sextortion."
     }
    ]
   }
