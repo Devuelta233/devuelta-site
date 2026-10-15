@@ -1,0 +1,401 @@
+{
+ "id": "instagram-faux-compte-pas-supprime",
+ "publie_le": "2026-10-15",
+ "verifie_le": "2026-10-15",
+ "situation": "usurpation",
+ "plateformes": [
+  "instagram"
+ ],
+ "slug": {
+  "fr": "instagram-faux-compte-pas-supprime-que-faire",
+  "es": "instagram-no-elimina-cuenta-suplantacion-que-hacer",
+  "en": "instagram-wont-remove-impersonation-account"
+ },
+ "titre": {
+  "fr": "Instagram ne supprime pas le faux compte : que faire ensuite",
+  "es": "Instagram no elimina la cuenta que te suplanta: qué hacer",
+  "en": "Instagram won’t remove an impersonation account: next steps"
+ },
+ "meta_description": {
+  "fr": "Instagram refuse de supprimer un compte qui se fait passer pour vous ? Demande complète, contestation, recours DSA dans l’UE, plainte : les étapes.",
+  "es": "¿Instagram no elimina la cuenta que se hace pasar por ti? Solicitud completa, reclamación, recursos de la DSA en la UE y denuncia: los pasos.",
+  "en": "Instagram won’t remove an account pretending to be you? A complete request, an appeal, EU DSA remedies and a police report: the steps to take."
+ },
+ "chapo": {
+  "fr": "Si Instagram laisse en ligne un compte qui se fait passer pour vous, refaites une demande complète (dans l’appli ou avec le formulaire officiel), puis contestez la décision. Dans l’Union européenne, le règlement sur les services numériques (DSA) vous donne des recours précis. Si le compte vous nuit, portez plainte : c’est par cette voie que les autorités peuvent demander à Instagram les données du compte.",
+  "es": "Si Instagram deja activa una cuenta que se hace pasar por ti, vuelve a enviar una solicitud completa (desde la app o con el formulario oficial) y luego reclama contra la decisión. En la Unión Europea, el Reglamento de Servicios Digitales (DSA) te da recursos concretos. Si la cuenta te perjudica, presenta una denuncia: es la vía por la que las autoridades pueden pedir a Instagram los datos de la cuenta.",
+  "en": "If Instagram leaves up an account pretending to be you, send a complete new request (in the app or through the official form), then challenge the decision. In the European Union, the Digital Services Act (DSA) gives you specific remedies. If the account is harming you, file a police report: that is how the authorities can ask Instagram for the account’s data."
+ },
+ "sections": [
+  {
+   "titre": {
+    "fr": "Signalement dans l’appli ou formulaire : la différence",
+    "es": "Reporte en la app o formulario: la diferencia",
+    "en": "In-app report or official form: the difference"
+   },
+   "paragraphes": {
+    "fr": [
+     "Instagram prévoit deux chemins. Si vous avez un compte Instagram, il vous oriente vers le signalement du faux compte depuis l’appli. Si vous n’en avez pas, il vous oriente vers son formulaire officiel d’usurpation d’identité, qui sert aussi pour Threads.",
+     "Instagram demande de fournir toutes les informations demandées, y compris une photo de votre pièce d’identité officielle.",
+     "Le formulaire a deux règles strictes. Instagram ne peut agir que sur une demande de la personne imitée ou de son représentant autorisé (par exemple un parent pour son enfant) : si un ami le remplit pour vous, cela ne suffit pas. Et chaque formulaire ne doit viser qu’un seul faux compte."
+    ],
+    "es": [
+     "Instagram ofrece dos vías. Si tienes cuenta de Instagram, te indica que reportes la cuenta falsa desde la app. Si no tienes cuenta, te indica que uses su formulario oficial de suplantación de identidad, que también sirve para Threads.",
+     "Instagram pide aportar toda la información solicitada, incluida una foto de tu documento de identidad oficial.",
+     "El formulario tiene dos reglas estrictas. Instagram solo puede actuar sobre solicitudes de la persona suplantada o de su representante autorizado (por ejemplo, un padre o una madre por su hijo): si un amigo lo completa por ti, no basta. Y cada formulario debe referirse a una sola cuenta falsa."
+    ],
+    "en": [
+     "Instagram offers two routes. If you have an Instagram account, it points you to reporting the fake account from within the app. If you don’t, it points you to its official impersonation report form, which also covers Threads.",
+     "Instagram asks you to provide all the requested information, including a photo of your government-issued ID.",
+     "The form has two strict rules. Instagram can only act on reports from the person being impersonated or their authorized representative (for example, a parent for their child): a friend filling it in for you is not enough. And each form should cover only one fake account."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Ce qu’il faut préparer pour une demande complète",
+    "es": "Qué preparar para una solicitud completa",
+    "en": "What to prepare for a complete request"
+   },
+   "paragraphes": {
+    "fr": [
+     "Le formulaire demande votre nom complet, votre e-mail, votre lien avec la personne imitée, son nom complet et, s’il existe, son nom d’utilisateur Instagram ou Threads. Il demande aussi le nom affiché sur le faux compte et son nom d’utilisateur.",
+     "Pour la pièce d’identité, Instagram demande une photo de vous tenant votre pièce (ou de la personne que vous représentez tenant la sienne), en JPEG si possible. La liste des pièces acceptées est sur la page d’aide d’Instagram (voir les sources).",
+     "Selon Instagram, cette pièce sert seulement à confirmer votre identité et à protéger la communauté, n’est visible par personne sur Instagram, peut être examinée par des prestataires de confiance et est supprimée sous 30 jours."
+    ],
+    "es": [
+     "El formulario pide tu nombre completo, tu correo, tu relación con la persona suplantada, su nombre completo y, si lo tiene, su nombre de usuario de Instagram o Threads. También pide el nombre que aparece en la cuenta falsa y su nombre de usuario.",
+     "Para el documento, Instagram pide una foto tuya sosteniendo tu documento de identidad (o de la persona a la que representas sosteniendo el suyo), en JPEG si es posible. La lista de documentos aceptados está en la página de ayuda de Instagram (ver las fuentes).",
+     "Según Instagram, el documento solo se usa para confirmar tu identidad y proteger a la comunidad, nadie en Instagram puede verlo, puede ser revisado por proveedores de confianza y se elimina en un plazo de 30 días."
+    ],
+    "en": [
+     "The form asks for your full name, your email, your relationship to the person being impersonated, their full name and, if they have one, their Instagram or Threads username. It also asks for the name shown on the fake account and its username.",
+     "For the ID, Instagram asks for a photo of you holding your ID (or of the person you represent holding theirs), as a JPEG if possible. The list of accepted IDs is on Instagram’s help page (see sources).",
+     "According to Instagram, the ID is only used to confirm your identity and keep the community safe, is not visible to anyone on Instagram, may be reviewed by trusted service providers and is deleted within 30 days."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Faites des captures d’écran datées du faux profil, avec le nom d’utilisateur visible.",
+     "Recopiez exactement le nom d’utilisateur du faux compte.",
+     "Prenez une photo nette de vous tenant votre pièce d’identité.",
+     "Remplissez le formulaire, un seul faux compte à la fois.",
+     "Si l’envoi de la photo échoue depuis votre téléphone, recommencez depuis un ordinateur.",
+     "Après l’envoi, vous pouvez effacer la photo de la pièce de votre galerie.",
+     "Notez la date d’envoi et gardez une capture de la confirmation."
+    ],
+    "es": [
+     "Haz capturas de pantalla con fecha del perfil falso, con el nombre de usuario visible.",
+     "Copia exactamente el nombre de usuario de la cuenta falsa.",
+     "Toma una foto nítida de ti sosteniendo tu documento de identidad.",
+     "Completa el formulario, una sola cuenta falsa cada vez.",
+     "Si la foto no se sube desde el teléfono, inténtalo desde una computadora.",
+     "Después del envío, puedes borrar la foto del documento de tu galería.",
+     "Anota la fecha de envío y guarda una captura de la confirmación."
+    ],
+    "en": [
+     "Take dated screenshots of the fake profile, with the username visible.",
+     "Copy the fake account’s username exactly.",
+     "Take a clear photo of yourself holding your ID.",
+     "Fill in the form, one fake account at a time.",
+     "If the photo won’t upload from your phone, try again from a computer.",
+     "After sending, you can delete the ID photo from your phone’s gallery.",
+     "Write down the date you sent it and keep a screenshot of the confirmation."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Pourquoi la demande peut échouer, et quel délai",
+    "es": "Por qué puede fallar la solicitud y cuánto esperar",
+    "en": "Why a request can fail, and how long to wait"
+   },
+   "paragraphes": {
+    "fr": [
+     "Une demande peut échouer pour des raisons simples. Elle ne vient pas de vous ni de votre représentant autorisé. La photo de la pièce manque, ou ne montre pas clairement votre nom et une photo récente. Plusieurs comptes sont signalés dans le même formulaire. Ou le nom d’utilisateur du faux compte est mal recopié.",
+     "Ni l’article d’aide d’Instagram ni le formulaire n’indiquent de délai de réponse. Dans l’UE, le DSA ne fixe pas non plus de délai chiffré pour traiter les signalements de contenus illicites. La plateforme doit les traiter en temps opportun, de manière diligente, non arbitraire et objective. Puis elle doit vous informer de sa décision sans retard injustifié, avec les voies de recours."
+    ],
+    "es": [
+     "Una solicitud puede fallar por motivos sencillos. No la envías tú ni tu representante autorizado. Falta la foto del documento, o no muestra con claridad tu nombre y una foto reciente. Reportas varias cuentas en el mismo formulario. O el nombre de usuario de la cuenta falsa está mal copiado.",
+     "Ni el artículo de ayuda de Instagram ni el formulario indican un plazo de respuesta. En la UE, la DSA tampoco fija un plazo concreto para tratar los avisos de contenido ilícito. La plataforma debe tratarlos en tiempo oportuno y de manera diligente, no arbitraria y objetiva. Luego debe comunicarte su decisión sin dilación indebida, con las vías de recurso."
+    ],
+    "en": [
+     "A request can fail for simple reasons. It doesn’t come from you or your authorized representative. The ID photo is missing, or doesn’t clearly show your name and a recent photo. Several accounts are reported in one form. Or the fake account’s username is copied wrong.",
+     "Neither Instagram’s help article nor the form gives a response time. In the EU, the DSA doesn’t set a fixed deadline for handling illegal-content notices either. The platform must handle them in a timely, diligent, non-arbitrary and objective way. It must then tell you its decision without undue delay, along with your options to challenge it."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Contester la décision dans l’Union européenne",
+    "es": "Reclamar contra la decisión en la Unión Europea",
+    "en": "Challenging the decision in the European Union"
+   },
+   "paragraphes": {
+    "fr": [
+     "Dans l’UE, le règlement sur les services numériques (DSA) vous donne trois recours. Commencez par le premier : il est gratuit et se fait en ligne.",
+     "1. La réclamation interne (article 20) : vous contestez la décision auprès d’Instagram lui-même. Si vous avez signalé le compte, vous avez au moins six mois après la décision pour le faire. Pas besoin de citer des textes de loi. Instagram doit répondre sans retard injustifié, par une décision motivée. Cette décision doit être prise sous le contrôle de personnel qualifié, pas uniquement par un système automatique.",
+     "2. Un organisme de règlement extrajudiciaire certifié (article 21) : un organisme indépendant, agréé par les autorités, qui réexamine le litige sans passer par un tribunal. C’est gratuit ou presque pour vous. Il doit décider en 90 jours au plus (180 jours si le dossier est très complexe). Sa décision ne s’impose pas à la plateforme.",
+     "Attention : l’Appeals Centre Europe traite Instagram, mais il indique ne pas examiner les décisions sur les comptes qui usurpent l’identité d’une personne. D’autres organismes certifiés citent Instagram dans la liste officielle de la Commission européenne. Avant de déposer, vérifiez qu’ils acceptent ce type de litige et votre langue.",
+     "3. Une plainte auprès du coordinateur pour les services numériques (article 53) : c’est l’autorité qui fait respecter le DSA dans votre pays, l’Arcom en France, la CNMC en Espagne. Votre plainte doit dénoncer un manquement d’Instagram au DSA, par exemple un signalement resté sans réponse ou aucun moyen de contester. Le coordinateur peut la transmettre à l’autorité du pays où la plateforme est établie.",
+     "Vous pouvez aussi signaler le compte comme contenu illicite au titre du DSA (article 16), en expliquant quelle loi il enfreint : voyez notre guide sur ce signalement. Enfin, le DSA ne vous empêche pas de saisir la justice à tout moment."
+    ],
+    "es": [
+     "En la UE, el Reglamento de Servicios Digitales (DSA) te da tres recursos. Empieza por el primero: es gratuito y se hace en línea.",
+     "1. La reclamación interna (artículo 20): impugnas la decisión ante el propio Instagram. Si reportaste la cuenta, tienes al menos seis meses desde la decisión para hacerlo. No hace falta citar leyes. Instagram debe responder sin dilación indebida con una decisión motivada. Esa decisión debe tomarse bajo la supervisión de personal cualificado, no solo por un sistema automático.",
+     "2. Un órgano certificado de resolución extrajudicial de litigios (artículo 21): un organismo independiente, acreditado por las autoridades, que revisa el conflicto sin pasar por un tribunal. Es gratuito o casi gratuito para ti. Debe decidir en 90 días como máximo (180 días si el caso es muy complejo). Su decisión no obliga a la plataforma.",
+     "Atención: el Appeals Centre Europe cubre Instagram, pero indica que no revisa decisiones sobre cuentas que suplantan la identidad de una persona. Otros órganos certificados mencionan Instagram en la lista oficial de la Comisión Europea. Antes de presentar tu caso, comprueba que aceptan este tipo de litigio y tu idioma.",
+     "3. Una reclamación ante el coordinador de servicios digitales (artículo 53): es la autoridad que hace cumplir la DSA en tu país, la Arcom en Francia, la CNMC en España. Tu reclamación debe señalar un incumplimiento de la DSA por parte de Instagram, por ejemplo un reporte sin respuesta o ninguna forma de reclamar. El coordinador puede trasladarla a la autoridad del país donde está establecida la plataforma.",
+     "También puedes avisar de la cuenta como contenido ilícito según la DSA (artículo 16), explicando qué ley infringe: consulta nuestra guía sobre ese aviso. Por último, la DSA no te impide acudir a la justicia en cualquier momento."
+    ],
+    "en": [
+     "In the EU, the Digital Services Act (DSA) gives you three remedies. Start with the first one: it’s free and done online.",
+     "1. The internal complaint (Article 20): you challenge the decision with Instagram itself. If you reported the account, you have at least six months after the decision to do so. You don’t need to cite any laws. Instagram must answer without undue delay with a reasoned decision. That decision must be taken under the supervision of qualified staff, not solely by an automated system.",
+     "2. A certified out-of-court dispute settlement body (Article 21): an independent body, approved by the authorities, that reviews the dispute without going to court. It’s free or almost free for you. It must decide within 90 days at most (180 days if the case is very complex). Its decision isn’t binding on the platform.",
+     "Note: Appeals Centre Europe covers Instagram, but says it does not review decisions about accounts impersonating a person. Other certified bodies list Instagram on the European Commission’s official list. Before filing, check that they accept this type of dispute and your language.",
+     "3. A complaint to the Digital Services Coordinator (Article 53): the authority that enforces the DSA in your country, Arcom in France, the CNMC in Spain. Your complaint must point to a breach of the DSA by Instagram, for example a report left unanswered or no way to challenge the decision. The coordinator can pass it on to the authority of the country where the platform is established.",
+     "You can also report the account as illegal content under the DSA (Article 16), explaining which law it breaks: see our guide to that notice. Finally, the DSA doesn’t stop you from going to court at any time."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Gardez la réponse d’Instagram à votre signalement.",
+     "Contestez-la par la réclamation interne, en expliquant en quelques phrases pourquoi ce compte se fait passer pour vous.",
+     "Si le refus est maintenu, choisissez un organisme certifié qui accepte les cas d’usurpation d’identité.",
+     "Si Instagram ne répond pas ou ne vous laisse pas contester, déposez plainte auprès du coordinateur de votre pays (l’Arcom en France, la CNMC en Espagne)."
+    ],
+    "es": [
+     "Guarda la respuesta de Instagram a tu reporte.",
+     "Impúgnala con la reclamación interna y explica en pocas frases por qué esa cuenta se hace pasar por ti.",
+     "Si mantienen el rechazo, elige un órgano certificado que acepte casos de suplantación de identidad.",
+     "Si Instagram no responde o no te deja reclamar, presenta una reclamación ante el coordinador de tu país (la Arcom en Francia, la CNMC en España)."
+    ],
+    "en": [
+     "Keep Instagram’s reply to your report.",
+     "Challenge it through the internal complaint, explaining in a few sentences why the account is pretending to be you.",
+     "If the refusal stands, choose a certified body that accepts impersonation cases.",
+     "If Instagram doesn’t reply or won’t let you challenge the decision, complain to your country’s coordinator (Arcom in France, the CNMC in Spain)."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Hors de l’UE, et quand le faux compte revient",
+    "es": "Fuera de la UE, y si la cuenta falsa vuelve",
+    "en": "Outside the EU, and when the fake account returns"
+   },
+   "paragraphes": {
+    "fr": [
+     "Le DSA ne protège que les utilisateurs situés dans l’UE. Ailleurs (Suisse, États-Unis, Amérique latine…), ses recours n’existent pas. Le formulaire d’Instagram reste alors votre outil principal, et la plainte dépend de la loi de votre pays. Aux États-Unis, si le faux compte publie des images intimes de vous, voyez notre guide sur le Take It Down Act.",
+     "Si un nouveau faux compte apparaît après une suppression, signalez-le à son tour : un formulaire par compte. Dans l’UE, les plateformes doivent suspendre pour une durée raisonnable, après un avertissement, les utilisateurs qui publient fréquemment des contenus manifestement illicites (article 23 du DSA).",
+     "Signalez chaque compte une seule fois, avec un dossier complet : le même article prévoit aussi de suspendre le traitement des signalements de ceux qui en envoient souvent de manifestement infondés. Gardez une trace de chaque nouveau compte : elle vous servira si vous portez plainte."
+    ],
+    "es": [
+     "La DSA solo protege a los usuarios que están en la UE. En otros lugares (Suiza, Estados Unidos, América Latina…), sus recursos no existen. El formulario de Instagram sigue siendo entonces tu herramienta principal, y la denuncia depende de la ley de tu país. En Estados Unidos, si la cuenta falsa publica imágenes íntimas tuyas, consulta nuestra guía sobre la ley Take It Down.",
+     "Si aparece una nueva cuenta falsa después de una eliminación, repórtala también: un formulario por cuenta. En la UE, las plataformas deben suspender durante un periodo razonable, tras una advertencia previa, a los usuarios que publican con frecuencia contenido manifiestamente ilícito (artículo 23 de la DSA).",
+     "Reporta cada cuenta una sola vez, con un expediente completo: el mismo artículo prevé también suspender el tratamiento de los avisos de quienes envían con frecuencia avisos manifiestamente infundados. Guarda un registro de cada nueva cuenta: te servirá si presentas una denuncia."
+    ],
+    "en": [
+     "The DSA only protects users located in the EU. Elsewhere (Switzerland, the United States, Latin America…), its remedies don’t exist. Instagram’s form then remains your main tool, and a police report depends on your country’s law. In the United States, if the fake account posts intimate images of you, see our guide to the Take It Down Act.",
+     "If a new fake account appears after one is removed, report it too: one form per account. In the EU, platforms must suspend for a reasonable period, after a prior warning, users who frequently post manifestly illegal content (DSA Article 23).",
+     "Report each account once, with a complete file: the same article also has platforms stop processing reports from people who frequently send manifestly unfounded ones. Keep a record of every new account: it will help if you file a police report."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Tenez un tableau : date, nom d’utilisateur, captures, réponse d’Instagram.",
+     "Signalez chaque nouveau compte avec un formulaire complet.",
+     "Prévenez vos proches qu’un faux compte peut les contacter.",
+     "Joignez ce suivi à votre plainte."
+    ],
+    "es": [
+     "Lleva una tabla: fecha, nombre de usuario, capturas y respuesta de Instagram.",
+     "Reporta cada nueva cuenta con un formulario completo.",
+     "Avisa a tus contactos de que una cuenta falsa puede escribirles.",
+     "Adjunta este registro a tu denuncia."
+    ],
+    "en": [
+     "Keep a log: date, username, screenshots, Instagram’s reply.",
+     "Report each new account with a complete form.",
+     "Warn your contacts that a fake account may message them.",
+     "Attach this log to your police report."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Quand et comment porter plainte",
+    "es": "Cuándo y cómo presentar una denuncia",
+    "en": "When and how to file a police report"
+   },
+   "paragraphes": {
+    "fr": [
+     "N’attendez pas la fin des démarches auprès d’Instagram si le faux compte vous menace, trompe vos proches ou abîme votre réputation. Vous pouvez porter plainte en parallèle.",
+     "En France, l’usurpation d’identité est un délit, y compris en ligne (article 226-4-1 du Code pénal). Il s’agit d’usurper l’identité d’un tiers, ou d’utiliser des données qui permettent de l’identifier, pour troubler sa tranquillité ou porter atteinte à son honneur ou à sa considération. La peine est d’un an de prison et 15 000 € d’amende, et de deux ans et 30 000 € si l’auteur est le conjoint, le concubin ou le partenaire de PACS de la victime.",
+     "Vous pouvez porter plainte auprès de la police ou de la gendarmerie, ou l’adresser au procureur de la République.",
+     "En Espagne, l’article 172 ter.5 du Code pénal vise expressément les faux profils. Il punit le fait d’utiliser l’image d’une personne sans son consentement pour ouvrir de faux profils sur les réseaux sociaux, en lui causant une situation de harcèlement ou d’humiliation. La peine va de trois mois à un an de prison, ou une amende, et elle est plus lourde si la victime est mineure ou handicapée.",
+     "Selon les faits, d’autres délits peuvent s’appliquer : l’usurpation d’état civil (article 401), la calomnie ou l’injure (articles 205 et 208). Ces deux délits ne sont poursuivis que sur plainte formelle de la victime, la « querella » (article 215). La plainte simple, la « denuncia », se dépose auprès de la police, du parquet (Ministerio Fiscal) ou d’un juge, par écrit ou oralement.",
+     "Pour tenter d’identifier l’auteur, il faut passer par la plainte : Instagram a une procédure dédiée aux forces de l’ordre pour demander les données d’un compte. En France, voyez aussi nos guides sur le faux profil et, si le faux compte publie des accusations contre vous, sur la diffamation.",
+     "Si la victime est mineure, un parent peut faire la demande pour son enfant avec le formulaire. Des aides gratuites existent : le 3018 en France, qui traite aussi l’usurpation d’identité, le 017 en Espagne, et Take It Down si des images intimes prises avant 18 ans circulent."
+    ],
+    "es": [
+     "No esperes a terminar los trámites con Instagram si la cuenta falsa te amenaza, engaña a tus contactos o daña tu reputación. Puedes denunciar al mismo tiempo.",
+     "En España, el artículo 172 ter.5 del Código Penal se refiere expresamente a los perfiles falsos. Castiga a quien usa la imagen de una persona sin su consentimiento para abrir perfiles falsos en redes sociales y le causa una situación de acoso, hostigamiento o humillación. La pena es de prisión de tres meses a un año, o multa, y es mayor si la víctima es menor o tiene discapacidad.",
+     "Según los hechos, pueden aplicarse otros delitos: la usurpación del estado civil (artículo 401), las calumnias o las injurias (artículos 205 y 208). Estos dos delitos solo se persiguen por querella de la persona ofendida (artículo 215). La denuncia se presenta ante la policía, el Ministerio Fiscal o un juez, por escrito o de palabra.",
+     "En Francia, la usurpación de identidad es un delito, también en internet (artículo 226-4-1 del Código Penal francés). Consiste en usurpar la identidad de otra persona, o usar datos que permitan identificarla, para perturbar su tranquilidad o dañar su honor o su consideración. La pena es de un año de prisión y 15 000 € de multa, y de dos años y 30 000 € si el autor es el cónyuge, la pareja de hecho o la pareja de PACS (unión civil francesa) de la víctima.",
+     "En Francia, puedes presentar la denuncia ante la policía o la gendarmería, o dirigirla a la fiscalía (procureur de la République).",
+     "Para intentar identificar al autor hay que pasar por la denuncia: Instagram tiene un procedimiento dedicado a las fuerzas del orden para pedir los datos de una cuenta. En Francia, consulta también nuestras guías sobre el perfil falso y, si la cuenta falsa publica acusaciones contra ti, sobre la difamación.",
+     "Si la víctima es menor, su padre o su madre puede hacer la solicitud por su hijo o hija con el formulario. Hay ayuda gratuita: el 017 de INCIBE en España, el 3018 en Francia, que también atiende la suplantación de identidad, y Take It Down si circulan imágenes íntimas tomadas antes de los 18 años."
+    ],
+    "en": [
+     "Don’t wait until you’ve finished with Instagram if the fake account threatens you, deceives your contacts or damages your reputation. You can file a police report at the same time.",
+     "In France, impersonation is a criminal offence, including online (Article 226-4-1 of the Criminal Code). It means taking someone’s identity, or using data that identifies them, to disturb their peace or harm their honour or reputation. The penalty is one year in prison and a €15,000 fine, or two years and €30,000 if the offender is the victim’s spouse, cohabiting partner or PACS civil partner.",
+     "You can file your complaint with the police or the gendarmerie, or send it to the public prosecutor (procureur de la République).",
+     "In Spain, Article 172 ter.5 of the Criminal Code specifically targets fake profiles. It punishes using a person’s image without their consent to open fake profiles on social networks, causing them harassment or humiliation. The penalty is three months to one year in prison, or a fine, and it is higher if the victim is a minor or has a disability.",
+     "Depending on the facts, other offences may apply: usurping someone’s civil status (Article 401), slander or insult (calumnia and injuria, Articles 205 and 208). The last two are only prosecuted on a formal complaint by the victim, called a querella (Article 215). An ordinary report (denuncia) can be filed with the police, the public prosecutor (Ministerio Fiscal) or a judge, in writing or orally.",
+     "To try to identify who is behind the account, you need to go through a police report: Instagram has a dedicated procedure for law enforcement to request account data. In France, also see our guides on fake profiles and, if the fake account posts accusations against you, on defamation.",
+     "If the victim is a minor, a parent can file the request for their child through the form. Free help exists: 3018 in France, which also handles impersonation, 017 in Spain, and Take It Down if intimate images taken before age 18 are being shared."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Rassemblez les captures datées du faux profil et des messages qu’il a envoyés.",
+     "Notez le nom d’utilisateur et le lien du faux compte.",
+     "Joignez vos demandes à Instagram et ses réponses.",
+     "Listez les proches contactés par le faux compte qui acceptent de témoigner."
+    ],
+    "es": [
+     "Reúne las capturas con fecha del perfil falso y de los mensajes que envió.",
+     "Anota el nombre de usuario y el enlace de la cuenta falsa.",
+     "Adjunta tus solicitudes a Instagram y sus respuestas.",
+     "Haz una lista de los contactos a los que escribió la cuenta falsa y que aceptan declarar."
+    ],
+    "en": [
+     "Gather dated screenshots of the fake profile and of the messages it sent.",
+     "Write down the fake account’s username and link.",
+     "Attach your requests to Instagram and its replies.",
+     "List the contacts the fake account messaged who agree to give a statement."
+    ]
+   }
+  }
+ ],
+ "si_rien_ne_marche": {
+  "fr": "Si vous avez tout essayé, Devuelta peut prendre le relais : nous préparons et suivons les démarches avec vous.",
+  "es": "Si ya lo intentaste todo, Devuelta puede tomar el relevo: preparamos los trámites y les damos seguimiento contigo.",
+  "en": "If you’ve tried everything, Devuelta can take over: we prepare and follow up on the steps with you."
+ },
+ "sources": [
+  {
+   "url": "https://help.instagram.com/370054663112398",
+   "titre": "What can I do if someone is impersonating me on Instagram? – Instagram Help Center"
+  },
+  {
+   "url": "https://help.instagram.com/contact/636276399721841",
+   "titre": "Report an Impersonation Account on Instagram or Threads – Instagram (formulaire officiel)"
+  },
+  {
+   "url": "https://help.instagram.com/271237319690904/",
+   "titre": "Types of ID Instagram accepts – Instagram Help Center"
+  },
+  {
+   "url": "https://help.instagram.com/919930615429037",
+   "titre": "What happens to your ID after you send it to Meta – Instagram Help Center"
+  },
+  {
+   "url": "https://help.instagram.com/494561080557017",
+   "titre": "Information for Law Enforcement – Instagram Help Center"
+  },
+  {
+   "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+   "titre": "Règlement (UE) 2022/2065 sur les services numériques (DSA) – EUR-Lex"
+  },
+  {
+   "url": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81573",
+   "titre": "Reglamento (UE) 2022/2065 de Servicios Digitales – texto del DOUE publicado por el BOE (art. 2, 16, 20, 21, 23, 53; considerandos 58 y 59)"
+  },
+  {
+   "url": "https://www.appealscentre.eu/faqs",
+   "titre": "Appeals Centre Europe – FAQs"
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement",
+   "titre": "Commission européenne – Out-of-court dispute settlement bodies under the DSA (liste des organismes certifiés)"
+  },
+  {
+   "url": "https://digital-strategy.ec.europa.eu/en/policies/dsa-dscs",
+   "titre": "Commission européenne – Digital Services Coordinators (Arcom, CNMC)"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042193593",
+   "titre": "Code pénal, article 226-4-1 – Légifrance"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038311441",
+   "titre": "Code de procédure pénale, article 15-3 – Légifrance"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006574933",
+   "titre": "Code de procédure pénale, article 40 – Légifrance"
+  },
+  {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444#a172ter",
+   "titre": "Código Penal, artículo 172 ter – BOE (texto consolidado)"
+  },
+  {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444#a401",
+   "titre": "Código Penal, artículo 401 – BOE (texto consolidado)"
+  },
+  {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444#a205",
+   "titre": "Código Penal, artículos 205 y 206 (calumnia) – BOE"
+  },
+  {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444#a208",
+   "titre": "Código Penal, artículos 208 y 209 (injuria) – BOE"
+  },
+  {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1995-25444#a215",
+   "titre": "Código Penal, artículo 215 (querella) – BOE"
+  },
+  {
+   "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1882-6036#a264",
+   "titre": "Ley de Enjuiciamiento Criminal, artículos 264 y 265 (denuncia) – BOE"
+  },
+  {
+   "url": "https://e-enfance.org/besoin-daide/",
+   "titre": "3018 – Association e-Enfance"
+  },
+  {
+   "url": "https://www.incibe.es/linea-de-ayuda-en-ciberseguridad/",
+   "titre": "017 – Tu Ayuda en Ciberseguridad – INCIBE"
+  },
+  {
+   "url": "https://takeitdown.ncmec.org/",
+   "titre": "Take It Down – NCMEC"
+  }
+ ],
+ "liens_internes": [
+  {
+   "type": "situation",
+   "id": "usurpation"
+  },
+  {
+   "type": "guide",
+   "id": "ue-dsa-notification-art16"
+  },
+  {
+   "type": "guide",
+   "id": "fr-usurpation-faux-profil"
+  },
+  {
+   "type": "guide",
+   "id": "fr-diffamation-loi-1881"
+  },
+  {
+   "type": "guide",
+   "id": "us-takeitdown-act"
+  }
+ ]
+}
