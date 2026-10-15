@@ -511,26 +511,26 @@
       "fr": [
        "Ouvrez le formulaire et choisissez « Quelqu'un a créé un compte en se faisant passer pour moi ».",
        "Indiquez votre nom, votre e-mail et le nom d'utilisateur du faux compte.",
-       "Ajoutez une photo de votre pièce d'identité.",
+       "Ajoutez une photo de vous tenant votre pièce d'identité (en JPEG si possible).",
        "Envoyez (un seul faux compte par formulaire)."
       ],
       "es": [
        "Abre el formulario y elige que alguien creó una cuenta haciéndose pasar por ti.",
        "Escribe tu nombre, tu correo y el nombre de usuario de la cuenta falsa.",
-       "Sube una foto de tu documento de identidad.",
+       "Sube una foto tuya sosteniendo tu documento de identidad (en JPEG si es posible).",
        "Envía (una sola cuenta falsa por formulario)."
       ],
       "en": [
        "Open the form and choose \"Someone created an account pretending to be me\".",
        "Enter your name, your email and the fake account's username.",
-       "Upload a photo of your ID.",
+       "Upload a photo of yourself holding your ID (JPEG if possible).",
        "Submit (one fake account per form)."
       ]
      },
      "url": "https://help.instagram.com/contact/636276399721841",
      "connexion_requise": false,
      "verifie": true,
-     "note": "Formulaire « Report an Impersonation Account on Instagram or Threads » lu le 2026-10-15. Pièce d'identité obligatoire. Auto-localisé (titre traduit, certains textes restent en anglais)."
+     "note": "Formulaire « Report an Impersonation Account on Instagram or Threads » lu le 2026-10-15 (relu le même jour : photo de soi tenant sa pièce, JPEG si possible, pièce supprimée sous 30 jours, un compte par formulaire). Auto-localisé (titre traduit, certains textes restent en anglais)."
     },
     {
      "situation": "contenu-intime",
