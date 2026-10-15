@@ -44,7 +44,8 @@ jobs:
 
       - name: Jeton Cloudflare présent ?
         if: env.CLOUDFLARE_API_TOKEN == ''
-        run: echo "::warning::Secret CLOUDFLARE_API_TOKEN absent : le site est construit mais pas mis en ligne."
+        run: |
+          echo "::warning::Secret CLOUDFLARE_API_TOKEN absent, site construit mais pas mis en ligne."
 
       - name: Mise en ligne sur Cloudflare
         if: env.CLOUDFLARE_API_TOKEN != ''
