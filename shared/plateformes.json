@@ -2851,6 +2851,490 @@
      "note": "Formulaire rendu le 2026-10-15 (anglais), lié depuis la politique https://www.linkedin.com/legal/copyright-policy. Seuls le titulaire ou son agent autorisé peuvent l'utiliser. Les champs après la relation au titulaire apparaissent dynamiquement (non tous relevés)."
     }
    ]
+  },
+  {
+   "id": "reddit",
+   "nom": "Reddit",
+   "type": "reseau-social",
+   "actions": [
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Images intimes partagées (ou menacées de l'être) sans votre accord",
+      "es": "Imágenes íntimas compartidas (o amenazas de hacerlo) sin tu consentimiento",
+      "en": "Intimate images shared (or threatened) without your consent"
+     },
+     "etapes": {
+      "fr": [
+       "Signalez le post ou le commentaire précis : menu « … » puis « Report » (Signaler).",
+       "Bloquez le ou les comptes signalés.",
+       "Si vous avez 18 ans ou plus, créez un dossier sur StopNCII.org : Reddit l'utilise pour détecter et retirer les images.",
+       "Faites-vous accompagner par une ligne d'aide aux victimes."
+      ],
+      "es": [
+       "Denuncia la publicación o el comentario concreto: menú «…» y luego «Report» (Denunciar).",
+       "Bloquea la cuenta o cuentas denunciadas.",
+       "Si tienes 18 años o más, abre un caso en StopNCII.org: Reddit lo usa para detectar y retirar las imágenes.",
+       "Busca el apoyo de una línea de ayuda a víctimas."
+      ],
+      "en": [
+       "Report the specific post or comment: \"…\" menu, then \"Report\".",
+       "Block the account(s) you reported.",
+       "If you're 18 or over, create a case on StopNCII.org: Reddit uses it to detect and remove the images.",
+       "Get support from a victim helpline."
+      ]
+     },
+     "url": "https://support.reddithelp.com/hc/en-us/articles/360043513951",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article rendu en navigateur le 2026-10-15 (mis à jour début oct. 2026). Le centre d'aide est derrière Cloudflare (403 pour curl). Le signalement web reddit.com/report exige un compte. Aux États-Unis, Reddit a aussi une page TAKE IT DOWN Act (https://support.reddithelp.com/hc/en-us/articles/49223517214996, bloquée par Cloudflare lors de notre test)."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Signaler un deepfake ou une image « sosie » à caractère sexuel",
+      "es": "Denunciar un deepfake o una imagen sexual de un «doble»",
+      "en": "Report a sexual deepfake or lookalike image"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le post ou le commentaire et touchez le menu « … ».",
+       "Choisissez « Report » et le motif sur les médias intimes non consentis.",
+       "Bloquez le compte.",
+       "Si vous êtes majeur, ajoutez l'image (ou l'original) à StopNCII.org pour bloquer les republications."
+      ],
+      "es": [
+       "Abre la publicación o el comentario y toca el menú «…».",
+       "Elige «Report» y el motivo de contenido íntimo no consentido.",
+       "Bloquea la cuenta.",
+       "Si eres mayor de edad, añade la imagen (o la original) a StopNCII.org para bloquear nuevas publicaciones."
+      ],
+      "en": [
+       "Open the post or comment and tap the \"…\" menu.",
+       "Choose \"Report\" and the non-consensual intimate media reason.",
+       "Block the account.",
+       "If you're an adult, add the image (or the original) to StopNCII.org to block re-uploads."
+      ]
+     },
+     "url": "https://support.reddithelp.com/hc/en-us/articles/360043513951",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "La règle Reddit vise explicitement « deepfakes or lookalike pornography » (article lu le 2026-10-15). Le libellé exact du motif dans le menu n'a pas été vérifié."
+    },
+    {
+     "situation": "chantage",
+     "titre": {
+      "fr": "Quelqu'un menace de publier vos images intimes",
+      "es": "Alguien amenaza con publicar tus imágenes íntimas",
+      "en": "Someone threatens to post your intimate images"
+     },
+     "etapes": {
+      "fr": [
+       "Ne payez pas et gardez des captures des messages.",
+       "Signalez le message ou le post contenant la menace (menu « … » > « Report »).",
+       "Bloquez le compte.",
+       "Si vous êtes majeur, créez un dossier StopNCII.org pour empêcher la diffusion."
+      ],
+      "es": [
+       "No pagues y guarda capturas de los mensajes.",
+       "Denuncia el mensaje o la publicación con la amenaza (menú «…» > «Report»).",
+       "Bloquea la cuenta.",
+       "Si eres mayor de edad, abre un caso en StopNCII.org para impedir la difusión."
+      ],
+      "en": [
+       "Don't pay, and keep screenshots of the messages.",
+       "Report the message or post containing the threat (\"…\" menu > \"Report\").",
+       "Block the account.",
+       "If you're an adult, create a StopNCII.org case to stop the spread."
+      ]
+     },
+     "url": "https://support.reddithelp.com/hc/en-us/articles/360043513951",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Même article : « menacer de partager » est interdit. « Ne payez pas / captures » = conseil Devuelta."
+    },
+    {
+     "situation": "usurpation",
+     "titre": {
+      "fr": "Signaler un compte ou une communauté qui usurpe votre identité",
+      "es": "Denunciar una cuenta o comunidad que suplanta tu identidad",
+      "en": "Report an account or community impersonating you"
+     },
+     "etapes": {
+      "fr": [
+       "Repérez les contenus du faux compte (posts, commentaires, profil).",
+       "Utilisez le bouton « Report » à côté du contenu, dans l'appli ou sur reddit.com.",
+       "Choisissez le motif « Impersonation » (usurpation) et envoyez.",
+       "Bloquez le compte si nécessaire."
+      ],
+      "es": [
+       "Localiza el contenido de la cuenta falsa (publicaciones, comentarios, perfil).",
+       "Usa el botón «Report» junto al contenido, en la app o en reddit.com.",
+       "Elige el motivo «Impersonation» (suplantación) y envía.",
+       "Bloquea la cuenta si hace falta."
+      ],
+      "en": [
+       "Find the fake account's content (posts, comments, profile).",
+       "Use the \"Report\" button next to the content, in the app or on reddit.com.",
+       "Choose the \"Impersonation\" reason and submit.",
+       "Block the account if needed."
+      ]
+     },
+     "url": "https://support.reddithelp.com/hc/en-us/articles/360043075032",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Règle « Impersonation » rendue le 2026-10-15 : signalement via le bouton Report. Le nom exact du motif dans le menu n'a pas été vérifié."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Vos informations personnelles publiées sur Reddit",
+      "es": "Tu información personal publicada en Reddit",
+      "en": "Your personal information posted on Reddit"
+     },
+     "etapes": {
+      "fr": [
+       "Copiez le lien du post ou du commentaire qui contient vos informations.",
+       "Ouvrez la page de signalement reddit.com/report (connexion requise).",
+       "Choisissez le motif lié aux informations personnelles et collez le lien.",
+       "Envoyez : publier les informations personnelles d'autrui entraîne un bannissement."
+      ],
+      "es": [
+       "Copia el enlace de la publicación o comentario con tu información.",
+       "Abre la página de denuncia reddit.com/report (hay que iniciar sesión).",
+       "Elige el motivo de información personal y pega el enlace.",
+       "Envía: publicar información personal de otros lleva a la expulsión."
+      ],
+      "en": [
+       "Copy the link to the post or comment with your information.",
+       "Open the reddit.com/report page (login required).",
+       "Choose the personal information reason and paste the link.",
+       "Submit: posting other people's personal information gets accounts banned."
+      ]
+     },
+     "url": "https://support.reddithelp.com/hc/en-us/articles/360043066452",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Is posting someone's private or personal information okay? » rendu le 2026-10-15 : renvoie vers https://www.reddit.com/report (redirige vers l'inscription si non connecté). Dans l'UE : formulaire de contenu illégal décrit dans l'article DSA https://support.reddithelp.com/hc/en-us/articles/23595536875796 (lien exact du formulaire non relevé)."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Vous êtes harcelé ou attaqué sur Reddit",
+      "es": "Te acosan o atacan en Reddit",
+      "en": "You're being harassed or attacked on Reddit"
+     },
+     "etapes": {
+      "fr": [
+       "Signalez chaque post, commentaire ou message de chat précis (menu « … » > « Report »).",
+       "Bloquez le ou les comptes concernés.",
+       "Dans l'Union européenne, pour un contenu illégal (ex. diffamation) : formulaire DSA de Reddit.",
+       "Si c'est trop lourd à vivre, faites-vous aider par une ligne d'écoute."
+      ],
+      "es": [
+       "Denuncia cada publicación, comentario o mensaje de chat concreto (menú «…» > «Report»).",
+       "Bloquea la cuenta o cuentas en cuestión.",
+       "En la Unión Europea, para contenido ilegal (p. ej. difamación): formulario DSA de Reddit.",
+       "Si te afecta mucho, busca apoyo en una línea de ayuda."
+      ],
+      "en": [
+       "Report each specific post, comment or chat message (\"…\" menu > \"Report\").",
+       "Block the account(s) involved.",
+       "In the European Union, for illegal content (e.g. defamation): Reddit's DSA form.",
+       "If it's weighing on you, reach out to a support line."
+      ]
+     },
+     "url": "https://support.reddithelp.com/hc/en-us/articles/360058754391",
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « What should I do if I'm being harassed? » rendu le 2026-10-15. Formulaire UE décrit dans https://support.reddithelp.com/hc/en-us/articles/23595536875796 (rendu le 2026-10-15 ; lien du formulaire non relevé à cause de Cloudflare)."
+    }
+   ]
+  },
+  {
+   "id": "google",
+   "nom": "Google (Recherche)",
+   "type": "moteur",
+   "actions": [
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Faire retirer vos coordonnées des résultats (« Résultats vous concernant »)",
+      "es": "Quitar tus datos de contacto de los resultados («Resultados sobre ti»)",
+      "en": "Remove your contact info from results (\"Results about you\")"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez « Résultats vous concernant » (menu de votre photo dans l'appli Google, ou la page web).",
+       "Choisissez « Commencer » et saisissez votre nom, adresse, téléphone et e-mail.",
+       "Activez les notifications pour être prévenu des nouveaux résultats.",
+       "Dans l'onglet « À examiner », ouvrez un résultat et demandez son retrait.",
+       "Suivez la demande par e-mail ou dans « Demandes de suppression »."
+      ],
+      "es": [
+       "Abre «Resultados sobre ti» (menú de tu foto en la app de Google, o la página web).",
+       "Elige «Comenzar» y escribe tu nombre, dirección, teléfono y correo.",
+       "Activa las notificaciones para enterarte de nuevos resultados.",
+       "En la pestaña «Para revisar», abre un resultado y pide que lo quiten.",
+       "Sigue la solicitud por correo o en «Solicitudes de eliminación»."
+      ],
+      "en": [
+       "Open \"Results about you\" (profile menu in the Google app, or the web page).",
+       "Choose \"Get started\" and enter your name, address, phone and email.",
+       "Turn on notifications to hear about new results.",
+       "In the \"To review\" tab, open a result and request its removal.",
+       "Track the request by email or under \"Removal requests\"."
+      ]
+     },
+     "url": "https://support.google.com/websearch/answer/12719076",
+     "url_par_langue": {
+      "fr": "https://support.google.com/websearch/answer/12719076?hl=fr",
+      "es": "https://support.google.com/websearch/answer/12719076?hl=es-419",
+      "en": "https://support.google.com/websearch/answer/12719076?hl=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article lu le 2026-10-15 (versions hl=fr et hl=es-419 vérifiées). Outil réservé aux plus de 18 ans et déployé selon les pays ; sans compte ou pour un tiers : formulaire détaillé (action suivante). Google ne retire que des résultats de recherche, pas le contenu du site."
+    },
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Retirer de Google vos infos privées (pièce d'identité, adresse, doxxing)",
+      "es": "Quitar de Google tu información privada (documentos, dirección, doxing)",
+      "en": "Remove your private info from Google (ID, address, doxxing)"
+     },
+     "etapes": {
+      "fr": [
+       "Copiez l'adresse (URL) de chaque page qui montre vos informations.",
+       "Cliquez sur « Lancer une demande de suppression ».",
+       "Indiquez le type d'information : adresse, téléphone, pièce d'identité, numéro bancaire, signature, dossier médical…",
+       "Pour du doxxing, précisez les menaces ou l'appel au harcèlement, puis envoyez."
+      ],
+      "es": [
+       "Copia la dirección (URL) de cada página que muestra tu información.",
+       "Haz clic en «Iniciar solicitud de eliminación».",
+       "Indica el tipo de información: dirección, teléfono, documento de identidad, cuenta bancaria, firma, historial médico…",
+       "Si es doxing, explica las amenazas o el llamado al acoso y envía."
+      ],
+      "en": [
+       "Copy the address (URL) of each page showing your information.",
+       "Click \"Start removal request\".",
+       "Say what kind of information it is: address, phone, ID, bank number, signature, medical record…",
+       "For doxxing, describe the threats or calls to harass you, then submit."
+      ]
+     },
+     "url": "https://support.google.com/websearch/answer/9673730",
+     "url_par_langue": {
+      "fr": "https://support.google.com/websearch/answer/9673730?hl=fr",
+      "es": "https://support.google.com/websearch/answer/9673730?hl=es-419",
+      "en": "https://support.google.com/websearch/answer/9673730?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Article « Remove my private info from Google Search » lu le 2026-10-15. Vous ou un représentant pouvez faire la demande ; seuls les URL fournis sont examinés ; l'intérêt public peut justifier un refus. Dans l'UE, le « droit à l'oubli » a son propre formulaire (https://reportcontent.google.com/forms/rtbf, page en JavaScript non lue)."
+    },
+    {
+     "situation": "contenu-intime",
+     "titre": {
+      "fr": "Retirer de Google des images ou vidéos intimes de vous",
+      "es": "Quitar de Google imágenes o videos íntimos tuyos",
+      "en": "Remove intimate images or videos of you from Google"
+     },
+     "etapes": {
+      "fr": [
+       "Copiez les URL des pages ou images concernées et faites des captures d'écran.",
+       "Ouvrez la page et cliquez sur « Lancer une demande de suppression ».",
+       "Choisissez « contenu sexuel où vous apparaissez » : même si vous aviez consenti au départ.",
+       "Ajoutez les URL et les captures (vous pouvez ne montrer que votre visage), puis envoyez.",
+       "Dans Google Images, vous pouvez aussi demander le retrait directement depuis l'image."
+      ],
+      "es": [
+       "Copia las URL de las páginas o imágenes y haz capturas de pantalla.",
+       "Abre la página y haz clic en «Iniciar solicitud de eliminación».",
+       "Elige «contenido sexual en el que apareces»: aunque al principio hayas dado tu consentimiento.",
+       "Añade las URL y las capturas (puedes mostrar solo tu cara) y envía.",
+       "En Google Imágenes también puedes pedir la eliminación desde la propia imagen."
+      ],
+      "en": [
+       "Copy the URLs of the pages or images and take screenshots.",
+       "Open the page and click \"Start removal request\".",
+       "Choose \"sexual content with you in it\": even if you consented at first.",
+       "Add the URLs and screenshots (you can show only your face), then submit.",
+       "In Google Images you can also request removal right from the image."
+      ]
+     },
+     "url": "https://support.google.com/websearch/answer/16305143",
+     "url_par_langue": {
+      "fr": "https://support.google.com/websearch/answer/16305143?hl=fr",
+      "es": "https://support.google.com/websearch/answer/16305143?hl=es-419",
+      "en": "https://support.google.com/websearch/answer/16305143?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Article « Remove personal sexual content from Google Search » lu le 2026-10-15 ; les anciennes pages 6302812 (images intimes) et 9116649 (fausse pornographie) y redirigent. Couvre le contenu consenti mais non commercialisé. Retrait des résultats Google seulement : contacter aussi le site."
+    },
+    {
+     "situation": "deepfake",
+     "titre": {
+      "fr": "Retirer de Google un deepfake ou un faux nu",
+      "es": "Quitar de Google un deepfake o un desnudo falso",
+      "en": "Remove a deepfake or fake nude from Google"
+     },
+     "etapes": {
+      "fr": [
+       "Copiez les URL et faites des captures d'écran.",
+       "Cliquez sur « Lancer une demande de suppression ».",
+       "Choisissez le contenu sexuel ou nu falsifié (deepfake, montage, IA).",
+       "Confirmez que vous êtes reconnaissable, que c'est faux et diffusé sans votre accord, puis envoyez."
+      ],
+      "es": [
+       "Copia las URL y haz capturas de pantalla.",
+       "Haz clic en «Iniciar solicitud de eliminación».",
+       "Elige el contenido sexual o desnudo falso (deepfake, montaje, IA).",
+       "Confirma que se te reconoce, que es falso y que se difundió sin tu consentimiento, y envía."
+      ],
+      "en": [
+       "Copy the URLs and take screenshots.",
+       "Click \"Start removal request\".",
+       "Choose fake sexual or nude content (deepfake, edited, AI).",
+       "Confirm you're identifiable, it's fake and shared without consent, then submit."
+      ]
+     },
+     "url": "https://support.google.com/websearch/answer/16305143",
+     "url_par_langue": {
+      "fr": "https://support.google.com/websearch/answer/16305143?hl=fr",
+      "es": "https://support.google.com/websearch/answer/16305143?hl=es-419",
+      "en": "https://support.google.com/websearch/answer/16305143?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Même page : section « Remove fake sexual or nude content with you in it » (deepfakes, fausse pornographie, faux nus créés par retouche ou IA), lue le 2026-10-15. Couvre aussi les pages qui associent à tort votre nom à du contenu pornographique."
+    },
+    {
+     "situation": "diffamation",
+     "titre": {
+      "fr": "Demande de retrait légal (diffamation) pour la recherche Google",
+      "es": "Solicitud de retiro legal (difamación) para la Búsqueda de Google",
+      "en": "Legal removal request (defamation) for Google Search"
+     },
+     "etapes": {
+      "fr": [
+       "Cliquez sur « Créer une demande » et choisissez « Recherche Google ».",
+       "Choisissez le motif juridique (par exemple diffamation).",
+       "Collez l'URL exacte de chaque page, pas la page d'accueil.",
+       "Expliquez précisément ce qui est illégal et pourquoi, puis envoyez.",
+       "Gardez l'e-mail de confirmation et son numéro de référence."
+      ],
+      "es": [
+       "Haz clic en «Crear una solicitud» y elige «Búsqueda de Google».",
+       "Elige el motivo legal (por ejemplo, difamación).",
+       "Pega la URL exacta de cada página, no la página principal.",
+       "Explica con precisión qué es ilegal y por qué, y envía.",
+       "Guarda el correo de confirmación y su número de referencia."
+      ],
+      "en": [
+       "Click \"Create a request\" and choose \"Google Search\".",
+       "Choose the legal reason (for example defamation).",
+       "Paste the exact URL of each page, not the home page.",
+       "Explain precisely what is unlawful and why, then submit.",
+       "Keep the confirmation email and its reference number."
+      ]
+     },
+     "url": "https://support.google.com/legal/answer/3110420",
+     "url_par_langue": {
+      "fr": "https://support.google.com/legal/answer/3110420?hl=fr",
+      "es": "https://support.google.com/legal/answer/3110420?hl=es-419",
+      "en": "https://support.google.com/legal/answer/3110420?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Page « Report Content for Legal Reasons » lue le 2026-10-15 ; une demande par produit Google. Libellé exact du motif « diffamation » dans l'assistant non relevé."
+    },
+    {
+     "situation": "piratage-compte",
+     "titre": {
+      "fr": "Récupérer et sécuriser un compte Google piraté",
+      "es": "Recuperar y proteger una cuenta de Google hackeada",
+      "en": "Recover and secure a hacked Google Account"
+     },
+     "etapes": {
+      "fr": [
+       "Si vous ne pouvez plus vous connecter, allez sur la page de récupération du compte et répondez au mieux aux questions.",
+       "Une fois connecté : Compte Google > Sécurité > « Événements de sécurité récents ».",
+       "Pour toute activité inconnue, choisissez « Non, ce n'était pas moi » et suivez les étapes.",
+       "Dans « Vos appareils », déconnectez les appareils que vous ne reconnaissez pas."
+      ],
+      "es": [
+       "Si ya no puedes acceder, ve a la página de recuperación de cuenta y responde las preguntas lo mejor posible.",
+       "Cuando entres: Cuenta de Google > Seguridad > «Eventos de seguridad recientes».",
+       "Si ves actividad desconocida, elige «No, no fui yo» y sigue los pasos.",
+       "En «Tus dispositivos», cierra la sesión de los dispositivos que no reconozcas."
+      ],
+      "en": [
+       "If you can't sign in, go to the account recovery page and answer the questions as best you can.",
+       "Once signed in: Google Account > Security > \"Recent security events\".",
+       "For any activity you don't recognize, choose \"No, it wasn't me\" and follow the steps.",
+       "In \"Your devices\", sign out of devices you don't recognize."
+      ]
+     },
+     "url": "https://support.google.com/accounts/answer/6294825",
+     "url_par_langue": {
+      "fr": "https://support.google.com/accounts/answer/6294825?hl=fr",
+      "es": "https://support.google.com/accounts/answer/6294825?hl=es-419",
+      "en": "https://support.google.com/accounts/answer/6294825?hl=en"
+     },
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Article « Secure a hacked or compromised Google Account » lu le 2026-10-15 (versions FR/ES vérifiées). Utile aussi pour récupérer une chaîne YouTube ou Gmail. Libellés FR/ES traduits par nous."
+    }
+   ]
+  },
+  {
+   "id": "google-maps",
+   "nom": "Google Maps / Fiche d’établissement",
+   "type": "avis",
+   "actions": [
+    {
+     "situation": "faux-avis",
+     "titre": {
+      "fr": "Signaler un faux avis sur votre fiche d'établissement Google",
+      "es": "Denunciar una opinión falsa en tu Perfil de Negocio de Google",
+      "en": "Report a fake review on your Google Business Profile"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez votre fiche d'établissement et choisissez « Lire les avis ».",
+       "À côté de l'avis, choisissez « Signaler ».",
+       "Choisissez le motif (par ex. « Spam ») et envoyez le signalement.",
+       "Suivez le statut dans l'outil de gestion des avis ; si l'avis reste, faites un appel unique.",
+       "Victime d'une extorsion par faux avis négatifs ? Signalez-la via le lien de la page."
+      ],
+      "es": [
+       "Abre tu Perfil de Negocio y elige «Leer opiniones».",
+       "Junto a la opinión, elige «Denunciar».",
+       "Elige el motivo (p. ej. «Spam») y envía la denuncia.",
+       "Sigue el estado en la herramienta de gestión de opiniones; si la opinión sigue, presenta una apelación única.",
+       "¿Te extorsionan con opiniones negativas falsas? Denúncialo con el enlace de la página."
+      ],
+      "en": [
+       "Open your Business Profile and choose \"Read reviews\".",
+       "Next to the review, choose \"Report\".",
+       "Pick the reason (e.g. \"Spam\") and send the report.",
+       "Track the status in the Reviews Management Tool; if the review stays, file a one-time appeal.",
+       "Targeted by a fake-review extortion scam? Report it via the link on the page."
+      ]
+     },
+     "url": "https://support.google.com/business/answer/4596773",
+     "url_par_langue": {
+      "fr": "https://support.google.com/business/answer/4596773?hl=fr",
+      "es": "https://support.google.com/business/answer/4596773?hl=es-419",
+      "en": "https://support.google.com/business/answer/4596773?hl=en"
+     },
+     "connexion_requise": true,
+     "verifie": true,
+     "note": "Article « Report inappropriate reviews on your Business Profile » lu le 2026-10-15 (versions FR/ES vérifiées). Seuls les avis contraires aux règles Google sont retirés, pas les avis simplement négatifs. Libellés FR/ES traduits par nous. Pour un avis diffamatoire : demande légale Google (fiche Google, action diffamation)."
+    }
+   ]
   }
  ]
 }
