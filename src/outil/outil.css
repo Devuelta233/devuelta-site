@@ -156,15 +156,29 @@ input[type='file'] {
   font-size: 1.1rem;
 }
 
-.o-entete .o-marque::before {
-  content: '';
-  display: inline-block;
-  width: 0.7rem;
-  height: 0.7rem;
-  margin-right: 0.5rem;
-  border-radius: 2px;
-  background: var(--terracotta);
-  vertical-align: 0.05em;
+.o-marque {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.o-logo {
+  display: block;
+  height: 1.6rem;
+  width: auto;
+}
+
+.o-nom-outil {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.o-logo-carte {
+  display: block;
+  height: 2rem;
+  width: auto;
 }
 
 .o-bouton-menu {

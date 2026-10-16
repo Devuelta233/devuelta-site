@@ -134,8 +134,9 @@ function Espace({ etat, route, surDeconnexion }: { etat: Etat; route: Route; sur
   return (
     <div class="o-app">
       <header class="o-entete">
-        <a class="o-marque" href="#/">
-          EraseOps
+        <a class="o-marque" href="#/" aria-label="Devuelta · EraseOps">
+          <img class="o-logo" src="/outil/logo-outil.svg" alt="" width="787" height="174" />
+          <span class="o-nom-outil">EraseOps</span>
         </a>
         <button type="button" class="o-bouton-menu" aria-expanded={menu} aria-controls="o-menu" onClick={() => setMenu(!menu)}>
           {menu ? '✕' : '☰'} <span>Menu</span>

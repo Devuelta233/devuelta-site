@@ -21,7 +21,10 @@ function Cadre({ titre, children }: { titre: string; children: preact.ComponentC
   return (
     <div class="o-acces">
       <div class="o-acces-carte">
-        <p class="o-marque">EraseOps</p>
+        <p class="o-marque">
+          <img class="o-logo-carte" src="/logo-devuelta.svg" alt="Devuelta" width="787" height="174" />
+          <span>EraseOps</span>
+        </p>
         <h1>{titre}</h1>
         {children}
       </div>

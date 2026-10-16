@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import Spirale from '../components/Spirale.astro';
 import { C } from '../i18n/commun';
 import { ARTICLES } from '../i18n/pages';
 import { BASE, articlesPath, page, type Versions } from '../i18n/routes';
@@ -91,8 +90,7 @@ const nav = [
     <header class="entete">
       <div class="entete-int">
         <a class="marque" href={BASE[lang]} aria-label="Devuelta">
-          <Spirale class="marque-spirale" />
-          <span>devuelta</span>
+          <img class="marque-logo" src="/logo-devuelta.svg" alt="Devuelta" width="787" height="174" />
         </a>
         <nav class="nav-principale" aria-label={C.menu[lang]}>
           {nav.map((n) => <a href={n.href} aria-current={chemin === n.href ? 'page' : undefined}>{n.nom}</a>)}

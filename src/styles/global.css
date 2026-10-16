@@ -741,10 +741,11 @@ legend {
   color: var(--terracotta);
 }
 
-.marque svg {
-  width: 1.6rem;
-  height: 1.6rem;
-  flex: none;
+.marque-logo {
+  display: block;
+  height: 2.1rem;
+  width: auto;
+  max-width: 11rem;
 }
 
 .ariane-zone {
@@ -1062,7 +1063,7 @@ legend {
     width: 100%;
     max-width: 22rem;
     justify-self: end;
-    color: var(--terracotta);
+    height: auto;
     opacity: 0.9;
   }
 }
