@@ -41,6 +41,7 @@ export async function purgerElements(db: D1Database, dossiers: string[], demande
   for (const id of dossiers) {
     stmts.push(db.prepare('DELETE FROM demandes WHERE dossier_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM retractations WHERE dossier_id = ?').bind(id));
+    stmts.push(db.prepare('DELETE FROM signatures WHERE dossier_id = ?').bind(id));
     // Liens, étapes, courriers et notes partent avec le dossier (cascade).
     stmts.push(db.prepare('DELETE FROM dossiers WHERE id = ?').bind(id));
     stmts.push(db.prepare('UPDATE journal SET details = NULL WHERE dossier_id = ?').bind(id));

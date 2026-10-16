@@ -20,6 +20,12 @@
       "database_id": "03f20132-197b-4409-8ef0-ffcbf001a132"
     }
   ],
+  // E-mails automatiques : accusés de réception, lien de signature, copie signée.
+  // Expéditeur team@getdevuelta.com, réponses vers team.devuelta@protonmail.com.
+  // À faire une fois dans Cloudflare : Email Service > Email Sending >
+  // « Onboard Domain » > getdevuelta.com. Tant que ce n'est pas fait, rien ne
+  // part et l'outil affiche le message à copier.
+  "send_email": [{ "name": "EMAIL", "allowed_sender_addresses": ["team@getdevuelta.com"] }],
   // Tâche automatique quotidienne (heure UTC = heure du Ghana).
   "triggers": { "crons": ["30 5 * * *"] },
   "routes": [

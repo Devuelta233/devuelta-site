@@ -135,6 +135,17 @@ interface Detail {
   notes: Array<{ id: string; texte: string; cree_le: string; auteur_nom: string | null }>;
   fiches: Fiche[];
   retractations: Array<{ ref: string; recue_le: string; accuse_le: string | null }>;
+  signature: Signature | null;
+}
+
+interface Signature {
+  cree_le: string;
+  expire_le: string;
+  annule_le: string | null;
+  signe_le: string | null;
+  nom_signe: string | null;
+  debut_immediat: number | null;
+  document_signe: string | null;
 }
 
 interface ModeleMeta {
@@ -262,6 +273,85 @@ function MessageOuverture({ x }: { x: Dossier }) {
   );
 }
 
+// Signature en ligne : un lien personnel (valable 14 jours) envoyé au client par e-mail.
+function SignatureEnLigne({ d, recharger }: { d: Detail; recharger: () => void }) {
+  const x = d.dossier;
+  const s = d.signature;
+  const a = useAction();
+  const [envoi, setEnvoi] = useState<{ message: string; envoye: boolean } | null>(null);
+  const enCours = !!s && !s.signe_le && !s.annule_le && s.expire_le > new Date().toISOString();
+  return (
+    <div>
+      <p class="o-muet">{t('signatureAide')}</p>
+      {enCours && !envoi && (
+        <p>
+          {t('signatureEnAttente')} {date(s.cree_le, true)}, {t('signatureValable')} {date(s.expire_le)}.
+        </p>
+      )}
+      <p class="o-actions">
+        <button
+          class="o-bouton"
+          disabled={a.occupe}
+          onClick={() =>
+            a.lancer(
+              () => post<{ message: string; envoye: boolean }>(`/dossiers/${x.id}/signature`, {}),
+              (r) => {
+                setEnvoi({ message: r.message, envoye: r.envoye });
+                recharger();
+              },
+            )
+          }
+        >
+          {enCours ? t('signatureRenvoyer') : t('signatureEnvoyer')}
+        </button>
+      </p>
+      <MessageErreur texte={a.err} />
+      {envoi?.envoye && (
+        <p class="o-encadre o-ok" role="status">
+          {t('signatureEnvoyeeA')} {x.client_email}.
+        </p>
+      )}
+      {envoi && !envoi.envoye && (
+        <div>
+          <p>{t('signatureACopier')}</p>
+          <pre class="o-pre">{envoi.message}</pre>
+          <p class="o-actions">
+            <Copier texte={envoi.message} libelle={t('copierMessage')} />
+            {x.client_email && (
+              <a class="o-bouton" href={`mailto:${x.client_email}`}>
+                {t('email')}
+              </a>
+            )}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function SignatureFaite({ s }: { s: Signature }) {
+  return (
+    <div class="o-encadre o-ok">
+      <p>
+        <strong>
+          {t('signatureSignee')} {date(s.signe_le, true)} {t('signaturePar')} {s.nom_signe}.
+        </strong>
+      </p>
+      <p>
+        {t('signatureDebut')} : {s.debut_immediat ? t('oui') : t('non')}.
+        {!s.debut_immediat && <> {t('signatureAttendre')}</>}
+      </p>
+      {s.document_signe && (
+        <details>
+          <summary>{t('voirDocumentSigne')}</summary>
+          <pre class="o-pre">{s.document_signe}</pre>
+          <Copier texte={s.document_signe} libelle={t('copierDocument')} />
+        </details>
+      )}
+    </div>
+  );
+}
+
 function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger: () => void; ferme: boolean; preparer: (p: { modele: string; contenu_id: string | null }) => void }) {
   const x = d.dossier;
   const lang = langue.value;
@@ -304,11 +394,15 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
       {!x.mandat_signe_le && (
         <div class="o-encadre o-alerte">
           <p>{t('mandatManquant')}</p>
-          <button class="o-bouton" onClick={() => preparer({ modele: 'mandat', contenu_id: null })}>
-            {t('preparerMandat')}
-          </button>
+          <SignatureEnLigne d={d} recharger={recharger} />
+          <p>
+            <button class="o-lien" onClick={() => preparer({ modele: 'mandat', contenu_id: null })}>
+              {t('mandatPapier')}
+            </button>
+          </p>
         </div>
       )}
+      {d.signature?.signe_le && <SignatureFaite s={d.signature} />}
       {x.mandat_signe_le && <MessageOuverture x={x} />}
       <TarifDossier d={d} />
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (

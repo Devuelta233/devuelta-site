@@ -7,6 +7,8 @@ export interface Env {
   HACHAGE_ITERATIONS?: string;
   /** « 1 » sur un poste de développement : rien n'est envoyé aux moteurs de recherche. */
   LOCAL?: string;
+  /** Envoi des e-mails automatiques (Cloudflare Email Service). Absent : rien n'est envoyé. */
+  EMAIL?: SendEmail;
 }
 
 export class HttpError extends Error {
