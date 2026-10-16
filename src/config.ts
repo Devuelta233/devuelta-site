@@ -6,10 +6,10 @@ export { SITE_URL } from '../shared/site';
 
 export const EMAIL = CONTACT_EMAIL;
 
-// Contact public : l'e-mail seulement, une adresse par langue de réponse (la même
-// pour l'instant). Les numéros WhatsApp de l'équipe ne sont jamais publiés : le
-// client reçoit celui de la personne qui suit son dossier une fois le dossier
-// ouvert (mandat signé), depuis l'outil (Réglages → numéro WhatsApp).
-export const EMAIL_PAR_LANGUE: Record<Lang, string> = { fr: EMAIL, es: EMAIL, en: EMAIL };
+// Contact public : une seule boîte, « Team Devuelta ». Aucun prénom, aucun numéro
+// sur le site : la demande est attribuée dans l'outil selon la langue, et le
+// client reçoit le WhatsApp de la personne qui suit son dossier seulement à
+// l'ouverture du dossier (mandat signé).
+export const NOM_CONTACT = 'Team Devuelta';
 
 export const NOM_LANGUE: Record<Lang, string> = { fr: 'Français', es: 'Español', en: 'English' };

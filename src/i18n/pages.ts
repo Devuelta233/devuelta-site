@@ -85,9 +85,9 @@ export const ACCUEIL = {
   tousLesRecours: { fr: 'Tous les recours', es: 'Todos los recursos', en: 'All remedies' } as T3,
   contactTitre: { fr: 'Parler à quelqu’un', es: 'Hablar con alguien', en: 'Talk to someone' } as T3,
   contactIntro: {
-    fr: 'Une question, un doute ? Écrivez-nous dans votre langue : c’est Steven, Paola ou Michael qui vous répond, pas un robot. Nos messages ne mentionnent jamais votre situation dans l’objet.',
-    es: '¿Una pregunta, una duda? Escríbenos en tu idioma: te responde Paola, Steven o Michael, no un robot. Nuestros mensajes nunca mencionan tu situación en el asunto.',
-    en: 'A question, a doubt? Write to us in your language: Michael, Steven or Paola will answer, not a bot. Our messages never mention your situation in the subject line.',
+    fr: 'Une question, un doute ? Écrivez à Team Devuelta dans votre langue : français, espagnol ou anglais. Nos messages ne mentionnent jamais votre situation dans l’objet.',
+    es: '¿Una pregunta, una duda? Escribe a Team Devuelta en tu idioma: español, francés o inglés. Nuestros mensajes nunca mencionan tu situación en el asunto.',
+    en: 'A question, a doubt? Write to Team Devuelta in your language: English, French or Spanish. Our messages never mention your situation in the subject line.',
   } as T3,
 };
 

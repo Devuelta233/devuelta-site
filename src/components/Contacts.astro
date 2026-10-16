@@ -1,32 +1,25 @@
 ---
-// Nous joindre : l'e-mail seulement, une adresse par langue (regroupées quand
-// elles sont identiques). Le WhatsApp de la personne qui suit le dossier n'est
-// donné qu'une fois le dossier ouvert.
-import { EMAIL_PAR_LANGUE, NOM_LANGUE } from '../config';
+// Nous joindre : une seule boîte, « Team Devuelta ». Le WhatsApp de la personne
+// qui suit le dossier n'est donné qu'une fois le dossier ouvert.
+import { EMAIL, NOM_CONTACT } from '../config';
 import { C } from '../i18n/commun';
-import { LANGS, type Lang } from '../../shared/vocab';
+import type { Lang } from '../../shared/vocab';
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
-// La langue de la page d'abord, puis les deux autres.
-const ordre: Lang[] = [lang, ...LANGS.filter((l) => l !== lang)];
-const groupes = new Map<string, Lang[]>();
-for (const l of ordre) groupes.set(EMAIL_PAR_LANGUE[l], [...(groupes.get(EMAIL_PAR_LANGUE[l]) ?? []), l]);
 const enveloppe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>';
 ---
 <ul class="contacts">
-  {[...groupes].map(([email, langues]) => (
-    <li>
-      <a class="contact-ligne" href={`mailto:${email}`} data-evenement="email">
-        <span class="ico" set:html={enveloppe} />
-        <span>
-          <strong>E-mail · {langues.map((l) => NOM_LANGUE[l]).join(' · ')}</strong>
-          <span class="mono">{email}</span>
-        </span>
-      </a>
-    </li>
-  ))}
+  <li>
+    <a class="contact-ligne" href={`mailto:${EMAIL}`} data-evenement="email">
+      <span class="ico" set:html={enveloppe} />
+      <span>
+        <strong>{NOM_CONTACT} · Français · Español · English</strong>
+        <span class="mono">{EMAIL}</span>
+      </span>
+    </a>
+  </li>
 </ul>
 <p class="petit">{C.whatsappApres[lang]}</p>

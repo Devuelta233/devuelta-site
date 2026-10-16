@@ -4,7 +4,7 @@ import { C } from '../i18n/commun';
 import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
 import { guidePath, page, situationPath, versionsPage } from '../i18n/routes';
 import { dateLisible, guides, PLATEFORMES_VERIFIE_LE, plateformes, urgencesInternational, urgencesPays, urlAction } from '../data';
-import { EMAIL_PAR_LANGUE } from '../config';
+import { EMAIL } from '../config';
 import { SITUATION_LABEL, type Lang } from '../../shared/vocab';
 import type { DonneesDiagnostic } from '../scripts/Diagnostic';
 
@@ -71,7 +71,7 @@ const donnees: DonneesDiagnostic = {
     confier: page('confier', lang),
     urgence: page('urgence', lang),
     situations: Object.fromEntries(SITUATIONS_ORDRE.map((s) => [s, situationPath(s, lang)])),
-    email: `mailto:${EMAIL_PAR_LANGUE[lang]}`,
+    email: `mailto:${EMAIL}`,
   },
   verifieLe: dateLisible(PLATEFORMES_VERIFIE_LE, lang),
 };

@@ -5,7 +5,7 @@ import Engagements from '../components/Engagements.astro';
 import { CONFIER, METHODE } from '../i18n/pages';
 import { page, versionsPage } from '../i18n/routes';
 import { plateformes } from '../data';
-import { EMAIL_PAR_LANGUE } from '../config';
+import { EMAIL } from '../config';
 import type { Lang } from '../../shared/vocab';
 import type { DonneesConfier } from '../scripts/Confier';
 
@@ -21,7 +21,7 @@ const donnees: DonneesConfier = {
   liens: {
     confidentialite: page('confidentialite', lang),
     urgence: page('urgence', lang),
-    email: EMAIL_PAR_LANGUE[lang],
+    email: EMAIL,
   },
 };
 const sansJs = {
