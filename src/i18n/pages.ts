@@ -37,6 +37,12 @@ export const ACCUEIL = {
   ctaQueFaire: { fr: 'Voir ce que vous pouvez faire', es: 'Ver lo que puedes hacer', en: 'See what you can do' } as T3,
   situationsTitre: { fr: 'Ce qui vous arrive', es: 'Lo que te está pasando', en: "What's happening to you" } as T3,
   commentTitre: { fr: 'Comment ça marche', es: 'Cómo funciona', en: 'How it works' } as T3,
+  prix: {
+    fr: 'Prix affichés, sans surprise : dès 40 €, la moitié pour démarrer et le reste seulement si c’est retiré. Moitié prix en Afrique et en Amérique latine.',
+    es: 'Precios publicados, sin sorpresas: desde 40 €, la mitad para empezar y el resto solo si se retira. Mitad de precio en África y en América Latina.',
+    en: 'Published prices, no surprises: from €40, half to start and the rest only if it is removed. Half price in Africa and Latin America.',
+  } as T3,
+  voirTarifs: { fr: 'Voir les tarifs', es: 'Ver los precios', en: 'See prices' } as T3,
   comment: {
     fr: [
       ['Vous essayez d’abord', 'Le diagnostic vous indique les formulaires officiels et les recours de votre pays. C’est gratuit, sans inscription, et rien ne quitte votre téléphone.'],
@@ -223,9 +229,9 @@ export const RETRACTATION = {
     en: 'Withdraw from the contract online',
   } as T3,
   meta: {
-    fr: 'Vous avez accepté notre devis il y a moins de 14 jours ? Renoncez ici, en ligne, sans donner de raison. Accusé de réception par e-mail ou WhatsApp.',
-    es: '¿Aceptaste nuestro presupuesto hace menos de 14 días? Desiste aquí, en línea, sin dar motivos. Acuse de recibo por correo electrónico o WhatsApp.',
-    en: 'Accepted our quote less than 14 days ago? Withdraw here, online, without giving a reason. Acknowledgement by email or WhatsApp.',
+    fr: 'Vous avez accepté notre devis il y a moins de 14 jours ? Renoncez ici, en ligne, sans donner de raison. Accusé de réception par e-mail.',
+    es: '¿Aceptaste nuestro presupuesto hace menos de 14 días? Desiste aquí, en línea, sin dar motivos. Acuse de recibo por correo electrónico.',
+    en: 'Accepted our quote less than 14 days ago? Withdraw here, online, without giving a reason. Acknowledgement by email.',
   } as T3,
   h1: { fr: 'Renoncer au contrat', es: 'Desistir del contrato', en: 'Withdraw from the contract' } as T3,
   intro: {
@@ -264,7 +270,7 @@ export const TARIFS = {
     en: 'Pricing: get content removed from €40',
   } as T3,
   meta: {
-    fr: 'Diagnostic gratuit. Si vous nous confiez votre dossier : la moitié pour démarrer, le reste seulement si c’est retiré. Prix divisés par deux en Afrique et en Amérique latine.',
+    fr: 'Diagnostic gratuit. Dès 40 € pour nous confier votre dossier : la moitié au départ, le reste seulement si c’est retiré. Moitié prix en Afrique et Amérique latine.',
     es: 'Diagnóstico gratis. Si nos confías tu caso: la mitad para empezar, el resto solo si se retira. Precios a mitad en África y América Latina.',
     en: 'Free diagnostic. If you hand us your case: half to start, the rest only if it’s removed. Half price in Africa and Latin America.',
   } as T3,
@@ -388,24 +394,24 @@ export const TARIFS = {
   } as L3,
   paiementTitre: { fr: 'Comment payer', es: 'Cómo pagar', en: 'How to pay' } as T3,
   paiement: {
-    fr: 'Vous ne payez rien avant d’avoir accepté notre devis écrit. Le lien de paiement arrive avec lui. Le reste n’est demandé qu’une fois les liens retirés.',
-    es: 'No pagas nada antes de aceptar nuestro presupuesto por escrito. El enlace de pago llega con él. El resto solo se pide una vez retirados los enlaces.',
-    en: 'You pay nothing before accepting our written quote. The payment link comes with it. The rest is only requested once the links are removed.',
+    fr: 'Vous ne payez rien avant d’avoir accepté notre devis écrit. Le lien de paiement arrive avec lui : vous payez par carte bancaire ou Mobile Money, sur la page sécurisée de notre prestataire de paiement. Le montant peut être débité en cedis ghanéens (GH¢) au taux du jour ; votre banque peut alors appliquer des frais de change. Le reste n’est demandé qu’une fois les liens retirés.',
+    es: 'No pagas nada antes de aceptar nuestro presupuesto por escrito. El enlace de pago llega con él: pagas con tarjeta bancaria o Mobile Money, en la página segura de nuestro proveedor de pagos. El importe puede cobrarse en cedis ghaneses (GH¢) al cambio del día; tu banco puede aplicar gastos de cambio. El resto solo se pide una vez retirados los enlaces.',
+    en: 'You pay nothing before accepting our written quote. The payment link comes with it: you pay by bank card or Mobile Money, on our payment provider’s secure page. The amount may be charged in Ghanaian cedis (GH¢) at the day’s rate; your bank may then apply currency conversion fees. The rest is only requested once the links are removed.',
   } as T3,
 };
 
 export const CONTACT = {
   seo: { fr: 'Nous contacter', es: 'Contacto', en: 'Contact us' } as T3,
   meta: {
-    fr: 'Écrivez à Devuelta en français, en espagnol ou en anglais, par e-mail. Réponse en général sous 24 heures.',
-    es: 'Escribe a Devuelta en español, francés o inglés, por correo electrónico. Respuesta normalmente en 24 horas.',
-    en: 'Write to Devuelta in English, French or Spanish, by email. We usually reply within 24 hours.',
+    fr: 'Écrivez à Devuelta en français, en espagnol ou en anglais, par e-mail. Réponse en général sous 24 à 48 heures.',
+    es: 'Escribe a Devuelta en español, francés o inglés, por correo electrónico. Respuesta normalmente en 24 a 48 horas.',
+    en: 'Write to Devuelta in English, French or Spanish, by email. We usually reply within 24 to 48 hours.',
   } as T3,
   h1: { fr: 'Nous contacter', es: 'Contacto', en: 'Contact us' } as T3,
   intro: {
-    fr: 'Écrivez-nous dans votre langue. Nous répondons en général sous 24 heures.',
-    es: 'Escríbenos en tu idioma. Normalmente respondemos en 24 horas.',
-    en: 'Write to us in your language. We usually reply within 24 hours.',
+    fr: 'Écrivez-nous dans votre langue. Nous répondons en général sous 24 à 48 heures.',
+    es: 'Escríbenos en tu idioma. Normalmente respondemos en 24 a 48 horas.',
+    en: 'Write to us in your language. We usually reply within 24 to 48 hours.',
   } as T3,
   discretionTitre: { fr: 'Pour votre discrétion', es: 'Para tu discreción', en: 'For your discretion' } as T3,
   discretion: {
@@ -463,9 +469,9 @@ export const URGENCE = {
   site: { fr: 'Site officiel', es: 'Sitio oficial', en: 'Official website' } as T3,
   choisirPays: { fr: 'Votre pays', es: 'Tu país', en: 'Your country' } as T3,
   pasDeListe: {
-    fr: 'Votre pays n’est pas dans la liste ? Appelez le numéro d’urgence local et utilisez les outils internationaux ci-dessous.',
-    es: '¿Tu país no está en la lista? Llama al número de emergencia local y usa las herramientas internacionales de abajo.',
-    en: "Your country isn't listed? Call your local emergency number and use the international tools below.",
+    fr: 'Votre pays n’est pas dans la liste ? Appelez le numéro d’urgence local et utilisez les outils internationaux, en bas de cette page.',
+    es: '¿Tu país no está en la lista? Llama al número de emergencia local y usa las herramientas internacionales, al final de esta página.',
+    en: "Your country isn't listed? Call your local emergency number and use the international tools at the bottom of this page.",
   } as T3,
   types: {
     urgence: { fr: 'Urgences', es: 'Emergencias', en: 'Emergency' },

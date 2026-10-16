@@ -81,7 +81,7 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
   );
   const hash = await ipHash(env, clientIp(request));
   const dossier = await env.DB.prepare(
-    `SELECT d.id, d.ref, d.client_pseudo, d.client_email, d.assigne_a, u.nom AS assigne_nom, u.whatsapp AS assigne_whatsapp
+    `SELECT d.id, d.ref, d.client_pseudo, d.client_email, d.assigne_a, u.nom AS assigne_nom
        FROM dossiers d LEFT JOIN utilisateurs u ON u.id = d.assigne_a WHERE d.id = ?`,
   )
     .bind(s.dossier_id)
@@ -92,7 +92,6 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
       client_email: string | null;
       assigne_a: string | null;
       assigne_nom: string | null;
-      assigne_whatsapp: string | null;
     }>();
   if (!dossier) throw new HttpError(404, 'lien-introuvable');
   const res = await env.DB.batch([
@@ -116,7 +115,7 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
   if ((res[0].meta?.changes ?? 1) === 0) throw new HttpError(409, 'deja-signe');
   // Alerte immédiate pour la personne qui suit le dossier.
   ctx.waitUntil(notifier(env.DB, [dossier.assigne_a]).catch(() => 0));
-  // Copie signée par e-mail (support durable), avec le WhatsApp de la personne qui suit le dossier
+  // Copie signée par e-mail (support durable), avec le prénom de la personne qui suit le dossier
   // et, si le paiement en ligne est activé, le lien de paiement d'ouverture.
   // Clé de test : aucun lien fictif ne part tout seul vers un client.
   const resume = JSON.parse(s.resume) as ResumeDevis;
@@ -137,7 +136,6 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
       ref: dossier.ref,
       documentSigne: signeTexte,
       prenom: dossier.assigne_nom,
-      whatsapp: dossier.assigne_whatsapp,
       ouverture: euros(resume.ouverture, lang),
       debutImmediat,
       lienPaiement: paiement?.lien ?? null,

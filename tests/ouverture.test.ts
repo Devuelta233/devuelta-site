@@ -1,17 +1,21 @@
-// Message d'ouverture : le seul moment où le client reçoit le WhatsApp de la
-// personne qui suit son dossier ; il contient aussi le rappel anti-arnaque.
+// Message d'ouverture : qui suit le dossier et comment lui écrire (par e-mail,
+// jamais WhatsApp) ; il contient aussi le rappel anti-arnaque.
 
 import { describe, expect, it } from 'vitest';
 import { texteOuverture } from '../shared/ouverture';
 import { LANGS } from '../shared/vocab';
 
 describe('message d’ouverture du dossier', () => {
-  const o = { pseudo: 'Awa', ref: 'DV-2026-0012', prenom: 'Paola', whatsapp: '+34600000000' };
-  it('numéro de dossier, prénom et WhatsApp de la personne qui suit le dossier, dans les 3 langues', () => {
+  const o = { pseudo: 'Awa', ref: 'DV-2026-0012', prenom: 'Paola' };
+  it('numéro de dossier et prénom de la personne qui suit le dossier, réponse par e-mail, dans les 3 langues', () => {
     for (const l of LANGS) {
       const t = texteOuverture(o, l);
-      for (const x of ['Awa', 'DV-2026-0012', 'Paola', '+34600000000', 'Devuelta']) expect(t).toContain(x);
+      for (const x of ['Awa', 'DV-2026-0012', 'Paola', 'Devuelta']) expect(t).toContain(x);
+      expect(t).not.toMatch(/whatsapp/i);
     }
+    expect(texteOuverture(o, 'fr')).toContain('répondez à cet e-mail');
+    expect(texteOuverture(o, 'es')).toContain('responde a este correo');
+    expect(texteOuverture(o, 'en')).toContain('reply to this email');
   });
   it('rappel anti-arnaque', () => {
     expect(texteOuverture(o, 'fr')).toContain('jamais d’images intimes');

@@ -16,7 +16,31 @@ interface Props {
 }
 const { lang } = Astro.props;
 const h1 = ACCUEIL.h1[lang];
-const listeGuides = guides().filter((g) => !g.public_mineurs).slice(0, 6);
+// Recours mis en avant : ceux qui parlent aux lecteurs de cette langue d'abord
+// (France pour le français, Espagne pour l'espagnol, États-Unis pour l'anglais),
+// puis l'Union européenne et les outils internationaux. Jamais les fiches
+// d'un pays étranger à la langue (pas de recours français en anglais).
+const PAYS_PAR_LANGUE: Record<Lang, string[]> = {
+  fr: ['FR', 'UE', 'INTL', 'US'],
+  es: ['ES', 'UE', 'INTL', 'US'],
+  en: ['US', 'INTL', 'UE'],
+};
+const rang = (pays: string[]) => Math.min(...pays.map((p) => PAYS_PAR_LANGUE[lang].indexOf(p)).filter((i) => i >= 0), 99);
+const tries = guides()
+  .filter((g) => !g.public_mineurs && rang(g.pays) < 99)
+  .map((g, i) => ({ g, i }))
+  .sort((a, b) => rang(a.g.pays) - rang(b.g.pays) || a.i - b.i)
+  .map(({ g }) => g);
+// Deux fiches au plus par zone d'abord (pays, Union européenne, international),
+// pour montrer la variété des recours ; on complète ensuite si besoin.
+const parZone = new Map<number, number>();
+const listeGuides = tries.filter((g) => {
+  const n = parZone.get(rang(g.pays)) ?? 0;
+  parZone.set(rang(g.pays), n + 1);
+  return n < 2;
+});
+for (const g of tries) if (listeGuides.length < 6 && !listeGuides.includes(g)) listeGuides.push(g);
+listeGuides.splice(6);
 const derniersArticles = articles().slice(0, 3);
 const jsonld = [
   {
@@ -25,10 +49,10 @@ const jsonld = [
     '@id': `${SITE_URL}/#organisation`,
     name: 'Devuelta',
     url: SITE_URL,
-    logo: `${SITE_URL}/icons/icon-512.png`,
+    logo: `${SITE_URL}/icon-512.png`,
     email: EMAIL,
     slogan: ACCUEIL.h1[lang],
-    areaServed: ['FR', 'BE', 'CH', 'ES', 'MX', 'CO', 'AR', 'US', 'GB', 'CA'],
+    areaServed: ['FR', 'BE', 'CH', 'ES', 'MX', 'CO', 'AR', 'US', 'GB', 'CA', 'GH', 'CI'],
     knowsLanguage: ['fr', 'es', 'en'],
     contactPoint: (['fr', 'es', 'en'] as Lang[]).map((l) => ({
       '@type': 'ContactPoint',
@@ -108,6 +132,13 @@ const jsonld = [
           </li>
         ))}
       </ol>
+      <p>{ACCUEIL.prix[lang]} <a href={page('tarifs', lang)}>{ACCUEIL.voirTarifs[lang]} →</a></p>
+      <div class="actions">
+        <a class="bouton principal" href={page('confier', lang)}>
+          {C.ctaConfier[lang]}
+          <small>{C.ctaConfierSous[lang]}</small>
+        </a>
+      </div>
     </section>
 
     <section aria-labelledby="echelle-titre">

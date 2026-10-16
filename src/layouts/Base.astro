@@ -115,9 +115,9 @@ const nav = [
       </details>
     </header>
     {!sansBandeau && (
-      <div class="bandeau-urgence" role="note">
+      <aside class="bandeau-urgence" aria-label={C.urgenceLien[lang]}>
         <p>{C.urgence[lang]} <a href={page('urgence', lang)}>{C.urgenceLien[lang]} →</a></p>
-      </div>
+      </aside>
     )}
     <main id="contenu">
       {ariane.length > 0 && (

@@ -22,7 +22,6 @@ interface Membre {
   derniere_connexion: string | null;
   bloque_jusqua: string | null;
   nb_appareils: number;
-  whatsapp: string | null;
 }
 
 export interface Connexion {
@@ -113,7 +112,7 @@ function CarteMembre({ m, moi, recharger, montrer }: { m: Membre; moi: string; r
           {bloque ? <Pastille ton="alerte">{tr('bloqué 15 min', 'bloqueado 15 min', 'locked 15 min')}</Pastille> : null}
         </p>
         <p class="o-muet">
-          {t('derniereConnexion')} : {date(m.derniere_connexion, true)} · {m.nb_appareils} {t('appareils')} · NDA {m.nda_accepte_le ? date(m.nda_accepte_le) : '—'} · WhatsApp {m.whatsapp ?? '—'}
+          {t('derniereConnexion')} : {date(m.derniere_connexion, true)} · {m.nb_appareils} {t('appareils')} · NDA {m.nda_accepte_le ? date(m.nda_accepte_le) : '—'}
         </p>
         <div class="o-grille">
           <Champ label={t('role')}>

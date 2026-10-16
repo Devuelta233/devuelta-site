@@ -83,11 +83,12 @@ describe('e-mails automatiques', () => {
       expect(sans.texte + avec.texte).not.toMatch(INTERDITS);
     });
 
-    it(`${lang} : copie signée, avec le WhatsApp de la personne qui suit le dossier`, () => {
+    it(`${lang} : copie signée, avec le prénom de la personne qui suit le dossier (réponse par e-mail, jamais WhatsApp)`, () => {
       const base = { pseudo: 'Awa', ref: 'DV-2026-0007', documentSigne: 'DOCUMENT SIGNÉ', ouverture: '29,50 €', debutImmediat: true };
-      const avec = emailSigne({ ...base, prenom: 'Paola', whatsapp: '+41 78 000 00 00' }, lang);
-      const sans = emailSigne({ ...base, prenom: null, whatsapp: null, debutImmediat: false }, lang);
-      expect(avec.texte).toContain('+41 78 000 00 00');
+      const avec = emailSigne({ ...base, prenom: 'Paola' }, lang);
+      const sans = emailSigne({ ...base, prenom: null, debutImmediat: false }, lang);
+      expect(avec.texte).not.toMatch(/whatsapp/i);
+      expect(avec.texte).toMatch(/répondez à cet e-mail|responde a este correo|reply to this email/);
       expect(avec.texte).toContain('Paola');
       expect(avec.texte).toContain('DOCUMENT SIGNÉ');
       expect(avec.texte).toContain('29,50 €');
@@ -115,7 +116,7 @@ describe('paiement en ligne', () => {
       expect(recu.texte).toMatch(/40/);
       expect(lien.texte + recu.texte).not.toMatch(INTERDITS);
       const signe = emailSigne(
-        { pseudo: 'Awa', ref: 'DV-2026-0007', documentSigne: 'DOC', prenom: null, whatsapp: null, ouverture: '40 €', debutImmediat: true, lienPaiement: 'https://checkout.paystack.com/abc', devise: 'GHS' },
+        { pseudo: 'Awa', ref: 'DV-2026-0007', documentSigne: 'DOC', prenom: null, ouverture: '40 €', debutImmediat: true, lienPaiement: 'https://checkout.paystack.com/abc', devise: 'GHS' },
         lang,
       );
       expect(signe.texte).toContain('https://checkout.paystack.com/abc');

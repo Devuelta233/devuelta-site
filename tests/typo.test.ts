@@ -11,6 +11,11 @@ describe('typographie française', () => {
   it('sans effet sur l’anglais, l’espagnol et les adresses', () => {
     expect(typo('Note: https://a.com/x?y=1 ¿Qué?')).toBe('Note: https://a.com/x?y=1 ¿Qué?');
   });
+  it('apostrophe typographique entre deux lettres, dans les trois langues', () => {
+    expect(typo("usurpation d'identité")).toBe('usurpation d\u2019identité');
+    expect(typo("don't")).toBe('don\u2019t');
+    expect(typo("'cité' et https://a.com/?q='x'")).toBe("'cité' et https://a.com/?q='x'");
+  });
   it('objets imbriqués', () => {
     expect(typoProfonde({ a: ['x ?'], b: { c: 'y !' }, n: 3 })).toEqual({ a: ['x\u202F?'], b: { c: 'y\u202F!' }, n: 3 });
   });

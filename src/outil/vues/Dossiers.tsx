@@ -110,7 +110,7 @@ export function NouveauDossier() {
     client_nom: '',
     client_email: '',
     client_whatsapp: '',
-    contact_prefere: 'whatsapp',
+    contact_prefere: 'email',
     langue: langue.value as string,
     pays: '',
     situation: 'autre',

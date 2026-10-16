@@ -53,6 +53,7 @@ const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
         <ul class="pays-liste">
           {pays.map((p) => <li><a href={`#pays-${p.code.toLowerCase()}`}>{p.nom[lang]}</a></li>)}
         </ul>
+        <p class="petit">{URGENCE.pasDeListe[lang]}</p>
       </nav>
     )}
 
@@ -83,7 +84,7 @@ const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
             {r.sms_ou_chat && <p class="petit">{r.sms_ou_chat}</p>}
             {r.url && (
               <p>
-                <a href={r.url} rel="noopener noreferrer" target="_blank">{URGENCE.site[lang]} : {new URL(r.url).hostname.replace(/^www\./, '')}</a>
+                <a href={r.url} rel="noopener noreferrer" target="_blank">{URGENCE.site[lang]}{lang === 'fr' ? ' : ' : ': '}{new URL(r.url).hostname.replace(/^www\./, '')}</a>
               </p>
             )}
           </div>
@@ -107,7 +108,6 @@ const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
         ))}
       </section>
     )}
-    <p class="petit">{URGENCE.pasDeListe[lang]}</p>
     {date && <p class="petit">{C.verifieLe[lang]} {date}.</p>}
 
     <section class="encadre" aria-labelledby="traces">

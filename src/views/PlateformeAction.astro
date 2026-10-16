@@ -24,9 +24,11 @@ const [action, ...suivantes] = actions;
 const suites = articlesPour(situation).filter((x) => x.plateformes.includes(plateforme.id));
 const titreAction = action.titre[lang];
 const deux = (s: string) => (lang === 'fr' ? s : s.replace(' : ', ': '));
-const h1Defaut = deux(
-  titreAction.toLowerCase().includes(plateforme.nom.toLowerCase()) ? titreAction : `${plateforme.nom} : ${titreAction.charAt(0).toLowerCase()}${titreAction.slice(1)}`,
-);
+// Après « Plateforme : », minuscule au premier mot, sauf nom propre ou sigle
+// (« Union européenne », « Europe », « DSA » gardent leur majuscule).
+const NOMS_PROPRES = /^(Union|Unión|European|Europe|Europa|[A-Z]{2,})\b/;
+const suite = NOMS_PROPRES.test(titreAction) ? titreAction : `${titreAction.charAt(0).toLowerCase()}${titreAction.slice(1)}`;
+const h1Defaut = deux(titreAction.toLowerCase().includes(plateforme.nom.toLowerCase()) ? titreAction : `${plateforme.nom} : ${suite}`);
 const seo = SEO_PLATEFORME[`${situation}:${plateforme.id}`]?.[lang];
 const h1 = seo?.h1 ?? h1Defaut;
 const titre = seo?.titre ?? h1Defaut;

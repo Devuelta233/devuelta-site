@@ -64,10 +64,12 @@ export const C = {
   } as T3,
   urgenceLien: { fr: 'Les numéros d’aide par pays', es: 'Los números de ayuda por país', en: 'Helplines by country' } as T3,
   ecrireTitre: { fr: 'Nous écrire', es: 'Escríbenos', en: 'Write to us' } as T3,
-  whatsappApres: {
-    fr: 'Le numéro WhatsApp de la personne qui suit votre dossier vous est donné dès l’ouverture du dossier.',
-    es: 'El número de WhatsApp de la persona que lleva tu caso se te da en cuanto se abre el caso.',
-    en: 'The WhatsApp number of the person handling your case is given to you as soon as your case is opened.',
+  // Tout passe par e-mail (décision du 16/10/2026 : pas de WhatsApp). Le rappel
+  // des adresses officielles protège contre les faux « Devuelta ».
+  suiviEmail: {
+    fr: 'Une fois votre dossier ouvert, la personne qui le suit vous écrit par e-mail. Nos messages viennent uniquement de team.devuelta@protonmail.com, ou de team@getdevuelta.com pour les messages automatiques. Nous ne vous contactons jamais en premier sur les réseaux sociaux.',
+    es: 'Cuando se abre tu caso, la persona que lo lleva te escribe por correo. Nuestros mensajes solo vienen de team.devuelta@protonmail.com, o de team@getdevuelta.com para los mensajes automáticos. Nunca te contactamos primero por redes sociales.',
+    en: 'Once your case is opened, the person handling it writes to you by email. Our messages only come from team.devuelta@protonmail.com, or team@getdevuelta.com for automatic messages. We never contact you first on social media.',
   } as T3,
   reponseEn: {
     fr: 'Réponse en français',

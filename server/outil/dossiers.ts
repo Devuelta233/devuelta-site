@@ -213,7 +213,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
       .all(),
   ]);
   const assigne = d.assigne_a
-    ? await env.DB.prepare('SELECT nom, whatsapp FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string; whatsapp: string | null }>()
+    ? await env.DB.prepare('SELECT nom FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string }>()
     : null;
   const retractations = await pourDossier(env.DB, d.id);
   const signature = await signaturePourDossier(env.DB, d.id);
@@ -248,7 +248,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
   }));
   return json({
     ok: true,
-    dossier: { ...d, assigne_nom: assigne?.nom ?? null, assigne_whatsapp: assigne?.whatsapp ?? null },
+    dossier: { ...d, assigne_nom: assigne?.nom ?? null },
     contenus: liens,
     etapes: etapes.results,
     courriers: courriers.results,

@@ -106,7 +106,6 @@ interface Dossier {
   situation: string;
   assigne_a: string | null;
   assigne_nom: string | null;
-  assigne_whatsapp: string | null;
   client_pseudo: string;
   client_nom: string | null;
   client_email: string | null;
@@ -256,21 +255,11 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
 
 // Résumé ------------------------------------------------------------------------
 
-// Mandat signé : le client reçoit (par e-mail) le WhatsApp de la personne qui suit son dossier.
+// Mandat signé : le client apprend qui suit son dossier ; il lui écrit en répondant par e-mail.
 function MessageOuverture({ x }: { x: Dossier }) {
   const lc: Lang = isLang(x.langue) ? x.langue : 'fr';
   if (!x.assigne_nom) return null;
-  if (!x.assigne_whatsapp) {
-    return (
-      <div class="o-encadre o-info">
-        <strong>{t('ouvertureTitre')}</strong>
-        <p>
-          {x.assigne_nom} {t('whatsappManquant')}
-        </p>
-      </div>
-    );
-  }
-  const texte = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom, whatsapp: x.assigne_whatsapp }, lc);
+  const texte = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom }, lc);
   return (
     <div class="o-encadre o-info">
       <strong>{t('ouvertureTitre')}</strong>

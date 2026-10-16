@@ -60,7 +60,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       {
         titre: 'Qui y a accès',
         paras: [
-          'Notre équipe de trois personnes, liées par un accord de confidentialité, avec double authentification. Notre hébergeur technique, Cloudflare, stocke les données pour notre compte et envoie nos e-mails automatiques (accusés de réception, liens de signature). Pour vous répondre plus vite, un outil d’intelligence artificielle fonctionnant chez Cloudflare peut préparer un brouillon de réponse à partir de votre demande : une personne de l’équipe le relit et le corrige toujours avant l’envoi. Nos autres e-mails passent par Proton Mail ; si vous nous écrivez par WhatsApp, WhatsApp transporte vos messages.',
+          'Notre équipe de trois personnes, liées par un accord de confidentialité, avec double authentification. Notre hébergeur technique, Cloudflare, stocke les données pour notre compte et envoie nos e-mails automatiques (accusés de réception, liens de signature). Pour vous répondre plus vite, un outil d’intelligence artificielle fonctionnant chez Cloudflare peut préparer un brouillon de réponse à partir de votre demande : une personne de l’équipe le relit et le corrige toujours avant l’envoi. Nos autres e-mails passent par Proton Mail.',
           'Quand vous approuvez une demande, nous transmettons au site, à la plateforme ou à l’hébergeur concerné uniquement ce qui est nécessaire à cette demande. Si vous payez en ligne, le prestataire de paiement reçoit ce qui est nécessaire au paiement ; nous ne voyons jamais votre numéro de carte. Personne d’autre : aucune vente, aucune publicité.',
           'Notre équipe travaille depuis le Ghana. Les données sont hébergées par Cloudflare ; la base de données principale se trouve en Europe de l’Ouest.',
         ],
@@ -122,7 +122,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       {
         titre: 'Quién tiene acceso',
         paras: [
-          'Nuestro equipo de tres personas, con acuerdo de confidencialidad y verificación en dos pasos. Nuestro proveedor técnico, Cloudflare, almacena los datos por cuenta nuestra y envía nuestros correos automáticos (acuses de recibo, enlaces de firma). Para responderte más rápido, una herramienta de inteligencia artificial que funciona en Cloudflare puede preparar un borrador de respuesta a partir de tu solicitud: una persona del equipo siempre lo revisa y lo corrige antes de enviarlo. Nuestros demás correos pasan por Proton Mail; si nos escribes por WhatsApp, WhatsApp transporta tus mensajes.',
+          'Nuestro equipo de tres personas, con acuerdo de confidencialidad y verificación en dos pasos. Nuestro proveedor técnico, Cloudflare, almacena los datos por cuenta nuestra y envía nuestros correos automáticos (acuses de recibo, enlaces de firma). Para responderte más rápido, una herramienta de inteligencia artificial que funciona en Cloudflare puede preparar un borrador de respuesta a partir de tu solicitud: una persona del equipo siempre lo revisa y lo corrige antes de enviarlo. Nuestros demás correos pasan por Proton Mail.',
           'Cuando apruebas una solicitud, enviamos al sitio, a la plataforma o al proveedor de alojamiento correspondiente solo lo necesario para esa solicitud. Si pagas en línea, el proveedor de pagos recibe lo necesario para el pago; nunca vemos el número de tu tarjeta. Nadie más: ninguna venta, ninguna publicidad.',
           'Nuestro equipo trabaja desde Ghana. Los datos están alojados en Cloudflare; la base de datos principal está en Europa occidental.',
         ],
@@ -180,7 +180,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       {
         titre: 'Who has access',
         paras: [
-          'Our team of three, bound by a confidentiality agreement and using two-factor authentication. Our technical host, Cloudflare, stores the data on our behalf and sends our automatic emails (acknowledgements, signing links). To reply faster, an artificial intelligence tool running at Cloudflare may prepare a draft reply from your request: a member of the team always reads and corrects it before it is sent. Our other emails go through Proton Mail; if you write to us on WhatsApp, WhatsApp carries your messages.',
+          'Our team of three, bound by a confidentiality agreement and using two-factor authentication. Our technical host, Cloudflare, stores the data on our behalf and sends our automatic emails (acknowledgements, signing links). To reply faster, an artificial intelligence tool running at Cloudflare may prepare a draft reply from your request: a member of the team always reads and corrects it before it is sent. Our other emails go through Proton Mail.',
           'When you approve a request, we send the site, platform or host concerned only what that request needs. If you pay online, the payment provider receives what the payment needs; we never see your card number. Nobody else: no selling, no advertising.',
           'Our team works from Ghana. Data is hosted by Cloudflare; the main database is located in Western Europe.',
         ],

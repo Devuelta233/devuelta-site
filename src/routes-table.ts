@@ -23,7 +23,7 @@ export interface EntreeRoute {
 }
 
 // Date de la dernière révision des textes éditoriaux (à changer quand on les modifie).
-export const TEXTES_MAJ = '2026-10-15';
+export const TEXTES_MAJ = '2026-10-16';
 const jour = (d: string | undefined) => (d && /^\d{4}-\d{2}-\d{2}/.test(d) ? d.slice(0, 10) : TEXTES_MAJ);
 
 const FIXES: PageFixe[] = Object.keys(SLUGS) as PageFixe[];

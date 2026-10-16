@@ -40,7 +40,7 @@ export const SITUATION_LABEL: Record<Situation, T3> = {
     en: 'Fake or AI-generated image',
   },
   usurpation: {
-    fr: "Faux profil ou usurpation d'identité",
+    fr: "Faux profil ou usurpation d’identité",
     es: 'Perfil falso o suplantación de identidad',
     en: 'Fake profile or impersonation',
   },
@@ -115,7 +115,7 @@ export const PAYS_LABEL: Record<Pays, T3> = {
   GB: { fr: 'Royaume-Uni', es: 'Reino Unido', en: 'United Kingdom' },
   CA: { fr: 'Canada', es: 'Canadá', en: 'Canada' },
   GH: { fr: 'Ghana', es: 'Ghana', en: 'Ghana' },
-  CI: { fr: "Côte d'Ivoire", es: 'Costa de Marfil', en: "Côte d'Ivoire" },
+  CI: { fr: "Côte d’Ivoire", es: 'Costa de Marfil', en: "Côte d’Ivoire" },
   ZZ: { fr: 'Autre pays', es: 'Otro país', en: 'Another country' },
 };
 

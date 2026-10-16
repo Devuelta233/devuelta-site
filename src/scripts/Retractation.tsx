@@ -1,5 +1,5 @@
-// Formulaire « Renoncer au contrat ici » : nom, dossier concerné, et où recevoir
-// l'accusé de réception. Le bouton d'envoi porte le libellé imposé
+// Formulaire « Renoncer au contrat ici » : nom, dossier concerné, et l'adresse
+// e-mail où recevoir l'accusé de réception. Le bouton d'envoi porte le libellé imposé
 // (« Confirmer la rétractation ») ; rien ne part sans lui.
 
 import { useEffect, useRef, useState } from 'preact/hooks';
@@ -18,11 +18,7 @@ const FR = {
   nomAide: 'Ou le nom donné à l’ouverture du dossier.',
   dossier: 'Numéro de dossier (facultatif)',
   dossierAide: 'Il commence par DV-, par exemple DV-2026-0012. Il figure sur nos messages.',
-  ou: 'Où recevoir l’accusé de réception ?',
-  whatsapp: 'WhatsApp',
-  email: 'E-mail',
-  numero: 'Votre numéro WhatsApp (avec l’indicatif, ex. +33…)',
-  adresse: 'Votre adresse e-mail',
+  adresse: 'Votre adresse e-mail, pour l’accusé de réception',
   message: 'Un message (facultatif)',
   donnees: 'Ces informations servent seulement à traiter votre rétractation.',
   confidentialite: 'Politique de confidentialité',
@@ -31,10 +27,7 @@ const FR = {
   merciTitre: 'Votre rétractation est enregistrée.',
   merciRef: 'Référence',
   merciDate: 'Reçue le',
-  merciTexte: {
-    email: 'Nous arrêtons les démarches. Vous recevez un accusé de réception par e-mail, au plus tard le jour ouvré suivant. Faites une capture de cet écran pour garder une trace.',
-    whatsapp: 'Nous arrêtons les démarches. Vous recevez un accusé de réception par WhatsApp, au plus tard le jour ouvré suivant. Faites une capture de cet écran pour garder une trace.',
-  },
+  merciTexte: 'Nous arrêtons les démarches. Vous recevez un accusé de réception par e-mail, au plus tard le jour ouvré suivant. Faites une capture de cet écran pour garder une trace.',
   merciAccuse: 'Nous arrêtons les démarches. L’accusé de réception vient de vous être envoyé par e-mail (regardez aussi dans les indésirables). Faites une capture de cet écran pour garder une trace.',
   erreurs: {
     'champ-manquant': 'Un champ obligatoire est vide.',
@@ -54,11 +47,7 @@ const ES: Textes = {
   nomAide: 'O el nombre que diste al abrir el caso.',
   dossier: 'Número de caso (opcional)',
   dossierAide: 'Empieza por DV-, por ejemplo DV-2026-0012. Aparece en nuestros mensajes.',
-  ou: '¿Dónde quieres recibir el acuse de recibo?',
-  whatsapp: 'WhatsApp',
-  email: 'Correo electrónico',
-  numero: 'Tu número de WhatsApp (con el prefijo del país, p. ej. +34…)',
-  adresse: 'Tu correo electrónico',
+  adresse: 'Tu correo electrónico, para el acuse de recibo',
   message: 'Un mensaje (opcional)',
   donnees: 'Estos datos solo sirven para tramitar tu desistimiento.',
   confidentialite: 'Política de privacidad',
@@ -67,10 +56,7 @@ const ES: Textes = {
   merciTitre: 'Tu desistimiento está registrado.',
   merciRef: 'Referencia',
   merciDate: 'Recibido el',
-  merciTexte: {
-    email: 'Detenemos las gestiones. Recibirás un acuse de recibo por correo electrónico a más tardar el siguiente día hábil. Haz una captura de esta pantalla para guardar constancia.',
-    whatsapp: 'Detenemos las gestiones. Recibirás un acuse de recibo por WhatsApp a más tardar el siguiente día hábil. Haz una captura de esta pantalla para guardar constancia.',
-  },
+  merciTexte: 'Detenemos las gestiones. Recibirás un acuse de recibo por correo electrónico a más tardar el siguiente día hábil. Haz una captura de esta pantalla para guardar constancia.',
   merciAccuse: 'Detenemos las gestiones. Te acabamos de enviar el acuse de recibo por correo (mira también en spam). Haz una captura de esta pantalla para guardar constancia.',
   erreurs: {
     'champ-manquant': 'Falta un campo obligatorio.',
@@ -88,11 +74,7 @@ const EN: Textes = {
   nomAide: 'Or the name you gave when the case was opened.',
   dossier: 'Case number (optional)',
   dossierAide: 'It starts with DV-, for example DV-2026-0012. You will find it in our messages.',
-  ou: 'Where should we send the acknowledgement?',
-  whatsapp: 'WhatsApp',
-  email: 'Email',
-  numero: 'Your WhatsApp number (with country code, e.g. +44…)',
-  adresse: 'Your email address',
+  adresse: 'Your email address, for the acknowledgement',
   message: 'A message (optional)',
   donnees: 'We only use this information to process your withdrawal.',
   confidentialite: 'Privacy policy',
@@ -101,10 +83,7 @@ const EN: Textes = {
   merciTitre: 'Your withdrawal is recorded.',
   merciRef: 'Reference',
   merciDate: 'Received on',
-  merciTexte: {
-    email: 'We are stopping work on your case. You will get an acknowledgement by email by the next working day at the latest. Take a screenshot of this screen to keep a record.',
-    whatsapp: 'We are stopping work on your case. You will get an acknowledgement by WhatsApp by the next working day at the latest. Take a screenshot of this screen to keep a record.',
-  },
+  merciTexte: 'We are stopping work on your case. You will get an acknowledgement by email by the next working day at the latest. Take a screenshot of this screen to keep a record.',
   merciAccuse: 'We are stopping work on your case. The acknowledgement has just been sent to you by email (check your spam folder too). Take a screenshot of this screen to keep a record.',
   erreurs: {
     'champ-manquant': 'A required field is empty.',
@@ -123,7 +102,6 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
   const libelle = LIBELLE_RETRACTATION[d.lang];
   const [nom, setNom] = useState('');
   const [dossier, setDossier] = useState('');
-  const [mode, setMode] = useState<'whatsapp' | 'email'>('email');
   const [contact, setContact] = useState('');
   const [message, setMessage] = useState('');
   const [piege, setPiege] = useState('');
@@ -156,7 +134,7 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
           langue: d.lang,
           nom,
           dossier,
-          contact_mode: mode,
+          contact_mode: 'email',
           contact_valeur: contact,
           message,
           confirme: true,
@@ -185,7 +163,7 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
         <p>
           {t.merciDate} {dateHeureGmt(recu.le, d.lang)}
         </p>
-        <p>{recu.accuse ? t.merciAccuse : t.merciTexte[mode]}</p>
+        <p>{recu.accuse ? t.merciAccuse : t.merciTexte}</p>
       </div>
     );
   }
@@ -205,28 +183,15 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
         <input id="r-dossier" type="text" autocomplete="off" maxLength={40} value={dossier} onInput={(e) => setDossier((e.target as HTMLInputElement).value)} />
         <span class="aide">{t.dossierAide}</span>
       </div>
-      <fieldset>
-        <legend>{t.ou}</legend>
-        <div class="choix choix-grille">
-          <label>
-            <input type="radio" name="mode" checked={mode === 'email'} onChange={() => setMode('email')} />
-            <span>{t.email}</span>
-          </label>
-          <label>
-            <input type="radio" name="mode" checked={mode === 'whatsapp'} onChange={() => setMode('whatsapp')} />
-            <span>{t.whatsapp}</span>
-          </label>
-        </div>
-      </fieldset>
       <div class="champ">
         <label for="r-contact">
-          {mode === 'whatsapp' ? t.numero : t.adresse} <span class="aide-inline">({t.obligatoire})</span>
+          {t.adresse} <span class="aide-inline">({t.obligatoire})</span>
         </label>
         <input
           id="r-contact"
-          type={mode === 'whatsapp' ? 'tel' : 'email'}
-          autocomplete={mode === 'whatsapp' ? 'tel' : 'email'}
-          inputMode={mode === 'whatsapp' ? 'tel' : 'email'}
+          type="email"
+          autocomplete="email"
+          inputMode="email"
           value={contact}
           onInput={(e) => setContact((e.target as HTMLInputElement).value)}
         />

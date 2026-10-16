@@ -7,9 +7,8 @@ export { SITE_URL } from '../shared/site';
 export const EMAIL = CONTACT_EMAIL;
 
 // Contact public : une seule boîte, « Team Devuelta ». Aucun prénom, aucun numéro
-// sur le site : la demande est attribuée dans l'outil selon la langue, et le
-// client reçoit le WhatsApp de la personne qui suit son dossier seulement à
-// l'ouverture du dossier (mandat signé).
+// sur le site : la demande est attribuée dans l'outil selon la langue, et tout
+// se passe ensuite par e-mail (pas de WhatsApp, décision du 16/10/2026).
 export const NOM_CONTACT = 'Team Devuelta';
 
 export const NOM_LANGUE: Record<Lang, string> = { fr: 'Français', es: 'Español', en: 'English' };

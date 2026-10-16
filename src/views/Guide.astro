@@ -47,7 +47,7 @@ const jsonld = [
       <span>{C.verifieLe[lang]} <strong>{date}</strong></span>
       {g.source_officielle?.url && (
         <span>
-          {C.sourceOfficielle[lang]} : <a href={g.source_officielle.url} rel="noopener noreferrer" target="_blank">{new URL(g.source_officielle.url).hostname.replace(/^www\./, '')}</a>
+          {C.sourceOfficielle[lang]}{lang === 'fr' ? ' : ' : ': '}<a href={g.source_officielle.url} rel="noopener noreferrer" target="_blank">{new URL(g.source_officielle.url).hostname.replace(/^www\./, '')}</a>
         </span>
       )}
     </p>

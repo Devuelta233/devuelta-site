@@ -157,7 +157,6 @@ export interface DonneesSigne {
   ref: string;
   documentSigne: string;
   prenom: string | null;
-  whatsapp: string | null;
   /** Montant d'ouverture, déjà mis en forme (ex. « 29,50 € »). */
   ouverture: string;
   debutImmediat: boolean;
@@ -177,8 +176,8 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
         '',
         `Gracias, ya está firmado. Tu caso es el ${d.ref}.`,
         '',
-        d.prenom && d.whatsapp
-          ? `${d.prenom} se encarga de él. Puedes escribirle por WhatsApp al ${d.whatsapp}, indicando tu número de caso.`
+        d.prenom
+          ? `${d.prenom} se encarga de él. Para escribirle, responde a este correo indicando tu número de caso.`
           : 'La persona que lleva tu caso te escribe muy pronto.',
         '',
         ...(d.lienPaiement
@@ -207,8 +206,8 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
         '',
         `Thank you, it is signed. Your case is ${d.ref}.`,
         '',
-        d.prenom && d.whatsapp
-          ? `${d.prenom} is handling it. You can message them on WhatsApp at ${d.whatsapp}, quoting your case number.`
+        d.prenom
+          ? `${d.prenom} is handling it. To write to them, reply to this email, quoting your case number.`
           : 'The person handling your case will write to you very soon.',
         '',
         ...(d.lienPaiement
@@ -237,8 +236,8 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
       '',
       `Merci, c’est signé. Votre dossier porte le numéro ${d.ref}.`,
       '',
-      d.prenom && d.whatsapp
-        ? `C’est ${d.prenom} qui s’en occupe. Vous pouvez lui écrire sur WhatsApp au ${d.whatsapp}, en indiquant votre numéro de dossier.`
+      d.prenom
+        ? `C’est ${d.prenom} qui s’en occupe. Pour lui écrire, répondez à cet e-mail en indiquant votre numéro de dossier.`
         : 'La personne qui suit votre dossier vous écrit très vite.',
       '',
       ...(d.lienPaiement

@@ -3095,7 +3095,7 @@
   },
   {
    "id": "google",
-   "nom": "Google (Recherche)",
+   "nom": "Google",
    "type": "moteur",
    "actions": [
     {
@@ -3333,7 +3333,7 @@
   },
   {
    "id": "google-maps",
-   "nom": "Google Maps / Fiche d’établissement",
+   "nom": "Google Maps",
    "type": "avis",
    "actions": [
     {
