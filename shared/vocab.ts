@@ -88,7 +88,20 @@ export function isSituation(v: unknown): v is Situation {
 // Pays proposés. « ZZ » = autre pays.
 export const PAYS = ['FR', 'BE', 'CH', 'ES', 'MX', 'AR', 'CO', 'US', 'GB', 'CA', 'GH', 'CI', 'ZZ'] as const;
 export type Pays = (typeof PAYS)[number];
-export const PAYS_UE: readonly string[] = ['FR', 'BE', 'ES'];
+// Union européenne (avec les régions ultrapériphériques françaises) : droits du DSA,
+// droit de rétractation.
+export const PAYS_UE: readonly string[] = (
+  'AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GF GP MQ RE YT MF'
+).split(' ');
+
+/** Tous les autres pays acceptés (codes ISO 3166-1 alpha-2), pour que personne ne soit « autre pays ». */
+export const AUTRES_CODES_PAYS: readonly string[] = (
+  'AD AE AF AG AI AL AM AO AS AT AU AW AX AZ BA BB BD BF BG BH BI BJ BL BM BN BO BQ BR BS BT BW BY BZ CC CD CF CG CK CL CM CN CR CU CV CW CX CY CZ ' +
+  'DE DJ DK DM DO DZ EC EE EG EH ER ET FI FJ FK FM FO GA GD GE GF GG GI GL GM GN GP GQ GR GT GU GW GY HK HN HR HT HU ID IE IL IM IN IQ IR IS IT ' +
+  'JE JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MY MZ ' +
+  'NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ' +
+  'ST SV SX SY SZ TC TD TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UY UZ VA VC VE VG VI VN VU WF WS XK YE YT ZA ZM ZW'
+).split(' ');
 
 export const PAYS_LABEL: Record<Pays, T3> = {
   FR: { fr: 'France', es: 'Francia', en: 'France' },
@@ -106,8 +119,34 @@ export const PAYS_LABEL: Record<Pays, T3> = {
   ZZ: { fr: 'Autre pays', es: 'Otro país', en: 'Another country' },
 };
 
-export function isPays(v: unknown): v is Pays {
-  return typeof v === 'string' && (PAYS as readonly string[]).includes(v);
+export function isPays(v: unknown): v is string {
+  return typeof v === 'string' && ((PAYS as readonly string[]).includes(v) || AUTRES_CODES_PAYS.includes(v));
+}
+
+const nomsRegion = new Map<string, Intl.DisplayNames | null>();
+
+/** Nom d'un pays dans la langue voulue (liste principale, sinon noms standard du navigateur). */
+export function nomPays(code: string, lang: Lang): string {
+  if ((PAYS as readonly string[]).includes(code)) return PAYS_LABEL[code as Pays][lang];
+  if (!nomsRegion.has(lang)) {
+    try {
+      nomsRegion.set(lang, new Intl.DisplayNames([lang], { type: 'region' }));
+    } catch {
+      nomsRegion.set(lang, null);
+    }
+  }
+  try {
+    return nomsRegion.get(lang)?.of(code) ?? code;
+  } catch {
+    return code;
+  }
+}
+
+/** Les autres pays, triés par nom dans la langue voulue. */
+export function autresPays(lang: Lang): Array<{ code: string; nom: string }> {
+  return AUTRES_CODES_PAYS.filter((c) => !(PAYS as readonly string[]).includes(c))
+    .map((code) => ({ code, nom: nomPays(code, lang) }))
+    .sort((a, b) => a.nom.localeCompare(b.nom, lang));
 }
 
 // Outil interne ---------------------------------------------------------------

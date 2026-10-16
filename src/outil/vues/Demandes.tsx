@@ -1,7 +1,7 @@
 // Demandes reçues depuis le site : qualifier, ouvrir un dossier ou orienter.
 
 import { useState } from 'preact/hooks';
-import { PAYS_LABEL, SITUATION_LABEL, isPays, isSituation } from '../../../shared/vocab';
+import { SITUATION_LABEL, isPays, isSituation, nomPays } from '../../../shared/vocab';
 import { get, post } from '../api';
 import { code, date, langue, t, tr } from '../i18n';
 import { Champ, Chargement, LienExterne, MessageErreur, Pastille, aller, useAction, useCharger, valeur } from '../ui';
@@ -131,7 +131,7 @@ export function DetailDemande({ id }: { id: string }) {
         <dt>{t('situation')}</dt>
         <dd>{isSituation(d.situation) ? SITUATION_LABEL[d.situation][lang] : d.situation}</dd>
         <dt>{t('pays')}</dt>
-        <dd>{d.pays && isPays(d.pays) ? PAYS_LABEL[d.pays][lang] : t('inconnu')}</dd>
+        <dd>{d.pays && isPays(d.pays) ? nomPays(d.pays, lang) : t('inconnu')}</dd>
         <dt>{t('langueDossier')}</dt>
         <dd>{d.langue.toUpperCase()}</dd>
         <dt>{t('publieParSoi')}</dt>

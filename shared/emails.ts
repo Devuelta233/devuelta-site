@@ -3,6 +3,7 @@
 // (seulement la référence), et chaque message rappelle comment repérer un faux.
 
 import { SITE_URL } from './site';
+import { euros } from './tarifs';
 import { typo } from './typo';
 import type { Lang } from './vocab';
 
@@ -21,9 +22,42 @@ const ANTI_ARNAQUE: Record<Lang, string> = {
 
 const SIGNATURE = 'Team Devuelta';
 
+/** Prix indicatif donné dès l'accusé de réception (confirmé ensuite par l'équipe). */
+export interface Estimation {
+  liens: number;
+  total: number | null;
+  ouverture: number | null;
+  /** Prix d'un lien dans la zone du client, quand aucun lien n'a été donné. */
+  aPartirDe: number;
+}
+
+function phrasePrix(e: Estimation, lang: Lang): string {
+  const m = (n: number) => euros(n, lang);
+  if (e.liens > 15 || (e.liens > 0 && e.total === null)) {
+    return { fr: 'plus de 15 liens : nous vous faisons un devis.', es: 'más de 15 enlaces: te hacemos un presupuesto.', en: 'more than 15 links: we will send you a quote.' }[lang];
+  }
+  if (e.liens === 0 || e.total === null || e.ouverture === null) {
+    if (lang === 'es') return `desde ${m(e.aPartirDe)} por un enlace: la mitad para empezar y el resto solo si se retira.`;
+    if (lang === 'en') return `from ${m(e.aPartirDe)} for one link: half to start, the rest only if it is removed.`;
+    return `à partir de ${m(e.aPartirDe)} pour un lien : la moitié pour démarrer, le reste seulement s’il est retiré.`;
+  }
+  const n = e.liens;
+  if (lang === 'es') {
+    return `${n} enlace${n > 1 ? 's' : ''}, ${m(e.total)} en total: ${m(e.ouverture)} para empezar, el resto solo por los enlaces retirados. Te confirmamos este precio después de leer tu solicitud.`;
+  }
+  if (lang === 'en') {
+    return `${n} link${n > 1 ? 's' : ''}, ${m(e.total)} in total: ${m(e.ouverture)} to start, the rest only for the links removed. We confirm this price after reading your request.`;
+  }
+  return `${n} lien${n > 1 ? 's' : ''}, ${m(e.total)} au total : ${m(e.ouverture)} pour démarrer, le reste seulement pour les liens retirés. Ce prix vous est confirmé après lecture de votre demande.`;
+}
+
 /** Juste après l'envoi du formulaire « Confier mon dossier ». */
-export function emailDemandeRecue(d: { pseudo: string; ref: string; menace: boolean }, lang: Lang): Courriel {
-  const guides = `${SITE_URL}${QUE_FAIRE[lang]}`;
+export function emailDemandeRecue(
+  d: { pseudo: string; ref: string; menace: boolean; guide?: string | null; estimation?: Estimation | null },
+  lang: Lang,
+): Courriel {
+  const guides = d.guide ?? `${SITE_URL}${QUE_FAIRE[lang]}`;
+  const prix = d.estimation ? phrasePrix(d.estimation, lang) : null;
   if (lang === 'es') {
     return {
       sujet: `Devuelta: solicitud ${d.ref} recibida`,
@@ -41,8 +75,9 @@ export function emailDemandeRecue(d: { pseudo: string; ref: string; menace: bool
           ? ['', 'Nos has indicado que hay amenazas. Si te piden dinero, no pagues. No respondas más y guarda capturas de pantalla. Miramos tu solicitud con prioridad.']
           : []),
         '',
-        'Mientras tanto, nuestras guías gratuitas explican los primeros pasos:',
-        guides,
+        'Para avanzar ya:',
+        `– La guía gratuita para tu situación: ${guides}`,
+        ...(prix ? [`– Si prefieres que nos ocupemos nosotros: ${prix}`] : []),
         '',
         ANTI_ARNAQUE.es,
         '',
@@ -69,8 +104,9 @@ export function emailDemandeRecue(d: { pseudo: string; ref: string; menace: bool
           ? ['', 'You told us about threats. If someone asks you for money, do not pay. Stop replying, and keep screenshots. We are looking at your request first.']
           : []),
         '',
-        'In the meantime, our free guides explain the first steps:',
-        guides,
+        'To move forward right now:',
+        `– The free guide for your situation: ${guides}`,
+        ...(prix ? [`– If you would rather we handle it: ${prix}`] : []),
         '',
         ANTI_ARNAQUE.en,
         '',
@@ -96,8 +132,9 @@ export function emailDemandeRecue(d: { pseudo: string; ref: string; menace: bool
         ? ['', 'Vous nous avez signalé des menaces. Si on vous demande de l’argent, ne payez pas. Ne répondez plus, et gardez des captures d’écran. Nous regardons votre demande en priorité.']
         : []),
       '',
-      'En attendant, nos guides gratuits expliquent les premiers gestes :',
-      guides,
+      'Pour avancer dès maintenant :',
+      `– Le guide gratuit pour votre situation : ${guides}`,
+      ...(prix ? [`– Si vous préférez que nous nous en occupions : ${prix}`] : []),
       '',
       ANTI_ARNAQUE.fr,
       '',

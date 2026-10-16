@@ -2,7 +2,7 @@
 // recontacter la personne. Aucun fichier, aucune image.
 
 import { useEffect, useRef, useState } from 'preact/hooks';
-import { PAYS, PAYS_LABEL, SITUATIONS, SITUATION_LABEL, type Lang } from '../../shared/vocab';
+import { PAYS, PAYS_LABEL, SITUATIONS, SITUATION_LABEL, autresPays, isPays, type Lang } from '../../shared/vocab';
 import { TEXTES_CONFIER } from './confier-textes';
 import { compter } from './compteur';
 
@@ -52,6 +52,15 @@ export function Confier({ d }: { d: DonneesConfier }) {
       /* rien à pré-remplir */
     }
     compter('formulaire-ouvert');
+  }, []);
+  // Pays deviné d'après la connexion (rien n'est gardé), seulement si rien n'est choisi.
+  useEffect(() => {
+    fetch('/api/pays')
+      .then((r) => r.json())
+      .then((j: { pays?: string | null }) => {
+        if (j.pays && isPays(j.pays)) setPays((avant) => (avant && avant !== 'ZZ' ? avant : j.pays!));
+      })
+      .catch(() => undefined);
   }, []);
 
   useEffect(() => {
@@ -151,9 +160,15 @@ export function Confier({ d }: { d: DonneesConfier }) {
         </label>
         <select id="f-pays" required value={pays} onChange={(e) => setPays((e.target as HTMLSelectElement).value)}>
           <option value="">{t.choisir}</option>
-          {PAYS.map((p) => (
+          {PAYS.filter((p) => p !== 'ZZ').map((p) => (
             <option value={p}>{PAYS_LABEL[p][d.lang]}</option>
           ))}
+          <optgroup label={t.autresPays}>
+            {autresPays(d.lang).map((p) => (
+              <option value={p.code}>{p.nom}</option>
+            ))}
+          </optgroup>
+          <option value="ZZ">{PAYS_LABEL.ZZ[d.lang]}</option>
         </select>
       </div>
       <fieldset>

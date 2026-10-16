@@ -1,7 +1,7 @@
 // Liste des dossiers (filtres, recherche) et création d'un dossier.
 
 import { useState } from 'preact/hooks';
-import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, isSituation } from '../../../shared/vocab';
+import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, autresPays, isSituation } from '../../../shared/vocab';
 import { get, post } from '../api';
 import { code, date, langue, t } from '../i18n';
 import { Champ, Chargement, MessageErreur, Pastille, aller, useAction, useCharger, valeur } from '../ui';
@@ -169,9 +169,15 @@ export function NouveauDossier() {
           <Champ label={t('pays')}>
             <select value={f.pays} onChange={set('pays')}>
               <option value="">—</option>
-              {PAYS.map((p) => (
+              {PAYS.filter((p) => p !== 'ZZ').map((p) => (
                 <option value={p}>{PAYS_LABEL[p][lang]}</option>
               ))}
+              <optgroup label={t('autresPays')}>
+                {autresPays(lang).map((p) => (
+                  <option value={p.code}>{p.nom}</option>
+                ))}
+              </optgroup>
+              <option value="ZZ">{PAYS_LABEL.ZZ[lang]}</option>
             </select>
           </Champ>
           <Champ label={t('langueDossier')}>

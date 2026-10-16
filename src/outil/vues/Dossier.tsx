@@ -5,7 +5,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { COEF_PRO, COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
 import { texteOuverture } from '../../../shared/ouverture';
 import { typo } from '../../../shared/typo';
-import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isLang, isSituation, type Lang } from '../../../shared/vocab';
+import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, autresPays, isLang, isSituation, type Lang } from '../../../shared/vocab';
 import { del, get, patch, post } from '../api';
 import { extraireLiens } from '../liens';
 import { code, date, indexLangue, langue, t, tr } from '../i18n';
@@ -539,9 +539,15 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
         <Champ label={t('pays')}>
           <select value={f.pays ?? ''} onChange={set('pays')}>
             <option value="">—</option>
-            {PAYS.map((p) => (
+            {PAYS.filter((p) => p !== 'ZZ').map((p) => (
               <option value={p}>{PAYS_LABEL[p][lang]}</option>
             ))}
+            <optgroup label={t('autresPays')}>
+              {autresPays(lang).map((p) => (
+                <option value={p.code}>{p.nom}</option>
+              ))}
+            </optgroup>
+            <option value="ZZ">{PAYS_LABEL.ZZ[lang]}</option>
           </select>
         </Champ>
         <Champ label={t('priorite')}>

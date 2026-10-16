@@ -126,3 +126,32 @@ describe('paiement en ligne', () => {
     expect(noteDevise(null, 'fr')).toBe('');
   });
 });
+
+describe('accusé de réception : guide et prix indicatif', () => {
+  const guide = 'https://getdevuelta.com/que-faire/faux-profil/';
+  it('donne le guide de la situation et le prix selon le nombre de liens', () => {
+    const un = emailDemandeRecue({ pseudo: 'Awa', ref: 'D-2026-0042', menace: false, guide, estimation: { liens: 1, total: 40, ouverture: 20, aPartirDe: 40 } }, 'fr');
+    expect(un.texte).toContain(guide);
+    expect(un.texte).toMatch(/40\s€ au total/);
+    expect(un.texte).toMatch(/20\s€ pour démarrer/);
+    expect(un.texte).toMatch(/confirmé après lecture/);
+    const aucun = emailDemandeRecue({ pseudo: 'Kofi', ref: 'D-2026-0043', menace: false, guide: null, estimation: { liens: 0, total: null, ouverture: null, aPartirDe: 20 } }, 'en');
+    expect(aucun.texte).toContain('from €20 for one link');
+    expect(aucun.texte).toContain('https://getdevuelta.com/en/what-to-do/');
+    const beaucoup = emailDemandeRecue({ pseudo: 'Lucía', ref: 'D-2026-0044', menace: true, guide, estimation: { liens: 20, total: null, ouverture: null, aPartirDe: 40 } }, 'es');
+    expect(beaucoup.texte).toContain('presupuesto');
+  });
+});
+
+describe('pays : tout le monde a le sien', () => {
+  it('accepte tous les pays et les nomme dans chaque langue', async () => {
+    const { isPays, nomPays, autresPays, PAYS_UE } = await import('../shared/vocab');
+    expect(isPays('SN')).toBe(true);
+    expect(isPays('PE')).toBe(true);
+    expect(isPays('XX')).toBe(false);
+    expect(nomPays('SN', 'fr')).toBe('Sénégal');
+    expect(nomPays('FR', 'es')).toBe('Francia');
+    expect(autresPays('fr').length).toBeGreaterThan(200);
+    expect(PAYS_UE).toContain('DE');
+  });
+});

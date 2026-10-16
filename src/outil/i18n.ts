@@ -27,6 +27,7 @@ const D = typoProfonde({
   ajouter: ['Ajouter', 'Añadir', 'Add'],
   retour: ['Retour', 'Volver', 'Back'],
   oui: ['Oui', 'Sí', 'Yes'],
+  autresPays: ['Autres pays', 'Otros países', 'Other countries'],
   non: ['Non', 'No', 'No'],
   inconnu: ['Non renseigné', 'Sin indicar', 'Not set'],
   aucun: ['Aucun', 'Ninguno', 'None'],

@@ -22,6 +22,9 @@ import {
   type Env,
 } from './util';
 import { emailDemandeRecue } from '../shared/emails';
+import { SITE_URL } from '../shared/site';
+import { calculerPrix, zoneDuPays } from '../shared/tarifs';
+import { situationPath } from '../src/i18n/routes';
 import { envoyerCourriel } from './email';
 
 const PLATEFORME_OK = /^[a-z0-9-]{2,30}$/;
@@ -107,10 +110,15 @@ export async function recevoirDemande(request: Request, env: Env, ctx: Execution
   ctx.waitUntil(
     Promise.all([notifier(env.DB, [assigne]), compterEvenement(env.DB, 'demande')]).catch(() => undefined),
   );
-  // Accusé de réception automatique, dans la langue choisie.
+  // Accusé de réception automatique, dans la langue choisie : le guide gratuit qui
+  // correspond à la situation et un prix indicatif (confirmé ensuite par l'équipe).
+  const zone = zoneDuPays(pays) ?? 'standard';
+  const p = calculerPrix(liens.length, 0, zone);
+  const estimation = { liens: liens.length, total: p.total, ouverture: p.ouverture, aPartirDe: calculerPrix(1, 0, zone).total ?? 0 };
+  const guide = situation !== 'autre' ? `${SITE_URL}${situationPath(situation, langue)}` : null;
   const confirmation =
     contactMode === 'email' &&
-    (await envoyerCourriel(env, contactValeur, emailDemandeRecue({ pseudo, ref, menace: bool(body.menace) }, langue), {
+    (await envoyerCourriel(env, contactValeur, emailDemandeRecue({ pseudo, ref, menace: bool(body.menace), guide, estimation }, langue), {
       type: 'demande-recue',
       objet: 'demande',
       objet_id: id,

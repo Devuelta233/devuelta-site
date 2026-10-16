@@ -30,11 +30,12 @@ const FR = {
   confidentialite: 'Politique de confidentialité',
   envoyer: 'Envoyer ma demande',
   envoi: 'Envoi…',
+  autresPays: 'Autres pays',
   merciTitre: 'Votre demande est bien reçue.',
   merciRef: 'Votre référence',
   merciTexte:
     'Notez-la. Nous vous répondons par e-mail, en général sous 24 à 48 heures. Nos messages sont signés Team Devuelta, viennent de getdevuelta.com ou de {email}, et ne mentionnent jamais votre situation dans l’objet.',
-  merciConfirmation: 'Un e-mail de confirmation vient de partir. Rien reçu d’ici quelques minutes ? Regardez dans les indésirables.',
+  merciConfirmation: 'Un e-mail de confirmation vient de partir, avec le guide gratuit pour votre situation et un prix indicatif. Rien reçu d’ici quelques minutes ? Regardez dans les indésirables.',
   erreurs: {
     'champ-manquant': 'Un champ obligatoire est vide.',
     'email-invalide': 'L’adresse e-mail semble incorrecte.',
@@ -80,11 +81,12 @@ const ES: Textes = {
   confidentialite: 'Política de privacidad',
   envoyer: 'Enviar mi solicitud',
   envoi: 'Enviando…',
+  autresPays: 'Otros países',
   merciTitre: 'Hemos recibido tu solicitud.',
   merciRef: 'Tu referencia',
   merciTexte:
     'Anótala. Te respondemos por correo electrónico, normalmente en 24 a 48 horas. Nuestros mensajes van firmados por Team Devuelta, llegan desde getdevuelta.com o desde {email}, y nunca mencionan tu situación en el asunto.',
-  merciConfirmation: 'Te acabamos de enviar un correo de confirmación. ¿No te llega en unos minutos? Mira en la carpeta de spam.',
+  merciConfirmation: 'Te acabamos de enviar un correo de confirmación, con la guía gratuita para tu situación y un precio orientativo. ¿No te llega en unos minutos? Mira en la carpeta de spam.',
   erreurs: {
     'champ-manquant': 'Falta un campo obligatorio.',
     'email-invalide': 'El correo parece incorrecto.',
@@ -128,11 +130,12 @@ const EN: Textes = {
   confidentialite: 'Privacy policy',
   envoyer: 'Send my request',
   envoi: 'Sending…',
+  autresPays: 'Other countries',
   merciTitre: 'Your request has been received.',
   merciRef: 'Your reference',
   merciTexte:
     'Keep it. We reply by email, usually within 24 to 48 hours. Our messages are signed Team Devuelta, come from getdevuelta.com or {email}, and never mention your situation in the subject line.',
-  merciConfirmation: 'A confirmation email is on its way. Nothing within a few minutes? Check your spam folder.',
+  merciConfirmation: 'A confirmation email is on its way, with the free guide for your situation and an indicative price. Nothing within a few minutes? Check your spam folder.',
   erreurs: {
     'champ-manquant': 'A required field is empty.',
     'email-invalide': 'The email address looks wrong.',

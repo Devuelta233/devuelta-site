@@ -2,7 +2,7 @@
 // inconnue devient un marqueur « [À COMPLÉTER : …] » qui bloque la validation.
 
 import data from '../../shared/modeles.json';
-import { CONTACT_EMAIL, PAYS_LABEL, isPays, type Lang } from '../../shared/vocab';
+import { CONTACT_EMAIL, isPays, nomPays, type Lang } from '../../shared/vocab';
 
 export interface Modele {
   id: string;
@@ -87,7 +87,7 @@ export function genererCourrier(d: DonneesCourrier): { objet: string; corps: str
   }
   const vars: Record<string, string | null | undefined> = {
     client_nom: (d.dossier.client_nom as string | null) ?? null,
-    client_pays: isPays(pays) && pays !== 'ZZ' ? PAYS_LABEL[pays][langue] : null,
+    client_pays: isPays(pays) && pays !== 'ZZ' ? nomPays(pays, langue) : null,
     representant: d.representant,
     contact_email: CONTACT_EMAIL,
     destinataire: d.destinataire ?? null,

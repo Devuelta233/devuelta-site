@@ -12,7 +12,7 @@ import { lireSignature, signer } from './signature';
 import { ensureSchema } from './schema';
 import { compterEvenementPublic, compterVue } from './stats';
 import { executerTaches } from './taches';
-import { HttpError, errorResponse, type Env } from './util';
+import { HttpError, clientGeo, errorResponse, json, type Env } from './util';
 
 const CSP = [
   "default-src 'self'",
@@ -82,6 +82,8 @@ export default {
         if (url.pathname === '/api/signature/lire') return await lireSignature(request, env);
         if (url.pathname === '/api/signature/signer') return await signer(request, env, ctx);
         if (url.pathname === '/api/paiement/paystack') return await webhookPaystack(request, env, ctx);
+        // Pays de la connexion (d'après Cloudflare), pour pré-remplir le formulaire. Rien n'est gardé.
+        if (url.pathname === '/api/pays') return json({ pays: clientGeo(request).pays }, 200, { 'Cache-Control': 'private, no-store' });
         if (url.pathname === '/api/evenement') return await compterEvenementPublic(request, env);
         if (url.pathname.startsWith('/api/outil/')) return await handleOutil(request, env, ctx);
         throw new HttpError(404, 'introuvable');
