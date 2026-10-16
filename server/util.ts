@@ -15,6 +15,8 @@ export interface Env {
   PAIEMENT_DEVISE?: string;
   /** IA de Cloudflare (Workers AI) : brouillons de réponse, toujours relus par l'équipe. */
   AI?: Ai;
+  /** Clé du robot Telegram (secret Cloudflare). Absente : robot Telegram désactivé. */
+  TELEGRAM_BOT_TOKEN?: string;
 }
 
 export class HttpError extends Error {

@@ -1,7 +1,8 @@
 // Formulaire public « Confier mon dossier » : POST /api/demande
 // Reçoit le minimum nécessaire pour recontacter la personne. Aucune image.
+// Le robot Telegram crée ses demandes par le même chemin (enregistrerDemande).
 
-import { CONSENTEMENT_VERSION, isLang, isPays, isSituation } from '../shared/vocab';
+import { CONSENTEMENT_VERSION, isLang, isPays, isSituation, type Lang, type Situation } from '../shared/vocab';
 import { randomBytes, sha256Hex, toHex, newId } from './crypto';
 import { assigneePourLangue, getParam, journal, nextRef } from './db';
 import { notifier } from './push';
@@ -40,6 +41,78 @@ export async function ipHash(env: Env, ip: string): Promise<string> {
   return sha256Hex(`${sel}:${ip}`);
 }
 
+/** Le guide gratuit qui correspond à la situation (aucun pour « autre situation »). */
+export function lienGuide(situation: Situation, langue: Lang): string | null {
+  return situation !== 'autre' ? `${SITE_URL}${situationPath(situation, langue)}` : null;
+}
+
+/** Une demande, d'où qu'elle vienne : le formulaire du site ou le robot Telegram. */
+export interface NouvelleDemande {
+  source: 'site' | 'telegram';
+  langue: Lang;
+  situation: Situation;
+  pays: string | null;
+  plateformes: string[];
+  liens: string[];
+  message: string | null;
+  pseudo: string;
+  contactMode: 'email' | 'whatsapp' | 'telegram';
+  contactValeur: string;
+  menace: boolean;
+  dejaSignale: boolean;
+  publieParSoi: 0 | 1 | null;
+  ipHash: string | null;
+  /** Conversation Telegram où l'équipe répond (demandes venues du robot). */
+  telegramChatId?: string | null;
+}
+
+/**
+ * Enregistre la demande, l'attribue selon la langue et prévient tout de suite
+ * la personne désignée (ou les admins). Même chemin pour le site et Telegram.
+ */
+export async function enregistrerDemande(env: Env, ctx: ExecutionContext, d: NouvelleDemande): Promise<{ id: string; ref: string }> {
+  const id = newId();
+  const ref = await nextRef(env.DB, 'D');
+  const now = nowIso();
+  const assigne = await assigneePourLangue(env.DB, d.langue);
+  await env.DB.prepare(
+    `INSERT INTO demandes (id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo,
+      contact_mode, contact_valeur, menace, deja_signale, publie_par_soi, consentement_version, consentement_le,
+      statut, assigne_a, ip_hash, source, telegram_chat_id)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'nouvelle',?,?,?,?)`,
+  )
+    .bind(
+      id,
+      ref,
+      now,
+      d.langue,
+      d.pays,
+      d.situation,
+      JSON.stringify(d.plateformes),
+      JSON.stringify(d.liens),
+      d.message,
+      d.pseudo,
+      d.contactMode,
+      d.contactValeur,
+      d.menace ? 1 : 0,
+      d.dejaSignale ? 1 : 0,
+      d.publieParSoi,
+      CONSENTEMENT_VERSION,
+      now,
+      assigne,
+      d.ipHash,
+      d.source,
+      d.telegramChatId ?? null,
+    )
+    .run();
+  await journal(env.DB, { action: 'demande-recue', objet: 'demande', objet_id: id, details: { ref, langue: d.langue, situation: d.situation, source: d.source } });
+  // Alerte immédiate sur le téléphone de la personne désignée (ou des admins).
+  ctx.waitUntil(
+    Promise.all([notifier(env.DB, [assigne]), compterEvenement(env.DB, 'demande')]).catch(() => undefined),
+  );
+  return { id, ref };
+}
+
 export async function recevoirDemande(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
   if (request.method !== 'POST') throw new HttpError(405, 'methode-non-autorisee');
   if (!memeOrigine(request)) throw new HttpError(403, 'origine-refusee');
@@ -73,49 +146,28 @@ export async function recevoirDemande(request: Request, env: Env, ctx: Execution
     .first<{ n: number }>();
   if ((recent?.n ?? 0) >= 5) throw new HttpError(429, 'trop-de-demandes');
 
-  const id = newId();
-  const ref = await nextRef(env.DB, 'D');
-  const now = nowIso();
-  const assigne = await assigneePourLangue(env.DB, langue);
-  await env.DB.prepare(
-    `INSERT INTO demandes (id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo,
-      contact_mode, contact_valeur, menace, deja_signale, publie_par_soi, consentement_version, consentement_le,
-      statut, assigne_a, ip_hash)
-     VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'nouvelle',?,?)`,
-  )
-    .bind(
-      id,
-      ref,
-      now,
-      langue,
-      pays,
-      situation,
-      JSON.stringify(plateformes),
-      JSON.stringify(liens),
-      message,
-      pseudo,
-      contactMode,
-      contactValeur,
-      bool(body.menace) ? 1 : 0,
-      bool(body.deja_signale) ? 1 : 0,
-      publieParSoi,
-      CONSENTEMENT_VERSION,
-      now,
-      assigne,
-      hash,
-    )
-    .run();
-  await journal(env.DB, { action: 'demande-recue', objet: 'demande', objet_id: id, details: { ref, langue, situation } });
-  // Alerte immédiate sur le téléphone de la personne désignée (ou des admins).
-  ctx.waitUntil(
-    Promise.all([notifier(env.DB, [assigne]), compterEvenement(env.DB, 'demande')]).catch(() => undefined),
-  );
+  const { id, ref } = await enregistrerDemande(env, ctx, {
+    source: 'site',
+    langue,
+    situation,
+    pays,
+    plateformes,
+    liens,
+    message,
+    pseudo,
+    contactMode,
+    contactValeur,
+    menace: bool(body.menace),
+    dejaSignale: bool(body.deja_signale),
+    publieParSoi,
+    ipHash: hash,
+  });
   // Accusé de réception automatique, dans la langue choisie : le guide gratuit qui
   // correspond à la situation et un prix indicatif (confirmé ensuite par l'équipe).
   const zone = zoneDuPays(pays) ?? 'standard';
   const p = calculerPrix(liens.length, 0, zone);
   const estimation = { liens: liens.length, total: p.total, ouverture: p.ouverture, aPartirDe: calculerPrix(1, 0, zone).total ?? 0 };
-  const guide = situation !== 'autre' ? `${SITE_URL}${situationPath(situation, langue)}` : null;
+  const guide = lienGuide(situation, langue);
   const confirmation =
     contactMode === 'email' &&
     (await envoyerCourriel(env, contactValeur, emailDemandeRecue({ pseudo, ref, menace: bool(body.menace), guide, estimation }, langue), {

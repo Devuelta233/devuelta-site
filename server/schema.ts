@@ -315,6 +315,80 @@ export const MIGRATIONS: string[][] = [
   // 8 — paiements faits avec une clé de test Paystack (aucun vrai argent) :
   // marqués pour ne jamais être confondus avec un vrai paiement.
   [`ALTER TABLE paiements ADD COLUMN test INTEGER NOT NULL DEFAULT 0`],
+  // 9 — robot Telegram. Une demande peut arriver par Telegram : SQLite ne sait
+  // pas modifier une contrainte CHECK, donc la table des demandes est recréée à
+  // l'identique (mêmes colonnes, mêmes données) avec « telegram » en plus, la
+  // provenance (site ou telegram) et l'identifiant de la conversation Telegram.
+  // Puis l'état des conversations du robot et le fil des messages, qui partent
+  // avec la demande (cascade) ; une conversation inachevée est purgée chaque matin.
+  // Les nouvelles tables sont créées sans IF NOT EXISTS : si deux instances du
+  // moteur lancent la migration en même temps, la seconde échoue et tout est annulé.
+  [
+    `CREATE TABLE demandes_v9 (
+      id TEXT PRIMARY KEY,
+      ref TEXT NOT NULL UNIQUE,
+      recue_le TEXT NOT NULL,
+      langue TEXT NOT NULL,
+      pays TEXT,
+      situation TEXT NOT NULL,
+      plateformes TEXT,
+      liens TEXT,
+      message TEXT,
+      pseudo TEXT NOT NULL,
+      contact_mode TEXT NOT NULL CHECK (contact_mode IN ('email','whatsapp','telegram')),
+      contact_valeur TEXT NOT NULL,
+      menace INTEGER NOT NULL DEFAULT 0,
+      deja_signale INTEGER NOT NULL DEFAULT 0,
+      publie_par_soi INTEGER,
+      consentement_version TEXT NOT NULL,
+      consentement_le TEXT NOT NULL,
+      statut TEXT NOT NULL DEFAULT 'nouvelle',
+      assigne_a TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
+      traitee_par TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
+      traitee_le TEXT,
+      note_traitement TEXT,
+      dossier_id TEXT,
+      ip_hash TEXT,
+      source TEXT NOT NULL DEFAULT 'site',
+      telegram_chat_id TEXT
+    )`,
+    // Copie à l'identique ; un membre introuvable devient « personne » plutôt que de bloquer la copie.
+    `INSERT INTO demandes_v9 (id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo,
+       contact_mode, contact_valeur, menace, deja_signale, publie_par_soi, consentement_version, consentement_le,
+       statut, assigne_a, traitee_par, traitee_le, note_traitement, dossier_id, ip_hash)
+     SELECT id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo,
+       contact_mode, contact_valeur, menace, deja_signale, publie_par_soi, consentement_version, consentement_le,
+       statut,
+       (SELECT u.id FROM utilisateurs u WHERE u.id = demandes.assigne_a),
+       (SELECT u.id FROM utilisateurs u WHERE u.id = demandes.traitee_par),
+       traitee_le, note_traitement, dossier_id, ip_hash
+     FROM demandes`,
+    `DROP TABLE demandes`,
+    `ALTER TABLE demandes_v9 RENAME TO demandes`,
+    `CREATE INDEX IF NOT EXISTS idx_demandes_statut ON demandes(statut, recue_le)`,
+    `CREATE INDEX IF NOT EXISTS idx_demandes_ip ON demandes(ip_hash, recue_le)`,
+    `CREATE TABLE telegram_conversations (
+      chat_id TEXT PRIMARY KEY,
+      etape TEXT NOT NULL,
+      langue TEXT,
+      reponses TEXT,
+      demande_id TEXT REFERENCES demandes(id) ON DELETE CASCADE,
+      cree_le TEXT NOT NULL,
+      maj_le TEXT NOT NULL,
+      accuse_le TEXT,
+      media_le TEXT,
+      dernier_update INTEGER
+    )`,
+    `CREATE TABLE telegram_messages (
+      id TEXT PRIMARY KEY,
+      demande_id TEXT NOT NULL REFERENCES demandes(id) ON DELETE CASCADE,
+      sens TEXT NOT NULL CHECK (sens IN ('client','equipe')),
+      texte TEXT NOT NULL,
+      auteur TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
+      le TEXT NOT NULL
+    )`,
+    `CREATE INDEX idx_telegram_messages ON telegram_messages (demande_id, le)`,
+  ],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;
