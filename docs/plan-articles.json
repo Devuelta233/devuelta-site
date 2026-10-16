@@ -48,6 +48,49 @@
   },
   {
    "semaine": 4,
+   "id": "whatsapp-pirate-code-6-chiffres",
+   "situation": "piratage-compte",
+   "plateformes": [
+    "whatsapp"
+   ],
+   "titre": {
+    "fr": "WhatsApp piraté avec un code à 6 chiffres : que faire",
+    "es": "Te robaron WhatsApp con un código de 6 dígitos: qué hacer",
+    "en": "WhatsApp hijacked with a 6-digit code: what to do now"
+   },
+   "angle": "Sujet grand public (piratage de compte : 2e menace des particuliers en France en 2024 selon Cybermalveillance.gouv.fr). Arnaque au code de vérification ; récupérer le compte en réenregistrant son numéro ; cas où le pirate a mis son propre code PIN (délai d'attente à vérifier) ; prévenir ses contacts des demandes d'argent ; signaler ; plainte si escroquerie. Prévention : vérification en deux étapes.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 5,
+   "id": "sextorsion-menace-diffusion-que-faire",
+   "situation": "chantage",
+   "plateformes": [],
+   "titre": {
+    "fr": "Sextorsion : on menace de diffuser vos images, que faire",
+    "es": "Sextorsión: te amenazan con difundir tus imágenes",
+    "en": "Sextortion: someone threatens to share your images"
+   },
+   "angle": "Sujet urgent en forte hausse (demandes d'aide pour sextorsion multipliées par 10 en 2024 selon Cybermalveillance.gouv.fr, surtout chez les jeunes). Ne pas payer, couper le contact sans effacer les preuves, captures, signaler le compte, StopNCII pour bloquer la diffusion sur les plateformes partenaires, plainte (Pharos et police en France ; équivalents en Espagne, au Royaume-Uni, aux États-Unis, au Ghana). Mineurs : 3018, Take It Down et canaux officiels gratuits uniquement.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 6,
+   "id": "facebook-pirate-recuperation-impossible",
+   "situation": "piratage-compte",
+   "plateformes": [
+    "facebook"
+   ],
+   "titre": {
+    "fr": "Facebook piraté et récupération impossible : que faire",
+    "es": "Me hackearon Facebook y no puedo recuperarla: qué hacer",
+    "en": "Facebook hacked and recovery isn't working: what to do"
+   },
+   "angle": "Sujet grand public. Page officielle de récupération de Meta, e-mail et téléphone changés par le pirate, vérification d'identité, prévenir ses amis des arnaques envoyées en son nom, recours en Europe si le compte reste bloqué ; mise en garde contre les faux « récupérateurs de comptes » payants.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 7,
    "id": "faux-profil-recree-recidive",
    "situation": "usurpation",
    "plateformes": [],
@@ -60,7 +103,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 5,
+   "semaine": 8,
    "id": "resultats-vous-concernant-refuse-rgpd",
    "situation": "donnees-personnelles",
    "plateformes": [
@@ -75,7 +118,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 6,
+   "semaine": 9,
    "id": "ne-viole-pas-nos-regles-contester-dsa",
    "situation": "diffamation",
    "plateformes": [],
@@ -88,7 +131,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 7,
+   "semaine": 10,
    "id": "diffamation-delai-3-mois-plateforme",
    "situation": "diffamation",
    "plateformes": [],
@@ -101,7 +144,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 8,
+   "semaine": 11,
    "id": "telegram-ne-repond-pas-retrait",
    "situation": "contenu-intime",
    "plateformes": [
@@ -116,7 +159,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 9,
+   "semaine": 12,
    "id": "stopncii-na-pas-suffi",
    "situation": "contenu-intime",
    "plateformes": [],
@@ -129,7 +172,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 10,
+   "semaine": 13,
    "id": "contenu-republie-stopper-republications",
    "situation": "contenu-intime",
    "plateformes": [],
@@ -142,7 +185,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 11,
+   "semaine": 14,
    "id": "deepfake-plateforme-dit-pas-reel",
    "situation": "deepfake",
    "plateformes": [],
@@ -155,7 +198,7 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 12,
+   "semaine": 15,
    "id": "plateforme-ignore-signalement-recours",
    "situation": "contenu-intime",
    "plateformes": [],

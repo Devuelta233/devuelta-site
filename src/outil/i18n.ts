@@ -195,7 +195,7 @@ const D = typoProfonde({
   rouvrir: ['Rouvrir', 'Reabrir', 'Reopen'],
   resultat: ['Résultat (obligatoire)', 'Resultado (obligatorio)', 'Outcome (required)'],
   purgeLe: ['Suppression automatique le', 'Borrado automático el', 'Automatic deletion on'],
-  ajouterLiens: ['Ajouter des liens (un par ligne)', 'Añadir enlaces (uno por línea)', 'Add links (one per line)'],
+  ajouterLiens: ['Ajouter des liens', 'Añadir enlaces', 'Add links'],
   origineRecherche: ['Issus d’une recherche inversée (à valider)', 'De una búsqueda inversa (por validar)', 'From a reverse image search (to validate)'],
   identifier: ['Identifier', 'Identificar', 'Identify'],
   identification: ['Identification', 'Identificación', 'Identification'],

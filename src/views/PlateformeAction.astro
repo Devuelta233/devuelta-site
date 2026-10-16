@@ -4,11 +4,11 @@
 import Base from '../layouts/Base.astro';
 import SiCaBloque from '../components/SiCaBloque.astro';
 import { C } from '../i18n/commun';
-import { PLATEFORME_PAGE } from '../i18n/pages';
+import { ARTICLES, PLATEFORME_PAGE } from '../i18n/pages';
 import { SEO_PLATEFORME } from '../i18n/seo-plateformes';
 import { SITUATIONS_TEXTE } from '../i18n/situations';
-import { page, plateformePath, situationPath, type Versions } from '../i18n/routes';
-import { actionsPour, dateLisible, PLATEFORMES_VERIFIE_LE, urlAction, type ActionPlateforme, type Plateforme } from '../data';
+import { articlePath, page, plateformePath, situationPath, type Versions } from '../i18n/routes';
+import { actionsPour, articlesPour, dateLisible, PLATEFORMES_VERIFIE_LE, urlAction, type ActionPlateforme, type Plateforme } from '../data';
 import { SITE_URL } from '../config';
 import { LANGS, SITUATION_LABEL, type Lang, type SituationReelle } from '../../shared/vocab';
 
@@ -20,6 +20,8 @@ interface Props {
 }
 const { lang, situation, plateforme, actions } = Astro.props;
 const [action, ...suivantes] = actions;
+// Articles « le formulaire n'a pas marché » propres à cette plateforme.
+const suites = articlesPour(situation).filter((x) => x.plateformes.includes(plateforme.id));
 const titreAction = action.titre[lang];
 const deux = (s: string) => (lang === 'fr' ? s : s.replace(' : ', ': '));
 const h1Defaut = deux(
@@ -90,6 +92,11 @@ const jsonld = [
           <ol class="etapes">
             {(a.etapes[lang] ?? []).map((e) => <li>{e}</li>)}
           </ol>
+          {a.a_savoir?.[lang] && (
+            <p class="encadre alerte">
+              <strong>{PLATEFORME_PAGE.aSavoir[lang]}</strong> {a.a_savoir[lang]}
+            </p>
+          )}
           <div class="actions">
             <a class={`bouton ${i === 0 ? 'principal' : ''}`} href={lien} rel="noopener noreferrer" target="_blank">
               {C.ouvrirFormulaire[lang]}
@@ -100,6 +107,22 @@ const jsonld = [
         </section>
       );
     })}
+
+    {suites.length > 0 && (
+      <section aria-labelledby="suites">
+        <h2 id="suites">{ARTICLES.siPasMarche[lang]}</h2>
+        <ul class="cartes">
+          {suites.map((x) => (
+            <li>
+              <a class="carte" href={articlePath(x.slug[lang], lang)}>
+                <span class="carte-titre">{x.titre[lang]}</span>
+                <span class="carte-texte">{x.chapo[lang]}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     {pourMineurs ? (
       <section class="encadre alerte" aria-labelledby="mineurs">

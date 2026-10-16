@@ -139,6 +139,14 @@ describe('articles publiés', () => {
         expect(x.titre[l].length).toBeLessThanOrEqual(70);
         expect(x.meta_description[l].length).toBeLessThanOrEqual(160);
         expect(x.chapo[l].length).toBeGreaterThan(40);
+        // « L'essentiel en 30 secondes » : 3 ou 4 gestes courts, lisibles par tous.
+        expect(Array.isArray(x.essentiel?.[l]), `essentiel.${l}`).toBe(true);
+        expect(x.essentiel[l].length).toBeGreaterThanOrEqual(3);
+        expect(x.essentiel[l].length).toBeLessThanOrEqual(4);
+        for (const e of x.essentiel[l]) {
+          expect(e.length).toBeGreaterThan(15);
+          expect(e.length).toBeLessThanOrEqual(160);
+        }
         expect(x.si_rien_ne_marche[l].length).toBeGreaterThan(20);
         for (const s of x.sections) {
           expect(s.titre[l].length).toBeGreaterThan(3);

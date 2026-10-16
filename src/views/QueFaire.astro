@@ -4,7 +4,7 @@ import { C } from '../i18n/commun';
 import { QUE_FAIRE, SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
 import { page, plateformePath, situationPath, versionsPage } from '../i18n/routes';
 import { plateformes } from '../data';
-import { SITUATION_LABEL, type Lang, type SituationReelle } from '../../shared/vocab';
+import { SITUATION_LABEL, type Lang } from '../../shared/vocab';
 
 interface Props {
   lang: Lang;
@@ -12,6 +12,10 @@ interface Props {
 const { lang } = Astro.props;
 const chemin = page('que-faire', lang);
 const liste = plateformes().filter((p) => p.actions.length > 0);
+// Une plateforme peut proposer deux démarches pour la même situation (dans
+// l'appli et par formulaire) : un seul lien par situation, dans l'ordre du site.
+const situationsDe = (p: (typeof liste)[number]) =>
+  SITUATIONS_ORDRE.filter((s) => p.actions.some((a) => a.situation === s));
 ---
 <Base
   lang={lang}
@@ -50,10 +54,10 @@ const liste = plateformes().filter((p) => p.actions.length > 0);
               <div class="carte">
                 <span class="carte-titre">{p.nom}</span>
                 <span class="carte-texte">
-                  {p.actions.map((a, i) => (
+                  {situationsDe(p).map((s, i) => (
                     <>
                       {i > 0 && ' · '}
-                      <a href={plateformePath(a.situation as SituationReelle, p.id, lang)}>{SITUATION_LABEL[a.situation as SituationReelle]?.[lang] ?? a.titre[lang]}</a>
+                      <a href={plateformePath(s, p.id, lang)}>{SITUATION_LABEL[s][lang]}</a>
                     </>
                   ))}
                 </span>

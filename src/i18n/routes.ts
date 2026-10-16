@@ -10,6 +10,7 @@ export type PageFixe =
   | 'urgence'
   | 'methode'
   | 'confier'
+  | 'tarifs'
   | 'contact'
   | 'confidentialite'
   | 'mentions';
@@ -23,6 +24,7 @@ export const SLUGS: Record<PageFixe, T3> = {
   urgence: { fr: 'urgence', es: 'urgencia', en: 'urgent-help' },
   methode: { fr: 'methode', es: 'metodo', en: 'how-we-work' },
   confier: { fr: 'confier-mon-dossier', es: 'confiar-mi-caso', en: 'get-help' },
+  tarifs: { fr: 'tarifs', es: 'precios', en: 'pricing' },
   contact: { fr: 'contact', es: 'contacto', en: 'contact' },
   confidentialite: { fr: 'confidentialite', es: 'privacidad', en: 'privacy' },
   mentions: { fr: 'mentions-legales', es: 'aviso-legal', en: 'legal-notice' },

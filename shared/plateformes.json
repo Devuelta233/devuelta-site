@@ -511,26 +511,26 @@
       "fr": [
        "Ouvrez le formulaire et choisissez « Quelqu'un a créé un compte en se faisant passer pour moi ».",
        "Indiquez votre nom, votre e-mail et le nom d'utilisateur du faux compte.",
-       "Ajoutez une photo de votre pièce d'identité.",
+       "Ajoutez une photo de vous tenant votre pièce d'identité (en JPEG si possible).",
        "Envoyez (un seul faux compte par formulaire)."
       ],
       "es": [
        "Abre el formulario y elige que alguien creó una cuenta haciéndose pasar por ti.",
        "Escribe tu nombre, tu correo y el nombre de usuario de la cuenta falsa.",
-       "Sube una foto de tu documento de identidad.",
+       "Sube una foto tuya sosteniendo tu documento de identidad (en JPEG si es posible).",
        "Envía (una sola cuenta falsa por formulario)."
       ],
       "en": [
        "Open the form and choose \"Someone created an account pretending to be me\".",
        "Enter your name, your email and the fake account's username.",
-       "Upload a photo of your ID.",
+       "Upload a photo of yourself holding your ID (JPEG if possible).",
        "Submit (one fake account per form)."
       ]
      },
      "url": "https://help.instagram.com/contact/636276399721841",
      "connexion_requise": false,
      "verifie": true,
-     "note": "Formulaire « Report an Impersonation Account on Instagram or Threads » lu le 2026-10-15. Pièce d'identité obligatoire. Auto-localisé (titre traduit, certains textes restent en anglais)."
+     "note": "Formulaire « Report an Impersonation Account on Instagram or Threads » lu le 2026-10-15 (relu le même jour : photo de soi tenant sa pièce, JPEG si possible, pièce supprimée sous 30 jours, un compte par formulaire). Auto-localisé (titre traduit, certains textes restent en anglais)."
     },
     {
      "situation": "contenu-intime",
@@ -3446,6 +3446,56 @@
      "connexion_requise": false,
      "verifie": true,
      "note": "Les anciennes URL https://www.microsoft.com/en-us/concern/revengeporn et /concern/bing redirigent ici (vérifié le 2026-10-15). Seule la page d'accueil du parcours a été lue : les catégories proposées après « Continue » (dont images intimes non consenties) n'ont pas été vérifiées."
+    }
+   ]
+  },
+  {
+   "id": "pimeyes",
+   "nom": "PimEyes",
+   "type": "moteur",
+   "actions": [
+    {
+     "situation": "donnees-personnelles",
+     "titre": {
+      "fr": "Retirer votre visage des résultats de PimEyes",
+      "es": "Quitar tu cara de los resultados de PimEyes",
+      "en": "Remove your face from PimEyes results"
+     },
+     "etapes": {
+      "fr": [
+       "Ouvrez le formulaire de retrait (« opt-out ») de PimEyes.",
+       "Ajoutez une photo nette de votre visage, si possible sous plusieurs angles. Astuce : prenez un selfie sur un fond neutre et envoyez une capture d'écran de ce selfie, pour enlever les données cachées de la photo.",
+       "Cochez les cases (accord, conditions, plus de 18 ans), puis passez à l'étape suivante.",
+       "Ajoutez une copie de votre pièce d'identité où tout est masqué sauf votre photo : PimEyes demande une copie anonymisée.",
+       "Indiquez une adresse e-mail pour recevoir la confirmation, puis envoyez. Le formulaire ne demande pas votre nom.",
+       "Gardez l'e-mail de confirmation : il prouve votre demande."
+      ],
+      "es": [
+       "Abre el formulario de exclusión («opt-out») de PimEyes.",
+       "Sube una foto nítida de tu cara, si puedes desde varios ángulos. Consejo: hazte un selfi con un fondo neutro y envía una captura de pantalla de ese selfi, para quitar los datos ocultos de la foto.",
+       "Marca las casillas (consentimiento, condiciones, mayor de 18 años) y pasa al paso siguiente.",
+       "Sube una copia de tu documento de identidad con todo tapado salvo tu foto: PimEyes pide una copia anonimizada.",
+       "Escribe un correo para recibir la confirmación y envía. El formulario no pide tu nombre.",
+       "Guarda el correo de confirmación: prueba tu solicitud."
+      ],
+      "en": [
+       "Open PimEyes' opt-out request form.",
+       "Upload a clear photo of your face, from several angles if you can. Tip: take a selfie against a plain background and send a screenshot of that selfie, which strips the photo's hidden data.",
+       "Tick the boxes (consent, terms, over 18), then go to the next step.",
+       "Upload a copy of your ID with everything hidden except your photo: PimEyes asks for an anonymized copy.",
+       "Enter an email address for the confirmation, then submit. The form doesn't ask for your name.",
+       "Keep the confirmation email: it proves your request."
+      ]
+     },
+     "a_savoir": {
+      "fr": "Le retrait enlève vos photos des résultats de PimEyes, pas des sites où elles sont publiées : pour ces sites, il faut une demande à chacun. PimEyes indique pouvoir garder la photo envoyée si une obligation légale l'exige. Le formulaire est réservé aux plus de 18 ans : pour une personne mineure, voyez notre page Aide urgente.",
+      "es": "La exclusión quita tus fotos de los resultados de PimEyes, no de los sitios donde están publicadas: para esos sitios hace falta una solicitud a cada uno. PimEyes indica que puede conservar la foto enviada si una obligación legal lo exige. El formulario es solo para mayores de 18 años: para una persona menor de edad, consulta nuestra página Ayuda urgente.",
+      "en": "Opting out removes your photos from PimEyes results, not from the sites where they are posted: each of those sites needs its own request. PimEyes says it may keep the photo you send where a legal obligation requires it. The form is for people over 18 only: for a minor, see our Urgent help page."
+     },
+     "url": "https://pimeyes.com/en/opt-out-request-form",
+     "connexion_requise": false,
+     "verifie": true,
+     "note": "Formulaire lu le 2026-10-15 (3 étapes : photo du visage + 3 cases dont « plus de 18 ans » ; copie anonymisée de la pièce d'identité ou du passeport + 2 cases ; e-mail de confirmation). Aucun champ nom. Retire les photos des résultats PimEyes, pas des sites d'origine ; la photo peut être conservée pour une obligation légale. Conseils selfie/capture d'écran et masquage : alerte consommateurs du Cook County State's Attorney (sept. 2024)."
     }
    ]
   },
