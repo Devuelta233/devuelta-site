@@ -34,6 +34,7 @@ export const C = {
     // Libellé imposé pour la fonction de rétractation en ligne (directive 2011/83/UE, art. 11 bis).
     retractation: { fr: 'Renoncer au contrat ici', es: 'Desistir del contrato aquí', en: 'Withdraw from contract here' } as T3,
     controle: { fr: 'Contrôle en 5 minutes', es: 'Chequeo en 5 minutos', en: '5-minute check-up' } as T3,
+    faq: { fr: 'Questions fréquentes', es: 'Preguntas frecuentes', en: 'FAQ' } as T3,
     referentiel: { fr: 'Référentiel ouvert (JSON)', es: 'Referencial abierto (JSON)', en: 'Open dataset (JSON)' } as T3,
   },
   engagementsTitre: { fr: 'Nos engagements', es: 'Nuestros compromisos', en: 'Our commitments' } as T3,

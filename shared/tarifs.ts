@@ -16,12 +16,13 @@ export interface Formule {
   prix: number; // euros, prix complet (zone standard)
   ghs: number; // prix complet en zone réduite, en cedis
   fcfa: number; // prix complet en zone réduite, en francs CFA
+  usd: number; // simple repère en dollars US (zone réduite, Amérique latine) : le paiement se fait en euros convertis en cedis, jamais en dollars
 }
 
 export const FORMULES: readonly Formule[] = [
-  { id: 'un-lien', min: 1, max: 1, prix: 40, ghs: 270, fcfa: 13_000 },
-  { id: 'petit', min: 2, max: 5, prix: 80, ghs: 540, fcfa: 26_000 },
-  { id: 'dossier', min: 6, max: 15, prix: 160, ghs: 1_080, fcfa: 52_000 },
+  { id: 'un-lien', min: 1, max: 1, prix: 40, ghs: 270, fcfa: 13_000, usd: 22 },
+  { id: 'petit', min: 2, max: 5, prix: 80, ghs: 540, fcfa: 26_000, usd: 45 },
+  { id: 'dossier', min: 6, max: 15, prix: 160, ghs: 1_080, fcfa: 52_000, usd: 90 },
 ];
 
 /** Au-delà de 15 liens, ou cas difficile : sur devis, à partir de ce prix (zone standard). */

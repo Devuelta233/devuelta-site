@@ -1,0 +1,80 @@
+---
+// Questions fréquentes : les inquiétudes d'une personne qui hésite, avec des
+// réponses courtes et humaines, et un lien vers la page qui détaille chacune.
+import Base from '../layouts/Base.astro';
+import Contacts from '../components/Contacts.astro';
+import { C } from '../i18n/commun';
+import { FAQ, FAQ_PAGE } from '../i18n/faq';
+import { page, versionsPage } from '../i18n/routes';
+import { SITE_URL } from '../config';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = page('faq', lang);
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: lang,
+    url: `${SITE_URL}${chemin}`,
+    mainEntity: FAQ.flatMap((g) =>
+      g.questions.map((x) => ({
+        '@type': 'Question',
+        name: x.q[lang],
+        acceptedAnswer: { '@type': 'Answer', text: x.r[lang] },
+      })),
+    ),
+  },
+];
+---
+<Base
+  lang={lang}
+  titre={FAQ_PAGE.seo[lang]}
+  description={FAQ_PAGE.meta[lang]}
+  chemin={chemin}
+  versions={versionsPage('faq')}
+  jsonld={jsonld}
+  ariane={[{ nom: FAQ_PAGE.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{FAQ_PAGE.h1[lang]}</h1>
+    <p class="lede">{FAQ_PAGE.intro[lang]}</p>
+
+    {FAQ.map((g, i) => (
+      <section class="faq" aria-labelledby={`faq-${i}`}>
+        <h2 id={`faq-${i}`}>{g.titre[lang]}</h2>
+        {g.questions.map((x) => (
+          <details>
+            <summary>{x.q[lang]}</summary>
+            <p>
+              {x.r[lang]}
+              {x.lien && (
+                <>
+                  {' '}
+                  <a href={page(x.lien, lang)}>{FAQ_PAGE.enSavoirPlus[lang]} →</a>
+                </>
+              )}
+            </p>
+          </details>
+        ))}
+      </section>
+    ))}
+
+    <h2>{FAQ_PAGE.autreQuestion[lang]}</h2>
+    <Contacts lang={lang} />
+
+    <div class="actions">
+      <a class="bouton principal" href={page('diagnostic', lang)}>
+        {C.ctaDiagnostic[lang]}
+        <small>{C.ctaDiagnosticSous[lang]}</small>
+      </a>
+      <a class="bouton" href={page('confier', lang)}>
+        {C.ctaConfier[lang]}
+        <small>{C.ctaConfierSous[lang]}</small>
+      </a>
+    </div>
+  </article>
+</Base>

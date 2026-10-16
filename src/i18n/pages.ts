@@ -394,9 +394,9 @@ export const TARIFS = {
   } as L3,
   paiementTitre: { fr: 'Comment payer', es: 'Cómo pagar', en: 'How to pay' } as T3,
   paiement: {
-    fr: 'Vous ne payez rien avant d’avoir accepté notre devis écrit. Le lien de paiement arrive avec lui : vous payez par carte bancaire ou Mobile Money, sur la page sécurisée de notre prestataire de paiement. Le montant peut être débité en cedis ghanéens (GH¢) au taux du jour ; votre banque peut alors appliquer des frais de change. Le reste n’est demandé qu’une fois les liens retirés.',
-    es: 'No pagas nada antes de aceptar nuestro presupuesto por escrito. El enlace de pago llega con él: pagas con tarjeta bancaria o Mobile Money, en la página segura de nuestro proveedor de pagos. El importe puede cobrarse en cedis ghaneses (GH¢) al cambio del día; tu banco puede aplicar gastos de cambio. El resto solo se pide una vez retirados los enlaces.',
-    en: 'You pay nothing before accepting our written quote. The payment link comes with it: you pay by bank card or Mobile Money, on our payment provider’s secure page. The amount may be charged in Ghanaian cedis (GH¢) at the day’s rate; your bank may then apply currency conversion fees. The rest is only requested once the links are removed.',
+    fr: 'Vous ne payez rien avant d’avoir accepté notre devis écrit. Le lien de paiement arrive avec lui : vous payez par carte bancaire, ou par Mobile Money au Ghana, sur la page sécurisée de Paystack, notre prestataire de paiement (racheté par Stripe en 2020). Le montant peut être débité en cedis ghanéens (GH¢) au taux du jour ; votre banque peut alors appliquer des frais de change. Le reste n’est demandé qu’une fois les liens retirés.',
+    es: 'No pagas nada antes de aceptar nuestro presupuesto por escrito. El enlace de pago llega con él: pagas con tarjeta bancaria, o con Mobile Money en Ghana, en la página segura de Paystack, nuestro proveedor de pagos (comprado por Stripe en 2020). El importe puede cobrarse en cedis ghaneses (GH¢) al cambio del día; tu banco puede aplicar gastos de cambio. El resto solo se pide una vez retirados los enlaces.',
+    en: 'You pay nothing before accepting our written quote. The payment link comes with it: you pay by bank card, or by Mobile Money in Ghana, on the secure page of Paystack, our payment provider (bought by Stripe in 2020). The amount may be charged in Ghanaian cedis (GH¢) at the day’s rate; your bank may then apply currency conversion fees. The rest is only requested once the links are removed.',
   } as T3,
 };
 

@@ -75,6 +75,7 @@ const jsonld = [
           <strong>{TARIFS.formules[f.id][lang]}</strong>
           <span>
             <span class="sans-coupure">{euros(f.prix * COEF_ZONE_REDUITE, lang)}</span> ·{' '}
+            <span class="sans-coupure">≈&nbsp;{nombre(f.usd, lang)}&nbsp;US$</span> ·{' '}
             <span class="sans-coupure">GH¢&nbsp;{nombre(f.ghs, lang)}</span> ·{' '}
             <span class="sans-coupure">{nombre(f.fcfa, lang)}&nbsp;FCFA</span>
           </span>

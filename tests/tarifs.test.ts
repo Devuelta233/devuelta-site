@@ -16,6 +16,7 @@ describe('grille de prix', () => {
     for (const f of FORMULES) {
       expect(Math.abs(f.ghs / (f.prix / 2) - 13.3)).toBeLessThan(1);
       expect(Math.abs(f.fcfa / (f.prix / 2) - 656)).toBeLessThan(20);
+      expect(Math.abs(f.usd / (f.prix / 2) - 1.12)).toBeLessThan(0.17);
     }
   });
 

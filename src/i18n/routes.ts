@@ -16,7 +16,8 @@ export type PageFixe =
   | 'mentions'
   | 'conditions'
   | 'retractation'
-  | 'controle';
+  | 'controle'
+  | 'faq';
 
 export const BASE: Record<Lang, string> = { fr: '/', es: '/es/', en: '/en/' };
 
@@ -34,6 +35,7 @@ export const SLUGS: Record<PageFixe, T3> = {
   retractation: { fr: 'renoncer-au-contrat', es: 'desistir-del-contrato', en: 'withdraw-from-contract' },
   controle: { fr: 'controle', es: 'chequeo', en: 'check-up' },
   mentions: { fr: 'mentions-legales', es: 'aviso-legal', en: 'legal-notice' },
+  faq: { fr: 'questions-frequentes', es: 'preguntas-frecuentes', en: 'faq' },
 };
 
 export const SITUATION_SLUGS: Record<SituationReelle, T3> = {

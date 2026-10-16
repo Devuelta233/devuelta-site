@@ -5,6 +5,7 @@ import Engagements from '../components/Engagements.astro';
 import Spirale from '../components/Spirale.astro';
 import { C } from '../i18n/commun';
 import { ACCUEIL, ARTICLES, CONTROLE } from '../i18n/pages';
+import { FAQ_PAGE } from '../i18n/faq';
 import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
 import { BASE, articlePath, articlesPath, guidePath, page, situationPath, versionsAccueil } from '../i18n/routes';
 import { articles, dateLisible, guides } from '../data';
@@ -191,6 +192,7 @@ const jsonld = [
       <h2 id="contact-titre">{ACCUEIL.contactTitre[lang]}</h2>
       <p>{ACCUEIL.contactIntro[lang]}</p>
       <Contacts lang={lang} />
+      <p><a href={page('faq', lang)}>{FAQ_PAGE.lienAccueil[lang]} →</a></p>
     </section>
   </div>
 </Base>

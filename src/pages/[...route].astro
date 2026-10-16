@@ -9,6 +9,7 @@ import Confier from '../views/Confier.astro';
 import Contact from '../views/Contact.astro';
 import Controle from '../views/Controle.astro';
 import Diagnostic from '../views/Diagnostic.astro';
+import Faq from '../views/Faq.astro';
 import Guide from '../views/Guide.astro';
 import Guides from '../views/Guides.astro';
 import Legal from '../views/Legal.astro';
@@ -43,6 +44,7 @@ const p = Astro.props as PropsPage;
 {p.type === 'conditions' && <Legal lang={p.lang} quoi="conditions" />}
 {p.type === 'retractation' && <Retractation lang={p.lang} />}
 {p.type === 'controle' && <Controle lang={p.lang} />}
+{p.type === 'faq' && <Faq lang={p.lang} />}
 {p.type === 'situation' && <Situation lang={p.lang} situation={p.situation} />}
 {p.type === 'plateforme' && <PlateformeAction lang={p.lang} situation={p.situation} plateforme={p.plateforme} actions={p.actions} />}
 {p.type === 'guide' && <Guide lang={p.lang} guide={p.guide} />}
