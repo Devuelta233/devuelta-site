@@ -26,6 +26,26 @@
   "es": "Si Instagram deja activa una cuenta que se hace pasar por ti, vuelve a enviar una solicitud completa (desde la app o con el formulario oficial) y luego reclama contra la decisión. En la Unión Europea, el Reglamento de Servicios Digitales (DSA) te da recursos concretos. Si la cuenta te perjudica, presenta una denuncia: es la vía por la que las autoridades pueden pedir a Instagram los datos de la cuenta.",
   "en": "If Instagram leaves up an account pretending to be you, send a complete new request (in the app or through the official form), then challenge the decision. In the European Union, the Digital Services Act (DSA) gives you specific remedies. If the account is harming you, file a police report: that is how the authorities can ask Instagram for the account’s data."
  },
+ "essentiel": {
+  "fr": [
+   "Faites des captures datées du faux profil et recopiez exactement son nom d’utilisateur.",
+   "Refaites une demande complète avec le formulaire officiel : un seul faux compte à la fois, avec une photo de vous tenant votre pièce d’identité.",
+   "Si Instagram refuse et que vous êtes dans l’UE, contestez gratuitement sa décision en ligne, par la réclamation interne.",
+   "Si le faux compte vous menace ou trompe vos proches, portez plainte sans attendre : seule la justice peut faire identifier l’auteur."
+  ],
+  "es": [
+   "Haz capturas con fecha del perfil falso y copia exactamente su nombre de usuario.",
+   "Repite una solicitud completa con el formulario oficial: una sola cuenta falsa por formulario y una foto tuya sosteniendo tu documento.",
+   "Si Instagram se niega y estás en la UE, recurre gratis su decisión en línea con la reclamación interna.",
+   "Si la cuenta falsa te amenaza o engaña a tus contactos, denuncia sin esperar: solo la justicia puede hacer identificar al autor."
+  ],
+  "en": [
+   "Take dated screenshots of the fake profile and copy its exact username.",
+   "Send a complete request with the official form: one fake account per form, with a photo of you holding your ID.",
+   "If Instagram refuses and you’re in the EU, appeal its decision for free online through the internal complaint.",
+   "If the fake account threatens you or tricks your contacts, report it to the police now: only the courts can get the person identified."
+  ]
+ },
  "sections": [
   {
    "titre": {
