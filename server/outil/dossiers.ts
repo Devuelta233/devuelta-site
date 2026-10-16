@@ -22,6 +22,7 @@ import { dossierVisible, filtreDossiers, objetVisible } from './access';
 import { hoteDe, identifier, plateformeDuLien, type Identification } from './identification';
 import { ETAPE_DU_MODELE, contientMarqueur, genererCourrier, resumeModeles, trouverModele } from './modeles';
 import { fichesPour, planPourLien } from './plan';
+import { enAttente, pourDossier } from './retractations';
 import type { Ctx } from './router';
 
 const FERMES = STATUTS_DOSSIER_FERMES as readonly string[];
@@ -102,9 +103,11 @@ export async function tableau({ env, auth }: Ctx): Promise<Response> {
   )
     .bind(...f.binds, addDays(now, 7))
     .all();
+  const retractations = await enAttente(env.DB, auth.user);
   return json({
     ok: true,
     maintenant: now,
+    retractations,
     echeances: echeances.results,
     dossiers: { ouverts: ouverts?.n ?? 0, miens: ouverts?.miens ?? 0, sans_echeance: ouverts?.sans_echeance ?? 0 },
     demandes: demandes.results,
@@ -207,8 +210,9 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
       .all(),
   ]);
   const assigne = d.assigne_a
-    ? await env.DB.prepare('SELECT nom FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string }>()
+    ? await env.DB.prepare('SELECT nom, whatsapp FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string; whatsapp: string | null }>()
     : null;
+  const retractations = await pourDossier(env.DB, d.id);
   const liens = contenus.results.map((c) => {
     const ident = lireIdent(c);
     const row: Record<string, unknown> = { ...c, ident };
@@ -239,12 +243,13 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
   }));
   return json({
     ok: true,
-    dossier: { ...d, assigne_nom: assigne?.nom ?? null },
+    dossier: { ...d, assigne_nom: assigne?.nom ?? null, assigne_whatsapp: assigne?.whatsapp ?? null },
     contenus: liens,
     etapes: etapes.results,
     courriers: courriers.results,
     notes: notes.results,
     fiches,
+    retractations,
   });
 }
 
@@ -358,6 +363,12 @@ export async function modifier({ request, env, params, auth }: Ctx): Promise<Res
   }
   if ('resume' in body) set('resume', cleanText(body.resume, 4000, { multiline: true }));
   if ('prochaine_action' in body) set('prochaine_action', cleanText(body.prochaine_action, 300));
+  if ('client_pro' in body) set('client_pro', body.client_pro === true ? 1 : 0);
+  if ('temps_minutes' in body) {
+    const n = Number(body.temps_minutes);
+    if (!Number.isInteger(n) || n < 0 || n > 100_000) throw new HttpError(400, 'temps-invalide');
+    set('temps_minutes', n);
+  }
   if (sets.length === 0) return json({ ok: true });
   sets.push('maj_le = ?');
   binds.push(nowIso());

@@ -40,6 +40,7 @@ export async function purgerElements(db: D1Database, dossiers: string[], demande
   const stmts: D1PreparedStatement[] = [];
   for (const id of dossiers) {
     stmts.push(db.prepare('DELETE FROM demandes WHERE dossier_id = ?').bind(id));
+    stmts.push(db.prepare('DELETE FROM retractations WHERE dossier_id = ?').bind(id));
     // Liens, étapes, courriers et notes partent avec le dossier (cascade).
     stmts.push(db.prepare('DELETE FROM dossiers WHERE id = ?').bind(id));
     stmts.push(db.prepare('UPDATE journal SET details = NULL WHERE dossier_id = ?').bind(id));
@@ -67,6 +68,8 @@ async function purgeAutomatique(db: D1Database) {
     db.prepare('DELETE FROM sessions WHERE expire_le <= ?').bind(now),
     db.prepare('DELETE FROM connexions WHERE le <= ?').bind(addDays(now, -365)),
     db.prepare('DELETE FROM journal WHERE le <= ? AND dossier_id IS NULL').bind(addDays(now, -730)),
+    // Preuve d'une rétractation : gardée 2 ans (délai pour agir d'un professionnel contre un consommateur).
+    db.prepare('DELETE FROM retractations WHERE recue_le <= ?').bind(addDays(now, -730)),
   ]);
   return n;
 }
@@ -296,7 +299,16 @@ export async function compteursPour(db: D1Database, user: { id: string; role: st
     .prepare(`SELECT COUNT(*) AS n FROM contenus c JOIN dossiers d ON d.id = c.dossier_id WHERE ${filtreD} AND c.verif_alerte IS NOT NULL`)
     .bind(...bindsD)
     .first<{ n: number }>();
+  const retractations = await db
+    .prepare(
+      `SELECT COUNT(*) AS n FROM retractations r LEFT JOIN dossiers d ON d.id = r.dossier_id WHERE r.accuse_le IS NULL AND ${
+        admin ? '1 = 1' : '((d.id IS NOT NULL AND (d.assigne_a = ? OR d.cree_par = ?)) OR (r.dossier_id IS NULL AND r.langue = ?))'
+      }`,
+    )
+    .bind(...(admin ? [] : [user.id, user.id, user.langue]))
+    .first<{ n: number }>();
   return {
+    retractations: retractations?.n ?? 0,
     demandes: demandes?.n ?? 0,
     echeances: echeances?.n ?? 0,
     courriers: courriers?.n ?? 0,
@@ -311,7 +323,7 @@ async function resumeDuMatin(db: D1Database): Promise<number> {
   let n = 0;
   for (const u of users.results) {
     const c = await compteursPour(db, u);
-    if (c.demandes + c.echeances + c.courriers + c.alertes > 0) n += await notifier(db, [u.id]);
+    if (c.retractations + c.demandes + c.echeances + c.courriers + c.alertes > 0) n += await notifier(db, [u.id]);
   }
   return n;
 }

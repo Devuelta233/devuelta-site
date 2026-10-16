@@ -1,10 +1,13 @@
 // Contenus : modèles de courriers, référentiel, coordonnées publiques.
 
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import referentiel from '../shared/referentiel.json';
 import { CONTACT_EMAIL, LANGS } from '../shared/vocab';
-import { lienWhatsApp, WHATSAPP } from '../src/config';
+import { EMAIL, NOM_CONTACT } from '../src/config';
 import { MODELES, contientMarqueur, genererCourrier } from '../server/outil/modeles';
+
+const fichier = (chemin: string) => readFileSync(new URL(`../${chemin}`, import.meta.url), 'utf-8');
 
 const DOSSIER = {
   ref: 'DV-2026-0001',
@@ -77,14 +80,18 @@ describe('coordonnées publiques', () => {
   it('adresse e-mail unique', () => {
     expect(CONTACT_EMAIL).toBe('team.devuelta@protonmail.com');
   });
-  it('un WhatsApp par langue', () => {
-    expect(WHATSAPP.fr.e164).toBe('+41768232468');
-    expect(WHATSAPP.es.e164).toBe('+41783169306');
-    expect(WHATSAPP.en.e164).toBe('+233592151139');
-    for (const l of LANGS) {
-      expect(WHATSAPP[l].affichage.replace(/\s/g, '')).toBe(WHATSAPP[l].e164);
-      expect(lienWhatsApp(l)).toMatch(/^https:\/\/wa\.me\/\d+\?text=/);
-    }
+  it('une seule boîte publique « Team Devuelta », aucun prénom ni numéro de l’équipe', () => {
+    expect(EMAIL).toBe('team.devuelta@protonmail.com');
+    expect(NOM_CONTACT).toBe('Team Devuelta');
+    const publics = JSON.stringify([
+      fichier('src/config.ts'),
+      fichier('src/components/Contacts.astro'),
+      fichier('src/views/Contact.astro'),
+      fichier('src/views/Accueil.astro'),
+      fichier('src/i18n/pages.ts'),
+      fichier('src/i18n/commun.ts'),
+    ]);
+    for (const x of ['41768232468', '41783169306', '233592151139', 'wa.me', 'Paola', 'Michael', 'Steven']) expect(publics).not.toContain(x);
   });
 });
 
@@ -165,5 +172,42 @@ describe('articles publiés', () => {
       expect(sansAppel).not.toMatch(/Devuelta/);
       expect(JSON.stringify(x.si_rien_ne_marche)).not.toMatch(INTERDITS);
     });
+
+    // Compréhensible par tous, dans chaque langue : un article trop long ou trop
+    // compliqué bloque la mise en ligne (règles de docs/redaction-articles.md).
+    it(`${x.id} : lisible par tous (FR, ES, EN)`, () => {
+      for (const l of LANGS) {
+        const l2 = lisibilite(x, l);
+        expect(l2.mots, `${l} : ${l2.mots} mots`).toBeGreaterThanOrEqual(600);
+        expect(l2.mots, `${l} : ${l2.mots} mots`).toBeLessThanOrEqual(l === 'es' ? 1200 : 1100);
+        expect(l2.tropLongues, `${l} : phrases de plus de 25 mots → ${l2.tropLongues.join(' | ')}`).toEqual([]);
+        expect(l2.partLongues, `${l} : ${Math.round(l2.partLongues * 100)} % de phrases de plus de 20 mots`).toBeLessThanOrEqual(0.15);
+      }
+    });
+
+    // Chaque article a son kit Instagram / TikTok, qui renvoie vers le site.
+    it(`${x.id} : kit réseaux sociaux (docs/reseaux/${x.id}.md)`, () => {
+      const kit = fichier(`docs/reseaux/${x.id}.md`);
+      for (const titre of ['## FR', '## ES', '## EN']) expect(kit).toContain(titre);
+      expect(kit).toContain('getdevuelta.com');
+      expect(kit).not.toMatch(INTERDITS);
+    });
   }
 });
+
+function lisibilite(x: Record<string, any>, l: string) {
+  const blocs: string[] = [x.chapo[l], ...x.essentiel[l], x.si_rien_ne_marche[l]];
+  for (const s of x.sections) {
+    blocs.push(...s.paragraphes[l]);
+    if (s.etapes) blocs.push(...s.etapes[l]);
+  }
+  const mots = (t: string) => t.match(/[0-9A-Za-zÀ-ÖØ-öø-ÿœŒæÆ]+(?:[’'-][0-9A-Za-zÀ-ÖØ-öø-ÿœŒæÆ]+)*/g) ?? [];
+  const phrases = blocs.flatMap((b) => b.split(/(?<=[.!?…])\s+/)).filter((p) => /\w/.test(p));
+  const titres: string[] = x.sections.map((s: Record<string, any>) => s.titre[l]);
+  const longueurs = phrases.map((p) => mots(p).length);
+  return {
+    mots: [...blocs, ...titres].reduce((n, b) => n + mots(b).length, 0),
+    tropLongues: phrases.filter((p) => mots(p).length > 25).map((p) => p.slice(0, 60)),
+    partLongues: longueurs.filter((n) => n > 20).length / Math.max(1, longueurs.length),
+  };
+}

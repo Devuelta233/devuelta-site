@@ -10,9 +10,9 @@ import { FICHES, fichesAReverifier } from './plan';
 import type { Ctx } from './router';
 
 const TEXTES = {
-  fr: { titre: 'EraseOps', rien: 'Rien de nouveau.', demandes: 'demande(s) à traiter', echeances: 'échéance(s) aujourd’hui ou dépassée(s)', courriers: 'courrier(s) à valider', alertes: 'lien(s) à vérifier', systeme: 'passage automatique à vérifier (Réglages)' },
-  es: { titre: 'EraseOps', rien: 'Nada nuevo.', demandes: 'solicitud(es) por atender', echeances: 'plazo(s) para hoy o vencido(s)', courriers: 'carta(s) por validar', alertes: 'enlace(s) por revisar', systeme: 'pase automático por revisar (Ajustes)' },
-  en: { titre: 'EraseOps', rien: 'Nothing new.', demandes: 'request(s) to handle', echeances: 'deadline(s) due or overdue', courriers: 'letter(s) to validate', alertes: 'link(s) to check', systeme: 'automatic run to check (Settings)' },
+  fr: { titre: 'EraseOps', rien: 'Rien de nouveau.', retractations: 'rétractation(s) : accusé à envoyer', demandes: 'demande(s) à traiter', echeances: 'échéance(s) aujourd’hui ou dépassée(s)', courriers: 'courrier(s) à valider', alertes: 'lien(s) à vérifier', systeme: 'passage automatique à vérifier (Réglages)' },
+  es: { titre: 'EraseOps', rien: 'Nada nuevo.', retractations: 'desistimiento(s): acuse por enviar', demandes: 'solicitud(es) por atender', echeances: 'plazo(s) para hoy o vencido(s)', courriers: 'carta(s) por validar', alertes: 'enlace(s) por revisar', systeme: 'pase automático por revisar (Ajustes)' },
+  en: { titre: 'EraseOps', rien: 'Nothing new.', retractations: 'withdrawal(s): acknowledgement to send', demandes: 'request(s) to handle', echeances: 'deadline(s) due or overdue', courriers: 'letter(s) to validate', alertes: 'link(s) to check', systeme: 'automatic run to check (Settings)' },
 };
 
 /** Texte neutre affiché par le téléphone : aucun nom, aucun détail de dossier. */
@@ -20,6 +20,7 @@ export async function resumeNotification({ env, auth }: Ctx): Promise<Response> 
   const c = await compteursPour(env.DB, auth.user);
   const t = TEXTES[auth.user.langue] ?? TEXTES.fr;
   const parts: string[] = [];
+  if (c.retractations) parts.push(`${c.retractations} ${t.retractations}`);
   if (c.demandes) parts.push(`${c.demandes} ${t.demandes}`);
   if (c.echeances) parts.push(`${c.echeances} ${t.echeances}`);
   if (c.courriers) parts.push(`${c.courriers} ${t.courriers}`);
@@ -77,6 +78,10 @@ export async function statistiques({ env, url }: Ctx): Promise<Response> {
       .first<{ n: number; resolus: number }>(),
   ]);
   const entrees = await env.DB.prepare("SELECT COALESCE(SUM(n),0) AS n FROM stats_vues WHERE jour >= ? AND source <> 'interne'").bind(depuis).first<{ n: number }>();
+  // Temps moyen par dossier (dossiers où le temps a été noté) : sert à vérifier les tarifs.
+  const temps = await env.DB.prepare('SELECT COUNT(*) AS n, COALESCE(AVG(temps_minutes),0) AS moyenne FROM dossiers WHERE temps_minutes > 0 AND cree_le >= ?')
+    .bind(depuis)
+    .first<{ n: number; moyenne: number }>();
   return json({
     ok: true,
     jours,
@@ -90,6 +95,8 @@ export async function statistiques({ env, url }: Ctx): Promise<Response> {
     demandes: demandes?.n ?? 0,
     dossiers: dossiers?.n ?? 0,
     dossiers_resolus: dossiers?.resolus ?? 0,
+    temps_moyen_minutes: Math.round(temps?.moyenne ?? 0),
+    temps_dossiers: temps?.n ?? 0,
   });
 }
 

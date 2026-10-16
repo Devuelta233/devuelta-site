@@ -8,10 +8,43 @@ import { get, post, put } from '../api';
 import { code, date, t, tr } from '../i18n';
 import { activerPush, desactiverPush, estInstalle, estIos, etatPush, pushPossible } from '../push';
 import { Champ, Chargement, LienExterne, MessageErreur, Pastille, useAction, useCharger, valeur } from '../ui';
+import { erreur } from '../i18n';
 import { ChangerMdp, type Etat } from './Acces';
 import { ListeConnexions, type Connexion } from './Equipe';
 
 type Utilisateur = NonNullable<Etat['utilisateur']>;
+
+function MonWhatsapp({ initial }: { initial: string | null }) {
+  const [numero, setNumero] = useState(initial ?? '');
+  const [ok, setOk] = useState(false);
+  const [err, setErr] = useState('');
+  return (
+    <form
+      class="o-actions"
+      onSubmit={async (e) => {
+        e.preventDefault();
+        setOk(false);
+        setErr('');
+        try {
+          const r = await post<{ whatsapp: string | null }>('/moi/whatsapp', { whatsapp: numero.trim() });
+          setNumero(r.whatsapp ?? '');
+          setOk(true);
+        } catch (x) {
+          setErr(erreur(x));
+        }
+      }}
+    >
+      <Champ label={t('monWhatsapp')} aide={t('monWhatsappAide')}>
+        <input type="tel" inputMode="tel" autocomplete="tel" value={numero} onInput={(e) => setNumero(valeur(e))} placeholder="+233…" />
+      </Champ>
+      <button class="o-bouton" type="submit">
+        {t('enregistrer')}
+      </button>
+      {ok && <Pastille ton="ok">✓</Pastille>}
+      <MessageErreur texte={err} />
+    </form>
+  );
+}
 
 function MonCompte({ u, surDeconnexion }: { u: Utilisateur; surDeconnexion: () => void }) {
   const [ok, setOk] = useState(false);
@@ -23,6 +56,7 @@ function MonCompte({ u, surDeconnexion }: { u: Utilisateur; surDeconnexion: () =
       <p>
         <strong>{u.nom}</strong> · {u.email} · {code(`role-${u.role}`)} · {u.langue.toUpperCase()}
       </p>
+      <MonWhatsapp initial={u.whatsapp ?? null} />
       {ok && <p class="o-encadre o-ok">{tr('Mot de passe changé. Vos autres appareils sont déconnectés.', 'Contraseña cambiada. Tus otros dispositivos se han desconectado.', 'Password changed. Your other devices have been logged out.')}</p>}
       {mdp ? (
         <ChangerMdp

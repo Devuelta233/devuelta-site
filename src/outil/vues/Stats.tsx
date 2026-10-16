@@ -18,6 +18,8 @@ interface Donnees {
   demandes: number;
   dossiers: number;
   dossiers_resolus: number;
+  temps_moyen_minutes: number;
+  temps_dossiers: number;
 }
 
 const PERIODES = [7, 30, 90, 365];
@@ -124,6 +126,10 @@ export function Stats() {
             <div>
               <strong>{d.dossiers_resolus}</strong>
               <span>{t('dossiersResolus')}</span>
+            </div>
+            <div>
+              <strong>{d.temps_dossiers > 0 ? `${d.temps_moyen_minutes} min` : '—'}</strong>
+              <span>{t('tempsMoyen')}</span>
             </div>
           </div>
           <section class="o-encadre">

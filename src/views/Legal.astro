@@ -1,17 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
 import { C } from '../i18n/commun';
-import { CONFIDENTIALITE, MAJ_LEGAL, MENTIONS } from '../i18n/legal';
+import { CONDITIONS, CONFIDENTIALITE, MAJ_LEGAL, MENTIONS } from '../i18n/legal';
 import { page, versionsPage } from '../i18n/routes';
 import { dateLisible } from '../data';
 import type { Lang } from '../../shared/vocab';
 
 interface Props {
   lang: Lang;
-  quoi: 'confidentialite' | 'mentions';
+  quoi: 'confidentialite' | 'mentions' | 'conditions';
 }
 const { lang, quoi } = Astro.props;
-const doc = quoi === 'confidentialite' ? CONFIDENTIALITE : MENTIONS;
+const doc = quoi === 'confidentialite' ? CONFIDENTIALITE : quoi === 'conditions' ? CONDITIONS : MENTIONS;
 const maj = { fr: 'Mis à jour le', es: 'Actualizado el', en: 'Updated on' }[lang];
 ---
 <Base
@@ -35,6 +35,11 @@ const maj = { fr: 'Mis à jour le', es: 'Actualizado el', en: 'Updated on' }[lan
       <ul class="coche">
         {C.engagements[lang].map((e) => <li>{e}</li>)}
       </ul>
+    )}
+    {quoi === 'conditions' && (
+      <div class="actions">
+        <a class="bouton" href={page('retractation', lang)}>{C.nav.retractation[lang]}</a>
+      </div>
     )}
   </article>
 </Base>

@@ -82,6 +82,9 @@ const jsonld = [
       ))}
     </ul>
 
+    <h2>{TARIFS.proTitre[lang]}</h2>
+    <p>{TARIFS.proTexte[lang]}</p>
+
     <h2>{TARIFS.pourquoiTitre[lang]}</h2>
     <p>{TARIFS.pourquoi[lang]}</p>
 
@@ -99,7 +102,7 @@ const jsonld = [
     </ul>
 
     <h2>{TARIFS.paiementTitre[lang]}</h2>
-    <p>{TARIFS.paiement[lang]}</p>
+    <p>{TARIFS.paiement[lang]} <a href={page('conditions', lang)}>{C.nav.conditions[lang]} →</a></p>
 
     <div class="actions">
       <a class="bouton principal" href={page('confier', lang)}>

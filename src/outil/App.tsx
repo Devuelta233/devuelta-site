@@ -34,6 +34,7 @@ function lireRoute(): Route {
 }
 
 interface Compteurs {
+  retractations: number;
   demandes: number;
   echeances: number;
   courriers: number;
@@ -74,7 +75,7 @@ function Espace({ etat, route, surDeconnexion }: { etat: Etat; route: Route; sur
     get<{ compteurs: Compteurs }>('/notifications/resume')
       .then((r) => {
         setC(r.compteurs);
-        mettreBadge(r.compteurs.demandes + r.compteurs.echeances + r.compteurs.courriers + r.compteurs.alertes);
+        mettreBadge(r.compteurs.retractations + r.compteurs.demandes + r.compteurs.echeances + r.compteurs.courriers + r.compteurs.alertes);
       })
       .catch(() => undefined);
   }, [route.vue, route.id]);
@@ -138,7 +139,7 @@ function Espace({ etat, route, surDeconnexion }: { etat: Etat; route: Route; sur
         </a>
         <button type="button" class="o-bouton-menu" aria-expanded={menu} aria-controls="o-menu" onClick={() => setMenu(!menu)}>
           {menu ? '✕' : '☰'} <span>Menu</span>
-          {!menu && c && c.demandes + c.echeances + c.courriers + c.alertes > 0 ? <span class="o-point" aria-hidden="true" /> : null}
+          {!menu && c && c.retractations + c.demandes + c.echeances + c.courriers + c.alertes > 0 ? <span class="o-point" aria-hidden="true" /> : null}
         </button>
       </header>
       <nav id="o-menu" class={`o-menu ${menu ? 'o-ouvert' : ''}`} aria-label="Menu">

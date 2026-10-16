@@ -20,8 +20,8 @@ export async function setParam(db: D1Database, cle: string, valeur: string): Pro
     .run();
 }
 
-/** Référence lisible et unique : D-2026-0007 (demande), DV-2026-0012 (dossier). */
-export async function nextRef(db: D1Database, prefix: 'D' | 'DV'): Promise<string> {
+/** Référence lisible et unique : D-2026-0007 (demande), DV-2026-0012 (dossier), R-2026-0001 (rétractation). */
+export async function nextRef(db: D1Database, prefix: 'D' | 'DV' | 'R'): Promise<string> {
   const year = new Date().getUTCFullYear();
   const nom = `${prefix}-${year}`;
   const r = await db
