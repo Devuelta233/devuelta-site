@@ -1,5 +1,6 @@
 ---
 // Retour après paiement (Paystack renvoie ici). Page hors plan du site, non indexée.
+// Le petit script redemande au site si le paiement est confirmé (le site vérifie auprès de Paystack).
 import Base from '../layouts/Base.astro';
 import { CHEMIN_PAIEMENT_RECU } from '../../shared/paiement';
 import type { Lang } from '../../shared/vocab';
@@ -16,6 +17,11 @@ const T = {
     es: 'Tu pago se está confirmando. En cuanto se confirme, recibirás un correo de Team Devuelta.',
     en: 'Your payment is being confirmed. As soon as it is, you will get an email from Team Devuelta.',
   },
+  paye: {
+    fr: 'Votre paiement est confirmé. Merci : nous continuons le travail sur votre dossier.',
+    es: 'Tu pago está confirmado. Gracias: seguimos trabajando en tu caso.',
+    en: 'Your payment is confirmed. Thank you: we are carrying on with your case.',
+  },
   aide: {
     fr: 'Rien reçu d’ici une heure ? Écrivez-nous à team.devuelta@protonmail.com en indiquant votre numéro de dossier.',
     es: '¿No te llega nada en una hora? Escríbenos a team.devuelta@protonmail.com indicando tu número de caso.',
@@ -26,7 +32,10 @@ const T = {
 <Base lang={lang} titre={T.titre[lang]} description={T.texte[lang]} chemin={CHEMIN_PAIEMENT_RECU[lang]} noindex>
   <article class="page">
     <h1>{T.h1[lang]}</h1>
-    <p class="lede">{T.texte[lang]}</p>
+    <p class="lede" id="etat-paiement" data-paye={T.paye[lang]} role="status" aria-live="polite">{T.texte[lang]}</p>
     <p>{T.aide[lang]}</p>
   </article>
 </Base>
+<script>
+  import '../scripts/paiement-recu';
+</script>

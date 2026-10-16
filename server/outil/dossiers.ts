@@ -25,7 +25,7 @@ import { fichesPour, planPourLien } from './plan';
 import { enAttente, pourDossier } from './retractations';
 import { pourDossier as signaturePourDossier } from './signatures';
 import { pourDossier as paiementsPourDossier } from './paiements';
-import { paiementActif } from '../paiement';
+import { modeTest, paiementActif } from '../paiement';
 import type { Ctx } from './router';
 
 const FERMES = STATUTS_DOSSIER_FERMES as readonly string[];
@@ -258,6 +258,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     signature,
     paiements,
     paiement_actif: paiementActif(env),
+    paiement_test: modeTest(env),
   });
 }
 

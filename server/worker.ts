@@ -7,7 +7,7 @@ import { SITE_HOST } from '../shared/site';
 import { recevoirDemande } from './intake';
 import { handleOutil } from './outil/router';
 import { recevoirRetractation } from './retractation';
-import { webhookPaystack } from './paiement';
+import { verifierRetour, webhookPaystack } from './paiement';
 import { lireSignature, signer } from './signature';
 import { ensureSchema } from './schema';
 import { compterEvenementPublic, compterVue } from './stats';
@@ -82,6 +82,7 @@ export default {
         if (url.pathname === '/api/signature/lire') return await lireSignature(request, env);
         if (url.pathname === '/api/signature/signer') return await signer(request, env, ctx);
         if (url.pathname === '/api/paiement/paystack') return await webhookPaystack(request, env, ctx);
+        if (url.pathname === '/api/paiement/verifier') return await verifierRetour(request, env);
         // Pays de la connexion (d'après Cloudflare), pour pré-remplir le formulaire. Rien n'est gardé.
         if (url.pathname === '/api/pays') return json({ pays: clientGeo(request).pays }, 200, { 'Cache-Control': 'private, no-store' });
         if (url.pathname === '/api/evenement') return await compterEvenementPublic(request, env);

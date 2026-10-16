@@ -270,6 +270,17 @@ const D = typoProfonde({
   paiementEnvoyerSolde: ['Envoyer le lien de paiement du solde', 'Enviar el enlace de pago del saldo', 'Send the balance payment link'],
   paiementPaye: ['payé le', 'pagado el', 'paid on'],
   paiementAttente: ['en attente, lien créé le', 'pendiente, enlace creado el', 'pending, link created on'],
+  paiementAnomalie: [
+    'payé, mais pas le montant prévu : à vérifier dans Paystack',
+    'pagado, pero no el importe previsto: revisar en Paystack',
+    'paid, but not the expected amount: check in Paystack',
+  ],
+  paiementFictif: ['paiement de test', 'pago de prueba', 'test payment'],
+  paiementModeTest: [
+    'Mode test : paiements fictifs, payables seulement avec les cartes de test de Paystack. Aucun lien ne part tout seul après une signature. N’envoyez pas de lien à un vrai client.',
+    'Modo de prueba: pagos ficticios, que solo se pagan con las tarjetas de prueba de Paystack. Ningún enlace sale solo tras una firma. No envíes enlaces a un cliente real.',
+    'Test mode: fake payments, payable only with Paystack test cards. No link goes out automatically after a signature. Do not send links to a real client.',
+  ],
   paiementAuto: [
     'Après une signature en ligne, le lien d’ouverture part tout seul avec la copie signée.',
     'Tras una firma en línea, el enlace de apertura sale solo con la copia firmada.',

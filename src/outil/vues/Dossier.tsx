@@ -138,6 +138,8 @@ interface Detail {
   signature: Signature | null;
   paiements: Paiement[];
   paiement_actif: boolean;
+  /** Clé de test Paystack : paiements fictifs. */
+  paiement_test: boolean;
 }
 
 interface Paiement {
@@ -148,6 +150,7 @@ interface Paiement {
   cree_le: string;
   paye_le: string | null;
   lien: string | null;
+  test: number;
 }
 
 interface Signature {
@@ -347,7 +350,10 @@ function PaiementDossier({ d, recharger }: { d: Detail; recharger: () => void })
   const lang = langue.value;
   const a = useAction();
   const [envoi, setEnvoi] = useState<{ message: string; envoye: boolean; lien: string } | null>(null);
-  const paye = (type: string) => d.paiements.some((p) => p.type === type && p.statut === 'paye');
+  // Un paiement de test ne compte pas comme un vrai paiement (et inversement).
+  const paye = (type: string) => d.paiements.some((p) => p.type === type && p.statut === 'paye' && !!p.test === d.paiement_test);
+  const etat = (p: Paiement) =>
+    p.statut === 'paye' ? `${t('paiementPaye')} ${date(p.paye_le)}` : p.statut === 'anomalie' ? t('paiementAnomalie') : `${t('paiementAttente')} ${date(p.cree_le)}`;
   const retires = d.contenus.some((c) => c.statut === 'retire');
   const demander = (type: 'ouverture' | 'solde') =>
     a.lancer(
@@ -361,13 +367,14 @@ function PaiementDossier({ d, recharger }: { d: Detail; recharger: () => void })
     <section class="o-encadre">
       <strong>{t('paiementTitre')}</strong>
       {!d.paiement_actif && <p class="o-muet">{t('paiementInactif')}</p>}
+      {d.paiement_test && <p class="o-encadre o-alerte">{t('paiementModeTest')}</p>}
       {d.paiements.length > 0 && (
         <ul>
           {d.paiements.map((p) => (
             <li>
-              {p.type === 'ouverture' ? t('paiementOuverture') : t('paiementSolde')} · <strong>{euros(p.montant_eur, lang)}</strong> ·{' '}
-              {p.statut === 'paye' ? `${t('paiementPaye')} ${date(p.paye_le)}` : `${t('paiementAttente')} ${date(p.cree_le)}`}
-              {p.statut !== 'paye' && p.lien && (
+              {p.type === 'ouverture' ? t('paiementOuverture') : t('paiementSolde')} · <strong>{euros(p.montant_eur, lang)}</strong> · {etat(p)}
+              {p.test ? ` · ${t('paiementFictif')}` : ''}
+              {p.statut === 'en-attente' && p.lien && (
                 <>
                   {' '}
                   <Copier texte={p.lien} libelle={t('copierLien')} />
@@ -379,7 +386,7 @@ function PaiementDossier({ d, recharger }: { d: Detail; recharger: () => void })
       )}
       {d.paiement_actif && (
         <>
-          <p class="o-muet">{t('paiementAuto')}</p>
+          {!d.paiement_test && <p class="o-muet">{t('paiementAuto')}</p>}
           <p class="o-actions">
             {!paye('ouverture') && (
               <button class="o-bouton" disabled={a.occupe} onClick={() => demander('ouverture')}>

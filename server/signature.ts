@@ -9,7 +9,7 @@ import { isLang, type Lang } from '../shared/vocab';
 import { sha256Hex } from './crypto';
 import { journalStmt } from './db';
 import { envoyerCourriel } from './email';
-import { lienPaiement, type LienPaiement } from './paiement';
+import { lienPaiement, modeTest, type LienPaiement } from './paiement';
 import { ipHash } from './intake';
 import { notifier } from './push';
 import { HttpError, cleanText, clientIp, json, memeOrigine, nowIso, readJson, type Env } from './util';
@@ -118,9 +118,10 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
   ctx.waitUntil(notifier(env.DB, [dossier.assigne_a]).catch(() => 0));
   // Copie signée par e-mail (support durable), avec le WhatsApp de la personne qui suit le dossier
   // et, si le paiement en ligne est activé, le lien de paiement d'ouverture.
+  // Clé de test : aucun lien fictif ne part tout seul vers un client.
   const resume = JSON.parse(s.resume) as ResumeDevis;
   let paiement: LienPaiement | null = null;
-  if (dossier.client_email) {
+  if (dossier.client_email && !modeTest(env)) {
     paiement = await lienPaiement(env, {
       dossierId: dossier.id,
       ref: dossier.ref,

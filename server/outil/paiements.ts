@@ -6,7 +6,7 @@ import type { ResumeDevis } from '../../shared/signature';
 import { calculerPrix, euros, zoneDuPays } from '../../shared/tarifs';
 import { isLang, type Lang } from '../../shared/vocab';
 import { envoyerCourriel } from '../email';
-import { lienPaiement, paiementActif, type TypePaiement } from '../paiement';
+import { lienPaiement, modeTest, paiementActif, type TypePaiement } from '../paiement';
 import { HttpError, json, readJson } from '../util';
 import { dossierVisible, type DossierRow } from './access';
 import type { Ctx } from './router';
@@ -43,7 +43,10 @@ export async function demander({ request, env, params, auth }: Ctx): Promise<Res
   if (!d.mandat_signe_le) throw new HttpError(400, 'mandat-manquant');
   const email = d.client_email as string | null;
   if (!email) throw new HttpError(400, 'email-client-manquant');
-  const deja = await env.DB.prepare("SELECT 1 AS x FROM paiements WHERE dossier_id = ? AND type = ? AND statut = 'paye'").bind(d.id, type).first();
+  // Un paiement de test ne compte pas comme un vrai paiement (et inversement).
+  const deja = await env.DB.prepare("SELECT 1 AS x FROM paiements WHERE dossier_id = ? AND type = ? AND statut = 'paye' AND test = ?")
+    .bind(d.id, type, modeTest(env) ? 1 : 0)
+    .first();
   if (deja) throw new HttpError(409, 'deja-paye');
   const montant = await montantDu(env.DB, d, type);
   if (!(montant > 0)) throw new HttpError(400, 'rien-a-payer');
@@ -64,7 +67,7 @@ export async function demander({ request, env, params, auth }: Ctx): Promise<Res
 
 export async function pourDossier(db: D1Database, dossierId: string) {
   const r = await db
-    .prepare('SELECT type, montant_eur, devise, statut, cree_le, paye_le, lien, canal FROM paiements WHERE dossier_id = ? ORDER BY cree_le DESC')
+    .prepare('SELECT type, montant_eur, devise, statut, cree_le, paye_le, lien, canal, test FROM paiements WHERE dossier_id = ? ORDER BY cree_le DESC')
     .bind(dossierId)
     .all();
   return r.results;

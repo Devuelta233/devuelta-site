@@ -312,6 +312,9 @@ export const MIGRATIONS: string[][] = [
     )`,
     `CREATE INDEX IF NOT EXISTS idx_paiements_dossier ON paiements (dossier_id)`,
   ],
+  // 8 — paiements faits avec une clé de test Paystack (aucun vrai argent) :
+  // marqués pour ne jamais être confondus avec un vrai paiement.
+  [`ALTER TABLE paiements ADD COLUMN test INTEGER NOT NULL DEFAULT 0`],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

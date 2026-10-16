@@ -1,8 +1,9 @@
 // Le travail automatique quotidien (déclenché chaque matin par Cloudflare).
 // Tout ce qui est préparé ici attend une validation humaine : rien ne part
 // vers l'extérieur, à l'exception des notifications vers nos propres téléphones,
-// des vérifications de liens (simples visites) et du signalement des pages
-// du site aux moteurs de recherche (IndexNow).
+// des vérifications de liens (simples visites), du signalement des pages
+// du site aux moteurs de recherche (IndexNow) et de l'e-mail « paiement reçu »
+// quand Paystack confirme un paiement dont la notification s'était perdue.
 
 import guidesData from '../shared/guides.json';
 import plateformesData from '../shared/plateformes.json';
@@ -12,6 +13,7 @@ import { isLang, type Lang } from '../shared/vocab';
 import { newId } from './crypto';
 import { getParam, getParamInt, journalStmt, setParam } from './db';
 import { trouverModele, genererCourrier } from './outil/modeles';
+import { verifierEnAttente } from './paiement';
 import { notifier } from './push';
 import { ensureSchema } from './schema';
 import { addDays, nowIso, type Env } from './util';
@@ -350,6 +352,8 @@ export async function executerTaches(env: Env): Promise<Record<string, unknown>>
     return r.verifies;
   });
   await etape('liens_officiels', () => verifierLiensOfficiels(env.DB));
+  // Paiements : si une notification de Paystack s'est perdue, on redemande l'état.
+  await etape('paiements', () => verifierEnAttente(env));
   // En local, on ne signale rien aux moteurs : seul le vrai site le fait.
   await etape('indexnow', () => (env.LOCAL === '1' ? Promise.resolve('ignoré en local') : indexNow(env)));
   await etape('alertes_reapparition', () => (reapparus.length ? notifier(env.DB, reapparus) : Promise.resolve(0)));
