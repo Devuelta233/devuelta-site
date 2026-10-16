@@ -21,6 +21,8 @@ import {
   readJson,
   type Env,
 } from './util';
+import { emailDemandeRecue } from '../shared/emails';
+import { envoyerCourriel } from './email';
 
 const PLATEFORME_OK = /^[a-z0-9-]{2,30}$/;
 
@@ -105,5 +107,13 @@ export async function recevoirDemande(request: Request, env: Env, ctx: Execution
   ctx.waitUntil(
     Promise.all([notifier(env.DB, [assigne]), compterEvenement(env.DB, 'demande')]).catch(() => undefined),
   );
-  return json({ ok: true, ref });
+  // Accusé de réception automatique, dans la langue choisie.
+  const confirmation =
+    contactMode === 'email' &&
+    (await envoyerCourriel(env, contactValeur, emailDemandeRecue({ pseudo, ref, menace: bool(body.menace) }, langue), {
+      type: 'demande-recue',
+      objet: 'demande',
+      objet_id: id,
+    }));
+  return json({ ok: true, ref, confirmation });
 }

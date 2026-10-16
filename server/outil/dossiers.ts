@@ -23,6 +23,9 @@ import { hoteDe, identifier, plateformeDuLien, type Identification } from './ide
 import { ETAPE_DU_MODELE, contientMarqueur, genererCourrier, resumeModeles, trouverModele } from './modeles';
 import { fichesPour, planPourLien } from './plan';
 import { enAttente, pourDossier } from './retractations';
+import { pourDossier as signaturePourDossier } from './signatures';
+import { pourDossier as paiementsPourDossier } from './paiements';
+import { paiementActif } from '../paiement';
 import type { Ctx } from './router';
 
 const FERMES = STATUTS_DOSSIER_FERMES as readonly string[];
@@ -213,6 +216,8 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     ? await env.DB.prepare('SELECT nom, whatsapp FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string; whatsapp: string | null }>()
     : null;
   const retractations = await pourDossier(env.DB, d.id);
+  const signature = await signaturePourDossier(env.DB, d.id);
+  const paiements = await paiementsPourDossier(env.DB, d.id);
   const liens = contenus.results.map((c) => {
     const ident = lireIdent(c);
     const row: Record<string, unknown> = { ...c, ident };
@@ -250,6 +255,9 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     notes: notes.results,
     fiches,
     retractations,
+    signature,
+    paiements,
+    paiement_actif: paiementActif(env),
   });
 }
 

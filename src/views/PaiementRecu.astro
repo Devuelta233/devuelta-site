@@ -1,0 +1,32 @@
+---
+// Retour après paiement (Paystack renvoie ici). Page hors plan du site, non indexée.
+import Base from '../layouts/Base.astro';
+import { CHEMIN_PAIEMENT_RECU } from '../../shared/paiement';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const T = {
+  titre: { fr: 'Paiement en cours de confirmation', es: 'Pago en curso de confirmación', en: 'Payment being confirmed' },
+  h1: { fr: 'Merci.', es: 'Gracias.', en: 'Thank you.' },
+  texte: {
+    fr: 'Votre paiement est en cours de confirmation. Dès qu’il est confirmé, vous recevez un e-mail de Team Devuelta.',
+    es: 'Tu pago se está confirmando. En cuanto se confirme, recibirás un correo de Team Devuelta.',
+    en: 'Your payment is being confirmed. As soon as it is, you will get an email from Team Devuelta.',
+  },
+  aide: {
+    fr: 'Rien reçu d’ici une heure ? Écrivez-nous à team.devuelta@protonmail.com en indiquant votre numéro de dossier.',
+    es: '¿No te llega nada en una hora? Escríbenos a team.devuelta@protonmail.com indicando tu número de caso.',
+    en: 'Nothing within an hour? Write to team.devuelta@protonmail.com with your case number.',
+  },
+};
+---
+<Base lang={lang} titre={T.titre[lang]} description={T.texte[lang]} chemin={CHEMIN_PAIEMENT_RECU[lang]} noindex>
+  <article class="page">
+    <h1>{T.h1[lang]}</h1>
+    <p class="lede">{T.texte[lang]}</p>
+    <p>{T.aide[lang]}</p>
+  </article>
+</Base>

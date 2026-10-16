@@ -35,6 +35,7 @@ const FR = {
     email: 'Nous arrêtons les démarches. Vous recevez un accusé de réception par e-mail, au plus tard le jour ouvré suivant. Faites une capture de cet écran pour garder une trace.',
     whatsapp: 'Nous arrêtons les démarches. Vous recevez un accusé de réception par WhatsApp, au plus tard le jour ouvré suivant. Faites une capture de cet écran pour garder une trace.',
   },
+  merciAccuse: 'Nous arrêtons les démarches. L’accusé de réception vient de vous être envoyé par e-mail (regardez aussi dans les indésirables). Faites une capture de cet écran pour garder une trace.',
   erreurs: {
     'champ-manquant': 'Un champ obligatoire est vide.',
     'email-invalide': 'L’adresse e-mail semble incorrecte.',
@@ -70,6 +71,7 @@ const ES: Textes = {
     email: 'Detenemos las gestiones. Recibirás un acuse de recibo por correo electrónico a más tardar el siguiente día hábil. Haz una captura de esta pantalla para guardar constancia.',
     whatsapp: 'Detenemos las gestiones. Recibirás un acuse de recibo por WhatsApp a más tardar el siguiente día hábil. Haz una captura de esta pantalla para guardar constancia.',
   },
+  merciAccuse: 'Detenemos las gestiones. Te acabamos de enviar el acuse de recibo por correo (mira también en spam). Haz una captura de esta pantalla para guardar constancia.',
   erreurs: {
     'champ-manquant': 'Falta un campo obligatorio.',
     'email-invalide': 'El correo electrónico no parece correcto.',
@@ -103,6 +105,7 @@ const EN: Textes = {
     email: 'We are stopping work on your case. You will get an acknowledgement by email by the next working day at the latest. Take a screenshot of this screen to keep a record.',
     whatsapp: 'We are stopping work on your case. You will get an acknowledgement by WhatsApp by the next working day at the latest. Take a screenshot of this screen to keep a record.',
   },
+  merciAccuse: 'We are stopping work on your case. The acknowledgement has just been sent to you by email (check your spam folder too). Take a screenshot of this screen to keep a record.',
   erreurs: {
     'champ-manquant': 'A required field is empty.',
     'email-invalide': 'The email address looks wrong.',
@@ -126,7 +129,7 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
   const [piege, setPiege] = useState('');
   const [envoi, setEnvoi] = useState(false);
   const [erreur, setErreur] = useState('');
-  const [recu, setRecu] = useState<{ ref: string; le: string } | null>(null);
+  const [recu, setRecu] = useState<{ ref: string; le: string; accuse: boolean } | null>(null);
   const zoneErreur = useRef<HTMLParagraphElement>(null);
   const zoneRecu = useRef<HTMLHeadingElement>(null);
 
@@ -160,8 +163,8 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
           site_web: piege,
         }),
       });
-      const j = (await r.json().catch(() => ({}))) as { ok?: boolean; ref?: string; recue_le?: string; erreur?: string };
-      if (r.ok && j.ok && j.ref && j.recue_le) setRecu({ ref: j.ref, le: j.recue_le });
+      const j = (await r.json().catch(() => ({}))) as { ok?: boolean; ref?: string; recue_le?: string; erreur?: string; accuse?: boolean };
+      if (r.ok && j.ok && j.ref && j.recue_le) setRecu({ ref: j.ref, le: j.recue_le, accuse: !!j.accuse });
       else setErreur(t.erreurs[j.erreur ?? ''] ?? t.erreurs.defaut);
     } catch {
       setErreur(t.erreurs.defaut);
@@ -182,7 +185,7 @@ export function Retractation({ d }: { d: DonneesRetractation }) {
         <p>
           {t.merciDate} {dateHeureGmt(recu.le, d.lang)}
         </p>
-        <p>{t.merciTexte[mode]}</p>
+        <p>{recu.accuse ? t.merciAccuse : t.merciTexte[mode]}</p>
       </div>
     );
   }

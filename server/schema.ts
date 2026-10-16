@@ -268,6 +268,50 @@ export const MIGRATIONS: string[][] = [
   ],
   // 5 — numéro WhatsApp de chaque membre : donné au client seulement à l'ouverture de son dossier
   [`ALTER TABLE utilisateurs ADD COLUMN whatsapp TEXT`],
+  // 6 — signature électronique du devis et du mandat (lien personnel envoyé au client)
+  [
+    `CREATE TABLE IF NOT EXISTS signatures (
+      id TEXT PRIMARY KEY,
+      dossier_id TEXT NOT NULL REFERENCES dossiers(id) ON DELETE CASCADE,
+      jeton_hash TEXT NOT NULL UNIQUE,
+      langue TEXT NOT NULL,
+      document TEXT NOT NULL,
+      document_hash TEXT NOT NULL,
+      resume TEXT NOT NULL,
+      representant TEXT NOT NULL,
+      cree_le TEXT NOT NULL,
+      cree_par TEXT,
+      expire_le TEXT NOT NULL,
+      annule_le TEXT,
+      signe_le TEXT,
+      nom_signe TEXT,
+      debut_immediat INTEGER,
+      document_signe TEXT,
+      ip_hash TEXT
+    )`,
+    `CREATE INDEX IF NOT EXISTS idx_signatures_dossier ON signatures (dossier_id)`,
+  ],
+  // 7 — paiements en ligne (Paystack). Gardés pour la comptabilité même après
+  // la purge du dossier : seule la référence du dossier reste, sans donnée personnelle.
+  [
+    `CREATE TABLE IF NOT EXISTS paiements (
+      id TEXT PRIMARY KEY,
+      dossier_id TEXT REFERENCES dossiers(id) ON DELETE SET NULL,
+      type TEXT NOT NULL,
+      reference TEXT NOT NULL UNIQUE,
+      montant_eur REAL NOT NULL,
+      devise TEXT NOT NULL,
+      montant_devise INTEGER NOT NULL,
+      taux REAL,
+      lien TEXT,
+      statut TEXT NOT NULL DEFAULT 'en-attente',
+      cree_le TEXT NOT NULL,
+      cree_par TEXT,
+      paye_le TEXT,
+      canal TEXT
+    )`,
+    `CREATE INDEX IF NOT EXISTS idx_paiements_dossier ON paiements (dossier_id)`,
+  ],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

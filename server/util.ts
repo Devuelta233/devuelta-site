@@ -7,6 +7,12 @@ export interface Env {
   HACHAGE_ITERATIONS?: string;
   /** « 1 » sur un poste de développement : rien n'est envoyé aux moteurs de recherche. */
   LOCAL?: string;
+  /** Envoi des e-mails automatiques (Cloudflare Email Service). Absent : rien n'est envoyé. */
+  EMAIL?: SendEmail;
+  /** Paiement en ligne (secret Cloudflare). Absent : paiement en ligne désactivé. */
+  PAYSTACK_SECRET_KEY?: string;
+  /** Devise débitée par Paystack (GHS par défaut). */
+  PAIEMENT_DEVISE?: string;
 }
 
 export class HttpError extends Error {

@@ -1217,6 +1217,35 @@ legend {
 
 /* Impression : seulement le contenu utile ------------------------------------- */
 
+.document-signe {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: var(--police);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  background: var(--papier);
+  border: 1px solid var(--trait);
+  border-radius: var(--rayon);
+  padding: 1rem;
+  margin: 0.75rem 0 1.25rem;
+}
+
+details.document > summary {
+  cursor: pointer;
+  font-weight: 700;
+  margin: 1rem 0 0.25rem;
+}
+
+.recap {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.recap li + li {
+  margin-top: 0.25rem;
+}
+
 @media print {
   .entete,
   .pied,
