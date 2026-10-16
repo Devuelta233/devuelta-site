@@ -7,6 +7,8 @@ import { SITE_HOST } from '../shared/site';
 import { recevoirDemande } from './intake';
 import { handleOutil } from './outil/router';
 import { recevoirRetractation } from './retractation';
+import { webhookPaystack } from './paiement';
+import { lireSignature, signer } from './signature';
 import { ensureSchema } from './schema';
 import { compterEvenementPublic, compterVue } from './stats';
 import { executerTaches } from './taches';
@@ -77,6 +79,9 @@ export default {
         await ensureSchema(env.DB);
         if (url.pathname === '/api/demande') return await recevoirDemande(request, env, ctx);
         if (url.pathname === '/api/retractation') return await recevoirRetractation(request, env, ctx);
+        if (url.pathname === '/api/signature/lire') return await lireSignature(request, env);
+        if (url.pathname === '/api/signature/signer') return await signer(request, env, ctx);
+        if (url.pathname === '/api/paiement/paystack') return await webhookPaystack(request, env, ctx);
         if (url.pathname === '/api/evenement') return await compterEvenementPublic(request, env);
         if (url.pathname.startsWith('/api/outil/')) return await handleOutil(request, env, ctx);
         throw new HttpError(404, 'introuvable');

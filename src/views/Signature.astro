@@ -1,0 +1,42 @@
+---
+// Signature en ligne du devis et du mandat (lien personnel envoyé par l'équipe).
+// Page hors plan du site et non indexée : elle n'a de sens qu'avec un lien reçu.
+import Base from '../layouts/Base.astro';
+import { page } from '../i18n/routes';
+import { CHEMIN_SIGNATURE } from '../../shared/signature';
+import type { Lang } from '../../shared/vocab';
+import type { DonneesSignature } from '../scripts/Signature';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const T = {
+  titre: { fr: 'Signer votre devis', es: 'Firmar tu presupuesto', en: 'Sign your quote' },
+  h1: { fr: 'Votre devis et votre mandat', es: 'Tu presupuesto y tu mandato', en: 'Your quote and authorization' },
+  intro: {
+    fr: 'Lisez le document. Si tout vous convient, tapez votre nom et signez. Cela prend 2 minutes.',
+    es: 'Lee el documento. Si todo te parece bien, escribe tu nombre y firma. Son 2 minutos.',
+    en: 'Read the document. If everything suits you, type your name and sign. It takes 2 minutes.',
+  },
+  sansJs: {
+    fr: 'Pour signer en ligne, activez JavaScript, ou écrivez-nous à team.devuelta@protonmail.com.',
+    es: 'Para firmar en línea, activa JavaScript, o escríbenos a team.devuelta@protonmail.com.',
+    en: 'To sign online, turn on JavaScript, or write to us at team.devuelta@protonmail.com.',
+  },
+};
+const donnees: DonneesSignature = { lang, conditions: page('conditions', lang), confidentialite: page('confidentialite', lang) };
+---
+<Base lang={lang} titre={T.titre[lang]} description={T.intro[lang]} chemin={CHEMIN_SIGNATURE[lang]} noindex>
+  <article class="page">
+    <h1>{T.h1[lang]}</h1>
+    <p class="lede">{T.intro[lang]}</p>
+    <div id="signature">
+      <p>{T.sansJs[lang]}</p>
+    </div>
+    <script type="application/json" id="donnees-signature" set:html={JSON.stringify(donnees).replace(/</g, '\\u003c')} />
+  </article>
+</Base>
+<script>
+  import '../scripts/signature-app';
+</script>

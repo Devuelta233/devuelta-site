@@ -32,6 +32,7 @@ export function Confier({ d }: { d: DonneesConfier }) {
   const [envoi, setEnvoi] = useState(false);
   const [erreur, setErreur] = useState('');
   const [ref, setRef] = useState('');
+  const [confirmation, setConfirmation] = useState(false);
   const zoneErreur = useRef<HTMLParagraphElement>(null);
   const zoneMerci = useRef<HTMLHeadingElement>(null);
 
@@ -97,8 +98,9 @@ export function Confier({ d }: { d: DonneesConfier }) {
           site_web: piege,
         }),
       });
-      const j = (await r.json().catch(() => ({}))) as { ok?: boolean; ref?: string; erreur?: string };
+      const j = (await r.json().catch(() => ({}))) as { ok?: boolean; ref?: string; erreur?: string; confirmation?: boolean };
       if (r.ok && j.ok && j.ref) {
+        setConfirmation(!!j.confirmation);
         setRef(j.ref);
         try {
           sessionStorage.removeItem('dv-diag');
@@ -124,6 +126,7 @@ export function Confier({ d }: { d: DonneesConfier }) {
         <p>
           {t.merciRef} : <span class="reference">{ref}</span>
         </p>
+        {confirmation && <p>{t.merciConfirmation}</p>}
         <p>{t.merciTexte.replace('{email}', d.liens.email)}</p>
       </div>
     );

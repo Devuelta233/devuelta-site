@@ -4,7 +4,10 @@
 // contrat concerné et où envoyer l'accusé de réception, avec la date et l'heure.
 // L'équipe est prévenue tout de suite et envoie l'accusé depuis le tableau de bord.
 
+import { sujetAccuse } from '../shared/emails';
+import { texteAccuse } from '../shared/retractation';
 import { isLang } from '../shared/vocab';
+import { envoyerCourriel } from './email';
 import { newId } from './crypto';
 import { journal, nextRef } from './db';
 import { ipHash } from './intake';
@@ -84,5 +87,17 @@ export async function recevoirRetractation(request: Request, env: Env, ctx: Exec
   });
   // Alerte immédiate : la personne qui suit le dossier, sinon les admins.
   ctx.waitUntil(notifier(env.DB, [dossier?.assigne_a]).catch(() => 0));
-  return json({ ok: true, ref, recue_le: now });
+  // Accusé de réception automatique (support durable) quand la personne a choisi l'e-mail.
+  let accuse = false;
+  if (contactMode === 'email') {
+    const r = { ref, recue_le: now, nom, dossier_ref: dossierRef, contact_mode: 'email' as const, contact_valeur: contactValeur, message };
+    accuse = await envoyerCourriel(env, contactValeur, { sujet: sujetAccuse(ref, langue), texte: texteAccuse(r, langue) }, {
+      type: 'accuse-retractation',
+      objet: 'retractation',
+      objet_id: id,
+      dossier_id: dossier?.id ?? null,
+    });
+    if (accuse) await env.DB.prepare('UPDATE retractations SET accuse_le = ? WHERE id = ?').bind(nowIso(), id).run();
+  }
+  return json({ ok: true, ref, recue_le: now, accuse });
 }

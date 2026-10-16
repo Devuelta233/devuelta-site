@@ -33,7 +33,8 @@ const FR = {
   merciTitre: 'Votre demande est bien reçue.',
   merciRef: 'Votre référence',
   merciTexte:
-    'Notez-la. Nous vous répondons par e-mail, en général sous 24 à 48 heures. Nos messages viennent de {email} et ne mentionnent jamais votre situation dans l’objet.',
+    'Notez-la. Nous vous répondons par e-mail, en général sous 24 à 48 heures. Nos messages sont signés Team Devuelta, viennent de getdevuelta.com ou de {email}, et ne mentionnent jamais votre situation dans l’objet.',
+  merciConfirmation: 'Un e-mail de confirmation vient de partir. Rien reçu d’ici quelques minutes ? Regardez dans les indésirables.',
   erreurs: {
     'champ-manquant': 'Un champ obligatoire est vide.',
     'email-invalide': 'L’adresse e-mail semble incorrecte.',
@@ -82,7 +83,8 @@ const ES: Textes = {
   merciTitre: 'Hemos recibido tu solicitud.',
   merciRef: 'Tu referencia',
   merciTexte:
-    'Anótala. Te respondemos por correo electrónico, normalmente en 24 a 48 horas. Nuestros mensajes llegan desde {email} y nunca mencionan tu situación en el asunto.',
+    'Anótala. Te respondemos por correo electrónico, normalmente en 24 a 48 horas. Nuestros mensajes van firmados por Team Devuelta, llegan desde getdevuelta.com o desde {email}, y nunca mencionan tu situación en el asunto.',
+  merciConfirmation: 'Te acabamos de enviar un correo de confirmación. ¿No te llega en unos minutos? Mira en la carpeta de spam.',
   erreurs: {
     'champ-manquant': 'Falta un campo obligatorio.',
     'email-invalide': 'El correo parece incorrecto.',
@@ -129,7 +131,8 @@ const EN: Textes = {
   merciTitre: 'Your request has been received.',
   merciRef: 'Your reference',
   merciTexte:
-    'Keep it. We reply by email, usually within 24 to 48 hours. Our messages come from {email} and never mention your situation in the subject line.',
+    'Keep it. We reply by email, usually within 24 to 48 hours. Our messages are signed Team Devuelta, come from getdevuelta.com or {email}, and never mention your situation in the subject line.',
+  merciConfirmation: 'A confirmation email is on its way. Nothing within a few minutes? Check your spam folder.',
   erreurs: {
     'champ-manquant': 'A required field is empty.',
     'email-invalide': 'The email address looks wrong.',
