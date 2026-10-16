@@ -12,7 +12,7 @@ import type { Ctx } from './router';
 const STATUTS_MANUELS = ['nouvelle', 'orientee', 'refusee', 'spam'];
 const SITUATIONS_PRIORITAIRES = ['contenu-intime', 'deepfake', 'chantage'];
 
-function parseDemande(r: Record<string, unknown>) {
+export function parseDemande(r: Record<string, unknown>) {
   const out: Record<string, unknown> = { ...r };
   for (const k of ['plateformes', 'liens']) {
     try {
@@ -48,7 +48,7 @@ export async function liste({ env, url, auth }: Ctx): Promise<Response> {
   return json({ ok: true, demandes: rows.results });
 }
 
-async function charger(ctx: Ctx) {
+export async function charger(ctx: Ctx) {
   const r = await ctx.env.DB.prepare('SELECT * FROM demandes WHERE id = ?').bind(ctx.params.id).first<Record<string, unknown>>();
   if (!r || !peutVoirDemande(ctx.auth.user, r as { assigne_a: string | null; langue: string })) {
     throw new HttpError(404, 'introuvable');

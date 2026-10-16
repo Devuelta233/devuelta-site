@@ -26,6 +26,9 @@
   // « Onboard Domain » > getdevuelta.com. Tant que ce n'est pas fait, rien ne
   // part et l'outil affiche le message à copier.
   "send_email": [{ "name": "EMAIL", "allowed_sender_addresses": ["team@getdevuelta.com"] }],
+  // IA de Cloudflare : brouillons de réponse aux demandes, toujours relus et
+  // envoyés par une personne de l'équipe.
+  "ai": { "binding": "AI" },
   // Tâche automatique quotidienne (heure UTC = heure du Ghana).
   "triggers": { "crons": ["30 5 * * *"] },
   "routes": [

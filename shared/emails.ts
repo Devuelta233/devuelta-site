@@ -31,7 +31,7 @@ export interface Estimation {
   aPartirDe: number;
 }
 
-function phrasePrix(e: Estimation, lang: Lang): string {
+export function phrasePrix(e: Estimation, lang: Lang, aConfirmer = true): string {
   const m = (n: number) => euros(n, lang);
   if (e.liens > 15 || (e.liens > 0 && e.total === null)) {
     return { fr: 'plus de 15 liens : nous vous faisons un devis.', es: 'más de 15 enlaces: te hacemos un presupuesto.', en: 'more than 15 links: we will send you a quote.' }[lang];
@@ -43,12 +43,12 @@ function phrasePrix(e: Estimation, lang: Lang): string {
   }
   const n = e.liens;
   if (lang === 'es') {
-    return `${n} enlace${n > 1 ? 's' : ''}, ${m(e.total)} en total: ${m(e.ouverture)} para empezar, el resto solo por los enlaces retirados. Te confirmamos este precio después de leer tu solicitud.`;
+    return `${n} enlace${n > 1 ? 's' : ''}, ${m(e.total)} en total: ${m(e.ouverture)} para empezar, el resto solo por los enlaces retirados.${aConfirmer ? ' Te confirmamos este precio después de leer tu solicitud.' : ''}`;
   }
   if (lang === 'en') {
-    return `${n} link${n > 1 ? 's' : ''}, ${m(e.total)} in total: ${m(e.ouverture)} to start, the rest only for the links removed. We confirm this price after reading your request.`;
+    return `${n} link${n > 1 ? 's' : ''}, ${m(e.total)} in total: ${m(e.ouverture)} to start, the rest only for the links removed.${aConfirmer ? ' We confirm this price after reading your request.' : ''}`;
   }
-  return `${n} lien${n > 1 ? 's' : ''}, ${m(e.total)} au total : ${m(e.ouverture)} pour démarrer, le reste seulement pour les liens retirés. Ce prix vous est confirmé après lecture de votre demande.`;
+  return `${n} lien${n > 1 ? 's' : ''}, ${m(e.total)} au total : ${m(e.ouverture)} pour démarrer, le reste seulement pour les liens retirés.${aConfirmer ? ' Ce prix vous est confirmé après lecture de votre demande.' : ''}`;
 }
 
 /** Juste après l'envoi du formulaire « Confier mon dossier ». */

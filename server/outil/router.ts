@@ -17,6 +17,7 @@ import {
   loadAuth,
   type AuthState,
 } from './auth';
+import * as assistant from './assistant';
 import * as demandes from './demandes';
 import * as dossiers from './dossiers';
 import * as equipe from './equipe';
@@ -80,6 +81,8 @@ add('GET', '/demandes/:id', 'complete', demandes.detail);
 add('POST', '/demandes/:id/convertir', 'complete', demandes.convertir);
 add('POST', '/demandes/:id/statut', 'complete', demandes.changerStatut);
 add('POST', '/demandes/:id/assigner', 'complete', demandes.assigner);
+add('POST', '/demandes/:id/brouillon', 'complete', assistant.brouillon);
+add('POST', '/demandes/:id/repondre', 'complete', assistant.repondre);
 
 add('GET', '/dossiers', 'complete', dossiers.liste);
 add('POST', '/dossiers', 'complete', dossiers.creer);

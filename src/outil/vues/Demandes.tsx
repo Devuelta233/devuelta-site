@@ -4,7 +4,7 @@ import { useState } from 'preact/hooks';
 import { SITUATION_LABEL, isPays, isSituation, nomPays } from '../../../shared/vocab';
 import { get, post } from '../api';
 import { code, date, langue, t, tr } from '../i18n';
-import { Champ, Chargement, LienExterne, MessageErreur, Pastille, aller, useAction, useCharger, valeur } from '../ui';
+import { Champ, Chargement, Copier, LienExterne, MessageErreur, Pastille, aller, useAction, useCharger, valeur } from '../ui';
 
 interface Ligne {
   id: string;
@@ -159,6 +159,7 @@ export function DetailDemande({ id }: { id: string }) {
         )}
       </div>
       <p class="o-muet">{t('rappelDiscretion')}</p>
+      {d.contact_mode === 'email' && d.statut !== 'convertie' && <Reponse id={d.id} />}
       {d.liens.length > 0 && (
         <section>
           <h2>{t('liens')}</h2>
@@ -227,5 +228,57 @@ export function DetailDemande({ id }: { id: string }) {
         </section>
       )}
     </div>
+  );
+}
+
+// Brouillon de réponse (préparé automatiquement, relu et envoyé par l'équipe).
+function Reponse({ id }: { id: string }) {
+  const a = useAction();
+  const [texte, setTexte] = useState('');
+  const [etat, setEtat] = useState<{ mineur: boolean; a_verifier: boolean } | null>(null);
+  const [envoyee, setEnvoyee] = useState(false);
+  return (
+    <section class="o-encadre">
+      <strong>{t('reponseTitre')}</strong>
+      <p class="o-muet">{t('reponseAide')}</p>
+      {!texte && (
+        <button
+          class="o-bouton"
+          disabled={a.occupe}
+          onClick={() =>
+            a.lancer(
+              () => post<{ texte: string; mineur: boolean; a_verifier: boolean }>(`/demandes/${id}/brouillon`, {}),
+              (r) => {
+                setTexte(r.texte);
+                setEtat({ mineur: r.mineur, a_verifier: r.a_verifier });
+              },
+            )
+          }
+        >
+          {a.occupe ? t('chargement') : t('reponsePreparer')}
+        </button>
+      )}
+      {etat?.mineur && <p class="o-encadre o-alerte">{t('reponseMineur')}</p>}
+      {etat?.a_verifier && <p class="o-encadre o-alerte">{t('reponseVerifier')}</p>}
+      {texte && (
+        <>
+          <textarea class="o-texte-long" rows={16} value={texte} onInput={(e) => setTexte(valeur(e))} disabled={envoyee} />
+          <p class="o-actions">
+            {!envoyee && (
+              <button
+                class="o-bouton o-principal"
+                disabled={a.occupe}
+                onClick={() => a.lancer(() => post(`/demandes/${id}/repondre`, { texte }), () => setEnvoyee(true))}
+              >
+                {t('reponseEnvoyer')}
+              </button>
+            )}
+            <Copier texte={texte} libelle={t('copierMessage')} />
+          </p>
+          {envoyee && <p class="o-encadre o-ok" role="status">{t('reponseEnvoyee')}</p>}
+        </>
+      )}
+      <MessageErreur texte={a.err} />
+    </section>
   );
 }

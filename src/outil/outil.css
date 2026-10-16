@@ -1001,3 +1001,15 @@ details > summary {
     animation: none !important;
   }
 }
+
+.o-texte-long {
+  width: 100%;
+  min-height: 18rem;
+  font: inherit;
+  line-height: 1.5;
+  padding: 0.75rem;
+  border: 1px solid var(--trait, #e0d5cb);
+  border-radius: 6px;
+  margin: 0.5rem 0;
+  box-sizing: border-box;
+}

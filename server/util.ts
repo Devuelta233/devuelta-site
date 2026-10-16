@@ -13,6 +13,8 @@ export interface Env {
   PAYSTACK_SECRET_KEY?: string;
   /** Devise débitée par Paystack (GHS par défaut). */
   PAIEMENT_DEVISE?: string;
+  /** IA de Cloudflare (Workers AI) : brouillons de réponse, toujours relus par l'équipe. */
+  AI?: Ai;
 }
 
 export class HttpError extends Error {
