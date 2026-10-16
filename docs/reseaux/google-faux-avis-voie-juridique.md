@@ -27,9 +27,11 @@ Article : `google-faux-avis-voie-juridique`. Même vidéo sur Instagram, TikTok 
 
 ### 3. Légende
 
+```text
 Google refuse de retirer un faux avis sur ta fiche ? Il reste la voie juridique : garde tes preuves et fais vite si l’avis est diffamatoire.
 Guide gratuit : lien en bio
 #fauxavis #avisgoogle #googlemaps #ereputation
+```
 
 ### 4. Lien
 
@@ -60,9 +62,11 @@ En imagen: la pantalla del teléfono que muestra cada paso, en una ficha de demo
 
 ### 3. Leyenda
 
+```text
 ¿Google no borra una reseña falsa de tu negocio? Aún queda la vía legal: guarda tus pruebas y no esperes si la reseña es difamatoria.
 Guía gratis: enlace en la bio
 #reseñasfalsas #googlemaps #negocios #reputaciononline
+```
 
 ### 4. Enlace
 
@@ -93,9 +97,11 @@ On screen: the phone screen showing each step, on a demo listing (no real review
 
 ### 3. Caption
 
+```text
 Google won’t remove a fake review on your business? There’s still the legal route: keep your evidence and act fast if the review is defamatory.
 Free guide: link in bio
 #fakereviews #googlemaps #smallbusiness #onlinereputation
+```
 
 ### 4. Link
 
