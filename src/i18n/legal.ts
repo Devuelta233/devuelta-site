@@ -29,7 +29,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       {
         titre: 'Qui est responsable',
         paras: [
-          'Devuelta, service d’Ankora, société enregistrée au Ghana (siège : Atwima Boko, région Ashanti). Pour toute question sur vos données : team.devuelta@protonmail.com.',
+          'Devuelta, société en cours d’immatriculation au Ghana. Pour toute question sur vos données : team.devuelta@protonmail.com.',
         ],
       },
       {
@@ -93,7 +93,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       },
       {
         titre: 'Quién es responsable',
-        paras: ['Devuelta, servicio de Ankora, sociedad registrada en Ghana (domicilio social: Atwima Boko, región de Ashanti). Para cualquier pregunta sobre tus datos: team.devuelta@protonmail.com.'],
+        paras: ['Devuelta, sociedad en proceso de registro en Ghana. Para cualquier pregunta sobre tus datos: team.devuelta@protonmail.com.'],
       },
       {
         titre: 'Qué recogemos',
@@ -150,7 +150,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       },
       {
         titre: 'Who is responsible',
-        paras: ['Devuelta, a service of Ankora, a company registered in Ghana (registered office: Atwima Boko, Ashanti Region). For any question about your data: team.devuelta@protonmail.com.'],
+        paras: ['Devuelta, a company being registered in Ghana. For any question about your data: team.devuelta@protonmail.com.'],
       },
       {
         titre: 'What we collect',
@@ -211,7 +211,7 @@ export const MENTIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'es'
   h1: { fr: 'Mentions légales', es: 'Aviso legal', en: 'Legal notice' },
   sections: {
     fr: [
-      { titre: 'Éditeur', paras: ['Devuelta est un service d’Ankora, société enregistrée au Ghana.', 'Siège : Atwima Boko, région Ashanti, Ghana (adresse GhanaPost GPS AG-3826-5700).', 'Contact : team.devuelta@protonmail.com'] },
+      { titre: 'Éditeur', paras: ['Devuelta, société en cours d’immatriculation au Ghana. Son nom légal, son numéro d’enregistrement et son adresse seront indiqués ici dès la fin de l’immatriculation.', 'Contact : team.devuelta@protonmail.com'] },
       {
         titre: 'Hébergeur',
         paras: ['Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, États-Unis — cloudflare.com'],
@@ -231,7 +231,7 @@ export const MENTIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'es'
       },
     ],
     es: [
-      { titre: 'Editor', paras: ['Devuelta es un servicio de Ankora, sociedad registrada en Ghana.', 'Domicilio social: Atwima Boko, región de Ashanti, Ghana (dirección GhanaPost GPS AG-3826-5700).', 'Contacto: team.devuelta@protonmail.com'] },
+      { titre: 'Editor', paras: ['Devuelta, sociedad en proceso de registro en Ghana. Su nombre legal, su número de registro y su dirección se indicarán aquí en cuanto termine el registro.', 'Contacto: team.devuelta@protonmail.com'] },
       { titre: 'Alojamiento', paras: ['Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, Estados Unidos — cloudflare.com'] },
       {
         titre: 'Contenido y responsabilidad',
@@ -248,7 +248,7 @@ export const MENTIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'es'
       },
     ],
     en: [
-      { titre: 'Publisher', paras: ['Devuelta is a service of Ankora, a company registered in Ghana.', 'Registered office: Atwima Boko, Ashanti Region, Ghana (GhanaPost GPS address AG-3826-5700).', 'Contact: team.devuelta@protonmail.com'] },
+      { titre: 'Publisher', paras: ['Devuelta, a company being registered in Ghana. Its legal name, registration number and address will be shown here as soon as registration is complete.', 'Contact: team.devuelta@protonmail.com'] },
       { titre: 'Host', paras: ['Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, United States — cloudflare.com'] },
       {
         titre: 'Content and liability',
@@ -283,7 +283,7 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
       {
         titre: 'Qui vend',
         paras: [
-          'Le service Devuelta est fourni par Ankora, société enregistrée au Ghana, dont le siège est à Atwima Boko, région Ashanti (adresse GhanaPost GPS AG-3826-5700). Contact : team.devuelta@protonmail.com.',
+          'Le service Devuelta est fourni par Devuelta, société en cours d’immatriculation au Ghana. Aucun paiement n’est demandé avant la fin de cette immatriculation ; son nom légal, son numéro d’enregistrement et son adresse figureront alors ici et sur chaque devis. Contact : team.devuelta@protonmail.com.',
         ],
       },
       {
@@ -359,7 +359,7 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
       {
         titre: 'Quién vende',
         paras: [
-          'El servicio Devuelta lo presta Ankora, sociedad registrada en Ghana, con domicilio social en Atwima Boko, región de Ashanti (dirección GhanaPost GPS AG-3826-5700). Contacto: team.devuelta@protonmail.com.',
+          'El servicio Devuelta lo presta Devuelta, sociedad en proceso de registro en Ghana. No se pide ningún pago antes de que termine el registro; su nombre legal, su número de registro y su dirección figurarán entonces aquí y en cada presupuesto. Contacto: team.devuelta@protonmail.com.',
         ],
       },
       {
@@ -435,7 +435,7 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
       {
         titre: 'Who sells',
         paras: [
-          'The Devuelta service is provided by Ankora, a company registered in Ghana, with its registered office in Atwima Boko, Ashanti Region (GhanaPost GPS address AG-3826-5700). Contact: team.devuelta@protonmail.com.',
+          'The Devuelta service is provided by Devuelta, a company being registered in Ghana. No payment is requested before registration is complete; its legal name, registration number and address will then appear here and on every quote. Contact: team.devuelta@protonmail.com.',
         ],
       },
       {
