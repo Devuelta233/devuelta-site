@@ -1,0 +1,127 @@
+---
+// Contrôle en 5 minutes : six gestes gratuits, puis un rappel tous les 3 mois
+// (fichier d'agenda créé dans le navigateur : rien n'est envoyé ni gardé).
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { CONTROLE } from '../i18n/pages';
+import { page, versionsPage } from '../i18n/routes';
+import { SITE_URL } from '../config';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const chemin = page('controle', lang);
+const rappel = {
+  titre: CONTROLE.rappelEvenement[lang],
+  url: `${SITE_URL}${chemin}`,
+  fichier: { fr: 'rappel-controle-devuelta.ics', es: 'recordatorio-chequeo-devuelta.ics', en: 'devuelta-check-up-reminder.ics' }[lang],
+};
+---
+<Base lang={lang} titre={CONTROLE.seo[lang]} description={CONTROLE.meta[lang]} chemin={chemin} versions={versionsPage('controle')} ariane={[{ nom: C.nav.controle[lang] }]}>
+  <article class="page">
+    <h1>{CONTROLE.h1[lang]}</h1>
+    <p class="lede">{CONTROLE.intro[lang]}</p>
+    <ol class="etapes-controle">
+      {CONTROLE.etapes[lang].map(([titre, texte], i) => (
+        <li>
+          <h2>{titre}</h2>
+          <p>{texte}</p>
+          {CONTROLE.liens[i] && (
+            <p class="liens-controle">
+              {CONTROLE.liens[i]!.map(([nom, url]) => (
+                <a href={url} rel="noopener" target="_blank">{nom} ↗</a>
+              ))}
+            </p>
+          )}
+        </li>
+      ))}
+    </ol>
+    <section class="encadre">
+      <h2 class="sans-marge">{CONTROLE.trouveTitre[lang]}</h2>
+      <p>{CONTROLE.trouveTexte[lang]}</p>
+      <p><a class="bouton principal" href={page('diagnostic', lang)}>{C.ctaDiagnostic[lang]}</a></p>
+    </section>
+    <section class="encadre" id="rappel" data-titre={rappel.titre} data-url={rappel.url} data-fichier={rappel.fichier}>
+      <h2 class="sans-marge">{CONTROLE.rappelTitre[lang]}</h2>
+      <p>{CONTROLE.rappelTexte[lang]}</p>
+      <p class="actions">
+        <button type="button" class="bouton" id="rappel-ics">{CONTROLE.rappelAgenda[lang]}</button>
+        <a class="bouton" id="rappel-google" href="https://calendar.google.com/calendar/" rel="noopener" target="_blank">{CONTROLE.rappelGoogle[lang]}</a>
+      </p>
+    </section>
+    <p>{CONTROLE.partager[lang]}</p>
+  </article>
+</Base>
+<script>
+  // Rappel tous les 3 mois, à 9 h (heure du téléphone), à partir de dans 3 mois.
+  const zone = document.getElementById('rappel');
+  if (zone) {
+    const titre = zone.dataset.titre ?? '';
+    const url = zone.dataset.url ?? '';
+    const debut = new Date();
+    debut.setMonth(debut.getMonth() + 3);
+    debut.setHours(9, 0, 0, 0);
+    const fin = new Date(debut.getTime() + 15 * 60_000);
+    const deux = (n: number) => String(n).padStart(2, '0');
+    const local = (d: Date) => `${d.getFullYear()}${deux(d.getMonth() + 1)}${deux(d.getDate())}T${deux(d.getHours())}${deux(d.getMinutes())}00`;
+    const utc = (d: Date) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const echapper = (s: string) => s.replace(/[\\,;]/g, (c) => `\\${c}`);
+    document.getElementById('rappel-ics')?.addEventListener('click', () => {
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Devuelta//Controle//FR',
+        'BEGIN:VEVENT',
+        `UID:controle-${Date.now()}@getdevuelta.com`,
+        `DTSTAMP:${utc(new Date())}`,
+        `DTSTART:${local(debut)}`,
+        `DTEND:${local(fin)}`,
+        'RRULE:FREQ=MONTHLY;INTERVAL=3',
+        `SUMMARY:${echapper(titre)}`,
+        `DESCRIPTION:${echapper(url)}`,
+        `URL:${url}`,
+        'END:VEVENT',
+        'END:VCALENDAR',
+      ].join('\r\n');
+      const lien = document.createElement('a');
+      lien.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+      lien.download = zone.dataset.fichier ?? 'rappel.ics';
+      document.body.appendChild(lien);
+      lien.click();
+      setTimeout(() => {
+        URL.revokeObjectURL(lien.href);
+        lien.remove();
+      }, 1000);
+    });
+    const g = document.getElementById('rappel-google') as HTMLAnchorElement | null;
+    if (g) {
+      const p = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: titre,
+        details: url,
+        dates: `${utc(debut)}/${utc(fin)}`,
+        recur: 'RRULE:FREQ=MONTHLY;INTERVAL=3',
+      });
+      g.href = `https://calendar.google.com/calendar/render?${p.toString()}`;
+    }
+  }
+</script>
+<style>
+  .etapes-controle {
+    padding-left: 1.25rem;
+  }
+  .etapes-controle li {
+    margin: 0 0 1.25rem;
+  }
+  .etapes-controle h2 {
+    font-size: 1.1rem;
+    margin: 0 0 0.25rem;
+  }
+  .liens-controle {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+</style>

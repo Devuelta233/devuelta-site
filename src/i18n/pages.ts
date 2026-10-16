@@ -574,3 +574,91 @@ export const ARTICLES = {
   nav: { fr: 'Articles', es: 'Artículos', en: 'Articles' } as T3,
 };
 
+
+// Contrôle en 5 minutes : rendre normal le fait de vérifier ce qui traîne sur soi.
+export const CONTROLE = {
+  seo: {
+    fr: 'Contrôle en 5 minutes : qu’est-ce qui traîne sur vous en ligne ?',
+    es: 'Chequeo en 5 minutos: ¿qué hay sobre ti en internet?',
+    en: '5-minute check-up: what is online about you?',
+  } as T3,
+  meta: {
+    fr: 'Six gestes gratuits pour voir ce qu’Internet montre de vous, protéger vos comptes et recevoir une alerte. Sans compte, sans rien nous envoyer.',
+    es: 'Seis pasos gratuitos para ver qué muestra internet sobre ti, proteger tus cuentas y recibir una alerta. Sin cuenta, sin enviarnos nada.',
+    en: 'Six free steps to see what the internet shows about you, protect your accounts and get alerts. No account, nothing sent to us.',
+  } as T3,
+  h1: {
+    fr: 'Qu’est-ce qui traîne sur vous en ligne ?',
+    es: '¿Qué hay sobre ti en internet?',
+    en: 'What is online about you?',
+  } as T3,
+  intro: {
+    fr: 'Comme un contrôle chez le médecin, mais pour votre vie en ligne. Six gestes, cinq minutes, gratuits. Vous ne nous envoyez rien.',
+    es: 'Como un chequeo médico, pero para tu vida en internet. Seis pasos, cinco minutos, gratis. No nos envías nada.',
+    en: 'Like a check-up at the doctor’s, but for your online life. Six steps, five minutes, free. You send us nothing.',
+  } as T3,
+  etapes: {
+    fr: [
+      ['Cherchez votre nom entre guillemets', 'Sur Google et sur Bing, regardez l’onglet « Tous » puis « Images ». Essayez aussi votre pseudo, votre numéro de téléphone et votre adresse e-mail.'],
+      ['Cherchez vos photos de profil', 'Avec Google Lens ou TinEye, envoyez votre photo de profil : vous verrez si un faux compte l’utilise.'],
+      ['Vérifiez vos e-mails dans les fuites de données', 'Sur Have I Been Pwned, tapez votre adresse. Si elle apparaît, changez le mot de passe du site concerné.'],
+      ['Protégez vos comptes', 'Activez la double vérification. Vérifiez l’e-mail et le numéro de secours. Déconnectez les appareils que vous ne connaissez pas.'],
+      ['Recevez une alerte automatique', 'Créez une Alerte Google sur votre nom entre guillemets : Google vous écrit quand une nouvelle page parle de vous.'],
+      ['Une image intime vous inquiète ?', 'Adulte : StopNCII.org aide à bloquer sa publication sur de nombreuses plateformes, sans que l’image quitte votre téléphone. Image prise avant 18 ans : Take It Down.'],
+    ],
+    es: [
+      ['Busca tu nombre entre comillas', 'En Google y en Bing, mira la pestaña «Todo» y luego «Imágenes». Prueba también tu apodo, tu número de teléfono y tu correo.'],
+      ['Busca tus fotos de perfil', 'Con Google Lens o TinEye, sube tu foto de perfil: verás si una cuenta falsa la usa.'],
+      ['Revisa tu correo en las filtraciones de datos', 'En Have I Been Pwned, escribe tu dirección. Si aparece, cambia la contraseña del sitio afectado.'],
+      ['Protege tus cuentas', 'Activa la verificación en dos pasos. Revisa el correo y el número de recuperación. Cierra la sesión en los dispositivos que no conoces.'],
+      ['Recibe una alerta automática', 'Crea una Alerta de Google con tu nombre entre comillas: Google te escribe cuando una página nueva habla de ti.'],
+      ['¿Te preocupa una imagen íntima?', 'Si eres adulto: StopNCII.org ayuda a bloquear su publicación en muchas plataformas, sin que la imagen salga de tu teléfono. Imagen tomada antes de los 18 años: Take It Down.'],
+    ],
+    en: [
+      ['Search your name in quotes', 'On Google and Bing, look at the “All” tab, then “Images”. Also try your username, your phone number and your email address.'],
+      ['Search your profile photos', 'With Google Lens or TinEye, upload your profile photo: you will see if a fake account uses it.'],
+      ['Check your email in data breaches', 'On Have I Been Pwned, type your address. If it shows up, change the password for that site.'],
+      ['Protect your accounts', 'Turn on two-step verification. Check your recovery email and phone number. Sign out of devices you do not recognise.'],
+      ['Get an automatic alert', 'Create a Google Alert for your name in quotes: Google emails you when a new page mentions you.'],
+      ['Worried about an intimate image?', 'Adults: StopNCII.org helps block it from being posted on many platforms, without the image leaving your phone. Image taken before age 18: Take It Down.'],
+    ],
+  } as Record<'fr' | 'es' | 'en', Array<[string, string]>>,
+  liens: [
+    null,
+    [['Google Lens', 'https://lens.google.com/'], ['TinEye', 'https://tineye.com/']],
+    [['Have I Been Pwned', 'https://haveibeenpwned.com/']],
+    null,
+    [['Google Alerts', 'https://www.google.com/alerts']],
+    [['StopNCII.org', 'https://stopncii.org/'], ['Take It Down', 'https://takeitdown.ncmec.org/']],
+  ] as Array<Array<[string, string]> | null>,
+  trouveTitre: { fr: 'Vous avez trouvé quelque chose ?', es: '¿Has encontrado algo?', en: 'Found something?' } as T3,
+  trouveTexte: {
+    fr: 'Pas de panique : beaucoup de contenus peuvent être retirés. Le diagnostic gratuit vous dit quoi faire, selon votre situation et votre pays.',
+    es: 'Tranquilidad: muchos contenidos se pueden retirar. El diagnóstico gratuito te dice qué hacer, según tu situación y tu país.',
+    en: 'Don’t panic: a lot of content can be removed. The free diagnostic tells you what to do, based on your situation and your country.',
+  } as T3,
+  rappelTitre: { fr: 'Refaites-le tous les 3 mois', es: 'Repítelo cada 3 meses', en: 'Do it again every 3 months' } as T3,
+  rappelTexte: {
+    fr: 'Un rappel dans votre agenda, tous les trois mois. Il reste sur votre téléphone : nous ne gardons rien.',
+    es: 'Un recordatorio en tu calendario, cada tres meses. Se queda en tu teléfono: no guardamos nada.',
+    en: 'A reminder in your calendar, every three months. It stays on your phone: we keep nothing.',
+  } as T3,
+  rappelAgenda: { fr: 'Ajouter le rappel à mon agenda', es: 'Añadir el recordatorio a mi calendario', en: 'Add the reminder to my calendar' } as T3,
+  rappelGoogle: { fr: 'Ou dans Google Agenda', es: 'O en Google Calendar', en: 'Or in Google Calendar' } as T3,
+  rappelEvenement: {
+    fr: 'Contrôle Devuelta : qu’est-ce qui traîne sur moi ?',
+    es: 'Chequeo Devuelta: ¿qué hay sobre mí en internet?',
+    en: 'Devuelta check-up: what is online about me?',
+  } as T3,
+  partager: {
+    fr: 'Ce contrôle peut servir à vos proches : envoyez-leur cette page.',
+    es: 'Este chequeo puede servir a tu gente: envíales esta página.',
+    en: 'This check-up can help the people around you: send them this page.',
+  } as T3,
+  accueilTitre: { fr: 'Contrôle en 5 minutes', es: 'Chequeo en 5 minutos', en: '5-minute check-up' } as T3,
+  accueilTexte: {
+    fr: 'Qu’est-ce qui traîne sur vous en ligne ? Six gestes gratuits, à refaire tous les 3 mois.',
+    es: '¿Qué hay sobre ti en internet? Seis pasos gratuitos, para repetir cada 3 meses.',
+    en: 'What is online about you? Six free steps, to repeat every 3 months.',
+  } as T3,
+};

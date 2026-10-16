@@ -4,7 +4,7 @@ import Contacts from '../components/Contacts.astro';
 import Engagements from '../components/Engagements.astro';
 import Spirale from '../components/Spirale.astro';
 import { C } from '../i18n/commun';
-import { ACCUEIL, ARTICLES } from '../i18n/pages';
+import { ACCUEIL, ARTICLES, CONTROLE } from '../i18n/pages';
 import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
 import { BASE, articlePath, articlesPath, guidePath, page, situationPath, versionsAccueil } from '../i18n/routes';
 import { articles, dateLisible, guides } from '../data';
@@ -89,6 +89,12 @@ const jsonld = [
           </li>
         ))}
       </ul>
+    </section>
+
+    <section class="encadre" aria-labelledby="controle-titre">
+      <h2 id="controle-titre" class="sans-marge">{CONTROLE.accueilTitre[lang]}</h2>
+      <p>{CONTROLE.accueilTexte[lang]}</p>
+      <p><a class="bouton" href={page('controle', lang)}>{CONTROLE.accueilTitre[lang]} →</a></p>
     </section>
 
     <section aria-labelledby="comment-titre">
