@@ -1,0 +1,307 @@
+{
+ "id": "sextorsion-faux-services-aide-payants",
+ "publie_le": "2026-10-16",
+ "verifie_le": "2026-10-16",
+ "situation": "chantage",
+ "plateformes": [],
+ "slug": {
+  "fr": "sextorsion-faux-services-aide-payants",
+  "es": "sextorsion-falsos-servicios-de-ayuda",
+  "en": "sextortion-fake-paid-help-services"
+ },
+ "titre": {
+  "fr": "Sextorsion : attention aux faux services d’aide payants",
+  "es": "Sextorsión: cuidado con los falsos servicios de ayuda",
+  "en": "Sextortion: beware of fake paid “help” services"
+ },
+ "meta_description": {
+  "fr": "La FTC poursuit un service d’aide aux victimes de sextorsion. Les bons réflexes gratuits, et comment repérer un faux service d’aide payant.",
+  "es": "La FTC demanda a un servicio de ayuda a víctimas de sextorsión. Qué hacer gratis y cómo reconocer un falso servicio de ayuda de pago.",
+  "en": "The FTC is suing a sextortion help service. The free steps to take, and how to spot a fake paid help service."
+ },
+ "chapo": {
+  "fr": "Le 13 octobre 2026, la FTC américaine a poursuivi un service qui promettait d’aider les victimes de sextorsion. Elle l’accuse d’avoir encaissé au moins 60 millions de dollars sans faire le travail promis. Si quelqu’un vous fait chanter, les premiers gestes sont gratuits. Voici lesquels, et comment éviter une deuxième arnaque.",
+  "es": "El 13 de octubre de 2026, la FTC estadounidense demandó a un servicio que prometía ayudar a víctimas de sextorsión. Lo acusa de cobrar al menos 60 millones de dólares sin hacer el trabajo prometido. Si alguien te chantajea, los primeros pasos son gratis. Aquí tienes cuáles, y cómo evitar una segunda estafa.",
+  "en": "On 13 October 2026, the US FTC sued a service that promised to help sextortion victims. It accuses the company of taking at least 60 million dollars without doing the promised work. If someone is blackmailing you, the first steps are free. Here they are, and how to avoid a second scam."
+ },
+ "essentiel": {
+  "fr": [
+   "Ne payez pas le maître chanteur, et arrêtez de lui répondre.",
+   "Faites des captures d’écran, puis bloquez-le sur toutes vos applis.",
+   "Appelez une aide gratuite : 3018 en France, 017 en Espagne, 292 au Ghana, la police ailleurs.",
+   "Méfiez-vous de tout service qui promet de retrouver le coupable ou de tout effacer."
+  ],
+  "es": [
+   "No le pagues al chantajista y deja de responderle.",
+   "Haz capturas de pantalla y luego bloquéalo en todas tus aplicaciones.",
+   "Llama a una ayuda gratuita: 017 en España, 3018 en Francia, 292 en Ghana, la policía en otros países.",
+   "Desconfía de cualquier servicio que prometa encontrar al culpable o borrarlo todo."
+  ],
+  "en": [
+   "Don’t pay the blackmailer, and stop replying.",
+   "Take screenshots, then block them on all your apps.",
+   "Call a free helpline: 3018 in France, 017 in Spain, 292 in Ghana, or the police elsewhere.",
+   "Be wary of any service that promises to find the culprit or erase everything."
+  ]
+ },
+ "sections": [
+  {
+   "titre": {
+    "fr": "Ce que la FTC reproche à ce service",
+    "es": "Lo que la FTC reprocha a este servicio",
+    "en": "What the FTC says this service did"
+   },
+   "paragraphes": {
+    "fr": [
+     "La FTC est l’agence américaine qui protège les consommateurs. Le 13 octobre 2026, elle a annoncé une plainte contre Digital Forensics Corporation.",
+     "Selon la FTC, ce service promettait d’aider les victimes de sextorsion. Il disait pouvoir localiser le maître chanteur et empêcher la diffusion des images.",
+     "La FTC affirme que les victimes ont payé au moins 60 millions de dollars. Le premier forfait coûtait de 1 499 à 20 000 dollars.",
+     "Toujours selon la FTC, les services promis n’étaient souvent pas rendus. L’entreprise aurait aussi fabriqué de faux avis positifs.",
+     "Autre point grave : le personnel disait aux victimes de ne pas bloquer le maître chanteur. C’est le contraire des conseils du FBI.",
+     "Un tribunal fédéral de l’Ohio a suspendu les activités de l’entreprise, le temps de la procédure. Ce sont des accusations : la justice doit encore trancher."
+    ],
+    "es": [
+     "La FTC es la agencia de Estados Unidos que protege a los consumidores. El 13 de octubre de 2026, anunció una demanda contra Digital Forensics Corporation.",
+     "Según la FTC, este servicio prometía ayudar a las víctimas de sextorsión. Decía que podía localizar al chantajista e impedir la difusión de las imágenes.",
+     "La FTC afirma que las víctimas pagaron al menos 60 millones de dólares. El primer paquete costaba entre 1499 y 20 000 dólares.",
+     "Siempre según la FTC, muchas veces no se prestaban los servicios prometidos. La empresa también habría fabricado reseñas positivas falsas.",
+     "Otro punto grave: el personal decía a las víctimas que no bloquearan al chantajista. Es lo contrario de lo que aconseja el FBI.",
+     "Un tribunal federal de Ohio suspendió las actividades de la empresa mientras dura el proceso. Son acusaciones: la justicia todavía debe decidir."
+    ],
+    "en": [
+     "The FTC is the US agency that protects consumers. On 13 October 2026, it announced a lawsuit against Digital Forensics Corporation.",
+     "According to the FTC, this service promised to help sextortion victims. It claimed it could track down the blackmailer and stop the images from spreading.",
+     "The FTC says victims paid at least 60 million dollars. The first package cost between 1,499 and 20,000 dollars.",
+     "Also according to the FTC, the promised services were often not delivered. The company also allegedly bought fake positive reviews.",
+     "Another serious point: staff told victims not to block the blackmailer. That is the opposite of the FBI’s advice.",
+     "A federal court in Ohio has temporarily halted the company’s activities while the case goes on. These are allegations: the court has not ruled yet."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Les bons réflexes face au chantage",
+    "es": "Qué hacer ante el chantaje",
+    "en": "What to do when someone blackmails you"
+   },
+   "paragraphes": {
+    "fr": [
+     "Ces conseils viennent de Cybermalveillance.gouv.fr, le service public français d’aide aux victimes, et de la FTC. Ils sont gratuits et vous pouvez les suivre seul."
+    ],
+    "es": [
+     "Estos consejos vienen de Cybermalveillance.gouv.fr, el servicio público francés de ayuda a las víctimas, y de la FTC. Son gratis y puedes seguirlos tú solo."
+    ],
+    "en": [
+     "This advice comes from Cybermalveillance.gouv.fr, the French public service that helps victims, and from the FTC. It is free and you can follow it on your own."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Ne payez pas. Le chantage continue souvent après un paiement.",
+     "Arrêtez de répondre, puis bloquez la personne partout. Vous pouvez le faire vous-même.",
+     "Avant de bloquer, faites des captures d’écran des messages, du profil et des menaces.",
+     "N’envoyez aucune autre photo ni vidéo, même si la personne insiste.",
+     "Cachez votre liste d’amis et vos contacts dans les paramètres de vos comptes.",
+     "Parlez-en à une personne de confiance : un ami, un proche ou un conseiller."
+    ],
+    "es": [
+     "No pagues. El chantaje suele continuar después de un pago.",
+     "Deja de responder y luego bloquea a esa persona en todas partes. Puedes hacerlo tú.",
+     "Antes de bloquear, haz capturas de pantalla de los mensajes, del perfil y de las amenazas.",
+     "No envíes ninguna otra foto ni video, aunque la persona insista.",
+     "Oculta tu lista de amigos y tus contactos en los ajustes de tus cuentas.",
+     "Cuéntaselo a alguien de confianza: un amigo, un familiar o un orientador."
+    ],
+    "en": [
+     "Don’t pay. The blackmail often goes on after a payment.",
+     "Stop replying, then block the person everywhere. You can do this yourself.",
+     "Before you block, take screenshots of the messages, the profile and the threats.",
+     "Don’t send any more photos or videos, even if the person insists.",
+     "Hide your friends list and your contacts in your account settings.",
+     "Tell someone you trust: a friend, a relative or a counsellor."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Faire retirer les images et trouver une aide gratuite",
+    "es": "Retirar las imágenes y encontrar ayuda gratuita",
+    "en": "Getting images removed and finding free help"
+   },
+   "paragraphes": {
+    "fr": [
+     "Si une image a été publiée, signalez-la à la plateforme. Gardez une capture d’écran avant.",
+     "Vous avez plus de 18 ans sur l’image ? StopNCII crée une empreinte numérique de l’image, sur votre téléphone. L’image elle-même ne quitte pas votre appareil. Les plateformes partenaires utilisent cette empreinte pour bloquer les copies.",
+     "L’image a été prise avant vos 18 ans ? Le service Take It Down, du NCMEC américain, fonctionne de la même façon. Il est gratuit.",
+     "Aux États-Unis, une loi oblige les plateformes à retirer ces images dans les 48 heures après une demande valable. C’est gratuit.",
+     "En France, le 3018 aide gratuitement, tous les jours, en cas de violence en ligne. Vous pouvez porter plainte au commissariat ou à la gendarmerie. France Victimes répond au 116 006.",
+     "En Espagne, la ligne gratuite 017 d’INCIBE vous conseille. Le « Canal prioritario » de l’AEPD, l’autorité de protection des données, traite les demandes urgentes de retrait.",
+     "Au Ghana, la Cyber Security Authority a une ligne : le 292. Aux États-Unis, vous pouvez signaler au FBI sur tips.fbi.gov. Ailleurs, adressez-vous à la police.",
+     "Si la victime a moins de 18 ans, utilisez seulement ces aides officielles et gratuites. Aux États-Unis, le CyberTipline du NCMEC est fait pour cela."
+    ],
+    "es": [
+     "Si publicaron una imagen, denúnciala en la plataforma. Antes, guarda una captura de pantalla.",
+     "¿Tenías más de 18 años en la imagen? StopNCII crea una huella digital de la imagen, en tu teléfono. La imagen no sale de tu dispositivo. Las plataformas asociadas usan esa huella para bloquear las copias.",
+     "¿La imagen se tomó antes de tus 18 años? El servicio Take It Down, del NCMEC de Estados Unidos, funciona igual. Es gratuito.",
+     "En Estados Unidos, una ley obliga a las plataformas a retirar estas imágenes en 48 horas tras una solicitud válida. Es gratis.",
+     "En Francia, el 3018 ayuda gratis, todos los días, ante la violencia en línea. Puedes denunciar en una comisaría o ante la gendarmería. France Victimes atiende en el 116 006.",
+     "En España, la línea gratuita 017 de INCIBE te orienta. El «Canal prioritario» de la AEPD, la autoridad de protección de datos, atiende las peticiones urgentes de retirada.",
+     "En Ghana, la Cyber Security Authority tiene una línea: el 292. En Estados Unidos, puedes avisar al FBI en tips.fbi.gov. En otros países, acude a la policía.",
+     "Si la víctima tiene menos de 18 años, usa solo estas ayudas oficiales y gratuitas. En Estados Unidos, el CyberTipline del NCMEC está hecho para eso."
+    ],
+    "en": [
+     "If an image has been posted, report it to the platform. Take a screenshot first.",
+     "Were you over 18 in the image? StopNCII creates a digital fingerprint of the image, on your phone. The image itself never leaves your device. Partner platforms use that fingerprint to block copies.",
+     "Was the image taken before you turned 18? The Take It Down service, from the US NCMEC, works the same way. It is free.",
+     "In the United States, a law requires platforms to remove these images within 48 hours of a valid request. It is free.",
+     "In France, the 3018 helpline gives free help every day for online abuse. You can file a complaint with the police or gendarmerie. France Victimes answers on 116 006.",
+     "In Spain, INCIBE’s free 017 helpline gives advice. The AEPD, the data protection authority, runs a “Canal prioritario” for urgent removal requests.",
+     "In Ghana, the Cyber Security Authority has a hotline: 292. In the United States, you can report to the FBI at tips.fbi.gov. Elsewhere, contact the police.",
+     "If the victim is under 18, use only these official, free services. In the United States, NCMEC’s CyberTipline is there for this."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Reconnaître un faux service d’aide",
+    "es": "Cómo reconocer un falso servicio de ayuda",
+    "en": "How to spot a fake help service"
+   },
+   "paragraphes": {
+    "fr": [
+     "Quand on a peur, on veut une solution tout de suite. Certains services profitent de ce moment. Voici les signaux d’alerte cités dans l’affaire de la FTC."
+    ],
+    "es": [
+     "Cuando tienes miedo, quieres una solución ya. Algunos servicios se aprovechan de ese momento. Estas son las señales de alerta del caso de la FTC."
+    ],
+    "en": [
+     "When you are scared, you want a fix right now. Some services take advantage of that moment. Here are the warning signs from the FTC case."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Le service promet de retrouver le maître chanteur. En réalité, seule la justice peut obtenir son identité.",
+     "Il promet que les images ne seront jamais diffusées. Personne ne peut le promettre.",
+     "Il vous demande de continuer à parler au maître chanteur, ou de ne pas le bloquer.",
+     "Il fait peur et pousse à payer vite, puis réclame un deuxième forfait.",
+     "Avant de payer, cherchez son nom avec « arnaque » ou « avis ». Ignorez les annonces payantes en haut des résultats."
+    ],
+    "es": [
+     "El servicio promete encontrar al chantajista. En realidad, solo la justicia puede obtener su identidad.",
+     "Promete que las imágenes nunca se difundirán. Nadie puede prometer eso.",
+     "Te pide que sigas hablando con el chantajista, o que no lo bloquees.",
+     "Te asusta y te presiona para pagar rápido, y luego pide un segundo paquete.",
+     "Antes de pagar, busca su nombre con «estafa» u «opiniones». Ignora los anuncios pagados de arriba."
+    ],
+    "en": [
+     "The service promises to track down the blackmailer. In reality, only the courts can obtain their identity.",
+     "It promises the images will never be shared. Nobody can promise that.",
+     "It tells you to keep talking to the blackmailer, or not to block them.",
+     "It scares you and pushes you to pay fast, then asks for a second package.",
+     "Before paying, search its name with “scam” or “reviews”. Skip the paid ads at the top."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Pour que ça ne recommence pas",
+    "es": "Para que no vuelva a pasar",
+    "en": "So it doesn’t happen again"
+   },
+   "paragraphes": {
+    "fr": [
+     "Ce n’est pas votre faute. La faute revient à la personne qui fait chanter. Quelques réglages peuvent quand même limiter les risques."
+    ],
+    "es": [
+     "No es tu culpa. La culpa es de quien chantajea. Aun así, algunos ajustes pueden reducir los riesgos."
+    ],
+    "en": [
+     "This is not your fault. The blame lies with the person who blackmails. Still, a few settings can lower the risks."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Gardez votre liste d’amis et vos contacts en privé sur tous vos réseaux.",
+     "Ne donnez jamais l’accès à votre téléphone ou à vos comptes bancaires à un inconnu.",
+     "Gardez les numéros d’aide gratuits de votre pays dans votre téléphone.",
+     "Si un service vous promet de tout régler, vérifiez-le avant de payer."
+    ],
+    "es": [
+     "Mantén tu lista de amigos y tus contactos en privado en todas tus redes.",
+     "Nunca des acceso a tu teléfono ni a tus cuentas bancarias a un desconocido.",
+     "Guarda en tu teléfono los números de ayuda gratuitos de tu país.",
+     "Si un servicio promete arreglarlo todo, compruébalo antes de pagar."
+    ],
+    "en": [
+     "Keep your friends list and contacts private on all your social networks.",
+     "Never give a stranger access to your phone or your bank accounts.",
+     "Save your country’s free helpline numbers in your phone.",
+     "If a service promises to fix everything, check it before you pay."
+    ]
+   }
+  }
+ ],
+ "si_rien_ne_marche": {
+  "fr": "Vous êtes majeur, et les images circulent encore malgré vos signalements ? Devuelta peut regarder votre dossier avec vous. Nous préparons les demandes de retrait encore possibles. Nous ne promettons ni résultat ni identification de l’auteur. Pour un mineur, seules les aides officielles et gratuites ci-dessus conviennent.",
+  "es": "¿Eres mayor de edad y las imágenes siguen circulando pese a tus denuncias? Devuelta puede revisar tu caso contigo. Preparamos las solicitudes de retirada que aún son posibles. No prometemos resultados ni identificar al autor. Para un menor, solo sirven las ayudas oficiales y gratuitas de arriba.",
+  "en": "Are you an adult, and are the images still circulating despite your reports? Devuelta can look at your case with you. We prepare the removal requests still open. We promise neither results nor identifying the person responsible. For a minor, only the official, free services above are right."
+ },
+ "sources": [
+  {
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2026/10/ftc-sues-operator-sextortion-relief-scheme-misleading-consumers-believing-it-would-identify",
+   "titre": "FTC : plainte contre un service d’« aide » aux victimes de sextorsion (13 octobre 2026)"
+  },
+  {
+   "url": "https://consumer.ftc.gov/consumer-alerts/2026/10/how-avoid-deceptive-sextortion-assistance-services-and-find-real-help",
+   "titre": "FTC : éviter les faux services d’aide en cas de sextorsion et trouver une vraie aide (13 octobre 2026)"
+  },
+  {
+   "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/sextorsion",
+   "titre": "Cybermalveillance.gouv.fr : que faire en cas de sextorsion ?"
+  },
+  {
+   "url": "https://stopncii.org/faq/?lang=en-gb",
+   "titre": "StopNCII : questions fréquentes"
+  },
+  {
+   "url": "https://takeitdown.ncmec.org/wp-content/uploads/2026/07/takeitdown-how-it-works-handout_updated_6-24-26.pdf",
+   "titre": "NCMEC : comment fonctionne Take It Down"
+  },
+  {
+   "url": "https://www.aepd.es/prensa-y-comunicacion/blog/paso-paso-como-solicitar-la-retirada-de-contenido-sexual-o-violento",
+   "titre": "AEPD : solicitar la retirada de contenido sexual o violento por el Canal prioritario"
+  },
+  {
+   "url": "https://www.incibe.es/menores/blog/como-actuar-cuando-una-foto-se-ha-descontrolado",
+   "titre": "INCIBE : cómo actuar cuando una foto se ha descontrolado (línea 017)"
+  },
+  {
+   "url": "https://graphiconline.com/news/general-news/call-292-before-sending-money-to-suspected-fraudsters-cyber-security-authority-warns.html",
+   "titre": "Graphic Online : la Cyber Security Authority du Ghana et sa ligne 292 (août 2026)"
+  }
+ ],
+ "liens_internes": [
+  {
+   "type": "situation",
+   "id": "chantage"
+  },
+  {
+   "type": "situation",
+   "id": "contenu-intime"
+  },
+  {
+   "type": "guide",
+   "id": "intl-stopncii"
+  },
+  {
+   "type": "guide",
+   "id": "intl-takeitdown-ncmec"
+  },
+  {
+   "type": "guide",
+   "id": "us-takeitdown-act"
+  }
+ ]
+}
