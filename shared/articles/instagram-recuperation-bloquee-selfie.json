@@ -26,6 +26,26 @@
   "es": "Si Instagram te pide un video selfie para recuperar tu cuenta hackeada, hazlo con cuidado: la revisión puede tardar hasta dos días hábiles y, si falla, a veces puedes volver a enviarlo desde la app. Mientras esperas, protege a tus contactos y guarda pruebas. Si la cuenta acaba desactivada y estás en la Unión Europea, puedes recurrir la decisión, también ante un organismo independiente y gratuito.",
   "en": "If Instagram asks for a video selfie to recover your hacked account, take it carefully: the review can take up to two business days, and if it fails you may be able to resubmit it in the app. While you wait, protect your contacts and keep evidence. If the account ends up disabled and you are in the European Union, you can challenge the decision, including before a free independent body."
  },
+ "essentiel": {
+  "fr": [
+   "Refaites le selfie vidéo depuis votre téléphone habituel, dans un endroit bien éclairé, en tournant lentement la tête.",
+   "Attendez la réponse, jusqu’à deux jours ouvrés, et surveillez votre e-mail, y compris les courriers indésirables.",
+   "Prévenez vos proches par un autre moyen : le pirate peut leur demander de l’argent ou des codes en votre nom.",
+   "Si le compte est désactivé et que vous êtes dans l’UE, contestez gratuitement, y compris auprès de l’Appeals Centre Europe."
+  ],
+  "es": [
+   "Repite el video selfie desde tu teléfono habitual, en un lugar bien iluminado, girando la cabeza despacio.",
+   "Espera la respuesta, hasta dos días hábiles, y revisa tu correo, también la carpeta de spam.",
+   "Avisa a tus contactos por otro medio: el pirata puede pedirles dinero o códigos haciéndose pasar por ti.",
+   "Si desactivan la cuenta y estás en la UE, recurre gratis, también ante el Appeals Centre Europe."
+  ],
+  "en": [
+   "Redo the video selfie on your usual phone, somewhere well lit, turning your head slowly.",
+   "Wait for the answer, up to two business days, and check your email, including the spam folder.",
+   "Warn your contacts another way: the hacker may ask them for money or codes in your name.",
+   "If the account gets disabled and you’re in the EU, appeal for free, including to the Appeals Centre Europe."
+  ]
+ },
  "sections": [
   {
    "titre": {
