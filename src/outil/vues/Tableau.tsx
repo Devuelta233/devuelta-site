@@ -43,7 +43,7 @@ function BlocRetractations({ liste, recharger }: { liste: Retractation[]; rechar
         {t('retractationsTitre')} <Pastille ton="alerte">{liste.length}</Pastille>
       </h2>
       <p>{t('retractationsAide')}</p>
-      <ul class="o-liste">
+      <ul class="o-retractations">
         {liste.map((r) => {
           const lang = isLang(r.langue) ? r.langue : 'fr';
           return (
