@@ -3,7 +3,7 @@
 import { LANGS, ROLES, isLang } from '../../shared/vocab';
 import { hashPassword, newId, temporaryPassword } from '../crypto';
 import { getParam, journalStmt, setParam } from '../db';
-import { HttpError, cleanEmail, cleanText, json, nowIso, readJson } from '../util';
+import { HttpError, cleanEmail, cleanPhone, cleanText, json, nowIso, readJson } from '../util';
 import { iterations } from './auth';
 import type { Ctx } from './router';
 import { elementsAPurger, purgerElements } from '../taches';
@@ -12,7 +12,7 @@ export async function liste({ env, auth }: Ctx): Promise<Response> {
   if (auth.user.role === 'admin') {
     const rows = await env.DB.prepare(
       `SELECT id, email, nom, langue, role, actif, totp_actif, mdp_a_changer, nda_version, nda_accepte_le,
-              cree_le, derniere_connexion, bloque_jusqua,
+              cree_le, derniere_connexion, bloque_jusqua, whatsapp,
               (SELECT COUNT(*) FROM push_abonnements p WHERE p.utilisateur_id = utilisateurs.id) AS nb_appareils
          FROM utilisateurs ORDER BY actif DESC, cree_le`,
     ).all();
@@ -214,4 +214,15 @@ export async function exporter({ env, auth }: Ctx): Promise<Response> {
       'Cache-Control': 'no-store',
     },
   });
+}
+
+/** Mon numéro WhatsApp (format international), ou vide pour l'effacer. */
+export async function monWhatsapp({ request, env, auth }: Ctx): Promise<Response> {
+  const body = await readJson(request, 1_000);
+  const numero = body.whatsapp === '' || body.whatsapp === null ? null : cleanPhone(body.whatsapp);
+  await env.DB.batch([
+    env.DB.prepare('UPDATE utilisateurs SET whatsapp = ? WHERE id = ?').bind(numero, auth.user.id),
+    journalStmt(env.DB, { utilisateur_id: auth.user.id, action: 'whatsapp-modifie', objet: 'utilisateur', objet_id: auth.user.id }),
+  ]);
+  return json({ ok: true, whatsapp: numero });
 }

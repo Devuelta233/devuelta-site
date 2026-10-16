@@ -48,6 +48,7 @@ export interface UserRow {
   bloque_jusqua: string | null;
   cree_le: string;
   derniere_connexion: string | null;
+  whatsapp: string | null;
 }
 
 export interface SessionRow {
@@ -80,6 +81,7 @@ export function publicUser(u: UserRow) {
     totp_actif: !!u.totp_actif,
     nda_accepte_le: u.nda_accepte_le,
     derniere_connexion: u.derniere_connexion,
+    whatsapp: u.whatsapp ?? null,
   };
 }
 

@@ -118,6 +118,7 @@ add('PATCH', '/equipe/:id', 'admin', equipe.modifier);
 add('POST', '/equipe/:id/reinitialiser-mdp', 'admin', equipe.reinitialiserMdp);
 add('POST', '/equipe/:id/reinitialiser-2fa', 'admin', equipe.reinitialiser2fa);
 add('GET', '/connexions', 'complete', equipe.connexions);
+add('POST', '/moi/whatsapp', 'complete', equipe.monWhatsapp);
 add('GET', '/parametres', 'admin', equipe.lireParametres);
 add('PUT', '/parametres', 'admin', equipe.ecrireParametres);
 add('GET', '/purge', 'admin', equipe.listePurge);

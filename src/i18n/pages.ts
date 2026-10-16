@@ -397,9 +397,9 @@ export const TARIFS = {
 export const CONTACT = {
   seo: { fr: 'Nous contacter', es: 'Contacto', en: 'Contact us' } as T3,
   meta: {
-    fr: 'Écrivez à Devuelta en français, en espagnol ou en anglais, par WhatsApp ou par e-mail. Réponse en général sous 24 heures.',
-    es: 'Escribe a Devuelta en español, francés o inglés, por WhatsApp o por correo. Respuesta normalmente en 24 horas.',
-    en: 'Write to Devuelta in English, French or Spanish, by WhatsApp or email. We usually reply within 24 hours.',
+    fr: 'Écrivez à Devuelta en français, en espagnol ou en anglais, par e-mail. Réponse en général sous 24 heures.',
+    es: 'Escribe a Devuelta en español, francés o inglés, por correo electrónico. Respuesta normalmente en 24 horas.',
+    en: 'Write to Devuelta in English, French or Spanish, by email. We usually reply within 24 hours.',
   } as T3,
   h1: { fr: 'Nous contacter', es: 'Contacto', en: 'Contact us' } as T3,
   intro: {

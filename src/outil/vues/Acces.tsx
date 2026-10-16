@@ -11,7 +11,7 @@ import { Champ, MessageErreur, useAction, valeur } from '../ui';
 export interface Etat {
   etape: string;
   initialisation?: boolean;
-  utilisateur?: { id: string; nom: string; email: string; langue: Lang; role: string };
+  utilisateur?: { id: string; nom: string; email: string; langue: Lang; role: string; whatsapp?: string | null };
   alerte_nouveau_pays?: boolean;
 }
 

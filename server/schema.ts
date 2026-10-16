@@ -266,6 +266,8 @@ export const MIGRATIONS: string[][] = [
     `CREATE INDEX IF NOT EXISTS idx_retractations_dossier ON retractations (dossier_id)`,
     `CREATE INDEX IF NOT EXISTS idx_retractations_attente ON retractations (accuse_le, recue_le)`,
   ],
+  // 5 — numéro WhatsApp de chaque membre : donné au client seulement à l'ouverture de son dossier
+  [`ALTER TABLE utilisateurs ADD COLUMN whatsapp TEXT`],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

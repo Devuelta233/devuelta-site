@@ -5,7 +5,7 @@ import Engagements from '../components/Engagements.astro';
 import { CONFIER, METHODE } from '../i18n/pages';
 import { page, versionsPage } from '../i18n/routes';
 import { plateformes } from '../data';
-import { EMAIL, lienWhatsApp } from '../config';
+import { EMAIL_PAR_LANGUE } from '../config';
 import type { Lang } from '../../shared/vocab';
 import type { DonneesConfier } from '../scripts/Confier';
 
@@ -21,8 +21,7 @@ const donnees: DonneesConfier = {
   liens: {
     confidentialite: page('confidentialite', lang),
     urgence: page('urgence', lang),
-    whatsapp: lienWhatsApp(lang),
-    email: EMAIL,
+    email: EMAIL_PAR_LANGUE[lang],
   },
 };
 const sansJs = {

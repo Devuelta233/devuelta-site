@@ -202,6 +202,24 @@ const D = typoProfonde({
   retractationStop: ['Arrêtez toutes les démarches de ce dossier.', 'Detén todas las gestiones de este caso.', 'Stop all work on this case.'],
   accuseLe: ['Accusé envoyé le', 'Acuse enviado el', 'Acknowledgement sent on'],
   accuseAEnvoyer: ['Accusé de réception à envoyer depuis le tableau de bord.', 'Acuse de recibo por enviar desde el panel.', 'Acknowledgement to send from the dashboard.'],
+  monWhatsapp: ['Mon numéro WhatsApp', 'Mi número de WhatsApp', 'My WhatsApp number'],
+  monWhatsappAide: [
+    'Format international (ex. +233…). Il n’est jamais affiché sur le site : le client le reçoit seulement à l’ouverture de son dossier.',
+    'Formato internacional (ej. +34…). Nunca aparece en el sitio: el cliente lo recibe solo cuando se abre su caso.',
+    'International format (e.g. +44…). It is never shown on the website: clients only get it once their case is opened.',
+  ],
+  ouvertureTitre: ['Dossier ouvert : message à envoyer au client', 'Caso abierto: mensaje para el cliente', 'Case opened: message to send to the client'],
+  ouvertureAide: [
+    'À envoyer par e-mail, dans sa langue. C’est le seul moment où il reçoit le numéro WhatsApp de la personne qui suit son dossier.',
+    'Envíalo por correo, en su idioma. Es el único momento en que recibe el número de WhatsApp de la persona que lleva su caso.',
+    'Send it by email, in their language. This is the only time they get the WhatsApp number of the person handling their case.',
+  ],
+  whatsappManquant: [
+    'n’a pas encore indiqué son numéro WhatsApp (Réglages → Mon compte).',
+    'aún no ha indicado su número de WhatsApp (Ajustes → Mi cuenta).',
+    'has not added their WhatsApp number yet (Settings → My account).',
+  ],
+  copierMessage: ['Copier le message', 'Copiar el mensaje', 'Copy the message'],
   mandatManquant: [
     'Mandat non enregistré : aucun courrier ne pourra être validé au nom de la personne.',
     'Mandato no registrado: no se podrá validar ninguna carta en nombre de la persona.',

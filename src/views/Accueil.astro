@@ -8,7 +8,7 @@ import { ACCUEIL, ARTICLES } from '../i18n/pages';
 import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
 import { BASE, articlePath, articlesPath, guidePath, page, situationPath, versionsAccueil } from '../i18n/routes';
 import { articles, dateLisible, guides } from '../data';
-import { EMAIL, SITE_URL, WHATSAPP } from '../config';
+import { EMAIL, EMAIL_PAR_LANGUE, SITE_URL } from '../config';
 import { SITUATION_LABEL, type Lang } from '../../shared/vocab';
 
 interface Props {
@@ -33,7 +33,7 @@ const jsonld = [
     contactPoint: (['fr', 'es', 'en'] as Lang[]).map((l) => ({
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      telephone: WHATSAPP[l].e164,
+      email: EMAIL_PAR_LANGUE[l],
       availableLanguage: l,
     })),
   },

@@ -48,7 +48,7 @@ export interface DonneesDiagnostic {
   guides: GuideD[];
   pays: PaysD[];
   international: RessourceD[];
-  liens: { confier: string; urgence: string; situations: Record<string, string>; whatsapp: string };
+  liens: { confier: string; urgence: string; situations: Record<string, string>; email: string };
   verifieLe: string;
 }
 
@@ -405,8 +405,8 @@ export function Diagnostic({ d }: { d: DonneesDiagnostic }) {
             {t.confier}
             <small>{t.confierSous}</small>
           </a>
-          <a class="bouton bouton-clair" href={d.liens.whatsapp} target="_blank" rel="noopener noreferrer" data-evenement="whatsapp">
-            {t.whatsapp}
+          <a class="bouton bouton-clair" href={d.liens.email} data-evenement="email">
+            {t.email}
           </a>
         </div>
       </section>

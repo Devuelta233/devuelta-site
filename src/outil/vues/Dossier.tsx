@@ -3,7 +3,9 @@
 
 import { useEffect, useState } from 'preact/hooks';
 import { COEF_PRO, COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
-import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isSituation } from '../../../shared/vocab';
+import { texteOuverture } from '../../../shared/ouverture';
+import { typo } from '../../../shared/typo';
+import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isLang, isSituation, type Lang } from '../../../shared/vocab';
 import { del, get, patch, post } from '../api';
 import { extraireLiens } from '../liens';
 import { code, date, indexLangue, langue, t, tr } from '../i18n';
@@ -104,6 +106,7 @@ interface Dossier {
   situation: string;
   assigne_a: string | null;
   assigne_nom: string | null;
+  assigne_whatsapp: string | null;
   client_pseudo: string;
   client_nom: string | null;
   client_email: string | null;
@@ -227,6 +230,38 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
 
 // Résumé ------------------------------------------------------------------------
 
+// Mandat signé : le client reçoit (par e-mail) le WhatsApp de la personne qui suit son dossier.
+function MessageOuverture({ x }: { x: Dossier }) {
+  const lc: Lang = isLang(x.langue) ? x.langue : 'fr';
+  if (!x.assigne_nom) return null;
+  if (!x.assigne_whatsapp) {
+    return (
+      <div class="o-encadre o-info">
+        <strong>{t('ouvertureTitre')}</strong>
+        <p>
+          {x.assigne_nom} {t('whatsappManquant')}
+        </p>
+      </div>
+    );
+  }
+  const texte = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom, whatsapp: x.assigne_whatsapp }, lc);
+  return (
+    <div class="o-encadre o-info">
+      <strong>{t('ouvertureTitre')}</strong>
+      <p>{t('ouvertureAide')}</p>
+      <pre class="o-pre">{lc === 'fr' ? typo(texte) : texte}</pre>
+      <p class="o-actions">
+        <Copier texte={lc === 'fr' ? typo(texte) : texte} libelle={t('copierMessage')} />
+        {x.client_email && (
+          <a class="o-bouton" href={`mailto:${x.client_email}`}>
+            {t('email')}
+          </a>
+        )}
+      </p>
+    </div>
+  );
+}
+
 function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger: () => void; ferme: boolean; preparer: (p: { modele: string; contenu_id: string | null }) => void }) {
   const x = d.dossier;
   const lang = langue.value;
@@ -274,6 +309,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           </button>
         </div>
       )}
+      {x.mandat_signe_le && <MessageOuverture x={x} />}
       <TarifDossier d={d} />
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (
         <div class="o-encadre o-alerte">

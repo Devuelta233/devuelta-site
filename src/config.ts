@@ -1,28 +1,15 @@
-// Coordonnées publiques de Devuelta. Une seule source : changer un numéro ici
-// le change sur tout le site.
+// Coordonnées publiques de Devuelta. Une seule source : changer une adresse ici
+// la change sur tout le site.
 
 import { CONTACT_EMAIL, type Lang } from '../shared/vocab';
 export { SITE_URL } from '../shared/site';
 
 export const EMAIL = CONTACT_EMAIL;
 
-// Un numéro WhatsApp par langue de réponse, et le prénom de la personne qui
-// répond (un humain identifiable rassure ; jamais de nom de famille).
-// À remplacer par des numéros WhatsApp Business dédiés dès qu'ils existent.
-export const WHATSAPP: Record<Lang, { e164: string; affichage: string; prenom: string }> = {
-  fr: { e164: '+41768232468', affichage: '+41 76 823 24 68', prenom: 'Steven' },
-  es: { e164: '+41783169306', affichage: '+41 78 316 93 06', prenom: 'Paola' },
-  en: { e164: '+233592151139', affichage: '+233 59 215 11 39', prenom: 'Michael' },
-};
-
-const MESSAGE_WHATSAPP: Record<Lang, string> = {
-  fr: 'Bonjour, je viens du site Devuelta.',
-  es: 'Hola, vengo del sitio de Devuelta.',
-  en: 'Hello, I found you on the Devuelta website.',
-};
-
-export function lienWhatsApp(lang: Lang): string {
-  return `https://wa.me/${WHATSAPP[lang].e164.replace('+', '')}?text=${encodeURIComponent(MESSAGE_WHATSAPP[lang])}`;
-}
+// Contact public : l'e-mail seulement, une adresse par langue de réponse (la même
+// pour l'instant). Les numéros WhatsApp de l'équipe ne sont jamais publiés : le
+// client reçoit celui de la personne qui suit son dossier une fois le dossier
+// ouvert (mandat signé), depuis l'outil (Réglages → numéro WhatsApp).
+export const EMAIL_PAR_LANGUE: Record<Lang, string> = { fr: EMAIL, es: EMAIL, en: EMAIL };
 
 export const NOM_LANGUE: Record<Lang, string> = { fr: 'Français', es: 'Español', en: 'English' };

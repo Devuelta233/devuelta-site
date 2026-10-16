@@ -1,10 +1,13 @@
 // Contenus : modèles de courriers, référentiel, coordonnées publiques.
 
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import referentiel from '../shared/referentiel.json';
 import { CONTACT_EMAIL, LANGS } from '../shared/vocab';
-import { lienWhatsApp, WHATSAPP } from '../src/config';
+import { EMAIL_PAR_LANGUE } from '../src/config';
 import { MODELES, contientMarqueur, genererCourrier } from '../server/outil/modeles';
+
+const fichier = (chemin: string) => readFileSync(new URL(`../${chemin}`, import.meta.url), 'utf-8');
 
 const DOSSIER = {
   ref: 'DV-2026-0001',
@@ -77,14 +80,11 @@ describe('coordonnées publiques', () => {
   it('adresse e-mail unique', () => {
     expect(CONTACT_EMAIL).toBe('team.devuelta@protonmail.com');
   });
-  it('un WhatsApp par langue', () => {
-    expect(WHATSAPP.fr.e164).toBe('+41768232468');
-    expect(WHATSAPP.es.e164).toBe('+41783169306');
-    expect(WHATSAPP.en.e164).toBe('+233592151139');
-    for (const l of LANGS) {
-      expect(WHATSAPP[l].affichage.replace(/\s/g, '')).toBe(WHATSAPP[l].e164);
-      expect(lienWhatsApp(l)).toMatch(/^https:\/\/wa\.me\/\d+\?text=/);
-    }
+  it('une adresse e-mail par langue, aucun numéro de l’équipe en public', () => {
+    for (const l of LANGS) expect(EMAIL_PAR_LANGUE[l]).toMatch(/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/);
+    const publics = JSON.stringify([fichier('src/config.ts'), fichier('src/components/Contacts.astro'), fichier('src/views/Contact.astro'), fichier('src/views/Accueil.astro')]);
+    for (const numero of ['41768232468', '41783169306', '233592151139']) expect(publics).not.toContain(numero);
+    expect(publics).not.toContain('wa.me');
   });
 });
 

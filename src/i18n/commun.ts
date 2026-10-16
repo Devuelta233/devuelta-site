@@ -63,7 +63,11 @@ export const C = {
   } as T3,
   urgenceLien: { fr: 'Les numéros d’aide par pays', es: 'Los números de ayuda por país', en: 'Helplines by country' } as T3,
   ecrireTitre: { fr: 'Nous écrire', es: 'Escríbenos', en: 'Write to us' } as T3,
-  whatsappLabel: { fr: 'WhatsApp', es: 'WhatsApp', en: 'WhatsApp' } as T3,
+  whatsappApres: {
+    fr: 'Le numéro WhatsApp de la personne qui suit votre dossier vous est donné dès l’ouverture du dossier.',
+    es: 'El número de WhatsApp de la persona que lleva tu caso se te da en cuanto se abre el caso.',
+    en: 'The WhatsApp number of the person handling your case is given to you as soon as your case is opened.',
+  } as T3,
   reponseEn: {
     fr: 'Réponse en français',
     es: 'Respuesta en español',

@@ -210,7 +210,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
       .all(),
   ]);
   const assigne = d.assigne_a
-    ? await env.DB.prepare('SELECT nom FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string }>()
+    ? await env.DB.prepare('SELECT nom, whatsapp FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string; whatsapp: string | null }>()
     : null;
   const retractations = await pourDossier(env.DB, d.id);
   const liens = contenus.results.map((c) => {
@@ -243,7 +243,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
   }));
   return json({
     ok: true,
-    dossier: { ...d, assigne_nom: assigne?.nom ?? null },
+    dossier: { ...d, assigne_nom: assigne?.nom ?? null, assigne_whatsapp: assigne?.whatsapp ?? null },
     contenus: liens,
     etapes: etapes.results,
     courriers: courriers.results,
