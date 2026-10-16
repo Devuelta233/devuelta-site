@@ -11,7 +11,7 @@ export const GET: APIRoute = () => {
   l.push('# Devuelta');
   l.push('');
   l.push(
-    '> Devuelta helps people get unwanted personal content removed from the internet (intimate images shared without consent, deepfakes, fake profiles, hacked accounts, fake reviews, defamation, exposed personal data, reused photos) through legal means only. Free self-help guides and diagnostic in French, Spanish and English; a human-reviewed paid service when self-help is not enough. No trackers, no cookies.',
+    '> Devuelta helps people get unwanted personal content removed from the internet (intimate images shared without consent, deepfakes, fake profiles, hacked accounts, fake reviews, defamation, exposed personal data, reused photos) through legal means only. Free self-help guides and diagnostic in French, Spanish and English; a human-reviewed paid service when self-help is not enough (from €30 for one link: half to start, the rest only if the content is removed; half price in Africa and Latin America). No trackers, no cookies.',
   );
   l.push('');
   l.push('Every remedy page cites the law, the official source link and the date it was last checked. Devuelta does not give legal advice and never promises guaranteed removal. Minors are directed to official free services (e.g. Take It Down by NCMEC).');
@@ -27,6 +27,7 @@ export const GET: APIRoute = () => {
     for (const s of SITUATIONS_ORDRE) l.push(`- [${SITUATIONS_TEXTE[s][lang].h1}](${SITE_URL}${situationPath(s, lang)})`);
     for (const g of guides()) l.push(`- [${g.titre[lang]}](${SITE_URL}${guidePath(g.slug[lang], lang)})`);
     l.push(`- [${{ fr: 'Méthode', es: 'Método', en: 'How we work' }[lang]}](${SITE_URL}${page('methode', lang)})`);
+    l.push(`- [${{ fr: 'Tarifs', es: 'Precios', en: 'Pricing' }[lang]}](${SITE_URL}${page('tarifs', lang)})`);
     l.push(`- [Contact](${SITE_URL}${page('contact', lang)})`);
   }
   l.push('');

@@ -44,7 +44,7 @@ const { lang } = Astro.props;
     </ul>
 
     <h2>{METHODE.prixTitre[lang]}</h2>
-    <p>{METHODE.prix[lang]}</p>
+    <p>{METHODE.prix[lang]} <a href={page('tarifs', lang)}>{METHODE.voirTarifs[lang]} →</a></p>
 
     <h2>{METHODE.pasTitre[lang]}</h2>
     <p>{METHODE.pas[lang]}</p>

@@ -14,6 +14,8 @@ export interface ActionPlateforme {
   url_par_langue?: Partial<T3>;
   connexion_requise?: boolean;
   verifie?: boolean;
+  /** Limite ou précaution affichée sous les étapes (facultatif). */
+  a_savoir?: T3;
   note?: string;
 }
 
@@ -160,6 +162,8 @@ export interface Article {
   titre: T3;
   meta_description: T3;
   chapo: T3;
+  /** « L'essentiel en 30 secondes » : 3 ou 4 gestes à faire tout de suite. */
+  essentiel: L3;
   sections: SectionArticle[];
   si_rien_ne_marche: T3;
   sources: Array<{ url: string; titre: string }>;
