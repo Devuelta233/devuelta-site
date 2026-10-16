@@ -30,6 +30,9 @@ export const C = {
     contact: { fr: 'Contact', es: 'Contacto', en: 'Contact' } as T3,
     confidentialite: { fr: 'Confidentialité', es: 'Privacidad', en: 'Privacy' } as T3,
     mentions: { fr: 'Mentions légales', es: 'Aviso legal', en: 'Legal notice' } as T3,
+    conditions: { fr: 'Conditions de vente', es: 'Condiciones de venta', en: 'Terms of sale' } as T3,
+    // Libellé imposé pour la fonction de rétractation en ligne (directive 2011/83/UE, art. 11 bis).
+    retractation: { fr: 'Renoncer au contrat ici', es: 'Desistir del contrato aquí', en: 'Withdraw from contract here' } as T3,
     referentiel: { fr: 'Référentiel ouvert (JSON)', es: 'Referencial abierto (JSON)', en: 'Open dataset (JSON)' } as T3,
   },
   engagementsTitre: { fr: 'Nos engagements', es: 'Nuestros compromisos', en: 'Our commitments' } as T3,
@@ -60,7 +63,11 @@ export const C = {
   } as T3,
   urgenceLien: { fr: 'Les numéros d’aide par pays', es: 'Los números de ayuda por país', en: 'Helplines by country' } as T3,
   ecrireTitre: { fr: 'Nous écrire', es: 'Escríbenos', en: 'Write to us' } as T3,
-  whatsappLabel: { fr: 'WhatsApp', es: 'WhatsApp', en: 'WhatsApp' } as T3,
+  whatsappApres: {
+    fr: 'Le numéro WhatsApp de la personne qui suit votre dossier vous est donné dès l’ouverture du dossier.',
+    es: 'El número de WhatsApp de la persona que lleva tu caso se te da en cuanto se abre el caso.',
+    en: 'The WhatsApp number of the person handling your case is given to you as soon as your case is opened.',
+  } as T3,
   reponseEn: {
     fr: 'Réponse en français',
     es: 'Respuesta en español',
@@ -100,9 +107,9 @@ export const C = {
   ctaDiagnosticSous: { fr: 'Gratuit, anonyme, 3 minutes', es: 'Gratis, anónimo, 3 minutos', en: 'Free, anonymous, 3 minutes' } as T3,
   ctaConfier: { fr: 'Confier mon dossier', es: 'Confiar mi caso', en: 'Get our help' } as T3,
   ctaConfierSous: {
-    fr: 'Dès 30 €, le reste seulement si c’est retiré',
-    es: 'Desde 30 €, el resto solo si se retira',
-    en: 'From €30, the rest only if removed',
+    fr: 'Dès 40 €, le reste seulement si c’est retiré',
+    es: 'Desde 40 €, el resto solo si se retira',
+    en: 'From €40, the rest only if removed',
   } as T3,
   pasConseilJuridique: {
     fr: 'Ces informations vous aident à exercer vos droits. Elles ne remplacent pas l’avis d’un avocat.',

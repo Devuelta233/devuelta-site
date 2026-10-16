@@ -9,7 +9,7 @@ import { compter } from './compteur';
 export interface DonneesConfier {
   lang: Lang;
   plateformes: Array<{ id: string; nom: string }>;
-  liens: { confidentialite: string; urgence: string; whatsapp: string; email: string };
+  liens: { confidentialite: string; urgence: string; email: string };
 }
 
 const AVEC_PUBLIE = ['contenu-intime', 'donnees-personnelles'];
@@ -22,7 +22,6 @@ export function Confier({ d }: { d: DonneesConfier }) {
   const [liens, setLiens] = useState('');
   const [message, setMessage] = useState('');
   const [pseudo, setPseudo] = useState('');
-  const [mode, setMode] = useState<'whatsapp' | 'email'>('whatsapp');
   const [contact, setContact] = useState('');
   const [menace, setMenace] = useState(false);
   const [dejaSignale, setDejaSignale] = useState(false);
@@ -88,7 +87,7 @@ export function Confier({ d }: { d: DonneesConfier }) {
           liens: liens.split(/\s+/).filter(Boolean),
           message,
           pseudo,
-          contact_mode: mode,
+          contact_mode: 'email',
           contact_valeur: contact,
           menace,
           deja_signale: dejaSignale,
@@ -107,10 +106,10 @@ export function Confier({ d }: { d: DonneesConfier }) {
           /* rien */
         }
       } else {
-        setErreur(t.erreurs[j.erreur ?? ''] ?? t.erreurs.defaut);
+        setErreur((t.erreurs[j.erreur ?? ''] ?? t.erreurs.defaut).replace('{email}', d.liens.email));
       }
     } catch {
-      setErreur(t.erreurs.defaut);
+      setErreur(t.erreurs.defaut.replace('{email}', d.liens.email));
     } finally {
       setEnvoi(false);
     }
@@ -125,7 +124,7 @@ export function Confier({ d }: { d: DonneesConfier }) {
         <p>
           {t.merciRef} : <span class="reference">{ref}</span>
         </p>
-        <p>{t.merciTexte}</p>
+        <p>{t.merciTexte.replace('{email}', d.liens.email)}</p>
       </div>
     );
   }
@@ -218,31 +217,19 @@ export function Confier({ d }: { d: DonneesConfier }) {
         <input id="f-pseudo" type="text" autocomplete="given-name" maxLength={60} value={pseudo} onInput={(e) => setPseudo((e.target as HTMLInputElement).value)} />
         <span class="aide">{t.pseudoAide}</span>
       </div>
-      <fieldset>
-        <legend>{t.contact}</legend>
-        <div class="choix choix-grille">
-          <label>
-            <input type="radio" name="mode" checked={mode === 'whatsapp'} onChange={() => setMode('whatsapp')} />
-            <span>{t.whatsapp}</span>
-          </label>
-          <label>
-            <input type="radio" name="mode" checked={mode === 'email'} onChange={() => setMode('email')} />
-            <span>{t.email}</span>
-          </label>
-        </div>
-      </fieldset>
       <div class="champ">
         <label for="f-contact">
-          {mode === 'whatsapp' ? t.numero : t.adresse} <span class="aide-inline">({t.obligatoire})</span>
+          {t.adresse} <span class="aide-inline">({t.obligatoire})</span>
         </label>
         <input
           id="f-contact"
-          type={mode === 'whatsapp' ? 'tel' : 'email'}
-          autocomplete={mode === 'whatsapp' ? 'tel' : 'email'}
-          inputMode={mode === 'whatsapp' ? 'tel' : 'email'}
+          type="email"
+          autocomplete="email"
+          inputMode="email"
           value={contact}
           onInput={(e) => setContact((e.target as HTMLInputElement).value)}
         />
+        <span class="aide">{t.contactAide}</span>
       </div>
       <div class="piege" aria-hidden="true">
         <label>

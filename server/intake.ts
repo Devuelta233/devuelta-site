@@ -24,7 +24,7 @@ import {
 
 const PLATEFORME_OK = /^[a-z0-9-]{2,30}$/;
 
-async function ipHash(env: Env, ip: string): Promise<string> {
+export async function ipHash(env: Env, ip: string): Promise<string> {
   // L'adresse IP n'est jamais stockée : seulement une empreinte salée,
   // utile pour limiter les envois abusifs, effacée avec la demande.
   let sel = await getParam(env.DB, 'sel_ip', '');

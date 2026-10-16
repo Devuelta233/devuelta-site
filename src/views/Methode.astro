@@ -49,6 +49,11 @@ const { lang } = Astro.props;
     <h2>{METHODE.pasTitre[lang]}</h2>
     <p>{METHODE.pas[lang]}</p>
 
+    <h2>{METHODE.refusTitre[lang]}</h2>
+    <ul class="coche refus">
+      {METHODE.refus[lang].map((r) => <li>{r}</li>)}
+    </ul>
+
     <h2>{METHODE.confianceTitre[lang]}</h2>
     <p>{METHODE.confiance[lang]} <a href="/referentiel.json">referentiel.json</a></p>
 

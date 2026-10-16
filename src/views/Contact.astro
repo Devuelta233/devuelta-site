@@ -4,7 +4,7 @@ import Contacts from '../components/Contacts.astro';
 import { C } from '../i18n/commun';
 import { CONTACT } from '../i18n/pages';
 import { page, versionsPage } from '../i18n/routes';
-import { EMAIL, WHATSAPP } from '../config';
+import { EMAIL } from '../config';
 import { SITE_URL } from '../config';
 import type { Lang } from '../../shared/vocab';
 
@@ -24,7 +24,6 @@ const jsonld = [
       '@type': 'Organization',
       name: 'Devuelta',
       email: EMAIL,
-      telephone: WHATSAPP[lang].e164,
     },
   },
 ];
