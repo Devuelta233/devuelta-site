@@ -27,9 +27,11 @@ Tournage : au téléphone, voix d’un membre de l’équipe sur l’écran qui 
 
 ### 3. Légende
 
+```text
 Instagram laisse en ligne un faux compte à ton nom ? Refais une demande complète, conteste le refus et porte plainte s’il te menace.
 Guide gratuit : lien en bio
 #fauxcompte #usurpationdidentite #instagram #securiteenligne
+```
 
 ### 4. Lien
 
@@ -60,9 +62,11 @@ Grabación: con el teléfono, voz de una persona del equipo sobre la pantalla qu
 
 ### 3. Texto de la publicación
 
+```text
 ¿Instagram deja activa una cuenta falsa con tu nombre? Envía una solicitud completa, recurre la negativa y denuncia si te amenaza.
 Guía gratis: enlace en la bio
 #cuentafalsa #suplantaciondeidentidad #instagram #seguridadenlinea
+```
 
 ### 4. Enlace
 
@@ -93,9 +97,11 @@ Filming: on a phone, a team member’s voice over the screen showing the steps. 
 
 ### 3. Caption
 
+```text
 Is Instagram leaving up a fake account using your name? Send a complete request, appeal the refusal and go to the police if it threatens you.
 Free guide: link in bio
 #fakeaccount #impersonation #instagram #onlinesafety
+```
 
 ### 4. Link
 
