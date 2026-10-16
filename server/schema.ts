@@ -291,6 +291,27 @@ export const MIGRATIONS: string[][] = [
     )`,
     `CREATE INDEX IF NOT EXISTS idx_signatures_dossier ON signatures (dossier_id)`,
   ],
+  // 7 — paiements en ligne (Paystack). Gardés pour la comptabilité même après
+  // la purge du dossier : seule la référence du dossier reste, sans donnée personnelle.
+  [
+    `CREATE TABLE IF NOT EXISTS paiements (
+      id TEXT PRIMARY KEY,
+      dossier_id TEXT REFERENCES dossiers(id) ON DELETE SET NULL,
+      type TEXT NOT NULL,
+      reference TEXT NOT NULL UNIQUE,
+      montant_eur REAL NOT NULL,
+      devise TEXT NOT NULL,
+      montant_devise INTEGER NOT NULL,
+      taux REAL,
+      lien TEXT,
+      statut TEXT NOT NULL DEFAULT 'en-attente',
+      cree_le TEXT NOT NULL,
+      cree_par TEXT,
+      paye_le TEXT,
+      canal TEXT
+    )`,
+    `CREATE INDEX IF NOT EXISTS idx_paiements_dossier ON paiements (dossier_id)`,
+  ],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

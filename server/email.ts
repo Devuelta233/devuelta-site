@@ -13,7 +13,7 @@ export const EXPEDITEUR = 'team@getdevuelta.com';
 
 export interface Trace {
   /** Type de message, pour le journal (jamais l'adresse ni le contenu). */
-  type: 'demande-recue' | 'signature' | 'signe' | 'accuse-retractation';
+  type: 'demande-recue' | 'signature' | 'signe' | 'accuse-retractation' | 'paiement' | 'paiement-recu';
   objet: string;
   objet_id: string;
   dossier_id?: string | null;

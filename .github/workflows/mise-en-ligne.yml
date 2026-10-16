@@ -19,6 +19,9 @@ permissions:
 
 env:
   CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  # Clé secrète Paystack (paiement en ligne), rangée dans les secrets du dépôt.
+  # Absente : le paiement en ligne reste désactivé, le reste fonctionne.
+  PAYSTACK_SECRET_KEY: ${{ secrets.PAYSTACK_SECRET_KEY }}
   CLOUDFLARE_ACCOUNT_ID: 381946ed74159485b04c186b0347ff6f
   # INTERRUPTEUR. « non » : on construit et on teste, rien ne part en ligne.
   # Passer à « oui » seulement quand Steven a validé le site.
@@ -70,6 +73,10 @@ jobs:
       - name: Mise en ligne sur Cloudflare
         if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui'
         run: npx wrangler deploy
+
+      - name: Clé de paiement Paystack
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui' && env.PAYSTACK_SECRET_KEY != ''
+        run: printf '%s' "$PAYSTACK_SECRET_KEY" | npx wrangler secret put PAYSTACK_SECRET_KEY
 
       - name: Vérification du site en ligne
         if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui'

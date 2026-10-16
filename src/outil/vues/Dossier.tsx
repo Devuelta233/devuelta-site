@@ -136,6 +136,18 @@ interface Detail {
   fiches: Fiche[];
   retractations: Array<{ ref: string; recue_le: string; accuse_le: string | null }>;
   signature: Signature | null;
+  paiements: Paiement[];
+  paiement_actif: boolean;
+}
+
+interface Paiement {
+  type: 'ouverture' | 'solde';
+  montant_eur: number;
+  devise: string;
+  statut: string;
+  cree_le: string;
+  paye_le: string | null;
+  lien: string | null;
 }
 
 interface Signature {
@@ -329,6 +341,76 @@ function SignatureEnLigne({ d, recharger }: { d: Detail; recharger: () => void }
   );
 }
 
+// Paiement en ligne : liens Paystack (ouverture, puis solde pour les liens retirés).
+function PaiementDossier({ d, recharger }: { d: Detail; recharger: () => void }) {
+  const x = d.dossier;
+  const lang = langue.value;
+  const a = useAction();
+  const [envoi, setEnvoi] = useState<{ message: string; envoye: boolean; lien: string } | null>(null);
+  const paye = (type: string) => d.paiements.some((p) => p.type === type && p.statut === 'paye');
+  const retires = d.contenus.some((c) => c.statut === 'retire');
+  const demander = (type: 'ouverture' | 'solde') =>
+    a.lancer(
+      () => post<{ message: string; envoye: boolean; lien: string }>(`/dossiers/${x.id}/paiement`, { type }),
+      (r) => {
+        setEnvoi(r);
+        recharger();
+      },
+    );
+  return (
+    <section class="o-encadre">
+      <strong>{t('paiementTitre')}</strong>
+      {!d.paiement_actif && <p class="o-muet">{t('paiementInactif')}</p>}
+      {d.paiements.length > 0 && (
+        <ul>
+          {d.paiements.map((p) => (
+            <li>
+              {p.type === 'ouverture' ? t('paiementOuverture') : t('paiementSolde')} · <strong>{euros(p.montant_eur, lang)}</strong> ·{' '}
+              {p.statut === 'paye' ? `${t('paiementPaye')} ${date(p.paye_le)}` : `${t('paiementAttente')} ${date(p.cree_le)}`}
+              {p.statut !== 'paye' && p.lien && (
+                <>
+                  {' '}
+                  <Copier texte={p.lien} libelle={t('copierLien')} />
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+      {d.paiement_actif && (
+        <>
+          <p class="o-muet">{t('paiementAuto')}</p>
+          <p class="o-actions">
+            {!paye('ouverture') && (
+              <button class="o-bouton" disabled={a.occupe} onClick={() => demander('ouverture')}>
+                {t('paiementEnvoyerOuverture')}
+              </button>
+            )}
+            {paye('ouverture') && retires && !paye('solde') && (
+              <button class="o-bouton" disabled={a.occupe} onClick={() => demander('solde')}>
+                {t('paiementEnvoyerSolde')}
+              </button>
+            )}
+          </p>
+        </>
+      )}
+      <MessageErreur texte={a.err} />
+      {envoi?.envoye && (
+        <p class="o-encadre o-ok" role="status">
+          {t('signatureEnvoyeeA')} {x.client_email}.
+        </p>
+      )}
+      {envoi && !envoi.envoye && (
+        <div>
+          <p>{t('signatureACopier')}</p>
+          <pre class="o-pre">{envoi.message}</pre>
+          <Copier texte={envoi.message} libelle={t('copierMessage')} />
+        </div>
+      )}
+    </section>
+  );
+}
+
 function SignatureFaite({ s }: { s: Signature }) {
   return (
     <div class="o-encadre o-ok">
@@ -405,6 +487,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
       {d.signature?.signe_le && <SignatureFaite s={d.signature} />}
       {x.mandat_signe_le && <MessageOuverture x={x} />}
       <TarifDossier d={d} />
+      {x.mandat_signe_le && <PaiementDossier d={d} recharger={recharger} />}
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (
         <div class="o-encadre o-alerte">
           <strong>{t('delaiCouperet')}</strong>

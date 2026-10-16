@@ -9,6 +9,7 @@ import { isLang, type Lang } from '../shared/vocab';
 import { sha256Hex } from './crypto';
 import { journalStmt } from './db';
 import { envoyerCourriel } from './email';
+import { lienPaiement, type LienPaiement } from './paiement';
 import { ipHash } from './intake';
 import { notifier } from './push';
 import { HttpError, cleanText, clientIp, json, memeOrigine, nowIso, readJson, type Env } from './util';
@@ -115,8 +116,20 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
   if ((res[0].meta?.changes ?? 1) === 0) throw new HttpError(409, 'deja-signe');
   // Alerte immédiate pour la personne qui suit le dossier.
   ctx.waitUntil(notifier(env.DB, [dossier.assigne_a]).catch(() => 0));
-  // Copie signée par e-mail (support durable), avec le WhatsApp de la personne qui suit le dossier.
+  // Copie signée par e-mail (support durable), avec le WhatsApp de la personne qui suit le dossier
+  // et, si le paiement en ligne est activé, le lien de paiement d'ouverture.
   const resume = JSON.parse(s.resume) as ResumeDevis;
+  let paiement: LienPaiement | null = null;
+  if (dossier.client_email) {
+    paiement = await lienPaiement(env, {
+      dossierId: dossier.id,
+      ref: dossier.ref,
+      lang,
+      email: dossier.client_email,
+      type: 'ouverture',
+      montantEur: resume.ouverture,
+    }).catch(() => null);
+  }
   const copie = emailSigne(
     {
       pseudo: dossier.client_pseudo,
@@ -126,6 +139,8 @@ export async function signer(request: Request, env: Env, ctx: ExecutionContext):
       whatsapp: dossier.assigne_whatsapp,
       ouverture: euros(resume.ouverture, lang),
       debutImmediat,
+      lienPaiement: paiement?.lien ?? null,
+      devise: paiement?.devise ?? null,
     },
     lang,
   );

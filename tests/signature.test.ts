@@ -1,7 +1,7 @@
 // Signature en ligne (devis + mandat) et e-mails automatiques.
 
 import { describe, expect, it } from 'vitest';
-import { emailDemandeRecue, emailSigne, sujetAccuse, sujetSignature } from '../shared/emails';
+import { emailDemandeRecue, emailLienPaiement, emailPaiementRecu, emailSigne, noteDevise, sujetAccuse, sujetSignature } from '../shared/emails';
 import { DESCRIPTION_GENERIQUE, NOM_A_SIGNER, documentSigne, mandatPourSignature, messageSignature, texteDevis } from '../shared/signature';
 import { calculerPrix } from '../shared/tarifs';
 import { LANGS, type Lang } from '../shared/vocab';
@@ -102,4 +102,27 @@ describe('e-mails automatiques', () => {
       expect(sujetAccuse('R-2026-0003', lang)).toContain('R-2026-0003');
     });
   }
+});
+
+describe('paiement en ligne', () => {
+  for (const lang of LANGS) {
+    it(`${lang} : lien de paiement et confirmation`, () => {
+      const lien = emailLienPaiement({ pseudo: 'Awa', ref: 'DV-2026-0007', montant: '40 €', type: 'ouverture', lien: 'https://checkout.paystack.com/abc', devise: 'GHS' }, lang);
+      expect(lien.texte).toContain('https://checkout.paystack.com/abc');
+      expect(lien.texte).toContain('GHS');
+      expect(lien.sujet).toContain('DV-2026-0007');
+      const recu = emailPaiementRecu({ pseudo: 'Awa', ref: 'DV-2026-0007', montantEur: 40, type: 'ouverture' }, lang);
+      expect(recu.texte).toMatch(/40/);
+      expect(lien.texte + recu.texte).not.toMatch(INTERDITS);
+      const signe = emailSigne(
+        { pseudo: 'Awa', ref: 'DV-2026-0007', documentSigne: 'DOC', prenom: null, whatsapp: null, ouverture: '40 €', debutImmediat: true, lienPaiement: 'https://checkout.paystack.com/abc', devise: 'GHS' },
+        lang,
+      );
+      expect(signe.texte).toContain('https://checkout.paystack.com/abc');
+    });
+  }
+  it('pas de note de change quand on débite en euros', () => {
+    expect(noteDevise('EUR', 'fr')).toBe('');
+    expect(noteDevise(null, 'fr')).toBe('');
+  });
 });

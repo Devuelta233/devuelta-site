@@ -124,6 +124,9 @@ export interface DonneesSigne {
   /** Montant d'ouverture, déjà mis en forme (ex. « 29,50 € »). */
   ouverture: string;
   debutImmediat: boolean;
+  /** Lien de paiement d'ouverture, quand le paiement en ligne est activé. */
+  lienPaiement?: string | null;
+  devise?: string | null;
 }
 
 /** Après la signature en ligne : la copie signée (support durable) et la suite. */
@@ -141,7 +144,9 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
           ? `${d.prenom} se encarga de él. Puedes escribirle por WhatsApp al ${d.whatsapp}, indicando tu número de caso.`
           : 'La persona que lleva tu caso te escribe muy pronto.',
         '',
-        `Siguiente paso: el pago de apertura, ${d.ouverture}. Te enviamos el enlace de pago por mensaje.`,
+        ...(d.lienPaiement
+          ? [`Siguiente paso: el pago de apertura, ${d.ouverture}, con tarjeta o Mobile Money:`, d.lienPaiement, noteDevise(d.devise, 'es')]
+          : [`Siguiente paso: el pago de apertura, ${d.ouverture}. Te enviamos el enlace de pago por mensaje.`]),
         d.debutImmediat
           ? 'Empezamos en cuanto lo recibimos.'
           : 'No pediste un inicio inmediato: empezamos al terminar el plazo de desistimiento de 14 días. Si quieres que empecemos antes, responde a este mensaje.',
@@ -169,7 +174,9 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
           ? `${d.prenom} is handling it. You can message them on WhatsApp at ${d.whatsapp}, quoting your case number.`
           : 'The person handling your case will write to you very soon.',
         '',
-        `Next step: the opening payment, ${d.ouverture}. We send you the payment link by message.`,
+        ...(d.lienPaiement
+          ? [`Next step: the opening payment, ${d.ouverture}, by card or Mobile Money:`, d.lienPaiement, noteDevise(d.devise, 'en')]
+          : [`Next step: the opening payment, ${d.ouverture}. We send you the payment link by message.`]),
         d.debutImmediat
           ? 'We start as soon as we receive it.'
           : 'You did not ask for an immediate start: we start when the 14-day withdrawal period ends. If you want us to start sooner, just reply to this message.',
@@ -197,7 +204,9 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
         ? `C’est ${d.prenom} qui s’en occupe. Vous pouvez lui écrire sur WhatsApp au ${d.whatsapp}, en indiquant votre numéro de dossier.`
         : 'La personne qui suit votre dossier vous écrit très vite.',
       '',
-      `Prochaine étape : le paiement d’ouverture, ${d.ouverture}. Nous vous envoyons le lien de paiement par message.`,
+      ...(d.lienPaiement
+        ? [`Prochaine étape : le paiement d’ouverture, ${d.ouverture}, par carte ou Mobile Money :`, d.lienPaiement, noteDevise(d.devise, 'fr')]
+        : [`Prochaine étape : le paiement d’ouverture, ${d.ouverture}. Nous vous envoyons le lien de paiement par message.`]),
       d.debutImmediat
         ? 'Nous commençons dès qu’il est reçu.'
         : 'Vous n’avez pas demandé de début immédiat : nous commençons à la fin du délai de rétractation de 14 jours. Pour que nous commencions plus tôt, répondez simplement à ce message.',
@@ -210,6 +219,92 @@ export function emailSigne(d: DonneesSigne, lang: Lang): Courriel {
     ].join('\n'),
   });
   return { sujet: intro.sujet, texte: [intro.texte, '', trait, d.documentSigne].join('\n') };
+}
+
+/** Rappel quand Paystack débite dans une autre devise que l'euro. */
+export function noteDevise(devise: string | null | undefined, lang: Lang): string {
+  if (!devise || devise === 'EUR') return '';
+  const nom: Record<string, Record<Lang, string>> = {
+    GHS: { fr: 'en cedis ghanéens (GHS)', es: 'en cedis ghaneses (GHS)', en: 'in Ghanaian cedis (GHS)' },
+    USD: { fr: 'en dollars américains (USD)', es: 'en dólares estadounidenses (USD)', en: 'in US dollars (USD)' },
+  };
+  const n = nom[devise]?.[lang] ?? devise;
+  if (lang === 'es') return `El importe se cobra ${n}, al cambio del día: tu banco puede aplicar una comisión de cambio.`;
+  if (lang === 'en') return `The amount is charged ${n}, at the day's rate: your bank may add a currency fee.`;
+  return `Le montant est débité ${n}, au taux du jour : votre banque peut appliquer des frais de change.`;
+}
+
+export interface DonneesPaiement {
+  pseudo: string;
+  ref: string;
+  montant: string;
+  type: 'ouverture' | 'solde';
+}
+
+/** Lien de paiement envoyé depuis l'outil (ouverture ou solde). */
+export function emailLienPaiement(d: DonneesPaiement & { lien: string; devise: string | null }, lang: Lang): Courriel {
+  const quoi: Record<Lang, string> =
+    d.type === 'ouverture'
+      ? { fr: 'l’ouverture du dossier', es: 'la apertura del caso', en: 'opening the case' }
+      : { fr: 'le solde, pour les liens retirés', es: 'el resto, por los enlaces retirados', en: 'the balance, for the links removed' };
+  if (lang === 'es') {
+    return {
+      sujet: `Devuelta: tu enlace de pago (${d.ref})`,
+      texte: [`Hola, ${d.pseudo}:`, '', `Aquí tienes tu enlace de pago para el caso ${d.ref}: ${d.montant}, por ${quoi.es}. Con tarjeta o Mobile Money:`, d.lien, '', noteDevise(d.devise, 'es'), '', ANTI_ARNAQUE.es, '', SIGNATURE].join('\n'),
+    };
+  }
+  if (lang === 'en') {
+    return {
+      sujet: `Devuelta: your payment link (${d.ref})`,
+      texte: [`Hello ${d.pseudo},`, '', `Here is your payment link for case ${d.ref}: ${d.montant}, for ${quoi.en}. By card or Mobile Money:`, d.lien, '', noteDevise(d.devise, 'en'), '', ANTI_ARNAQUE.en, '', SIGNATURE].join('\n'),
+    };
+  }
+  return francais({
+    sujet: `Devuelta : votre lien de paiement (${d.ref})`,
+    texte: [`Bonjour ${d.pseudo},`, '', `Voici votre lien de paiement pour le dossier ${d.ref} : ${d.montant}, pour ${quoi.fr}. Par carte ou Mobile Money :`, d.lien, '', noteDevise(d.devise, 'fr'), '', ANTI_ARNAQUE.fr, '', SIGNATURE].join('\n'),
+  });
+}
+
+/** Confirmation automatique quand Paystack confirme le paiement. */
+export function emailPaiementRecu(d: { pseudo: string; ref: string; montantEur: number; type: 'ouverture' | 'solde' }, lang: Lang): Courriel {
+  const montant = new Intl.NumberFormat(lang === 'en' ? 'en-GB' : lang, { style: 'currency', currency: 'EUR' }).format(d.montantEur);
+  if (lang === 'es') {
+    return {
+      sujet: `Devuelta: pago recibido (${d.ref})`,
+      texte: [
+        `Hola, ${d.pseudo}:`,
+        '',
+        `Hemos recibido tu pago de ${montant} para el caso ${d.ref}. Gracias.`,
+        d.type === 'ouverture' ? 'La persona que lleva tu caso te escribe para lo que sigue.' : 'Tu caso está pagado por completo. Gracias por tu confianza.',
+        '',
+        SIGNATURE,
+      ].join('\n'),
+    };
+  }
+  if (lang === 'en') {
+    return {
+      sujet: `Devuelta: payment received (${d.ref})`,
+      texte: [
+        `Hello ${d.pseudo},`,
+        '',
+        `We have received your payment of ${montant} for case ${d.ref}. Thank you.`,
+        d.type === 'ouverture' ? 'The person handling your case will write to you about the next steps.' : 'Your case is now fully paid. Thank you for your trust.',
+        '',
+        SIGNATURE,
+      ].join('\n'),
+    };
+  }
+  return francais({
+    sujet: `Devuelta : paiement reçu (${d.ref})`,
+    texte: [
+      `Bonjour ${d.pseudo},`,
+      '',
+      `Nous avons bien reçu votre paiement de ${montant} pour le dossier ${d.ref}. Merci.`,
+      d.type === 'ouverture' ? 'La personne qui suit votre dossier vous écrit pour la suite.' : 'Votre dossier est entièrement réglé. Merci de votre confiance.',
+      '',
+      SIGNATURE,
+    ].join('\n'),
+  });
 }
 
 /** Objet de l'accusé de réception d'une rétractation (le texte vient de texteAccuse). */

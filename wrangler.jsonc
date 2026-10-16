@@ -40,6 +40,9 @@
     // Coût du hachage des mots de passe. 10 000 tient dans les limites de
     // l'offre gratuite ; avec l'offre Workers Paid, passer à 210000 :
     // les mots de passe sont re-hachés automatiquement à la connexion suivante.
-    "HACHAGE_ITERATIONS": "10000"
+    "HACHAGE_ITERATIONS": "10000",
+    // Devise débitée par Paystack (paiement en ligne). La clé secrète, elle,
+    // est un secret Cloudflare (PAYSTACK_SECRET_KEY), posé par la mise en ligne.
+    "PAIEMENT_DEVISE": "GHS"
   }
 }
