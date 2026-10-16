@@ -26,6 +26,26 @@
   "es": "Google solo elimina una reseña si infringe sus políticas o si es ilegal. Si tu denuncia y tu apelación no funcionaron, todavía puedes pedir la retirada por motivos legales, con pruebas sólidas, y, en la Unión Europea, recurrir la decisión de Google. Si la reseña es difamatoria, actúa rápido: el plazo para acudir a la justicia puede ser muy corto (3 meses en Francia).",
   "en": "Google only removes a review if it breaks Google’s rules or the law. If your report and your appeal have failed, you can still file a legal removal request backed by solid evidence and, in the European Union, challenge Google’s decision. If the review is defamatory, act fast: the deadline to go to court can be very short (3 months in France)."
  },
+ "essentiel": {
+  "fr": [
+   "Signalez l’avis depuis votre fiche Google, puis faites appel une seule fois si Google répond qu’aucune règle n’est enfreinte.",
+   "Réunissez vos preuves dès maintenant : lien exact de l’avis, captures datées, preuve que la personne n’a jamais été cliente.",
+   "Si l’avis est diffamatoire, utilisez le formulaire juridique de Google et agissez vite : en France, le délai pour saisir la justice est de 3 mois.",
+   "Si quelqu’un exige de l’argent pour retirer de mauvais avis, ne payez pas : gardez les preuves et signalez-le à Google."
+  ],
+  "es": [
+   "Denuncia la reseña desde tu ficha de Google y, si te responden que no infringe ninguna política, apela una sola vez.",
+   "Reúne tus pruebas ya: enlace exacto de la reseña, capturas con fecha y prueba de que esa persona nunca fue cliente.",
+   "Si la reseña es difamatoria, usa el formulario legal de Google y no esperes: los plazos para acudir a la justicia son limitados.",
+   "Si alguien te pide dinero para quitar malas reseñas, no pagues: guarda las pruebas y denúncialo a Google."
+  ],
+  "en": [
+   "Flag the review from your Google Business Profile, then appeal once if Google says it breaks no policy.",
+   "Gather your evidence now: the review’s exact link, dated screenshots, proof the person was never a customer.",
+   "If the review is defamatory, use Google’s legal removal form and act fast: deadlines to go to court are limited.",
+   "If someone demands money to remove bad reviews, don’t pay: keep the evidence and report it to Google."
+  ]
+ },
  "sections": [
   {
    "titre": {
