@@ -25,7 +25,7 @@ env:
   CLOUDFLARE_ACCOUNT_ID: 381946ed74159485b04c186b0347ff6f
   # INTERRUPTEUR. « non » : on construit et on teste, rien ne part en ligne.
   # Passer à « oui » seulement quand Steven a validé le site.
-  MISE_EN_LIGNE: "non"
+  MISE_EN_LIGNE: "oui"
 
 jobs:
   deployer:
