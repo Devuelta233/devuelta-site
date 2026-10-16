@@ -280,6 +280,15 @@ p {
   border-left: 4px solid var(--terracotta);
 }
 
+/* « L'essentiel en 30 secondes » en tête d'article. */
+.encadre.essentiel {
+  border-left: 4px solid var(--terracotta);
+}
+
+.encadre.essentiel ol.etapes {
+  margin-bottom: 0;
+}
+
 .encadre.sombre {
   background: var(--anthracite);
   color: var(--creme);

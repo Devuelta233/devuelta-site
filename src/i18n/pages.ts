@@ -469,6 +469,12 @@ export const ARTICLES = {
     en: 'Each article covers a common dead end and the remedies that exist after a refusal. Everything is checked against official sources, on the date shown.',
   } as T3,
   publieLe: { fr: 'Publié le', es: 'Publicado el', en: 'Published on' } as T3,
+  essentiel: {
+    fr: 'L’essentiel en 30 secondes',
+    es: 'Lo esencial en 30 segundos',
+    en: 'The essentials in 30 seconds',
+  } as T3,
+  lecture: { fr: 'Lecture : {n} min', es: 'Lectura: {n} min', en: '{n}-minute read' } as T3,
   sources: { fr: 'Sources officielles', es: 'Fuentes oficiales', en: 'Official sources' } as T3,
   siRien: { fr: 'Si rien ne marche', es: 'Si nada funciona', en: 'If nothing works' } as T3,
   aLire: { fr: 'À lire aussi', es: 'Para leer también', en: 'Read next' } as T3,

@@ -162,6 +162,8 @@ export interface Article {
   titre: T3;
   meta_description: T3;
   chapo: T3;
+  /** « L'essentiel en 30 secondes » : 3 ou 4 gestes à faire tout de suite. */
+  essentiel: L3;
   sections: SectionArticle[];
   si_rien_ne_marche: T3;
   sources: Array<{ url: string; titre: string }>;
