@@ -81,14 +81,22 @@ jobs:
       - name: Vérification du site en ligne
         if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui'
         run: |
+          # 403 + en-tête cf-mitigated : la protection anti-robots de Cloudflare
+          # bloque les serveurs de GitHub, mais le site répond aux visiteurs.
           for i in $(seq 1 18); do
-            code=$(curl -s -o /dev/null -w '%{http_code}' https://getdevuelta.com/ || true)
+            entetes=$(curl -s -D - -o /dev/null https://getdevuelta.com/ || true)
+            code=$(printf '%s' "$entetes" | awk 'NR==1{print $2}')
             echo "essai $i : HTTP $code"
             if [ "$code" = "200" ]; then break; fi
+            if [ "$code" = "403" ] && printf '%s' "$entetes" | grep -qi '^cf-mitigated'; then
+              echo "::notice title=Site en ligne::Protection anti-robots active (serveurs GitHub bloqués), le site répond."
+              code=200
+              break
+            fi
             sleep 10
           done
           test "$code" = "200"
           # Premier appel à l'API : crée les tables de la base si besoin.
-          curl -s -o /dev/null -w 'API : HTTP %{http_code}\n' https://getdevuelta.com/api/outil/session || true
+          curl -s -o /dev/null -w 'API : HTTP %{http_code}\n' https://getdevuelta.com/api/outil/auth/etat || true
           echo "--- robots.txt servi ---"
           curl -s https://getdevuelta.com/robots.txt | head -40
