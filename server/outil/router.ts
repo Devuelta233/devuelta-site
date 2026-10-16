@@ -20,6 +20,7 @@ import {
 import * as demandes from './demandes';
 import * as dossiers from './dossiers';
 import * as equipe from './equipe';
+import * as retractations from './retractations';
 import * as suivi from './suivi';
 
 export interface Ctx {
@@ -100,6 +101,7 @@ add('POST', '/courriers/:id/valider', 'complete', dossiers.validerCourrier);
 add('POST', '/courriers/:id/envoye', 'complete', dossiers.marquerEnvoye);
 add('POST', '/courriers/:id/annuler', 'complete', dossiers.annulerCourrier);
 add('GET', '/referentiel', 'complete', suivi.referentiel);
+add('POST', '/retractations/:id/accuse', 'complete', retractations.accuser);
 
 // Notifications, suivi, équipe et réglages ----------------------------------------
 add('GET', '/notifications/resume', 'complete', suivi.resumeNotification);

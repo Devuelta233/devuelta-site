@@ -216,6 +216,47 @@ export const CONFIER = {
   } as T3,
 };
 
+export const RETRACTATION = {
+  seo: {
+    fr: 'Renoncer au contrat : rétractation en ligne',
+    es: 'Desistir del contrato: desistimiento en línea',
+    en: 'Withdraw from the contract online',
+  } as T3,
+  meta: {
+    fr: 'Vous avez accepté notre devis il y a moins de 14 jours ? Renoncez ici, en ligne, sans donner de raison. Accusé de réception par e-mail ou WhatsApp.',
+    es: '¿Aceptaste nuestro presupuesto hace menos de 14 días? Desiste aquí, en línea, sin dar motivos. Acuse de recibo por correo electrónico o WhatsApp.',
+    en: 'Accepted our quote less than 14 days ago? Withdraw here, online, without giving a reason. Acknowledgement by email or WhatsApp.',
+  } as T3,
+  h1: { fr: 'Renoncer au contrat', es: 'Desistir del contrato', en: 'Withdraw from the contract' } as T3,
+  intro: {
+    fr: 'Vous avez accepté notre devis il y a moins de 14 jours ? Vous pouvez renoncer ici, sans donner de raison. Vous recevez un accusé de réception avec la date et l’heure.',
+    es: '¿Aceptaste nuestro presupuesto hace menos de 14 días? Puedes desistir aquí, sin dar motivos. Recibirás un acuse de recibo con la fecha y la hora.',
+    en: 'Accepted our quote less than 14 days ago? You can withdraw here without giving a reason. You will get an acknowledgement showing the date and time.',
+  } as T3,
+  points: {
+    fr: [
+      'Si vous nous aviez demandé de commencer tout de suite, vous payez seulement le travail déjà fait. Nous remboursons le reste sous 14 jours.',
+      'Ce délai de 14 jours vaut pour les personnes qui vivent dans l’Union européenne. Ailleurs, ce formulaire sert aussi à arrêter votre dossier, à tout moment.',
+      'Vous pouvez aussi nous écrire à team.devuelta@protonmail.com.',
+    ],
+    es: [
+      'Si nos pediste empezar de inmediato, solo pagas el trabajo ya hecho. Te devolvemos el resto en un plazo de 14 días.',
+      'Este plazo de 14 días se aplica a quienes viven en la Unión Europea. En otros países, este formulario también sirve para detener tu caso en cualquier momento.',
+      'También puedes escribirnos a team.devuelta@protonmail.com.',
+    ],
+    en: [
+      'If you asked us to start right away, you only pay for the work already done. We refund the rest within 14 days.',
+      'This 14-day period applies to people living in the European Union. Elsewhere, you can also use this form to stop your case at any time.',
+      'You can also write to team.devuelta@protonmail.com.',
+    ],
+  } as L3,
+  sansJs: {
+    fr: 'Le formulaire a besoin de JavaScript. Écrivez-nous à team.devuelta@protonmail.com avec votre nom et votre numéro de dossier : votre message vaut rétractation.',
+    es: 'El formulario necesita JavaScript. Escríbenos a team.devuelta@protonmail.com con tu nombre y tu número de caso: tu mensaje vale como desistimiento.',
+    en: 'The form needs JavaScript. Write to team.devuelta@protonmail.com with your name and case number: your message counts as a withdrawal.',
+  } as T3,
+};
+
 export const TARIFS = {
   seo: {
     fr: 'Tarifs : faire retirer un contenu dès 40 €',

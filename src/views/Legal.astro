@@ -36,5 +36,10 @@ const maj = { fr: 'Mis à jour le', es: 'Actualizado el', en: 'Updated on' }[lan
         {C.engagements[lang].map((e) => <li>{e}</li>)}
       </ul>
     )}
+    {quoi === 'conditions' && (
+      <div class="actions">
+        <a class="bouton" href={page('retractation', lang)}>{C.nav.retractation[lang]}</a>
+      </div>
+    )}
   </article>
 </Base>

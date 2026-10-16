@@ -31,6 +31,8 @@ export const C = {
     confidentialite: { fr: 'Confidentialité', es: 'Privacidad', en: 'Privacy' } as T3,
     mentions: { fr: 'Mentions légales', es: 'Aviso legal', en: 'Legal notice' } as T3,
     conditions: { fr: 'Conditions de vente', es: 'Condiciones de venta', en: 'Terms of sale' } as T3,
+    // Libellé imposé pour la fonction de rétractation en ligne (directive 2011/83/UE, art. 11 bis).
+    retractation: { fr: 'Renoncer au contrat ici', es: 'Desistir del contrato aquí', en: 'Withdraw from contract here' } as T3,
     referentiel: { fr: 'Référentiel ouvert (JSON)', es: 'Referencial abierto (JSON)', en: 'Open dataset (JSON)' } as T3,
   },
   engagementsTitre: { fr: 'Nos engagements', es: 'Nuestros compromisos', en: 'Our commitments' } as T3,

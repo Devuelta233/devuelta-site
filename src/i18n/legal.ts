@@ -37,6 +37,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Statistiques de visite : nous comptons le nombre de pages vues par jour, avec la page, le site d’où vous venez (par exemple « google ») et le pays. Aucun cookie, aucun identifiant, et votre adresse IP n’est pas enregistrée.',
           'Formulaire « Confier mon dossier » : ce que vous y écrivez (un prénom ou pseudo, votre moyen de contact, votre situation, votre pays, les liens concernés, votre message et les cases cochées). Pour bloquer les envois abusifs, nous gardons une empreinte chiffrée de votre adresse IP, impossible à relire, supprimée avec la demande.',
+          'Formulaire « Renoncer au contrat ici » : votre nom, le numéro de dossier si vous l’indiquez, le moyen de contact choisi pour l’accusé de réception et votre message éventuel, avec la date et l’heure. La même empreinte chiffrée de l’adresse IP sert à bloquer les abus.',
           'Si vous devenez client·e : uniquement ce qui est nécessaire à votre dossier (identité, mandat signé, liens à faire retirer, échanges avec les sites). Nous ne vous demandons jamais d’images intimes.',
         ],
       },
@@ -44,6 +45,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         titre: 'Pourquoi, et sur quelle base',
         paras: [
           'Répondre à votre demande et traiter votre dossier : mesures précontractuelles puis exécution du contrat (RGPD, article 6.1.b). Les informations sensibles que vous nous confiez sont traitées avec votre consentement explicite (article 9.2.a), que vous pouvez retirer à tout moment.',
+          'Rétractation : respect d’une obligation légale (article 6.1.c).',
           'Sécurité du service et lutte contre les abus : intérêt légitime (article 6.1.f).',
           'Vos données ne servent jamais à la publicité, à la vente, à des démonstrations ou à entraîner un outil d’intelligence artificielle.',
         ],
@@ -51,7 +53,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       {
         titre: 'Combien de temps',
         paras: [
-          'Demande sans suite : supprimée 30 jours après son traitement. Dossier : supprimé automatiquement 6 mois après sa clôture. Statistiques : agrégées, sans donnée personnelle.',
+          'Demande sans suite : supprimée 30 jours après son traitement. Dossier : supprimé automatiquement 6 mois après sa clôture. Rétractation : supprimée avec le dossier, et au plus tard 2 ans après sa réception, pour servir de preuve. Statistiques : agrégées, sans donnée personnelle.',
         ],
       },
       {
@@ -98,6 +100,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Estadísticas de visitas: contamos las páginas vistas por día, con la página, el sitio desde el que llegas (por ejemplo «google») y el país. Sin cookies, sin identificadores, y tu dirección IP no se guarda.',
           'Formulario «Confiar mi caso»: lo que escribes (un nombre o seudónimo, tu medio de contacto, tu situación, tu país, los enlaces, tu mensaje y las casillas marcadas). Para bloquear envíos abusivos guardamos una huella cifrada de tu dirección IP, imposible de leer, que se borra con la solicitud.',
+          'Formulario «Desistir del contrato aquí»: tu nombre, el número de caso si lo indicas, el medio de contacto elegido para el acuse de recibo y tu mensaje, si lo hay, con la fecha y la hora. La misma huella cifrada de la dirección IP sirve para bloquear abusos.',
           'Si te conviertes en cliente: solo lo necesario para tu caso (identidad, mandato firmado, enlaces a retirar, intercambios con los sitios). Nunca te pedimos imágenes íntimas.',
         ],
       },
@@ -105,13 +108,14 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         titre: 'Para qué y con qué base',
         paras: [
           'Responder a tu solicitud y tramitar tu caso: medidas precontractuales y ejecución del contrato (RGPD, artículo 6.1.b). La información sensible que nos confías se trata con tu consentimiento explícito (artículo 9.2.a), que puedes retirar cuando quieras.',
+          'Desistimiento: cumplimiento de una obligación legal (artículo 6.1.c).',
           'Seguridad del servicio y prevención de abusos: interés legítimo (artículo 6.1.f).',
           'Tus datos nunca se usan para publicidad, venta, demostraciones ni para entrenar inteligencia artificial.',
         ],
       },
       {
         titre: 'Durante cuánto tiempo',
-        paras: ['Solicitud sin continuidad: se borra 30 días después de tratarla. Caso: se borra automáticamente 6 meses después de cerrarlo. Estadísticas: agregadas, sin datos personales.'],
+        paras: ['Solicitud sin continuidad: se borra 30 días después de tratarla. Caso: se borra automáticamente 6 meses después de cerrarlo. Desistimiento: se borra con el caso y, como máximo, 2 años después de recibirlo, para servir de prueba. Estadísticas: agregadas, sin datos personales.'],
       },
       {
         titre: 'Quién tiene acceso',
@@ -153,6 +157,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Visit statistics: we count page views per day, with the page, the site you came from (for example "google") and the country. No cookies, no identifiers, and your IP address is not stored.',
           '"Get our help" form: what you write (a first name or nickname, how to contact you, your situation, your country, the links, your message and the boxes you tick). To block abuse we keep an encrypted fingerprint of your IP address, which cannot be read back and is deleted with the request.',
+          '“Withdraw from contract here” form: your name, the case number if you give it, the contact channel chosen for the acknowledgement and your message if any, with the date and time. The same encrypted fingerprint of your IP address is used to block abuse.',
           'If you become a client: only what your case needs (identity, signed mandate, links to remove, exchanges with the sites). We never ask you for intimate images.',
         ],
       },
@@ -160,13 +165,14 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         titre: 'Why, and on what basis',
         paras: [
           'Answering your request and handling your case: pre-contractual steps, then performance of the contract (GDPR, Article 6(1)(b)). Sensitive information you share is processed with your explicit consent (Article 9(2)(a)), which you can withdraw at any time.',
+          'Withdrawal: compliance with a legal obligation (Article 6(1)(c)).',
           'Security of the service and preventing abuse: legitimate interest (Article 6(1)(f)).',
           'Your data is never used for advertising, sale, demonstrations or to train artificial intelligence.',
         ],
       },
       {
         titre: 'How long',
-        paras: ['Request not followed up: deleted 30 days after it is handled. Case: deleted automatically 6 months after it is closed. Statistics: aggregated, no personal data.'],
+        paras: ['Request not followed up: deleted 30 days after it is handled. Case: deleted automatically 6 months after it is closed. Withdrawal: deleted with the case, and at the latest 2 years after it is received, to serve as proof. Statistics: aggregated, no personal data.'],
       },
       {
         titre: 'Who has access',
@@ -312,8 +318,8 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
       {
         titre: 'Droit de rétractation',
         paras: [
-          'Si vous vivez dans l’Union européenne, vous avez 14 jours pour vous rétracter après avoir accepté le devis, par un simple message à team.devuelta@protonmail.com.',
-          'Si vous nous demandez de commencer tout de suite, nous commençons avant la fin de ce délai. En cas de rétractation, vous payez seulement le travail déjà fait, et vous perdez ce droit une fois le service entièrement exécuté.',
+          'Si vous vivez dans l’Union européenne, vous avez 14 jours pour vous rétracter après avoir accepté le devis, sans donner de raison. Le plus simple : le lien « Renoncer au contrat ici », en bas de chaque page. Un message à team.devuelta@protonmail.com suffit aussi. Nous vous envoyons un accusé de réception avec la date et l’heure.',
+          'Si vous nous demandez de commencer tout de suite, nous commençons avant la fin de ce délai. En cas de rétractation, vous payez seulement le travail déjà fait : nous remboursons le reste sous 14 jours, par le même moyen de paiement. Vous perdez ce droit une fois le service entièrement exécuté.',
         ],
       },
       {
@@ -388,8 +394,8 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
       {
         titre: 'Derecho de desistimiento',
         paras: [
-          'Si vives en la Unión Europea, tienes 14 días para desistir después de aceptar el presupuesto, con un simple mensaje a team.devuelta@protonmail.com.',
-          'Si nos pides empezar de inmediato, empezamos antes de que termine ese plazo. Si desistes, solo pagas el trabajo ya hecho, y pierdes este derecho una vez prestado el servicio por completo.',
+          'Si vives en la Unión Europea, tienes 14 días para desistir después de aceptar el presupuesto, sin dar motivos. Lo más sencillo: el enlace «Desistir del contrato aquí», al pie de cada página. También basta un mensaje a team.devuelta@protonmail.com. Te enviamos un acuse de recibo con la fecha y la hora.',
+          'Si nos pides empezar de inmediato, empezamos antes de que termine ese plazo. Si desistes, solo pagas el trabajo ya hecho: te devolvemos el resto en un plazo de 14 días, por el mismo medio de pago. Pierdes este derecho una vez prestado el servicio por completo.',
         ],
       },
       {
@@ -464,8 +470,8 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
       {
         titre: 'Right of withdrawal',
         paras: [
-          'If you live in the European Union, you have 14 days to withdraw after accepting the quote, with a simple message to team.devuelta@protonmail.com.',
-          'If you ask us to start right away, we start before that period ends. If you withdraw, you only pay for the work already done, and you lose this right once the service has been fully performed.',
+          'If you live in the European Union, you have 14 days to withdraw after accepting the quote, without giving a reason. The easiest way: the “Withdraw from contract here” link at the bottom of every page. A message to team.devuelta@protonmail.com also works. We send you an acknowledgement showing the date and time.',
+          'If you ask us to start right away, we start before that period ends. If you withdraw, you only pay for the work already done: we refund the rest within 14 days, using the same payment method. You lose this right once the service has been fully performed.',
         ],
       },
       {

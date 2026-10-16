@@ -131,6 +131,7 @@ interface Detail {
   courriers: Courrier[];
   notes: Array<{ id: string; texte: string; cree_le: string; auteur_nom: string | null }>;
   fiches: Fiche[];
+  retractations: Array<{ ref: string; recue_le: string; accuse_le: string | null }>;
 }
 
 interface ModeleMeta {
@@ -185,6 +186,17 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
           </Pastille>
         )}
       </p>
+      {donnees.retractations.map((r) => (
+        <div class="o-encadre o-alerte" role="alert">
+          <p>
+            <strong>
+              {t('retractationRecue')} {date(r.recue_le, true)} ({r.ref}).
+            </strong>{' '}
+            {t('retractationStop')}
+          </p>
+          <p>{r.accuse_le ? `${t('accuseLe')} ${date(r.accuse_le, true)}.` : t('accuseAEnvoyer')}</p>
+        </div>
+      ))}
       <nav class="o-onglets">
         {ONGLETS.map((o) => (
           <a class={o === actif ? 'o-actif' : ''} href={`#/dossiers/${id}/${o}`}>

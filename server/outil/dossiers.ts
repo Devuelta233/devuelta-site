@@ -22,6 +22,7 @@ import { dossierVisible, filtreDossiers, objetVisible } from './access';
 import { hoteDe, identifier, plateformeDuLien, type Identification } from './identification';
 import { ETAPE_DU_MODELE, contientMarqueur, genererCourrier, resumeModeles, trouverModele } from './modeles';
 import { fichesPour, planPourLien } from './plan';
+import { enAttente, pourDossier } from './retractations';
 import type { Ctx } from './router';
 
 const FERMES = STATUTS_DOSSIER_FERMES as readonly string[];
@@ -102,9 +103,11 @@ export async function tableau({ env, auth }: Ctx): Promise<Response> {
   )
     .bind(...f.binds, addDays(now, 7))
     .all();
+  const retractations = await enAttente(env.DB, auth.user);
   return json({
     ok: true,
     maintenant: now,
+    retractations,
     echeances: echeances.results,
     dossiers: { ouverts: ouverts?.n ?? 0, miens: ouverts?.miens ?? 0, sans_echeance: ouverts?.sans_echeance ?? 0 },
     demandes: demandes.results,
@@ -209,6 +212,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
   const assigne = d.assigne_a
     ? await env.DB.prepare('SELECT nom FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string }>()
     : null;
+  const retractations = await pourDossier(env.DB, d.id);
   const liens = contenus.results.map((c) => {
     const ident = lireIdent(c);
     const row: Record<string, unknown> = { ...c, ident };
@@ -245,6 +249,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     courriers: courriers.results,
     notes: notes.results,
     fiches,
+    retractations,
   });
 }
 

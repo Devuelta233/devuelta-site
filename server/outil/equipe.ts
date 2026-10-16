@@ -194,7 +194,7 @@ export async function purger({ request, env, auth }: Ctx): Promise<Response> {
 
 /** Sauvegarde complète en JSON (administrateur). Les secrets ne sont jamais exportés. */
 export async function exporter({ env, auth }: Ctx): Promise<Response> {
-  const tables = ['dossiers', 'contenus', 'etapes', 'courriers', 'notes', 'demandes'];
+  const tables = ['dossiers', 'contenus', 'etapes', 'courriers', 'notes', 'demandes', 'retractations'];
   const out: Record<string, unknown> = { exporte_le: nowIso(), par: auth.user.email, version: 1 };
   for (const t of tables) {
     const rows = await env.DB.prepare(`SELECT * FROM ${t}`).all<Record<string, unknown>>();

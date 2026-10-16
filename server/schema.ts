@@ -246,6 +246,26 @@ export const MIGRATIONS: string[][] = [
   [`ALTER TABLE dossiers ADD COLUMN temps_minutes INTEGER NOT NULL DEFAULT 0`],
   // 3 — client professionnel (commerce, entreprise) : tarif multiplié par deux
   [`ALTER TABLE dossiers ADD COLUMN client_pro INTEGER NOT NULL DEFAULT 0`],
+  // 4 — rétractations reçues en ligne (« Renoncer au contrat ici »), obligatoire dans l'UE
+  [
+    `CREATE TABLE IF NOT EXISTS retractations (
+      id TEXT PRIMARY KEY,
+      ref TEXT NOT NULL UNIQUE,
+      recue_le TEXT NOT NULL,
+      langue TEXT NOT NULL,
+      nom TEXT NOT NULL,
+      dossier_ref TEXT,
+      dossier_id TEXT,
+      contact_mode TEXT NOT NULL,
+      contact_valeur TEXT NOT NULL,
+      message TEXT,
+      ip_hash TEXT,
+      accuse_le TEXT,
+      accuse_par TEXT
+    )`,
+    `CREATE INDEX IF NOT EXISTS idx_retractations_dossier ON retractations (dossier_id)`,
+    `CREATE INDEX IF NOT EXISTS idx_retractations_attente ON retractations (accuse_le, recue_le)`,
+  ],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

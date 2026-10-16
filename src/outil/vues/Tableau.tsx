@@ -1,14 +1,30 @@
 // Tableau de bord : ce qui demande une action aujourd'hui.
 
 import { useEffect, useState } from 'preact/hooks';
-import { SITUATION_LABEL, isSituation } from '../../../shared/vocab';
+import { texteAccuse } from '../../../shared/retractation';
+import { typo } from '../../../shared/typo';
+import { SITUATION_LABEL, isLang, isSituation } from '../../../shared/vocab';
 import { get, post } from '../api';
 import { code, date, langue, t } from '../i18n';
 import { activerPush, estInstalle, estIos, etatPush, pushPossible } from '../push';
-import { Chargement, MessageErreur, Pastille, useCharger } from '../ui';
+import { Chargement, Copier, MessageErreur, Pastille, useAction, useCharger } from '../ui';
+
+interface Retractation {
+  id: string;
+  ref: string;
+  recue_le: string;
+  langue: string;
+  nom: string;
+  dossier_ref: string | null;
+  dossier_id: string | null;
+  contact_mode: 'email' | 'whatsapp';
+  contact_valeur: string;
+  message: string | null;
+}
 
 interface Donnees {
   maintenant: string;
+  retractations: Retractation[];
   echeances: Array<{ id: string; type: string; statut: string; echeance: string; destinataire: string | null; dossier_id: string; ref: string; client_pseudo: string; priorite: string; menace: number; assigne_nom: string | null; relance_preparee: number }>;
   dossiers: { ouverts: number; miens: number; sans_echeance: number };
   demandes: Array<{ id: string; ref: string; recue_le: string; langue: string; situation: string; menace: number; pseudo: string }>;
@@ -16,6 +32,57 @@ interface Donnees {
   alertes_liens: Array<{ id: string; url: string; verif_alerte: string; verif_le: string; dossier_id: string; ref: string }>;
   alertes_connexion: Array<{ le: string; pays: string; ville: string; email: string; nom: string | null }>;
   bientot_supprimes: Array<{ id: string; ref: string; purger_apres: string }>;
+}
+
+// Rétractation : accusé de réception prêt à copier, dans la langue de la personne.
+function BlocRetractations({ liste, recharger }: { liste: Retractation[]; recharger: () => void }) {
+  const { occupe, err, lancer } = useAction();
+  return (
+    <section class="o-encadre o-alerte">
+      <h2>
+        {t('retractationsTitre')} <Pastille ton="alerte">{liste.length}</Pastille>
+      </h2>
+      <p>{t('retractationsAide')}</p>
+      <ul class="o-liste">
+        {liste.map((r) => {
+          const lang = isLang(r.langue) ? r.langue : 'fr';
+          return (
+            <li>
+              <p>
+                <strong>{r.ref}</strong> · {date(r.recue_le, true)} · {r.nom}
+              </p>
+              <p>
+                {r.dossier_id ? (
+                  <a href={`#/dossiers/${r.dossier_id}`}>{r.dossier_ref}</a>
+                ) : r.dossier_ref ? (
+                  <span>
+                    {r.dossier_ref} <Pastille ton="alerte">{t('dossierNonTrouve')}</Pastille>
+                  </span>
+                ) : (
+                  <span class="o-muet">{t('sansDossier')}</span>
+                )}
+                {' · '}
+                {r.contact_mode === 'email' ? 'E-mail' : 'WhatsApp'} : <span class="o-url">{r.contact_valeur}</span>
+              </p>
+              {r.message && <p class="o-muet">« {r.message} »</p>}
+              <p class="o-actions">
+                <Copier texte={lang === 'fr' ? typo(texteAccuse(r, lang)) : texteAccuse(r, lang)} libelle={t('copierAccuse')} />
+                <button
+                  class="o-bouton o-principal"
+                  type="button"
+                  disabled={occupe}
+                  onClick={() => lancer(() => post(`/retractations/${r.id}/accuse`), recharger)}
+                >
+                  {t('accuseEnvoye')}
+                </button>
+              </p>
+            </li>
+          );
+        })}
+      </ul>
+      {err && <p class="o-erreur">{err}</p>}
+    </section>
+  );
 }
 
 function BlocNotifications() {
@@ -53,13 +120,14 @@ function BlocNotifications() {
 }
 
 export function Tableau({ nom }: { nom: string }) {
-  const { donnees: d, err, enCours } = useCharger(() => get<Donnees>('/tableau'));
+  const { donnees: d, err, enCours, recharger } = useCharger(() => get<Donnees>('/tableau'));
   if (enCours && !d) return <Chargement />;
   if (!d) return <MessageErreur texte={err} />;
   const fin = new Date();
   fin.setHours(23, 59, 59, 999);
   const urgentes = d.echeances.filter((e) => new Date(e.echeance) <= fin);
   const rien =
+    d.retractations.length === 0 &&
     urgentes.length === 0 &&
     d.demandes.length === 0 &&
     d.courriers_a_traiter.length === 0 &&
@@ -76,6 +144,8 @@ export function Tableau({ nom }: { nom: string }) {
       </p>
       <BlocNotifications />
       {rien && <div class="o-encadre o-ok">{t('rienAFaire')}</div>}
+
+      {d.retractations.length > 0 && <BlocRetractations liste={d.retractations} recharger={recharger} />}
 
       {d.alertes_connexion.length > 0 && (
         <section class="o-encadre o-alerte">
