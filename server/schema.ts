@@ -244,6 +244,8 @@ export const MIGRATIONS: string[][] = [
   ],
   // 2 — temps passé par dossier (pour connaître la rentabilité réelle)
   [`ALTER TABLE dossiers ADD COLUMN temps_minutes INTEGER NOT NULL DEFAULT 0`],
+  // 3 — client professionnel (commerce, entreprise) : tarif multiplié par deux
+  [`ALTER TABLE dossiers ADD COLUMN client_pro INTEGER NOT NULL DEFAULT 0`],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

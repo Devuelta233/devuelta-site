@@ -186,6 +186,7 @@ const D = typoProfonde({
   resume: ['Résumé du dossier', 'Resumen del caso', 'Case summary'],
   prochaineAction: ['Prochaine action', 'Próxima acción', 'Next action'],
   tempsPasse: ['Temps passé sur le dossier (minutes)', 'Tiempo dedicado al caso (minutos)', 'Time spent on the case (minutes)'],
+  clientPro: ['Client professionnel (commerce, entreprise) : tarif × 2', 'Cliente profesional (comercio, empresa): precio × 2', 'Business client (shop, company): price × 2'],
   tempsMoyen: ['Temps moyen par dossier', 'Tiempo medio por caso', 'Average time per case'],
   mandatManquant: [
     'Mandat non enregistré : aucun courrier ne pourra être validé au nom de la personne.',

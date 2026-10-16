@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { calculerPrix, DEVIS_A_PARTIR_DE, euros, FORMULES, formulePour, nombre, zoneDuPays } from '../shared/tarifs';
+import { calculerPrix, COEF_PRO, DEVIS_A_PARTIR_DE, euros, FORMULES, formulePour, nombre, zoneDuPays } from '../shared/tarifs';
 
 describe('grille de prix', () => {
   it('formules contiguës de 1 à 15 liens, prix croissants, zone réduite = moitié', () => {
@@ -30,12 +30,20 @@ describe('grille de prix', () => {
   });
 
   it('moitié à l’ouverture, solde au prorata des liens retirés', () => {
-    expect(calculerPrix(1, 0, 'standard')).toMatchObject({ total: 30, ouverture: 15, soldeMaximum: 15, soldeDu: 0 });
-    expect(calculerPrix(1, 1, 'standard')).toMatchObject({ soldeDu: 15 });
-    expect(calculerPrix(3, 2, 'standard')).toMatchObject({ total: 60, ouverture: 30, soldeDu: 20 });
-    expect(calculerPrix(3, 9, 'standard').soldeDu).toBe(30);
-    expect(calculerPrix(1, 1, 'reduite')).toMatchObject({ total: 15, ouverture: 7.5, soldeDu: 7.5 });
+    expect(calculerPrix(1, 0, 'standard')).toMatchObject({ total: 40, ouverture: 20, soldeMaximum: 20, soldeDu: 0 });
+    expect(calculerPrix(1, 1, 'standard')).toMatchObject({ soldeDu: 20 });
+    expect(calculerPrix(4, 2, 'standard')).toMatchObject({ total: 80, ouverture: 40, soldeDu: 20 });
+    expect(calculerPrix(3, 9, 'standard').soldeDu).toBe(40);
+    expect(calculerPrix(1, 1, 'reduite')).toMatchObject({ total: 20, ouverture: 10, soldeDu: 10 });
+    expect(calculerPrix(10, 5, 'standard')).toMatchObject({ total: 160, ouverture: 80, soldeDu: 40 });
     expect(calculerPrix(20, 3, 'standard')).toMatchObject({ formule: null, total: null, soldeDu: null });
+  });
+
+  it('commerces et entreprises : prix multipliés par deux, zone réduite comprise', () => {
+    expect(COEF_PRO).toBe(2);
+    expect(calculerPrix(1, 1, 'standard', true)).toMatchObject({ pro: true, total: 80, ouverture: 40, soldeDu: 40 });
+    expect(calculerPrix(2, 1, 'reduite', true)).toMatchObject({ total: 80, ouverture: 40, soldeDu: 20 });
+    expect(calculerPrix(1, 0, 'standard')).toMatchObject({ pro: false, total: 40 });
   });
 
   it('zone selon le pays', () => {

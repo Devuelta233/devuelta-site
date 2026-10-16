@@ -2,7 +2,7 @@
 // notes, journal. Rien n'est envoyé par l'outil : il prépare, l'humain valide.
 
 import { useEffect, useState } from 'preact/hooks';
-import { COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
+import { COEF_PRO, COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
 import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isSituation } from '../../../shared/vocab';
 import { del, get, patch, post } from '../api';
 import { extraireLiens } from '../liens';
@@ -116,6 +116,7 @@ interface Dossier {
   resume: string | null;
   prochaine_action: string | null;
   temps_minutes: number;
+  client_pro: number;
   prochaine_echeance: string | null;
   resultat: string | null;
   clos_le: string | null;
@@ -245,6 +246,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           resume: f.resume,
           prochaine_action: f.prochaine_action,
           temps_minutes: Math.max(0, Math.round(Number(f.temps_minutes) || 0)),
+          client_pro: !!Number(f.client_pro),
           ...(f.assigne_a !== x.assigne_a ? { assigne_a: f.assigne_a || null } : {}),
           ...(!ferme && f.statut !== x.statut ? { statut: f.statut } : {}),
         }),
@@ -365,6 +367,10 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
         <input type="checkbox" checked={!!Number(f.menace)} onChange={() => setF({ ...f, menace: Number(f.menace) ? 0 : 1 })} />
         <span>{t('menace')}</span>
       </label>
+      <label class="o-case">
+        <input type="checkbox" checked={!!Number(f.client_pro)} onChange={() => setF({ ...f, client_pro: Number(f.client_pro) ? 0 : 1 })} />
+        <span>{t('clientPro')}</span>
+      </label>
       <Champ label={t('prochaineAction')}>
         <input type="text" value={f.prochaine_action ?? ''} onInput={set('prochaine_action')} />
       </Champ>
@@ -451,11 +457,14 @@ function TarifDossier({ d }: { d: Detail }) {
   const n = liens.length;
   const retires = liens.filter((c) => c.statut === 'retire').length;
   const zone = zoneDuPays(d.dossier.pays);
+  const pro = !!Number(d.dossier.client_pro);
   const ligne = (z: Zone) => {
-    const p = calculerPrix(n, retires, z);
+    const p = calculerPrix(n, retires, z, pro);
     if (!p.formule || p.total === null || p.ouverture === null || p.soldeDu === null || p.soldeMaximum === null) return null;
+    // Taux implicites de la grille (prix en zone réduite, en cedis et en francs CFA).
+    const base = p.formule.prix * COEF_ZONE_REDUITE;
     const local = (eur: number) =>
-      z === 'reduite' ? ` (GH¢ ${nombre((eur * p.formule!.ghs) / p.total!, lang)} · ${nombre((eur * p.formule!.fcfa) / p.total!, lang)} F)` : '';
+      z === 'reduite' ? ` (GH¢ ${nombre((eur * p.formule!.ghs) / base, lang)} · ${nombre((eur * p.formule!.fcfa) / base, lang)} F)` : '';
     return (
       <ul>
         <li>
@@ -484,8 +493,8 @@ function TarifDossier({ d }: { d: Detail }) {
   } else if (n > 15) {
     corps = (
       <p>
-        {tr('Plus de 15 liens : sur devis, à partir de', 'Más de 15 enlaces: con presupuesto, desde', 'More than 15 links: quoted, from')} {euros(DEVIS_A_PARTIR_DE, lang)} (
-        {tr('zone réduite :', 'zona reducida:', 'reduced zone:')} {euros(DEVIS_A_PARTIR_DE * COEF_ZONE_REDUITE, lang)}).
+        {tr('Plus de 15 liens : sur devis, à partir de', 'Más de 15 enlaces: con presupuesto, desde', 'More than 15 links: quoted, from')} {euros(DEVIS_A_PARTIR_DE * (pro ? COEF_PRO : 1), lang)} (
+        {tr('zone réduite :', 'zona reducida:', 'reduced zone:')} {euros(DEVIS_A_PARTIR_DE * COEF_ZONE_REDUITE * (pro ? COEF_PRO : 1), lang)}).
       </p>
     );
   } else if (zone) {
@@ -505,6 +514,7 @@ function TarifDossier({ d }: { d: Detail }) {
       <strong>
         {tr('Tarif', 'Precio', 'Price')} — {n} {tr('lien(s)', 'enlace(s)', 'link(s)')}
         {zone === 'reduite' ? ` · ${tr('zone réduite (prix divisés par deux)', 'zona reducida (precios a mitad)', 'reduced zone (half price)')}` : ''}
+        {pro ? ` · ${tr('client professionnel (prix × 2)', 'cliente profesional (precio × 2)', 'business client (price × 2)')}` : ''}
       </strong>
       {corps}
       <p class="o-muet">

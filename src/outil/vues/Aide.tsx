@@ -22,6 +22,11 @@ const REGLES: T3[] = typoProfonde([
     'Never a “removal guarantee”, never “legal advice”. We provide technical and administrative assistance; templates are chosen with the person.',
   ],
   [
+    'Jamais d’avis sur les chances, jamais de « c’est de la diffamation » : on présente les procédures officielles, la personne choisit et valide chaque texte. On refuse toute demande qui vise une critique honnête, un avis réel, une information d’intérêt public ou une décision de justice.',
+    'Nunca opinar sobre las posibilidades ni decir «esto es difamación»: presentamos los procedimientos oficiales, la persona elige y valida cada texto. Rechazamos toda solicitud contra una crítica honesta, una reseña real, una información de interés público o una resolución judicial.',
+    'Never give an opinion on the chances or say “this is defamation”: we present the official procedures, the person chooses and approves each text. We turn down any request aimed at honest criticism, a genuine review, information of public interest or a court decision.',
+  ],
+  [
     'Mineur·e, ou doute sur l’âge : uniquement les canaux officiels et gratuits (Take It Down, 3018, Canal Prioritario…). Jamais de dossier payant.',
     'Menor, o duda sobre la edad: solo los canales oficiales y gratuitos (Take It Down, 3018, Canal Prioritario…). Nunca un caso de pago.',
     'A minor, or any doubt about age: official, free channels only (Take It Down, 3018, Canal Prioritario…). Never a paid case.',

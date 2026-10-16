@@ -358,6 +358,7 @@ export async function modifier({ request, env, params, auth }: Ctx): Promise<Res
   }
   if ('resume' in body) set('resume', cleanText(body.resume, 4000, { multiline: true }));
   if ('prochaine_action' in body) set('prochaine_action', cleanText(body.prochaine_action, 300));
+  if ('client_pro' in body) set('client_pro', body.client_pro === true ? 1 : 0);
   if ('temps_minutes' in body) {
     const n = Number(body.temps_minutes);
     if (!Number.isInteger(n) || n < 0 || n > 100_000) throw new HttpError(400, 'temps-invalide');

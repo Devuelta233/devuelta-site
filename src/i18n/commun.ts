@@ -101,9 +101,9 @@ export const C = {
   ctaDiagnosticSous: { fr: 'Gratuit, anonyme, 3 minutes', es: 'Gratis, anónimo, 3 minutos', en: 'Free, anonymous, 3 minutes' } as T3,
   ctaConfier: { fr: 'Confier mon dossier', es: 'Confiar mi caso', en: 'Get our help' } as T3,
   ctaConfierSous: {
-    fr: 'Dès 30 €, le reste seulement si c’est retiré',
-    es: 'Desde 30 €, el resto solo si se retira',
-    en: 'From €30, the rest only if removed',
+    fr: 'Dès 40 €, le reste seulement si c’est retiré',
+    es: 'Desde 40 €, el resto solo si se retira',
+    en: 'From €40, the rest only if removed',
   } as T3,
   pasConseilJuridique: {
     fr: 'Ces informations vous aident à exercer vos droits. Elles ne remplacent pas l’avis d’un avocat.',

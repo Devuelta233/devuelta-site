@@ -145,9 +145,9 @@ export const METHODE = {
   } as L3,
   prixTitre: { fr: 'Combien ça coûte ?', es: '¿Cuánto cuesta?', en: 'How much does it cost?' } as T3,
   prix: {
-    fr: 'Le diagnostic et les guides sont gratuits. Si vous nous confiez votre dossier : à partir de 30 €, dont la moitié pour démarrer et le reste seulement si c’est retiré. Prix divisés par deux en Afrique et en Amérique latine. Vous ne payez rien avant d’avoir accepté le devis.',
-    es: 'El diagnóstico y las guías son gratis. Si nos confías tu caso: desde 30 €, la mitad para empezar y el resto solo si se retira. Precios a mitad en África y América Latina. No pagas nada antes de aceptar el presupuesto.',
-    en: 'The diagnostic and the guides are free. If you hand us your case: from €30, half to start and the rest only if it’s removed. Half price in Africa and Latin America. You pay nothing before accepting the quote.',
+    fr: 'Le diagnostic et les guides sont gratuits. Si vous nous confiez votre dossier : à partir de 40 €, dont la moitié pour démarrer et le reste seulement si c’est retiré. Prix divisés par deux en Afrique et en Amérique latine. Vous ne payez rien avant d’avoir accepté le devis.',
+    es: 'El diagnóstico y las guías son gratis. Si nos confías tu caso: desde 40 €, la mitad para empezar y el resto solo si se retira. Precios a mitad en África y América Latina. No pagas nada antes de aceptar el presupuesto.',
+    en: 'The diagnostic and the guides are free. If you hand us your case: from €40, half to start and the rest only if it’s removed. Half price in Africa and Latin America. You pay nothing before accepting the quote.',
   } as T3,
   voirTarifs: { fr: 'Voir les tarifs', es: 'Ver los precios', en: 'See pricing' } as T3,
   pasTitre: { fr: 'Ce que nous ne sommes pas', es: 'Lo que no somos', en: 'What we are not' } as T3,
@@ -210,17 +210,17 @@ export const CONFIER = {
     en: 'Prefer to write to us directly?',
   } as T3,
   prix: {
-    fr: 'Prix : à partir de 30 €, dont 15 € pour démarrer et le reste seulement si c’est retiré. Divisés par deux en Afrique et en Amérique latine.',
-    es: 'Precio: desde 30 €, 15 € para empezar y el resto solo si se retira. A mitad de precio en África y América Latina.',
-    en: 'Price: from €30, €15 to start and the rest only if it’s removed. Half price in Africa and Latin America.',
+    fr: 'Prix : à partir de 40 €, dont 20 € pour démarrer et le reste seulement si c’est retiré. Divisés par deux en Afrique et en Amérique latine.',
+    es: 'Precio: desde 40 €, 20 € para empezar y el resto solo si se retira. A mitad de precio en África y América Latina.',
+    en: 'Price: from €40, €20 to start and the rest only if it’s removed. Half price in Africa and Latin America.',
   } as T3,
 };
 
 export const TARIFS = {
   seo: {
-    fr: 'Tarifs : faire retirer un contenu dès 30 €',
-    es: 'Precios: retirar un contenido desde 30 €',
-    en: 'Pricing: get content removed from €30',
+    fr: 'Tarifs : faire retirer un contenu dès 40 €',
+    es: 'Precios: retirar un contenido desde 40 €',
+    en: 'Pricing: get content removed from €40',
   } as T3,
   meta: {
     fr: 'Diagnostic gratuit. Si vous nous confiez votre dossier : la moitié pour démarrer, le reste seulement si c’est retiré. Prix divisés par deux en Afrique et en Amérique latine.',
@@ -282,6 +282,12 @@ export const TARIFS = {
     fr: 'Tous les prix sont divisés par deux, avec la même règle : la moitié pour démarrer, le reste seulement si c’est retiré.',
     es: 'Todos los precios se dividen entre dos, con la misma regla: la mitad para empezar, el resto solo si se retira.',
     en: 'All prices are cut in half, with the same rule: half to start, the rest only if it’s removed.',
+  } as T3,
+  proTitre: { fr: 'Commerces et entreprises', es: 'Comercios y empresas', en: 'Shops and companies' } as T3,
+  proTexte: {
+    fr: 'Pour un usage professionnel, par exemple de faux avis sur la fiche de votre établissement, les mêmes formules s’appliquent avec des prix multipliés par deux. La règle ne change pas : la moitié pour démarrer, le reste seulement si c’est retiré.',
+    es: 'Para un uso profesional, por ejemplo reseñas falsas en la ficha de tu negocio, se aplican las mismas fórmulas con precios multiplicados por dos. La regla no cambia: la mitad para empezar, el resto solo si se retira.',
+    en: 'For business use, for example fake reviews on your business listing, the same packages apply with prices multiplied by two. The rule doesn’t change: half to start, the rest only if it’s removed.',
   } as T3,
   pourquoiTitre: {
     fr: 'Pourquoi le reste seulement si c’est retiré ?',

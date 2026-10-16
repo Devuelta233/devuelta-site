@@ -19,19 +19,25 @@ export interface Formule {
 }
 
 export const FORMULES: readonly Formule[] = [
-  { id: 'un-lien', min: 1, max: 1, prix: 30, ghs: 200, fcfa: 10_000 },
-  { id: 'petit', min: 2, max: 5, prix: 60, ghs: 400, fcfa: 20_000 },
-  { id: 'dossier', min: 6, max: 15, prix: 120, ghs: 800, fcfa: 40_000 },
+  { id: 'un-lien', min: 1, max: 1, prix: 40, ghs: 270, fcfa: 13_000 },
+  { id: 'petit', min: 2, max: 5, prix: 80, ghs: 540, fcfa: 26_000 },
+  { id: 'dossier', min: 6, max: 15, prix: 160, ghs: 1_080, fcfa: 52_000 },
 ];
 
 /** Au-delà de 15 liens, ou cas difficile : sur devis, à partir de ce prix (zone standard). */
-export const DEVIS_A_PARTIR_DE = 200;
+export const DEVIS_A_PARTIR_DE = 250;
 
 /** Part payée à l'ouverture du dossier. */
 export const PART_OUVERTURE = 0.5;
 
 /** Coefficient des prix pour l'Afrique et l'Amérique latine et Caraïbes. */
 export const COEF_ZONE_REDUITE = 0.5;
+
+/**
+ * Commerces et entreprises (par exemple de faux avis sur une fiche
+ * d'établissement) : mêmes formules, prix multipliés par ce coefficient.
+ */
+export const COEF_PRO = 2;
 
 // Pays où les prix sont divisés par deux (codes ISO 3166-1 alpha-2).
 // Les départements et territoires d'outre-mer français suivent le prix standard.
@@ -59,6 +65,7 @@ const arrondi = (n: number) => Math.round(n * 100) / 100;
 export interface CalculPrix {
   formule: Formule | null; // null = sur devis (plus de 15 liens)
   zone: Zone;
+  pro: boolean;
   total: number | null; // euros ; null = sur devis
   ouverture: number | null;
   soldeMaximum: number | null;
@@ -69,16 +76,16 @@ export interface CalculPrix {
  * Prix d'un dossier : formule selon le nombre de liens, part d'ouverture, et
  * solde dû au prorata des liens retirés.
  */
-export function calculerPrix(nombreLiens: number, liensRetires: number, zone: Zone): CalculPrix {
+export function calculerPrix(nombreLiens: number, liensRetires: number, zone: Zone, pro = false): CalculPrix {
   const formule = formulePour(nombreLiens);
-  if (!formule) return { formule: null, zone, total: null, ouverture: null, soldeMaximum: null, soldeDu: null };
-  const coef = zone === 'reduite' ? COEF_ZONE_REDUITE : 1;
+  if (!formule) return { formule: null, zone, pro, total: null, ouverture: null, soldeMaximum: null, soldeDu: null };
+  const coef = (zone === 'reduite' ? COEF_ZONE_REDUITE : 1) * (pro ? COEF_PRO : 1);
   const total = arrondi(formule.prix * coef);
   const ouverture = arrondi(total * PART_OUVERTURE);
   const soldeMaximum = arrondi(total - ouverture);
   const retires = Math.max(0, Math.min(liensRetires, nombreLiens));
   const soldeDu = arrondi((soldeMaximum * retires) / nombreLiens);
-  return { formule, zone, total, ouverture, soldeMaximum, soldeDu };
+  return { formule, zone, pro, total, ouverture, soldeMaximum, soldeDu };
 }
 
 /** Montant affiché en euros, à la française ou non (« 7,50 € » / « €7.50 »). */
