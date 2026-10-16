@@ -13,3 +13,10 @@ export const EMAIL = CONTACT_EMAIL;
 export const NOM_CONTACT = 'Team Devuelta';
 
 export const NOM_LANGUE: Record<Lang, string> = { fr: 'Français', es: 'Español', en: 'English' };
+
+// Réseaux sociaux de Devuelta. Une adresse vide = le lien n'apparaît pas sur le site.
+export const RESEAUX: Array<{ nom: string; url: string }> = [
+  { nom: 'Instagram', url: '' },
+  { nom: 'TikTok', url: '' },
+  { nom: 'Facebook', url: '' },
+].filter((r) => r.url !== '');

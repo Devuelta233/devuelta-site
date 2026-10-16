@@ -5,7 +5,7 @@ import { C } from '../i18n/commun';
 import { ARTICLES } from '../i18n/pages';
 import { BASE, articlesPath, page, type Versions } from '../i18n/routes';
 import { articles } from '../data';
-import { EMAIL, SITE_URL } from '../config';
+import { EMAIL, SITE_URL, RESEAUX } from '../config';
 import { LANGS, type Lang } from '../../shared/vocab';
 
 export interface Miette {
@@ -140,6 +140,13 @@ const nav = [
           <h2>Devuelta</h2>
           <p>{C.piedTexte[lang]}</p>
           <p><a href={`mailto:${EMAIL}`} data-evenement="email">{EMAIL}</a></p>
+          {RESEAUX.length > 0 && (
+            <p class="reseaux">
+              {RESEAUX.map((r) => (
+                <a href={r.url} rel="me noopener" target="_blank">{r.nom}</a>
+              ))}
+            </p>
+          )}
         </div>
         <div>
           <h2>{C.nav.queFaire[lang]}</h2>

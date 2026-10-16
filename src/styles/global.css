@@ -1246,6 +1246,12 @@ details.document > summary {
   margin-top: 0.25rem;
 }
 
+.pied .reseaux {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 @media print {
   .entete,
   .pied,
