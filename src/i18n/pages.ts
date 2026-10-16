@@ -131,10 +131,11 @@ export const METHODE = {
   } as L3,
   prixTitre: { fr: 'Combien ça coûte ?', es: '¿Cuánto cuesta?', en: 'How much does it cost?' } as T3,
   prix: {
-    fr: 'Le diagnostic et les guides sont gratuits. Pour une prise en charge, nous vous donnons d’abord un devis clair, selon le nombre de liens et la difficulté. Vous ne payez rien avant de l’avoir accepté.',
-    es: 'El diagnóstico y las guías son gratis. Para que nos encarguemos, primero te damos un presupuesto claro, según el número de enlaces y la dificultad. No pagas nada antes de aceptarlo.',
-    en: 'The diagnostic and the guides are free. If you want us to take over, we first give you a clear quote, based on the number of links and how difficult it is. You pay nothing before accepting it.',
+    fr: 'Le diagnostic et les guides sont gratuits. Si vous nous confiez votre dossier : à partir de 30 €, dont la moitié pour démarrer et le reste seulement si c’est retiré. Prix divisés par deux en Afrique et en Amérique latine. Vous ne payez rien avant d’avoir accepté le devis.',
+    es: 'El diagnóstico y las guías son gratis. Si nos confías tu caso: desde 30 €, la mitad para empezar y el resto solo si se retira. Precios a mitad en África y América Latina. No pagas nada antes de aceptar el presupuesto.',
+    en: 'The diagnostic and the guides are free. If you hand us your case: from €30, half to start and the rest only if it’s removed. Half price in Africa and Latin America. You pay nothing before accepting the quote.',
   } as T3,
+  voirTarifs: { fr: 'Voir les tarifs', es: 'Ver los precios', en: 'See pricing' } as T3,
   pasTitre: { fr: 'Ce que nous ne sommes pas', es: 'Lo que no somos', en: 'What we are not' } as T3,
   pas: {
     fr: 'Nous ne sommes pas un cabinet d’avocats et ne donnons pas de conseil juridique. Notre travail est une assistance technique et administrative : repérer les liens et les hébergeurs, remplir les formulaires officiels, envoyer les demandes que vous avez choisies et approuvées, suivre les délais. Si une action en justice devient utile, nous vous orientons vers un avocat, avec qui vous traitez directement.',
@@ -166,6 +167,142 @@ export const CONFIER = {
     fr: 'Vous préférez écrire directement ?',
     es: '¿Prefieres escribirnos directamente?',
     en: 'Prefer to write to us directly?',
+  } as T3,
+  prix: {
+    fr: 'Prix : à partir de 30 €, dont 15 € pour démarrer et le reste seulement si c’est retiré. Divisés par deux en Afrique et en Amérique latine.',
+    es: 'Precio: desde 30 €, 15 € para empezar y el resto solo si se retira. A mitad de precio en África y América Latina.',
+    en: 'Price: from €30, €15 to start and the rest only if it’s removed. Half price in Africa and Latin America.',
+  } as T3,
+};
+
+export const TARIFS = {
+  seo: {
+    fr: 'Tarifs : faire retirer un contenu dès 30 €',
+    es: 'Precios: retirar un contenido desde 30 €',
+    en: 'Pricing: get content removed from €30',
+  } as T3,
+  meta: {
+    fr: 'Diagnostic gratuit. Si vous nous confiez votre dossier : la moitié pour démarrer, le reste seulement si c’est retiré. Prix divisés par deux en Afrique et en Amérique latine.',
+    es: 'Diagnóstico gratis. Si nos confías tu caso: la mitad para empezar, el resto solo si se retira. Precios a mitad en África y América Latina.',
+    en: 'Free diagnostic. If you hand us your case: half to start, the rest only if it’s removed. Half price in Africa and Latin America.',
+  } as T3,
+  h1: { fr: 'Tarifs', es: 'Precios', en: 'Pricing' } as T3,
+  intro: {
+    fr: 'Le diagnostic, les guides et les articles sont gratuits. Si vous nous confiez votre dossier, vous payez la moitié pour démarrer, et l’autre moitié seulement si le contenu est retiré.',
+    es: 'El diagnóstico, las guías y los artículos son gratis. Si nos confías tu caso, pagas la mitad para empezar y la otra mitad solo si el contenido se retira.',
+    en: 'The diagnostic, guides and articles are free. If you hand us your case, you pay half to start, and the other half only if the content is removed.',
+  } as T3,
+  colDemarrer: { fr: 'Pour démarrer', es: 'Para empezar', en: 'To start' } as T3,
+  colSolde: { fr: 'Seulement si retiré', es: 'Solo si se retira', en: 'Only if removed' } as T3,
+  formules: {
+    'un-lien': { fr: '1 lien', es: '1 enlace', en: '1 link' } as T3,
+    petit: { fr: '2 à 5 liens', es: '2 a 5 enlaces', en: '2 to 5 links' } as T3,
+    dossier: { fr: '6 à 15 liens', es: '6 a 15 enlaces', en: '6 to 15 links' } as T3,
+  },
+  exemples: {
+    'un-lien': {
+      fr: 'Un faux profil, un faux avis, une photo publiée sans accord.',
+      es: 'Un perfil falso, una reseña falsa, una foto publicada sin permiso.',
+      en: 'A fake profile, a fake review, a photo posted without consent.',
+    } as T3,
+    petit: {
+      fr: 'Plusieurs publications ou comptes, sur une ou plusieurs plateformes.',
+      es: 'Varias publicaciones o cuentas, en una o varias plataformas.',
+      en: 'Several posts or accounts, on one or more platforms.',
+    } as T3,
+    dossier: {
+      fr: 'Un contenu repris sur plusieurs sites.',
+      es: 'Un contenido copiado en varios sitios.',
+      en: 'Content copied across several sites.',
+    } as T3,
+  },
+  devisLigne: {
+    fr: 'Plus de 15 liens, ou cas difficile (site qui ne répond pas, contenu republié en boucle)',
+    es: 'Más de 15 enlaces, o caso difícil (sitio que no responde, contenido republicado una y otra vez)',
+    en: 'More than 15 links, or a difficult case (a site that doesn’t answer, content reposted again and again)',
+  } as T3,
+  devisPrix: { fr: 'Sur devis, dès {p}', es: 'Con presupuesto, desde {p}', en: 'Quoted, from {p}' } as T3,
+  memeRegle: {
+    fr: 'Même règle : la moitié pour démarrer, le reste seulement si c’est retiré.',
+    es: 'Misma regla: la mitad para empezar, el resto solo si se retira.',
+    en: 'Same rule: half to start, the rest only if it’s removed.',
+  } as T3,
+  devisAvant: {
+    fr: 'Nous vous disons avant de commencer si votre cas entre dans une formule ou demande un devis.',
+    es: 'Te decimos antes de empezar si tu caso entra en una fórmula o necesita un presupuesto.',
+    en: 'We tell you before starting whether your case fits a package or needs a quote.',
+  } as T3,
+  zoneTitre: {
+    fr: 'Vous vivez en Afrique ou en Amérique latine ?',
+    es: '¿Vives en África o en América Latina?',
+    en: 'Do you live in Africa or Latin America?',
+  } as T3,
+  zoneTexte: {
+    fr: 'Tous les prix sont divisés par deux, avec la même règle : la moitié pour démarrer, le reste seulement si c’est retiré.',
+    es: 'Todos los precios se dividen entre dos, con la misma regla: la mitad para empezar, el resto solo si se retira.',
+    en: 'All prices are cut in half, with the same rule: half to start, the rest only if it’s removed.',
+  } as T3,
+  pourquoiTitre: {
+    fr: 'Pourquoi le reste seulement si c’est retiré ?',
+    es: '¿Por qué el resto solo si se retira?',
+    en: 'Why the rest only if it’s removed?',
+  } as T3,
+  pourquoi: {
+    fr: 'Personne ne peut promettre un retrait : la décision appartient à la plateforme, à l’hébergeur ou à un juge. Nous faisons tout ce qui est possible par des moyens légaux. Si ça ne marche pas, vous ne payez pas la seconde moitié.',
+    es: 'Nadie puede prometer una retirada: la decisión es de la plataforma, del proveedor de alojamiento o de un juez. Hacemos todo lo posible por vías legales. Si no funciona, no pagas la segunda mitad.',
+    en: 'Nobody can promise a removal: the decision belongs to the platform, the host or a judge. We do everything possible through legal means. If it doesn’t work, you don’t pay the second half.',
+  } as T3,
+  retireTitre: {
+    fr: 'Quand un lien compte comme retiré',
+    es: 'Cuándo un enlace cuenta como retirado',
+    en: 'When a link counts as removed',
+  } as T3,
+  retire: {
+    fr: 'Quand le contenu n’est plus en ligne à cette adresse, ou n’apparaît plus dans Google quand c’est la démarche choisie. Si seuls certains liens sont retirés, vous ne payez le reste que pour ceux-là.',
+    es: 'Cuando el contenido ya no está en línea en esa dirección, o ya no aparece en Google cuando esa es la gestión elegida. Si solo se retiran algunos enlaces, pagas el resto solo por esos.',
+    en: 'When the content is no longer online at that address, or no longer shows in Google when that is the chosen request. If only some links are removed, you only pay the rest for those.',
+  } as T3,
+  inclusTitre: { fr: 'Ce qui est compris', es: 'Qué incluye', en: 'What’s included' } as T3,
+  inclus: {
+    fr: [
+      'Nous trouvons qui héberge chaque lien et quelle démarche officielle s’applique.',
+      'Nous préparons les demandes ; vous les approuvez avant tout envoi.',
+      'Nous relançons, et en cas de refus nous contestons (recours prévus par le DSA en Europe, hébergeur, nom de domaine).',
+      'Vous savez où en est votre dossier ; vos données sont effacées après sa clôture.',
+    ],
+    es: [
+      'Encontramos quién aloja cada enlace y qué gestión oficial corresponde.',
+      'Preparamos las solicitudes; tú las apruebas antes de cualquier envío.',
+      'Insistimos y, si hay un rechazo, lo impugnamos (recursos del DSA en Europa, proveedor de alojamiento, nombre de dominio).',
+      'Sabes en qué punto está tu caso; tus datos se borran después de cerrarlo.',
+    ],
+    en: [
+      'We find who hosts each link and which official request applies.',
+      'We prepare the requests; you approve them before anything is sent.',
+      'We follow up, and if a request is refused we challenge it (DSA remedies in Europe, the host, the domain name).',
+      'You know where your case stands; your data is deleted after it closes.',
+    ],
+  } as L3,
+  gratuitTitre: { fr: 'Ce qui reste gratuit', es: 'Lo que sigue siendo gratis', en: 'What stays free' } as T3,
+  gratuit: {
+    fr: [
+      'Le diagnostic, les guides et les articles, pour faire les démarches vous-même.',
+      'L’aide aux personnes mineures : nous les orientons vers les services officiels gratuits, sans jamais rien faire payer.',
+    ],
+    es: [
+      'El diagnóstico, las guías y los artículos, para hacer las gestiones tú mismo o tú misma.',
+      'La ayuda a personas menores de edad: las orientamos hacia los servicios oficiales gratuitos, sin cobrar nunca nada.',
+    ],
+    en: [
+      'The diagnostic, guides and articles, so you can make the requests yourself.',
+      'Help for minors: we point them to official free services and never charge anything.',
+    ],
+  } as L3,
+  paiementTitre: { fr: 'Comment payer', es: 'Cómo pagar', en: 'How to pay' } as T3,
+  paiement: {
+    fr: 'Vous ne payez rien avant d’avoir accepté notre devis écrit. Le lien de paiement arrive avec lui. Le reste n’est demandé qu’une fois les liens retirés.',
+    es: 'No pagas nada antes de aceptar nuestro presupuesto por escrito. El enlace de pago llega con él. El resto solo se pide una vez retirados los enlaces.',
+    en: 'You pay nothing before accepting our written quote. The payment link comes with it. The rest is only requested once the links are removed.',
   } as T3,
 };
 
@@ -292,6 +429,7 @@ export const PLATEFORME_PAGE = {
   } as T3,
   autres: { fr: 'Même situation, autres plateformes', es: 'Misma situación, otras plataformas', en: 'Same situation, other platforms' } as T3,
   conseils: { fr: 'Avant de commencer', es: 'Antes de empezar', en: 'Before you start' } as T3,
+  aSavoir: { fr: 'À savoir :', es: 'Ten en cuenta:', en: 'Good to know:' } as T3,
   mineursTitre: { fr: 'Si vous avez moins de 18 ans', es: 'Si tienes menos de 18 años', en: 'If you are under 18' } as T3,
   mineursTexte: {
     fr: 'Parlez-en à un adulte de confiance et, en cas de menace, à la police. Les services officiels gratuits de votre pays sont sur la page Aide urgente. Devuelta ne prend jamais en charge, ni ne facture, un dossier concernant une personne mineure.',
@@ -331,6 +469,12 @@ export const ARTICLES = {
     en: 'Each article covers a common dead end and the remedies that exist after a refusal. Everything is checked against official sources, on the date shown.',
   } as T3,
   publieLe: { fr: 'Publié le', es: 'Publicado el', en: 'Published on' } as T3,
+  essentiel: {
+    fr: 'L’essentiel en 30 secondes',
+    es: 'Lo esencial en 30 segundos',
+    en: 'The essentials in 30 seconds',
+  } as T3,
+  lecture: { fr: 'Lecture : {n} min', es: 'Lectura: {n} min', en: '{n}-minute read' } as T3,
   sources: { fr: 'Sources officielles', es: 'Fuentes oficiales', en: 'Official sources' } as T3,
   siRien: { fr: 'Si rien ne marche', es: 'Si nada funciona', en: 'If nothing works' } as T3,
   aLire: { fr: 'À lire aussi', es: 'Para leer también', en: 'Read next' } as T3,

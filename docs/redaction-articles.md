@@ -19,6 +19,33 @@ l'ordre de `docs/plan-articles.json` (premier sujet au statut `a-faire`).
 - Titres ≤ 60 caractères, `meta_description` ≤ 155, slugs en minuscules ASCII avec tirets.
 - Les tests (`npm test`) refusent un article non conforme : ils doivent passer.
 
+## Écrire pour quelqu'un qui a peur
+
+La personne qui lit est inquiète, souvent sur son téléphone, parfois tard le
+soir, parfois honteuse. On écrit pour elle, pas pour un juriste.
+
+- Ton calme, chaleureux et direct. Pas d'humour, pas de quiz, pas de jeu dans
+  ces articles. Pas de dramatisation non plus.
+- `essentiel` (« L'essentiel en 30 secondes », affiché en haut) : 3 ou 4 gestes
+  à faire maintenant, dans l'ordre, une phrase chacun (160 caractères au plus),
+  qui commence par un verbe.
+- Une phrase rassurante tôt dans l'article quand elle est vraie pour la
+  situation (« Ce n'est pas de votre faute », « Vous pouvez agir sans compte »),
+  sans en faire trop.
+- Longueur : 700 à 1 000 mots en français (1 100 au plus). Phrases de 20 mots
+  au plus. Un paragraphe = une idée.
+- Chaque mot technique est expliqué en une phrase la première fois (exemple :
+  « le DSA, la loi européenne qui oblige les grandes plateformes à traiter vos
+  signalements »). Les numéros d'articles de loi vont entre parenthèses ou dans
+  les sources, jamais au cœur d'une phrase importante.
+- Dernière section, juste avant « Si rien ne marche » : « Pour que ça ne
+  recommence pas » (2 à 4 conseils concrets de prévention).
+- Les exemples sont bienvenus s'ils sont présentés comme des exemples
+  (« Par exemple : … »), jamais comme de vrais témoignages.
+- Quand c'est pertinent, mettre en garde contre les arnaques qui visent les
+  victimes : faux « hackers » qui récupèrent un compte, services qui promettent
+  de tout supprimer en 24 heures.
+
 ## Format (un fichier par article : `shared/articles/<id>.json`)
 
 ```json
@@ -32,6 +59,7 @@ l'ordre de `docs/plan-articles.json` (premier sujet au statut `a-faire`).
   "titre": {"fr": "...", "es": "...", "en": "..."},
   "meta_description": {"fr": "...", "es": "...", "en": "..."},
   "chapo": {"fr": "2 ou 3 phrases : la réponse d'abord", "es": "...", "en": "..."},
+  "essentiel": {"fr": ["Geste 1", "Geste 2", "Geste 3"], "es": ["..."], "en": ["..."]},
   "sections": [
     {
       "titre": {"fr": "...", "es": "...", "en": "..."},
@@ -45,7 +73,8 @@ l'ordre de `docs/plan-articles.json` (premier sujet au statut `a-faire`).
 }
 ```
 
-- 4 à 6 sections ; `etapes` peut valoir `null`.
+- 4 ou 5 sections, la dernière étant « Pour que ça ne recommence pas » ;
+  `etapes` peut valoir `null`.
 - Situations : contenu-intime, deepfake, usurpation, piratage-compte, faux-avis,
   diffamation, donnees-personnelles, droit-auteur, chantage.
 - Guides existants (pour `liens_internes`) : voir les `id` de `shared/guides.json`.

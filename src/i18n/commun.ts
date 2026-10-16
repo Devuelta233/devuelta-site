@@ -26,6 +26,7 @@ export const C = {
     urgence: { fr: 'Aide urgente', es: 'Ayuda urgente', en: 'Urgent help' } as T3,
     methode: { fr: 'Notre méthode', es: 'Cómo trabajamos', en: 'How we work' } as T3,
     confier: { fr: 'Confier mon dossier', es: 'Confiar mi caso', en: 'Get our help' } as T3,
+    tarifs: { fr: 'Tarifs', es: 'Precios', en: 'Pricing' } as T3,
     contact: { fr: 'Contact', es: 'Contacto', en: 'Contact' } as T3,
     confidentialite: { fr: 'Confidentialité', es: 'Privacidad', en: 'Privacy' } as T3,
     mentions: { fr: 'Mentions légales', es: 'Aviso legal', en: 'Legal notice' } as T3,
@@ -99,9 +100,9 @@ export const C = {
   ctaDiagnosticSous: { fr: 'Gratuit, anonyme, 3 minutes', es: 'Gratis, anónimo, 3 minutos', en: 'Free, anonymous, 3 minutes' } as T3,
   ctaConfier: { fr: 'Confier mon dossier', es: 'Confiar mi caso', en: 'Get our help' } as T3,
   ctaConfierSous: {
-    fr: 'Devis clair avant tout engagement',
-    es: 'Presupuesto claro antes de cualquier compromiso',
-    en: 'Clear quote before any commitment',
+    fr: 'Dès 30 €, le reste seulement si c’est retiré',
+    es: 'Desde 30 €, el resto solo si se retira',
+    en: 'From €30, the rest only if removed',
   } as T3,
   pasConseilJuridique: {
     fr: 'Ces informations vous aident à exercer vos droits. Elles ne remplacent pas l’avis d’un avocat.',

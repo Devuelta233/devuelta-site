@@ -32,6 +32,14 @@ const liens = a.liens_internes
 const autres = articles()
   .filter((x) => x.id !== a.id && x.situation === a.situation)
   .slice(0, 3);
+// Temps de lecture affiché (environ 200 mots par minute).
+const texte = [
+  a.chapo[lang],
+  ...(a.essentiel?.[lang] ?? []),
+  ...a.sections.flatMap((s) => [...(s.paragraphes[lang] ?? []), ...(s.etapes?.[lang] ?? [])]),
+  a.si_rien_ne_marche[lang],
+].join(' ');
+const minutes = Math.max(1, Math.round(texte.split(/\s+/).filter(Boolean).length / 200));
 const hote = (u: string) => {
   try {
     return new URL(u).hostname.replace(/^www\./, '');
@@ -69,8 +77,18 @@ const jsonld = [
     <p class="fiche-meta">
       <span>{ARTICLES.publieLe[lang]} {dateLisible(a.publie_le, lang)}</span>
       <span>{C.verifieLe[lang]} <strong>{dateLisible(a.verifie_le, lang)}</strong></span>
+      <span>{ARTICLES.lecture[lang].replace('{n}', String(minutes))}</span>
     </p>
     <p class="lede">{a.chapo[lang]}</p>
+
+    {a.essentiel?.[lang]?.length ? (
+      <section class="encadre essentiel" aria-labelledby="essentiel">
+        <h2 id="essentiel" class="eyebrow">{ARTICLES.essentiel[lang]}</h2>
+        <ol class="etapes">
+          {a.essentiel[lang].map((e) => <li>{e}</li>)}
+        </ol>
+      </section>
+    ) : null}
 
     {a.sections.map((s) => (
       <section>

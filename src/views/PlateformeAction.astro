@@ -92,6 +92,11 @@ const jsonld = [
           <ol class="etapes">
             {(a.etapes[lang] ?? []).map((e) => <li>{e}</li>)}
           </ol>
+          {a.a_savoir?.[lang] && (
+            <p class="encadre alerte">
+              <strong>{PLATEFORME_PAGE.aSavoir[lang]}</strong> {a.a_savoir[lang]}
+            </p>
+          )}
           <div class="actions">
             <a class={`bouton ${i === 0 ? 'principal' : ''}`} href={lien} rel="noopener noreferrer" target="_blank">
               {C.ouvrirFormulaire[lang]}
