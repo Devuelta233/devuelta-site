@@ -143,6 +143,9 @@ describe('Paystack : du lien au paiement confirmé', () => {
     expect(r.status).toBe(200);
     await Promise.all(enCours);
     expect(await paiement(reference)).toMatchObject({ statut: 'paye', canal: 'card' });
+    // La réception de la notification est tracée (référence seulement).
+    const trace = await DB.prepare("SELECT COUNT(*) AS n FROM journal WHERE action = 'paiement-notification' AND objet_id = ?").bind(reference).first<{ n: number }>();
+    expect(trace?.n).toBe(1);
     // Le retour du client le voit aussitôt comme payé.
     expect(await retour(env(CLE_TEST), reference)).toBe('paye');
   });

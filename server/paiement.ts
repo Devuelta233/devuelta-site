@@ -178,7 +178,12 @@ export async function webhookPaystack(request: Request, env: Env, ctx: Execution
   } catch {
     throw new HttpError(400, 'json-invalide');
   }
-  if (evt.event === 'charge.success' && evt.data?.reference) ctx.waitUntil(confirmer(env, evt.data.reference).catch(() => undefined));
+  if (evt.event === 'charge.success' && evt.data?.reference) {
+    const reference = evt.data.reference;
+    // Trace de réception (référence seulement) : prouve que les notifications de Paystack arrivent bien.
+    const trace = journal(env.DB, { action: 'paiement-notification', objet: 'paiement', objet_id: reference.slice(0, 100) }).catch(() => undefined);
+    ctx.waitUntil(Promise.all([trace, confirmer(env, reference).catch(() => undefined)]));
+  }
   return json({ ok: true });
 }
 
