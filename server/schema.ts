@@ -8,6 +8,11 @@ const COLONNES_DEMANDES =
   'id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo, contact_mode, contact_valeur, menace, ' +
   'deja_signale, publie_par_soi, consentement_version, consentement_le, statut, assigne_a, traitee_par, traitee_le, ' +
   'note_traitement, dossier_id, ip_hash';
+// Par prudence, un membre introuvable devient « personne » plutôt que de bloquer la copie.
+const COPIE_DEMANDES = COLONNES_DEMANDES.replace('assigne_a', '(SELECT u.id FROM utilisateurs u WHERE u.id = demandes.assigne_a)').replace(
+  'traitee_par',
+  '(SELECT u.id FROM utilisateurs u WHERE u.id = demandes.traitee_par)',
+);
 
 export const MIGRATIONS: string[][] = [
   // 1 — schéma initial
@@ -352,7 +357,7 @@ export const MIGRATIONS: string[][] = [
       dossier_id TEXT,
       ip_hash TEXT
     )`,
-    `INSERT INTO demandes_v9 (${COLONNES_DEMANDES}) SELECT ${COLONNES_DEMANDES} FROM demandes`,
+    `INSERT INTO demandes_v9 (${COLONNES_DEMANDES}) SELECT ${COPIE_DEMANDES} FROM demandes`,
     `DROP TABLE demandes`,
     `ALTER TABLE demandes_v9 RENAME TO demandes`,
     `CREATE INDEX IF NOT EXISTS idx_demandes_statut ON demandes(statut, recue_le)`,
