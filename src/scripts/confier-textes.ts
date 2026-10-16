@@ -14,10 +14,8 @@ const FR = {
   pseudo: 'Un prénom ou un pseudo',
   pseudoAide: 'Pour savoir comment vous appeler. Pas besoin de votre vrai nom à ce stade.',
   contact: 'Comment vous recontacter ?',
-  whatsapp: 'WhatsApp',
-  email: 'E-mail',
-  numero: 'Votre numéro WhatsApp (avec l’indicatif, ex. +33…)',
   adresse: 'Votre adresse e-mail',
+  contactAide: 'Nous répondons par e-mail. Si vous nous confiez votre dossier, la personne qui le suit vous donne ensuite son numéro WhatsApp.',
   menace: 'Je reçois des menaces ou un chantage',
   dejaSignale: 'J’ai déjà fait un signalement qui n’a rien donné',
   publie: 'Aviez-vous publié ou envoyé ce contenu vous-même au départ ?',
@@ -35,7 +33,7 @@ const FR = {
   merciTitre: 'Votre demande est bien reçue.',
   merciRef: 'Votre référence',
   merciTexte:
-    'Notez-la. Nous vous recontactons en général sous 24 à 48 heures. Nos messages viennent de nos numéros WhatsApp officiels ou de team.devuelta@protonmail.com et ne mentionnent jamais votre situation dans l’objet.',
+    'Notez-la. Nous vous répondons par e-mail, en général sous 24 à 48 heures. Nos messages viennent de {email} et ne mentionnent jamais votre situation dans l’objet.',
   erreurs: {
     'champ-manquant': 'Un champ obligatoire est vide.',
     'email-invalide': 'L’adresse e-mail semble incorrecte.',
@@ -45,7 +43,7 @@ const FR = {
     'consentement-requis': 'Merci de cocher la case d’accord pour que nous puissions vous recontacter.',
     'trop-de-demandes': 'Trop de demandes envoyées depuis cette connexion. Réessayez dans une heure, ou écrivez-nous directement.',
     'champ-trop-long': 'Un texte est trop long. Raccourcissez-le.',
-    defaut: 'L’envoi n’a pas fonctionné. Réessayez, ou écrivez-nous directement sur WhatsApp ou par e-mail.',
+    defaut: 'L’envoi n’a pas fonctionné. Réessayez, ou écrivez-nous directement à {email}.',
   } as Record<string, string>,
   obligatoire: 'obligatoire',
 };
@@ -65,10 +63,8 @@ const ES: Textes = {
   pseudo: 'Un nombre o un seudónimo',
   pseudoAide: 'Para saber cómo llamarte. No necesitamos tu nombre real por ahora.',
   contact: '¿Cómo te contactamos?',
-  whatsapp: 'WhatsApp',
-  email: 'Correo',
-  numero: 'Tu número de WhatsApp (con el prefijo, ej. +34…)',
   adresse: 'Tu correo electrónico',
+  contactAide: 'Respondemos por correo electrónico. Si nos confías tu caso, la persona que lo lleva te da después su número de WhatsApp.',
   menace: 'Recibo amenazas o chantaje',
   dejaSignale: 'Ya hice una denuncia que no dio resultado',
   publie: '¿Habías publicado o enviado tú este contenido al principio?',
@@ -86,7 +82,7 @@ const ES: Textes = {
   merciTitre: 'Hemos recibido tu solicitud.',
   merciRef: 'Tu referencia',
   merciTexte:
-    'Anótala. Normalmente te contactamos en 24 a 48 horas. Nuestros mensajes llegan desde nuestros números oficiales de WhatsApp o desde team.devuelta@protonmail.com y nunca mencionan tu situación en el asunto.',
+    'Anótala. Te respondemos por correo electrónico, normalmente en 24 a 48 horas. Nuestros mensajes llegan desde {email} y nunca mencionan tu situación en el asunto.',
   erreurs: {
     'champ-manquant': 'Falta un campo obligatorio.',
     'email-invalide': 'El correo parece incorrecto.',
@@ -96,7 +92,7 @@ const ES: Textes = {
     'consentement-requis': 'Marca la casilla de consentimiento para que podamos contactarte.',
     'trop-de-demandes': 'Demasiadas solicitudes desde esta conexión. Inténtalo en una hora o escríbenos directamente.',
     'champ-trop-long': 'Un texto es demasiado largo. Acórtalo.',
-    defaut: 'El envío no funcionó. Inténtalo de nuevo o escríbenos directamente por WhatsApp o correo.',
+    defaut: 'El envío no funcionó. Inténtalo de nuevo o escríbenos directamente a {email}.',
   },
   obligatoire: 'obligatorio',
 };
@@ -114,10 +110,8 @@ const EN: Textes = {
   pseudo: 'A first name or nickname',
   pseudoAide: "So we know what to call you. We don't need your real name at this stage.",
   contact: 'How should we contact you?',
-  whatsapp: 'WhatsApp',
-  email: 'Email',
-  numero: 'Your WhatsApp number (with country code, e.g. +1…)',
   adresse: 'Your email address',
+  contactAide: 'We reply by email. If you hand us your case, the person handling it then gives you their WhatsApp number.',
   menace: "I'm receiving threats or being blackmailed",
   dejaSignale: "I've already reported it and nothing happened",
   publie: 'Did you post or send this content yourself at first?',
@@ -135,7 +129,7 @@ const EN: Textes = {
   merciTitre: 'Your request has been received.',
   merciRef: 'Your reference',
   merciTexte:
-    'Keep it. We usually get back to you within 24 to 48 hours. Our messages come from our official WhatsApp numbers or from team.devuelta@protonmail.com and never mention your situation in the subject line.',
+    'Keep it. We reply by email, usually within 24 to 48 hours. Our messages come from {email} and never mention your situation in the subject line.',
   erreurs: {
     'champ-manquant': 'A required field is empty.',
     'email-invalide': 'The email address looks wrong.',
@@ -145,7 +139,7 @@ const EN: Textes = {
     'consentement-requis': 'Please tick the consent box so we can contact you.',
     'trop-de-demandes': 'Too many requests from this connection. Try again in an hour, or write to us directly.',
     'champ-trop-long': 'A text is too long. Please shorten it.',
-    defaut: "Sending didn't work. Try again, or write to us directly on WhatsApp or by email.",
+    defaut: "Sending didn't work. Try again, or email us directly at {email}.",
   },
   obligatoire: 'required',
 };

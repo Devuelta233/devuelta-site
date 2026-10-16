@@ -14,6 +14,7 @@ import Legal from '../views/Legal.astro';
 import Methode from '../views/Methode.astro';
 import PlateformeAction from '../views/PlateformeAction.astro';
 import QueFaire from '../views/QueFaire.astro';
+import Retractation from '../views/Retractation.astro';
 import Situation from '../views/Situation.astro';
 import Tarifs from '../views/Tarifs.astro';
 import Urgence from '../views/Urgence.astro';
@@ -38,6 +39,8 @@ const p = Astro.props as PropsPage;
 {p.type === 'contact' && <Contact lang={p.lang} />}
 {p.type === 'confidentialite' && <Legal lang={p.lang} quoi="confidentialite" />}
 {p.type === 'mentions' && <Legal lang={p.lang} quoi="mentions" />}
+{p.type === 'conditions' && <Legal lang={p.lang} quoi="conditions" />}
+{p.type === 'retractation' && <Retractation lang={p.lang} />}
 {p.type === 'situation' && <Situation lang={p.lang} situation={p.situation} />}
 {p.type === 'plateforme' && <PlateformeAction lang={p.lang} situation={p.situation} plateforme={p.plateforme} actions={p.actions} />}
 {p.type === 'guide' && <Guide lang={p.lang} guide={p.guide} />}

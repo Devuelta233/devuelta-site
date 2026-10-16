@@ -4,11 +4,11 @@ import Contacts from '../components/Contacts.astro';
 import Engagements from '../components/Engagements.astro';
 import Spirale from '../components/Spirale.astro';
 import { C } from '../i18n/commun';
-import { ACCUEIL } from '../i18n/pages';
+import { ACCUEIL, ARTICLES } from '../i18n/pages';
 import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
-import { BASE, guidePath, page, situationPath, versionsAccueil } from '../i18n/routes';
-import { dateLisible, guides } from '../data';
-import { EMAIL, SITE_URL, WHATSAPP } from '../config';
+import { BASE, articlePath, articlesPath, guidePath, page, situationPath, versionsAccueil } from '../i18n/routes';
+import { articles, dateLisible, guides } from '../data';
+import { EMAIL, SITE_URL } from '../config';
 import { SITUATION_LABEL, type Lang } from '../../shared/vocab';
 
 interface Props {
@@ -17,6 +17,7 @@ interface Props {
 const { lang } = Astro.props;
 const h1 = ACCUEIL.h1[lang];
 const listeGuides = guides().filter((g) => !g.public_mineurs).slice(0, 6);
+const derniersArticles = articles().slice(0, 3);
 const jsonld = [
   {
     '@context': 'https://schema.org',
@@ -32,7 +33,7 @@ const jsonld = [
     contactPoint: (['fr', 'es', 'en'] as Lang[]).map((l) => ({
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      telephone: WHATSAPP[l].e164,
+      email: EMAIL,
       availableLanguage: l,
     })),
   },
@@ -110,6 +111,25 @@ const jsonld = [
         {ACCUEIL.echelle[lang].map((m) => <li>{m}</li>)}
       </ol>
     </section>
+
+    {derniersArticles.length > 0 && (
+      <section aria-labelledby="articles-titre">
+        <h2 id="articles-titre">{ACCUEIL.articlesTitre[lang]}</h2>
+        <p>{ACCUEIL.articlesIntro[lang]}</p>
+        <ul class="cartes deux trois">
+          {derniersArticles.map((x) => (
+            <li>
+              <a class="carte" href={articlePath(x.slug[lang], lang)}>
+                <span class="carte-titre">{x.titre[lang]}</span>
+                <span class="carte-texte">{x.chapo[lang]}</span>
+                <span class="carte-meta">{C.verifieLe[lang]} {dateLisible(x.verifie_le, lang)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p><a href={articlesPath(lang)}>{ACCUEIL.tousLesArticles[lang]} →</a></p>
+      </section>
+    )}
 
     {listeGuides.length > 0 && (
       <section aria-labelledby="recours-titre">

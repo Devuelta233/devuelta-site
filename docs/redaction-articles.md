@@ -32,8 +32,12 @@ soir, parfois honteuse. On écrit pour elle, pas pour un juriste.
 - Une phrase rassurante tôt dans l'article quand elle est vraie pour la
   situation (« Ce n'est pas de votre faute », « Vous pouvez agir sans compte »),
   sans en faire trop.
-- Longueur : 700 à 1 000 mots en français (1 100 au plus). Phrases de 20 mots
-  au plus. Un paragraphe = une idée.
+- Longueur : 700 à 1 000 mots en français (1 100 au plus ; espagnol 1 200 au
+  plus). Phrases de 20 mots au plus. Un paragraphe = une idée.
+- Compréhensible par tous, sans infantiliser : les mots de tous les jours, une
+  idée par phrase, le sujet et le verbe au début. Les tests le vérifient dans les
+  3 langues : 600 mots au moins, aucune phrase de plus de 25 mots, au plus 15 %
+  de phrases de plus de 20 mots.
 - Chaque mot technique est expliqué en une phrase la première fois (exemple :
   « le DSA, la loi européenne qui oblige les grandes plateformes à traiter vos
   signalements »). Les numéros d'articles de loi vont entre parenthèses ou dans
@@ -93,3 +97,33 @@ soir, parfois honteuse. On écrit pour elle, pas pour un juriste.
    description la version française lisible (titre, chapô, sections) et la liste
    des sources : Steven lit, puis « Merge » publie le site automatiquement. Après
    fusion, le statut passe à `publie` (fait par la tâche de la semaine suivante).
+
+## Kit réseaux sociaux (un par article : `docs/reseaux/<id>.md`)
+
+Chaque article a son kit Instagram / TikTok / Facebook. But : aider tout de
+suite, puis amener vers l'article et le diagnostic gratuits du site. Même
+vidéo sur les trois réseaux.
+
+Fichier en Markdown, avec trois parties `## FR`, `## ES`, `## EN`. Dans chacune :
+
+1. **Vidéo de 30 à 45 secondes** (filmée au téléphone : la voix d'un membre de
+   l'équipe sur l'écran du téléphone qui montre la démarche ; visage facultatif).
+   - Accroche (0 à 3 s) : la situation en une phrase, comme la personne la vit
+     (« Instagram refuse de supprimer le faux compte à ton nom ? »).
+   - 3 gestes (8 s chacun) : ceux de « L'essentiel », dits simplement.
+   - Fin (5 s) : « Le guide complet est gratuit, lien en bio. Et si ça bloque,
+     le diagnostic gratuit te dit quoi faire. »
+   - Pour chaque moment : ce qui est dit (voix) et le texte court à l'écran.
+2. **Carrousel de 6 images** : 1 accroche, 4 gestes (15 mots au plus par image),
+   1 « Guide gratuit : lien en bio ».
+3. **Légende** (300 caractères au plus) : 2 phrases, puis « Guide gratuit : lien
+   en bio », puis 3 à 5 mots-clés (#) dans la langue.
+4. **Lien** : l'adresse complète de l'article dans la langue
+   (https://getdevuelta.com/articles/..., /es/articulos/..., /en/articles/...).
+
+Règles : « tu » en français et en espagnol, « you » en anglais ; mêmes lignes
+rouges que l'article (aucune garantie, aucun chiffre inventé, mineurs vers les
+canaux officiels gratuits) ; jamais de vraie victime ni d'image intime ; pas de
+peur gratuite ; pas de prix ni d'offre payante dans la vidéo : on donne d'abord
+l'aide gratuite.
+

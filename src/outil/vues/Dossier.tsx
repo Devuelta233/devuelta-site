@@ -2,8 +2,10 @@
 // notes, journal. Rien n'est envoyé par l'outil : il prépare, l'humain valide.
 
 import { useEffect, useState } from 'preact/hooks';
-import { COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
-import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isSituation } from '../../../shared/vocab';
+import { COEF_PRO, COEF_ZONE_REDUITE, DEVIS_A_PARTIR_DE, calculerPrix, euros, nombre, zoneDuPays, type Zone } from '../../../shared/tarifs';
+import { texteOuverture } from '../../../shared/ouverture';
+import { typo } from '../../../shared/typo';
+import { LANGS, PAYS, PAYS_LABEL, PRIORITES, SITUATIONS, SITUATION_LABEL, TYPES_ETAPE, isLang, isSituation, type Lang } from '../../../shared/vocab';
 import { del, get, patch, post } from '../api';
 import { extraireLiens } from '../liens';
 import { code, date, indexLangue, langue, t, tr } from '../i18n';
@@ -104,6 +106,7 @@ interface Dossier {
   situation: string;
   assigne_a: string | null;
   assigne_nom: string | null;
+  assigne_whatsapp: string | null;
   client_pseudo: string;
   client_nom: string | null;
   client_email: string | null;
@@ -115,6 +118,8 @@ interface Dossier {
   consentement_recherche_le: string | null;
   resume: string | null;
   prochaine_action: string | null;
+  temps_minutes: number;
+  client_pro: number;
   prochaine_echeance: string | null;
   resultat: string | null;
   clos_le: string | null;
@@ -129,6 +134,7 @@ interface Detail {
   courriers: Courrier[];
   notes: Array<{ id: string; texte: string; cree_le: string; auteur_nom: string | null }>;
   fiches: Fiche[];
+  retractations: Array<{ ref: string; recue_le: string; accuse_le: string | null }>;
 }
 
 interface ModeleMeta {
@@ -183,6 +189,17 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
           </Pastille>
         )}
       </p>
+      {donnees.retractations.map((r) => (
+        <div class="o-encadre o-alerte" role="alert">
+          <p>
+            <strong>
+              {t('retractationRecue')} {date(r.recue_le, true)} ({r.ref}).
+            </strong>{' '}
+            {t('retractationStop')}
+          </p>
+          <p>{r.accuse_le ? `${t('accuseLe')} ${date(r.accuse_le, true)}.` : t('accuseAEnvoyer')}</p>
+        </div>
+      ))}
       <nav class="o-onglets">
         {ONGLETS.map((o) => (
           <a class={o === actif ? 'o-actif' : ''} href={`#/dossiers/${id}/${o}`}>
@@ -212,6 +229,38 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
 }
 
 // Résumé ------------------------------------------------------------------------
+
+// Mandat signé : le client reçoit (par e-mail) le WhatsApp de la personne qui suit son dossier.
+function MessageOuverture({ x }: { x: Dossier }) {
+  const lc: Lang = isLang(x.langue) ? x.langue : 'fr';
+  if (!x.assigne_nom) return null;
+  if (!x.assigne_whatsapp) {
+    return (
+      <div class="o-encadre o-info">
+        <strong>{t('ouvertureTitre')}</strong>
+        <p>
+          {x.assigne_nom} {t('whatsappManquant')}
+        </p>
+      </div>
+    );
+  }
+  const texte = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom, whatsapp: x.assigne_whatsapp }, lc);
+  return (
+    <div class="o-encadre o-info">
+      <strong>{t('ouvertureTitre')}</strong>
+      <p>{t('ouvertureAide')}</p>
+      <pre class="o-pre">{lc === 'fr' ? typo(texte) : texte}</pre>
+      <p class="o-actions">
+        <Copier texte={lc === 'fr' ? typo(texte) : texte} libelle={t('copierMessage')} />
+        {x.client_email && (
+          <a class="o-bouton" href={`mailto:${x.client_email}`}>
+            {t('email')}
+          </a>
+        )}
+      </p>
+    </div>
+  );
+}
 
 function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger: () => void; ferme: boolean; preparer: (p: { modele: string; contenu_id: string | null }) => void }) {
   const x = d.dossier;
@@ -243,6 +292,8 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           consentement_recherche_le: f.consentement_recherche_le || null,
           resume: f.resume,
           prochaine_action: f.prochaine_action,
+          temps_minutes: Math.max(0, Math.round(Number(f.temps_minutes) || 0)),
+          client_pro: !!Number(f.client_pro),
           ...(f.assigne_a !== x.assigne_a ? { assigne_a: f.assigne_a || null } : {}),
           ...(!ferme && f.statut !== x.statut ? { statut: f.statut } : {}),
         }),
@@ -258,6 +309,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           </button>
         </div>
       )}
+      {x.mandat_signe_le && <MessageOuverture x={x} />}
       <TarifDossier d={d} />
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (
         <div class="o-encadre o-alerte">
@@ -363,8 +415,20 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
         <input type="checkbox" checked={!!Number(f.menace)} onChange={() => setF({ ...f, menace: Number(f.menace) ? 0 : 1 })} />
         <span>{t('menace')}</span>
       </label>
+      <label class="o-case">
+        <input type="checkbox" checked={!!Number(f.client_pro)} onChange={() => setF({ ...f, client_pro: Number(f.client_pro) ? 0 : 1 })} />
+        <span>{t('clientPro')}</span>
+      </label>
       <Champ label={t('prochaineAction')}>
         <input type="text" value={f.prochaine_action ?? ''} onInput={set('prochaine_action')} />
+      </Champ>
+      <Champ label={t('tempsPasse')}>
+        <div class="o-temps">
+          <input type="number" min="0" step="5" inputMode="numeric" value={f.temps_minutes ?? 0} onInput={set('temps_minutes')} />
+          <button type="button" class="o-bouton o-petit" onClick={() => setF({ ...f, temps_minutes: (Number(f.temps_minutes) || 0) + 15 })}>
+            +15 min
+          </button>
+        </div>
       </Champ>
       <Champ label={t('resume')}>
         <textarea rows={5} value={f.resume ?? ''} onInput={set('resume')} />
@@ -441,11 +505,14 @@ function TarifDossier({ d }: { d: Detail }) {
   const n = liens.length;
   const retires = liens.filter((c) => c.statut === 'retire').length;
   const zone = zoneDuPays(d.dossier.pays);
+  const pro = !!Number(d.dossier.client_pro);
   const ligne = (z: Zone) => {
-    const p = calculerPrix(n, retires, z);
+    const p = calculerPrix(n, retires, z, pro);
     if (!p.formule || p.total === null || p.ouverture === null || p.soldeDu === null || p.soldeMaximum === null) return null;
+    // Taux implicites de la grille (prix en zone réduite, en cedis et en francs CFA).
+    const base = p.formule.prix * COEF_ZONE_REDUITE;
     const local = (eur: number) =>
-      z === 'reduite' ? ` (GH¢ ${nombre((eur * p.formule!.ghs) / p.total!, lang)} · ${nombre((eur * p.formule!.fcfa) / p.total!, lang)} F)` : '';
+      z === 'reduite' ? ` (GH¢ ${nombre((eur * p.formule!.ghs) / base, lang)} · ${nombre((eur * p.formule!.fcfa) / base, lang)} F)` : '';
     return (
       <ul>
         <li>
@@ -474,8 +541,8 @@ function TarifDossier({ d }: { d: Detail }) {
   } else if (n > 15) {
     corps = (
       <p>
-        {tr('Plus de 15 liens : sur devis, à partir de', 'Más de 15 enlaces: con presupuesto, desde', 'More than 15 links: quoted, from')} {euros(DEVIS_A_PARTIR_DE, lang)} (
-        {tr('zone réduite :', 'zona reducida:', 'reduced zone:')} {euros(DEVIS_A_PARTIR_DE * COEF_ZONE_REDUITE, lang)}).
+        {tr('Plus de 15 liens : sur devis, à partir de', 'Más de 15 enlaces: con presupuesto, desde', 'More than 15 links: quoted, from')} {euros(DEVIS_A_PARTIR_DE * (pro ? COEF_PRO : 1), lang)} (
+        {tr('zone réduite :', 'zona reducida:', 'reduced zone:')} {euros(DEVIS_A_PARTIR_DE * COEF_ZONE_REDUITE * (pro ? COEF_PRO : 1), lang)}).
       </p>
     );
   } else if (zone) {
@@ -495,6 +562,7 @@ function TarifDossier({ d }: { d: Detail }) {
       <strong>
         {tr('Tarif', 'Precio', 'Price')} — {n} {tr('lien(s)', 'enlace(s)', 'link(s)')}
         {zone === 'reduite' ? ` · ${tr('zone réduite (prix divisés par deux)', 'zona reducida (precios a mitad)', 'reduced zone (half price)')}` : ''}
+        {pro ? ` · ${tr('client professionnel (prix × 2)', 'cliente profesional (precio × 2)', 'business client (price × 2)')}` : ''}
       </strong>
       {corps}
       <p class="o-muet">

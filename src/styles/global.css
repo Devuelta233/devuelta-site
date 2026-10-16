@@ -326,6 +326,19 @@ p {
   transform: rotate(45deg);
 }
 
+/* Liste de refus : une croix au lieu de la coche. */
+.coche.refus li::before {
+  content: '✕';
+  border: 0;
+  transform: none;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0.1rem;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
 /* Tarifs ------------------------------------------------------------------- */
 
 .formules {
