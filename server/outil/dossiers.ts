@@ -358,6 +358,11 @@ export async function modifier({ request, env, params, auth }: Ctx): Promise<Res
   }
   if ('resume' in body) set('resume', cleanText(body.resume, 4000, { multiline: true }));
   if ('prochaine_action' in body) set('prochaine_action', cleanText(body.prochaine_action, 300));
+  if ('temps_minutes' in body) {
+    const n = Number(body.temps_minutes);
+    if (!Number.isInteger(n) || n < 0 || n > 100_000) throw new HttpError(400, 'temps-invalide');
+    set('temps_minutes', n);
+  }
   if (sets.length === 0) return json({ ok: true });
   sets.push('maj_le = ?');
   binds.push(nowIso());

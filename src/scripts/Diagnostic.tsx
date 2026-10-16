@@ -69,7 +69,8 @@ const MOTEUR: Partial<Record<Situation, Situation[]>> = {
   chantage: ['contenu-intime'],
   'donnees-personnelles': ['donnees-personnelles'],
   diffamation: ['diffamation'],
-  usurpation: ['donnees-personnelles'],
+  // Faux profil : pas d'étape « coordonnées » de Google (hors sujet). Le
+  // déréférencement (droit à l'oubli) apparaît dans « Vos recours ».
 };
 
 function Lien({ href, children, classe }: { href: string; children: preact.ComponentChildren; classe?: string }) {

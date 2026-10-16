@@ -185,6 +185,8 @@ const D = typoProfonde({
   consentementRecherche: ['Accord pour la recherche d’images le', 'Consentimiento para la búsqueda de imágenes el', 'Consent for image search on'],
   resume: ['Résumé du dossier', 'Resumen del caso', 'Case summary'],
   prochaineAction: ['Prochaine action', 'Próxima acción', 'Next action'],
+  tempsPasse: ['Temps passé sur le dossier (minutes)', 'Tiempo dedicado al caso (minutos)', 'Time spent on the case (minutes)'],
+  tempsMoyen: ['Temps moyen par dossier', 'Tiempo medio por caso', 'Average time per case'],
   mandatManquant: [
     'Mandat non enregistré : aucun courrier ne pourra être validé au nom de la personne.',
     'Mandato no registrado: no se podrá validar ninguna carta en nombre de la persona.',

@@ -6,11 +6,13 @@ export { SITE_URL } from '../shared/site';
 
 export const EMAIL = CONTACT_EMAIL;
 
-// Un numéro WhatsApp par langue de réponse.
-export const WHATSAPP: Record<Lang, { e164: string; affichage: string }> = {
-  fr: { e164: '+41768232468', affichage: '+41 76 823 24 68' },
-  es: { e164: '+41783169306', affichage: '+41 78 316 93 06' },
-  en: { e164: '+233592151139', affichage: '+233 59 215 11 39' },
+// Un numéro WhatsApp par langue de réponse, et le prénom de la personne qui
+// répond (un humain identifiable rassure ; jamais de nom de famille).
+// À remplacer par des numéros WhatsApp Business dédiés dès qu'ils existent.
+export const WHATSAPP: Record<Lang, { e164: string; affichage: string; prenom: string }> = {
+  fr: { e164: '+41768232468', affichage: '+41 76 823 24 68', prenom: 'Steven' },
+  es: { e164: '+41783169306', affichage: '+41 78 316 93 06', prenom: 'Paola' },
+  en: { e164: '+233592151139', affichage: '+233 59 215 11 39', prenom: 'Michael' },
 };
 
 const MESSAGE_WHATSAPP: Record<Lang, string> = {

@@ -77,6 +77,10 @@ export async function statistiques({ env, url }: Ctx): Promise<Response> {
       .first<{ n: number; resolus: number }>(),
   ]);
   const entrees = await env.DB.prepare("SELECT COALESCE(SUM(n),0) AS n FROM stats_vues WHERE jour >= ? AND source <> 'interne'").bind(depuis).first<{ n: number }>();
+  // Temps moyen par dossier (dossiers où le temps a été noté) : sert à vérifier les tarifs.
+  const temps = await env.DB.prepare('SELECT COUNT(*) AS n, COALESCE(AVG(temps_minutes),0) AS moyenne FROM dossiers WHERE temps_minutes > 0 AND cree_le >= ?')
+    .bind(depuis)
+    .first<{ n: number; moyenne: number }>();
   return json({
     ok: true,
     jours,
@@ -90,6 +94,8 @@ export async function statistiques({ env, url }: Ctx): Promise<Response> {
     demandes: demandes?.n ?? 0,
     dossiers: dossiers?.n ?? 0,
     dossiers_resolus: dossiers?.resolus ?? 0,
+    temps_moyen_minutes: Math.round(temps?.moyenne ?? 0),
+    temps_dossiers: temps?.n ?? 0,
   });
 }
 

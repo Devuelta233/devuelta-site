@@ -40,18 +40,18 @@ export const ACCUEIL = {
   comment: {
     fr: [
       ['Vous essayez d’abord', 'Le diagnostic vous indique les formulaires officiels et les recours de votre pays. C’est gratuit, sans inscription, et rien ne quitte votre téléphone.'],
-      ['Si ça bloque, on prend le relais', 'Avec votre accord écrit, nous écrivons au site, à son hébergeur, à la société qui gère son nom de domaine, aux moteurs de recherche, puis aux autorités si besoin.'],
-      ['Un humain à chaque étape', 'Chaque courrier est relu et validé par une personne de l’équipe. Vous savez toujours ce qui a été envoyé, à qui et quand.'],
+      ['Si ça bloque, on prend le relais', 'Vous choisissez les démarches. Nous les préparons à partir de modèles types, vous validez chaque texte, puis nous l’envoyons et suivons les réponses : site, hébergeur, nom de domaine, moteurs de recherche.'],
+      ['Un humain à chaque étape', 'Chaque courrier est relu par une personne de l’équipe, et rien ne part sans votre accord. Vous savez toujours ce qui a été envoyé, à qui et quand.'],
     ],
     es: [
       ['Primero lo intentas tú', 'El diagnóstico te indica los formularios oficiales y los recursos de tu país. Es gratis, sin registro, y nada sale de tu teléfono.'],
-      ['Si se bloquea, nos encargamos', 'Con tu acuerdo por escrito, escribimos al sitio, a su proveedor de alojamiento, a la empresa que gestiona su dominio, a los buscadores y, si hace falta, a las autoridades.'],
-      ['Una persona en cada paso', 'Cada carta la revisa y la valida una persona del equipo. Siempre sabes qué se envió, a quién y cuándo.'],
+      ['Si se bloquea, nos encargamos', 'Tú eliges las gestiones. Las preparamos a partir de modelos tipo, validas cada texto y luego lo enviamos y seguimos las respuestas: sitio, proveedor de alojamiento, dominio, buscadores.'],
+      ['Una persona en cada paso', 'Cada escrito lo revisa una persona del equipo, y nada se envía sin tu acuerdo. Siempre sabes qué se envió, a quién y cuándo.'],
     ],
     en: [
       ['You try first', 'The diagnostic shows you the official forms and the remedies in your country. Free, no sign-up, and nothing leaves your phone.'],
-      ['If it gets stuck, we take over', 'With your written agreement, we write to the site, its hosting company, the company managing its domain name, search engines, then the authorities if needed.'],
-      ['A human at every step', 'Every letter is reviewed and approved by a person on the team. You always know what was sent, to whom and when.'],
+      ['If it gets stuck, we take over', 'You choose the requests. We prepare them from standard templates, you approve each text, then we send it and follow up: the site, its host, the domain name, search engines.'],
+      ['A human at every step', 'Every letter is reviewed by a person on the team, and nothing goes out without your agreement. You always know what was sent, to whom and when.'],
     ],
   } as Record<'fr' | 'es' | 'en', [string, string][]>,
   echelleTitre: { fr: 'L’échelle des recours', es: 'La escalera de recursos', en: 'The ladder of remedies' } as T3,
@@ -61,10 +61,21 @@ export const ACCUEIL = {
     en: 'We always start with the simplest door. If there is no answer in time, we go one step up.',
   } as T3,
   echelle: {
-    fr: ['Le signalement à la plateforme', 'La demande écrite fondée sur la loi', 'Le registrar du nom de domaine', 'L’hébergeur du site', 'Les moteurs de recherche', 'L’autorité ou la justice'],
-    es: ['La denuncia a la plataforma', 'La solicitud escrita basada en la ley', 'El registrador del dominio', 'El proveedor de alojamiento', 'Los buscadores', 'La autoridad o la justicia'],
-    en: ['Reporting to the platform', 'A written request based on the law', 'The domain name registrar', 'The hosting company', 'Search engines', 'The authority or the courts'],
+    fr: ['Le signalement à la plateforme', 'La demande écrite à l’éditeur du site', 'Le registrar du nom de domaine', 'L’hébergeur du site', 'Les moteurs de recherche', 'L’autorité ou la justice'],
+    es: ['La denuncia a la plataforma', 'La solicitud escrita al editor del sitio', 'El registrador del dominio', 'El proveedor de alojamiento', 'Los buscadores', 'La autoridad o la justicia'],
+    en: ['Reporting to the platform', 'A written request to the site owner', 'The domain name registrar', 'The hosting company', 'Search engines', 'The authority or the courts'],
   } as L3,
+  articlesTitre: {
+    fr: 'Le formulaire n’a pas marché ? Nos derniers articles',
+    es: '¿El formulario no funcionó? Nuestros últimos artículos',
+    en: 'The form didn’t work? Our latest articles',
+  } as T3,
+  articlesIntro: {
+    fr: 'Chaque semaine, un blocage fréquent et ce qui reste possible ensuite, vérifié sur les sources officielles.',
+    es: 'Cada semana, un bloqueo frecuente y lo que aún se puede hacer, verificado en las fuentes oficiales.',
+    en: 'Every week, a common dead end and what you can still do next, checked against official sources.',
+  } as T3,
+  tousLesArticles: { fr: 'Tous les articles', es: 'Todos los artículos', en: 'All articles' } as T3,
   recoursTitre: { fr: 'Des recours vérifiés, datés, sourcés', es: 'Recursos verificados, fechados y con fuente', en: 'Remedies that are checked, dated and sourced' } as T3,
   recoursIntro: {
     fr: 'Chaque recours indique la loi, le lien officiel et la date de sa dernière vérification. Rien n’est inventé, rien n’est promis.',
@@ -74,9 +85,9 @@ export const ACCUEIL = {
   tousLesRecours: { fr: 'Tous les recours', es: 'Todos los recursos', en: 'All remedies' } as T3,
   contactTitre: { fr: 'Parler à quelqu’un', es: 'Hablar con alguien', en: 'Talk to someone' } as T3,
   contactIntro: {
-    fr: 'Une question, un doute ? Écrivez-nous dans votre langue. Nos messages ne mentionnent jamais votre situation dans l’objet.',
-    es: '¿Una pregunta, una duda? Escríbenos en tu idioma. Nuestros mensajes nunca mencionan tu situación en el asunto.',
-    en: 'A question, a doubt? Write to us in your language. Our messages never mention your situation in the subject line.',
+    fr: 'Une question, un doute ? Écrivez-nous dans votre langue : c’est Steven, Paola ou Michael qui vous répond, pas un robot. Nos messages ne mentionnent jamais votre situation dans l’objet.',
+    es: '¿Una pregunta, una duda? Escríbenos en tu idioma: te responde Paola, Steven o Michael, no un robot. Nuestros mensajes nunca mencionan tu situación en el asunto.',
+    en: 'A question, a doubt? Write to us in your language: Michael, Steven or Paola will answer, not a bot. Our messages never mention your situation in the subject line.',
   } as T3,
 };
 
@@ -102,7 +113,8 @@ export const METHODE = {
   reglesTitre: { fr: 'Nos règles, sans exception', es: 'Nuestras reglas, sin excepción', en: 'Our rules, no exceptions' } as T3,
   regles: {
     fr: [
-      'Un humain relit et valide chaque courrier avant son envoi. Rien ne part automatiquement.',
+      'Un humain relit chaque courrier, et rien ne part sans votre validation. Rien n’est envoyé automatiquement.',
+      'Vous choisissez les démarches : nous vous présentons les procédures officielles, sans avis sur vos chances.',
       'Nous travaillons à partir des liens, pas de vos images. Nous ne vous demanderons jamais d’envoyer un contenu intime.',
       'Uniquement des moyens légaux : pas de piratage, pas de menace, pas de faux.',
       'Nous n’agissons en votre nom qu’avec votre mandat écrit, que vous pouvez retirer à tout moment.',
@@ -111,7 +123,8 @@ export const METHODE = {
       'Vos données sont supprimées automatiquement après la clôture de votre dossier.',
     ],
     es: [
-      'Una persona revisa y valida cada carta antes de enviarla. Nada se envía de forma automática.',
+      'Una persona revisa cada escrito, y nada se envía sin tu validación. Nada sale de forma automática.',
+      'Tú eliges las gestiones: te presentamos los procedimientos oficiales, sin opinar sobre tus posibilidades.',
       'Trabajamos a partir de los enlaces, no de tus imágenes. Nunca te pediremos que envíes un contenido íntimo.',
       'Solo vías legales: nada de hackeo, nada de amenazas, nada falso.',
       'Solo actuamos en tu nombre con tu mandato por escrito, que puedes retirar cuando quieras.',
@@ -120,7 +133,8 @@ export const METHODE = {
       'Tus datos se borran automáticamente después de cerrar tu caso.',
     ],
     en: [
-      'A human reviews and approves every letter before it is sent. Nothing goes out automatically.',
+      'A human reviews every letter, and nothing goes out without your approval. Nothing is sent automatically.',
+      'You choose the requests: we show you the official procedures, with no opinion on your chances.',
       'We work from links, not from your images. We will never ask you to send intimate content.',
       'Legal means only: no hacking, no threats, nothing fake.',
       'We only act on your behalf with your written mandate, which you can withdraw at any time.',
@@ -142,6 +156,33 @@ export const METHODE = {
     es: 'No somos un despacho de abogados y no damos asesoría jurídica. Nuestro trabajo es una asistencia técnica y administrativa: localizar los enlaces y los alojamientos, rellenar los formularios oficiales, enviar las solicitudes que elegiste y aprobaste, vigilar los plazos. Si una acción judicial resulta útil, te orientamos hacia un abogado o abogada, con quien tratas directamente.',
     en: 'We are not a law firm and we don’t give legal advice. Our work is technical and administrative assistance: finding the links and hosts, filling in the official forms, sending the requests you chose and approved, and tracking deadlines. If legal action becomes useful, we refer you to a lawyer, whom you deal with directly.',
   } as T3,
+  refusTitre: { fr: 'Les demandes que nous refusons', es: 'Las solicitudes que rechazamos', en: 'Requests we turn down' } as T3,
+  refus: {
+    fr: [
+      'Faire retirer une critique honnête, un avis réel ou une information d’intérêt public.',
+      'Agir pour une autre personne que celle qui est concernée, sauf son représentant légal.',
+      'Faire disparaître une décision de justice ou une information qu’une loi oblige à publier.',
+      'Retrouver ou démasquer l’auteur d’un contenu : seule la justice peut le faire.',
+      'Entrer dans un compte, pirater, menacer, négocier avec un maître-chanteur ou le payer.',
+      'Publier de faux avis ou envoyer de faux signalements.',
+    ],
+    es: [
+      'Retirar una crítica honesta, una reseña real o una información de interés público.',
+      'Actuar por otra persona que no sea la afectada, salvo su representante legal.',
+      'Hacer desaparecer una resolución judicial o una información que la ley obliga a publicar.',
+      'Encontrar o desenmascarar al autor de un contenido: solo la justicia puede hacerlo.',
+      'Entrar en una cuenta, hackear, amenazar, negociar con un chantajista o pagarle.',
+      'Publicar reseñas falsas o enviar denuncias falsas.',
+    ],
+    en: [
+      'Removing honest criticism, a genuine review or information of public interest.',
+      'Acting for anyone other than the person concerned, except their legal representative.',
+      'Making a court decision disappear, or information that a law requires to be published.',
+      'Finding or unmasking the author of content: only the courts can do that.',
+      'Getting into an account, hacking, threatening, negotiating with or paying a blackmailer.',
+      'Posting fake reviews or sending false reports.',
+    ],
+  } as L3,
   confianceTitre: { fr: 'Pourquoi nous faire confiance', es: 'Por qué confiar en nosotros', en: 'Why you can trust us' } as T3,
   confiance: {
     fr: 'Nos sources sont publiques : chaque recours de ce site cite la loi, le lien officiel et sa date de vérification. Notre référentiel des recours est ouvert et réutilisable librement. Et ce site lui-même ne contient aucun traceur.',
@@ -265,21 +306,21 @@ export const TARIFS = {
   inclusTitre: { fr: 'Ce qui est compris', es: 'Qué incluye', en: 'What’s included' } as T3,
   inclus: {
     fr: [
-      'Nous trouvons qui héberge chaque lien et quelle démarche officielle s’applique.',
-      'Nous préparons les demandes ; vous les approuvez avant tout envoi.',
-      'Nous relançons, et en cas de refus nous contestons (recours prévus par le DSA en Europe, hébergeur, nom de domaine).',
+      'Nous trouvons qui héberge chaque lien et nous vous présentons les démarches officielles possibles.',
+      'Vous choisissez les démarches ; nous préparons les demandes à partir de modèles types, et vous validez chaque texte avant l’envoi.',
+      'Nous envoyons, nous relançons, et en cas de refus nous préparons la contestation prévue (recours du DSA en Europe, hébergeur, nom de domaine).',
       'Vous savez où en est votre dossier ; vos données sont effacées après sa clôture.',
     ],
     es: [
-      'Encontramos quién aloja cada enlace y qué gestión oficial corresponde.',
-      'Preparamos las solicitudes; tú las apruebas antes de cualquier envío.',
-      'Insistimos y, si hay un rechazo, lo impugnamos (recursos del DSA en Europa, proveedor de alojamiento, nombre de dominio).',
+      'Encontramos quién aloja cada enlace y te presentamos las gestiones oficiales posibles.',
+      'Tú eliges las gestiones; preparamos las solicitudes a partir de modelos tipo y validas cada texto antes del envío.',
+      'Enviamos, insistimos y, si hay un rechazo, preparamos la impugnación prevista (recursos del DSA en Europa, proveedor de alojamiento, nombre de dominio).',
       'Sabes en qué punto está tu caso; tus datos se borran después de cerrarlo.',
     ],
     en: [
-      'We find who hosts each link and which official request applies.',
-      'We prepare the requests; you approve them before anything is sent.',
-      'We follow up, and if a request is refused we challenge it (DSA remedies in Europe, the host, the domain name).',
+      'We find who hosts each link and show you the official options.',
+      'You choose the requests; we prepare them from standard templates and you approve each text before it is sent.',
+      'We send, we follow up, and if a request is refused we prepare the available challenge (DSA remedies in Europe, the host, the domain name).',
       'You know where your case stands; your data is deleted after it closes.',
     ],
   } as L3,

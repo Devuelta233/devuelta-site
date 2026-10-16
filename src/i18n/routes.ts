@@ -13,7 +13,8 @@ export type PageFixe =
   | 'tarifs'
   | 'contact'
   | 'confidentialite'
-  | 'mentions';
+  | 'mentions'
+  | 'conditions';
 
 export const BASE: Record<Lang, string> = { fr: '/', es: '/es/', en: '/en/' };
 
@@ -27,6 +28,7 @@ export const SLUGS: Record<PageFixe, T3> = {
   tarifs: { fr: 'tarifs', es: 'precios', en: 'pricing' },
   contact: { fr: 'contact', es: 'contacto', en: 'contact' },
   confidentialite: { fr: 'confidentialite', es: 'privacidad', en: 'privacy' },
+  conditions: { fr: 'conditions-de-vente', es: 'condiciones-de-venta', en: 'terms-of-sale' },
   mentions: { fr: 'mentions-legales', es: 'aviso-legal', en: 'legal-notice' },
 };
 

@@ -242,6 +242,8 @@ export const MIGRATIONS: string[][] = [
       ('session_duree_heures', '24'),
       ('attribution', '{}')`,
   ],
+  // 2 — temps passé par dossier (pour connaître la rentabilité réelle)
+  [`ALTER TABLE dossiers ADD COLUMN temps_minutes INTEGER NOT NULL DEFAULT 0`],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

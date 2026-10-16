@@ -52,6 +52,7 @@ if (ariane.length) {
 
 const nav = [
   { href: page('que-faire', lang), nom: C.nav.queFaire[lang] },
+  ...(articles().length > 0 ? [{ href: articlesPath(lang), nom: ARTICLES.nav[lang] }] : []),
   { href: page('guides', lang), nom: C.nav.guides[lang] },
   { href: page('methode', lang), nom: C.nav.methode[lang] },
   { href: page('tarifs', lang), nom: C.nav.tarifs[lang] },
@@ -159,6 +160,7 @@ const nav = [
             <li><a href={page('contact', lang)}>{C.nav.contact[lang]}</a></li>
             <li><a href={page('confidentialite', lang)}>{C.nav.confidentialite[lang]}</a></li>
             <li><a href={page('mentions', lang)}>{C.nav.mentions[lang]}</a></li>
+            <li><a href={page('conditions', lang)}>{C.nav.conditions[lang]}</a></li>
             <li><a href="/referentiel.json">{C.nav.referentiel[lang]}</a></li>
           </ul>
         </div>

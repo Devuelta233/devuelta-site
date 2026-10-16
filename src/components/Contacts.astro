@@ -19,7 +19,7 @@ const enveloppe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
       <a class="contact-ligne" href={lienWhatsApp(l)} rel="noopener noreferrer" target="_blank" data-evenement="whatsapp" lang={l}>
         <span class="ico" set:html={bulle} />
         <span>
-          <strong>WhatsApp · {NOM_LANGUE[l]}</strong>
+          <strong>{WHATSAPP[l].prenom} · WhatsApp · {NOM_LANGUE[l]}</strong>
           <span class="mono">{WHATSAPP[l].affichage}</span>
         </span>
       </a>

@@ -675,6 +675,17 @@ li.o-carte > .o-carte-corps:first-child {
   gap: 0 1rem;
 }
 
+/* Temps passé : le champ et le bouton « +15 min » sur une ligne. */
+.o-temps {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.o-temps input {
+  max-width: 9rem;
+}
+
 .o-case {
   display: flex;
   align-items: flex-start;

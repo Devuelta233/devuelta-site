@@ -115,6 +115,7 @@ interface Dossier {
   consentement_recherche_le: string | null;
   resume: string | null;
   prochaine_action: string | null;
+  temps_minutes: number;
   prochaine_echeance: string | null;
   resultat: string | null;
   clos_le: string | null;
@@ -243,6 +244,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
           consentement_recherche_le: f.consentement_recherche_le || null,
           resume: f.resume,
           prochaine_action: f.prochaine_action,
+          temps_minutes: Math.max(0, Math.round(Number(f.temps_minutes) || 0)),
           ...(f.assigne_a !== x.assigne_a ? { assigne_a: f.assigne_a || null } : {}),
           ...(!ferme && f.statut !== x.statut ? { statut: f.statut } : {}),
         }),
@@ -365,6 +367,14 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
       </label>
       <Champ label={t('prochaineAction')}>
         <input type="text" value={f.prochaine_action ?? ''} onInput={set('prochaine_action')} />
+      </Champ>
+      <Champ label={t('tempsPasse')}>
+        <div class="o-temps">
+          <input type="number" min="0" step="5" inputMode="numeric" value={f.temps_minutes ?? 0} onInput={set('temps_minutes')} />
+          <button type="button" class="o-bouton o-petit" onClick={() => setF({ ...f, temps_minutes: (Number(f.temps_minutes) || 0) + 15 })}>
+            +15 min
+          </button>
+        </div>
       </Champ>
       <Champ label={t('resume')}>
         <textarea rows={5} value={f.resume ?? ''} onInput={set('resume')} />
