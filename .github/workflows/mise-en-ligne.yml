@@ -1,7 +1,8 @@
 # Mise en ligne de getdevuelta.com (site + outil) à chaque changement sur la
 # branche main, ou à la demande (onglet Actions).
 # Le jeton Cloudflare est rangé dans les secrets du dépôt
-# (CLOUDFLARE_API_TOKEN) : il n'apparaît jamais dans le code.
+# (CLOUDFLARE_API_TOKEN) : il n'apparaît jamais dans le code. Idem pour les
+# clés Paystack (PAYSTACK_SECRET_KEY) et du robot Telegram (TELEGRAM_BOT_TOKEN).
 
 name: Mise en ligne
 
@@ -22,6 +23,9 @@ env:
   # Clé secrète Paystack (paiement en ligne), rangée dans les secrets du dépôt.
   # Absente : le paiement en ligne reste désactivé, le reste fonctionne.
   PAYSTACK_SECRET_KEY: ${{ secrets.PAYSTACK_SECRET_KEY }}
+  # Clé du robot Telegram officiel (donnée par @BotFather), rangée dans les
+  # secrets du dépôt. Absente : le robot reste éteint, le reste fonctionne.
+  TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
   CLOUDFLARE_ACCOUNT_ID: 381946ed74159485b04c186b0347ff6f
   # INTERRUPTEUR. « non » : on construit et on teste, rien ne part en ligne.
   # Passer à « oui » seulement quand Steven a validé le site.
@@ -77,6 +81,41 @@ jobs:
       - name: Clé de paiement Paystack
         if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui' && env.PAYSTACK_SECRET_KEY != ''
         run: printf '%s' "$PAYSTACK_SECRET_KEY" | npx wrangler secret put PAYSTACK_SECRET_KEY
+
+      - name: Clé du robot Telegram
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui' && env.TELEGRAM_BOT_TOKEN != ''
+        run: printf '%s' "$TELEGRAM_BOT_TOKEN" | npx wrangler secret put TELEGRAM_BOT_TOKEN
+
+      # Robot Telegram : branche le webhook (avec la clé dérivée que le site
+      # vérifie, même calcul que server/telegram.ts), pose le profil public
+      # (shared/telegram-profil.json), la photo s'il n'en a pas, et affiche son
+      # état. Appels directs à Telegram : la protection anti-robots de Cloudflare
+      # ne les gêne pas. Ne bloque jamais la mise en ligne. La clé n'est jamais affichée.
+      - name: Robot Telegram (branchement et profil)
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui' && env.TELEGRAM_BOT_TOKEN != ''
+        continue-on-error: true
+        run: |
+          T="https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN"
+          P=shared/telegram-profil.json
+          URL=https://getdevuelta.com/api/telegram
+          appel() { curl -s -X POST -H 'Content-Type: application/json' -d "$2" "$T/$1" | jq -c '{ok, erreur: .description}'; }
+          CLE=$(printf 'devuelta-telegram:%s' "$TELEGRAM_BOT_TOKEN" | sha256sum | cut -c1-64)
+          echo "webhook : $(appel setWebhook "$(jq -nc --arg url "$URL" --arg cle "$CLE" '{url: $url, secret_token: $cle, allowed_updates: ["message", "callback_query"], max_connections: 1}')")"
+          for l in fr es en; do
+            echo "$l description : $(appel setMyDescription "$(jq -c --arg l "$l" '{description: .[$l].description, language_code: $l}' "$P")")"
+            echo "$l présentation : $(appel setMyShortDescription "$(jq -c --arg l "$l" '{short_description: .[$l].courte, language_code: $l}' "$P")")"
+            echo "$l commandes : $(appel setMyCommands "$(jq -c --arg l "$l" '{commands: .[$l].commandes, language_code: $l}' "$P")")"
+          done
+          # Application dans une autre langue : l'anglais.
+          echo "autres langues : $(appel setMyDescription "$(jq -c '{description: .en.description}' "$P")") $(appel setMyShortDescription "$(jq -c '{short_description: .en.courte}' "$P")") $(appel setMyCommands "$(jq -c '{commands: .en.commandes}' "$P")")"
+          # Photo de profil (spirale Devuelta) : seulement si le robot n'en a pas encore.
+          ID=$(curl -s "$T/getMe" | jq -r '.result.id // empty')
+          if [ -n "$ID" ] && [ "$(curl -s "$T/getUserProfilePhotos?user_id=$ID&limit=1" | jq -r '.result.total_count // 0')" = "0" ]; then
+            echo "photo : $(curl -s -F 'photo={"type":"static","photo":"attach://image"}' -F image=@public/reseaux/profil-1080.jpg "$T/setMyProfilePhoto" | jq -c '{ok, erreur: .description}')"
+          fi
+          NOM=$(curl -s "$T/getMe" | jq -r '.result.username // "?"')
+          ETAT=$(curl -s "$T/getWebhookInfo" | jq -c --arg url "$URL" '{branche: (.result.url == $url), en_attente: .result.pending_update_count, derniere_erreur: .result.last_error_message}')
+          echo "::notice title=Robot Telegram::@$NOM $ETAT"
 
       - name: Vérification du site en ligne
         if: env.CLOUDFLARE_API_TOKEN != '' && env.MISE_EN_LIGNE == 'oui'

@@ -10,6 +10,7 @@ import { del, get, patch, post } from '../api';
 import { extraireLiens } from '../liens';
 import { code, date, indexLangue, langue, t, tr } from '../i18n';
 import { Champ, Chargement, Copier, LienExterne, MessageErreur, Pastille, jourInput, useAction, useCharger, valeur } from '../ui';
+import { Conversation, type ConversationTelegram } from './Conversation';
 import { CATEGORIES, STATUTS } from './Referentiel';
 
 interface Suggestion {
@@ -110,6 +111,8 @@ interface Dossier {
   client_nom: string | null;
   client_email: string | null;
   client_whatsapp: string | null;
+  /** Conversation Telegram du client (identifiant, jamais un numéro). */
+  client_telegram: string | null;
   contact_prefere: string | null;
   publie_par_soi: number | null;
   mandat_signe_le: string | null;
@@ -139,6 +142,8 @@ interface Detail {
   paiement_actif: boolean;
   /** Clé de test Paystack : paiements fictifs. */
   paiement_test: boolean;
+  conversation: ConversationTelegram | null;
+  telegram_actif: boolean;
 }
 
 interface Paiement {
@@ -172,10 +177,11 @@ interface ModeleMeta {
   note: string;
 }
 
-const ONGLETS = ['resume', 'liens', 'demarches', 'courriers', 'notes', 'journal'] as const;
+const ONGLETS = ['resume', 'telegram', 'liens', 'demarches', 'courriers', 'notes', 'journal'] as const;
 type Onglet = (typeof ONGLETS)[number];
 const NOM_ONGLET: Record<Onglet, Parameters<typeof t>[0]> = {
   resume: 'ongletResume',
+  telegram: 'ongletTelegram',
   liens: 'ongletLiens',
   demarches: 'ongletDemarches',
   courriers: 'ongletCourriers',
@@ -186,7 +192,9 @@ const FERMES = ['resolu', 'clos', 'oriente'];
 
 export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
   const actif: Onglet = (ONGLETS as readonly string[]).includes(onglet ?? '') ? (onglet as Onglet) : 'resume';
-  const { donnees, err, enCours, recharger } = useCharger(() => get<Detail>(`/dossiers/${id}`), [id]);
+  // Ouvrir l'onglet Telegram marque les messages du client comme lus.
+  const lire = actif === 'telegram';
+  const { donnees, err, enCours, recharger } = useCharger(() => get<Detail>(`/dossiers/${id}${lire ? '?lire=1' : ''}`), [id, lire]);
   const [prefill, setPrefill] = useState<{ modele: string; contenu_id: string | null } | null>(null);
   if (enCours && !donnees) return <Chargement />;
   if (!donnees) return <MessageErreur texte={err} />;
@@ -194,6 +202,7 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
   const lang = langue.value;
   const ferme = FERMES.includes(d.statut);
   const nbBrouillons = donnees.courriers.filter((c) => c.statut === 'brouillon' || c.statut === 'valide').length;
+  const nonLus = actif === 'telegram' ? 0 : (donnees.conversation?.messages.filter((m) => m.sens === 'entrant' && !m.lu_le).length ?? 0);
   return (
     <div>
       <p>
@@ -226,14 +235,24 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
         </div>
       ))}
       <nav class="o-onglets">
-        {ONGLETS.map((o) => (
+        {ONGLETS.filter((o) => o !== 'telegram' || donnees.conversation).map((o) => (
           <a class={o === actif ? 'o-actif' : ''} href={`#/dossiers/${id}/${o}`}>
             {t(NOM_ONGLET[o])}
+            {o === 'telegram' && nonLus > 0 ? ` (${nonLus})` : ''}
             {o === 'courriers' && nbBrouillons > 0 ? ` (${nbBrouillons})` : ''}
             {o === 'liens' ? ` (${donnees.contenus.length})` : ''}
           </a>
         ))}
       </nav>
+      {actif === 'telegram' && donnees.conversation && (
+        <Conversation
+          conv={donnees.conversation}
+          envoi={`/dossiers/${id}/telegram`}
+          actif={donnees.telegram_actif}
+          pseudo={d.client_pseudo}
+          recharger={recharger}
+        />
+      )}
       {actif === 'resume' && <OngletResume d={donnees} recharger={recharger} ferme={ferme} preparer={(p) => { setPrefill(p); window.location.hash = `/dossiers/${id}/courriers`; }} />}
       {actif === 'liens' && (
         <OngletLiens
@@ -255,24 +274,52 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
 
 // Résumé ------------------------------------------------------------------------
 
-// Mandat signé : le client apprend qui suit son dossier ; il lui écrit en répondant par e-mail.
-function MessageOuverture({ x }: { x: Dossier }) {
+// Mandat signé : le client apprend qui suit son dossier. Venu par e-mail, il lui
+// écrit en répondant à l'e-mail ; venu par Telegram, dans la même conversation.
+function MessageOuverture({ x, telegramActif, recharger }: { x: Dossier; telegramActif: boolean; recharger: () => void }) {
+  const a = useAction();
+  const [envoye, setEnvoye] = useState(false);
   const lc: Lang = isLang(x.langue) ? x.langue : 'fr';
   if (!x.assigne_nom) return null;
-  const texte = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom }, lc);
+  const parTelegram = !!x.client_telegram;
+  const brut = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom }, lc, parTelegram ? 'telegram' : 'email');
+  const texte = lc === 'fr' ? typo(brut) : brut;
   return (
     <div class="o-encadre o-info">
       <strong>{t('ouvertureTitre')}</strong>
       <p>{t('ouvertureAide')}</p>
-      <pre class="o-pre">{lc === 'fr' ? typo(texte) : texte}</pre>
+      <pre class="o-pre">{texte}</pre>
       <p class="o-actions">
-        <Copier texte={lc === 'fr' ? typo(texte) : texte} libelle={t('copierMessage')} />
-        {x.client_email && (
+        <Copier texte={texte} libelle={t('copierMessage')} />
+        {x.client_email && !parTelegram && (
           <a class="o-bouton" href={`mailto:${x.client_email}`}>
             {t('email')}
           </a>
         )}
+        {parTelegram && !envoye && (
+          <button
+            class="o-bouton o-principal"
+            disabled={a.occupe || !telegramActif}
+            onClick={() =>
+              a.lancer(
+                () => post(`/dossiers/${x.id}/telegram`, { texte }),
+                () => {
+                  setEnvoye(true);
+                  recharger();
+                },
+              )
+            }
+          >
+            {tr('Envoyer sur Telegram', 'Enviar por Telegram', 'Send on Telegram')}
+          </button>
+        )}
       </p>
+      {envoye && (
+        <p class="o-encadre o-ok" role="status">
+          {t('reponseEnvoyee')}
+        </p>
+      )}
+      <MessageErreur texte={a.err} />
     </div>
   );
 }
@@ -481,7 +528,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
         </div>
       )}
       {d.signature?.signe_le && <SignatureFaite s={d.signature} />}
-      {x.mandat_signe_le && <MessageOuverture x={x} />}
+      {x.mandat_signe_le && <MessageOuverture x={x} telegramActif={d.telegram_actif} recharger={recharger} />}
       <TarifDossier d={d} />
       {x.mandat_signe_le && <PaiementDossier d={d} recharger={recharger} />}
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (
@@ -516,6 +563,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
             <option value="">—</option>
             <option value="whatsapp">WhatsApp</option>
             <option value="email">E-mail</option>
+            {x.client_telegram && <option value="telegram">Telegram</option>}
           </select>
         </Champ>
         <Champ label={t('langueDossier')}>

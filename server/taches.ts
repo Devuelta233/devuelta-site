@@ -2,8 +2,9 @@
 // Tout ce qui est préparé ici attend une validation humaine : rien ne part
 // vers l'extérieur, à l'exception des notifications vers nos propres téléphones,
 // des vérifications de liens (simples visites), du signalement des pages
-// du site aux moteurs de recherche (IndexNow) et de l'e-mail « paiement reçu »
-// quand Paystack confirme un paiement dont la notification s'était perdue.
+// du site aux moteurs de recherche (IndexNow), de l'e-mail « paiement reçu »
+// quand Paystack confirme un paiement dont la notification s'était perdue, et
+// du contrôle du robot Telegram (rebranché si besoin, aucun message envoyé).
 
 import guidesData from '../shared/guides.json';
 import plateformesData from '../shared/plateformes.json';
@@ -16,6 +17,7 @@ import { trouverModele, genererCourrier } from './outil/modeles';
 import { verifierEnAttente } from './paiement';
 import { notifier } from './push';
 import { ensureSchema } from './schema';
+import { controleTelegram } from './telegram';
 import { addDays, nowIso, type Env } from './util';
 
 const UA = `Mozilla/5.0 (compatible; DevueltaVerif/1.0; +${SITE_URL})`;
@@ -73,6 +75,9 @@ async function purgeAutomatique(db: D1Database) {
     db.prepare('DELETE FROM journal WHERE le <= ? AND dossier_id IS NULL').bind(addDays(now, -730)),
     // Preuve d'une rétractation : gardée 2 ans (délai pour agir d'un professionnel contre un consommateur).
     db.prepare('DELETE FROM retractations WHERE recue_le <= ?').bind(addDays(now, -730)),
+    // Telegram : conversations sans demande (questions abandonnées, accord refusé) effacées après 7 jours.
+    db.prepare('DELETE FROM telegram_conversations WHERE demande_id IS NULL AND maj_le <= ?').bind(addDays(now, -7)),
+    db.prepare('DELETE FROM telegram_envois WHERE le <= ?').bind(addDays(now, -7)),
   ]);
   return n;
 }
@@ -310,9 +315,20 @@ export async function compteursPour(db: D1Database, user: { id: string; role: st
     )
     .bind(...(admin ? [] : [user.id, user.id, user.langue]))
     .first<{ n: number }>();
+  // Messages Telegram pas encore lus par la personne qui suit la demande ou le dossier.
+  const messages = await db
+    .prepare(
+      `SELECT COUNT(*) AS n FROM messages m JOIN demandes dm ON dm.id = m.demande_id LEFT JOIN dossiers d ON d.id = dm.dossier_id
+        WHERE m.sens = 'entrant' AND m.lu_le IS NULL AND ${
+          admin ? '1 = 1' : '(COALESCE(d.assigne_a, dm.assigne_a) = ? OR (COALESCE(d.assigne_a, dm.assigne_a) IS NULL AND dm.langue = ?))'
+        }`,
+    )
+    .bind(...(admin ? [] : [user.id, user.langue]))
+    .first<{ n: number }>();
   return {
     retractations: retractations?.n ?? 0,
     demandes: demandes?.n ?? 0,
+    messages: messages?.n ?? 0,
     echeances: echeances?.n ?? 0,
     courriers: courriers?.n ?? 0,
     alertes: alertes?.n ?? 0,
@@ -326,7 +342,7 @@ async function resumeDuMatin(db: D1Database): Promise<number> {
   let n = 0;
   for (const u of users.results) {
     const c = await compteursPour(db, u);
-    if (c.retractations + c.demandes + c.echeances + c.courriers + c.alertes > 0) n += await notifier(db, [u.id]);
+    if (c.retractations + c.demandes + c.messages + c.echeances + c.courriers + c.alertes > 0) n += await notifier(db, [u.id]);
   }
   return n;
 }
@@ -354,6 +370,8 @@ export async function executerTaches(env: Env): Promise<Record<string, unknown>>
   await etape('liens_officiels', () => verifierLiensOfficiels(env.DB));
   // Paiements : si une notification de Paystack s'est perdue, on redemande l'état.
   await etape('paiements', () => verifierEnAttente(env));
+  // Robot Telegram : toujours branché ? Une erreur récente prévient les administrateurs.
+  await etape('telegram', () => controleTelegram(env));
   // En local, on ne signale rien aux moteurs : seul le vrai site le fait.
   await etape('indexnow', () => (env.LOCAL === '1' ? Promise.resolve('ignoré en local') : indexNow(env)));
   await etape('alertes_reapparition', () => (reapparus.length ? notifier(env.DB, reapparus) : Promise.resolve(0)));

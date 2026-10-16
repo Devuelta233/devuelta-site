@@ -1,0 +1,57 @@
+{
+  "_lisezmoi": "Profil public du robot Telegram de Devuelta (description, présentation courte, commandes), en trois langues. Posé automatiquement à chaque mise en ligne (étape « Robot Telegram » de .github/workflows/mise-en-ligne.yml). Limites de Telegram : description 512 caractères, présentation 120, commande 1 à 32 caractères (minuscules, chiffres, _), description de commande 1 à 256.",
+  "fr": {
+    "description": "On aide les gens à faire retirer d’Internet ce qui leur nuit : photo intime diffusée, faux profil, compte piraté, faux avis, adresse ou papiers exposés.\n\nLe robot pose trois questions, puis une vraie personne de l’équipe vous répond ici. Rien ne se fait sans votre accord.\n\nN’envoyez jamais d’images. On ne vous demandera jamais de mot de passe, de code reçu par SMS, ni de payer autrement que par le lien de paiement Devuelta.\n\nSite officiel : getdevuelta.com",
+    "courte": "On vous aide à faire retirer ce qui vous nuit en ligne. Une vraie personne vous répond. Site officiel : getdevuelta.com",
+    "commandes": [
+      {
+        "command": "start",
+        "description": "Commencer, ou voir où en est ma demande"
+      },
+      {
+        "command": "aide",
+        "description": "Aide et liens utiles"
+      },
+      {
+        "command": "langue",
+        "description": "Changer de langue"
+      }
+    ]
+  },
+  "es": {
+    "description": "Ayudamos a la gente a retirar de internet lo que le hace daño: foto íntima difundida, perfil falso, cuenta hackeada, reseñas falsas, dirección o documentos expuestos.\n\nEl robot hace tres preguntas y después te responde una persona real del equipo, aquí mismo. Nada se hace sin tu acuerdo.\n\nNunca envíes imágenes. Nunca te pediremos contraseñas, códigos recibidos por SMS, ni que pagues por otro medio que el enlace de pago de Devuelta.\n\nSitio oficial: getdevuelta.com",
+    "courte": "Te ayudamos a retirar lo que te hace daño en internet. Te responde una persona real. Sitio oficial: getdevuelta.com",
+    "commandes": [
+      {
+        "command": "start",
+        "description": "Empezar, o ver cómo va mi solicitud"
+      },
+      {
+        "command": "ayuda",
+        "description": "Ayuda y enlaces útiles"
+      },
+      {
+        "command": "idioma",
+        "description": "Cambiar de idioma"
+      }
+    ]
+  },
+  "en": {
+    "description": "We help people get harmful content removed from the internet: a shared intimate photo, a fake profile, a hacked account, fake reviews, an exposed address or ID.\n\nThe bot asks three questions, then a real person from the team replies to you, right here. Nothing happens without your agreement.\n\nNever send images. We will never ask you for a password, a code sent by text message, or to pay any other way than through the Devuelta payment link.\n\nOfficial site: getdevuelta.com",
+    "courte": "We help you get harmful content removed online. A real person replies to you. Official site: getdevuelta.com",
+    "commandes": [
+      {
+        "command": "start",
+        "description": "Begin, or see where my request stands"
+      },
+      {
+        "command": "help",
+        "description": "Help and useful links"
+      },
+      {
+        "command": "language",
+        "description": "Change language"
+      }
+    ]
+  }
+}

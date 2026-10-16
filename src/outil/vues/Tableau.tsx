@@ -5,7 +5,7 @@ import { texteAccuse } from '../../../shared/retractation';
 import { typo } from '../../../shared/typo';
 import { SITUATION_LABEL, isLang, isSituation } from '../../../shared/vocab';
 import { get, post } from '../api';
-import { code, date, langue, t } from '../i18n';
+import { code, date, langue, t, tr } from '../i18n';
 import { activerPush, estInstalle, estIos, etatPush, pushPossible } from '../push';
 import { Chargement, Copier, MessageErreur, Pastille, useAction, useCharger } from '../ui';
 
@@ -28,6 +28,8 @@ interface Donnees {
   echeances: Array<{ id: string; type: string; statut: string; echeance: string; destinataire: string | null; dossier_id: string; ref: string; client_pseudo: string; priorite: string; menace: number; assigne_nom: string | null; relance_preparee: number }>;
   dossiers: { ouverts: number; miens: number; sans_echeance: number };
   demandes: Array<{ id: string; ref: string; recue_le: string; langue: string; situation: string; menace: number; pseudo: string }>;
+  /** Conversations Telegram avec des messages du client pas encore lus. */
+  messages: Array<{ id: string; ref: string; pseudo: string; dossier_id: string | null; dossier_ref: string | null; n: number; dernier: string }>;
   courriers_a_traiter: Array<{ id: string; dossier_id: string; modele: string; langue: string; maj_le: string; automatique: number; ref: string }>;
   alertes_liens: Array<{ id: string; url: string; verif_alerte: string; verif_le: string; dossier_id: string; ref: string }>;
   alertes_connexion: Array<{ le: string; pays: string; ville: string; email: string; nom: string | null }>;
@@ -130,6 +132,7 @@ export function Tableau({ nom }: { nom: string }) {
     d.retractations.length === 0 &&
     urgentes.length === 0 &&
     d.demandes.length === 0 &&
+    d.messages.length === 0 &&
     d.courriers_a_traiter.length === 0 &&
     d.alertes_liens.length === 0 &&
     d.alertes_connexion.length === 0;
@@ -154,6 +157,25 @@ export function Tableau({ nom }: { nom: string }) {
             {d.alertes_connexion.map((a) => (
               <li>
                 {date(a.le, true)} — {a.nom ?? a.email} — {a.pays} {a.ville}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {d.messages.length > 0 && (
+        <section>
+          <h2>
+            {tr('Messages Telegram à lire', 'Mensajes de Telegram por leer', 'Telegram messages to read')} <Pastille ton="fort">{d.messages.reduce((n, m) => n + m.n, 0)}</Pastille>
+          </h2>
+          <ul class="o-liste">
+            {d.messages.map((m) => (
+              <li>
+                <a href={m.dossier_id ? `#/dossiers/${m.dossier_id}/telegram` : `#/demandes/${m.id}`}>
+                  <strong>{m.dossier_ref ?? m.ref}</strong> · {m.pseudo}
+                  <Pastille ton="info">{m.n}</Pastille>
+                  <span class="o-muet"> · {date(m.dernier, true)}</span>
+                </a>
               </li>
             ))}
           </ul>

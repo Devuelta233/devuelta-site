@@ -64,7 +64,37 @@ const AUTO: T3[] = typoProfonde([
   ['supprime définitivement les données arrivées à échéance ;', 'borra definitivamente los datos vencidos;', 'permanently deletes data past its retention period;'],
   ['vérifie que les liens officiels du site fonctionnent ;', 'comprueba que los enlaces oficiales del sitio funcionan;', 'checks that the site’s official links work;'],
   ['signale les pages nouvelles ou modifiées aux moteurs de recherche ;', 'avisa a los buscadores de las páginas nuevas o modificadas;', 'notifies search engines of new or updated pages;'],
+  ['vérifie que le robot Telegram est bien branché (alerte à l’administrateur sinon) ;', 'comprueba que el robot de Telegram está conectado (si no, alerta al administrador);', 'checks that the Telegram bot is connected (alerts the administrator if not);'],
   ['envoie l’alerte du matin sur les téléphones de l’équipe.', 'envía la alerta de la mañana a los teléfonos del equipo.', 'sends the morning alert to the team’s phones.'],
+]);
+
+// Demandes venues du robot Telegram officiel.
+const TELEGRAM: T3[] = typoProfonde([
+  [
+    'Elles arrivent dans Demandes, comme celles du site, avec la pastille « Telegram ». Le robot a déjà posé les 3 questions et recueilli l’accord, et il a dit à la personne qu’une vraie personne allait lui répondre dans la même conversation.',
+    'Llegan a Solicitudes, como las del sitio, con la etiqueta «Telegram». El robot ya hizo las 3 preguntas y obtuvo el acuerdo, y le dijo a la persona que una persona real le respondería en la misma conversación.',
+    'They arrive in Requests, like those from the site, with the “Telegram” label. The bot has already asked the 3 questions and collected consent, and told the person that a real person would reply in the same conversation.',
+  ],
+  [
+    'Répondez depuis la fiche : « Envoyer sur Telegram ». Le message part au nom de Devuelta. Le brouillon automatique est possible, mais relisez-le toujours avant d’envoyer.',
+    'Responde desde la ficha: «Enviar por Telegram». El mensaje sale en nombre de Devuelta. Puedes usar el borrador automático, pero revísalo siempre antes de enviarlo.',
+    'Reply from the request page: “Send on Telegram”. The message goes out on behalf of Devuelta. You can use the automatic draft, but always read it before sending.',
+  ],
+  [
+    'Ne demandez jamais d’images ni de fichiers sur Telegram : le robot les retire automatiquement. Les liens suffisent.',
+    'Nunca pidas imágenes ni archivos por Telegram: el robot los quita automáticamente. Los enlaces bastan.',
+    'Never ask for images or files on Telegram: the bot removes them automatically. Links are enough.',
+  ],
+  [
+    'Dossier ouvert : la conversation continue dans l’onglet « Telegram » du dossier, et le message d’ouverture peut partir directement sur Telegram.',
+    'Caso abierto: la conversación sigue en la pestaña «Telegram» del caso, y el mensaje de apertura puede enviarse directamente por Telegram.',
+    'Case opened: the conversation continues in the case’s “Telegram” tab, and the opening message can be sent straight on Telegram.',
+  ],
+  [
+    'Si l’outil indique que la personne a bloqué le robot, elle ne reçoit plus rien : attendez qu’elle réécrive.',
+    'Si la herramienta indica que la persona bloqueó el robot, ya no recibe nada: espera a que vuelva a escribir.',
+    'If the tool says the person blocked the bot, they no longer receive anything: wait until they write again.',
+  ],
 ]);
 
 const PARCOURS: T3[] = typoProfonde([
@@ -94,6 +124,7 @@ const TEXTES = typoProfonde({
     'Android: abre getdevuelta.com/outil en Chrome → menú ⋮ → «Instalar aplicación» (o «Añadir a pantalla de inicio») y luego Ajustes → recibir alertas.',
     'Android: open getdevuelta.com/outil in Chrome → ⋮ menu → “Install app” (or “Add to Home screen”), then Settings → get alerts.',
   ] as T3,
+  telegram: ['Les demandes qui arrivent par Telegram', 'Las solicitudes que llegan por Telegram', 'Requests that come through Telegram'] as T3,
   probleme: ['En cas de problème', 'Si hay un problema', 'If something goes wrong'] as T3,
   perte: [
     'Téléphone perdu, message suspect, connexion inhabituelle : prévenez l’administrateur tout de suite. Il réinitialise votre mot de passe et votre double authentification en une minute.',
@@ -132,6 +163,14 @@ export function Aide() {
         <h2>{TEXTES.auto[i]}</h2>
         <ul>
           {AUTO.map((r) => (
+            <li>{r[i]}</li>
+          ))}
+        </ul>
+      </section>
+      <section class="o-encadre">
+        <h2>{TEXTES.telegram[i]}</h2>
+        <ul>
+          {TELEGRAM.map((r) => (
             <li>{r[i]}</li>
           ))}
         </ul>

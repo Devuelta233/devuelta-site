@@ -10,6 +10,8 @@ export interface QuestionFaq {
   r: T3;
   /** Page du site qui détaille la réponse. */
   lien?: PageFixe;
+  /** Phrase ajoutée quand le robot Telegram est en service ({robot} = son nom). */
+  telegram?: T3;
 }
 
 export interface GroupeFaq {
@@ -94,6 +96,11 @@ export const FAQ: GroupeFaq[] = [
           fr: 'Nos e-mails viennent uniquement de team.devuelta@protonmail.com, ou de team@getdevuelta.com pour les messages automatiques. Nous ne vous contactons jamais en premier sur les réseaux sociaux. Nous ne demandons jamais d’images, de mot de passe ni de code reçu par SMS.',
           es: 'Nuestros correos solo vienen de team.devuelta@protonmail.com, o de team@getdevuelta.com para los mensajes automáticos. Nunca te contactamos primero por redes sociales. Nunca pedimos imágenes, contraseñas ni códigos recibidos por SMS.',
           en: 'Our emails only come from team.devuelta@protonmail.com, or team@getdevuelta.com for automatic messages. We never contact you first on social media. We never ask for images, passwords or codes sent to you by text message.',
+        },
+        telegram: {
+          fr: 'Sur Telegram, seul notre robot officiel @{robot} vous répond, et seulement si vous lui avez écrit d’abord.',
+          es: 'En Telegram, solo te responde nuestro robot oficial @{robot}, y solo si tú le escribiste primero.',
+          en: 'On Telegram, only our official bot @{robot} replies to you, and only if you wrote to it first.',
         },
       },
       {

@@ -1027,3 +1027,42 @@ details > summary {
   margin: 0.5rem 0;
   box-sizing: border-box;
 }
+
+/* Conversation Telegram ------------------------------------------------------ */
+
+.o-fil {
+  list-style: none;
+  margin: 0.75rem 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.o-msg {
+  max-width: 88%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--trait);
+  border-radius: var(--rayon);
+  background: #fff;
+}
+
+.o-msg-sortant {
+  align-self: flex-end;
+  border-color: #e6c3b3;
+  background: var(--terracotta-pale);
+}
+
+.o-msg-qui {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--texte-2);
+}
+
+.o-msg .o-texte {
+  margin: 0.25rem 0 0;
+}
+
+.o-reponse-courte {
+  min-height: 7rem;
+}

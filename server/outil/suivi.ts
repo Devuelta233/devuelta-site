@@ -10,9 +10,9 @@ import { FICHES, fichesAReverifier } from './plan';
 import type { Ctx } from './router';
 
 const TEXTES = {
-  fr: { titre: 'EraseOps', rien: 'Rien de nouveau.', retractations: 'rétractation(s) : accusé à envoyer', demandes: 'demande(s) à traiter', echeances: 'échéance(s) aujourd’hui ou dépassée(s)', courriers: 'courrier(s) à valider', alertes: 'lien(s) à vérifier', systeme: 'passage automatique à vérifier (Réglages)' },
-  es: { titre: 'EraseOps', rien: 'Nada nuevo.', retractations: 'desistimiento(s): acuse por enviar', demandes: 'solicitud(es) por atender', echeances: 'plazo(s) para hoy o vencido(s)', courriers: 'carta(s) por validar', alertes: 'enlace(s) por revisar', systeme: 'pase automático por revisar (Ajustes)' },
-  en: { titre: 'EraseOps', rien: 'Nothing new.', retractations: 'withdrawal(s): acknowledgement to send', demandes: 'request(s) to handle', echeances: 'deadline(s) due or overdue', courriers: 'letter(s) to validate', alertes: 'link(s) to check', systeme: 'automatic run to check (Settings)' },
+  fr: { titre: 'EraseOps', rien: 'Rien de nouveau.', retractations: 'rétractation(s) : accusé à envoyer', demandes: 'demande(s) à traiter', messages: 'message(s) Telegram non lu(s)', echeances: 'échéance(s) aujourd’hui ou dépassée(s)', courriers: 'courrier(s) à valider', alertes: 'lien(s) à vérifier', systeme: 'passage automatique à vérifier (Réglages)' },
+  es: { titre: 'EraseOps', rien: 'Nada nuevo.', retractations: 'desistimiento(s): acuse por enviar', demandes: 'solicitud(es) por atender', messages: 'mensaje(s) de Telegram sin leer', echeances: 'plazo(s) para hoy o vencido(s)', courriers: 'carta(s) por validar', alertes: 'enlace(s) por revisar', systeme: 'pase automático por revisar (Ajustes)' },
+  en: { titre: 'EraseOps', rien: 'Nothing new.', retractations: 'withdrawal(s): acknowledgement to send', demandes: 'request(s) to handle', messages: 'unread Telegram message(s)', echeances: 'deadline(s) due or overdue', courriers: 'letter(s) to validate', alertes: 'link(s) to check', systeme: 'automatic run to check (Settings)' },
 };
 
 /** Texte neutre affiché par le téléphone : aucun nom, aucun détail de dossier. */
@@ -22,6 +22,7 @@ export async function resumeNotification({ env, auth }: Ctx): Promise<Response> 
   const parts: string[] = [];
   if (c.retractations) parts.push(`${c.retractations} ${t.retractations}`);
   if (c.demandes) parts.push(`${c.demandes} ${t.demandes}`);
+  if (c.messages) parts.push(`${c.messages} ${t.messages}`);
   if (c.echeances) parts.push(`${c.echeances} ${t.echeances}`);
   if (c.courriers) parts.push(`${c.courriers} ${t.courriers}`);
   if (c.alertes) parts.push(`${c.alertes} ${t.alertes}`);

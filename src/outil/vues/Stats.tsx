@@ -112,8 +112,8 @@ export function Stats() {
               <span>{t('demandesRecues')}</span>
             </div>
             <div>
-              <strong>{ev('whatsapp')}</strong>
-              <span>{t('clicsWhatsapp')}</span>
+              <strong>{ev('telegram')}</strong>
+              <span>{tr('Clics vers Telegram', 'Clics hacia Telegram', 'Clicks to Telegram')}</span>
             </div>
             <div>
               <strong>{ev('email')}</strong>
@@ -145,8 +145,9 @@ export function Stats() {
                     [t('visites'), d.visites],
                     [t('diagnostics'), ev('diagnostic')],
                     [tr('Formulaires ouverts', 'Formularios abiertos', 'Forms opened'), ev('formulaire-ouvert')],
-                    [tr('Contacts directs (WhatsApp + e-mail)', 'Contactos directos (WhatsApp + correo)', 'Direct contacts (WhatsApp + email)'), ev('whatsapp') + ev('email')],
+                    [tr('Contacts directs (Telegram + e-mail)', 'Contactos directos (Telegram + correo)', 'Direct contacts (Telegram + email)'), ev('telegram') + ev('email') + ev('whatsapp')],
                     [t('demandesRecues'), d.demandes],
+                    [tr('… dont par Telegram', '… de ellas por Telegram', '… of which via Telegram'), ev('demande-telegram')],
                     [t('dossiersOuvertsPeriode'), d.dossiers],
                     [t('dossiersResolus'), d.dossiers_resolus],
                   ] as Array<[string, number]>

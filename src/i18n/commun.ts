@@ -72,6 +72,12 @@ export const C = {
     es: 'Cuando se abre tu caso, la persona que lo lleva te escribe por correo. Nuestros mensajes solo vienen de team.devuelta@protonmail.com, o de team@getdevuelta.com para los mensajes automáticos. Nunca te contactamos primero por redes sociales.',
     en: 'Once your case is opened, the person handling it writes to you by email. Our messages only come from team.devuelta@protonmail.com, or team@getdevuelta.com for automatic messages. We never contact you first on social media.',
   } as T3,
+  // Même rappel quand le robot Telegram est en service ({robot} = son nom).
+  suiviEmailTelegram: {
+    fr: 'Une fois votre dossier ouvert, la personne qui le suit vous écrit par e-mail, ou dans la conversation Telegram si vous nous y avez écrit. Nos e-mails viennent uniquement de team.devuelta@protonmail.com, ou de team@getdevuelta.com pour les messages automatiques ; sur Telegram, uniquement de notre robot officiel @{robot}, qui ne vous écrit jamais en premier. Nous ne vous contactons jamais en premier sur les réseaux sociaux.',
+    es: 'Cuando se abre tu caso, la persona que lo lleva te escribe por correo, o en la conversación de Telegram si nos escribiste por ahí. Nuestros correos solo vienen de team.devuelta@protonmail.com, o de team@getdevuelta.com para los mensajes automáticos; en Telegram, solo de nuestro robot oficial @{robot}, que nunca te escribe primero. Nunca te contactamos primero por redes sociales.',
+    en: 'Once your case is opened, the person handling it writes to you by email, or in the Telegram conversation if you wrote to us there. Our emails only come from team.devuelta@protonmail.com, or team@getdevuelta.com for automatic messages; on Telegram, only from our official bot @{robot}, which never writes to you first. We never contact you first on social media.',
+  } as T3,
   reponseEn: {
     fr: 'Réponse en français',
     es: 'Respuesta en español',

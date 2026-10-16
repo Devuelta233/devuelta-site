@@ -37,6 +37,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Statistiques de visite : nous comptons le nombre de pages vues par jour, avec la page, le site d’où vous venez (par exemple « google ») et le pays. Aucun cookie, aucun identifiant, et votre adresse IP n’est pas enregistrée.',
           'Formulaire « Confier mon dossier » : ce que vous y écrivez (un prénom ou pseudo, votre moyen de contact, votre situation, votre pays, les liens concernés, votre message et les cases cochées). Pour bloquer les envois abusifs, nous gardons une empreinte chiffrée de votre adresse IP, impossible à relire, supprimée avec la demande.',
+          'Robot Telegram officiel, si vous nous y écrivez : votre identifiant de conversation Telegram (un numéro attribué par Telegram, pas votre numéro de téléphone), votre prénom Telegram, la langue de votre application, vos réponses aux questions et les messages écrits que vous nous envoyez. Les photos, vidéos, fichiers et messages vocaux ne sont jamais gardés, et le robot les retire de la conversation.',
           'Formulaire « Renoncer au contrat ici » : votre nom, le numéro de dossier si vous l’indiquez, le moyen de contact choisi pour l’accusé de réception et votre message éventuel, avec la date et l’heure. La même empreinte chiffrée de l’adresse IP sert à bloquer les abus.',
           'Signature en ligne du devis et du mandat : le texte signé, le nom tapé, la date et l’heure, et la même empreinte chiffrée de l’adresse IP, gardés avec le dossier comme preuve de votre accord.',
           'Si vous devenez client·e : uniquement ce qui est nécessaire à votre dossier (identité, mandat signé, liens à faire retirer, échanges avec les sites). Nous ne vous demandons jamais d’images intimes.',
@@ -54,7 +55,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       {
         titre: 'Combien de temps',
         paras: [
-          'Demande sans suite : supprimée 30 jours après son traitement. Dossier : supprimé automatiquement 6 mois après sa clôture. Rétractation : supprimée avec le dossier, et au plus tard 2 ans après sa réception, pour servir de preuve. Statistiques : agrégées, sans donnée personnelle.',
+          'Demande sans suite : supprimée 30 jours après son traitement. Dossier : supprimé automatiquement 6 mois après sa clôture. Rétractation : supprimée avec le dossier, et au plus tard 2 ans après sa réception, pour servir de preuve. Conversation Telegram sans demande (questions abandonnées ou accord refusé) : effacée au plus tard 7 jours après le dernier message ; avec une demande, vos messages suivent la demande, puis le dossier. Statistiques : agrégées, sans donnée personnelle.',
         ],
       },
       {
@@ -62,6 +63,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Notre équipe de trois personnes, liées par un accord de confidentialité, avec double authentification. Notre hébergeur technique, Cloudflare, stocke les données pour notre compte et envoie nos e-mails automatiques (accusés de réception, liens de signature). Pour vous répondre plus vite, un outil d’intelligence artificielle fonctionnant chez Cloudflare peut préparer un brouillon de réponse à partir de votre demande : une personne de l’équipe le relit et le corrige toujours avant l’envoi. Nos autres e-mails passent par Proton Mail.',
           'Quand vous approuvez une demande, nous transmettons au site, à la plateforme ou à l’hébergeur concerné uniquement ce qui est nécessaire à cette demande. Si vous payez en ligne, le prestataire de paiement reçoit ce qui est nécessaire au paiement ; nous ne voyons jamais votre numéro de carte. Personne d’autre : aucune vente, aucune publicité.',
+          'Si vous nous écrivez sur Telegram, vos messages passent aussi par Telegram, qui les traite selon sa propre politique de confidentialité.',
           'Notre équipe travaille depuis le Ghana. Les données sont hébergées par Cloudflare ; la base de données principale se trouve en Europe de l’Ouest.',
         ],
       },
@@ -101,6 +103,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Estadísticas de visitas: contamos las páginas vistas por día, con la página, el sitio desde el que llegas (por ejemplo «google») y el país. Sin cookies, sin identificadores, y tu dirección IP no se guarda.',
           'Formulario «Confiar mi caso»: lo que escribes (un nombre o seudónimo, tu medio de contacto, tu situación, tu país, los enlaces, tu mensaje y las casillas marcadas). Para bloquear envíos abusivos guardamos una huella cifrada de tu dirección IP, imposible de leer, que se borra con la solicitud.',
+          'Robot oficial de Telegram, si nos escribes por ahí: tu identificador de conversación de Telegram (un número que asigna Telegram, no tu número de teléfono), tu nombre de Telegram, el idioma de tu aplicación, tus respuestas a las preguntas y los mensajes escritos que nos envíes. Las fotos, videos, archivos y mensajes de voz nunca se guardan, y el robot los quita de la conversación.',
           'Formulario «Desistir del contrato aquí»: tu nombre, el número de caso si lo indicas, el medio de contacto elegido para el acuse de recibo y tu mensaje, si lo hay, con la fecha y la hora. La misma huella cifrada de la dirección IP sirve para bloquear abusos.',
           'Firma en línea del presupuesto y del mandato: el texto firmado, el nombre escrito, la fecha y la hora, y la misma huella cifrada de la dirección IP, guardados con el caso como prueba de tu acuerdo.',
           'Si te conviertes en cliente: solo lo necesario para tu caso (identidad, mandato firmado, enlaces a retirar, intercambios con los sitios). Nunca te pedimos imágenes íntimas.',
@@ -117,13 +120,14 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       },
       {
         titre: 'Durante cuánto tiempo',
-        paras: ['Solicitud sin continuidad: se borra 30 días después de tratarla. Caso: se borra automáticamente 6 meses después de cerrarlo. Desistimiento: se borra con el caso y, como máximo, 2 años después de recibirlo, para servir de prueba. Estadísticas: agregadas, sin datos personales.'],
+        paras: ['Solicitud sin continuidad: se borra 30 días después de tratarla. Caso: se borra automáticamente 6 meses después de cerrarlo. Desistimiento: se borra con el caso y, como máximo, 2 años después de recibirlo, para servir de prueba. Conversación de Telegram sin solicitud (preguntas abandonadas o acuerdo rechazado): se borra como máximo 7 días después del último mensaje; con una solicitud, tus mensajes siguen a la solicitud y luego al caso. Estadísticas: agregadas, sin datos personales.'],
       },
       {
         titre: 'Quién tiene acceso',
         paras: [
           'Nuestro equipo de tres personas, con acuerdo de confidencialidad y verificación en dos pasos. Nuestro proveedor técnico, Cloudflare, almacena los datos por cuenta nuestra y envía nuestros correos automáticos (acuses de recibo, enlaces de firma). Para responderte más rápido, una herramienta de inteligencia artificial que funciona en Cloudflare puede preparar un borrador de respuesta a partir de tu solicitud: una persona del equipo siempre lo revisa y lo corrige antes de enviarlo. Nuestros demás correos pasan por Proton Mail.',
           'Cuando apruebas una solicitud, enviamos al sitio, a la plataforma o al proveedor de alojamiento correspondiente solo lo necesario para esa solicitud. Si pagas en línea, el proveedor de pagos recibe lo necesario para el pago; nunca vemos el número de tu tarjeta. Nadie más: ninguna venta, ninguna publicidad.',
+          'Si nos escribes por Telegram, tus mensajes también pasan por Telegram, que los trata según su propia política de privacidad.',
           'Nuestro equipo trabaja desde Ghana. Los datos están alojados en Cloudflare; la base de datos principal está en Europa occidental.',
         ],
       },
@@ -159,6 +163,7 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
         paras: [
           'Visit statistics: we count page views per day, with the page, the site you came from (for example "google") and the country. No cookies, no identifiers, and your IP address is not stored.',
           '"Get our help" form: what you write (a first name or nickname, how to contact you, your situation, your country, the links, your message and the boxes you tick). To block abuse we keep an encrypted fingerprint of your IP address, which cannot be read back and is deleted with the request.',
+          'Official Telegram bot, if you write to us there: your Telegram chat identifier (a number assigned by Telegram, not your phone number), your Telegram first name, the language of your app, your answers to the questions and the written messages you send us. Photos, videos, files and voice messages are never kept, and the bot removes them from the conversation.',
           '“Withdraw from contract here” form: your name, the case number if you give it, the contact channel chosen for the acknowledgement and your message if any, with the date and time. The same encrypted fingerprint of your IP address is used to block abuse.',
           'Online signature of the quote and authorization: the signed text, the name you typed, the date and time, and the same encrypted fingerprint of your IP address, kept with the case as proof of your agreement.',
           'If you become a client: only what your case needs (identity, signed mandate, links to remove, exchanges with the sites). We never ask you for intimate images.',
@@ -175,13 +180,14 @@ export const CONFIDENTIALITE: { seo: T3; meta: T3; h1: T3; sections: Record<'fr'
       },
       {
         titre: 'How long',
-        paras: ['Request not followed up: deleted 30 days after it is handled. Case: deleted automatically 6 months after it is closed. Withdrawal: deleted with the case, and at the latest 2 years after it is received, to serve as proof. Statistics: aggregated, no personal data.'],
+        paras: ['Request not followed up: deleted 30 days after it is handled. Case: deleted automatically 6 months after it is closed. Withdrawal: deleted with the case, and at the latest 2 years after it is received, to serve as proof. Telegram conversation without a request (questions left unfinished or consent declined): deleted at the latest 7 days after the last message; with a request, your messages follow the request, then the case. Statistics: aggregated, no personal data.'],
       },
       {
         titre: 'Who has access',
         paras: [
           'Our team of three, bound by a confidentiality agreement and using two-factor authentication. Our technical host, Cloudflare, stores the data on our behalf and sends our automatic emails (acknowledgements, signing links). To reply faster, an artificial intelligence tool running at Cloudflare may prepare a draft reply from your request: a member of the team always reads and corrects it before it is sent. Our other emails go through Proton Mail.',
           'When you approve a request, we send the site, platform or host concerned only what that request needs. If you pay online, the payment provider receives what the payment needs; we never see your card number. Nobody else: no selling, no advertising.',
+          'If you write to us on Telegram, your messages also go through Telegram, which handles them under its own privacy policy.',
           'Our team works from Ghana. Data is hosted by Cloudflare; the main database is located in Western Europe.',
         ],
       },

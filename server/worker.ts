@@ -1,6 +1,6 @@
 // Point d'entrée du moteur Devuelta (Cloudflare Worker).
 // - sert le site public et l'outil interne (fichiers statiques construits par Astro),
-// - répond aux API (/api/demande, /api/evenement, /api/outil/...),
+// - répond aux API (/api/demande, /api/evenement, /api/telegram, /api/outil/...),
 // - lance chaque matin le travail automatique (scheduled).
 
 import { SITE_HOST } from '../shared/site';
@@ -12,6 +12,7 @@ import { lireSignature, signer } from './signature';
 import { ensureSchema } from './schema';
 import { compterEvenementPublic, compterVue } from './stats';
 import { executerTaches } from './taches';
+import { webhookTelegram } from './telegram';
 import { HttpError, clientGeo, errorResponse, json, type Env } from './util';
 
 const CSP = [
@@ -83,6 +84,8 @@ export default {
         if (url.pathname === '/api/signature/signer') return await signer(request, env, ctx);
         if (url.pathname === '/api/paiement/paystack') return await webhookPaystack(request, env, ctx);
         if (url.pathname === '/api/paiement/verifier') return await verifierRetour(request, env);
+        // Robot Telegram officiel : messages et boutons envoyés par Telegram (clé vérifiée).
+        if (url.pathname === '/api/telegram') return await webhookTelegram(request, env, ctx);
         // Pays de la connexion (d'après Cloudflare), pour pré-remplir le formulaire. Rien n'est gardé.
         if (url.pathname === '/api/pays') return json({ pays: clientGeo(request).pays }, 200, { 'Cache-Control': 'private, no-store' });
         if (url.pathname === '/api/evenement') return await compterEvenementPublic(request, env);

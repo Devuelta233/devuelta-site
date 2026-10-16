@@ -19,6 +19,7 @@ import { newId } from '../crypto';
 import { getParamInt, journalStmt, nextRef } from '../db';
 import { HttpError, addDays, bool, cleanEmail, cleanPhone, cleanText, cleanUrls, json, nowIso, readJson } from '../util';
 import { dossierVisible, filtreDossiers, objetVisible } from './access';
+import { conversationPour } from './conversations';
 import { hoteDe, identifier, plateformeDuLien, type Identification } from './identification';
 import { ETAPE_DU_MODELE, contientMarqueur, genererCourrier, resumeModeles, trouverModele } from './modeles';
 import { fichesPour, planPourLien } from './plan';
@@ -107,10 +108,27 @@ export async function tableau({ env, auth }: Ctx): Promise<Response> {
     .bind(...f.binds, addDays(now, 7))
     .all();
   const retractations = await enAttente(env.DB, auth.user);
+  // Messages Telegram pas encore lus (demande ou dossier suivis par cette personne).
+  const fm =
+    auth.user.role === 'admin'
+      ? { sql: '1 = 1', binds: [] as unknown[] }
+      : {
+          sql: '(COALESCE(d.assigne_a, dm.assigne_a) = ? OR (COALESCE(d.assigne_a, dm.assigne_a) IS NULL AND dm.langue = ?))',
+          binds: [auth.user.id, auth.user.langue] as unknown[],
+        };
+  const messages = await env.DB.prepare(
+    `SELECT dm.id, dm.ref, dm.pseudo, dm.dossier_id, d.ref AS dossier_ref, COUNT(*) AS n, MAX(m.le) AS dernier
+       FROM messages m JOIN demandes dm ON dm.id = m.demande_id LEFT JOIN dossiers d ON d.id = dm.dossier_id
+      WHERE m.sens = 'entrant' AND m.lu_le IS NULL AND ${fm.sql}
+      GROUP BY dm.id ORDER BY dernier DESC LIMIT 20`,
+  )
+    .bind(...fm.binds)
+    .all();
   return json({
     ok: true,
     maintenant: now,
     retractations,
+    messages: messages.results,
     echeances: echeances.results,
     dossiers: { ouverts: ouverts?.n ?? 0, miens: ouverts?.miens ?? 0, sans_echeance: ouverts?.sans_echeance ?? 0 },
     demandes: demandes.results,
@@ -167,7 +185,8 @@ export async function liste({ env, url, auth }: Ctx): Promise<Response> {
     `SELECT d.id, d.ref, d.statut, d.priorite, d.menace, d.langue, d.pays, d.situation, d.client_pseudo,
             d.assigne_a, u.nom AS assigne_nom, d.prochaine_echeance, d.maj_le, d.cree_le, d.purger_apres,
             (SELECT COUNT(*) FROM contenus c WHERE c.dossier_id = d.id) AS nb_contenus,
-            (SELECT COUNT(*) FROM contenus c WHERE c.dossier_id = d.id AND c.statut = 'retire') AS nb_retires
+            (SELECT COUNT(*) FROM contenus c WHERE c.dossier_id = d.id AND c.statut = 'retire') AS nb_retires,
+            (SELECT COUNT(*) FROM messages m WHERE m.demande_id = d.demande_id AND m.sens = 'entrant' AND m.lu_le IS NULL) AS non_lus
        FROM dossiers d LEFT JOIN utilisateurs u ON u.id = d.assigne_a
       WHERE ${where.join(' AND ')}
       ORDER BY CASE WHEN d.statut IN ('resolu','clos','oriente') THEN 1 ELSE 0 END,
@@ -189,7 +208,7 @@ function lireIdent(row: Record<string, unknown>): Identification | null {
   }
 }
 
-export async function detail({ env, params, auth }: Ctx): Promise<Response> {
+export async function detail({ env, params, auth, url }: Ctx): Promise<Response> {
   const d = await dossierVisible(env.DB, auth.user, params.id);
   const [contenus, etapes, courriers, notes] = await Promise.all([
     env.DB.prepare('SELECT * FROM contenus WHERE dossier_id = ? ORDER BY ajoute_le').bind(d.id).all<Record<string, unknown>>(),
@@ -216,6 +235,12 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     ? await env.DB.prepare('SELECT nom FROM utilisateurs WHERE id = ?').bind(d.assigne_a).first<{ nom: string }>()
     : null;
   const retractations = await pourDossier(env.DB, d.id);
+  // Client venu par Telegram : le fil des messages écrits, pour lui répondre dans la même conversation.
+  // Les messages ne passent « lus » que si l'onglet Telegram est affiché (?lire=1).
+  const conversation =
+    d.client_telegram && d.demande_id
+      ? await conversationPour(env.DB, String(d.demande_id), auth.user, d.assigne_a, url.searchParams.get('lire') === '1')
+      : null;
   const signature = await signaturePourDossier(env.DB, d.id);
   const paiements = await paiementsPourDossier(env.DB, d.id);
   const liens = contenus.results.map((c) => {
@@ -259,6 +284,8 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     paiements,
     paiement_actif: paiementActif(env),
     paiement_test: modeTest(env),
+    conversation,
+    telegram_actif: !!env.TELEGRAM_BOT_TOKEN,
   });
 }
 
@@ -364,7 +391,7 @@ export async function modifier({ request, env, params, auth }: Ctx): Promise<Res
   if ('client_email' in body) set('client_email', cleanEmail(body.client_email, false));
   if ('client_whatsapp' in body) set('client_whatsapp', cleanPhone(body.client_whatsapp, false));
   if ('contact_prefere' in body) {
-    set('contact_prefere', body.contact_prefere === 'whatsapp' ? 'whatsapp' : body.contact_prefere === 'email' ? 'email' : null);
+    set('contact_prefere', ['email', 'whatsapp', 'telegram'].includes(String(body.contact_prefere)) ? String(body.contact_prefere) : null);
   }
   if ('publie_par_soi' in body) set('publie_par_soi', body.publie_par_soi === true ? 1 : body.publie_par_soi === false ? 0 : null);
   for (const col of ['mandat_signe_le', 'identite_verifiee_le', 'consentement_recherche_le'] as const) {

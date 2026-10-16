@@ -4,9 +4,9 @@
 import Base from '../layouts/Base.astro';
 import Contacts from '../components/Contacts.astro';
 import { C } from '../i18n/commun';
-import { FAQ, FAQ_PAGE } from '../i18n/faq';
+import { FAQ, FAQ_PAGE, type QuestionFaq } from '../i18n/faq';
 import { page, versionsPage } from '../i18n/routes';
-import { SITE_URL } from '../config';
+import { SITE_URL, TELEGRAM_ROBOT } from '../config';
 import type { Lang } from '../../shared/vocab';
 
 interface Props {
@@ -14,6 +14,8 @@ interface Props {
 }
 const { lang } = Astro.props;
 const chemin = page('faq', lang);
+// Réponse complète : la phrase sur Telegram n'apparaît que si le robot est en service.
+const reponse = (x: QuestionFaq) => (TELEGRAM_ROBOT && x.telegram ? `${x.r[lang]} ${x.telegram[lang].replace('{robot}', TELEGRAM_ROBOT)}` : x.r[lang]);
 const jsonld = [
   {
     '@context': 'https://schema.org',
@@ -24,7 +26,7 @@ const jsonld = [
       g.questions.map((x) => ({
         '@type': 'Question',
         name: x.q[lang],
-        acceptedAnswer: { '@type': 'Answer', text: x.r[lang] },
+        acceptedAnswer: { '@type': 'Answer', text: reponse(x) },
       })),
     ),
   },
@@ -50,7 +52,7 @@ const jsonld = [
           <details>
             <summary>{x.q[lang]}</summary>
             <p>
-              {x.r[lang]}
+              {reponse(x)}
               {x.lien && (
                 <>
                   {' '}

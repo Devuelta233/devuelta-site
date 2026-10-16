@@ -5,6 +5,7 @@ import { SITUATION_LABEL, isPays, isSituation, nomPays } from '../../../shared/v
 import { get, post } from '../api';
 import { code, date, langue, t, tr } from '../i18n';
 import { Champ, Chargement, Copier, LienExterne, MessageErreur, Pastille, aller, useAction, useCharger, valeur } from '../ui';
+import { Conversation, type ConversationTelegram } from './Conversation';
 
 interface Ligne {
   id: string;
@@ -20,6 +21,7 @@ interface Ligne {
   assigne_nom: string | null;
   dossier_id: string | null;
   nb_liens: number;
+  non_lus: number;
 }
 
 const FILTRES = ['nouvelle', 'convertie', 'orientee', 'refusee', 'spam', ''];
@@ -65,6 +67,8 @@ export function ListeDemandes() {
               <a href={`#/demandes/${d.id}`}>
                 <strong>{d.ref}</strong> · {d.pseudo} · {isSituation(d.situation) ? SITUATION_LABEL[d.situation][lang] : d.situation}
                 {d.menace ? <Pastille ton="alerte">{t('menace')}</Pastille> : null}
+                {d.contact_mode === 'telegram' ? <Pastille ton="info">Telegram</Pastille> : null}
+                {d.non_lus > 0 ? <Pastille ton="fort">{tr(`${d.non_lus} message(s) non lu(s)`, `${d.non_lus} mensaje(s) sin leer`, `${d.non_lus} unread message(s)`)}</Pastille> : null}
                 <span class="o-muet">
                   {' '}
                   · {d.langue.toUpperCase()} · {date(d.recue_le, true)} · {d.nb_liens} {t('liens').toLowerCase()} · {d.assigne_nom ?? t('personne')}
@@ -104,7 +108,10 @@ interface Detail {
 }
 
 export function DetailDemande({ id }: { id: string }) {
-  const { donnees, err, enCours, recharger } = useCharger(() => get<{ demande: Detail }>(`/demandes/${id}`), [id]);
+  const { donnees, err, enCours, recharger } = useCharger(
+    () => get<{ demande: Detail; conversation: ConversationTelegram | null; telegram_actif: boolean }>(`/demandes/${id}`),
+    [id],
+  );
   const equipe = useCharger(() => get<{ equipe: Array<{ id: string; nom: string; langue: string }> }>('/equipe'));
   const [note, setNote] = useState('');
   const a = useAction();
@@ -138,7 +145,13 @@ export function DetailDemande({ id }: { id: string }) {
         <dd>{d.publie_par_soi === null ? t('inconnu') : d.publie_par_soi ? t('oui') : t('non')}</dd>
         <dt>{t('contactPar')}</dt>
         <dd>
-          {d.contact_mode === 'whatsapp' ? 'WhatsApp' : t('email')} : <span class="o-mono">{d.contact_valeur}</span>
+          {d.contact_mode === 'telegram' ? (
+            tr('Telegram (notre robot officiel)', 'Telegram (nuestro robot oficial)', 'Telegram (our official bot)')
+          ) : (
+            <>
+              {d.contact_mode === 'whatsapp' ? 'WhatsApp' : t('email')} : <span class="o-mono">{d.contact_valeur}</span>
+            </>
+          )}
         </dd>
         {d.plateformes.length > 0 && (
           <>
@@ -147,6 +160,7 @@ export function DetailDemande({ id }: { id: string }) {
           </>
         )}
       </dl>
+      {d.contact_mode !== 'telegram' && (
       <div class="o-actions">
         {d.contact_mode === 'whatsapp' ? (
           <LienExterne href={`https://wa.me/${tel}`}>
@@ -158,8 +172,19 @@ export function DetailDemande({ id }: { id: string }) {
           </a>
         )}
       </div>
+      )}
       <p class="o-muet">{t('rappelDiscretion')}</p>
       {d.contact_mode === 'email' && d.statut !== 'convertie' && <Reponse id={d.id} />}
+      {donnees.conversation && (
+        <Conversation
+          conv={donnees.conversation}
+          envoi={`/demandes/${d.id}/telegram`}
+          brouillon={d.statut !== 'convertie' ? `/demandes/${d.id}/brouillon` : undefined}
+          actif={donnees.telegram_actif}
+          pseudo={d.pseudo}
+          recharger={recharger}
+        />
+      )}
       {d.liens.length > 0 && (
         <section>
           <h2>{t('liens')}</h2>

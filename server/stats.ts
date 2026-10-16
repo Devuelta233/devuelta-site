@@ -59,7 +59,7 @@ export function compterVue(request: Request, response: Response, env: Env, ctx: 
   );
 }
 
-const EVENEMENTS = new Set(['diagnostic', 'whatsapp', 'email', 'formulaire-ouvert']);
+const EVENEMENTS = new Set(['diagnostic', 'whatsapp', 'email', 'telegram', 'formulaire-ouvert']);
 
 export async function compterEvenementPublic(request: Request, env: Env): Promise<Response> {
   if (request.method !== 'POST') throw new HttpError(405, 'methode-non-autorisee');

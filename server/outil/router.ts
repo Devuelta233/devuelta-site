@@ -25,6 +25,7 @@ import * as retractations from './retractations';
 import * as paiements from './paiements';
 import * as signatures from './signatures';
 import * as suivi from './suivi';
+import * as telegram from './telegram';
 
 export interface Ctx {
   request: Request;
@@ -83,6 +84,7 @@ add('POST', '/demandes/:id/statut', 'complete', demandes.changerStatut);
 add('POST', '/demandes/:id/assigner', 'complete', demandes.assigner);
 add('POST', '/demandes/:id/brouillon', 'complete', assistant.brouillon);
 add('POST', '/demandes/:id/repondre', 'complete', assistant.repondre);
+add('POST', '/demandes/:id/telegram', 'complete', telegram.repondreDemande);
 
 add('GET', '/dossiers', 'complete', dossiers.liste);
 add('POST', '/dossiers', 'complete', dossiers.creer);
@@ -109,6 +111,7 @@ add('GET', '/referentiel', 'complete', suivi.referentiel);
 add('POST', '/retractations/:id/accuse', 'complete', retractations.accuser);
 add('POST', '/dossiers/:id/signature', 'complete', signatures.creer);
 add('POST', '/dossiers/:id/paiement', 'complete', paiements.demander);
+add('POST', '/dossiers/:id/telegram', 'complete', telegram.repondreDossier);
 
 // Notifications, suivi, équipe et réglages ----------------------------------------
 add('GET', '/notifications/resume', 'complete', suivi.resumeNotification);
@@ -118,6 +121,8 @@ add('POST', '/push/desabonner', 'complete', suivi.desabonner);
 add('POST', '/push/tester', 'complete', suivi.testerNotification);
 add('GET', '/statistiques', 'admin', suivi.statistiques);
 add('GET', '/systeme', 'admin', suivi.systeme);
+add('GET', '/telegram/etat', 'admin', telegram.etat);
+add('POST', '/telegram/brancher', 'admin', telegram.brancher);
 
 add('GET', '/equipe', 'complete', equipe.liste);
 add('POST', '/equipe', 'admin', equipe.creer);

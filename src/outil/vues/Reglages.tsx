@@ -1,6 +1,7 @@
 // Réglages : mon compte, alertes sur ce téléphone, connexions, et pour
 // l'administrateur : conservation des données, attribution, sauvegarde,
-// suppression des données échues, état du fonctionnement automatique.
+// suppression des données échues, état du fonctionnement automatique et du
+// robot Telegram.
 
 import { useEffect, useState } from 'preact/hooks';
 import { LANGS, type Lang } from '../../../shared/vocab';
@@ -357,6 +358,78 @@ function EtatSysteme() {
   );
 }
 
+interface EtatTelegram {
+  actif: boolean;
+  robot?: string;
+  branche?: boolean;
+  en_attente?: number;
+  derniere_erreur?: string | null;
+  derniere_erreur_le?: string | null;
+  injoignable?: boolean;
+}
+
+// Robot Telegram officiel : branché ? dernière erreur ? (administrateur seulement)
+function RobotTelegram() {
+  const { donnees: e, err, enCours, recharger } = useCharger(() => get<EtatTelegram>('/telegram/etat'));
+  const a = useAction();
+  if (enCours && !e) return <Chargement />;
+  if (!e) return <MessageErreur texte={err} />;
+  const recente = !!e.derniere_erreur_le && Date.now() - new Date(e.derniere_erreur_le).getTime() < 48 * 3600 * 1000;
+  return (
+    <section class="o-encadre">
+      <h2>{tr('Robot Telegram', 'Robot de Telegram', 'Telegram bot')}</h2>
+      {!e.actif ? (
+        <p class="o-muet">
+          {tr(
+            'Pas encore activé : la clé du robot (secret GitHub TELEGRAM_BOT_TOKEN) n’est pas posée.',
+            'Aún no activado: falta la clave del robot (secreto de GitHub TELEGRAM_BOT_TOKEN).',
+            'Not activated yet: the bot key (GitHub secret TELEGRAM_BOT_TOKEN) is not set.',
+          )}
+        </p>
+      ) : e.injoignable ? (
+        <p class="o-encadre o-alerte">{tr('Telegram ne répond pas pour l’instant.', 'Telegram no responde por ahora.', 'Telegram is not responding right now.')}</p>
+      ) : (
+        <>
+          <p>
+            <LienExterne href={`https://t.me/${e.robot}`}>@{e.robot}</LienExterne>{' '}
+            {e.branche ? (
+              <Pastille ton="ok">{tr('branché', 'conectado', 'connected')}</Pastille>
+            ) : (
+              <Pastille ton="alerte">{tr('pas branché', 'no conectado', 'not connected')}</Pastille>
+            )}
+          </p>
+          {e.derniere_erreur && recente && (
+            <div class="o-encadre o-alerte">
+              <p>
+                {tr('Dernière erreur signalée par Telegram', 'Último error indicado por Telegram', 'Last error reported by Telegram')} ({date(e.derniere_erreur_le, true)}) :{' '}
+                <span class="o-mono">{e.derniere_erreur}</span>
+              </p>
+              <p>
+                {tr(
+                  'Si l’erreur parle de 403, la protection anti-robots de Cloudflare (Bot Fight Mode) bloque Telegram : désactivez-la dans Cloudflare.',
+                  'Si el error habla de 403, la protección antibots de Cloudflare (Bot Fight Mode) bloquea Telegram: desactívala en Cloudflare.',
+                  'If the error mentions 403, Cloudflare’s anti-bot protection (Bot Fight Mode) is blocking Telegram: turn it off in Cloudflare.',
+                )}
+              </p>
+            </div>
+          )}
+          {!!e.en_attente && (
+            <p class="o-muet">
+              {e.en_attente} {tr('envoi(s) en attente chez Telegram', 'envío(s) en espera en Telegram', 'update(s) waiting at Telegram')}
+            </p>
+          )}
+          <p class="o-actions">
+            <button class="o-bouton" disabled={a.occupe} onClick={() => a.lancer(() => post('/telegram/brancher'), recharger)}>
+              {tr('Rebrancher le robot', 'Volver a conectar el robot', 'Reconnect the bot')}
+            </button>
+          </p>
+          <MessageErreur texte={a.err} />
+        </>
+      )}
+    </section>
+  );
+}
+
 export function Reglages({ utilisateur, surDeconnexion }: { utilisateur: Utilisateur; surDeconnexion: () => void }) {
   const admin = utilisateur.role === 'admin';
   return (
@@ -367,6 +440,7 @@ export function Reglages({ utilisateur, surDeconnexion }: { utilisateur: Utilisa
       {admin && (
         <>
           <EtatSysteme />
+          <RobotTelegram />
           <ParametresAdmin />
           <Purge />
           <Sauvegarde />

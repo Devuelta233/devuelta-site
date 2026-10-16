@@ -3,6 +3,12 @@
 // migration à la fin de la liste, on ne modifie jamais une migration passée.
 // Dates en ISO 8601 UTC (texte). Identifiants : UUID texte.
 
+// Colonnes de la table des demandes, recopiées telles quelles par la migration 9.
+const COLONNES_DEMANDES =
+  'id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo, contact_mode, contact_valeur, menace, ' +
+  'deja_signale, publie_par_soi, consentement_version, consentement_le, statut, assigne_a, traitee_par, traitee_le, ' +
+  'note_traitement, dossier_id, ip_hash';
+
 export const MIGRATIONS: string[][] = [
   // 1 — schéma initial
   [
@@ -315,6 +321,76 @@ export const MIGRATIONS: string[][] = [
   // 8 — paiements faits avec une clé de test Paystack (aucun vrai argent) :
   // marqués pour ne jamais être confondus avec un vrai paiement.
   [`ALTER TABLE paiements ADD COLUMN test INTEGER NOT NULL DEFAULT 0`],
+  // 9 — robot Telegram officiel : les demandes peuvent arriver par Telegram, et
+  // l'équipe répond dans la même conversation. SQLite ne sait pas modifier une
+  // contrainte CHECK : la table des demandes est recréée à l'identique, avec
+  // « telegram » en plus dans les moyens de contact (aucune donnée ne change).
+  [
+    `CREATE TABLE demandes_v9 (
+      id TEXT PRIMARY KEY,
+      ref TEXT NOT NULL UNIQUE,
+      recue_le TEXT NOT NULL,
+      langue TEXT NOT NULL,
+      pays TEXT,
+      situation TEXT NOT NULL,
+      plateformes TEXT,
+      liens TEXT,
+      message TEXT,
+      pseudo TEXT NOT NULL,
+      contact_mode TEXT NOT NULL CHECK (contact_mode IN ('email','whatsapp','telegram')),
+      contact_valeur TEXT NOT NULL,
+      menace INTEGER NOT NULL DEFAULT 0,
+      deja_signale INTEGER NOT NULL DEFAULT 0,
+      publie_par_soi INTEGER,
+      consentement_version TEXT NOT NULL,
+      consentement_le TEXT NOT NULL,
+      statut TEXT NOT NULL DEFAULT 'nouvelle',
+      assigne_a TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
+      traitee_par TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
+      traitee_le TEXT,
+      note_traitement TEXT,
+      dossier_id TEXT,
+      ip_hash TEXT
+    )`,
+    `INSERT INTO demandes_v9 (${COLONNES_DEMANDES}) SELECT ${COLONNES_DEMANDES} FROM demandes`,
+    `DROP TABLE demandes`,
+    `ALTER TABLE demandes_v9 RENAME TO demandes`,
+    `CREATE INDEX IF NOT EXISTS idx_demandes_statut ON demandes(statut, recue_le)`,
+    `CREATE INDEX IF NOT EXISTS idx_demandes_ip ON demandes(ip_hash, recue_le)`,
+    // Identifiant de la conversation Telegram du client (jamais un numéro de téléphone).
+    `ALTER TABLE dossiers ADD COLUMN client_telegram TEXT`,
+    // Où en est chaque personne qui écrit au robot (questions, accord, demande).
+    `CREATE TABLE IF NOT EXISTS telegram_conversations (
+      chat_id TEXT PRIMARY KEY,
+      langue TEXT NOT NULL DEFAULT 'fr',
+      etape TEXT NOT NULL,
+      situation TEXT,
+      menace INTEGER,
+      texte_attente TEXT,
+      demande_id TEXT REFERENCES demandes(id) ON DELETE SET NULL,
+      bloque INTEGER NOT NULL DEFAULT 0,
+      accuse_le TEXT,
+      notifie_le TEXT,
+      cree_le TEXT NOT NULL,
+      maj_le TEXT NOT NULL
+    )`,
+    `CREATE INDEX IF NOT EXISTS idx_tg_conversations_demande ON telegram_conversations (demande_id)`,
+    // Messages écrits échangés avec le client (jamais d'image), effacés avec la demande.
+    `CREATE TABLE IF NOT EXISTS messages (
+      id TEXT PRIMARY KEY,
+      demande_id TEXT NOT NULL REFERENCES demandes(id) ON DELETE CASCADE,
+      canal TEXT NOT NULL DEFAULT 'telegram',
+      sens TEXT NOT NULL CHECK (sens IN ('entrant','sortant')),
+      texte TEXT NOT NULL,
+      le TEXT NOT NULL,
+      auteur TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
+      lu_le TEXT
+    )`,
+    `CREATE INDEX IF NOT EXISTS idx_messages_demande ON messages (demande_id, le)`,
+    `CREATE INDEX IF NOT EXISTS idx_messages_non_lus ON messages (sens, lu_le)`,
+    // Numéros des envois de Telegram déjà traités (un envoi répété n'est traité qu'une fois).
+    `CREATE TABLE IF NOT EXISTS telegram_envois (update_id INTEGER PRIMARY KEY, le TEXT NOT NULL)`,
+  ],
 ];
 
 export const VERSION_SCHEMA = MIGRATIONS.length;

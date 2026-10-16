@@ -5,6 +5,7 @@ import { newId } from '../crypto';
 import { journalStmt, nextRef } from '../db';
 import { HttpError, cleanText, json, nowIso, readJson } from '../util';
 import { filtreDemandes, peutVoirDemande } from './access';
+import { SQL_NON_LUS, conversationPour } from './conversations';
 import { identifierTousLesLiens } from './dossiers';
 import { hoteDe, plateformeDuLien } from './identification';
 import type { Ctx } from './router';
@@ -37,10 +38,10 @@ export async function liste({ env, url, auth }: Ctx): Promise<Response> {
   const rows = await env.DB.prepare(
     `SELECT dm.id, dm.ref, dm.recue_le, dm.langue, dm.pays, dm.situation, dm.pseudo, dm.contact_mode, dm.menace,
             dm.statut, dm.assigne_a, u.nom AS assigne_nom, dm.dossier_id,
-            json_array_length(dm.liens) AS nb_liens
+            json_array_length(dm.liens) AS nb_liens, ${SQL_NON_LUS} AS non_lus
        FROM demandes dm LEFT JOIN utilisateurs u ON u.id = dm.assigne_a
       WHERE ${where.join(' AND ')}
-      ORDER BY CASE dm.statut WHEN 'nouvelle' THEN 0 ELSE 1 END, dm.menace DESC, dm.recue_le DESC
+      ORDER BY (${SQL_NON_LUS} > 0) DESC, CASE dm.statut WHEN 'nouvelle' THEN 0 ELSE 1 END, dm.menace DESC, dm.recue_le DESC
       LIMIT 300`,
   )
     .bind(...binds)
@@ -58,7 +59,17 @@ export async function charger(ctx: Ctx) {
 
 export async function detail(ctx: Ctx): Promise<Response> {
   const r = await charger(ctx);
-  return json({ ok: true, demande: parseDemande(r) });
+  // Demande venue de Telegram : le fil des messages écrits, pour répondre dans la même conversation.
+  let conversation = null;
+  if (r.contact_mode === 'telegram') {
+    let responsable = (r.assigne_a as string | null) ?? null;
+    if (r.dossier_id) {
+      const d = await ctx.env.DB.prepare('SELECT assigne_a FROM dossiers WHERE id = ?').bind(r.dossier_id).first<{ assigne_a: string | null }>();
+      responsable = d?.assigne_a ?? responsable;
+    }
+    conversation = await conversationPour(ctx.env.DB, String(r.id), ctx.auth.user, responsable);
+  }
+  return json({ ok: true, demande: parseDemande(r), conversation, telegram_actif: !!ctx.env.TELEGRAM_BOT_TOKEN });
 }
 
 export async function changerStatut(ctx: Ctx): Promise<Response> {
@@ -131,8 +142,8 @@ export async function convertir(ctx: Ctx): Promise<Response> {
   const stmts = [
     ctx.env.DB.prepare(
       `INSERT INTO dossiers (id, ref, cree_le, maj_le, cree_par, statut, priorite, menace, langue, pays, situation,
-         assigne_a, client_pseudo, client_email, client_whatsapp, contact_prefere, publie_par_soi, resume, demande_id)
-       VALUES (?,?,?,?,?,'ouvert',?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+         assigne_a, client_pseudo, client_email, client_whatsapp, client_telegram, contact_prefere, publie_par_soi, resume, demande_id)
+       VALUES (?,?,?,?,?,'ouvert',?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     ).bind(
       id,
       ref,
@@ -148,6 +159,7 @@ export async function convertir(ctx: Ctx): Promise<Response> {
       r.pseudo,
       r.contact_mode === 'email' ? r.contact_valeur : null,
       r.contact_mode === 'whatsapp' ? r.contact_valeur : null,
+      r.contact_mode === 'telegram' ? r.contact_valeur : null,
       r.contact_mode,
       r.publie_par_soi ?? null,
       r.message ?? null,
