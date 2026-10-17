@@ -966,7 +966,7 @@ export const AIDE_GRATUITE = {
     },
     {
       pays: 'FR',
-      nom: '3018 (association e-Enfance)',
+      nom: '3018 – e-Enfance',
       quoi: {
         fr: 'Écoute et conseils face au harcèlement et aux violences en ligne. Le 3018 peut aussi faire passer en priorité une demande de retrait auprès des grands réseaux sociaux.',
         es: 'Escucha y consejos ante el acoso y la violencia en línea. El 3018 también puede hacer llegar con prioridad una solicitud de retirada a las grandes redes sociales.',
@@ -1032,7 +1032,7 @@ export const AIDE_GRATUITE = {
     },
     {
       pays: 'ES',
-      nom: 'Canal prioritario de l’AEPD',
+      nom: 'AEPD – Canal prioritario',
       quoi: {
         fr: 'Pour demander le retrait urgent de photos, vidéos ou audios sexuels ou violents publiés sans accord, dans les cas graves. L’AEPD est l’autorité espagnole de protection des données.',
         es: 'Para pedir la retirada urgente de fotos, vídeos o audios sexuales o violentos publicados sin permiso, en los casos graves. La AEPD es la autoridad española de protección de datos.',
