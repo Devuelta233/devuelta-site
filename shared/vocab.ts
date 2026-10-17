@@ -86,7 +86,7 @@ export function isSituation(v: unknown): v is Situation {
 }
 
 // Pays proposés. « ZZ » = autre pays.
-export const PAYS = ['FR', 'BE', 'CH', 'ES', 'MX', 'AR', 'CO', 'US', 'GB', 'CA', 'GH', 'CI', 'ZZ'] as const;
+export const PAYS = ['FR', 'BE', 'CH', 'ES', 'MX', 'AR', 'CO', 'US', 'GB', 'CA', 'GH', 'NG', 'CI', 'ZZ'] as const;
 export type Pays = (typeof PAYS)[number];
 // Union européenne (avec les régions ultrapériphériques françaises) : droits du DSA,
 // droit de rétractation.
@@ -115,7 +115,8 @@ export const PAYS_LABEL: Record<Pays, T3> = {
   GB: { fr: 'Royaume-Uni', es: 'Reino Unido', en: 'United Kingdom' },
   CA: { fr: 'Canada', es: 'Canadá', en: 'Canada' },
   GH: { fr: 'Ghana', es: 'Ghana', en: 'Ghana' },
-  CI: { fr: "Côte d’Ivoire", es: 'Costa de Marfil', en: "Côte d’Ivoire" },
+  NG: { fr: 'Nigeria', es: 'Nigeria', en: 'Nigeria' },
+  CI:{ fr: "Côte d’Ivoire", es: 'Costa de Marfil', en: "Côte d’Ivoire" },
   ZZ: { fr: 'Autre pays', es: 'Otro país', en: 'Another country' },
 };
 
