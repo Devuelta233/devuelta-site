@@ -899,7 +899,7 @@ export const AIDE_GRATUITE = {
       nom: 'StopNCII.org',
       quoi: {
         fr: 'Aide à bloquer la publication de vos images intimes sur les plateformes partenaires, sans que l’image quitte votre téléphone.',
-        es: 'Ayuda a bloquear la publicación de tus imágenes íntimas en las plataformas asociadas, sin que la imagen salga de tu teléfono.',
+        es: 'Ayuda a bloquear la publicación de tus imágenes íntimas en las plataformas asociadas. La imagen no sale de tu teléfono.',
         en: 'Helps block your intimate images from being posted on partner platforms, without the image leaving your phone.',
       },
       pourQui: {
@@ -936,7 +936,7 @@ export const AIDE_GRATUITE = {
       },
       pourQui: {
         fr: 'Toute personne. Pas pour une affaire privée avec quelqu’un que vous connaissez : adressez-vous alors à la police ou à la gendarmerie.',
-        es: 'Cualquier persona. No sirve para un asunto privado con alguien que conoces: en ese caso, acude a la policía o a la gendarmería.',
+        es: 'Cualquier persona. No sirve para un asunto privado con alguien que conoces: en ese caso, acude a la policía.',
         en: 'Anyone. Not for a private matter with someone you know: in that case, go to the police or the gendarmerie.',
       },
       url: 'https://www.internet-signalement.gouv.fr/',
@@ -1089,7 +1089,7 @@ export const AIDE_GRATUITE = {
       url: 'https://takeitdown.ftc.gov/',
       autres: {
         fr: 'Depuis le 19 mai 2026, les plateformes concernées doivent retirer ces images sous 48 heures après une demande valable.',
-        es: 'Desde el 19 de mayo de 2026, las plataformas afectadas deben retirar esas imágenes en 48 horas tras una solicitud válida.',
+        es: 'Desde el 19 de mayo de 2026, las plataformas afectadas deben retirarlas en 48 horas tras una solicitud válida.',
         en: 'Since 19 May 2026, covered platforms must remove these images within 48 hours of a valid request.',
       },
       gratuit: false,

@@ -15,6 +15,8 @@ const { lang } = Astro.props;
 const date = dateLisible(A.verifie_le, lang);
 const hote = (u: string) => new URL(u).hostname.replace(/^www\./, '');
 const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
+// Deux-points : espace avant en français seulement.
+const dp = lang === 'fr' ? ' :' : ':';
 // Les pays les plus proches du lecteur d'abord, selon la langue de la page.
 const ORDRE: Record<Lang, AideGratuite['pays'][]> = {
   fr: ['INTL', 'FR', 'ES', 'GB', 'US', 'GH'],
@@ -40,9 +42,6 @@ const groupes = ORDRE[lang]
   <article class="page">
     <h1>{A.h1[lang]}</h1>
     <p class="fiche-meta"><span>{C.verifieLe[lang]} <strong>{date}</strong></span></p>
-    <div class="encadre sombre" role="note">
-      <p><strong>{URGENCE.danger[lang]}</strong></p>
-    </div>
     <p class="lede">{A.intro[lang]}</p>
 
     <nav aria-label={URGENCE.choisirPays[lang]}>
@@ -61,13 +60,13 @@ const groupes = ORDRE[lang]
               {s.nom}
             </h3>
             <p>{s.quoi[lang]}</p>
-            <p><strong>{GUIDES.pourQui[lang]} :</strong> {s.pourQui[lang]}</p>
+            <p><strong>{GUIDES.pourQui[lang]}{dp}</strong> {s.pourQui[lang]}</p>
             {s.telephone && (
               <p><a class="tel" href={telHref(s.telephone)}>{s.telephone}</a></p>
             )}
             {s.autres && <p>{s.autres[lang]}</p>}
             <p>
-              <a href={s.url} rel="noopener noreferrer" target="_blank">{URGENCE.site[lang]} : {hote(s.url)}</a>
+              <a href={s.url} rel="noopener noreferrer" target="_blank">{URGENCE.site[lang]}{dp} {hote(s.url)}</a>
             </p>
           </div>
         ))}
