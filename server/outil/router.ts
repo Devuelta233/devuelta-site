@@ -25,6 +25,7 @@ import * as retractations from './retractations';
 import * as paiements from './paiements';
 import * as signatures from './signatures';
 import * as suivi from './suivi';
+import * as telegram from './telegram';
 
 export interface Ctx {
   request: Request;
@@ -83,6 +84,8 @@ add('POST', '/demandes/:id/statut', 'complete', demandes.changerStatut);
 add('POST', '/demandes/:id/assigner', 'complete', demandes.assigner);
 add('POST', '/demandes/:id/brouillon', 'complete', assistant.brouillon);
 add('POST', '/demandes/:id/repondre', 'complete', assistant.repondre);
+add('GET', '/demandes/:id/telegram', 'complete', telegram.filDemande);
+add('POST', '/demandes/:id/telegram', 'complete', telegram.repondreDemande);
 
 add('GET', '/dossiers', 'complete', dossiers.liste);
 add('POST', '/dossiers', 'complete', dossiers.creer);
@@ -92,6 +95,8 @@ add('POST', '/dossiers/:id/clore', 'complete', dossiers.clore);
 add('POST', '/dossiers/:id/rouvrir', 'complete', dossiers.rouvrir);
 add('GET', '/dossiers/:id/journal', 'complete', dossiers.journalDossier);
 add('POST', '/dossiers/:id/notes', 'complete', dossiers.ajouterNote);
+add('GET', '/dossiers/:id/telegram', 'complete', telegram.filDossier);
+add('POST', '/dossiers/:id/telegram', 'complete', telegram.repondreDossier);
 add('POST', '/dossiers/:id/contenus', 'complete', dossiers.ajouterContenus);
 add('PATCH', '/contenus/:id', 'complete', dossiers.modifierContenu);
 add('DELETE', '/contenus/:id', 'complete', dossiers.supprimerContenu);

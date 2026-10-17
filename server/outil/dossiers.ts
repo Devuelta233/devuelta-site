@@ -25,6 +25,7 @@ import { fichesPour, planPourLien } from './plan';
 import { enAttente, pourDossier } from './retractations';
 import { pourDossier as signaturePourDossier } from './signatures';
 import { pourDossier as paiementsPourDossier } from './paiements';
+import { pourDossier as telegramPourDossier } from './telegram';
 import { modeTest, paiementActif } from '../paiement';
 import type { Ctx } from './router';
 
@@ -218,6 +219,7 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
   const retractations = await pourDossier(env.DB, d.id);
   const signature = await signaturePourDossier(env.DB, d.id);
   const paiements = await paiementsPourDossier(env.DB, d.id);
+  const telegram = await telegramPourDossier(env.DB, d.id);
   const liens = contenus.results.map((c) => {
     const ident = lireIdent(c);
     const row: Record<string, unknown> = { ...c, ident };
@@ -259,6 +261,8 @@ export async function detail({ env, params, auth }: Ctx): Promise<Response> {
     paiements,
     paiement_actif: paiementActif(env),
     paiement_test: modeTest(env),
+    // Conversation Telegram (demande venue du robot) : le fil s'affiche dans le dossier.
+    telegram,
   });
 }
 

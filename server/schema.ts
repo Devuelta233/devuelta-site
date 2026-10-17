@@ -266,7 +266,8 @@ export const MIGRATIONS: string[][] = [
     `CREATE INDEX IF NOT EXISTS idx_retractations_dossier ON retractations (dossier_id)`,
     `CREATE INDEX IF NOT EXISTS idx_retractations_attente ON retractations (accuse_le, recue_le)`,
   ],
-  // 5 — numéro WhatsApp de chaque membre : donné au client seulement à l'ouverture de son dossier
+  // 5 — numéro WhatsApp de chaque membre : donné au client seulement à l'ouverture de son dossier.
+  // Plus utilisé depuis le 16/10/2026 (Devuelta n'utilise plus WhatsApp) ; colonne gardée.
   [`ALTER TABLE utilisateurs ADD COLUMN whatsapp TEXT`],
   // 6 — signature électronique du devis et du mandat (lien personnel envoyé au client)
   [
@@ -385,9 +386,11 @@ export const MIGRATIONS: string[][] = [
       sens TEXT NOT NULL CHECK (sens IN ('client','equipe')),
       texte TEXT NOT NULL,
       auteur TEXT REFERENCES utilisateurs(id) ON DELETE SET NULL,
-      le TEXT NOT NULL
+      le TEXT NOT NULL,
+      lu_le TEXT
     )`,
     `CREATE INDEX idx_telegram_messages ON telegram_messages (demande_id, le)`,
+    `CREATE INDEX idx_telegram_non_lus ON telegram_messages (sens, lu_le)`,
   ],
 ];
 

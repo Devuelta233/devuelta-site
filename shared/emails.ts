@@ -51,13 +51,19 @@ export function phrasePrix(e: Estimation, lang: Lang, aConfirmer = true): string
   return `${n} lien${n > 1 ? 's' : ''}, ${m(e.total)} au total : ${m(e.ouverture)} pour démarrer, le reste seulement pour les liens retirés.${aConfirmer ? ' Ce prix vous est confirmé après lecture de votre demande.' : ''}`;
 }
 
-/** Juste après l'envoi du formulaire « Confier mon dossier ». */
+/**
+ * Juste après l'envoi du formulaire « Confier mon dossier ». Le robot Telegram
+ * reprend le même texte (canal « telegram » : la réponse arrive ici, sur Telegram,
+ * avec le lien du diagnostic gratuit).
+ */
 export function emailDemandeRecue(
-  d: { pseudo: string; ref: string; menace: boolean; guide?: string | null; estimation?: Estimation | null },
+  d: { pseudo: string; ref: string; menace: boolean; guide?: string | null; estimation?: Estimation | null; diagnostic?: string | null },
   lang: Lang,
+  canal: 'email' | 'telegram' = 'email',
 ): Courriel {
   const guides = d.guide ?? `${SITE_URL}${QUE_FAIRE[lang]}`;
   const prix = d.estimation ? phrasePrix(d.estimation, lang) : null;
+  const ici = canal === 'telegram';
   if (lang === 'es') {
     return {
       sujet: `Devuelta: solicitud ${d.ref} recibida`,
@@ -69,7 +75,7 @@ export function emailDemandeRecue(
         `Tu referencia: ${d.ref}`,
         '',
         '¿Y ahora qué?',
-        '1. Una persona del equipo lee tu solicitud y te responde por correo, normalmente en 24 a 48 horas.',
+        `1. Una persona del equipo lee tu solicitud y te responde ${ici ? 'aquí' : 'por correo'}, normalmente en 24 a 48 horas.`,
         '2. Te dice qué se puede hacer y cuánto cuesta. Nada empieza sin tu acuerdo.',
         ...(d.menace
           ? ['', 'Nos has indicado que hay amenazas. Si te piden dinero, no pagues. No respondas más y guarda capturas de pantalla. Miramos tu solicitud con prioridad.']
@@ -77,6 +83,7 @@ export function emailDemandeRecue(
         '',
         'Para avanzar ya:',
         `– La guía gratuita para tu situación: ${guides}`,
+        ...(d.diagnostic ? [`– El diagnóstico gratuito, en 3 minutos: ${d.diagnostic}`] : []),
         ...(prix ? [`– Si prefieres que nos ocupemos nosotros: ${prix}`] : []),
         '',
         ANTI_ARNAQUE.es,
@@ -98,7 +105,7 @@ export function emailDemandeRecue(
         `Your reference: ${d.ref}`,
         '',
         'What happens next?',
-        '1. A member of our team reads your request and replies by email, usually within 24 to 48 hours.',
+        `1. A member of our team reads your request and replies ${ici ? 'here' : 'by email'}, usually within 24 to 48 hours.`,
         '2. They tell you what is possible and what it costs. Nothing starts without your agreement.',
         ...(d.menace
           ? ['', 'You told us about threats. If someone asks you for money, do not pay. Stop replying, and keep screenshots. We are looking at your request first.']
@@ -106,6 +113,7 @@ export function emailDemandeRecue(
         '',
         'To move forward right now:',
         `– The free guide for your situation: ${guides}`,
+        ...(d.diagnostic ? [`– The free 3-minute diagnostic: ${d.diagnostic}`] : []),
         ...(prix ? [`– If you would rather we handle it: ${prix}`] : []),
         '',
         ANTI_ARNAQUE.en,
@@ -126,7 +134,7 @@ export function emailDemandeRecue(
       `Votre référence : ${d.ref}`,
       '',
       'Et maintenant ?',
-      '1. Une personne de l’équipe lit votre demande et vous répond par e-mail, en général sous 24 à 48 heures.',
+      `1. Une personne de l’équipe lit votre demande et vous répond ${ici ? 'ici' : 'par e-mail'}, en général sous 24 à 48 heures.`,
       '2. Elle vous dit ce qui est possible et combien cela coûte. Rien ne démarre sans votre accord.',
       ...(d.menace
         ? ['', 'Vous nous avez signalé des menaces. Si on vous demande de l’argent, ne payez pas. Ne répondez plus, et gardez des captures d’écran. Nous regardons votre demande en priorité.']
@@ -134,6 +142,7 @@ export function emailDemandeRecue(
       '',
       'Pour avancer dès maintenant :',
       `– Le guide gratuit pour votre situation : ${guides}`,
+      ...(d.diagnostic ? [`– Le diagnostic gratuit, en 3 minutes : ${d.diagnostic}`] : []),
       ...(prix ? [`– Si vous préférez que nous nous en occupions : ${prix}`] : []),
       '',
       ANTI_ARNAQUE.fr,

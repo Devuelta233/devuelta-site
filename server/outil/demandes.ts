@@ -36,8 +36,9 @@ export async function liste({ env, url, auth }: Ctx): Promise<Response> {
   }
   const rows = await env.DB.prepare(
     `SELECT dm.id, dm.ref, dm.recue_le, dm.langue, dm.pays, dm.situation, dm.pseudo, dm.contact_mode, dm.menace,
-            dm.statut, dm.assigne_a, u.nom AS assigne_nom, dm.dossier_id,
-            json_array_length(dm.liens) AS nb_liens
+            dm.statut, dm.assigne_a, u.nom AS assigne_nom, dm.dossier_id, dm.source,
+            json_array_length(dm.liens) AS nb_liens,
+            (SELECT COUNT(*) FROM telegram_messages m WHERE m.demande_id = dm.id AND m.sens = 'client' AND m.lu_le IS NULL) AS nb_non_lus
        FROM demandes dm LEFT JOIN utilisateurs u ON u.id = dm.assigne_a
       WHERE ${where.join(' AND ')}
       ORDER BY CASE dm.statut WHEN 'nouvelle' THEN 0 ELSE 1 END, dm.menace DESC, dm.recue_le DESC

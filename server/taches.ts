@@ -16,6 +16,7 @@ import { trouverModele, genererCourrier } from './outil/modeles';
 import { verifierEnAttente } from './paiement';
 import { notifier } from './push';
 import { ensureSchema } from './schema';
+import { purgerConversations } from './telegram';
 import { addDays, nowIso, type Env } from './util';
 
 const UA = `Mozilla/5.0 (compatible; DevueltaVerif/1.0; +${SITE_URL})`;
@@ -41,6 +42,9 @@ export async function elementsAPurger(db: D1Database) {
 export async function purgerElements(db: D1Database, dossiers: string[], demandes: string[], par: string | null) {
   const stmts: D1PreparedStatement[] = [];
   for (const id of dossiers) {
+    // Fil Telegram et conversation partent avec la demande (cascade), et sont aussi effacés ici.
+    stmts.push(db.prepare('DELETE FROM telegram_messages WHERE demande_id IN (SELECT id FROM demandes WHERE dossier_id = ?)').bind(id));
+    stmts.push(db.prepare('DELETE FROM telegram_conversations WHERE demande_id IN (SELECT id FROM demandes WHERE dossier_id = ?)').bind(id));
     stmts.push(db.prepare('DELETE FROM demandes WHERE dossier_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM retractations WHERE dossier_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM signatures WHERE dossier_id = ?').bind(id));
@@ -49,6 +53,8 @@ export async function purgerElements(db: D1Database, dossiers: string[], demande
     stmts.push(db.prepare('UPDATE journal SET details = NULL WHERE dossier_id = ?').bind(id));
   }
   for (const id of demandes) {
+    stmts.push(db.prepare('DELETE FROM telegram_messages WHERE demande_id = ?').bind(id));
+    stmts.push(db.prepare('DELETE FROM telegram_conversations WHERE demande_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM demandes WHERE id = ?').bind(id));
     stmts.push(db.prepare("UPDATE journal SET details = NULL WHERE objet = 'demande' AND objet_id = ?").bind(id));
   }
@@ -66,6 +72,8 @@ async function purgeAutomatique(db: D1Database) {
     dus.demandes.map((d) => d.id),
     null,
   );
+  // Robot Telegram : parcours abandonnés (même délai qu'une demande sans suite).
+  await purgerConversations(db);
   const now = nowIso();
   await db.batch([
     db.prepare('DELETE FROM sessions WHERE expire_le <= ?').bind(now),

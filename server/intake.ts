@@ -64,6 +64,8 @@ export interface NouvelleDemande {
   ipHash: string | null;
   /** Conversation Telegram où l'équipe répond (demandes venues du robot). */
   telegramChatId?: string | null;
+  /** Texte d'accord accepté (par défaut : celui du formulaire du site). */
+  consentementVersion?: string;
 }
 
 /**
@@ -97,7 +99,7 @@ export async function enregistrerDemande(env: Env, ctx: ExecutionContext, d: Nou
       d.menace ? 1 : 0,
       d.dejaSignale ? 1 : 0,
       d.publieParSoi,
-      CONSENTEMENT_VERSION,
+      d.consentementVersion ?? CONSENTEMENT_VERSION,
       now,
       assigne,
       d.ipHash,
