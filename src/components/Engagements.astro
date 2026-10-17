@@ -1,5 +1,7 @@
 ---
 import { C } from '../i18n/commun';
+import { FAUX_SAUVETEURS } from '../i18n/pages';
+import { page } from '../i18n/routes';
 import type { Lang } from '../../shared/vocab';
 interface Props {
   lang: Lang;
@@ -11,4 +13,5 @@ const { lang } = Astro.props;
   <ul class="coche">
     {C.engagements[lang].map((e) => <li>{e}</li>)}
   </ul>
+  <p class="petit"><a href={page('faux-sauveteurs', lang)}>{FAUX_SAUVETEURS.lien[lang]} →</a></p>
 </section>

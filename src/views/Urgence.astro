@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Contacts from '../components/Contacts.astro';
 import { C } from '../i18n/commun';
-import { URGENCE } from '../i18n/pages';
+import { AIDE_GRATUITE, URGENCE } from '../i18n/pages';
 import { SITUATIONS_TEXTE } from '../i18n/situations';
 import { page, versionsPage } from '../i18n/routes';
 import { dateLisible, URGENCES_VERIFIE_LE, urgencesInternational, urgencesPays, type Ressource } from '../data';
@@ -108,6 +108,7 @@ const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
         ))}
       </section>
     )}
+    <p>{AIDE_GRATUITE.renvoi[lang]} <a href={page('aide-gratuite', lang)}>{AIDE_GRATUITE.h1[lang]} →</a></p>
     {date && <p class="petit">{C.verifieLe[lang]} {date}.</p>}
 
     <section class="encadre" aria-labelledby="traces">

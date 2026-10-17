@@ -1,0 +1,110 @@
+---
+// L'aide gratuite d'abord : services publics ou associatifs, vérifiés sur leur
+// site officiel, groupés par pays. Devuelta n'intervient qu'ensuite.
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { AIDE_GRATUITE as A, ARTICLES, FAUX_SAUVETEURS, GUIDES, PLATEFORME_PAGE, URGENCE, type AideGratuite } from '../i18n/pages';
+import { page, versionsPage } from '../i18n/routes';
+import { dateLisible } from '../data';
+import { PAYS_LABEL, type Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const date = dateLisible(A.verifie_le, lang);
+const hote = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+const telHref = (t: string) => `tel:${t.replace(/[^\d+]/g, '')}`;
+// Les pays les plus proches du lecteur d'abord, selon la langue de la page.
+const ORDRE: Record<Lang, AideGratuite['pays'][]> = {
+  fr: ['INTL', 'FR', 'ES', 'GB', 'US', 'GH'],
+  es: ['INTL', 'ES', 'FR', 'GB', 'US', 'GH'],
+  en: ['INTL', 'GB', 'US', 'GH', 'FR', 'ES'],
+};
+const groupes = ORDRE[lang]
+  .map((code) => ({
+    code,
+    nom: code === 'INTL' ? A.international[lang] : PAYS_LABEL[code][lang],
+    services: A.services.filter((s) => s.pays === code),
+  }))
+  .filter((g) => g.services.length > 0);
+---
+<Base
+  lang={lang}
+  titre={A.seo[lang]}
+  description={A.meta[lang]}
+  chemin={page('aide-gratuite', lang)}
+  versions={versionsPage('aide-gratuite')}
+  ariane={[{ nom: A.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{A.h1[lang]}</h1>
+    <p class="fiche-meta"><span>{C.verifieLe[lang]} <strong>{date}</strong></span></p>
+    <div class="encadre sombre" role="note">
+      <p><strong>{URGENCE.danger[lang]}</strong></p>
+    </div>
+    <p class="lede">{A.intro[lang]}</p>
+
+    <nav aria-label={URGENCE.choisirPays[lang]}>
+      <ul class="pays-liste">
+        {groupes.map((g) => <li><a href={`#aide-${g.code.toLowerCase()}`}>{g.nom}</a></li>)}
+      </ul>
+    </nav>
+
+    {groupes.map((g) => (
+      <section id={`aide-${g.code.toLowerCase()}`} aria-labelledby={`t-aide-${g.code}`}>
+        <h2 id={`t-aide-${g.code}`}>{g.nom}</h2>
+        {g.services.map((s) => (
+          <div class="ressource">
+            <h3 class="sans-marge">
+              {s.gratuit && <span class="etiquette">{URGENCE.gratuit[lang]}</span>}
+              {s.nom}
+            </h3>
+            <p>{s.quoi[lang]}</p>
+            <p><strong>{GUIDES.pourQui[lang]} :</strong> {s.pourQui[lang]}</p>
+            {s.telephone && (
+              <p><a class="tel" href={telHref(s.telephone)}>{s.telephone}</a></p>
+            )}
+            {s.autres && <p>{s.autres[lang]}</p>}
+            <p>
+              <a href={s.url} rel="noopener noreferrer" target="_blank">{URGENCE.site[lang]} : {hote(s.url)}</a>
+            </p>
+          </div>
+        ))}
+      </section>
+    ))}
+
+    <p class="petit">{A.autresPays[lang]} <a href={page('urgence', lang)}>{C.nav.urgence[lang]} →</a></p>
+
+    <section class="encadre alerte" aria-labelledby="mineurs">
+      <h2 id="mineurs" class="sans-marge">{PLATEFORME_PAGE.mineursTitre[lang]}</h2>
+      <p>{A.mineurs[lang]}</p>
+    </section>
+
+    <section class="encadre" aria-labelledby="quand">
+      <h2 id="quand" class="sans-marge">{A.quandTitre[lang]}</h2>
+      <p>{A.quand[lang]}</p>
+      <p>{A.fauxSauveteurs[lang]} <a href={page('faux-sauveteurs', lang)}>{FAUX_SAUVETEURS.h1[lang]} →</a></p>
+      <div class="actions">
+        <a class="bouton principal" href={page('diagnostic', lang)}>
+          {C.ctaDiagnostic[lang]}
+          <small>{C.ctaDiagnosticSous[lang]}</small>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="sources">
+      <h2 id="sources">{ARTICLES.sources[lang]}</h2>
+      <p>{A.sourcesIntro[lang]}</p>
+      <ul class="sources">
+        {A.sources.map((s) => (
+          <li>
+            <a href={s.url} rel="noopener noreferrer" target="_blank">{s.titre[lang]}</a> <span class="petit">({hote(s.url)})</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>

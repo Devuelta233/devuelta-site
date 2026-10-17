@@ -2,6 +2,7 @@
 import type { APIRoute } from 'astro';
 import { SITE_URL } from '../config';
 import { guides } from '../data';
+import { AIDE_GRATUITE, FAUX_SAUVETEURS } from '../i18n/pages';
 import { SITUATIONS_ORDRE, SITUATIONS_TEXTE } from '../i18n/situations';
 import { guidePath, page, situationPath } from '../i18n/routes';
 import { LANGS } from '../../shared/vocab';
@@ -24,9 +25,11 @@ export const GET: APIRoute = () => {
     l.push('');
     l.push(`- [Diagnostic](${SITE_URL}${page('diagnostic', lang)})`);
     l.push(`- [Urgent help / helplines](${SITE_URL}${page('urgence', lang)})`);
+    l.push(`- [${AIDE_GRATUITE.h1[lang]}](${SITE_URL}${page('aide-gratuite', lang)})`);
     for (const s of SITUATIONS_ORDRE) l.push(`- [${SITUATIONS_TEXTE[s][lang].h1}](${SITE_URL}${situationPath(s, lang)})`);
     for (const g of guides()) l.push(`- [${g.titre[lang]}](${SITE_URL}${guidePath(g.slug[lang], lang)})`);
     l.push(`- [${{ fr: 'Méthode', es: 'Método', en: 'How we work' }[lang]}](${SITE_URL}${page('methode', lang)})`);
+    l.push(`- [${FAUX_SAUVETEURS.h1[lang]}](${SITE_URL}${page('faux-sauveteurs', lang)})`);
     l.push(`- [${{ fr: 'Tarifs', es: 'Precios', en: 'Pricing' }[lang]}](${SITE_URL}${page('tarifs', lang)})`);
     l.push(`- [Contact](${SITE_URL}${page('contact', lang)})`);
   }
