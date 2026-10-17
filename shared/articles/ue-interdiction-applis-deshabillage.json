@@ -20,9 +20,9 @@
   "en": "From 2 December 2026, the EU bans AI tools that make fake intimate images. What changes, and what to do if a fake image of you is online."
  },
  "chapo": {
-  "fr": "Dès le 2 décembre 2026, l’Union européenne interdit les outils d’IA qui fabriquent de fausses images intimes de vraies personnes. Cette règle vise les applis et les entreprises qui les proposent. Elle ne retire pas une image déjà en ligne. Voici ce qui change, et ce que vous pouvez faire dès aujourd’hui.",
-  "es": "Desde el 2 de diciembre de 2026, la UE prohíbe las IA que crean imágenes íntimas falsas de personas reales. La norma apunta a las apps y a las empresas que las ofrecen. No borra una imagen que ya está en internet. Esto es lo que cambia, y lo que puedes hacer desde hoy.",
-  "en": "From 2 December 2026, the European Union bans AI tools that create fake intimate images of real people. The rule targets the apps and the companies behind them. It does not remove an image that is already online. Here is what changes, and what you can do today."
+  "fr": "Dès le 2 décembre 2026, l’Union européenne interdit les outils d’IA qui fabriquent de fausses images intimes de vraies personnes, sans leur accord. Cette règle vise les applis et les entreprises qui les proposent. Elle ne retire pas une image déjà en ligne. Voici ce qui change, et ce que vous pouvez faire dès aujourd’hui.",
+  "es": "Desde el 2 de diciembre de 2026, la UE prohíbe las IA que crean imágenes íntimas falsas de personas reales sin su consentimiento. La norma apunta a las apps y a las empresas que las ofrecen. No borra una imagen que ya está en internet. Esto es lo que cambia, y lo que puedes hacer desde hoy.",
+  "en": "From 2 December 2026, the European Union bans AI tools that create fake intimate images of real people without their consent. The rule targets the apps and the companies behind them. It does not remove an image that is already online. Here is what changes, and what you can do today."
  },
  "essentiel": {
   "fr": [
@@ -57,7 +57,7 @@
      "Le 2 décembre 2026, une nouvelle interdiction s’applique dans toute l’Union européenne. Elle vise les systèmes d’intelligence artificielle (IA) qui fabriquent de fausses images intimes.",
      "Concrètement, une entreprise ne peut plus proposer dans l’UE un outil qui « déshabille » une vraie personne. Ni un outil qui la place dans une scène sexuelle.",
      "La règle couvre les images, les vidéos et les sons réalistes d’une personne reconnaissable. Elle s’applique dès que cette personne n’a pas donné son accord explicite.",
-     "Sont visées les applis faites pour ça, souvent appelées applis de « déshabillage » ou « nudify ». Sont visés aussi les outils d’IA qui le permettent facilement, sans protections suffisantes.",
+     "Sont visées les applis faites pour ça, souvent appelées applis de « déshabillage » ou « nudify ». Sont visés aussi les autres outils d’IA qui produisent facilement ces images, faute de protections suffisantes.",
      "L’interdiction touche aussi les entreprises installées hors de l’Union, dès qu’elles proposent leur outil dans l’UE.",
      "Le même jour, une seconde interdiction vise les outils d’IA qui fabriquent des contenus d’abus sexuels sur enfants."
     ],
@@ -66,8 +66,8 @@
      "El 2 de diciembre de 2026 empieza a aplicarse una nueva prohibición en toda la Unión Europea. Afecta a los sistemas de inteligencia artificial (IA) que crean imágenes íntimas falsas.",
      "En concreto, una empresa ya no puede ofrecer en la UE una herramienta que «desnude» a una persona real. Tampoco una herramienta que la muestre en una escena sexual.",
      "La norma cubre imágenes, videos y audios realistas de una persona reconocible. Se aplica cuando esa persona no dio su consentimiento explícito.",
-     "Alcanza a las apps hechas para eso, a menudo llamadas «nudify» o apps para «desnudar». También a las herramientas de IA que lo permiten con facilidad, sin protecciones suficientes.",
-     "También afecta a las empresas instaladas fuera de la UE, en cuanto ofrecen su herramienta en la UE.",
+     "Alcanza a las apps creadas para eso, a menudo llamadas «nudify» o apps para «desnudar». También a otras herramientas de IA que crean estas imágenes con facilidad, por falta de protecciones suficientes.",
+     "La prohibición afecta además a las empresas instaladas fuera de la UE, si ofrecen su herramienta en la UE.",
      "Ese mismo día, una segunda prohibición apunta a las IA que crean material de abuso sexual infantil."
     ],
     "en": [
@@ -75,7 +75,7 @@
      "On 2 December 2026, a new ban starts to apply across the European Union. It targets artificial intelligence (AI) systems that create fake intimate images.",
      "In practice, a company can no longer offer a tool in the EU that “undresses” a real person. The same goes for a tool that puts someone in a sexual scene.",
      "The rule covers realistic images, videos and audio of a person who can be identified. It applies whenever that person has not given explicit consent.",
-     "It covers apps built for this, often called “nudify” apps. It also covers AI tools that make it easy, without proper safeguards.",
+     "It covers apps built for this, often called “nudify” apps. It also covers other AI tools that easily produce these images because they lack proper safeguards.",
      "The ban also applies to companies based outside the EU, as soon as they offer their tool in the EU.",
      "On the same day, a second ban targets AI tools that create child sexual abuse material."
     ]
@@ -91,15 +91,15 @@
    "paragraphes": {
     "fr": [
      "Cette interdiction vient du règlement (UE) 2026/1744, publié au Journal officiel de l’UE le 24 juillet 2026. Il modifie le règlement européen sur l’IA, souvent appelé « AI Act ».",
-     "Dans chaque pays de l’UE, des autorités nationales la font respecter. Pour certains grands services, c’est le Bureau de l’IA de la Commission européenne.",
+     "Dans chaque pays de l’UE, des autorités nationales font respecter cette interdiction. Pour certains grands services, c’est le Bureau de l’IA de la Commission européenne.",
      "Une entreprise en infraction risque une forte amende. Elle peut atteindre 35 millions d’euros, ou 7 % de son chiffre d’affaires mondial annuel si ce montant est plus élevé.",
      "Mais cette règle vise les outils et les entreprises. À elle seule, elle ne supprime pas une image déjà publiée.",
-     "Une image déjà en ligne se retire autrement : par la plateforme, les moteurs de recherche et, si besoin, la plainte. Vous pouvez les utiliser dès maintenant.",
-     "Depuis le 2 août 2026, les deepfakes faits avec l’IA doivent aussi être signalés comme tels. Mais une mention « fait par IA » ne change rien à l’interdiction."
+     "Une image déjà en ligne se retire autrement : par la plateforme, les moteurs de recherche et, si besoin, la plainte. Ces démarches sont possibles dès maintenant.",
+     "Depuis le 2 août 2026, les deepfakes faits avec l’IA doivent aussi être étiquetés comme tels. Mais une mention « fait par IA » ne change rien à l’interdiction."
     ],
     "es": [
      "La prohibición viene del Reglamento (UE) 2026/1744. Se publicó en el Diario Oficial de la UE el 24 de julio de 2026. Modifica la Ley de Inteligencia Artificial de la UE, conocida como «AI Act».",
-     "En cada país de la UE, unas autoridades nacionales se encargan de hacerla cumplir. Para algunos grandes servicios, lo hace la Oficina de IA de la Comisión Europea.",
+     "En cada país de la UE, unas autoridades nacionales se encargan de hacer cumplir esta prohibición. Para algunos grandes servicios, lo hace la Oficina de IA de la Comisión Europea.",
      "Una empresa que no respete estas prohibiciones se expone a multas muy altas. Pueden llegar a 35 millones de euros, o al 7 % de su facturación mundial si esa cifra es mayor.",
      "Pero esta norma apunta a las herramientas y a las empresas. Por sí sola, no borra una imagen ya publicada.",
      "Una imagen que ya circula se retira por otras vías: la plataforma, los buscadores y, si hace falta, la policía. Esas vías ya existen y puedes usarlas desde ahora.",
@@ -107,7 +107,7 @@
     ],
     "en": [
      "The ban comes from Regulation (EU) 2026/1744, published in the EU’s Official Journal on 24 July 2026. It amends the EU’s law on artificial intelligence, known as the AI Act.",
-     "In each EU country, national authorities are in charge of enforcing it. For some large services, the European Commission’s AI Office does this job.",
+     "In each EU country, national authorities are in charge of enforcing this ban. For some large services, the European Commission’s AI Office does this job.",
      "A company that breaks these bans faces heavy fines. They can reach €35 million, or 7% of its worldwide annual turnover if that is higher.",
      "But this rule targets tools and companies. On its own, it does not delete an image that is already online.",
      "An image already online is removed in other ways: through the platform, search engines and, if needed, the police. These routes already exist, and you can use them now.",
@@ -151,7 +151,7 @@
      "No compartas la imagen, ni siquiera para avisar a tus cercanos. Envía mejor el enlace.",
      "Guarda pruebas: los enlaces exactos, capturas de pantalla con fecha, el nombre de las cuentas y los mensajes recibidos.",
      "Denuncia la imagen en cada plataforma. Elige «contenido íntimo sin consentimiento» o «imagen manipulada con IA» cuando exista esa opción.",
-     "Pide a Google que la quite de sus resultados: tiene un proceso para el contenido sexual falso. Haz lo mismo con Bing, con el formulario de denuncia de Microsoft.",
+     "Pide a Google que la quite de sus resultados: tiene un proceso para el contenido sexual falso. Haz lo mismo con Bing, mediante el formulario de Microsoft.",
      "¿Eres mayor de edad y tienes el archivo? StopNCII.org puede ayudar a frenar su difusión en las plataformas asociadas."
     ],
     "en": [
