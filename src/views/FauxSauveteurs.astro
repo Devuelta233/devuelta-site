@@ -1,0 +1,84 @@
+---
+// Faux sauveteurs : les signaux d'alerte décrits par la FTC (des accusations,
+// l'affaire est en cours), puis nos engagements, chacun déjà écrit sur le site.
+import Base from '../layouts/Base.astro';
+import { C } from '../i18n/commun';
+import { AIDE_GRATUITE, ARTICLES, FAUX_SAUVETEURS as F } from '../i18n/pages';
+import { page, situationPath, versionsPage } from '../i18n/routes';
+import { SITUATIONS_TEXTE } from '../i18n/situations';
+import { dateLisible } from '../data';
+import type { Lang } from '../../shared/vocab';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const date = dateLisible(F.verifie_le, lang);
+const hote = (u: string) => new URL(u).hostname.replace(/^www\./, '');
+---
+<Base
+  lang={lang}
+  titre={F.seo[lang]}
+  description={F.meta[lang]}
+  chemin={page('faux-sauveteurs', lang)}
+  versions={versionsPage('faux-sauveteurs')}
+  ariane={[{ nom: C.nav.methode[lang], href: page('methode', lang) }, { nom: F.h1[lang] }]}
+>
+  <article class="page">
+    <h1>{F.h1[lang]}</h1>
+    <p class="fiche-meta"><span>{C.verifieLe[lang]} <strong>{date}</strong></span></p>
+    <p class="lede">{F.intro[lang]}</p>
+
+    <section class="encadre alerte" aria-labelledby="maintenant">
+      <h2 id="maintenant" class="sans-marge">{F.maintenantTitre[lang]}</h2>
+      <p>{F.maintenant[lang]} <a href={situationPath('chantage', lang)}>{SITUATIONS_TEXTE.chantage[lang].h1} →</a></p>
+    </section>
+
+    <h2>{F.ftcTitre[lang]}</h2>
+    {F.ftc[lang].map((p) => <p>{p}</p>)}
+
+    <h2>{F.signauxTitre[lang]}</h2>
+    <ul class="coche refus">
+      {F.signaux[lang].map(([signal, detail]) => (
+        <li><strong>{signal}</strong> {detail}</li>
+      ))}
+    </ul>
+    <p>{F.verifier[lang]}</p>
+
+    <h2 id="engagements">{C.engagementsTitre[lang]}</h2>
+    <p>{F.engagementsIntro[lang]}</p>
+    <ul class="coche">
+      {F.engagements[lang].map(([engagement, detail]) => (
+        <li><strong>{engagement}</strong> {detail}</li>
+      ))}
+    </ul>
+    <p class="petit">
+      {F.reglesDetail[lang]}{' '}
+      <a href={page('tarifs', lang)}>{C.nav.tarifs[lang]}</a> ·{' '}
+      <a href={page('methode', lang)}>{C.nav.methode[lang]}</a> ·{' '}
+      <a href={page('conditions', lang)}>{C.nav.conditions[lang]}</a>
+    </p>
+
+    <p>{F.aideGratuite[lang]} <a href={page('aide-gratuite', lang)}>{AIDE_GRATUITE.h1[lang]} →</a></p>
+
+    <div class="actions">
+      <a class="bouton principal" href={page('diagnostic', lang)}>
+        {C.ctaDiagnostic[lang]}
+        <small>{C.ctaDiagnosticSous[lang]}</small>
+      </a>
+    </div>
+
+    <section aria-labelledby="sources">
+      <h2 id="sources">{ARTICLES.sources[lang]}</h2>
+      <ul class="sources">
+        {F.sources.map((s) => (
+          <li>
+            <a href={s.url} rel="noopener noreferrer" target="_blank">{s.titre[lang]}</a> <span class="petit">({hote(s.url)})</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <p class="petit">{C.pasConseilJuridique[lang]}</p>
+  </article>
+</Base>

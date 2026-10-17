@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Contacts from '../components/Contacts.astro';
 import { C } from '../i18n/commun';
-import { ACCUEIL, METHODE } from '../i18n/pages';
+import { ACCUEIL, FAUX_SAUVETEURS, METHODE } from '../i18n/pages';
 import { page, versionsPage } from '../i18n/routes';
 import type { Lang } from '../../shared/vocab';
 
@@ -56,6 +56,7 @@ const { lang } = Astro.props;
 
     <h2>{METHODE.confianceTitre[lang]}</h2>
     <p>{METHODE.confiance[lang]} <a href="/referentiel.json">referentiel.json</a></p>
+    <p><a href={page('faux-sauveteurs', lang)}>{FAUX_SAUVETEURS.lien[lang]} →</a></p>
 
     <h2>{C.ecrireTitre[lang]}</h2>
     <Contacts lang={lang} />

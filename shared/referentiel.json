@@ -175,7 +175,7 @@
    "bascule_mineur": true,
    "role_devuelta": "traitement",
    "autorite_ou_plateforme": "hébergeur ou responsable de traitement en direct ; PFPDT (Préposé fédéral à la protection des données et à la transparence) ; voie civile devant le juge",
-   "base_legale": "Code civil suisse (CC) art. 28 — protection de la personnalité. Loi fédérale sur la protection des données (nLPD/revDSG), en vigueur depuis le 1er septembre 2023. Code pénal suisse art. 179quater (violation du domaine secret ou privé au moyen d'un appareil de prise de vues) et art. 173-174 (atteinte à l'honneur).",
+   "base_legale": "Code civil suisse (CC) art. 28 — protection de la personnalité. Loi fédérale sur la protection des données (nLPD/revDSG), en vigueur depuis le 1er septembre 2023. Code pénal suisse art. 197a (transmission indue d'un contenu non public à caractère sexuel, en vigueur depuis le 1er juillet 2024, RO 2024 27) : transmettre à un tiers, sans le consentement de la personne identifiable, un contenu sexuel non public est puni, sur plainte, d'une peine privative de liberté d'un an au plus ou d'une peine pécuniaire ; jusqu'à trois ans si l'auteur a rendu le contenu public. Code pénal suisse art. 179quater (violation du domaine secret ou privé au moyen d'un appareil de prise de vues) et art. 173-174 (atteinte à l'honneur).",
    "procedure_resume": "Mise en demeure directe fondée sur l'art. 28 CC et la nLPD. La Suisse n'étant pas membre de l'UE, ni le RGPD ni le DSA ne s'appliquent : ne jamais les citer face à un hébergeur suisse, cela décrédibilise la demande. La voie civile (mesures provisionnelles) reste possible mais implique un avocat.",
    "pieces_requises": [
     "URL exactes",
@@ -184,11 +184,11 @@
    ],
    "delai_constate": "non documenté — à renseigner au premier dossier suisse traité",
    "cout": "gratuit pour la voie amiable ; la voie judiciaire implique des frais d'avocat",
-   "limites_connues": "le RGPD et le DSA ne s'appliquent PAS en Suisse — erreur fréquente et coûteuse ; le PFPDT dispose de pouvoirs plus limités que la CNIL ou l'AEPD ; l'existence d'une disposition pénale spécifique aux images intimes non consenties reste à vérifier avant de la citer.",
-   "source_url": "https://www.fedlex.admin.ch — CC art. 28, nLPD, CP art. 179quater",
+   "limites_connues": "le RGPD et le DSA ne s'appliquent PAS en Suisse — erreur fréquente et coûteuse ; le PFPDT dispose de pouvoirs plus limités que la CNIL ou l'AEPD ; l'art. 197a al. 1 CP n'est poursuivi que sur plainte, à déposer dans les trois mois dès que la personne connaît l'auteur (CP art. 31) ; la voie pénale est distincte du retrait.",
+   "source_url": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/fr#art_197_a — CP art. 197a (état le 1er octobre 2026), art. 179quater et art. 31 ; CC art. 28 ; nLPD (RS 235.1)",
    "module_courrier_associe": "à créer",
    "niveau_urgence": "normal",
-   "date_derniere_verification": "2026-09-08",
+   "date_derniere_verification": "2026-10-16",
    "statut": "a_approfondir"
   },
   {
