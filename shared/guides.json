@@ -2290,6 +2290,1280 @@
    ],
    "public_mineurs": false,
    "verifie_le": "2026-10-15"
+  },
+  {
+   "id": "gh-intime-sextorsion-csa",
+   "slug": {
+    "fr": "ghana-images-intimes-sextorsion-csa",
+    "es": "ghana-imagenes-intimas-sextorsion-csa",
+    "en": "ghana-intimate-images-sextortion-csa"
+   },
+   "titre": {
+    "fr": "Ghana : image intime diffusée ou sextorsion, signaler à la CSA",
+    "es": "Ghana: imagen íntima difundida o sextorsión, avisar a la CSA",
+    "en": "Ghana: intimate image shared or sextortion, report to the CSA"
+   },
+   "meta_description": {
+    "fr": "Au Ghana, diffuser ou menacer de diffuser une image intime est un délit. Comment le signaler à la Cyber Security Authority (292, WhatsApp) et à la police.",
+    "es": "En Ghana, difundir o amenazar con difundir una imagen íntima es delito. Cómo avisar a la Cyber Security Authority (292, WhatsApp) y a la policía.",
+    "en": "In Ghana, sharing or threatening to share an intimate image is a crime. How to report it to the Cyber Security Authority (292, WhatsApp) and the police."
+   },
+   "resume": {
+    "fr": "Au Ghana, la loi de 2020 sur la cybersécurité punit le partage d’une image intime sans accord, la menace de la diffuser et la sextorsion. L’autorité nationale de cybersécurité (CSA) reçoit les signalements jour et nuit : téléphone, SMS, WhatsApp, e-mail, formulaire en ligne ou application.",
+    "es": "En Ghana, la ley de ciberseguridad de 2020 castiga compartir una imagen íntima sin consentimiento, amenazar con difundirla y la sextorsión. La autoridad nacional de ciberseguridad (CSA) recibe denuncias de día y de noche: teléfono, SMS, WhatsApp, correo, formulario en línea o aplicación.",
+    "en": "In Ghana, the 2020 Cybersecurity Act punishes sharing an intimate image without consent, threatening to share it, and sextortion. The national Cyber Security Authority (CSA) takes reports day and night: phone, text, WhatsApp, email, online form or app."
+   },
+   "pour_qui": {
+    "fr": "Vous êtes au Ghana et une photo ou une vidéo intime de vous (nudité ou acte sexuel), réelle ou retouchée, a été partagée sans votre accord, ou quelqu’un menace de la partager, parfois pour obtenir de l’argent. Si la personne a moins de 18 ans, passez par les canaux officiels pour mineurs : la CSA, la police et le portail IWF Ghana (voir la page Aide urgente).",
+    "es": "Estás en Ghana y una foto o un video íntimo tuyo (desnudez o acto sexual), real o retocado, se compartió sin tu consentimiento, o alguien amenaza con compartirlo, a veces para pedirte dinero. Si la persona tiene menos de 18 años, usa los canales oficiales para menores: la CSA, la policía y el portal IWF Ghana (consulta la página Ayuda urgente).",
+    "en": "You are in Ghana and an intimate photo or video of you (nudity or sexual activity), real or edited, was shared without your consent, or someone is threatening to share it, sometimes to get money. If the person is under 18, use the official channels for minors: the CSA, the police and the IWF Ghana portal (see the Urgent help page)."
+   },
+   "etapes": {
+    "fr": [
+     "Ne payez pas et n’envoyez plus rien. Coupez le contact avec la personne qui vous menace : selon la CSA, payer entraîne souvent de nouvelles demandes et ne fait pas disparaître le contenu.",
+     "Gardez des preuves sans repartager l’image : captures d’écran, noms d’utilisateur, liens (URL), messages et demandes d’argent, y compris le numéro Mobile Money indiqué.",
+     "Signalez les faits à la CSA, jour et nuit : appel ou SMS au 292 (selon la CSA, le SMS ne fonctionne que depuis le Ghana), WhatsApp au 050 160 3111, e-mail à report@csa.gov.gh, formulaire en ligne ou application « CSA GHANA ». Dans le formulaire, choisissez « Publication of Non-Consensual Intimate Images » ou « Online Blackmail ».",
+     "Votre signalement est transmis à l’équipe CERT-GH, qui le trie et enquête. Signalez aussi le contenu à la plateforme avec son propre formulaire.",
+     "Pour porter plainte, appelez la police au 18555 ou au 191 : elle vous indique comment saisir l’unité cybercriminalité du CID (siège à Accra). Si l’auteur est votre partenaire ou ex-partenaire, la DOVVSU, l’unité de la police pour les violences conjugales et de genre, peut aussi vous recevoir : 055 100 0900.",
+     "Pour freiner une nouvelle diffusion, StopNCII.org crée une empreinte numérique de vos images, sans les envoyer, que les plateformes partenaires utilisent pour bloquer les copies."
+    ],
+    "es": [
+     "No pagues y no envíes nada más. Corta el contacto con quien te amenaza: según la CSA, pagar suele traer nuevas exigencias y no hace desaparecer el contenido.",
+     "Guarda pruebas sin volver a compartir la imagen: capturas de pantalla, nombres de usuario, enlaces (URL), mensajes y peticiones de dinero, incluido el número de Mobile Money indicado.",
+     "Denuncia los hechos ante la CSA, de día o de noche: llamada o SMS al 292 (según la CSA, el SMS solo funciona desde Ghana), WhatsApp al 050 160 3111, correo a report@csa.gov.gh, formulario en línea o aplicación «CSA GHANA». En el formulario, elige «Publication of Non-Consensual Intimate Images» u «Online Blackmail».",
+     "Tu denuncia se envía al equipo CERT-GH, que la clasifica e investiga. Denuncia también el contenido ante la plataforma con su propio formulario.",
+     "Para presentar una denuncia penal, llama a la policía al 18555 o al 191: te indican cómo acudir a la unidad de cibercrimen del CID (sede en Acra). Si el autor es tu pareja o expareja, la DOVVSU, la unidad policial de violencia doméstica y de género, también puede atenderte: 055 100 0900.",
+     "Para frenar nuevas difusiones, StopNCII.org crea una huella digital de tus imágenes, sin enviarlas, que las plataformas asociadas usan para bloquear las copias."
+    ],
+    "en": [
+     "Do not pay and do not send anything else. Cut contact with the person threatening you: according to the CSA, paying often leads to new demands and does not make the content disappear.",
+     "Keep evidence without re-sharing the image: screenshots, usernames, links (URLs), messages and money demands, including the Mobile Money number given.",
+     "Report it to the CSA, day or night: call or text 292 (according to the CSA, texting only works from within Ghana), WhatsApp 050 160 3111, email report@csa.gov.gh, the online form or the “CSA GHANA” app. On the form, choose “Publication of Non-Consensual Intimate Images” or “Online Blackmail”.",
+     "Your report goes to the CERT-GH team, which sorts and investigates it. Also report the content to the platform using its own form.",
+     "To make a criminal complaint, call the police on 18555 or 191: they explain how to reach the CID Cybercrime Unit (headquarters in Accra). If the offender is your partner or ex-partner, DOVVSU, the police unit for domestic and gender-based violence, can also help: 055 100 0900.",
+     "To slow down re-sharing, StopNCII.org creates a digital fingerprint of your images, without sending them, which partner platforms use to block copies."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Les liens (URL) exacts et le nom des comptes qui publient ou menacent",
+     "Des captures d’écran datées des publications et des messages",
+     "Les demandes d’argent reçues et le numéro de paiement indiqué",
+     "Une courte description : quand, où, et l’auteur s’il est connu",
+     "Vos coordonnées : le formulaire de la CSA demande nom, e-mail, téléphone, lieu et âge"
+    ],
+    "es": [
+     "Los enlaces (URL) exactos y el nombre de las cuentas que publican o amenazan",
+     "Capturas de pantalla con fecha de las publicaciones y de los mensajes",
+     "Las peticiones de dinero recibidas y el número de pago indicado",
+     "Una breve descripción: cuándo, dónde y quién es el autor si lo sabes",
+     "Tus datos: el formulario de la CSA pide nombre, correo, teléfono, lugar y edad"
+    ],
+    "en": [
+     "The exact links (URLs) and the names of the accounts posting or threatening",
+     "Dated screenshots of the posts and messages",
+     "Any money demands received and the payment number given",
+     "A short description: when, where, and who did it if you know",
+     "Your details: the CSA form asks for name, email, phone, location and age"
+    ]
+   },
+   "delai": {
+    "fr": "La CSA ne publie pas de délai de traitement. Ses points de contact fonctionnent 24 heures sur 24.",
+    "es": "La CSA no publica un plazo de respuesta. Sus canales de contacto funcionan las 24 horas.",
+    "en": "The CSA does not publish a response time. Its contact points work 24 hours a day."
+   },
+   "cout": {
+    "fr": "La CSA n’indique aucun frais pour signaler. Les services de la DOVVSU sont gratuits.",
+    "es": "La CSA no indica ningún coste por denunciar. Los servicios de la DOVVSU son gratuitos.",
+    "en": "The CSA does not mention any fee for reporting. DOVVSU services are free."
+   },
+   "limites": {
+    "fr": [
+     "Pour forcer un retrait, la CSA a besoin d’une décision de justice (article 87 de la loi).",
+     "Une plateforme établie hors du Ghana peut ne pas se sentir tenue par la loi ghanéenne : signalez-lui aussi le contenu avec son formulaire.",
+     "La loi vise les images « modifiées », mais ne parle pas d’intelligence artificielle. Nous n’avons pas trouvé de décision sur un montage entièrement fabriqué.",
+     "Aucun délai de réponse n’est publié.",
+     "Un projet de réforme de 2025 prévoit des peines plus lourdes. Il n’était pas adopté lors de notre vérification.",
+     "Le retrait sur une plateforme n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "Para obligar a retirar un contenido, la CSA necesita una orden judicial (artículo 87 de la ley).",
+     "Una plataforma establecida fuera de Ghana puede no considerarse obligada por la ley ghanesa: denúnciale también el contenido con su formulario.",
+     "La ley incluye las imágenes «modificadas», pero no menciona la inteligencia artificial. No encontramos decisiones sobre un montaje creado por completo.",
+     "No hay un plazo de respuesta publicado.",
+     "Un proyecto de reforma de 2025 prevé penas más duras. No estaba aprobado cuando lo verificamos.",
+     "La retirada en una plataforma no borra las copias publicadas en otros sitios."
+    ],
+    "en": [
+     "To force a removal, the CSA needs a court order (section 87 of the Act).",
+     "A platform based outside Ghana may not consider itself bound by Ghanaian law: report the content to it as well, using its form.",
+     "The law covers “altered” images but does not mention artificial intelligence. We found no court decision about a fully fabricated image.",
+     "No response time is published.",
+     "A 2025 draft reform would bring heavier penalties. It had not been passed when we checked.",
+     "Removal from one platform does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": {
+    "fr": "En cas de chantage, ne payez pas : la CSA constate que les menaces continuent souvent après un paiement. Gardez les messages et signalez-les au 292 ou sur WhatsApp au 050 160 3111.",
+    "es": "Si te chantajean, no pagues: la CSA observa que las amenazas suelen seguir después del pago. Guarda los mensajes y denúncialos al 292 o por WhatsApp al 050 160 3111.",
+    "en": "If you are being blackmailed, do not pay: the CSA sees threats often continue after a payment. Keep the messages and report them to 292 or on WhatsApp at 050 160 3111."
+   },
+   "base_legale": {
+    "fr": "Loi ghanéenne sur la cybersécurité (Cybersecurity Act, 2020, Act 1038), sanctionnée le 29 décembre 2020. Article 67 : partager sans consentement l’image intime d’une personne identifiable, pour lui causer une grave détresse, alors qu’elle pouvait s’attendre à ce que l’image reste privée, est puni de 1 à 3 ans de prison. Article 68 : menacer de diffuser une telle image est puni de 1 à 3 ans. Article 66 : menacer de diffuser des images sexuelles privées pour obtenir de l’argent ou un acte sexuel (sextorsion) est puni de 10 à 25 ans. Selon l’article 97, une image modifiée pour paraître montrer la personne nue ou dans un acte sexuel est aussi visée.",
+    "es": "Ley de ciberseguridad de Ghana (Cybersecurity Act, 2020, Act 1038), sancionada el 29 de diciembre de 2020. Artículo 67: compartir sin consentimiento la imagen íntima de una persona identificable, para causarle una angustia grave, cuando podía esperar que la imagen siguiera siendo privada, se castiga con 1 a 3 años de prisión. Artículo 68: amenazar con difundir esa imagen se castiga con 1 a 3 años. Artículo 66: amenazar con difundir imágenes sexuales privadas para obtener dinero o un acto sexual (sextorsión) se castiga con 10 a 25 años. Según el artículo 97, también cuenta una imagen modificada para que parezca mostrar a la persona desnuda o en un acto sexual.",
+    "en": "Ghana’s Cybersecurity Act, 2020 (Act 1038), assented to on 29 December 2020. Section 67: sharing the intimate image of an identifiable person without consent, to cause them serious distress, when they could expect the image to stay private, is punishable by 1 to 3 years in prison. Section 68: threatening to share such an image is punishable by 1 to 3 years. Section 66: threatening to share private sexual images to get money or a sexual act (sextortion) is punishable by 10 to 25 years. Under section 97, an image altered to appear to show the person naked or in a sexual act is also covered."
+   },
+   "source_officielle": {
+    "url": "https://www.csa.gov.gh/resources/cybersecurity_Act_2020(Act_1038).pdf",
+    "titre": "Cybersecurity Act, 2020 (Act 1038) — official text, Cyber Security Authority"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://www.csa.gov.gh/report",
+     "titre": {
+      "fr": "CSA – formulaire de signalement en ligne (en anglais)",
+      "es": "CSA – formulario de denuncia en línea (en inglés)",
+      "en": "CSA – online reporting form"
+     }
+    },
+    {
+     "url": "https://csa.gov.gh/cert-gh-alert38.php",
+     "titre": {
+      "fr": "CSA – alerte sur la sextorsion et conseils (en anglais)",
+      "es": "CSA – alerta sobre la sextorsión y consejos (en inglés)",
+      "en": "CSA – sextortion alert and advice"
+     }
+    },
+    {
+     "url": "https://police.gov.gh/en/index.php/cyber-crime/",
+     "titre": {
+      "fr": "Police du Ghana – unité cybercriminalité (en anglais)",
+      "es": "Policía de Ghana – unidad de cibercrimen (en inglés)",
+      "en": "Ghana Police – Cybercrime Unit"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "chantage",
+    "deepfake"
+   ],
+   "pays": [
+    "GH"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "gb-intime-sexual-offences-act",
+   "slug": {
+    "fr": "royaume-uni-image-intime-retrait-48-h",
+    "es": "reino-unido-imagen-intima-retirada-48-h",
+    "en": "uk-intimate-image-removal-48-hours"
+   },
+   "titre": {
+    "fr": "Royaume-Uni : image intime partagée, retrait en 48 h et plainte",
+    "es": "Reino Unido: imagen íntima compartida, retirada en 48 h y denuncia",
+    "en": "UK: intimate image shared, 48-hour removal and police report"
+   },
+   "meta_description": {
+    "fr": "Au Royaume-Uni, une plateforme doit retirer sous 48 h une image intime signalée. Partager ou menacer de partager est un délit. Les démarches.",
+    "es": "En el Reino Unido, una plataforma debe retirar en 48 h una imagen íntima denunciada. Compartirla o amenazar con hacerlo es delito. Los pasos.",
+    "en": "In the UK, platforms must remove a reported intimate image within 48 hours. Sharing or threatening to share one is a crime. What to do."
+   },
+   "resume": {
+    "fr": "Au Royaume-Uni, depuis le 29 juin 2026, les services en ligne où les utilisateurs publient des contenus et les moteurs de recherche doivent proposer un signalement simple des images intimes. Ils doivent retirer l’image signalée, et les copies identiques qu’ils repèrent, au plus tard 48 heures après. Partager une image intime sans accord, ou menacer de le faire, est aussi un délit.",
+    "es": "En el Reino Unido, desde el 29 de junio de 2026, los servicios en línea donde los usuarios publican contenido y los buscadores deben ofrecer una forma sencilla de denunciar imágenes íntimas. Deben retirar la imagen denunciada, y las copias idénticas que detecten, como máximo 48 horas después. Compartir una imagen íntima sin consentimiento, o amenazar con hacerlo, también es delito.",
+    "en": "In the UK, since 29 June 2026, online services where users post content and search engines must offer a simple way to report intimate images. They must remove the reported image, and identical copies they find, no later than 48 hours afterwards. Sharing an intimate image without consent, or threatening to, is also a crime."
+   },
+   "pour_qui": {
+    "fr": "Vous êtes adulte et une photo ou une vidéo intime de vous, réelle ou truquée, a été partagée sans votre accord, ou quelqu’un menace de la partager. Le retrait sous 48 heures vaut pour les services soumis à la loi britannique sur la sécurité en ligne (Online Safety Act). Les délits décrits ici s’appliquent en Angleterre et au pays de Galles ; l’Écosse et l’Irlande du Nord ont leurs propres lois. Moins de 18 ans : utilisez Report Remove (Childline et IWF).",
+    "es": "Eres adulto o adulta y una foto o un video íntimo tuyo, real o falso, se compartió sin tu consentimiento, o alguien amenaza con compartirlo. La retirada en 48 horas se aplica a los servicios sujetos a la ley británica de seguridad en línea (Online Safety Act). Los delitos descritos aquí se aplican en Inglaterra y Gales; Escocia e Irlanda del Norte tienen sus propias leyes. Menores de 18 años: usa Report Remove (Childline e IWF).",
+    "en": "You are an adult and an intimate photo or video of you, real or fake, was shared without your consent, or someone is threatening to share it. The 48-hour removal applies to services covered by the UK Online Safety Act. The crimes described here apply in England and Wales; Scotland and Northern Ireland have their own laws. Under 18: use Report Remove (Childline and the IWF)."
+   },
+   "etapes": {
+    "fr": [
+     "Gardez des preuves sans repartager l’image : liens (URL), nom du compte, date et captures d’écran.",
+     "Sur la plateforme, utilisez le signalement prévu pour les images intimes. La loi demande d’y déclarer que le contenu est une image intime, que vous êtes la personne montrée (ou que vous agissez pour elle), que vous signalez de bonne foi et que c’est exact à votre connaissance. Ajoutez de quoi retrouver le contenu et vos coordonnées.",
+     "La plateforme doit retirer l’image, et les copies identiques qu’elle repère, au plus tard 48 heures après votre signalement. Si elle refuse ou n’agit pas, utilisez sa procédure de réclamation accélérée, obligatoire pour ces signalements.",
+     "Faites la même démarche auprès des moteurs de recherche : ils doivent aussi faire disparaître l’image de leurs résultats sous 48 heures.",
+     "Portez plainte à la police : 999 en cas de danger, sinon le 101 ou le formulaire en ligne. L’Écosse et l’Irlande du Nord ont leurs propres formulaires.",
+     "Le Revenge Porn Helpline (0345 6000 459, du lundi au vendredi de 10 h à 16 h, ou help@revengepornhelpline.org.uk) aide les adultes qui vivent au Royaume-Uni à faire retirer les contenus. Il ne porte pas plainte à votre place."
+    ],
+    "es": [
+     "Guarda pruebas sin volver a compartir la imagen: enlaces (URL), nombre de la cuenta, fecha y capturas de pantalla.",
+     "En la plataforma, usa la denuncia prevista para imágenes íntimas. La ley pide declarar que el contenido es una imagen íntima, que eres la persona que aparece (o que actúas por ella), que denuncias de buena fe y que es cierto según tu conocimiento. Añade los datos para encontrar el contenido y tus datos de contacto.",
+     "La plataforma debe retirar la imagen, y las copias idénticas que detecte, como máximo 48 horas después de tu denuncia. Si se niega o no actúa, usa su procedimiento de reclamación urgente, obligatorio para estas denuncias.",
+     "Haz lo mismo ante los buscadores: también deben hacer desaparecer la imagen de sus resultados en 48 horas.",
+     "Denuncia ante la policía: 999 si estás en peligro; si no, el 101 o el formulario en línea. Escocia e Irlanda del Norte tienen sus propios formularios.",
+     "La Revenge Porn Helpline (0345 6000 459, de lunes a viernes de 10:00 a 16:00, o help@revengepornhelpline.org.uk) ayuda a adultos que viven en el Reino Unido a retirar contenidos. No presenta la denuncia por ti."
+    ],
+    "en": [
+     "Keep evidence without re-sharing the image: links (URLs), account name, date and screenshots.",
+     "On the platform, use the report option for intimate images. The law asks you to declare that the content is an intimate image, that you are the person shown (or act for them), that you report in good faith and that it is true to the best of your knowledge. Add details to find the content and your contact details.",
+     "The platform must remove the image, and identical copies it finds, no later than 48 hours after your report. If it refuses or does nothing, use its fast-track complaints process, which is mandatory for these reports.",
+     "Do the same with search engines: they must also stop the image appearing in their results within 48 hours.",
+     "Report it to the police: 999 if you are in danger, otherwise 101 or the online form. Scotland and Northern Ireland have their own forms.",
+     "The Revenge Porn Helpline (0345 6000 459, Monday to Friday 10am–4pm, or help@revengepornhelpline.org.uk) helps adults who live in the UK get content removed. It does not report to the police for you."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Les liens (URL) exacts de chaque image et le nom des comptes",
+     "Des captures d’écran datées",
+     "Une phrase disant que vous signalez de bonne foi et que c’est exact à votre connaissance",
+     "Vos coordonnées (au minimum une adresse e-mail)",
+     "Si vous agissez pour quelqu’un : son accord écrit"
+    ],
+    "es": [
+     "Los enlaces (URL) exactos de cada imagen y el nombre de las cuentas",
+     "Capturas de pantalla con fecha",
+     "Una frase diciendo que denuncias de buena fe y que es cierto según tu conocimiento",
+     "Tus datos de contacto (como mínimo un correo electrónico)",
+     "Si actúas por otra persona: su autorización por escrito"
+    ],
+    "en": [
+     "The exact links (URLs) of each image and the account names",
+     "Dated screenshots",
+     "A sentence saying you report in good faith and that it is true to the best of your knowledge",
+     "Your contact details (at least an email address)",
+     "If you act for someone else: their written authorisation"
+    ]
+   },
+   "delai": {
+    "fr": "Depuis le 29 juin 2026, la plateforme doit retirer l’image au plus tard 48 heures après un signalement valable.",
+    "es": "Desde el 29 de junio de 2026, la plataforma debe retirar la imagen como máximo 48 horas después de una denuncia válida.",
+    "en": "Since 29 June 2026, the platform must remove the image no later than 48 hours after a valid report."
+   },
+   "cout": {
+    "fr": "Gratuit pour signaler à la plateforme et à la police. Appeler le Revenge Porn Helpline coûte le prix d’un appel vers un fixe ; l’association indique ne tirer aucun revenu des appels.",
+    "es": "Denunciar ante la plataforma y la policía es gratis. Llamar a la Revenge Porn Helpline cuesta lo mismo que una llamada a un fijo; la organización indica que no obtiene ingresos de las llamadas.",
+    "en": "Reporting to the platform and the police is free. Calling the Revenge Porn Helpline costs the same as a call to a landline; the charity says it gets no income from calls."
+   },
+   "limites": {
+    "fr": [
+     "La plateforme peut refuser si elle estime que ce n’est pas une image intime, ou que le signalement ne vient pas de la personne montrée ou de quelqu’un qui agit pour elle.",
+     "Le délai de 48 heures ne s’impose qu’aux services soumis à l’Online Safety Act.",
+     "Les délits de partage, de menace et de création d’image truquée décrits ici valent en Angleterre et au pays de Galles ; en Écosse et en Irlande du Nord, d’autres lois s’appliquent.",
+     "Le Revenge Porn Helpline n’aide ni les moins de 18 ans ni les personnes qui vivent hors du Royaume-Uni.",
+     "Le retrait sur une plateforme n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "La plataforma puede negarse si considera que no es una imagen íntima, o que la denuncia no viene de la persona que aparece o de alguien que actúa por ella.",
+     "El plazo de 48 horas solo obliga a los servicios sujetos a la Online Safety Act.",
+     "Los delitos de compartir, amenazar y crear imágenes falsas descritos aquí rigen en Inglaterra y Gales; en Escocia e Irlanda del Norte se aplican otras leyes.",
+     "La Revenge Porn Helpline no ayuda a menores de 18 años ni a personas que viven fuera del Reino Unido.",
+     "La retirada en una plataforma no borra las copias publicadas en otros sitios."
+    ],
+    "en": [
+     "The platform can refuse if it considers the content is not an intimate image, or that the report does not come from the person shown or someone acting for them.",
+     "The 48-hour deadline only binds services covered by the Online Safety Act.",
+     "The sharing, threatening and fake-image crimes described here apply in England and Wales; other laws apply in Scotland and Northern Ireland.",
+     "The Revenge Porn Helpline does not help under-18s or people who live outside the UK.",
+     "Removal from one platform does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Sexual Offences Act 2003, article 66B (ajouté par l’Online Safety Act 2023, en vigueur depuis le 31 janvier 2024) : partager sans consentement une photo ou un film qui montre, ou paraît montrer, une personne dans un état intime est un délit, comme le fait de menacer de le partager (jusqu’à 2 ans de prison selon les cas). Articles 66E et 66F (ajoutés par le Data (Use and Access) Act 2025, en vigueur depuis le 6 février 2026) : créer, ou demander de créer, une fausse image intime d’un adulte sans son consentement est aussi un délit. Ces délits valent en Angleterre et au pays de Galles. Online Safety Act 2023, articles 10 et 20A (modifiés par le Crime and Policing Act 2026, en vigueur depuis le 29 juin 2026) : signalement simple et retrait sous 48 heures.",
+    "es": "Sexual Offences Act 2003, sección 66B (añadida por la Online Safety Act 2023, vigente desde el 31 de enero de 2024): compartir sin consentimiento una foto o un video que muestra, o parece mostrar, a una persona en un estado íntimo es delito, igual que amenazar con compartirlo (hasta 2 años de prisión según el caso). Secciones 66E y 66F (añadidas por la Data (Use and Access) Act 2025, vigentes desde el 6 de febrero de 2026): crear, o pedir que se cree, una imagen íntima falsa de una persona adulta sin su consentimiento también es delito. Estos delitos rigen en Inglaterra y Gales. Online Safety Act 2023, secciones 10 y 20A (modificadas por la Crime and Policing Act 2026, vigentes desde el 29 de junio de 2026): denuncia sencilla y retirada en 48 horas.",
+    "en": "Sexual Offences Act 2003, section 66B (added by the Online Safety Act 2023, in force since 31 January 2024): sharing without consent a photo or film that shows, or appears to show, a person in an intimate state is a crime, and so is threatening to share it (up to 2 years in prison depending on the case). Sections 66E and 66F (added by the Data (Use and Access) Act 2025, in force since 6 February 2026): creating, or asking someone to create, a fake intimate image of an adult without their consent is also a crime. These crimes apply in England and Wales. Online Safety Act 2023, sections 10 and 20A (amended by the Crime and Policing Act 2026, in force since 29 June 2026): simple reporting and removal within 48 hours."
+   },
+   "source_officielle": {
+    "url": "https://www.legislation.gov.uk/ukpga/2003/42/section/66B",
+    "titre": "Sexual Offences Act 2003, section 66B — legislation.gov.uk"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://www.legislation.gov.uk/ukpga/2023/50/section/20A",
+     "titre": {
+      "fr": "Online Safety Act 2023, article 20A : le signalement d’une image intime (en anglais)",
+      "es": "Online Safety Act 2023, sección 20A: la denuncia de una imagen íntima (en inglés)",
+      "en": "Online Safety Act 2023, section 20A: reporting intimate image content"
+     }
+    },
+    {
+     "url": "https://revengepornhelpline.org.uk/how-can-we-help/how-to-get-in-touch/",
+     "titre": {
+      "fr": "Revenge Porn Helpline – comment les contacter (en anglais)",
+      "es": "Revenge Porn Helpline – cómo contactar (en inglés)",
+      "en": "Revenge Porn Helpline – how to get in touch"
+     }
+    },
+    {
+     "url": "https://www.gov.uk/contact-police",
+     "titre": {
+      "fr": "GOV.UK – contacter la police (en anglais)",
+      "es": "GOV.UK – contactar con la policía (en inglés)",
+      "en": "GOV.UK – contact the police"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "deepfake",
+    "chantage"
+   ],
+   "pays": [
+    "GB"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "ca-code-criminel-162-1",
+   "slug": {
+    "fr": "canada-image-intime-code-criminel",
+    "es": "canada-imagen-intima-codigo-penal",
+    "en": "canada-intimate-image-criminal-code"
+   },
+   "titre": {
+    "fr": "Canada : image intime ou hypertrucage diffusé, porter plainte",
+    "es": "Canadá: imagen íntima o deepfake difundido, presentar denuncia",
+    "en": "Canada: intimate image or deepfake shared, reporting the crime"
+   },
+   "meta_description": {
+    "fr": "Au Canada, diffuser une image intime sans accord est un crime. Depuis juillet 2026, la loi vise aussi les images créées par IA et les menaces.",
+    "es": "En Canadá, difundir una imagen íntima sin consentimiento es delito. Desde julio de 2026 también lo es si se creó con IA o si se amenaza con hacerlo.",
+    "en": "In Canada, sharing an intimate image without consent is a crime. Since July 2026, this also covers AI-made images and threats to share them."
+   },
+   "resume": {
+    "fr": "Au Canada, le Code criminel punit la diffusion d’une image intime sans le consentement de la personne. Depuis le 18 juillet 2026, il punit aussi la menace de la diffuser, et il vise les images fabriquées, y compris par intelligence artificielle, qui peuvent être prises pour de vraies photos ou vidéos.",
+    "es": "En Canadá, el Código Penal castiga difundir una imagen íntima sin el consentimiento de la persona. Desde el 18 de julio de 2026 también castiga amenazar con difundirla, e incluye las imágenes fabricadas, también con inteligencia artificial, que pueden confundirse con fotos o videos reales.",
+    "en": "In Canada, the Criminal Code punishes sharing an intimate image without the person’s consent. Since 18 July 2026, it also punishes threatening to share it, and covers fabricated images, including AI-made ones, that could be mistaken for real photos or videos."
+   },
+   "pour_qui": {
+    "fr": "Vous êtes au Canada et une image intime de vous (nudité, organes sexuels, activité sexuelle explicite) a été diffusée sans votre accord, ou quelqu’un menace de la diffuser, que l’image soit réelle ou fabriquée. Selon votre province, il existe aussi des recours civils rapides : voir les pages Colombie-Britannique et Québec. Si l’image a été prise avant vos 18 ans : Cyberaide.ca et AidezMoiSVP.ca.",
+    "es": "Estás en Canadá y una imagen íntima tuya (desnudez, órganos sexuales, actividad sexual explícita) se difundió sin tu consentimiento, o alguien amenaza con difundirla, sea real o fabricada. Según tu provincia, también hay vías civiles rápidas: consulta las guías de Columbia Británica y de Quebec. Si la imagen se tomó antes de tus 18 años: Cybertip.ca y NeedHelpNow.ca.",
+    "en": "You are in Canada and an intimate image of you (nudity, sexual organs, explicit sexual activity) was shared without your consent, or someone is threatening to share it, whether the image is real or fabricated. Depending on your province, there are also fast civil remedies: see the British Columbia and Quebec guides. If the image was taken before you turned 18: Cybertip.ca and NeedHelpNow.ca."
+   },
+   "etapes": {
+    "fr": [
+     "Gardez des preuves sans repartager l’image : liens (URL), noms des comptes, dates, captures d’écran et messages de menace.",
+     "Signalez l’image à chaque plateforme avec son formulaire.",
+     "Portez plainte à votre police locale avec ces preuves. En cas de danger immédiat, appelez le 9-1-1.",
+     "Demandez à la police si un juge peut ordonner la suppression de l’image : pour une image intime diffusée illégalement, le juge doit exiger qu’elle soit supprimée dans les 48 heures suivant son ordonnance.",
+     "Selon votre province, un recours civil peut aller plus vite : ordonnance du Civil Resolution Tribunal en Colombie-Britannique, ordonnance urgente d’un juge au Québec (voir les pages dédiées).",
+     "StopNCII.org aide à empêcher de nouvelles publications sur les plateformes partenaires, sans envoyer vos images."
+    ],
+    "es": [
+     "Guarda pruebas sin volver a compartir la imagen: enlaces (URL), nombres de las cuentas, fechas, capturas de pantalla y mensajes de amenaza.",
+     "Denuncia la imagen ante cada plataforma con su formulario.",
+     "Presenta una denuncia ante tu policía local con esas pruebas. Si estás en peligro inmediato, llama al 9-1-1.",
+     "Pregunta a la policía si un juez puede ordenar que se borre la imagen: para una imagen íntima difundida ilegalmente, el juez debe exigir que se borre en las 48 horas siguientes a su orden.",
+     "Según tu provincia, una vía civil puede ser más rápida: orden del Civil Resolution Tribunal en Columbia Británica, orden urgente de un juez en Quebec (consulta sus guías).",
+     "StopNCII.org ayuda a evitar nuevas publicaciones en las plataformas asociadas, sin enviar tus imágenes."
+    ],
+    "en": [
+     "Keep evidence without re-sharing the image: links (URLs), account names, dates, screenshots and threatening messages.",
+     "Report the image to each platform using its form.",
+     "Report it to your local police with this evidence. If you are in immediate danger, call 9-1-1.",
+     "Ask the police whether a judge can order the image deleted: for an intimate image shared illegally, the judge must require deletion within 48 hours of the order.",
+     "Depending on your province, a civil remedy can be faster: a Civil Resolution Tribunal order in British Columbia, an urgent court order in Quebec (see their guides).",
+     "StopNCII.org helps prevent new posts on partner platforms, without sending your images."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Les liens (URL) exacts et le nom des comptes",
+     "Des captures d’écran datées des publications et des menaces",
+     "La date à laquelle vous avez découvert la diffusion",
+     "Tout échange montrant que vous n’avez pas accepté la diffusion"
+    ],
+    "es": [
+     "Los enlaces (URL) exactos y el nombre de las cuentas",
+     "Capturas de pantalla con fecha de las publicaciones y de las amenazas",
+     "La fecha en que descubriste la difusión",
+     "Cualquier mensaje que muestre que no aceptaste la difusión"
+    ],
+    "en": [
+     "The exact links (URLs) and account names",
+     "Dated screenshots of the posts and threats",
+     "The date you found out the image was shared",
+     "Any messages showing you did not agree to it being shared"
+    ]
+   },
+   "delai": {
+    "fr": "Quand un juge ordonne la suppression d’une image intime diffusée illégalement, elle doit avoir lieu dans les 48 heures suivant l’ordonnance (depuis le 18 juillet 2026). Le reste dépend de l’enquête.",
+    "es": "Cuando un juez ordena borrar una imagen íntima difundida ilegalmente, debe hacerse en las 48 horas siguientes a la orden (desde el 18 de julio de 2026). Lo demás depende de la investigación.",
+    "en": "When a judge orders an illegally shared intimate image to be deleted, it must happen within 48 hours of the order (since 18 July 2026). Everything else depends on the investigation."
+   },
+   "cout": {
+    "fr": "Porter plainte est gratuit.",
+    "es": "Presentar una denuncia es gratuito.",
+    "en": "Reporting to the police is free."
+   },
+   "limites": {
+    "fr": [
+     "La plainte ne retire pas l’image à elle seule : signalez-la aussi aux plateformes.",
+     "Pour une vraie photo ou vidéo, la loi exige que vous ayez pu vous attendre à ce qu’elle reste privée, quand elle a été prise et quand elle a été diffusée.",
+     "Une image fabriquée n’est visée que si elle peut être prise pour un vrai enregistrement de la personne.",
+     "La menace de diffuser et les images fabriquées par IA sont visées depuis le 18 juillet 2026.",
+     "Le retrait sur une plateforme n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "La denuncia no retira la imagen por sí sola: denúnciala también ante las plataformas.",
+     "Para una foto o un video real, la ley exige que pudieras esperar que siguiera siendo privado, cuando se tomó y cuando se difundió.",
+     "Una imagen fabricada solo cuenta si puede confundirse con una grabación real de la persona.",
+     "La amenaza de difundir y las imágenes fabricadas con IA están incluidas desde el 18 de julio de 2026.",
+     "La retirada en una plataforma no borra las copias publicadas en otros sitios."
+    ],
+    "en": [
+     "A police report does not remove the image by itself: report it to the platforms as well.",
+     "For a real photo or video, the law requires that you could expect it to stay private, both when it was taken and when it was shared.",
+     "A fabricated image is only covered if it could be mistaken for a real recording of the person.",
+     "Threats to share and AI-made images have been covered since 18 July 2026.",
+     "Removal from one platform does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Code criminel, article 162.1 : publier, distribuer, transmettre, vendre, rendre accessible ou annoncer l’image intime d’une personne en sachant qu’elle n’y a pas consenti, ou sans se soucier de son consentement, est puni de 10 ans de prison au plus (14 ans dans certains cas d’agression sexuelle grave). La Loi visant à protéger les victimes (projet de loi C-16, L.C. 2026, ch. 19, sanctionnée le 18 juin 2026, en vigueur le 18 juillet 2026) a ajouté la menace de diffuser (10 ans au plus) et les images créées par tout moyen électronique, y compris l’IA, qui peuvent être confondues avec un enregistrement réel. Article 164.1 : suppression ordonnée par le juge dans les 48 heures.",
+    "es": "Código Penal de Canadá, artículo 162.1: publicar, distribuir, transmitir, vender, poner a disposición o anunciar la imagen íntima de una persona sabiendo que no dio su consentimiento, o sin importar si lo dio, se castiga con hasta 10 años de prisión (14 en ciertos casos de agresión sexual grave). La Ley de protección de las víctimas (proyecto de ley C-16, S.C. 2026, c. 19, sancionada el 18 de junio de 2026, vigente desde el 18 de julio de 2026) añadió la amenaza de difundir (hasta 10 años) y las imágenes creadas por cualquier medio electrónico, incluida la IA, que pueden confundirse con una grabación real. Artículo 164.1: borrado ordenado por el juez en 48 horas.",
+    "en": "Criminal Code, section 162.1: publishing, distributing, transmitting, selling, making available or advertising an intimate image of a person knowing they did not consent, or being reckless about it, is punishable by up to 10 years in prison (14 in some cases of aggravated sexual assault). The Protecting Victims Act (Bill C-16, S.C. 2026, c. 19, royal assent on 18 June 2026, in force on 18 July 2026) added threats to share (up to 10 years) and images made by any electronic means, including AI, that could be mistaken for a real recording. Section 164.1: deletion ordered by a judge within 48 hours."
+   },
+   "source_officielle": {
+    "url": "https://laws-lois.justice.gc.ca/fra/lois/c-46/section-162.1.html",
+    "titre": "Code criminel, article 162.1 — Site Web de la législation (Justice Canada)"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://www.parl.ca/legisinfo/fr/projet-de-loi/45-1/c-16",
+     "titre": {
+      "fr": "LEGISinfo – projet de loi C-16 (Loi visant à protéger les victimes)",
+      "es": "LEGISinfo – proyecto de ley C-16 (Ley de protección de las víctimas, en francés o inglés)",
+      "en": "LEGISinfo – Bill C-16 (Protecting Victims Act)"
+     }
+    },
+    {
+     "url": "https://laws-lois.justice.gc.ca/fra/LoisAnnuelles/2026_19/page-1.html",
+     "titre": {
+      "fr": "Loi visant à protéger les victimes (L.C. 2026, ch. 19) – texte officiel",
+      "es": "Ley de protección de las víctimas (S.C. 2026, c. 19) – texto oficial (en francés o inglés)",
+      "en": "Protecting Victims Act (S.C. 2026, c. 19) – official text"
+     }
+    },
+    {
+     "url": "https://cyberaide.ca/fr/",
+     "titre": {
+      "fr": "Cyberaide.ca (Cybertip.ca) – si l’image a été prise avant 18 ans",
+      "es": "Cybertip.ca (Cyberaide.ca, en francés o inglés) – si la imagen se tomó antes de los 18 años",
+      "en": "Cybertip.ca (Cyberaide.ca) – if the image was taken before age 18"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "deepfake",
+    "chantage"
+   ],
+   "pays": [
+    "CA"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "ca-bc-iipa-crt",
+   "slug": {
+    "fr": "colombie-britannique-ordonnance-retrait-image-intime",
+    "es": "columbia-britanica-orden-retirada-imagen-intima",
+    "en": "british-columbia-intimate-image-protection-order"
+   },
+   "titre": {
+    "fr": "Colombie-Britannique : ordonnance gratuite de retrait d’image intime",
+    "es": "Columbia Británica: orden gratuita para retirar una imagen íntima",
+    "en": "British Columbia: free order to take down an intimate image"
+   },
+   "meta_description": {
+    "fr": "En Colombie-Britannique, le Civil Resolution Tribunal peut ordonner gratuitement le retrait d’une image intime partagée sans accord, même truquée.",
+    "es": "En Columbia Británica, el Civil Resolution Tribunal puede ordenar gratis retirar una imagen íntima compartida sin consentimiento, incluso falsa.",
+    "en": "In British Columbia, the Civil Resolution Tribunal can order, free of charge, the removal of an intimate image shared without consent, even a fake."
+   },
+   "resume": {
+    "fr": "En Colombie-Britannique, une loi de 2023 permet de demander en ligne au Civil Resolution Tribunal (CRT) une ordonnance de protection. Elle peut obliger une personne ou une plateforme à supprimer l’image, à cesser de la partager, à la retirer d’un site ou à la désindexer. Cette demande est gratuite et traitée en priorité.",
+    "es": "En Columbia Británica, una ley de 2023 permite pedir en línea al Civil Resolution Tribunal (CRT) una orden de protección. Puede obligar a una persona o a una plataforma a borrar la imagen, dejar de compartirla, retirarla de un sitio o desindexarla. La solicitud es gratuita y se trata con prioridad.",
+    "en": "In British Columbia, a 2023 law lets you ask the Civil Resolution Tribunal (CRT) online for a protection order. It can require a person or a platform to delete the image, stop sharing it, take it off a site or de-index it. This application is free and handled as a priority."
+   },
+   "pour_qui": {
+    "fr": "Une image intime de vous (nu ou presque, acte sexuel, organes génitaux, région anale ou seins), réelle ou modifiée, même sans votre visage, a été partagée sans votre accord, ou quelqu’un menace de la partager, depuis le 6 mars 2023. Ce recours est prévu par une loi de la Colombie-Britannique. Moins de 19 ans : l’Intimate Images Protection Service peut vous aider ; un parent ou tuteur devra peut-être être impliqué.",
+    "es": "Una imagen íntima tuya (desnudez total o casi, acto sexual, genitales, zona anal o pechos), real o modificada, aunque no se vea tu cara, se compartió sin tu consentimiento, o alguien amenaza con compartirla, desde el 6 de marzo de 2023. Esta vía la prevé una ley de Columbia Británica. Menores de 19 años: el Intimate Images Protection Service puede ayudarte; quizá haga falta que participe tu madre, tu padre o tu tutor.",
+    "en": "An intimate image of you (nude or nearly nude, sexual act, genitals, anal region or breasts), real or altered, even without your face, was shared without your consent, or someone is threatening to share it, since 6 March 2023. This remedy comes from a British Columbia law. Under 19: the Intimate Images Protection Service can help; a parent or guardian may need to be involved."
+   },
+   "etapes": {
+    "fr": [
+     "Gardez des preuves : l’image si vous l’avez, les liens (URL), les messages de menace et des captures d’écran. Sans l’image, vous pouvez quand même faire la demande avec d’autres preuves.",
+     "Utilisez le « Solution Explorer » du CRT : gratuit et anonyme, il vous pose des questions simples et vous donne le bon formulaire.",
+     "Déposez en ligne la demande d’ordonnance de protection. Vous pouvez la faire même si vous ne savez pas qui a partagé l’image : le CRT peut ordonner à un site ou à une plateforme de retirer, supprimer ou désindexer l’image.",
+     "Envoyez vous-même l’ordonnance aux personnes et aux entreprises qui doivent retirer l’image, et gardez une preuve de l’envoi : le CRT ne l’envoie pas à ceux qui n’ont pas participé à la demande.",
+     "Si l’ordonnance n’est pas respectée, demandez au CRT une pénalité administrative. Vous pouvez aussi réclamer des dommages-intérêts, jusqu’à 75 000 $ devant le CRT (avec des frais).",
+     "Pour du soutien et de l’aide dans la démarche, appelez l’Intimate Images Protection Service de la province, sans frais, au 1-833-688-4381. Une plainte à la police reste possible : c’est une démarche distincte."
+    ],
+    "es": [
+     "Guarda pruebas: la imagen si la tienes, los enlaces (URL), los mensajes de amenaza y capturas de pantalla. Sin la imagen, igualmente puedes presentar la solicitud con otras pruebas.",
+     "Usa el «Solution Explorer» del CRT: es gratis y anónimo, te hace preguntas sencillas y te da el formulario correcto.",
+     "Presenta en línea la solicitud de orden de protección. Puedes hacerlo aunque no sepas quién compartió la imagen: el CRT puede ordenar a un sitio o a una plataforma retirar, borrar o desindexar la imagen.",
+     "Envía tú la orden a las personas y empresas que deben retirar la imagen, y guarda una prueba del envío: el CRT no la envía a quien no participó en la solicitud.",
+     "Si no se cumple la orden, pide al CRT una sanción administrativa. También puedes reclamar una indemnización, de hasta 75 000 dólares ante el CRT (con tasas).",
+     "Para recibir apoyo y ayuda con el trámite, llama gratis al Intimate Images Protection Service de la provincia: 1-833-688-4381. También puedes denunciar ante la policía: es un trámite distinto."
+    ],
+    "en": [
+     "Keep evidence: the image if you have it, the links (URLs), threatening messages and screenshots. Without the image, you can still apply with other evidence.",
+     "Use the CRT “Solution Explorer”: free and anonymous, it asks simple questions and gives you the right form.",
+     "Apply online for a protection order. You can apply even if you do not know who shared the image: the CRT can order a website or platform to remove, delete or de-index the image.",
+     "Send the order yourself to the people and companies that must remove the image, and keep proof that you sent it: the CRT does not send it to anyone who did not take part in the claim.",
+     "If the order is not followed, ask the CRT for an administrative penalty. You can also claim damages, up to $75,000 at the CRT (fees apply).",
+     "For support and help with the process, call the province’s Intimate Images Protection Service, toll-free, on 1-833-688-4381. You can also report to the police: that is a separate process."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "L’image ou la vidéo si vous l’avez (en principe, seul le membre du tribunal la voit), sinon les liens (URL)",
+     "Les captures d’écran et les messages qui montrent le partage ou la menace",
+     "Le nom ou l’identifiant des personnes et des sites concernés, si vous les connaissez",
+     "Un moyen sûr de vous joindre (e-mail, téléphone ou texto) et, si besoin, une phrase code"
+    ],
+    "es": [
+     "La imagen o el video si lo tienes (en principio solo lo ve el miembro del tribunal); si no, los enlaces (URL)",
+     "Las capturas de pantalla y los mensajes que muestran la difusión o la amenaza",
+     "El nombre o el usuario de las personas y los sitios implicados, si los conoces",
+     "Una forma segura de contactarte (correo, teléfono o mensaje) y, si hace falta, una frase clave"
+    ],
+    "en": [
+     "The image or video if you have it (usually only the tribunal member sees it), otherwise the links (URLs)",
+     "Screenshots and messages showing the sharing or the threat",
+     "The name or username of the people and websites involved, if you know them",
+     "A safe way to contact you (email, phone or text) and, if needed, a code phrase"
+    ]
+   },
+   "delai": {
+    "fr": "Le CRT traite en priorité les demandes d’ordonnance de protection. Le délai varie selon les preuves fournies et le nombre de demandes.",
+    "es": "El CRT trata con prioridad las solicitudes de orden de protección. El plazo depende de las pruebas aportadas y del número de solicitudes.",
+    "en": "The CRT prioritises protection order claims. The time varies with the evidence provided and the number of claims."
+   },
+   "cout": {
+    "fr": "Gratuit pour l’ordonnance de protection et pour la demande de pénalité. Une demande de dommages-intérêts entraîne des frais.",
+    "es": "Gratis para la orden de protección y para pedir una sanción. Reclamar una indemnización tiene tasas.",
+    "en": "Free for a protection order and for a penalty claim. A damages claim involves fees."
+   },
+   "limites": {
+    "fr": [
+     "Le CRT n’est ni la police ni un tribunal pénal : il n’enquête pas et ne contacte personne à votre place pour demander le retrait.",
+     "Si vous visez une personne précise, elle pourra voir l’image : elle a le droit de connaître les preuves.",
+     "Délai pour agir : en général 2 ans. Il ne s’arrête qu’au dépôt du formulaire de demande, pas pendant l’usage du Solution Explorer.",
+     "Seuls les partages ou les menaces survenus depuis le 6 mars 2023 sont couverts.",
+     "Le retrait sur un site n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "El CRT no es la policía ni un tribunal penal: no investiga ni contacta a nadie en tu nombre para pedir la retirada.",
+     "Si diriges la solicitud contra una persona concreta, podrá ver la imagen: tiene derecho a conocer las pruebas.",
+     "Plazo para actuar: en general 2 años. Solo se detiene al presentar el formulario de solicitud, no mientras usas el Solution Explorer.",
+     "Solo se cubren las difusiones o amenazas ocurridas desde el 6 de marzo de 2023.",
+     "La retirada en un sitio no borra las copias publicadas en otros."
+    ],
+    "en": [
+     "The CRT is not the police or a criminal court: it does not investigate or contact anyone for you to ask for removal.",
+     "If you name a specific person, they will be able to see the image: they have a right to know the evidence.",
+     "Time limit to act: usually 2 years. It only stops when you submit the application form, not while you use the Solution Explorer.",
+     "Only sharing or threats since 6 March 2023 are covered.",
+     "Removal from one site does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Intimate Images Protection Act (SBC 2023, ch. 11), loi de la Colombie-Britannique en vigueur depuis le 29 janvier 2024 : partager une image intime sans consentement, ou menacer de la partager, est illicite (article 3). L’article 5 permet une ordonnance de protection accélérée, même sans prévenir l’autre partie : supprimer l’image, la rendre inaccessible, la retirer d’une plateforme ou la désindexer des moteurs de recherche. Les images modifiées sont couvertes (article 1).",
+    "es": "Intimate Images Protection Act (SBC 2023, c. 11), ley de Columbia Británica vigente desde el 29 de enero de 2024: compartir una imagen íntima sin consentimiento, o amenazar con compartirla, es ilícito (artículo 3). El artículo 5 permite una orden de protección acelerada, incluso sin avisar a la otra parte: borrar la imagen, hacerla inaccesible, retirarla de una plataforma o desindexarla de los buscadores. Las imágenes modificadas están incluidas (artículo 1).",
+    "en": "Intimate Images Protection Act (SBC 2023, c. 11), a British Columbia law in force since 29 January 2024: sharing an intimate image without consent, or threatening to share it, is unlawful (section 3). Section 5 allows an expedited protection order, even without notice to the other side: delete the image, make it unavailable, remove it from a platform or de-index it from search engines. Altered images are covered (section 1)."
+   },
+   "source_officielle": {
+    "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/23011",
+    "titre": "Intimate Images Protection Act [SBC 2023] c. 11 — BC Laws"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://civilresolutionbc.ca/solution-explorer/intimate-images/",
+     "titre": {
+      "fr": "Civil Resolution Tribunal – images intimes et Solution Explorer (en anglais)",
+      "es": "Civil Resolution Tribunal – imágenes íntimas y Solution Explorer (en inglés)",
+      "en": "Civil Resolution Tribunal – intimate images and Solution Explorer"
+     }
+    },
+    {
+     "url": "https://www2.gov.bc.ca/gov/content/safety/public-safety/intimate-images",
+     "titre": {
+      "fr": "Intimate Images Protection Service – gouvernement de la Colombie-Britannique (en anglais)",
+      "es": "Intimate Images Protection Service – gobierno de Columbia Británica (en inglés)",
+      "en": "Intimate Images Protection Service – Government of British Columbia"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "deepfake",
+    "chantage"
+   ],
+   "pays": [
+    "CA"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "ca-qc-ordonnance-images-intimes",
+   "slug": {
+    "fr": "quebec-ordonnance-urgente-image-intime",
+    "es": "quebec-orden-urgente-imagen-intima",
+    "en": "quebec-urgent-intimate-image-order"
+   },
+   "titre": {
+    "fr": "Québec : ordonnance urgente contre le partage d’une image intime",
+    "es": "Quebec: orden urgente contra la difusión de una imagen íntima",
+    "en": "Quebec: urgent court order to stop an intimate image being shared"
+   },
+   "meta_description": {
+    "fr": "Au Québec, un formulaire simple permet d’obtenir d’un juge, en urgence, l’ordre de cesser de partager, de détruire ou de désindexer une image intime.",
+    "es": "En Quebec, un formulario sencillo permite obtener de un juez, con urgencia, la orden de dejar de compartir, destruir o desindexar una imagen íntima.",
+    "en": "In Quebec, a simple form lets you get an urgent court order to stop an intimate image being shared, destroy it or de-index it. How it works."
+   },
+   "resume": {
+    "fr": "Au Québec, depuis le 4 juin 2025, une personne dont l’image intime est partagée sans accord, ou menacée de l’être, peut demander une « ordonnance urgente de cessation ou de prévention du partage » avec un formulaire simple. Un juge de la Cour du Québec ou un juge de paix magistrat la traite en urgence, à toute heure.",
+    "es": "En Quebec, desde el 4 de junio de 2025, una persona cuya imagen íntima se comparte sin consentimiento, o con amenaza de hacerlo, puede pedir una «orden urgente de cese o de prevención de la difusión» con un formulario sencillo. Un juez de la Cour du Québec o un juez de paz magistrado la resuelve con urgencia, a cualquier hora.",
+    "en": "In Quebec, since 4 June 2025, a person whose intimate image is shared without consent, or who is threatened with this, can ask for an “urgent order to stop or prevent the sharing” using a simple form. A Court of Québec judge or a justice of the peace magistrate handles it urgently, at any hour."
+   },
+   "pour_qui": {
+    "fr": "La personne montrée sur l’image, dès 14 ans, ou une personne ou un organisme qu’elle autorise ; avant 14 ans, les parents ou le tuteur font la demande. L’image peut être une photo, une vidéo, un enregistrement audio ou une diffusion en direct, réelle ou modifiée, y compris un hypertrucage par intelligence artificielle.",
+    "es": "La persona que aparece en la imagen, desde los 14 años, o una persona u organización a la que autorice; antes de los 14 años, la piden la madre, el padre o el tutor. La imagen puede ser una foto, un video, una grabación de audio o una transmisión en directo, real o modificada, incluido un deepfake hecho con inteligencia artificial.",
+    "en": "The person shown in the image, from age 14, or a person or organisation they authorise; under 14, parents or a guardian apply. The image can be a photo, video, audio recording or live stream, real or altered, including an AI deepfake."
+   },
+   "etapes": {
+    "fr": [
+     "Remplissez et signez le formulaire de demande d’ordonnance, sur Québec.ca ou au greffe civil d’un palais de justice. Nommez chaque personne et chaque site visé ; si vous ne connaissez pas leur identité, indiquez un e-mail, un compte, une URL ou une adresse IP.",
+     "Déposez-le par le Greffe numérique judiciaire du Québec, au greffe civil d’un palais de justice ou par la poste. En dehors des heures d’ouverture (après 16 h 30, le week-end ou un jour férié), appelez le 1 833 393-2819.",
+     "Joignez vos preuves si vous en avez (captures d’écran, messages de menace) : elles restent confidentielles. Sur papier, mettez-les sous enveloppe scellée.",
+     "Un juge décide en urgence, parfois immédiatement à partir du formulaire. Il peut ordonner de ne pas partager l’image, de cesser de la partager, de la détruire, de désindexer les liens et de fournir des informations pour identifier l’auteur.",
+     "Le greffe transmet l’ordonnance aux personnes nommées, qui doivent agir tout de suite. Vous pouvez aussi la leur envoyer vous-même, en gardant une preuve de l’envoi, sans y être obligée si cela vous met en danger.",
+     "Si l’ordonnance n’est pas respectée, portez plainte à la police avec l’ordonnance et la preuve de notification remise par le greffe. Les amendes peuvent atteindre 5 000 $ par jour pour un individu et 50 000 $ par jour pour un site ou une entreprise."
+    ],
+    "es": [
+     "Rellena y firma el formulario de solicitud de orden, en Québec.ca o en la secretaría civil (greffe civil) de un palacio de justicia. Nombra a cada persona y cada sitio implicado; si no conoces su identidad, indica un correo, una cuenta, una URL o una dirección IP.",
+     "Preséntalo por el Greffe numérique judiciaire du Québec, en la secretaría civil de un palacio de justicia o por correo postal. Fuera del horario de atención (después de las 16:30, el fin de semana o un festivo), llama al 1 833 393-2819.",
+     "Adjunta tus pruebas si las tienes (capturas de pantalla, mensajes de amenaza): se mantienen confidenciales. En papel, ponlas en un sobre cerrado.",
+     "Un juez decide con urgencia, a veces de inmediato a partir del formulario. Puede ordenar no compartir la imagen, dejar de compartirla, destruirla, desindexar los enlaces y dar datos para identificar al autor.",
+     "La secretaría envía la orden a las personas nombradas, que deben actuar de inmediato. También puedes enviársela tú, guardando una prueba del envío, sin estar obligada si eso te pone en peligro.",
+     "Si no se cumple la orden, denuncia ante la policía con la orden y la prueba de notificación que te da la secretaría. Las multas pueden llegar a 5000 dólares por día para una persona y a 50 000 dólares por día para un sitio o una empresa."
+    ],
+    "en": [
+     "Fill in and sign the application form for an order, on Québec.ca or at the civil registry (greffe civil) of a courthouse. Name every person and website involved; if you do not know who they are, give an email, account, URL or IP address.",
+     "File it through the Greffe numérique judiciaire du Québec, at the civil registry of a courthouse or by post. Outside opening hours (after 4:30pm, at weekends or on a public holiday), call 1 833 393-2819.",
+     "Attach your evidence if you have any (screenshots, threatening messages): it stays confidential. On paper, put it in a sealed envelope.",
+     "A judge decides urgently, sometimes immediately from the form. The judge can order people not to share the image, to stop sharing it, to destroy it, to de-index links and to give information identifying the person responsible.",
+     "The registry sends the order to the people named, who must act straight away. You can also send it yourself, keeping proof that you sent it, but you do not have to if it would put you at risk.",
+     "If the order is not followed, report it to the police with the order and the proof of notification from the registry. Fines can reach $5,000 a day for an individual and $50,000 a day for a website or company."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Le formulaire de demande, rempli et signé (votre déclaration vaut serment)",
+     "Les noms, comptes, adresses e-mail, URL ou adresses IP des personnes et des sites visés",
+     "Des captures d’écran et les messages de menace, si vous en avez",
+     "Si quelqu’un fait la demande pour vous : votre consentement (dès 14 ans)"
+    ],
+    "es": [
+     "El formulario de solicitud, rellenado y firmado (tu declaración equivale a un juramento)",
+     "Los nombres, cuentas, correos, URL o direcciones IP de las personas y los sitios implicados",
+     "Capturas de pantalla y mensajes de amenaza, si los tienes",
+     "Si otra persona hace la solicitud por ti: tu consentimiento (desde los 14 años)"
+    ],
+    "en": [
+     "The application form, filled in and signed (your statement counts as sworn)",
+     "The names, accounts, email addresses, URLs or IP addresses of the people and websites involved",
+     "Screenshots and threatening messages, if you have any",
+     "If someone applies for you: your consent (from age 14)"
+    ]
+   },
+   "delai": {
+    "fr": "La demande est jugée en urgence. Des juges de paix magistrats sont de garde 24 heures sur 24, 7 jours sur 7. L’ordonnance n’a pas de date d’expiration, sauf décision contraire du juge.",
+    "es": "La solicitud se resuelve con urgencia. Hay jueces de paz magistrados de guardia las 24 horas, los 7 días de la semana. La orden no caduca, salvo que el juez decida otra cosa.",
+    "en": "The application is decided urgently. Justices of the peace magistrates are on duty 24 hours a day, 7 days a week. The order has no expiry date unless the judge decides otherwise."
+   },
+   "cout": {
+    "fr": "Des frais judiciaires s’appliquent pour un adulte ; c’est gratuit de 14 à 17 ans. Porter plainte à la police en cas de non-respect est gratuit.",
+    "es": "Las personas adultas pagan tasas judiciales; de 14 a 17 años es gratis. Denunciar ante la policía si no se cumple la orden es gratis.",
+    "en": "Adults pay court fees; it is free for ages 14 to 17. Reporting a breach of the order to the police is free."
+   },
+   "limites": {
+    "fr": [
+     "L’ordonnance ne vaut que pour les images identifiées dans la demande : une nouvelle image ou un nouvel hypertrucage demande une nouvelle demande.",
+     "Les personnes nommées ont 30 jours pour contester, mais l’ordonnance reste en vigueur pendant la contestation.",
+     "Pour faire respecter l’ordonnance, il faut choisir entre la plainte à la police et une poursuite civile pour outrage au tribunal, qui est payante.",
+     "Le greffe ne peut transmettre l’ordonnance que si vous avez donné un moyen de joindre la personne ou le site.",
+     "Le retrait sur un site n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "La orden solo vale para las imágenes identificadas en la solicitud: una nueva imagen o un nuevo deepfake requieren otra solicitud.",
+     "Las personas nombradas tienen 30 días para impugnarla, pero la orden sigue vigente mientras tanto.",
+     "Para hacer cumplir la orden hay que elegir entre la denuncia policial y una demanda civil por desacato, que tiene costes.",
+     "La secretaría solo puede enviar la orden si diste una forma de contactar a la persona o al sitio.",
+     "La retirada en un sitio no borra las copias publicadas en otros."
+    ],
+    "en": [
+     "The order only covers the images identified in the application: a new image or a new deepfake needs a new application.",
+     "The people named have 30 days to challenge it, but the order stays in force meanwhile.",
+     "To enforce the order, you must choose between a police report and a civil contempt of court case, which costs money.",
+     "The registry can only send the order if you gave a way to reach the person or website.",
+     "Removal from one site does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Loi visant à contrer le partage sans consentement d’images intimes, édictée par la loi 2024, chapitre 37 (projet de loi n° 73, sanctionné le 4 décembre 2024) ; le recours est en vigueur depuis le 4 juin 2025. Elle crée l’ordonnance urgente de cessation ou de prévention du partage d’une image intime, rendue par un juge de la Cour du Québec ou un juge de paix magistrat. Ne pas la respecter peut entraîner des amendes de 500 $ à 50 000 $ par jour et jusqu’à 18 mois de prison.",
+    "es": "Ley para combatir la difusión sin consentimiento de imágenes íntimas de Quebec (Loi visant à contrer le partage sans consentement d’images intimes), aprobada por la ley 2024, capítulo 37 (proyecto de ley n.º 73, sancionado el 4 de diciembre de 2024); esta vía está vigente desde el 4 de junio de 2025. Crea la orden urgente de cese o de prevención de la difusión de una imagen íntima, dictada por un juez de la Cour du Québec o un juez de paz magistrado. Incumplirla puede acarrear multas de 500 a 50 000 dólares por día y hasta 18 meses de prisión.",
+    "en": "Quebec’s Act to counter non-consensual sharing of intimate images (Loi visant à contrer le partage sans consentement d’images intimes), enacted by 2024, chapter 37 (Bill 73, assented to on 4 December 2024); this remedy has applied since 4 June 2025. It creates the urgent order to stop or prevent the sharing of an intimate image, made by a Court of Québec judge or a justice of the peace magistrate. Breaching it can lead to fines of $500 to $50,000 a day and up to 18 months in prison."
+   },
+   "source_officielle": {
+    "url": "https://www.quebec.ca/justice-et-etat-civil/accompagnement-victimes-crime/partage-sans-consentement-image-intime",
+    "titre": "Partage sans consentement d’une image intime — Québec.ca (ministère de la Justice du Québec)"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://www.publicationsduquebec.gouv.qc.ca/fileadmin/Fichiers_client/lois_et_reglements/LoisAnnuelles/fr/2024/2024C37F.PDF",
+     "titre": {
+      "fr": "Loi 2024, chapitre 37 (projet de loi n° 73) – texte officiel",
+      "es": "Ley 2024, capítulo 37 (proyecto de ley n.º 73) – texto oficial, en francés",
+      "en": "2024, chapter 37 (Bill 73) – official text, in French"
+     }
+    },
+    {
+     "url": "https://www.quebec.ca/nouvelles/actualites/details/les-personnes-victimes-mieux-protegees-contre-le-partage-dimages-intimes-sans-consentement-63355",
+     "titre": {
+      "fr": "Gouvernement du Québec – entrée en vigueur du recours (4 juin 2025)",
+      "es": "Gobierno de Quebec – entrada en vigor de la vía (4 de junio de 2025, en francés)",
+      "en": "Government of Quebec – the remedy comes into force (4 June 2025, in French)"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "deepfake",
+    "chantage"
+   ],
+   "pays": [
+    "CA"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "mx-ley-olimpia",
+   "slug": {
+    "fr": "mexique-ley-olimpia-image-intime",
+    "es": "ley-olimpia-mexico-imagen-intima",
+    "en": "mexico-ley-olimpia-intimate-images"
+   },
+   "titre": {
+    "fr": "Mexique : la Ley Olimpia contre la diffusion d’images intimes",
+    "es": "Ley Olimpia en México: qué hacer si difunden tu contenido íntimo",
+    "en": "Mexico: the Ley Olimpia against sharing intimate images"
+   },
+   "meta_description": {
+    "fr": "Au Mexique, diffuser sans accord des images, vidéos ou audios intimes est un délit (Ley Olimpia). Le ministère public peut faire retirer le contenu.",
+    "es": "En México, difundir sin consentimiento imágenes, videos o audios íntimos es delito (Ley Olimpia). El Ministerio Público puede ordenar retirarlos.",
+    "en": "In Mexico, sharing intimate images, videos or audio without consent is a crime (Ley Olimpia). Prosecutors can order the content removed."
+   },
+   "resume": {
+    "fr": "Au Mexique, la « Ley Olimpia » punit la diffusion d’images, de vidéos ou d’audios intimes sans consentement, même quand le contenu ne montre pas vraiment la personne désignée. En cas de violence numérique, le ministère public ou le juge ordonne de manière immédiate aux plateformes de bloquer ou de supprimer le contenu.",
+    "es": "En México, la «Ley Olimpia» castiga difundir imágenes, videos o audios íntimos sin consentimiento, incluso cuando el contenido no corresponde de verdad a la persona señalada. En casos de violencia digital, el Ministerio Público o el juez ordena de manera inmediata a las plataformas bloquear o eliminar el contenido.",
+    "en": "In Mexico, the “Ley Olimpia” punishes sharing intimate images, videos or audio without consent, even when the content does not really show the person named. In cases of digital violence, prosecutors or the judge immediately order platforms to block or delete the content."
+   },
+   "pour_qui": {
+    "fr": "Vous êtes adulte, au Mexique, et des photos, vidéos ou audios intimes de vous ont été diffusés ou publiés sans votre accord, ou enregistrés à votre insu. Dans l’État de Jalisco, le code pénal vise aussi expressément les contenus créés par intelligence artificielle et la menace de diffuser. Si vous avez moins de 18 ans : Te Protejo México et la police (voir la page Aide urgente).",
+    "es": "Eres una persona adulta en México y se difundieron o publicaron sin tu consentimiento fotos, videos o audios íntimos tuyos, o se grabaron sin que lo supieras. En el estado de Jalisco, el código penal también incluye de forma expresa los contenidos creados con inteligencia artificial y la amenaza de difundir. Si tienes menos de 18 años: Te Protejo México y la policía (consulta la página Ayuda urgente).",
+    "en": "You are an adult in Mexico and intimate photos, videos or audio of you were shared or posted without your consent, or recorded without your knowledge. In the state of Jalisco, the criminal code also expressly covers AI-generated content and threats to share. If you are under 18: Te Protejo México and the police (see the Urgent help page)."
+   },
+   "etapes": {
+    "fr": [
+     "Gardez des preuves sans repartager le contenu : liens (URL), nom du compte ou de la page, captures d’écran datées.",
+     "Signalez le contenu à la plateforme avec son formulaire.",
+     "Portez plainte (denuncia) auprès du ministère public (Fiscalía). Chaque État a aussi ses propres règles pénales sur ce délit.",
+     "Demandez tout de suite des mesures de protection : le ministère public ou le juge doit ordonner aux plateformes, réseaux sociaux ou sites d’interrompre, de bloquer ou de supprimer le contenu. Donnez l’adresse exacte (URL) et le nom du service qui l’héberge.",
+     "Dans les 5 jours, une audience permet au juge de confirmer, de modifier ou d’annuler ces mesures.",
+     "Pour être orientée, appelez la Línea de las Mujeres (079, option 1). En cas de danger, appelez le 911. StopNCII.org aide aussi à freiner la rediffusion, sans envoyer vos images."
+    ],
+    "es": [
+     "Guarda pruebas sin volver a compartir el contenido: enlaces (URL), nombre de la cuenta o de la página, capturas de pantalla con fecha.",
+     "Denuncia el contenido ante la plataforma con su formulario.",
+     "Presenta una denuncia ante el Ministerio Público (Fiscalía). Cada estado tiene también sus propias normas penales sobre este delito.",
+     "Pide de inmediato medidas de protección: el Ministerio Público o el juez debe ordenar a las plataformas, redes sociales o páginas interrumpir, bloquear o eliminar el contenido. Da la dirección exacta (URL) y el nombre del servicio que lo aloja.",
+     "En un plazo de 5 días, una audiencia permite al juez confirmar, modificar o cancelar esas medidas.",
+     "Para recibir orientación, llama a la Línea de las Mujeres (079, opción 1). Si estás en peligro, llama al 911. StopNCII.org también ayuda a frenar nuevas difusiones, sin enviar tus imágenes."
+    ],
+    "en": [
+     "Keep evidence without re-sharing the content: links (URLs), account or page name, dated screenshots.",
+     "Report the content to the platform using its form.",
+     "File a criminal complaint (denuncia) with the public prosecutor’s office (Fiscalía). Each state also has its own criminal rules on this offence.",
+     "Ask straight away for protection measures: prosecutors or the judge must order platforms, social networks or websites to interrupt, block or delete the content. Give the exact address (URL) and the name of the hosting service.",
+     "Within 5 days, a hearing lets the judge confirm, change or cancel these measures.",
+     "For guidance, women can call the Línea de las Mujeres (079, option 1). If you are in danger, call 911. StopNCII.org also helps slow re-sharing, without sending your images."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Les liens (URL) exacts et le nom du service qui héberge le contenu",
+     "Des captures d’écran datées",
+     "Une courte description des faits : quand, où, et l’auteur si vous le connaissez",
+     "Les messages de menace, s’il y en a"
+    ],
+    "es": [
+     "Los enlaces (URL) exactos y el nombre del servicio que aloja el contenido",
+     "Capturas de pantalla con fecha",
+     "Una breve descripción de los hechos: cuándo, dónde y quién es el autor si lo sabes",
+     "Los mensajes de amenaza, si los hay"
+    ],
+    "en": [
+     "The exact links (URLs) and the name of the service hosting the content",
+     "Dated screenshots",
+     "A short description: when, where, and who did it if you know",
+     "Any threatening messages"
+    ]
+   },
+   "delai": {
+    "fr": "Les mesures de protection sont ordonnées de manière immédiate ; une audience doit avoir lieu dans les 5 jours pour les confirmer, les modifier ou les annuler.",
+    "es": "Las medidas de protección se ordenan de manera inmediata; debe celebrarse una audiencia en los 5 días siguientes para confirmarlas, modificarlas o cancelarlas.",
+    "en": "Protection measures are ordered immediately; a hearing must take place within 5 days to confirm, change or cancel them."
+   },
+   "cout": {
+    "fr": "La Constitution mexicaine prévoit que la justice est gratuite (article 17).",
+    "es": "La Constitución mexicana establece que la justicia es gratuita (artículo 17).",
+    "en": "The Mexican Constitution says that justice is free of charge (article 17)."
+   },
+   "limites": {
+    "fr": [
+     "Les mesures de retrait figurent dans la loi sur le droit des femmes à une vie sans violences. Pour un homme victime, la plainte pénale reste possible, mais l’accès à ces mesures n’a pas été vérifié.",
+     "Pour être efficace, la demande doit désigner le service en ligne et l’adresse exacte (URL) du contenu.",
+     "Les règles et les peines varient d’un État à l’autre.",
+     "L’enquête pénale peut être longue : demandez les mesures de protection dès la plainte.",
+     "Le retrait sur une plateforme n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "Las medidas de retirada están en la ley sobre el derecho de las mujeres a una vida libre de violencias. Si la víctima es un hombre, puede presentar la denuncia penal, pero no hemos verificado su acceso a estas medidas.",
+     "Para que funcione, la petición debe identificar el servicio en línea y la dirección exacta (URL) del contenido.",
+     "Las normas y las penas cambian de un estado a otro.",
+     "La investigación penal puede ser larga: pide las medidas de protección desde la denuncia.",
+     "La retirada en una plataforma no borra las copias publicadas en otros sitios."
+    ],
+    "en": [
+     "The removal measures are in the law on women’s right to a life free of violence. A man who is a victim can still file a criminal complaint, but we have not verified his access to these measures.",
+     "To work, the request must name the online service and the exact address (URL) of the content.",
+     "Rules and penalties vary from state to state.",
+     "Criminal investigations can be long: ask for protection measures as soon as you file the complaint.",
+     "Removal from one platform does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Code pénal fédéral, articles 199 Octies à 199 Decies (décret publié au Journal officiel de la Fédération le 1er juin 2021, dit « Ley Olimpia ») : diffuser, partager, distribuer ou publier sans consentement des images, vidéos ou audios intimes d’une personne majeure, ou les enregistrer sans son accord, est puni de 3 à 6 ans de prison et d’une amende ; même peine si le contenu ne correspond pas à la personne désignée ; peine augmentée jusqu’à la moitié, notamment si l’auteur est un conjoint ou un ex-partenaire, ou en cas de but lucratif. Loi générale sur l’accès des femmes à une vie libre de violences, articles 20 Quáter et 20 Sexies : violence numérique (contenus réels ou simulés) et mesures de protection immédiates. Jalisco : article 176-Bis. 3 du code pénal de l’État (décret 30178/LXIV/26, journal officiel « El Estado de Jalisco » du 18 juin 2026).",
+    "es": "Código Penal Federal, artículos 199 Octies a 199 Decies (decreto publicado en el Diario Oficial de la Federación el 1 de junio de 2021, conocido como «Ley Olimpia»): divulgar, compartir, distribuir o publicar sin consentimiento imágenes, videos o audios de contenido íntimo sexual de una persona mayor de edad, o grabarlos sin su autorización, se castiga con 3 a 6 años de prisión y multa; misma pena si el contenido no corresponde a la persona señalada; la pena aumenta hasta en una mitad, entre otros casos si el autor es cónyuge o expareja, o si hay fines lucrativos. Ley General de Acceso de las Mujeres a una Vida Libre de Violencias, artículos 20 Quáter y 20 Sexies: violencia digital (contenidos reales o simulados) y medidas de protección inmediatas. Jalisco: artículo 176-Bis. 3 del Código Penal del estado (decreto 30178/LXIV/26, Periódico Oficial «El Estado de Jalisco» del 18 de junio de 2026).",
+    "en": "Federal Criminal Code, articles 199 Octies to 199 Decies (decree published in the Official Journal of the Federation on 1 June 2021, known as the “Ley Olimpia”): disclosing, sharing, distributing or posting without consent intimate sexual images, videos or audio of an adult, or recording them without permission, is punishable by 3 to 6 years in prison and a fine; the same applies if the content does not really show the person named; the penalty increases by up to half, for example if the offender is a spouse or former partner, or acts for profit. General Law on Women’s Access to a Life Free of Violence, articles 20 Quáter and 20 Sexies: digital violence (real or simulated content) and immediate protection measures. Jalisco: article 176-Bis. 3 of the state criminal code (decree 30178/LXIV/26, official journal “El Estado de Jalisco”, 18 June 2026)."
+   },
+   "source_officielle": {
+    "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf",
+    "titre": "Código Penal Federal (texto vigente), arts. 199 Octies a 199 Decies — Cámara de Diputados"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LGAMVLV.pdf",
+     "titre": {
+      "fr": "Loi générale sur l’accès des femmes à une vie libre de violences, articles 20 Quáter à 20 Sexies (en espagnol)",
+      "es": "Ley General de Acceso de las Mujeres a una Vida Libre de Violencias, artículos 20 Quáter a 20 Sexies",
+      "en": "General Law on Women’s Access to a Life Free of Violence, articles 20 Quáter to 20 Sexies (in Spanish)"
+     }
+    },
+    {
+     "url": "https://apiperiodico.jalisco.gob.mx/api/newspaper/getAsset?q=newspaper/25318/1781723676-2026-06-18-VI.pdf",
+     "titre": {
+      "fr": "Jalisco – journal officiel du 18 juin 2026, décret 30178 (article 176-Bis. 3, en espagnol)",
+      "es": "Jalisco – Periódico Oficial del 18 de junio de 2026, decreto 30178 (artículo 176-Bis. 3)",
+      "en": "Jalisco – official journal of 18 June 2026, decree 30178 (article 176-Bis. 3, in Spanish)"
+     }
+    },
+    {
+     "url": "https://www.gob.mx/mujeres",
+     "titre": {
+      "fr": "Secrétariat des Femmes – Línea de las Mujeres 079 (en espagnol)",
+      "es": "Secretaría de las Mujeres – Línea de las Mujeres 079",
+      "en": "Ministry of Women – Línea de las Mujeres 079 (in Spanish)"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "deepfake"
+   ],
+   "pays": [
+    "MX"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "co-suplantacion-ia-ley-2502",
+   "slug": {
+    "fr": "colombie-usurpation-identite-ia-loi-2502",
+    "es": "colombia-suplantacion-identidad-ia-ley-2502",
+    "en": "colombia-ai-impersonation-law-2502"
+   },
+   "titre": {
+    "fr": "Colombie : usurpation d’identité par IA (deepfake), les recours",
+    "es": "Colombia: suplantación de identidad con IA (deepfake), qué hacer",
+    "en": "Colombia: AI impersonation (deepfakes), what you can do"
+   },
+   "meta_description": {
+    "fr": "En Colombie, se faire passer pour quelqu’un est un délit puni d’amende, plus lourde depuis 2026 si l’IA est utilisée. Plateforme, plainte, tutela.",
+    "es": "En Colombia, suplantar a alguien es delito castigado con multa, mayor desde 2026 si se usa IA. Pasos: plataforma, denuncia y acción de tutela.",
+    "en": "In Colombia, impersonating someone is a crime punished by a fine, higher since 2026 if AI is used. Steps: platform report, complaint, tutela."
+   },
+   "resume": {
+    "fr": "En Colombie, se faire passer pour une autre personne pour en tirer profit ou lui nuire est un délit (« falsedad personal »), puni d’une amende. Depuis la loi 2502 de 2025, l’amende est augmentée jusqu’à un tiers quand l’usurpation utilise l’intelligence artificielle, par exemple un deepfake.",
+    "es": "En Colombia, suplantar a otra persona para obtener provecho o causarle daño es delito («falsedad personal») y se castiga con multa. Desde la Ley 2502 de 2025, la multa aumenta hasta en una tercera parte cuando se usa inteligencia artificial, por ejemplo un deepfake.",
+    "en": "In Colombia, impersonating someone to gain an advantage or cause harm is a crime (“falsedad personal”) punished by a fine. Since Law 2502 of 2025, the fine increases by up to one third when artificial intelligence is used, for example a deepfake."
+   },
+   "pour_qui": {
+    "fr": "Quelqu’un utilise votre nom, votre visage ou votre voix, par exemple avec un faux profil ou un deepfake, pour se faire passer pour vous en Colombie.",
+    "es": "Alguien usa tu nombre, tu cara o tu voz, por ejemplo con un perfil falso o un deepfake, para hacerse pasar por ti en Colombia.",
+    "en": "Someone is using your name, face or voice, for example with a fake profile or a deepfake, to pass themselves off as you in Colombia."
+   },
+   "etapes": {
+    "fr": [
+     "Gardez des preuves : liens (URL) du faux profil ou du contenu, captures d’écran datées, messages envoyés en votre nom.",
+     "Signalez l’usurpation à la plateforme avec son formulaire dédié à l’usurpation d’identité.",
+     "Portez plainte (denuncia) au point d’accueil de la police ou du parquet (Fiscalía) le plus proche : le formulaire en ligne ¡ADenunciar! n’accepte que certains délits.",
+     "Si l’usurpation passe par le piratage d’un compte (délit informatique) ou s’accompagne d’une extorsion, vous pouvez porter plainte en ligne sur ¡ADenunciar! : vous recevez un numéro par e-mail.",
+     "Pour faire retirer le contenu, l’action de tutela, un recours devant un juge, protège vos droits fondamentaux (image, bon nom, intimité). Contre un particulier, elle n’est possible que dans certains cas, par exemple si vous êtes sans défense face à lui. Pas besoin d’avocat, et le juge décide en 10 jours au plus.",
+     "Surveillez la réapparition du faux profil sous un autre nom et signalez-le à nouveau si besoin."
+    ],
+    "es": [
+     "Guarda pruebas: enlaces (URL) del perfil falso o del contenido, capturas de pantalla con fecha, mensajes enviados en tu nombre.",
+     "Denuncia la suplantación ante la plataforma con su formulario específico de suplantación de identidad.",
+     "Presenta una denuncia en el punto de recepción de la Policía o de la Fiscalía más cercano: el formulario en línea ¡ADenunciar! solo admite algunos delitos.",
+     "Si la suplantación incluye el hackeo de una cuenta (delito informático) o una extorsión, puedes denunciar en línea en ¡ADenunciar!: recibes un número por correo.",
+     "Para que retiren el contenido, la acción de tutela ante un juez protege tus derechos fundamentales (imagen, buen nombre, intimidad). Contra un particular solo procede en algunos casos, por ejemplo si estás en situación de indefensión frente a él. No necesitas abogado y el juez decide en 10 días como máximo.",
+     "Vigila si el perfil falso reaparece con otro nombre y denúncialo de nuevo si hace falta."
+    ],
+    "en": [
+     "Keep evidence: links (URLs) to the fake profile or content, dated screenshots, messages sent in your name.",
+     "Report the impersonation to the platform using its dedicated impersonation form.",
+     "File a complaint (denuncia) at the nearest police or prosecutor’s office (Fiscalía) reception point: the online ¡ADenunciar! form only accepts certain crimes.",
+     "If the impersonation involves a hacked account (computer crime) or extortion, you can report it online on ¡ADenunciar!: you get a reference number by email.",
+     "To get the content removed, a tutela action before a judge protects your fundamental rights (image, good name, privacy). Against a private person it is only possible in some cases, for example if you are defenceless against them. You do not need a lawyer, and the judge decides within 10 days.",
+     "Watch for the fake profile coming back under another name and report it again if needed."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Les liens (URL) du faux profil ou du contenu truqué, et celui de votre vrai profil",
+     "Des captures d’écran datées",
+     "Une pièce d’identité, que la plateforme ou la police peuvent demander",
+     "Pour une tutela : une description claire des faits et du droit atteint, votre nom et votre lieu de résidence"
+    ],
+    "es": [
+     "Los enlaces (URL) del perfil falso o del contenido manipulado, y el de tu perfil real",
+     "Capturas de pantalla con fecha",
+     "Un documento de identidad, que la plataforma o la policía pueden pedir",
+     "Para una tutela: una descripción clara de los hechos y del derecho afectado, tu nombre y tu lugar de residencia"
+    ],
+    "en": [
+     "The links (URLs) to the fake profile or manipulated content, and to your real profile",
+     "Dated screenshots",
+     "An ID document, which the platform or the police may ask for",
+     "For a tutela: a clear description of what happened and which right is affected, your name and where you live"
+    ]
+   },
+   "delai": {
+    "fr": "Le juge doit trancher la tutela en 10 jours au plus après son dépôt.",
+    "es": "El juez debe resolver la tutela en un máximo de 10 días desde que se presenta.",
+    "en": "The judge must decide a tutela within 10 days of it being filed."
+   },
+   "cout": {
+    "fr": "La tutela se dépose sans avocat et sans formalité particulière.",
+    "es": "La tutela se presenta sin abogado y sin formalidades especiales.",
+    "en": "A tutela can be filed without a lawyer or any special formalities."
+   },
+   "limites": {
+    "fr": [
+     "La falsedad personal est punie d’une amende, pas de prison, et ne s’applique que si les faits ne constituent pas un délit plus grave.",
+     "L’amende plus lourde pour usage de l’IA s’applique depuis fin juillet 2026, un an après la promulgation de la loi.",
+     "La plainte en ligne ¡ADenunciar! ne couvre pas la falsedad personal : il faut se déplacer.",
+     "Contre un particulier, la tutela n’est recevable que dans certains cas.",
+     "Un faux profil supprimé peut réapparaître sous un autre nom."
+    ],
+    "es": [
+     "La falsedad personal se castiga con multa, no con prisión, y solo se aplica si los hechos no constituyen un delito más grave.",
+     "La multa mayor por uso de IA se aplica desde finales de julio de 2026, un año después de la promulgación de la ley.",
+     "La denuncia en línea ¡ADenunciar! no incluye la falsedad personal: hay que ir en persona.",
+     "Contra un particular, la tutela solo procede en algunos casos.",
+     "Un perfil falso eliminado puede reaparecer con otro nombre."
+    ],
+    "en": [
+     "Falsedad personal is punished by a fine, not prison, and only applies if the facts do not amount to a more serious crime.",
+     "The higher fine for using AI has applied since late July 2026, one year after the law was enacted.",
+     "The online ¡ADenunciar! system does not cover falsedad personal: you need to go in person.",
+     "Against a private person, a tutela is only admissible in some cases.",
+     "A deleted fake profile can come back under another name."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Code pénal colombien (loi 599 de 2000), article 296 « falsedad personal », modifié par la loi 2502 du 28 juillet 2025 (Journal officiel n° 53.198 du 31 juillet 2025) : se substituer à une personne, ou usurper son identité, pour en tirer profit ou lui nuire est puni d’une amende, augmentée jusqu’à un tiers si l’intelligence artificielle est utilisée, sauf si les faits constituent un autre délit. La loi définit le deepfake et prévoit que ce changement s’applique un an après sa promulgation. Constitution, article 86, et décret 2591 de 1991 : action de tutela.",
+    "es": "Código Penal colombiano (Ley 599 de 2000), artículo 296 «falsedad personal», modificado por la Ley 2502 del 28 de julio de 2025 (Diario Oficial n.º 53.198 del 31 de julio de 2025): sustituir o suplantar a una persona para obtener provecho o causar daño se castiga con multa, que aumenta hasta en una tercera parte si se usa inteligencia artificial, siempre que la conducta no constituya otro delito. La ley define el deepfake y dispone que este cambio rige un año después de su promulgación. Constitución, artículo 86, y Decreto 2591 de 1991: acción de tutela.",
+    "en": "Colombian Criminal Code (Law 599 of 2000), article 296 “falsedad personal”, amended by Law 2502 of 28 July 2025 (Official Journal No. 53,198 of 31 July 2025): taking someone’s place or impersonating them to gain an advantage or cause harm is punished by a fine, increased by up to one third if artificial intelligence is used, unless the facts amount to another crime. The law defines deepfakes and makes this change apply one year after enactment. Constitution, article 86, and Decree 2591 of 1991: tutela action."
+   },
+   "source_officielle": {
+    "url": "https://normograma.mintic.gov.co/mintic/compilacion/docs/ley_2502_2025.htm",
+    "titre": "Ley 2502 de 2025 — Normograma del Ministerio TIC (texto oficial)"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://www.policia.gov.co/sistema-nacional-denuncia-virtual-adenunciar",
+     "titre": {
+      "fr": "Police nationale – plainte en ligne ¡ADenunciar! (en espagnol)",
+      "es": "Policía Nacional – denuncia virtual ¡ADenunciar!",
+      "en": "National Police – ¡ADenunciar! online complaints (in Spanish)"
+     }
+    },
+    {
+     "url": "https://normograma.mintic.gov.co/mintic/compilacion/docs/constitucion_politica_1991.htm",
+     "titre": {
+      "fr": "Constitution colombienne, article 86 : l’action de tutela (en espagnol)",
+      "es": "Constitución Política, artículo 86: la acción de tutela",
+      "en": "Colombian Constitution, article 86: the tutela action (in Spanish)"
+     }
+    },
+    {
+     "url": "https://normograma.mintic.gov.co/mintic/compilacion/docs/decreto_2591_1991.htm",
+     "titre": {
+      "fr": "Décret 2591 de 1991 : comment déposer une tutela (en espagnol)",
+      "es": "Decreto 2591 de 1991: cómo presentar una tutela",
+      "en": "Decree 2591 of 1991: how to file a tutela (in Spanish)"
+     }
+    }
+   ],
+   "situations": [
+    "usurpation",
+    "deepfake"
+   ],
+   "pays": [
+    "CO"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
+  },
+  {
+   "id": "co-contenido-intimo-tutela",
+   "slug": {
+    "fr": "colombie-contenu-intime-diffuse-recours",
+    "es": "colombia-contenido-intimo-difundido-que-hacer",
+    "en": "colombia-intimate-content-shared-what-to-do"
+   },
+   "titre": {
+    "fr": "Colombie : contenu intime diffusé sans accord, les recours",
+    "es": "Colombia: contenido íntimo difundido sin consentimiento, qué hacer",
+    "en": "Colombia: intimate content shared without consent, what to do"
+   },
+   "meta_description": {
+    "fr": "En Colombie, aucun délit ne vise encore directement la diffusion d’images intimes, mais la tutela et l’autorité des données (SIC) permettent d’agir.",
+    "es": "En Colombia aún no hay un delito específico para la difusión de contenido íntimo, pero la tutela y la SIC permiten actuar. Los pasos.",
+    "en": "Colombia has no specific crime yet for sharing intimate content without consent, but a tutela and the SIC data authority can help. The steps."
+   },
+   "resume": {
+    "fr": "En Colombie, la Cour constitutionnelle a constaté en juin 2026 qu’aucun délit ne vise directement la diffusion de contenus intimes sans consentement, et elle a demandé au Congrès d’agir. En attendant, l’action de tutela permet d’obtenir d’un juge un ordre de retrait, et l’autorité des données personnelles (SIC) peut être saisie.",
+    "es": "En Colombia, la Corte Constitucional constató en junio de 2026 que ningún delito regula de forma directa la difusión de contenido íntimo sin consentimiento, y pidió al Congreso que actúe. Mientras tanto, la acción de tutela permite obtener de un juez una orden de retirada, y se puede acudir a la autoridad de datos personales (SIC).",
+    "en": "In Colombia, the Constitutional Court found in June 2026 that no crime directly covers sharing intimate content without consent, and asked Congress to act. Meanwhile, a tutela action can get a judge to order removal, and you can complain to the personal data authority (SIC)."
+   },
+   "pour_qui": {
+    "fr": "Vous êtes en Colombie et des photos ou vidéos intimes de vous circulent sans votre accord, ou vous avez retiré l’accord que vous aviez donné. Si vous avez moins de 18 ans : ligne 141 (ICBF) et Te Protejo Colombia (voir la page Aide urgente).",
+    "es": "Estás en Colombia y circulan fotos o videos íntimos tuyos sin tu consentimiento, o retiraste el consentimiento que habías dado. Si tienes menos de 18 años: línea 141 (ICBF) y Te Protejo Colombia (consulta la página Ayuda urgente).",
+    "en": "You are in Colombia and intimate photos or videos of you are circulating without your consent, or you withdrew consent you had given. If you are under 18: line 141 (ICBF) and Te Protejo Colombia (see the Urgent help page)."
+   },
+   "etapes": {
+    "fr": [
+     "Gardez des preuves sans repartager le contenu : liens (URL), captures d’écran datées, noms des comptes et des sites.",
+     "Demandez le retrait directement à la plateforme ou au site, avec son formulaire, et gardez une trace de votre demande : la SIC demande cette démarche avant une plainte.",
+     "Déposez une action de tutela devant un juge pour protéger vos droits à l’image, à l’intimité et au bon nom. Pas besoin d’avocat, et le juge doit décider en 10 jours au plus. Dans une affaire jugée en 2026, le juge a ordonné à l’auteur de tout faire pour retirer les vidéos.",
+     "Si un site ou une entreprise garde le contenu après votre demande, portez plainte en ligne auprès de la SIC (« Denuncias de Habeas Data y Protección de Datos Personales ») ; il faut créer un compte « SIC Servicios en Línea ».",
+     "En cas de chantage ou de demande d’argent, portez plainte pour extorsion, aussi en ligne sur ¡ADenunciar! ; ligne spécialisée de la police : 165. En cas de danger : 123.",
+     "StopNCII.org aide à empêcher de nouvelles publications sur les plateformes partenaires, sans envoyer vos images. Pour un accompagnement en cas de violence de genre : ligne 155."
+    ],
+    "es": [
+     "Guarda pruebas sin volver a compartir el contenido: enlaces (URL), capturas de pantalla con fecha, nombres de las cuentas y de los sitios.",
+     "Pide la retirada directamente a la plataforma o al sitio, con su formulario, y guarda constancia de tu solicitud: la SIC pide este paso antes de una denuncia.",
+     "Presenta una acción de tutela ante un juez para proteger tus derechos a la imagen, a la intimidad y al buen nombre. No necesitas abogado y el juez debe decidir en 10 días como máximo. En un caso resuelto en 2026, el juez ordenó al autor hacer todo lo posible para retirar los videos.",
+     "Si un sitio o una empresa mantiene el contenido después de tu solicitud, presenta una denuncia en línea ante la SIC («Denuncias de Habeas Data y Protección de Datos Personales»); hay que crear un usuario en «SIC Servicios en Línea».",
+     "Si hay chantaje o te piden dinero, denuncia la extorsión, también en línea en ¡ADenunciar!; línea especializada de la Policía: 165. Si estás en peligro: 123.",
+     "StopNCII.org ayuda a evitar nuevas publicaciones en las plataformas asociadas, sin enviar tus imágenes. Para orientación en casos de violencia de género: línea 155."
+    ],
+    "en": [
+     "Keep evidence without re-sharing the content: links (URLs), dated screenshots, account and website names.",
+     "Ask the platform or website directly to remove it, using its form, and keep a record of your request: the SIC asks for this step before a complaint.",
+     "File a tutela action before a judge to protect your rights to your image, privacy and good name. You do not need a lawyer, and the judge must decide within 10 days. In a case decided in 2026, the judge ordered the offender to do everything possible to get the videos removed.",
+     "If a website or company keeps the content after your request, complain online to the SIC (“Denuncias de Habeas Data y Protección de Datos Personales”); you need to create a “SIC Servicios en Línea” account.",
+     "If you are being blackmailed or asked for money, report extortion, which you can also do online on ¡ADenunciar!; the police specialist line is 165. If you are in danger: 123.",
+     "StopNCII.org helps prevent new posts on partner platforms, without sending your images. For guidance on gender-based violence: line 155."
+    ]
+   },
+   "a_preparer": {
+    "fr": [
+     "Les liens (URL) exacts et le nom des comptes ou des sites",
+     "Des captures d’écran datées",
+     "La preuve de votre demande de retrait adressée au site (utile pour la SIC)",
+     "Pour la tutela : les faits, le droit atteint, votre nom et votre lieu de résidence"
+    ],
+    "es": [
+     "Los enlaces (URL) exactos y el nombre de las cuentas o de los sitios",
+     "Capturas de pantalla con fecha",
+     "La prueba de la solicitud de retirada que enviaste al sitio (útil para la SIC)",
+     "Para la tutela: los hechos, el derecho afectado, tu nombre y tu lugar de residencia"
+    ],
+    "en": [
+     "The exact links (URLs) and the names of the accounts or websites",
+     "Dated screenshots",
+     "Proof of the removal request you sent to the website (useful for the SIC)",
+     "For the tutela: what happened, which right is affected, your name and where you live"
+    ]
+   },
+   "delai": {
+    "fr": "Le juge doit trancher la tutela en 10 jours au plus. La SIC ne publie pas de délai pour ces plaintes.",
+    "es": "El juez debe resolver la tutela en un máximo de 10 días. La SIC no publica un plazo para estas denuncias.",
+    "en": "The judge must decide the tutela within 10 days. The SIC does not publish a time frame for these complaints."
+   },
+   "cout": {
+    "fr": "La plainte en ligne auprès de la SIC est gratuite. La tutela se dépose sans avocat.",
+    "es": "La denuncia en línea ante la SIC es gratuita. La tutela se presenta sin abogado.",
+    "en": "The online complaint to the SIC is free. A tutela can be filed without a lawyer."
+   },
+   "limites": {
+    "fr": [
+     "Il n’existe pas encore de délit spécifique : la Cour constitutionnelle a demandé au Congrès de légiférer (sentence T-184 de 2026).",
+     "Contre un particulier, la tutela n’est possible que dans certains cas, par exemple si vous êtes en situation d’infériorité ou sans défense face à lui.",
+     "La SIC contrôle l’usage des données personnelles, surtout par les entreprises. Elle a indiqué ne pas vouloir être mêlée aux conflits entre particuliers sur les réseaux sociaux (sentence T-158 de 2026).",
+     "La plainte en ligne ¡ADenunciar! ne couvre que certains délits ; pour les autres, il faut se déplacer.",
+     "Le retrait sur une plateforme n’efface pas les copies publiées ailleurs."
+    ],
+    "es": [
+     "Aún no existe un delito específico: la Corte Constitucional pidió al Congreso que legisle (sentencia T-184 de 2026).",
+     "Contra un particular, la tutela solo procede en algunos casos, por ejemplo si estás en situación de inferioridad o indefensión frente a él.",
+     "La SIC vigila el uso de los datos personales, sobre todo por parte de empresas. Ha dicho que no debería intervenir en conflictos entre particulares en redes sociales (sentencia T-158 de 2026).",
+     "La denuncia en línea ¡ADenunciar! solo cubre algunos delitos; para los demás hay que ir en persona.",
+     "La retirada en una plataforma no borra las copias publicadas en otros sitios."
+    ],
+    "en": [
+     "There is no specific crime yet: the Constitutional Court asked Congress to legislate (judgment T-184 of 2026).",
+     "Against a private person, a tutela is only possible in some cases, for example if you are in a position of inferiority or defenceless against them.",
+     "The SIC oversees the use of personal data, mainly by companies. It has said it should not be drawn into disputes between individuals on social media (judgment T-158 of 2026).",
+     "The online ¡ADenunciar! system only covers some crimes; for others you need to go in person.",
+     "Removal from one platform does not erase copies posted elsewhere."
+    ]
+   },
+   "attention": null,
+   "base_legale": {
+    "fr": "Constitution colombienne, article 86 (action de tutela, décision en 10 jours au plus) et décret 2591 de 1991 (sans avocat ; contre un particulier, en cas de subordination ou d’absence de défense). Cour constitutionnelle, sentence T-184 du 19 juin 2026 : la diffusion non consentie de contenus intimes est une forme de violence de genre ; aucun délit ne la vise directement ; le Congrès est invité à légiférer ; l’accord donné peut être retiré. Loi 1581 de 2012 sur la protection des données personnelles : plainte à la SIC après une réclamation directe au responsable.",
+    "es": "Constitución Política, artículo 86 (acción de tutela, decisión en un máximo de 10 días) y Decreto 2591 de 1991 (sin abogado; contra particulares, en casos de subordinación o indefensión). Corte Constitucional, Sentencia T-184 del 19 de junio de 2026: la difusión no consentida de contenido íntimo es una expresión de la violencia de género; ningún tipo penal la regula de forma directa; se exhorta al Congreso a legislar; el consentimiento puede revocarse. Ley 1581 de 2012 de protección de datos personales: denuncia ante la SIC tras un reclamo directo al responsable.",
+    "en": "Colombian Constitution, article 86 (tutela action, decided within 10 days) and Decree 2591 of 1991 (no lawyer needed; against private persons, in cases of subordination or defencelessness). Constitutional Court, judgment T-184 of 19 June 2026: sharing intimate content without consent is a form of gender-based violence; no crime directly covers it; Congress is urged to legislate; consent can be withdrawn. Law 1581 of 2012 on personal data protection: complaint to the SIC after a direct claim to the controller."
+   },
+   "source_officielle": {
+    "url": "https://www.corteconstitucional.gov.co/relatoria/2026/T-184-26.htm",
+    "titre": "Corte Constitucional, Sentencia T-184 de 2026"
+   },
+   "liens_utiles": [
+    {
+     "url": "https://sedeelectronica.sic.gov.co/atencion-y-servicios-a-la-ciudadania/servicios/denuncia-por-el-presunto-incumplimiento-las-disposiciones-legales-relacionadas-con-el-habeas-data",
+     "titre": {
+      "fr": "SIC – plainte pour atteinte aux données personnelles (en espagnol)",
+      "es": "SIC – denuncia por incumplimiento de habeas data y protección de datos personales",
+      "en": "SIC – complaint about personal data misuse (in Spanish)"
+     }
+    },
+    {
+     "url": "https://www.policia.gov.co/sistema-nacional-denuncia-virtual-adenunciar",
+     "titre": {
+      "fr": "Police nationale – plainte en ligne ¡ADenunciar! (en espagnol)",
+      "es": "Policía Nacional – denuncia virtual ¡ADenunciar!",
+      "en": "National Police – ¡ADenunciar! online complaints (in Spanish)"
+     }
+    },
+    {
+     "url": "https://normograma.mintic.gov.co/mintic/compilacion/docs/decreto_2591_1991.htm",
+     "titre": {
+      "fr": "Décret 2591 de 1991 : comment déposer une tutela (en espagnol)",
+      "es": "Decreto 2591 de 1991: cómo presentar una tutela",
+      "en": "Decree 2591 of 1991: how to file a tutela (in Spanish)"
+     }
+    },
+    {
+     "url": "https://stopncii.org/",
+     "titre": {
+      "fr": "StopNCII – aider à empêcher la rediffusion sur les plateformes partenaires",
+      "es": "StopNCII – ayudar a evitar que se vuelva a difundir en las plataformas asociadas",
+      "en": "StopNCII – help stop re-sharing on partner platforms"
+     }
+    }
+   ],
+   "situations": [
+    "contenu-intime",
+    "chantage"
+   ],
+   "pays": [
+    "CO"
+   ],
+   "public_mineurs": false,
+   "verifie_le": "2026-10-17"
   }
  ]
 }

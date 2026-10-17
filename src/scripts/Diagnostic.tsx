@@ -73,6 +73,18 @@ const MOTEUR: Partial<Record<Situation, Situation[]>> = {
   // déréférencement (droit à l'oubli) apparaît dans « Vos recours ».
 };
 
+/** « Vos recours » : les fiches publiées pour la situation et pour le pays choisi
+ *  (ou l'Union européenne, ou internationales), jamais les fiches pour mineurs. */
+export function recoursDuDiagnostic(guides: GuideD[], situation: Situation, pays: string | undefined): GuideD[] {
+  const enUE = !!pays && PAYS_UE.includes(pays);
+  return guides.filter(
+    (g) =>
+      !g.mineurs &&
+      (situation === 'autre' || g.situations.includes(situation) || (situation === 'chantage' && g.situations.includes('contenu-intime'))) &&
+      (g.pays.includes(pays ?? '') || g.pays.includes('INTL') || (enUE && g.pays.includes('UE'))),
+  );
+}
+
 function Lien({ href, children, classe }: { href: string; children: preact.ComponentChildren; classe?: string }) {
   const externe = /^https?:\/\//.test(href);
   return (
@@ -240,7 +252,6 @@ export function Diagnostic({ d }: { d: DonneesDiagnostic }) {
 
   // Résultat -----------------------------------------------------------------
   const pays = d.pays.find((p) => p.code === r.pays);
-  const enUE = !!r.pays && PAYS_UE.includes(r.pays);
 
   if (r.mineur === 'oui') {
     const outilMineur = d.plateformes.find((p) => p.id === 'takeitdown')?.actions[0];
@@ -285,12 +296,7 @@ export function Diagnostic({ d }: { d: DonneesDiagnostic }) {
     .filter((a): a is ActionD => !!a)
     .slice(0, 1);
   const stopncii = d.plateformes.find((p) => p.id === 'stopncii')?.actions[0];
-  const recours = d.guides.filter(
-    (g) =>
-      !g.mineurs &&
-      (situation === 'autre' || g.situations.includes(situation) || (situation === 'chantage' && g.situations.includes('contenu-intime'))) &&
-      (g.pays.includes(r.pays ?? '') || g.pays.includes('INTL') || (enUE && g.pays.includes('UE'))),
-  );
+  const recours = recoursDuDiagnostic(d.guides, situation, r.pays);
   const aidesUrgentes = (pays?.ressources ?? []).filter((x) => ['urgence', 'ncii', 'cyberharcelement', 'police-en-ligne', 'signalement-contenu'].includes(x.type));
   const lienSituation = d.liens.situations[situation];
   let n = 0;
