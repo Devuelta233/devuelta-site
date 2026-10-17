@@ -1103,9 +1103,9 @@ export const AIDE_GRATUITE = {
         en: 'To report cybercrime to Ghana’s cybersecurity authority: its CERT-GH team triages and investigates reports.',
       },
       pourQui: {
-        fr: 'Les personnes au Ghana. Le 292 ne fonctionne que depuis le Ghana.',
-        es: 'Las personas en Ghana. El 292 solo funciona desde Ghana.',
-        en: 'People in Ghana. 292 only works from within Ghana.',
+        fr: 'Les personnes au Ghana. Selon la CSA, le SMS au 292 ne fonctionne que depuis le Ghana.',
+        es: 'Las personas en Ghana. Según la CSA, el SMS al 292 solo funciona desde Ghana.',
+        en: 'People in Ghana. According to the CSA, texting 292 only works from within Ghana.',
       },
       url: 'https://www.csa.gov.gh/report',
       telephone: '292',
