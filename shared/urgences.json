@@ -1462,23 +1462,6 @@
           "source": "https://www2.gov.bc.ca/gov/content/safety/public-safety/intimate-images"
         },
         {
-          "type": "ncii",
-          "nom": "Ordonnance urgente – partage d'une image intime (Québec)",
-          "telephone": "1 833 393-2819",
-          "sms_ou_chat": "Formulaire sur Québec.ca/imagesintimes, à déposer par le Greffe numérique judiciaire, au greffe civil d'un palais de justice ou par la poste. Le numéro sert à déposer une demande en dehors des heures d'ouverture.",
-          "url": "https://www.quebec.ca/justice-et-etat-civil/accompagnement-victimes-crime/partage-sans-consentement-image-intime",
-          "horaires": "juges de paix magistrats de garde 24 h/24, 7 j/7",
-          "gratuit": null,
-          "public": "personnes au Québec dont une image intime est partagée sans consentement ou menacée de l'être (dès 14 ans ; avant 14 ans, les parents)",
-          "description": {
-            "fr": "Un juge peut ordonner en urgence d'arrêter le partage d'une image intime, de la détruire ou de la désindexer ; la demande se fait avec un formulaire simple.",
-            "es": "Un juez puede ordenar con urgencia que se deje de compartir una imagen íntima, que se destruya o que se desindexe; se pide con un formulario sencillo (en francés).",
-            "en": "A judge can urgently order that an intimate image stop being shared, be destroyed or be de-indexed; you apply with a simple form (in French)."
-          },
-          "verifie": true,
-          "source": "https://www.quebec.ca/justice-et-etat-civil/accompagnement-victimes-crime/partage-sans-consentement-image-intime"
-        },
-        {
           "type": "mineurs",
           "nom": "Kids Help Phone / Jeunesse, J'écoute",
           "telephone": "1-800-668-6868",
@@ -1640,50 +1623,6 @@
           },
           "verifie": true,
           "source": "https://dpc.gov.gh/"
-        }
-      ]
-    },
-    {
-      "code": "NG",
-      "nom": {
-        "fr": "Nigeria",
-        "es": "Nigeria",
-        "en": "Nigeria"
-      },
-      "ressources": [
-        {
-          "type": "urgence",
-          "nom": "112 – National Emergency Number",
-          "telephone": "112",
-          "sms_ou_chat": null,
-          "url": "https://ncc.gov.ng/media-centre/press-releases/covid-19-nccs-112-national-emergency-number-offers-succour-nigerians",
-          "horaires": null,
-          "gratuit": true,
-          "public": "everyone in Nigeria",
-          "description": {
-            "fr": "Numéro national d'urgence, gratuit : un centre d'appels de votre État transmet aux secours concernés, dont la police.",
-            "es": "Número nacional de emergencias, gratuito: un centro de llamadas de tu estado avisa al servicio adecuado, incluida la policía.",
-            "en": "Free national emergency number: a call centre in your state passes your call to the right service, including the police."
-          },
-          "verifie": true,
-          "source": "https://ncc.gov.ng/node/3132"
-        },
-        {
-          "type": "police-en-ligne",
-          "nom": "NPF-NCCC – National Cybercrime Centre e-Reporting Portal (Nigeria Police Force)",
-          "telephone": null,
-          "sms_ou_chat": "Email: report@nccc.npf.gov.ng · account with BVN or NIN verification · anonymous reporting offered · tracking number",
-          "url": "https://nccc.npf.gov.ng/",
-          "horaires": null,
-          "gratuit": null,
-          "public": "victims of cybercrime in Nigeria",
-          "description": {
-            "fr": "Le portail officiel de la police nigériane pour signaler un cybercrime, dont le harcèlement en ligne et la diffusion d'images intimes ; un numéro de suivi permet de suivre le dossier.",
-            "es": "El portal oficial de la policía de Nigeria para denunciar un ciberdelito, incluido el acoso en línea y la difusión de imágenes íntimas; un número de seguimiento permite seguir el caso.",
-            "en": "The Nigeria Police official portal to report cybercrime, including online harassment and intimate images shared without consent; a tracking number lets you follow the case."
-          },
-          "verifie": true,
-          "source": "https://nccc.npf.gov.ng/"
         }
       ]
     },

@@ -17,7 +17,7 @@ const chemin = page('urgence', lang);
 const PRIORITE: Record<Lang, string[]> = {
   fr: ['FR', 'BE', 'CH', 'CA', 'CI'],
   es: ['ES', 'MX', 'CO', 'AR'],
-  en: ['US', 'GB', 'CA', 'GH', 'NG'],
+  en: ['US', 'GB', 'CA', 'GH'],
 };
 const rang = (code: string) => {
   const i = PRIORITE[lang].indexOf(code);
