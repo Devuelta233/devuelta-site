@@ -60,15 +60,11 @@ export async function charger(ctx: Ctx) {
 export async function detail(ctx: Ctx): Promise<Response> {
   const r = await charger(ctx);
   // Demande venue de Telegram : le fil des messages écrits, pour répondre dans la même conversation.
-  let conversation = null;
-  if (r.contact_mode === 'telegram') {
-    let responsable = (r.assigne_a as string | null) ?? null;
-    if (r.dossier_id) {
-      const d = await ctx.env.DB.prepare('SELECT assigne_a FROM dossiers WHERE id = ?').bind(r.dossier_id).first<{ assigne_a: string | null }>();
-      responsable = d?.assigne_a ?? responsable;
-    }
-    conversation = await conversationPour(ctx.env.DB, String(r.id), ctx.auth.user, responsable);
-  }
+  // Devenue dossier, la conversation se suit dans le dossier (et seulement par ceux qui le voient).
+  const conversation =
+    r.contact_mode === 'telegram' && !r.dossier_id
+      ? await conversationPour(ctx.env.DB, String(r.id), ctx.auth.user, (r.assigne_a as string | null) ?? null)
+      : null;
   return json({ ok: true, demande: parseDemande(r), conversation, telegram_actif: !!ctx.env.TELEGRAM_BOT_TOKEN });
 }
 

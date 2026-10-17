@@ -330,6 +330,10 @@ export const MIGRATIONS: string[][] = [
   // l'équipe répond dans la même conversation. SQLite ne sait pas modifier une
   // contrainte CHECK : la table des demandes est recréée à l'identique, avec
   // « telegram » en plus dans les moyens de contact (aucune donnée ne change).
+  // ATTENTION pour l'avenir : depuis cette migration, « messages » et
+  // « telegram_conversations » dépendent de « demandes ». Ne plus jamais recréer
+  // la table des demandes de cette façon : DROP TABLE déclencherait les
+  // suppressions en cascade et effacerait les messages des clients.
   [
     `CREATE TABLE demandes_v9 (
       id TEXT PRIMARY KEY,

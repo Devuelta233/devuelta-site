@@ -276,7 +276,17 @@ export function FicheDossier({ id, onglet }: { id: string; onglet?: string }) {
 
 // Mandat signé : le client apprend qui suit son dossier. Venu par e-mail, il lui
 // écrit en répondant à l'e-mail ; venu par Telegram, dans la même conversation.
-function MessageOuverture({ x, telegramActif, recharger }: { x: Dossier; telegramActif: boolean; recharger: () => void }) {
+function MessageOuverture({
+  x,
+  telegramActif,
+  conversation,
+  recharger,
+}: {
+  x: Dossier;
+  telegramActif: boolean;
+  conversation: ConversationTelegram | null;
+  recharger: () => void;
+}) {
   const a = useAction();
   const [envoye, setEnvoye] = useState(false);
   const lc: Lang = isLang(x.langue) ? x.langue : 'fr';
@@ -284,6 +294,8 @@ function MessageOuverture({ x, telegramActif, recharger }: { x: Dossier; telegra
   const parTelegram = !!x.client_telegram;
   const brut = texteOuverture({ pseudo: x.client_pseudo, ref: x.ref, prenom: x.assigne_nom }, lc, parTelegram ? 'telegram' : 'email');
   const texte = lc === 'fr' ? typo(brut) : brut;
+  // Déjà parti sur Telegram (même texte dans la conversation) : pas de second envoi.
+  const dejaEnvoye = !!conversation?.messages.some((m) => m.sens === 'sortant' && m.texte === texte);
   return (
     <div class="o-encadre o-info">
       <strong>{t('ouvertureTitre')}</strong>
@@ -296,7 +308,7 @@ function MessageOuverture({ x, telegramActif, recharger }: { x: Dossier; telegra
             {t('email')}
           </a>
         )}
-        {parTelegram && !envoye && (
+        {parTelegram && !envoye && !dejaEnvoye && (
           <button
             class="o-bouton o-principal"
             disabled={a.occupe || !telegramActif}
@@ -314,7 +326,7 @@ function MessageOuverture({ x, telegramActif, recharger }: { x: Dossier; telegra
           </button>
         )}
       </p>
-      {envoye && (
+      {(envoye || dejaEnvoye) && (
         <p class="o-encadre o-ok" role="status">
           {t('reponseEnvoyee')}
         </p>
@@ -528,7 +540,7 @@ function OngletResume({ d, recharger, ferme, preparer }: { d: Detail; recharger:
         </div>
       )}
       {d.signature?.signe_le && <SignatureFaite s={d.signature} />}
-      {x.mandat_signe_le && <MessageOuverture x={x} telegramActif={d.telegram_actif} recharger={recharger} />}
+      {x.mandat_signe_le && <MessageOuverture x={x} telegramActif={d.telegram_actif} conversation={d.conversation} recharger={recharger} />}
       <TarifDossier d={d} />
       {x.mandat_signe_le && <PaiementDossier d={d} recharger={recharger} />}
       {d.fiches.some((f) => f.delai_couperet || f.action_immediate) && (

@@ -13,6 +13,7 @@ import { CONSENTEMENT_VERSION, LANGS, SITUATIONS } from '../shared/vocab';
 import { TELEGRAM_ROBOT, lienTelegram } from '../src/config';
 import { situationPath } from '../src/i18n/routes';
 import { convertir, detail as detailDemande } from '../server/outil/demandes';
+import { conversationPour } from '../server/outil/conversations';
 import { detail as detailDossier } from '../server/outil/dossiers';
 import type { Ctx } from '../server/outil/router';
 import { repondreDemande, repondreDossier } from '../server/outil/telegram';
@@ -363,6 +364,40 @@ describe('ce que le robot refuse', () => {
     expect(await conversation(-100555)).toBeNull();
   });
 
+  it('message de service (message épinglé, minuterie) : ni réponse ni suppression', async () => {
+    appels = [];
+    await envoyer({ message: { message_id: ++numeroMessage, chat: { id: 303, type: 'private' }, from: de(303), pinned_message: { message_id: 1 } } });
+    expect(appels).toHaveLength(0);
+  });
+
+  it('échec de notre côté au moment de l’accord : rien n’est perdu, l’accord peut être redonné', async () => {
+    await envoyer(message(307, 'Mon histoire, en détail'));
+    await envoyer(bouton(307, 'a:o'));
+    await envoyer(bouton(307, 's:usurpation'));
+    await envoyer(bouton(307, 'm:n'));
+    // Simule une réservation restée sans demande (base indisponible pendant l'enregistrement).
+    brute.prepare("UPDATE telegram_conversations SET etape = 'demande', maj_le = ? WHERE chat_id = '307'").run(new Date(Date.now() - 5 * 60_000).toISOString());
+    appels = [];
+    await envoyer(message(307, 'Vous êtes là ?'));
+    expect(envoyes().map((a) => a.p.text)).toEqual([TEXTES_ROBOT.fr.texteEnAttente, TEXTES_ROBOT.fr.qAccord]);
+    await envoyer(bouton(307, 'c:o'));
+    const d = await demandeDe(307);
+    expect(d?.message).toBe('Mon histoire, en détail\n\nVous êtes là ?');
+    expect((await conversation(307))?.demande_id).toBe(d?.id);
+  });
+
+  it('texte très long pendant les questions : on ne promet pas de tout joindre', async () => {
+    await envoyer(message(308, '/start'));
+    await envoyer(bouton(308, 'a:o'));
+    appels = [];
+    await envoyer(message(308, 'a'.repeat(3000)));
+    await envoyer(message(308, 'b'.repeat(3000)));
+    const textes = envoyes().map((a) => a.p.text);
+    expect(textes[0]).toBe(TEXTES_ROBOT.fr.texteEnAttente);
+    expect(textes[2]).toBe(TEXTES_ROBOT.fr.texteApresQuestions);
+    expect((await conversation(308))?.texte_attente).toHaveLength(4000);
+  });
+
   it('un envoi répété par Telegram n’est traité qu’une fois', async () => {
     await envoyer(message(305, '/start'), undefined, 9_000_001);
     const n = envoyes().length;
@@ -441,14 +476,44 @@ describe('dans l’outil', () => {
     appels = [];
     await repondreDossier(ctx({ id: r.id }, { texte: 'Votre dossier est ouvert.' }));
     expect(envoyes()[0].p.chat_id).toBe('401');
+    // La demande devenue dossier ne sert plus à répondre (ni à lire le fil) : tout passe par le dossier.
+    await expect(repondreDemande(ctx({ id: d?.id }, { texte: 'Bonjour' }))).rejects.toMatchObject({ status: 409, code: 'telegram-voir-dossier' });
+    const vueDemande = (await (await detailDemande(ctx({ id: d?.id }))).json()) as any;
+    expect(vueDemande.conversation).toBeNull();
   });
 
-  it('purge : la demande effacée emporte ses messages, la conversation repart de zéro', async () => {
+  it('répondre ne marque pas comme lu un message arrivé pendant qu’on écrivait', async () => {
+    const d = await parcours(402, 'faux-avis');
+    await envoyer(message(402, 'Premier message'));
+    const vue = (await (await detailDemande(ctx({ id: d?.id }))).json()) as any;
+    const vuJusqua = vue.conversation.messages.at(-1).le;
+    await new Promise((r) => setTimeout(r, 5));
+    await envoyer(message(402, 'Message arrivé pendant la réponse'));
+    await repondreDemande(ctx({ id: d?.id }, { texte: 'On regarde ça.', vu_jusqua: vuJusqua }));
+    const nonLus = await DB.prepare("SELECT texte FROM messages WHERE demande_id = ? AND sens = 'entrant' AND lu_le IS NULL").bind(d?.id).all<{ texte: string }>();
+    expect(nonLus.results.map((m) => m.texte)).toEqual(['Message arrivé pendant la réponse']);
+  });
+
+  it('long fil : les 500 messages les plus récents, dans l’ordre', async () => {
+    const d = await demandeDe(402);
+    for (let i = 0; i < 505; i++) {
+      brute
+        .prepare("INSERT INTO messages (id, demande_id, canal, sens, texte, le) VALUES (?, ?, 'telegram', 'entrant', ?, ?)")
+        .run(`fil-${i}`, d?.id, `n${i}`, `2030-01-01T00:${String(Math.floor(i / 60)).padStart(2, '0')}:${String(i % 60).padStart(2, '0')}.000Z`);
+    }
+    const c = await conversationPour(DB, d?.id, { id: 'quelqu-un' }, 'autre-personne', true);
+    expect(c.messages).toHaveLength(500);
+    expect(c.messages.at(-1)?.texte).toBe('n504');
+    expect(c.messages[0]?.texte).toBe('n5');
+    brute.prepare("DELETE FROM messages WHERE id LIKE 'fil-%'").run();
+  });
+
+  it('purge : la demande effacée emporte ses messages et la conversation (identifiant, réponses)', async () => {
     const d = await demandeDe(202);
     await purgerElements(DB, [], [d?.id], null);
     const n = await DB.prepare('SELECT COUNT(*) AS n FROM messages WHERE demande_id = ?').bind(d?.id).first<{ n: number }>();
     expect(n?.n).toBe(0);
-    expect((await conversation(202))?.demande_id).toBeNull();
+    expect(await conversation(202)).toBeNull();
     appels = [];
     await envoyer(message(202, 'Bonjour'));
     expect(envoyes()[0].p.text).toContain('Ici, c’est Devuelta');

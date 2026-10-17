@@ -28,6 +28,7 @@ export interface TextesRobot {
   fichierRefuse: string;
   fichierRetire: string;
   texteEnAttente: string;
+  texteApresQuestions: string;
   accuse: string;
   liensAjoutes: string;
   dejaDemande: string;
@@ -98,6 +99,7 @@ const FR: TextesRobot = {
     'Si un contenu vous concerne, envoyez-nous plutôt l\'adresse (le lien) de la page où il apparaît.',
   ].join('\n'),
   texteEnAttente: 'Merci, c\'est noté : je le joins à votre demande. Pour que la bonne personne vous réponde, choisissez d\'abord une réponse ci-dessous.',
+  texteApresQuestions: 'Pour que la bonne personne vous réponde, choisissez d\'abord une réponse ci-dessous. Vous pourrez tout nous écrire juste après.',
   accuse: 'Bien reçu, merci. Une personne de l\'équipe vous répond ici, en général sous 24 à 48 heures.',
   liensAjoutes: 'C\'est ajouté à votre demande.',
   dejaDemande: 'Votre demande {ref} est bien entre nos mains. Si vous avez du nouveau, écrivez-le ici : une personne de l\'équipe vous répond dans cette conversation.',
@@ -175,6 +177,7 @@ const ES: TextesRobot = {
     'Si un contenido te afecta, mejor envíanos la dirección (el enlace) de la página donde aparece.',
   ].join('\n'),
   texteEnAttente: 'Gracias, anotado: lo añado a tu solicitud. Para que te responda la persona adecuada, elige primero una respuesta aquí abajo.',
+  texteApresQuestions: 'Para que te responda la persona adecuada, elige primero una respuesta aquí abajo. Justo después podrás escribirnos todo.',
   accuse: 'Recibido, gracias. Una persona del equipo te responde aquí, normalmente en 24 a 48 horas.',
   liensAjoutes: 'Añadido a tu solicitud.',
   dejaDemande: 'Tu solicitud {ref} está en nuestras manos. Si hay novedades, escríbelas aquí: una persona del equipo te responde en esta conversación.',
@@ -252,6 +255,7 @@ const EN: TextesRobot = {
     'If some content concerns you, send us the address (link) of the page where it appears instead.',
   ].join('\n'),
   texteEnAttente: 'Thank you, noted: I am adding it to your request. So that the right person replies, please choose an answer below first.',
+  texteApresQuestions: 'So that the right person replies, please choose an answer below first. You can write everything to us right after.',
   accuse: 'Received, thank you. A member of the team will reply to you here, usually within 24 to 48 hours.',
   liensAjoutes: 'Added to your request.',
   dejaDemande: 'Your request {ref} is in our hands. If anything changes, write it here: a member of the team replies in this conversation.',

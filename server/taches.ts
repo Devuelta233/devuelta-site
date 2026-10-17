@@ -43,6 +43,8 @@ export async function elementsAPurger(db: D1Database) {
 export async function purgerElements(db: D1Database, dossiers: string[], demandes: string[], par: string | null) {
   const stmts: D1PreparedStatement[] = [];
   for (const id of dossiers) {
+    // La conversation Telegram (identifiant, réponses) part avec la demande ; ses messages aussi (cascade).
+    stmts.push(db.prepare('DELETE FROM telegram_conversations WHERE demande_id IN (SELECT id FROM demandes WHERE dossier_id = ?)').bind(id));
     stmts.push(db.prepare('DELETE FROM demandes WHERE dossier_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM retractations WHERE dossier_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM signatures WHERE dossier_id = ?').bind(id));
@@ -51,6 +53,7 @@ export async function purgerElements(db: D1Database, dossiers: string[], demande
     stmts.push(db.prepare('UPDATE journal SET details = NULL WHERE dossier_id = ?').bind(id));
   }
   for (const id of demandes) {
+    stmts.push(db.prepare('DELETE FROM telegram_conversations WHERE demande_id = ?').bind(id));
     stmts.push(db.prepare('DELETE FROM demandes WHERE id = ?').bind(id));
     stmts.push(db.prepare("UPDATE journal SET details = NULL WHERE objet = 'demande' AND objet_id = ?").bind(id));
   }
@@ -75,8 +78,9 @@ async function purgeAutomatique(db: D1Database) {
     db.prepare('DELETE FROM journal WHERE le <= ? AND dossier_id IS NULL').bind(addDays(now, -730)),
     // Preuve d'une rétractation : gardée 2 ans (délai pour agir d'un professionnel contre un consommateur).
     db.prepare('DELETE FROM retractations WHERE recue_le <= ?').bind(addDays(now, -730)),
-    // Telegram : conversations sans demande (questions abandonnées, accord refusé) effacées après 7 jours.
-    db.prepare('DELETE FROM telegram_conversations WHERE demande_id IS NULL AND maj_le <= ?').bind(addDays(now, -7)),
+    // Telegram : conversations sans demande (questions abandonnées) effacées dès 6 jours, donc
+    // au plus tard 7 jours après le dernier message (la purge passe une fois par jour).
+    db.prepare('DELETE FROM telegram_conversations WHERE demande_id IS NULL AND maj_le <= ?').bind(addDays(now, -6)),
     db.prepare('DELETE FROM telegram_envois WHERE le <= ?').bind(addDays(now, -7)),
   ]);
   return n;

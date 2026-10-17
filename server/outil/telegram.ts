@@ -6,12 +6,17 @@ import { journalStmt } from '../db';
 import { brancherWebhook, etatRobot, repondreSurTelegram } from '../telegram';
 import { HttpError, cleanText, json, nowIso, readJson } from '../util';
 import { dossierVisible } from './access';
+import { marquerLus } from './conversations';
 import { charger } from './demandes';
 import type { Ctx } from './router';
+
+const DATE_ISO = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
 
 async function envoyer(ctx: Ctx, demandeId: string, chatId: string, dossierId: string | null): Promise<Response> {
   const body = await readJson(ctx.request, 20_000);
   const texte = cleanText(body.texte, 4000, { required: true, multiline: true })!;
+  // Dernier message affiché au moment de répondre : ceux-là sont lus, pas ceux arrivés pendant qu'on écrivait.
+  const vu = typeof body.vu_jusqua === 'string' && DATE_ISO.test(body.vu_jusqua) ? body.vu_jusqua : null;
   await repondreSurTelegram(ctx.env, chatId, texte);
   const now = nowIso();
   await ctx.env.DB.batch([
@@ -22,8 +27,6 @@ async function envoyer(ctx: Ctx, demandeId: string, chatId: string, dossierId: s
       now,
       ctx.auth.user.id,
     ),
-    // Répondre, c'est avoir lu.
-    ctx.env.DB.prepare("UPDATE messages SET lu_le = ? WHERE demande_id = ? AND sens = 'entrant' AND lu_le IS NULL").bind(now, demandeId),
     // Le journal garde la trace de l'envoi, jamais son contenu.
     journalStmt(ctx.env.DB, {
       utilisateur_id: ctx.auth.user.id,
@@ -33,13 +36,16 @@ async function envoyer(ctx: Ctx, demandeId: string, chatId: string, dossierId: s
       dossier_id: dossierId,
     }),
   ]);
+  if (vu) await marquerLus(ctx.env.DB, demandeId, vu);
   return json({ ok: true });
 }
 
 export async function repondreDemande(ctx: Ctx): Promise<Response> {
   const r = await charger(ctx);
   if (r.contact_mode !== 'telegram') throw new HttpError(400, 'contact-pas-telegram');
-  return envoyer(ctx, String(r.id), String(r.contact_valeur), r.dossier_id ? String(r.dossier_id) : null);
+  // Devenue dossier, la conversation se suit dans le dossier (et seulement par ceux qui le voient).
+  if (r.dossier_id) throw new HttpError(409, 'telegram-voir-dossier');
+  return envoyer(ctx, String(r.id), String(r.contact_valeur), null);
 }
 
 export async function repondreDossier(ctx: Ctx): Promise<Response> {

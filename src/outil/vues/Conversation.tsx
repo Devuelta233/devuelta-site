@@ -111,7 +111,8 @@ export function Conversation({
           disabled={a.occupe || !actif || !texte.trim()}
           onClick={() =>
             a.lancer(
-              () => post(envoi, { texte }),
+              // Les messages affichés jusqu'ici passent « lus », pas ceux arrivés pendant qu'on écrivait.
+              () => post(envoi, { texte, vu_jusqua: conv.messages.at(-1)?.le }),
               () => {
                 setTexte('');
                 setAlertes(null);

@@ -577,6 +577,7 @@ const ERREURS: Record<string, string[]> = typoProfonde({
   'telegram-bloque': L('La personne a bloqué le robot ou supprimé la conversation : impossible de lui écrire sur Telegram.', 'La persona bloqueó el robot o borró la conversación: no se le puede escribir por Telegram.', 'The person blocked the bot or deleted the chat: you cannot write to them on Telegram.'),
   'telegram-introuvable': L('Conversation Telegram introuvable : la personne doit réécrire au robot.', 'Conversación de Telegram no encontrada: la persona debe volver a escribir al robot.', 'Telegram chat not found: the person needs to write to the bot again.'),
   'telegram-indisponible': L('Telegram ne répond pas. Réessayez dans quelques minutes.', 'Telegram no responde. Inténtalo en unos minutos.', 'Telegram is not responding. Try again in a few minutes.'),
+  'telegram-voir-dossier': L('Cette demande est devenue un dossier : répondez depuis l’onglet Telegram du dossier.', 'Esta solicitud se convirtió en un caso: responde desde la pestaña Telegram del caso.', 'This request became a case: reply from the case’s Telegram tab.'),
   'courrier-incomplet': L('Il reste des passages « À COMPLÉTER ».', 'Quedan partes «À COMPLÉTER».', 'Some "À COMPLÉTER" parts remain.'),
   'email-deja-utilise': L('Cette adresse e-mail est déjà utilisée.', 'Este correo ya se usa.', 'This email is already in use.'),
   'lien-invalide': L('Lien invalide.', 'Enlace no válido.', 'Invalid link.'),

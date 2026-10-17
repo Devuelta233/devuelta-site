@@ -42,9 +42,10 @@ interface TgMessage {
   chat: { id: number; type: string };
   from?: TgUtilisateur;
   text?: string;
-  sticker?: unknown;
-  dice?: unknown;
 }
+
+/** Ce que le robot refuse : images, vidéos, fichiers, sons, numéros, positions, sondages. */
+const FICHIERS = ['photo', 'video', 'document', 'animation', 'voice', 'video_note', 'audio', 'contact', 'location', 'venue', 'poll', 'story', 'paid_media'];
 interface TgBouton {
   id: string;
   from: TgUtilisateur;
@@ -355,7 +356,8 @@ async function surMessage(env: Env, exec: ExecutionContext, m: TgMessage): Promi
   const lang: Lang = conv?.langue ?? langueTelegram(m.from?.language_code);
 
   if (typeof m.text !== 'string') {
-    if (m.sticker || m.dice) return; // un autocollant n'appelle pas de réponse
+    // Autocollant, message de service (message épinglé, minuterie…) : rien à faire.
+    if (!FICHIERS.some((k) => k in m)) return;
     // Photo, vidéo, fichier, message vocal, numéro… : retiré de la conversation, jamais gardé.
     let retire = false;
     try {
@@ -380,21 +382,33 @@ async function surMessage(env: Env, exec: ExecutionContext, m: TgMessage): Promi
     await accueillir(env, chatId, lang);
     return;
   }
-  if (conv.etape === 'demande') {
+  const etape = etapeEffective(conv);
+  if (etape === 'demande') {
     const d = conv.demande_id ? await demandeLiee(db, conv.demande_id) : null;
     if (!d) {
-      // La demande a été effacée entre-temps : on repart de zéro.
+      // Demande introuvable (cas qui ne devrait pas arriver : la purge efface aussi la conversation) : on repart de zéro.
       await nouvelleConversation(db, chatId, conv.langue, texte);
       await accueillir(env, chatId, conv.langue);
       return;
     }
     return messageClient(env, exec, conv, d, texte);
   }
-  // En cours de questions : le texte est gardé pour la demande, puis on repose la question.
-  const attente = [conv.texte_attente, texte].filter(Boolean).join('\n\n').slice(0, 4000);
-  await db.prepare('UPDATE telegram_conversations SET texte_attente = ?, maj_le = ? WHERE chat_id = ?').bind(attente, nowIso(), chatId).run();
-  await envoyer(env, chatId, T(conv.langue).texteEnAttente);
-  await reposer(env, chatId, conv.etape, conv.langue);
+  // En cours de questions : le texte est gardé pour la demande (4 000 caractères au plus), puis on repose la question.
+  const tout = [conv.texte_attente, texte].filter(Boolean).join('\n\n');
+  await db
+    .prepare('UPDATE telegram_conversations SET texte_attente = ?, etape = ?, maj_le = ? WHERE chat_id = ?')
+    .bind(tout.slice(0, 4000), etape, nowIso(), chatId)
+    .run();
+  await envoyer(env, chatId, tout.length <= 4000 ? T(conv.langue).texteEnAttente : T(conv.langue).texteApresQuestions);
+  await reposer(env, chatId, etape, conv.langue);
+}
+
+/**
+ * Étape réelle de la conversation. « demande » sans demande enregistrée veut dire que
+ * l'enregistrement a échoué de notre côté : on en reste à l'accord, rien n'est perdu.
+ */
+function etapeEffective(conv: Conversation): Etape {
+  return conv.etape === 'demande' && !conv.demande_id ? 'accord' : conv.etape;
 }
 
 async function surCommande(env: Env, chatId: string, conv: Conversation | null, cmd: { nom: string; arg: string }, lang: Lang): Promise<void> {
@@ -510,7 +524,7 @@ async function surBouton(env: Env, exec: ExecutionContext, b: TgBouton): Promise
   const etapes: Record<string, Etape> = { a: 'age', s: 'situation', m: 'menace', c: 'accord' };
   const attendue = etapes[data.slice(0, 1)];
   const valeur = data.slice(2);
-  if (!conv || !attendue || attendue !== conv.etape) {
+  if (!conv || !attendue || attendue !== etapeEffective(conv)) {
     await repondreBouton(env, b.id, T(lang).dejaRepondu);
     return;
   }
@@ -564,34 +578,57 @@ async function surBouton(env: Env, exec: ExecutionContext, b: TgBouton): Promise
 /** Accord donné : la demande arrive dans l'outil, attribuée selon la langue, comme une demande du site. */
 async function creerDemande(env: Env, exec: ExecutionContext, conv: Conversation, b: TgBouton): Promise<void> {
   const db = env.DB;
-  if (!(await avancer(db, conv.chat_id, 'accord', 'demande'))) return;
+  // On réserve l'étape (un double appui ne crée qu'une demande). Une réservation de plus de
+  // 2 minutes restée sans demande vient d'un échec de notre côté : elle peut être reprise.
+  const reserve = await db
+    .prepare(
+      `UPDATE telegram_conversations SET etape = 'demande', maj_le = ? WHERE chat_id = ?
+         AND (etape = 'accord' OR (etape = 'demande' AND demande_id IS NULL AND maj_le <= ?))`,
+    )
+    .bind(nowIso(), conv.chat_id, addMinutes(nowIso(), -2))
+    .run();
+  if (!Number(reserve.meta?.changes ?? 0)) return;
   const lang = conv.langue;
   const t = T(lang);
-  await noterChoix(env, b, t.accordOui);
   const id = newId();
-  const ref = await nextRef(db, 'D');
-  const now = nowIso();
-  const assigne = await assigneePourLangue(db, lang);
   const situation = isSituation(conv.situation) ? conv.situation : 'autre';
   const message = conv.texte_attente || null;
-  const enregistrer = db.batch([
-    db
-      .prepare(
-        `INSERT INTO demandes (id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo,
-          contact_mode, contact_valeur, menace, deja_signale, publie_par_soi, consentement_version, consentement_le,
-          statut, assigne_a, ip_hash)
-         VALUES (?, ?, ?, ?, NULL, ?, '[]', ?, ?, ?, 'telegram', ?, ?, 0, NULL, ?, ?, 'nouvelle', ?, NULL)`,
-      )
-      .bind(id, ref, now, lang, situation, JSON.stringify(liensDuTexte(message ?? '')), message, prenom(b.from.first_name), conv.chat_id, conv.menace ? 1 : 0, CONSENTEMENT_VERSION, now, assigne),
-    db
-      .prepare('UPDATE telegram_conversations SET demande_id = ?, texte_attente = NULL, accuse_le = ?, notifie_le = ?, maj_le = ? WHERE chat_id = ?')
-      .bind(id, now, now, now, conv.chat_id),
-    journalStmt(db, { action: 'demande-recue', objet: 'demande', objet_id: id, details: { ref, langue: lang, situation, canal: 'telegram' } }),
-  ]);
+  let ref: string;
+  let assigne: string | null;
   try {
-    await enregistrer;
+    ref = await nextRef(db, 'D');
+    assigne = await assigneePourLangue(db, lang);
+    const now = nowIso();
+    await db.batch([
+      db
+        .prepare(
+          `INSERT INTO demandes (id, ref, recue_le, langue, pays, situation, plateformes, liens, message, pseudo,
+            contact_mode, contact_valeur, menace, deja_signale, publie_par_soi, consentement_version, consentement_le,
+            statut, assigne_a, ip_hash)
+           VALUES (?, ?, ?, ?, NULL, ?, '[]', ?, ?, ?, 'telegram', ?, ?, 0, NULL, ?, ?, 'nouvelle', ?, NULL)`,
+        )
+        .bind(
+          id,
+          ref,
+          now,
+          lang,
+          situation,
+          JSON.stringify(liensDuTexte(message ?? '').slice(0, 30)),
+          message,
+          prenom(b.from.first_name),
+          conv.chat_id,
+          conv.menace ? 1 : 0,
+          CONSENTEMENT_VERSION,
+          now,
+          assigne,
+        ),
+      db
+        .prepare('UPDATE telegram_conversations SET demande_id = ?, texte_attente = NULL, accuse_le = ?, notifie_le = ?, maj_le = ? WHERE chat_id = ?')
+        .bind(id, now, now, now, conv.chat_id),
+      journalStmt(db, { action: 'demande-recue', objet: 'demande', objet_id: id, details: { ref, langue: lang, situation, canal: 'telegram' } }),
+    ]);
   } catch (e) {
-    // Échec de notre côté : la conversation revient à l'accord, pour que l'envoi renvoyé par Telegram aboutisse.
+    // Échec de notre côté : retour à l'accord (réponses et texte gardés), et Telegram renverra l'appui.
     await db
       .prepare("UPDATE telegram_conversations SET etape = 'accord' WHERE chat_id = ? AND demande_id IS NULL")
       .bind(conv.chat_id)
@@ -599,6 +636,7 @@ async function creerDemande(env: Env, exec: ExecutionContext, conv: Conversation
       .catch(() => undefined);
     throw e;
   }
+  await noterChoix(env, b, t.accordOui);
   // Alerte immédiate sur le téléphone de la personne désignée (ou des admins).
   exec.waitUntil(Promise.all([notifier(db, [assigne]), compterEvenement(db, 'demande-telegram')]).catch(() => undefined));
   const boutons: Clavier = [];
