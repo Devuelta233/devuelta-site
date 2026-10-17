@@ -1,7 +1,7 @@
 {
  "id": "sextorsion-faux-services-aide-payants",
  "publie_le": "2026-10-16",
- "verifie_le": "2026-10-16",
+ "verifie_le": "2026-10-17",
  "situation": "chantage",
  "plateformes": [],
  "slug": {
@@ -20,27 +20,27 @@
   "en": "The FTC is suing a sextortion help service. The free steps to take, and how to spot a fake paid help service."
  },
  "chapo": {
-  "fr": "Le 13 octobre 2026, la FTC américaine a poursuivi un service qui promettait d’aider les victimes de sextorsion. Elle l’accuse d’avoir encaissé au moins 60 millions de dollars sans faire le travail promis. Si quelqu’un vous fait chanter, les premiers gestes sont gratuits. Voici lesquels, et comment éviter une deuxième arnaque.",
-  "es": "El 13 de octubre de 2026, la FTC estadounidense demandó a un servicio que prometía ayudar a víctimas de sextorsión. Lo acusa de cobrar al menos 60 millones de dólares sin hacer el trabajo prometido. Si alguien te chantajea, los primeros pasos son gratis. Aquí tienes cuáles, y cómo evitar una segunda estafa.",
-  "en": "On 13 October 2026, the US FTC sued a service that promised to help sextortion victims. It accuses the company of taking at least 60 million dollars without doing the promised work. If someone is blackmailing you, the first steps are free. Here they are, and how to avoid a second scam."
+  "fr": "Le 13 octobre 2026, la FTC américaine a poursuivi un service qui promettait d’aider les victimes de sextorsion. Elle l’accuse d’avoir encaissé au moins 60 millions de dollars, souvent sans faire le travail promis. L’affaire est en cours. Si quelqu’un vous fait chanter, les premiers gestes sont gratuits. Voici lesquels, et comment éviter une deuxième arnaque.",
+  "es": "El 13 de octubre de 2026, la FTC estadounidense demandó a un servicio que prometía ayudar a víctimas de sextorsión. Lo acusa de cobrar al menos 60 millones de dólares, muchas veces sin hacer el trabajo prometido. El caso sigue abierto. Si alguien te chantajea, los primeros pasos son gratis. Aquí tienes cuáles, y cómo evitar una segunda estafa.",
+  "en": "On 13 October 2026, the US FTC sued a service that promised to help sextortion victims. It accuses the company of taking at least 60 million dollars, often without doing the promised work. The case is ongoing. If someone is blackmailing you, the first steps are free. Here they are, and how to avoid a second scam."
  },
  "essentiel": {
   "fr": [
    "Ne payez pas le maître chanteur, et arrêtez de lui répondre.",
    "Faites des captures d’écran, puis bloquez-le sur toutes vos applis.",
-   "Appelez une aide gratuite : 3018 en France, 017 en Espagne, 292 au Ghana, la police ailleurs.",
+   "Demandez une aide officielle : 17Cyber en France (3018 avant 18 ans), 017 en Espagne, 292 au Ghana, ou la police.",
    "Méfiez-vous de tout service qui promet de retrouver le coupable ou de tout effacer."
   ],
   "es": [
    "No le pagues al chantajista y deja de responderle.",
    "Haz capturas de pantalla y luego bloquéalo en todas tus aplicaciones.",
-   "Llama a una ayuda gratuita: 017 en España, 3018 en Francia, 292 en Ghana, la policía en otros países.",
+   "Pide ayuda oficial: 017 en España, 17Cyber en Francia (3018 si eres menor), 292 en Ghana, o la policía.",
    "Desconfía de cualquier servicio que prometa encontrar al culpable o borrarlo todo."
   ],
   "en": [
    "Don’t pay the blackmailer, and stop replying.",
    "Take screenshots, then block them on all your apps.",
-   "Call a free helpline: 3018 in France, 017 in Spain, 292 in Ghana, or the police elsewhere.",
+   "Get official help: 17Cyber in France (3018 if under 18), 017 in Spain, 292 in Ghana, or the police.",
    "Be wary of any service that promises to find the culprit or erase everything."
   ]
  },
@@ -55,26 +55,26 @@
     "fr": [
      "La FTC est l’agence américaine qui protège les consommateurs. Le 13 octobre 2026, elle a annoncé une plainte contre Digital Forensics Corporation.",
      "Selon la FTC, ce service promettait d’aider les victimes de sextorsion. Il disait pouvoir localiser le maître chanteur et empêcher la diffusion des images.",
-     "La FTC affirme que les victimes ont payé au moins 60 millions de dollars. Le premier forfait coûtait de 1 499 à 20 000 dollars.",
-     "Toujours selon la FTC, les services promis n’étaient souvent pas rendus. L’entreprise aurait aussi fabriqué de faux avis positifs.",
-     "Autre point grave : le personnel disait aux victimes de ne pas bloquer le maître chanteur. C’est le contraire des conseils du FBI.",
-     "Un tribunal fédéral de l’Ohio a suspendu les activités de l’entreprise, le temps de la procédure. Ce sont des accusations : la justice doit encore trancher."
+     "La FTC affirme que les victimes ont payé au moins 60 millions de dollars. Selon la FTC, l’entreprise faisait payer de 1 499 à 20 000 dollars.",
+     "Toujours selon la FTC, les services promis n’étaient souvent pas rendus. La FTC accuse aussi l’entreprise d’avoir fabriqué de faux avis positifs.",
+     "Autre point grave, selon la FTC : le personnel disait aux victimes de ne pas bloquer le maître chanteur. D’après la FTC, c’est le contraire des conseils du FBI.",
+     "À la demande de la FTC, un tribunal fédéral de l’Ohio a suspendu à titre provisoire les activités de l’entreprise. Ce sont des accusations : l’affaire est en cours, et la justice doit encore trancher."
     ],
     "es": [
      "La FTC es la agencia de Estados Unidos que protege a los consumidores. El 13 de octubre de 2026, anunció una demanda contra Digital Forensics Corporation.",
      "Según la FTC, este servicio prometía ayudar a las víctimas de sextorsión. Decía que podía localizar al chantajista e impedir la difusión de las imágenes.",
-     "La FTC afirma que las víctimas pagaron al menos 60 millones de dólares. El primer paquete costaba entre 1499 y 20 000 dólares.",
-     "Siempre según la FTC, muchas veces no se prestaban los servicios prometidos. La empresa también habría fabricado reseñas positivas falsas.",
-     "Otro punto grave: el personal decía a las víctimas que no bloquearan al chantajista. Es lo contrario de lo que aconseja el FBI.",
-     "Un tribunal federal de Ohio suspendió las actividades de la empresa mientras dura el proceso. Son acusaciones: la justicia todavía debe decidir."
+     "La FTC afirma que las víctimas pagaron al menos 60 millones de dólares. Según la FTC, la empresa cobraba entre 1499 y 20 000 dólares.",
+     "Siempre según la FTC, muchas veces no se prestaban los servicios prometidos. La FTC también acusa a la empresa de fabricar reseñas positivas falsas.",
+     "Otro punto grave, según la FTC: el personal decía a las víctimas que no bloquearan al chantajista. De acuerdo con la FTC, es lo contrario de lo que aconseja el FBI.",
+     "A petición de la FTC, un tribunal federal de Ohio suspendió de forma provisional las actividades de la empresa. Son acusaciones: el caso sigue abierto y la justicia todavía debe decidir."
     ],
     "en": [
      "The FTC is the US agency that protects consumers. On 13 October 2026, it announced a lawsuit against Digital Forensics Corporation.",
      "According to the FTC, this service promised to help sextortion victims. It claimed it could track down the blackmailer and stop the images from spreading.",
-     "The FTC says victims paid at least 60 million dollars. The first package cost between 1,499 and 20,000 dollars.",
-     "Also according to the FTC, the promised services were often not delivered. The company also allegedly bought fake positive reviews.",
-     "Another serious point: staff told victims not to block the blackmailer. That is the opposite of the FBI’s advice.",
-     "A federal court in Ohio has temporarily halted the company’s activities while the case goes on. These are allegations: the court has not ruled yet."
+     "The FTC says victims paid at least 60 million dollars. According to the FTC, the company charged between 1,499 and 20,000 dollars.",
+     "Also according to the FTC, the promised services were often not delivered. The FTC also accuses the company of creating fake positive reviews.",
+     "Another serious point, according to the FTC: staff told victims not to block the blackmailer. The FTC says that is the opposite of the FBI’s advice.",
+     "At the FTC’s request, a federal court in Ohio has temporarily halted the company’s activities. These are allegations: the case is ongoing and the court has not ruled yet."
     ]
    },
    "etapes": null
@@ -135,30 +135,30 @@
      "Vous avez plus de 18 ans sur l’image ? StopNCII crée une empreinte numérique de l’image, sur votre téléphone. L’image elle-même ne quitte pas votre appareil. Les plateformes partenaires utilisent cette empreinte pour bloquer les copies.",
      "L’image a été prise avant vos 18 ans ? Le service Take It Down, du NCMEC américain, fonctionne de la même façon. Il est gratuit.",
      "Aux États-Unis, une loi oblige les plateformes à retirer ces images dans les 48 heures après une demande valable. C’est gratuit.",
-     "En France, le 3018 aide gratuitement, tous les jours, en cas de violence en ligne. Vous pouvez porter plainte au commissariat ou à la gendarmerie. France Victimes répond au 116 006.",
+     "En France, en cas d’urgence, appelez le 17. Sinon, 17Cyber (17cyber.gouv.fr) aide gratuitement les victimes de chantage en ligne, 24 h sur 24. Vous pouvez porter plainte au commissariat ou à la gendarmerie. Si une image est visible par tous, signalez-la aussi sur PHAROS (internet-signalement.gouv.fr).",
      "En Espagne, la ligne gratuite 017 d’INCIBE vous conseille. Le « Canal prioritario » de l’AEPD, l’autorité de protection des données, traite les demandes urgentes de retrait.",
-     "Au Ghana, la Cyber Security Authority a une ligne : le 292. Aux États-Unis, vous pouvez signaler au FBI sur tips.fbi.gov. Ailleurs, adressez-vous à la police.",
-     "Si la victime a moins de 18 ans, utilisez seulement ces aides officielles et gratuites. Aux États-Unis, le CyberTipline du NCMEC est fait pour cela."
+     "Au Ghana, la Cyber Security Authority répond au 292, par appel ou par SMS, depuis le Ghana seulement. Au Royaume-Uni, les adultes peuvent contacter la Revenge Porn Helpline (revengepornhelpline.org.uk). Aux États-Unis, la FTC conseille de signaler les faits à la police et au FBI, sur tips.fbi.gov. Ailleurs, adressez-vous à la police.",
+     "Si la victime a moins de 18 ans, utilisez seulement les aides officielles et gratuites. En France, c’est le 3018, tous les jours. En Espagne, le 017 aide aussi les mineurs et leur entourage. Aux États-Unis, le CyberTipline du NCMEC est fait pour cela."
     ],
     "es": [
      "Si publicaron una imagen, denúnciala en la plataforma. Antes, guarda una captura de pantalla.",
      "¿Tenías más de 18 años en la imagen? StopNCII crea una huella digital de la imagen, en tu teléfono. La imagen no sale de tu dispositivo. Las plataformas asociadas usan esa huella para bloquear las copias.",
      "¿La imagen se tomó antes de tus 18 años? El servicio Take It Down, del NCMEC de Estados Unidos, funciona igual. Es gratuito.",
      "En Estados Unidos, una ley obliga a las plataformas a retirar estas imágenes en 48 horas tras una solicitud válida. Es gratis.",
-     "En Francia, el 3018 ayuda gratis, todos los días, ante la violencia en línea. Puedes denunciar en una comisaría o ante la gendarmería. France Victimes atiende en el 116 006.",
+     "En Francia, en caso de emergencia, llama al 17. Si no es urgente, 17Cyber (17cyber.gouv.fr) ayuda gratis a las víctimas de chantaje en línea, las 24 horas. Puedes denunciar en una comisaría o ante la gendarmería. Si una imagen está a la vista de todos, denúnciala también en PHAROS (internet-signalement.gouv.fr).",
      "En España, la línea gratuita 017 de INCIBE te orienta. El «Canal prioritario» de la AEPD, la autoridad de protección de datos, atiende las peticiones urgentes de retirada.",
-     "En Ghana, la Cyber Security Authority tiene una línea: el 292. En Estados Unidos, puedes avisar al FBI en tips.fbi.gov. En otros países, acude a la policía.",
-     "Si la víctima tiene menos de 18 años, usa solo estas ayudas oficiales y gratuitas. En Estados Unidos, el CyberTipline del NCMEC está hecho para eso."
+     "En Ghana, la Cyber Security Authority atiende en el 292, por llamada o SMS, solo desde Ghana. En el Reino Unido, las personas adultas pueden acudir a la Revenge Porn Helpline (revengepornhelpline.org.uk). En Estados Unidos, la FTC aconseja avisar a la policía y al FBI, en tips.fbi.gov. En otros países, acude a la policía.",
+     "Si la víctima tiene menos de 18 años, usa solo las ayudas oficiales y gratuitas. En España, el 017 también atiende a menores y a su entorno. En Francia, es el 3018, todos los días. En Estados Unidos, el CyberTipline del NCMEC está hecho para eso."
     ],
     "en": [
      "If an image has been posted, report it to the platform. Take a screenshot first.",
      "Were you over 18 in the image? StopNCII creates a digital fingerprint of the image, on your phone. The image itself never leaves your device. Partner platforms use that fingerprint to block copies.",
      "Was the image taken before you turned 18? The Take It Down service, from the US NCMEC, works the same way. It is free.",
      "In the United States, a law requires platforms to remove these images within 48 hours of a valid request. It is free.",
-     "In France, the 3018 helpline gives free help every day for online abuse. You can file a complaint with the police or gendarmerie. France Victimes answers on 116 006.",
+     "In France, in an emergency, call 17. Otherwise, 17Cyber (17cyber.gouv.fr) gives free help to victims of online blackmail, 24 hours a day. You can file a complaint with the police or gendarmerie. If an image is public online, also report it on PHAROS (internet-signalement.gouv.fr).",
      "In Spain, INCIBE’s free 017 helpline gives advice. The AEPD, the data protection authority, runs a “Canal prioritario” for urgent removal requests.",
-     "In Ghana, the Cyber Security Authority has a hotline: 292. In the United States, you can report to the FBI at tips.fbi.gov. Elsewhere, contact the police.",
-     "If the victim is under 18, use only these official, free services. In the United States, NCMEC’s CyberTipline is there for this."
+     "In Ghana, the Cyber Security Authority answers on 292, by call or text, from within Ghana only. In the UK, adults can contact the Revenge Porn Helpline (revengepornhelpline.org.uk). In the United States, the FTC advises reporting it to the police and to the FBI at tips.fbi.gov. Elsewhere, contact the police.",
+     "If the victim is under 18, use only official, free services. In France, that is the 3018, every day. In Spain, the 017 also helps minors and the adults around them. In the United States, NCMEC’s CyberTipline is there for this."
     ]
    },
    "etapes": null
@@ -278,8 +278,32 @@
    "titre": "INCIBE : cómo actuar cuando una foto se ha descontrolado (línea 017)"
   },
   {
-   "url": "https://graphiconline.com/news/general-news/call-292-before-sending-money-to-suspected-fraudsters-cyber-security-authority-warns.html",
-   "titre": "Graphic Online : la Cyber Security Authority du Ghana et sa ligne 292 (août 2026)"
+   "url": "https://www.lamoncloa.gob.es/serviciosdeprensa/notasprensa/transformacion-digital-y-funcion-publica/Paginas/2026/140726-telefono-017-ayuda-ciberseguridad.aspx",
+   "titre": "Gobierno de España : el 017, servicio nacional de ayuda en ciberseguridad (14 de julio de 2026)"
+  },
+  {
+   "url": "https://www.info.gouv.fr/actualite/17cyber-gouv-fr-le-guichet-unique-pour-les-victimes-de-cybermalveillance",
+   "titre": "Gouvernement : 17Cyber, le guichet unique et gratuit des victimes de cybermalveillance"
+  },
+  {
+   "url": "https://www.gendarmerie.interieur.gouv.fr/conseils/numerique/les-partenaires-pour-lutter-contre-les-cybermenaces",
+   "titre": "Gendarmerie nationale : les partenaires pour lutter contre les cybermenaces (PHAROS, le 17)"
+  },
+  {
+   "url": "https://www.solidarites.gouv.fr/agressions-cyberharcelement-violences-si-tu-besoin-daide-des-numeros-existent",
+   "titre": "Ministère des Solidarités : le 3018 et les numéros d’aide pour les jeunes"
+  },
+  {
+   "url": "https://csa.gov.gh/report",
+   "titre": "Cyber Security Authority (Ghana) : signaler un incident, par appel ou par SMS au 292"
+  },
+  {
+   "url": "https://www.csa.gov.gh/cert-gh-rfc",
+   "titre": "Cyber Security Authority : profil du CERT-GH (SMS au 292 depuis le Ghana seulement)"
+  },
+  {
+   "url": "https://revengepornhelpline.org.uk/",
+   "titre": "Revenge Porn Helpline : aide aux adultes au Royaume-Uni (en anglais)"
   }
  ],
  "liens_internes": [
