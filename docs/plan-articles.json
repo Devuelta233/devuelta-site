@@ -198,6 +198,20 @@
    "statut": "a-faire"
   },
   {
+   "semaine": null,
+   "id": "ue-interdiction-applis-deshabillage",
+   "situation": "deepfake",
+   "plateformes": [],
+   "titre": {
+    "fr": "Applis de « déshabillage » : l’UE les interdit le 2 décembre",
+    "es": "La UE prohíbe las apps que «desnudan» con IA: qué cambia",
+    "en": "EU bans AI “nudify” apps from 2 December: what it means"
+   },
+   "angle": "Règlement (UE) 2026/1744 (omnibus IA, JO du 24/07/2026) : à partir du 2/12/2026, l’UE interdit les systèmes d’IA qui fabriquent des images intimes de vraies personnes sans leur accord. Ce qui change (outils et entreprises, sanctions), ce qui ne change pas (une image déjà en ligne se retire par la plateforme, les moteurs et la plainte), gestes à faire tout de suite, hors UE (Royaume-Uni, États-Unis).",
+   "note": "actualité : interdiction applicable le 2/12/2026, à publier avant le 15/11/2026",
+   "statut": "a-valider"
+  },
+  {
    "semaine": 15,
    "id": "plateforme-ignore-signalement-recours",
    "situation": "contenu-intime",
