@@ -1,0 +1,306 @@
+{
+ "id": "whatsapp-pirate-code-6-chiffres",
+ "publie_le": "2026-10-16",
+ "verifie_le": "2026-10-16",
+ "situation": "piratage-compte",
+ "plateformes": [
+  "whatsapp"
+ ],
+ "slug": {
+  "fr": "whatsapp-pirate-code-6-chiffres-que-faire",
+  "es": "me-robaron-whatsapp-codigo-6-digitos",
+  "en": "whatsapp-hijacked-6-digit-code"
+ },
+ "titre": {
+  "fr": "WhatsApp piraté avec un code à 6 chiffres : que faire",
+  "es": "Te robaron WhatsApp con un código de 6 dígitos: qué hacer",
+  "en": "WhatsApp hijacked with a 6-digit code: what to do now"
+ },
+ "meta_description": {
+  "fr": "Vous avez donné un code WhatsApp à 6 chiffres et perdu votre compte ? Comment le récupérer, prévenir vos proches et éviter que ça recommence.",
+  "es": "¿Diste un código de WhatsApp de 6 dígitos y perdiste tu cuenta? Cómo recuperarla, avisar a tus contactos y evitar que vuelva a pasar.",
+  "en": "Gave away a 6-digit WhatsApp code and lost your account? How to get it back, warn your contacts and stop it happening again."
+ },
+ "chapo": {
+  "fr": "Quelqu’un vous a demandé un code à 6 chiffres, et vous l’avez donné ? Votre compte WhatsApp a sans doute été pris. Dans la plupart des cas, votre propre numéro permet de le récupérer. Voici quoi faire, dans l’ordre.",
+  "es": "¿Alguien te pidió un código de 6 dígitos y se lo diste? Seguramente te robaron la cuenta de WhatsApp. En la mayoría de los casos, tu propio número te permite recuperarla. Esto es lo que puedes hacer, en orden.",
+  "en": "Did someone ask you for a 6-digit code, and you gave it? Your WhatsApp account has probably been taken. In most cases, your own number lets you get it back. Here is what to do, in order."
+ },
+ "essentiel": {
+  "fr": [
+   "Ouvrez WhatsApp et connectez-vous avec votre numéro, puis entrez le code à 6 chiffres reçu par SMS.",
+   "Prévenez vos proches par un autre moyen : le pirate peut leur demander de l’argent en votre nom.",
+   "Ne donnez plus jamais ce code, même à un ami. Ne payez personne pour récupérer votre compte.",
+   "Activez ensuite la vérification en deux étapes, avec un code PIN et une adresse e-mail."
+  ],
+  "es": [
+   "Abre WhatsApp e inicia sesión con tu número, luego escribe el código de 6 dígitos que te llega por SMS.",
+   "Avisa a tus contactos por otro medio: el estafador puede pedirles dinero en tu nombre.",
+   "No vuelvas a dar ese código, ni siquiera a un amigo. No pagues a nadie para recuperar tu cuenta.",
+   "Después, activa la verificación en dos pasos, con un PIN y un correo electrónico."
+  ],
+  "en": [
+   "Open WhatsApp and sign in with your number, then enter the 6-digit code you get by text.",
+   "Warn your contacts another way: the hacker may ask them for money in your name.",
+   "Never give that code again, even to a friend. Don’t pay anyone to recover your account.",
+   "Then turn on two-step verification, with a PIN and an email address."
+  ]
+ },
+ "sections": [
+  {
+   "titre": {
+    "fr": "Comment le pirate a pris votre compte",
+    "es": "Cómo te robaron la cuenta",
+    "en": "How the hacker took your account"
+   },
+   "paragraphes": {
+    "fr": [
+     "D’abord, ce n’est pas votre faute. Cette arnaque est faite pour tromper, et elle trompe aussi des gens très prudents.",
+     "Le principe est simple. Le pirate installe WhatsApp sur son propre téléphone, avec votre numéro. WhatsApp vous envoie alors un code à 6 chiffres par SMS. Ce code sert à prouver que le numéro est bien à vous.",
+     "Le pirate vous pousse à lui donner ce code. Dès qu’il l’a, votre compte passe sur son appareil.",
+     "Souvent, la demande vient d’un proche dont le compte a déjà été volé. Par exemple : « Je t’ai envoyé un code par erreur, tu peux me le renvoyer ? »",
+     "Le 10 octobre 2026, la police postale italienne a signalé une nouvelle vague de ces vols. Le piège : un ami vous demande de voter dans un concours en ligne. Le lien mène à une fausse page. Elle demande votre numéro, puis le code reçu par SMS.",
+     "Les histoires changent, mais la méthode reste la même. Le but est toujours d’obtenir votre code.",
+     "Un signe doit vous alerter : WhatsApp vous déconnecte sans raison. Dans ce cas, essayez tout de suite de réactiver votre compte."
+    ],
+    "es": [
+     "Primero, no es tu culpa. Esta estafa está hecha para engañar, y también engaña a personas muy prudentes.",
+     "La idea es sencilla. El estafador instala WhatsApp en su propio teléfono, con tu número. Entonces WhatsApp te envía un código de 6 dígitos por SMS. Ese código sirve para probar que el número es tuyo.",
+     "El estafador te presiona para que le des ese código. En cuanto lo tiene, tu cuenta pasa a su dispositivo.",
+     "A menudo, el mensaje llega de un contacto al que ya le robaron la cuenta. Por ejemplo: «Te mandé un código por error, ¿me lo reenvías?».",
+     "El 10 de octubre de 2026, la Policía Postal italiana avisó de una nueva ola de estos robos. La trampa: un amigo te pide votar en un concurso en línea. El enlace lleva a una página falsa. Te pide tu número y luego el código recibido por SMS.",
+     "Las historias cambian, pero el método es el mismo. El objetivo siempre es conseguir tu código.",
+     "Una señal debe alertarte: WhatsApp cierra tu sesión sin motivo. En ese caso, intenta reactivar tu cuenta enseguida."
+    ],
+    "en": [
+     "First, this is not your fault. This scam is built to trick people, and it fools very careful people too.",
+     "The idea is simple. The hacker installs WhatsApp on their own phone, using your number. WhatsApp then sends you a 6-digit code by text message. That code proves the number belongs to you.",
+     "The hacker pushes you to give them that code. As soon as they have it, your account moves to their device.",
+     "Often, the request comes from a friend whose account was already stolen. For example: “I sent you a code by mistake, can you send it back?”",
+     "On 10 October 2026, the Italian Postal Police warned of a new wave of these thefts. The trap: a friend asks you to vote in an online contest. The link leads to a fake page. It asks for your number, then for the code you got by text.",
+     "The stories change, but the method stays the same. The goal is always to get your code.",
+     "One sign should alert you: WhatsApp logs you out for no reason. If that happens, try to reactivate your account right away."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Récupérer votre compte, étape par étape",
+    "es": "Recupera tu cuenta, paso a paso",
+    "en": "Get your account back, step by step"
+   },
+   "paragraphes": {
+    "fr": [
+     "Agissez vite, mais calmement. Votre numéro de téléphone reste votre meilleur atout."
+    ],
+    "es": [
+     "Actúa rápido, pero con calma. Tu número de teléfono sigue siendo tu mejor herramienta."
+    ],
+    "en": [
+     "Act fast, but stay calm. Your phone number is still your best tool."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Vérifiez que votre téléphone reçoit bien les SMS sur ce numéro.",
+     "Ouvrez WhatsApp, ou réinstallez-le si besoin. Connectez-vous avec votre numéro de téléphone.",
+     "Entrez le code à 6 chiffres reçu par SMS. La personne qui utilisait votre compte est alors déconnectée.",
+     "Une fois connecté, ouvrez « Appareils connectés » dans les paramètres. Déconnectez tout appareil que vous ne reconnaissez pas.",
+     "Faites des captures d’écran des messages suspects avant de les effacer. Ce sont vos preuves."
+    ],
+    "es": [
+     "Comprueba que tu teléfono recibe bien los SMS de ese número.",
+     "Abre WhatsApp, o vuelve a instalarlo si hace falta. Inicia sesión con tu número de teléfono.",
+     "Escribe el código de 6 dígitos que te llega por SMS. Así se cierra la sesión de quien usaba tu cuenta.",
+     "Ya dentro, abre «Dispositivos vinculados» en los ajustes. Cierra la sesión de cualquier dispositivo que no reconozcas.",
+     "Haz capturas de pantalla de los mensajes sospechosos antes de borrarlos. Son tus pruebas."
+    ],
+    "en": [
+     "Check that your phone can receive text messages on that number.",
+     "Open WhatsApp, or reinstall it if needed. Sign in with your phone number.",
+     "Enter the 6-digit code you get by text. The person using your account is then logged out.",
+     "Once you are back in, open “Linked devices” in the settings. Log out any device you don’t recognise.",
+     "Take screenshots of suspicious messages before you delete them. They are your evidence."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "WhatsApp demande un code PIN que vous ignorez",
+    "es": "WhatsApp te pide un PIN que no conoces",
+    "en": "WhatsApp asks for a PIN you don’t know"
+   },
+   "paragraphes": {
+    "fr": [
+     "Parfois, WhatsApp vous demande un autre code, à 6 chiffres lui aussi. Ce n’est pas le code reçu par SMS. C’est le code PIN de la « vérification en deux étapes ».",
+     "Si vous ne l’avez jamais créé, le pirate l’a sans doute activé. Il veut vous empêcher de revenir.",
+     "Sans ce code PIN, vous devez attendre 7 jours. Ensuite, vous pouvez vous reconnecter sans lui.",
+     "Cette attente est dure, mais elle ne profite pas au pirate. Il est déconnecté dès que vous recevez le code par SMS.",
+     "Vous pouvez aussi demander de l’aide à WhatsApp par son centre d’aide. La réponse peut prendre quelques jours.",
+     "Attention : ne payez personne qui promet de récupérer votre compte. Ces offres sont souvent une deuxième arnaque."
+    ],
+    "es": [
+     "A veces, WhatsApp te pide otro código, también de 6 dígitos. No es el código del SMS. Es el PIN de la «verificación en dos pasos».",
+     "Si nunca lo creaste, seguramente lo activó el estafador. Quiere impedir que vuelvas a entrar.",
+     "Sin ese PIN, tienes que esperar 7 días. Después, puedes volver a entrar sin él.",
+     "La espera es dura, pero no le sirve al estafador. Pierde el acceso en cuanto recibes el código por SMS.",
+     "También puedes pedir ayuda a WhatsApp desde su centro de ayuda. La respuesta puede tardar algunos días.",
+     "Cuidado: no pagues a nadie que prometa recuperar tu cuenta. Esas ofertas suelen ser una segunda estafa."
+    ],
+    "en": [
+     "Sometimes WhatsApp asks for another code, also with 6 digits. It is not the code from the text message. It is the PIN for “two-step verification”.",
+     "If you never set one up, the hacker probably turned it on. They want to stop you from getting back in.",
+     "Without that PIN, you have to wait 7 days. After that, you can sign in without it.",
+     "The wait is hard, but it does not help the hacker. They are logged out as soon as you get the code by text.",
+     "You can also ask WhatsApp for help through its help centre. The answer can take a few days.",
+     "Be careful: don’t pay anyone who promises to recover your account. These offers are often a second scam."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Protéger vos proches et signaler le vol",
+    "es": "Protege a tus contactos y denuncia el robo",
+    "en": "Protect your contacts and report the theft"
+   },
+   "paragraphes": {
+    "fr": [
+     "Le pirate se sert de votre nom. Il écrit à vos contacts pour demander de l’argent, ou leur propre code. Prévenez-les vite.",
+     "En France, vous pouvez porter plainte au commissariat ou à la gendarmerie. Info Escroqueries répond au 0 805 805 817, en semaine. En Espagne, la ligne gratuite 017 d’INCIBE vous conseille. Au Ghana, la Cyber Security Authority a une ligne : le 292. Ailleurs, adressez-vous à la police de votre pays.",
+     "Si la victime est un jeune en France, le 3018 répond tous les jours, gratuitement."
+    ],
+    "es": [
+     "El estafador usa tu nombre. Escribe a tus contactos para pedir dinero o su propio código. Avísales rápido.",
+     "En Francia, puedes denunciar ante la policía o la gendarmería. Info Escroqueries atiende en el 0 805 805 817, entre semana. En España, la línea gratuita 017 de INCIBE te orienta. En Ghana, la Cyber Security Authority tiene una línea: el 292. En otros países, acude a la policía de tu país.",
+     "Si la víctima es una persona joven en Francia, el 3018 atiende todos los días, gratis."
+    ],
+    "en": [
+     "The hacker uses your name. They message your contacts to ask for money, or for their own code. Warn them quickly.",
+     "In France, you can file a complaint with the police or gendarmerie. Info Escroqueries answers on 0 805 805 817 on weekdays. In Spain, INCIBE’s free 017 helpline gives advice. In Ghana, the Cyber Security Authority has a hotline: 292. Elsewhere, contact the police in your country.",
+     "If the victim is a young person in France, the 3018 helpline answers every day, for free."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Appelez vos proches, ou écrivez-leur par SMS, par e-mail ou sur un autre réseau.",
+     "Dites-leur de ne rien envoyer à votre nom, ni argent ni code.",
+     "Si quelqu’un a déjà payé, il doit appeler sa banque tout de suite.",
+     "Gardez vos captures d’écran : elles serviront pour la plainte."
+    ],
+    "es": [
+     "Llama a tus contactos, o escríbeles por SMS, por correo o por otra red.",
+     "Diles que no envíen nada en tu nombre, ni dinero ni códigos.",
+     "Si alguien ya pagó, debe llamar a su banco enseguida.",
+     "Guarda tus capturas de pantalla: servirán para la denuncia."
+    ],
+    "en": [
+     "Call your contacts, or message them by text, email or another app.",
+     "Tell them not to send anything in your name, no money and no codes.",
+     "If someone has already paid, they should call their bank right away.",
+     "Keep your screenshots: you will need them for the report."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Pour que ça ne recommence pas",
+    "es": "Para que no vuelva a pasar",
+    "en": "So it doesn’t happen again"
+   },
+   "paragraphes": {
+    "fr": [
+     "Quelques réglages simples bloquent la plupart de ces vols. Ils prennent deux minutes.",
+     "Apprenez aussi à repérer un message piège. WhatsApp cite plusieurs signes : un lien à ouvrir, une demande d’argent ou d’informations personnelles. Autre signe : quelqu’un se fait passer pour un proche.",
+     "En cas de doute, WhatsApp conseille un appel vocal ou vidéo. Vous pouvez aussi poser une question que seul votre vrai contact connaît.",
+     "Voici les gestes à garder :"
+    ],
+    "es": [
+     "Unos ajustes sencillos frenan la mayoría de estos robos. Te llevan dos minutos.",
+     "Aprende también a reconocer un mensaje trampa. WhatsApp menciona varias señales: un enlace que abrir, una petición de dinero o de datos personales. Otra señal: alguien se hace pasar por un conocido.",
+     "Si tienes dudas, WhatsApp aconseja una llamada de voz o de video. También puedes hacer una pregunta que solo tu contacto real conoce.",
+     "Estos son los gestos que conviene recordar:"
+    ],
+    "en": [
+     "A few simple settings stop most of these thefts. They take two minutes.",
+     "Learn to spot a trap message, too. WhatsApp lists several signs: a link to open, a request for money or personal details. Another sign: someone pretends to be a person you know.",
+     "If in doubt, WhatsApp suggests a voice or video call. You can also ask a question only your real contact would know.",
+     "Here are the habits to keep:"
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Activez la vérification en deux étapes : Paramètres, puis Compte, puis Vérification en deux étapes.",
+     "Ajoutez une adresse e-mail à ce réglage. Elle vous aidera si vous oubliez votre code PIN.",
+     "Ne donnez jamais un code reçu par SMS, à personne. Un vrai ami n’en a jamais besoin.",
+     "Un proche vous demande un code ou de l’argent ? Appelez-le pour vérifier que c’est bien lui.",
+     "Regardez de temps en temps les « Appareils connectés » dans les paramètres."
+    ],
+    "es": [
+     "Activa la verificación en dos pasos: Ajustes, luego Cuenta, luego Verificación en dos pasos.",
+     "Añade un correo electrónico a ese ajuste. Te ayudará si olvidas tu PIN.",
+     "Nunca des un código recibido por SMS, a nadie. Un amigo de verdad nunca lo necesita.",
+     "¿Un contacto te pide un código o dinero? Llámale para comprobar que es de verdad esa persona.",
+     "Revisa de vez en cuando los «Dispositivos vinculados» en los ajustes."
+    ],
+    "en": [
+     "Turn on two-step verification: Settings, then Account, then Two-step verification.",
+     "Add an email address to that setting. It will help if you forget your PIN.",
+     "Never give anyone a code you received by text. A real friend never needs it.",
+     "A friend asks you for a code or money? Call them to check it is really them.",
+     "Check “Linked devices” in the settings from time to time."
+    ]
+   }
+  }
+ ],
+ "si_rien_ne_marche": {
+  "fr": "Votre compte reste bloqué après 7 jours ? Le pirate utilise encore votre nom ailleurs ? Devuelta peut regarder votre dossier avec vous. Nous relisons ce qui a été fait et préparons les démarches encore possibles, sans promesse de résultat.",
+  "es": "¿Tu cuenta sigue bloqueada después de 7 días? ¿El estafador sigue usando tu nombre en otro sitio? Devuelta puede revisar tu caso contigo. Revisamos lo que se hizo y preparamos los pasos que aún son posibles, sin prometer resultados.",
+  "en": "Is your account still locked after 7 days? Is the hacker still using your name elsewhere? Devuelta can look at your case with you. We review what was done and prepare the steps still open, with no promise of results."
+ },
+ "sources": [
+  {
+   "url": "https://security-guidance.service.justice.gov.uk/protecting-whatsapp-accounts",
+   "titre": "UK Ministry of Justice : protecting WhatsApp accounts (code SMS, attente de 7 jours, appareils connectés)"
+  },
+  {
+   "url": "https://www.kingston.gov.uk/sites/default/files/2025-03/WhatsApp_Account_Compromise.pdf",
+   "titre": "Royal Borough of Kingston : WhatsApp account compromise (étapes de récupération et de prévention)"
+  },
+  {
+   "url": "https://www.incibe.es/ciudadania/avisos/repunte-de-casos-de-intento-de-robo-de-cuentas-de-whatsapp-solicitando-el-codigo",
+   "titre": "INCIBE : robo de cuentas de WhatsApp solicitando el código"
+  },
+  {
+   "url": "https://www.incibe.es/ciudadania/blog/socorro-me-han-secuestrado-whatsapp",
+   "titre": "INCIBE : ¡Socorro, me han secuestrado WhatsApp!"
+  },
+  {
+   "url": "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/fiches-reflexes/piratage-de-compte",
+   "titre": "Cybermalveillance.gouv.fr : piratage de compte, que faire ?"
+  },
+  {
+   "url": "https://faq.whatsapp.com/2286952358121083",
+   "titre": "WhatsApp : messages suspects et arnaques"
+  },
+  {
+   "url": "https://www.libero.it/tecnologia/truffa-whatsapp-allarme-polizia-postale-125078",
+   "titre": "Libero : alerte de la Polizia Postale sur le vol de comptes WhatsApp (10 octobre 2026)"
+  },
+  {
+   "url": "https://graphiconline.com/news/general-news/call-292-before-sending-money-to-suspected-fraudsters-cyber-security-authority-warns.html",
+   "titre": "Graphic Online : la Cyber Security Authority du Ghana et sa ligne 292 (août 2026)"
+  }
+ ],
+ "liens_internes": [
+  {
+   "type": "situation",
+   "id": "piratage-compte"
+  },
+  {
+   "type": "situation",
+   "id": "usurpation"
+  }
+ ]
+}
