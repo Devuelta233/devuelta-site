@@ -70,7 +70,7 @@
      "Primero: no es tu culpa. Esta trampa imita una verificación normal y engaña también a gente muy prudente.",
      "WhatsApp permite vincular hasta cuatro dispositivos a tu cuenta, por ejemplo una computadora. Se llaman «dispositivos vinculados».",
      "Para vincular uno, WhatsApp puede mostrar un código de ocho caracteres. Luego ese código se escribe en WhatsApp, en el teléfono.",
-     "El estafador abusa de esta función. Todo empieza con un mensaje de un contacto, a menudo ya hackeado, con un enlace. Por ejemplo: «¿Eres tú el de esta foto?»",
+     "El estafador abusa de esta función. Todo empieza con un mensaje de un contacto, a menudo ya hackeado, con un enlace. Por ejemplo: «¡Mira, encontré tu foto!»",
      "El enlace abre una página falsa, que a veces imita a Facebook. Te pide tu número y luego muestra un código para escribir en WhatsApp «para confirmar». A la vez, WhatsApp te envía una notificación real para escribir un código: por eso la trampa parece seria.",
      "En realidad, ese código vincula el dispositivo del estafador a tu cuenta. Al escribirlo, le abres la puerta sin saberlo.",
      "Tu teléfono sigue funcionando con normalidad. Pero el estafador puede leer tus mensajes, ver tus fotos y escribir a tus contactos en tu nombre.",
@@ -158,7 +158,7 @@
     "fr": [
      "Prévenez vos proches par un appel, un SMS ou un autre réseau. Dites-leur de ne rien envoyer en votre nom : ni argent, ni code.",
      "Le piège venait d’un proche ? Appelez-le : son compte a sans doute été piraté aussi. Il doit vérifier ses propres appareils connectés.",
-     "Il venait d’un numéro inconnu ? Signalez-le : dans la discussion, touchez le menu ⋮ sur Android, ou le nom du contact sur iPhone, puis « Signaler ».",
+     "Il venait d’un numéro inconnu ? Signalez-le à WhatsApp : dans la discussion, touchez le menu ⋮ sur Android, ou le nom du contact sur iPhone, puis « Signaler ».",
      "Activez la vérification en deux étapes, dans les paramètres, rubrique « Compte ». Avec elle, un code reçu par SMS ne suffit plus pour prendre votre compte.",
      "Repensez à ce que contenaient vos discussions : codes, coordonnées bancaires, photos privées. Changez les mots de passe concernés et prévenez votre banque si besoin.",
      "Si quelqu’un vous menace ensuite avec vos photos ou vos messages, ne payez pas et gardez les preuves."
@@ -166,7 +166,7 @@
     "es": [
      "Avisa a tus contactos con una llamada, un SMS u otra app. Diles que no envíen nada en tu nombre: ni dinero ni códigos.",
      "¿La trampa venía de alguien conocido? Llámalo: seguramente también le hackearon la cuenta. Debe revisar sus propios dispositivos vinculados.",
-     "¿Venía de un número desconocido? Repórtalo: en el chat, toca el menú ⋮ en Android, o el nombre del contacto en iPhone, y luego «Reportar».",
+     "¿Venía de un número desconocido? Repórtalo a WhatsApp: en el chat, toca el menú ⋮ en Android, o el nombre del contacto en iPhone, y luego «Reportar».",
      "Activa la verificación en dos pasos, en Ajustes, apartado «Cuenta». Con ella, un código recibido por SMS ya no basta para quedarse con tu cuenta.",
      "Piensa en lo que había en tus chats: códigos, datos bancarios, fotos privadas. Cambia esas contraseñas y avisa a tu banco si hace falta.",
      "Si alguien te amenaza después con tus fotos o tus mensajes, no pagues y guarda las pruebas."
@@ -174,7 +174,7 @@
     "en": [
      "Warn your contacts by phone, text or another app. Tell them not to send anything in your name: no money, no codes.",
      "Did the trap come from a friend? Call them: their account was probably hijacked too. They should check their own linked devices.",
-     "Did it come from an unknown number? Report it: in the chat, tap the ⋮ menu on Android, or the contact’s name on iPhone, then “Report”.",
+     "Did it come from an unknown number? Report it to WhatsApp: in the chat, tap the ⋮ menu on Android, or the contact’s name on iPhone, then “Report”.",
      "Turn on two-step verification, in Settings, under “Account”. With it, a code sent by SMS is no longer enough to take over your account.",
      "Think about what your chats contained: codes, bank details, private photos. Change those passwords and call your bank if needed.",
      "If someone later threatens you with your photos or messages, don’t pay, and keep the evidence."
@@ -235,7 +235,7 @@
      "Regardez régulièrement vos « Appareils connectés »."
     ],
     "es": [
-     "Nunca escribas en WhatsApp un código que te dé una web o un mensaje. Única excepción: vinculas tú tu computadora, desde WhatsApp Web o la app oficial.",
+     "Nunca escribas en WhatsApp un código que te dé una web o un mensaje. Única excepción: cuando vinculas tu propia computadora desde WhatsApp Web o la app oficial.",
      "¿WhatsApp te muestra el nombre y la ubicación de un dispositivo para vincular? Si no es el tuyo, detente. Si te pide confirmar un dispositivo desconocido, toca «No vincular».",
      "¿Alguien cercano te envía un enlace raro o te pide dinero? Llámalo para comprobar que es de verdad esa persona.",
      "Revisa tus «Dispositivos vinculados» con regularidad."
