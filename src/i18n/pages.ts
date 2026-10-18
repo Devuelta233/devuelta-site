@@ -810,6 +810,7 @@ export const FAUX_SAUVETEURS = {
       ['Une personne valide chaque étape.', 'Chaque courrier est relu par une personne de l’équipe. Rien ne part sans votre accord.'],
       ['Des liens, jamais vos images.', 'Nous travaillons à partir des liens. Nous ne vous demanderons jamais d’envoyer un contenu intime.'],
       ['Moins de 18 ans : l’aide officielle gratuite.', 'Pour une personne mineure, nous orientons vers les services officiels gratuits. Nous ne faisons jamais rien payer.'],
+      ['Nous vous disons où notre rôle s’arrête.', 'Nous ne vous représentons jamais devant un tribunal. Quand il faut un avocat, nous vous le disons et nous vous remettons un dossier complet : chronologie, preuves, démarches faites. Nous ne touchons aucune commission d’un avocat.'],
     ],
     es: [
       ['Un precio visible antes de empezar.', 'Nuestros precios son públicos y dependen del número de enlaces. Empiezan en 40 €, a mitad de precio en África y América Latina. No pagas nada antes de aceptar nuestro presupuesto por escrito. Después, pagas la mitad para empezar, y el resto solo por los enlaces retirados.'],
@@ -820,6 +821,7 @@ export const FAUX_SAUVETEURS = {
       ['Una persona valida cada paso.', 'Una persona del equipo revisa cada escrito. Nada se envía sin tu acuerdo.'],
       ['Enlaces, nunca tus imágenes.', 'Trabajamos a partir de los enlaces. Nunca te pediremos que envíes un contenido íntimo.'],
       ['Menores de 18 años: la ayuda oficial gratuita.', 'Para una persona menor de edad, orientamos hacia los servicios oficiales gratuitos. Nunca cobramos nada.'],
+      ['Te decimos dónde termina nuestro papel.', 'Nunca te representamos ante un tribunal. Cuando hace falta un abogado, te lo decimos y te entregamos un expediente completo: cronología, pruebas, trámites hechos. No cobramos ninguna comisión de un abogado.'],
     ],
     en: [
       ['A price you see before anything starts.', 'Our prices are public and depend on the number of links. They start at €40, half price in Africa and Latin America. You pay nothing before accepting our written quote. Then you pay half to start, and the rest only for the links removed.'],
@@ -830,6 +832,7 @@ export const FAUX_SAUVETEURS = {
       ['A person approves every step.', 'A person on our team reviews every letter. Nothing goes out without your agreement.'],
       ['Links, never your images.', 'We work from links. We will never ask you to send intimate content.'],
       ['Under 18: free official help.', 'For a minor, we point to official free services. We never charge anything.'],
+      ['We tell you where our role ends.', 'We never represent you in court. When a lawyer is needed, we tell you and hand you a complete file: timeline, evidence, steps taken. We take no commission from any lawyer.'],
     ],
   } as Record<'fr' | 'es' | 'en', Array<[string, string]>>,
   reglesDetail: { fr: 'Nos règles en détail :', es: 'Nuestras reglas en detalle:', en: 'Our rules in detail:' } as T3,
