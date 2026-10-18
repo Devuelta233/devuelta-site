@@ -30,6 +30,17 @@ const MOIS: Record<Lang, string[]> = {
   en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 };
 
+/** Date seule, en GMT : « 16 octobre 2026 », « 16 de octubre de 2026 », « 16 October 2026 ». */
+export function dateGmt(iso: string, lang: Lang): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  const j = d.getUTCDate();
+  const m = MOIS[lang][d.getUTCMonth()];
+  const a = d.getUTCFullYear();
+  if (lang === 'es') return `${j} de ${m} de ${a}`;
+  return `${j} ${m} ${a}`;
+}
+
 /** Date et heure en GMT, sans ambiguïté : « 16 octobre 2026 à 13 h 42 (heure GMT) ». */
 export function dateHeureGmt(iso: string, lang: Lang): string {
   const d = new Date(iso);
