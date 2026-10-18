@@ -100,30 +100,81 @@ soir, parfois honteuse. On écrit pour elle, pas pour un juriste.
 
 ## Kit réseaux sociaux (un par article : `docs/reseaux/<id>.md`)
 
-Chaque article a son kit Instagram / TikTok / Facebook. But : aider tout de
-suite, puis amener vers l'article et le diagnostic gratuits du site. Même
-vidéo sur les trois réseaux.
+Chaque article a son kit pour les 6 réseaux (Instagram, TikTok, Facebook,
+YouTube, Threads, Pinterest). But : aider tout de suite, puis amener vers
+l'article et le diagnostic gratuits du site.
 
-Fichier en Markdown, avec trois parties `## FR`, `## ES`, `## EN`. Dans chacune :
+### Le ton : naturellement humain (consigne de Steven, 18/10/2026)
 
-1. **Vidéo de 30 à 45 secondes** (filmée au téléphone : la voix d'un membre de
-   l'équipe sur l'écran du téléphone qui montre la démarche ; visage facultatif).
-   - Accroche (0 à 3 s) : la situation en une phrase, comme la personne la vit
-     (« Instagram refuse de supprimer le faux compte à ton nom ? »).
-   - 3 gestes (8 s chacun) : ceux de « L'essentiel », dits simplement.
-   - Fin (5 s) : « Le guide complet est gratuit, lien en bio. Et si ça bloque,
-     le diagnostic gratuit te dit quoi faire. »
-   - Pour chaque moment : ce qui est dit (voix) et le texte court à l'écran.
-2. **Carrousel de 6 images** : 1 accroche, 4 gestes (15 mots au plus par image),
-   1 « Guide gratuit : lien en bio ».
-3. **Légende** (300 caractères au plus) : 2 phrases, puis « Guide gratuit : lien
-   en bio », puis 3 à 5 mots-clés (#) dans la langue.
-4. **Lien** : l'adresse complète de l'article dans la langue
+On écrit comme on parlerait à un proche qui vient d'appeler, inquiet. Le texte
+doit parler au plus grand nombre : un ado, une mère de famille, un commerçant à
+Kumasi, une grand-mère à Lyon, un étudiant à Bogotá.
+
+- Commencer par ce que la personne vit, avec ses mots (« Ton WhatsApp marche…
+  mais quelqu'un lit tes messages ? »). Jamais par une loi, une institution ou un
+  sigle (FTC, OSA, RGPD, DSA) : la loi vient ensuite, comme une bonne nouvelle,
+  en mots simples.
+- Les mots que les gens tapent et disent : « on m'a piraté », « quelqu'un menace
+  de publier mes photos », « me hackearon », « someone is threatening to leak my
+  photos ». Pas de jargon (GhostPairing, doxxing, OSINT…), même en mot-clé.
+- Une phrase = une idée ; environ 15 mots par écran. Pas de liste de trois
+  adjectifs, pas de majuscules pour crier, pas de série de points
+  d'exclamation, un seul émoji au plus (⚠️ pour l'alerte).
+- Rassurer sans dramatiser : « ce n'est pas ta faute », « tu n'es pas seul·e »,
+  « tu as le droit de la faire retirer ». Pas de peur gratuite.
+- Des exemples du quotidien de tous les publics : Mobile Money (Ghana), Orange
+  Money ou Wave (Afrique francophone), Bizum (Espagne), un virement. Anglais
+  simple, compris au Ghana, au Nigeria, au Royaume-Uni et aux États-Unis.
+  Espagnol neutre, compris en Espagne et en Amérique latine.
+- Tics d'IA interdits : « Voici… », « Découvre… », « N'hésite pas »,
+  « Dans un monde où… », « crucial », « essentiel », « en tant que », tirets
+  longs à répétition, phrases qui commencent toutes de la même façon.
+- Test final : lire à voix haute. Si on ne le dirait pas comme ça à un proche
+  au téléphone, on réécrit.
+
+### Ce que contient le kit
+
+Format maison (celui des vidéos du lancement du 18/10/2026) : vidéo verticale
+de 30 à 40 secondes, **sans voix**, texte à l'écran en grand, fond bleu (FR),
+violet (ES), turquoise (EN). Musique : Bach, Variations Goldberg (enregistrement
+« Open Goldberg Variations », domaine public), une variation par sujet, le même
+passage pour les 3 langues ; un sujet déjà traité reprend sa variation, un
+nouveau sujet prend une variation libre (liste dans le document du projet
+`claude/reseaux-sociaux-devuelta.md`, section 7). Dernière image : la fiche
+« À garder ».
+
+En tête du fichier : la variation de Bach, la langue du Short YouTube (une
+seule langue par sujet), le tableau Pinterest, la date conseillée. Puis trois
+parties `## FR`, `## ES`, `## EN`, chacune avec :
+
+1. **Vidéo** : 6 ou 7 écrans (moment + texte à l'écran). Écran 1 (0 à 3 s) : la
+   situation telle que la personne la vit. Puis les 3 gestes de « L'essentiel ».
+   « Ce n'est pas ta faute » au plus tard sur l'avant-dernier écran. Fin :
+   « Guide gratuit : getdevuelta.com ».
+2. **Fiche « À garder »** (5 lignes au plus) : ce qu'on veut que la personne
+   enregistre ou envoie à un proche.
+3. **Légende** (300 caractères au plus, hors mots-clés) : 1re ligne = la phrase
+   que les gens tapent ; 2 phrases simples ; « Guide gratuit : getdevuelta.com »
+   en toutes lettres (jamais « lien en bio ») ; la phrase d'aide « Si quelqu'un
+   autour de toi vit ça, envoie-lui cette vidéo. » (ES : « Si alguien a tu
+   alrededor está pasando por esto, envíaselo. » ; EN : « If someone you know is
+   going through this, send them this. ») ; puis 3 ou 4 mots-clés (#) simples,
+   ceux que les gens cherchent vraiment.
+4. **Premier commentaire** : le texte anti-arnaque maison, identique partout
+   (« ⚠️ Méfie-toi des faux « hackers » en commentaire : ce sont des arnaques.
+   Devuelta ne t'écrira jamais en premier et ne te demandera jamais de photos
+   privées ni de paiement en crypto. Notre seul site : getdevuelta.com »).
+5. **Threads** : 3 ou 4 phrases + la fiche en image + un seul mot-clé.
+6. **Pinterest** : titre (100 caractères au plus) et description, avec le lien
+   de l'article.
+7. **YouTube** (une seule langue) : le titre = la question que les gens tapent.
+8. **Lien** : l'adresse complète de l'article dans la langue
    (https://getdevuelta.com/articles/..., /es/articulos/..., /en/articles/...).
 
 Règles : « tu » en français et en espagnol, « you » en anglais ; mêmes lignes
 rouges que l'article (aucune garantie, aucun chiffre inventé, mineurs vers les
-canaux officiels gratuits) ; jamais de vraie victime ni d'image intime ; pas de
-peur gratuite ; pas de prix ni d'offre payante dans la vidéo : on donne d'abord
-l'aide gratuite.
-
+canaux officiels gratuits) ; jamais de vraie victime, jamais de corps, même
+flouté ; « photos privées », jamais « intimes », « nude » ni « sextorsion » à
+l'écran et dans les légendes ; pas de prix ni d'offre payante dans la vidéo :
+on donne d'abord l'aide gratuite ; ne jamais inviter les gens à raconter leur
+histoire en commentaire (les faux « hackers » y cherchent leurs cibles).
