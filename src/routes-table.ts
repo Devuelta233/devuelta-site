@@ -37,7 +37,7 @@ export function toutesLesRoutes(): EntreeRoute[] {
         chemin: page(f, lang),
         props: { type: f, lang },
         groupe: `page:${f}`,
-        priorite: ['diagnostic', 'que-faire', 'urgence', 'guides'].includes(f) ? 0.9 : 0.5,
+        priorite: ['diagnostic', 'que-faire', 'urgence', 'guides', 'aide-gratuite'].includes(f) ? 0.9 : 0.5,
         maj: f === 'urgence' ? jour(URGENCES_VERIFIE_LE) : TEXTES_MAJ,
       });
     }

@@ -17,7 +17,9 @@ export type PageFixe =
   | 'conditions'
   | 'retractation'
   | 'controle'
-  | 'faq';
+  | 'faq'
+  | 'faux-sauveteurs'
+  | 'aide-gratuite';
 
 export const BASE: Record<Lang, string> = { fr: '/', es: '/es/', en: '/en/' };
 
@@ -34,6 +36,8 @@ export const SLUGS: Record<PageFixe, T3> = {
   conditions: { fr: 'conditions-de-vente', es: 'condiciones-de-venta', en: 'terms-of-sale' },
   retractation: { fr: 'renoncer-au-contrat', es: 'desistir-del-contrato', en: 'withdraw-from-contract' },
   controle: { fr: 'controle', es: 'chequeo', en: 'check-up' },
+  'faux-sauveteurs': { fr: 'faux-sauveteurs', es: 'falsos-rescatadores', en: 'fake-rescuers' },
+  'aide-gratuite': { fr: 'aide-gratuite', es: 'ayuda-gratuita', en: 'free-help' },
   mentions: { fr: 'mentions-legales', es: 'aviso-legal', en: 'legal-notice' },
   faq: { fr: 'questions-frequentes', es: 'preguntas-frecuentes', en: 'faq' },
 };

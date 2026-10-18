@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Contacts from '../components/Contacts.astro';
 import { C } from '../i18n/commun';
-import { CONTACT } from '../i18n/pages';
+import { AIDE_GRATUITE, CONTACT } from '../i18n/pages';
 import { page, versionsPage } from '../i18n/routes';
 import { EMAIL } from '../config';
 import { SITE_URL } from '../config';
@@ -48,5 +48,6 @@ const jsonld = [
       </ul>
     </section>
     <p>{CONTACT.avant[lang]} <a href={page('diagnostic', lang)}>{C.ctaDiagnostic[lang]} →</a> · <a href={page('faq', lang)}>{C.nav.faq[lang]} →</a></p>
+    <p>{AIDE_GRATUITE.renvoi[lang]} <a href={page('aide-gratuite', lang)}>{AIDE_GRATUITE.h1[lang]} →</a></p>
   </article>
 </Base>
