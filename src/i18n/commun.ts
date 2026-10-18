@@ -44,7 +44,7 @@ export const C = {
       "Rien n'est envoyé sans votre accord",
       'Nous travaillons à partir des liens, pas de vos images',
       'Un humain valide chaque étape',
-      'On vous dit où notre rôle s’arrête, et on vous remet un dossier prêt pour l’avocat',
+      'Nous vous disons où notre rôle s’arrête, avec un dossier prêt pour l’avocat',
     ],
     es: [
       'Sin rastreadores, sin cookies',
