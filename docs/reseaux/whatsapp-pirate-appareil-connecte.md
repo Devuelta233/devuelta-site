@@ -1,51 +1,67 @@
 # Kit réseaux sociaux : WhatsApp piraté sans code, le piège de l’appareil connecté
 
-Article `whatsapp-pirate-appareil-connecte`. Même vidéo sur Instagram, TikTok et Facebook.
-À l’écran : un téléphone de démonstration avec un compte WhatsApp de test (aucun vrai contact, aucun vrai nom, aucun vrai numéro) et du texte. Jamais de corps, jamais de vraie victime, aucun témoignage.
-Sécurité du tournage : ne jamais montrer un vrai code de connexion, un vrai code QR ni un vrai lien piégé. Le message d’accroche est un faux message de démonstration, sans lien cliquable.
-Vocabulaire à l’écran, dans la voix et dans les légendes : « photos privées », « fotos privadas », « private photos ».
-Si une personne de moins de 18 ans réagit : uniquement les lignes officielles et gratuites (3018 en France, 017 d’INCIBE en Espagne).
+Article `whatsapp-pirate-appareil-connecte`. Ton : voir « Le ton : naturellement humain » dans `docs/redaction-articles.md`.
 
-Date conseillée : dès la mise en ligne de l’article.
+- **Format maison** : vidéo verticale sans voix, texte à l’écran en grand, fond bleu (FR), violet (ES), turquoise (EN). Dernière image : la fiche « À garder ».
+- **Musique** : Bach, Variations Goldberg, **variation 5** (celle du sujet « WhatsApp, code à 6 chiffres », même famille), mais un autre passage que cette vidéo-là. Même passage pour FR, ES et EN.
+- **À l’écran** : un téléphone de démonstration avec un compte WhatsApp de test (aucun vrai contact, nom ou numéro). Jamais un vrai code, un vrai QR ou un vrai lien piégé.
+- **Instagram, TikTok, Facebook** : la vidéo + la légende + le premier commentaire. **YouTube** : un seul Short, en **anglais**. **Threads** : le texte + la fiche en image. **Pinterest** : tableau « Compte piraté : que faire » (ES : « Cuenta hackeada: qué hacer » ; EN : « Hacked account: what to do »).
+- Si une personne de moins de 18 ans réagit : uniquement les lignes officielles et gratuites (3018 en France, 017 d’INCIBE en Espagne).
+- Date conseillée : dès la mise en ligne de l’article.
 
 ## FR
 
-### Vidéo (37 secondes)
+### Vidéo (37 secondes, sans voix)
 
-Filmée au téléphone : la voix d’un membre de l’équipe sur l’écran du téléphone, qui montre la démarche. Visage facultatif.
+| Moment | Texte à l’écran |
+|---|---|
+| 0 à 3 s | Ton WhatsApp marche normalement… mais quelqu’un lit tes messages ? |
+| 3 à 9 s | Ou tes proches reçoivent de toi des demandes d’argent que tu n’as jamais écrites ? |
+| 9 à 16 s | Ouvre WhatsApp → ⋮ ou Paramètres → « Appareils connectés » |
+| 16 à 23 s | Un appareil que tu ne connais pas ? Fais une capture, puis « Déconnexion » |
+| 23 à 30 s | Appelle tes proches : « Si je te demande de l’argent par message, ce n’est pas moi. » |
+| 30 à 37 s | Ce n’est pas ta faute : ce piège imite une vraie vérification. Guide gratuit : getdevuelta.com |
 
-| Moment | Voix | Texte à l’écran |
-|---|---|---|
-| 0 à 4 s · Accroche | Ton WhatsApp marche, mais quelqu’un lit tes messages ? Regarde tes appareils connectés. | WhatsApp piraté sans code ? |
-| 4 à 13 s · Geste 1 | Ce n’est pas ta faute : ce piège imite une vérification. Ouvre WhatsApp, puis le menu à trois points ou Paramètres, puis Appareils connectés. | 1. Menu ⋮ ou Paramètres → Appareils connectés |
-| 13 à 22 s · Geste 2 | Fais une capture de la liste. Puis touche chaque appareil que tu ne reconnais pas, et Déconnexion. | 2. Capture, puis Déconnexion |
-| 22 à 31 s · Geste 3 | Préviens tes proches par un appel ou un SMS. Et ne tape jamais dans WhatsApp un code qu’un lien te demande. | 3. Préviens tes proches. Jamais de code demandé par un lien |
-| 31 à 37 s · Fin | Le guide complet est gratuit sur getdevuelta.com. Et si ça bloque, le diagnostic gratuit te dit quoi faire. | Guide gratuit : getdevuelta.com |
+### Fiche « À garder »
 
-### Carrousel (6 images)
-
-1. WhatsApp piraté sans code ? Quelqu’un lit peut-être tes messages depuis un autre appareil.
-2. Ouvre WhatsApp, puis le menu ⋮ ou Paramètres, puis « Appareils connectés ».
-3. Fais une capture, puis déconnecte chaque appareil que tu ne reconnais pas.
-4. Préviens tes proches par un appel : le pirate a pu leur écrire.
-5. Ce n’est pas ta faute. Ne tape jamais un code demandé par un lien.
-6. Guide gratuit : getdevuelta.com
+```text
+Quelqu’un lit mes messages WhatsApp ?
+1. Paramètres → Appareils connectés
+2. Une capture, puis Déconnexion
+3. J’appelle mes proches pour les prévenir
+4. Je ne tape jamais un code parce qu’un lien me le demande
+getdevuelta.com
+```
 
 ### Légende
 
 ```text
-WhatsApp piraté sans code ?
-Quelqu’un lit tes messages alors que ton téléphone marche ? Vérifie tes appareils connectés, ce n’est pas ta faute.
+quelqu’un lit mes messages WhatsApp, que faire ?
+Ton téléphone marche, mais quelqu’un lit tes messages ou demande de l’argent à tes proches (Mobile Money, Wave) ? Regarde tes appareils connectés. Ce n’est pas ta faute.
 Guide gratuit : getdevuelta.com
-#WhatsApp #arnaque #cybersécurité #GhostPairing
 Si quelqu’un autour de toi vit ça, envoie-lui cette vidéo.
+
+#WhatsApp #piratage #arnaque #comptepiraté
 ```
 
 ### Premier commentaire
 
 ```text
-Devuelta ne t’écrira jamais en premier.
+⚠️ Méfie-toi des faux « hackers » en commentaire : ce sont des arnaques. Devuelta ne t’écrira jamais en premier et ne te demandera jamais de photos privées ni de paiement en crypto. Notre seul site : getdevuelta.com
 ```
+
+### Threads
+
+```text
+Ton WhatsApp marche, mais quelqu’un lit tes messages ? Va dans Paramètres → Appareils connectés. Un appareil inconnu : une capture, puis Déconnexion. Et appelle tes proches pour les prévenir. Ce n’est pas ta faute.
+Guide gratuit : getdevuelta.com
+#WhatsApp
+```
+
+### Pinterest
+
+- Titre : WhatsApp piraté sans code : vérifier les appareils connectés
+- Description : Quelqu’un lit tes messages WhatsApp alors que ton téléphone marche ? Les gestes pour reprendre la main, expliqués simplement et gratuitement.
 
 ### Lien
 
@@ -53,42 +69,57 @@ https://getdevuelta.com/articles/whatsapp-pirate-sans-code-appareil-connecte/
 
 ## ES
 
-### Vidéo (37 secondes)
+### Vidéo (37 secondes, sans voix)
 
-Filmée au téléphone : la voix d’un membre de l’équipe sur l’écran du téléphone, qui montre la démarche. Visage facultatif.
+| Moment | Texte à l’écran |
+|---|---|
+| 0 à 3 s | Tu WhatsApp funciona normal… ¿pero alguien lee tus mensajes? |
+| 3 à 9 s | ¿O tus contactos reciben de ti pedidos de dinero que nunca escribiste? |
+| 9 à 16 s | Abre WhatsApp → ⋮ o Ajustes → «Dispositivos vinculados» |
+| 16 à 23 s | ¿Un dispositivo que no conoces? Haz una captura y toca «Cerrar sesión» |
+| 23 à 30 s | Llama a tu familia: «Si te pido dinero por mensaje, no soy yo». |
+| 30 à 37 s | No es tu culpa: esta trampa imita una verificación de verdad. Guía gratis: getdevuelta.com |
 
-| Moment | Voix | Texte à l’écran |
-|---|---|---|
-| 0 à 4 s · Accroche | ¿Tu WhatsApp funciona, pero alguien lee tus mensajes? Revisa tus dispositivos vinculados. | ¿Te hackearon WhatsApp sin código? |
-| 4 à 13 s · Geste 1 | No es tu culpa: esta trampa imita una verificación. Abre WhatsApp, toca el menú de tres puntos o Ajustes y luego Dispositivos vinculados. | 1. Menú ⋮ o Ajustes → Dispositivos vinculados |
-| 13 à 22 s · Geste 2 | Haz una captura de la lista. Luego toca cada dispositivo que no reconozcas y Cerrar sesión. | 2. Captura y Cerrar sesión |
-| 22 à 31 s · Geste 3 | Avisa a tus contactos con una llamada o un SMS. Y nunca escribas en WhatsApp un código que te pida un enlace. | 3. Avisa a tus contactos. Nunca un código pedido por un enlace |
-| 31 à 37 s · Fin | La guía completa es gratuita en getdevuelta.com. Y si algo falla, el diagnóstico gratuito te dice qué hacer. | Guía gratuita: getdevuelta.com |
+### Fiche « À garder »
 
-### Carrousel (6 images)
-
-1. ¿Te hackearon WhatsApp sin código? Alguien puede leer tus mensajes desde otro dispositivo.
-2. Abre WhatsApp, toca el menú ⋮ o Ajustes y luego «Dispositivos vinculados».
-3. Haz una captura y cierra la sesión de cada dispositivo que no reconozcas.
-4. Avisa a tus contactos con una llamada: el estafador pudo escribirles.
-5. No es tu culpa. Nunca escribas un código que te pida un enlace.
-6. Guía gratuita: getdevuelta.com
+```text
+¿Alguien lee mis mensajes de WhatsApp?
+1. Ajustes → Dispositivos vinculados
+2. Una captura y Cerrar sesión
+3. Llamo a mi familia para avisarles
+4. Nunca escribo un código porque un enlace me lo pide
+getdevuelta.com
+```
 
 ### Légende
 
 ```text
-me hackearon el WhatsApp sin código
-¿Alguien lee tus mensajes aunque tu teléfono funciona? Revisa tus dispositivos vinculados, no es tu culpa.
-Guía gratuita: getdevuelta.com
-#WhatsApp #estafa #ciberseguridad #GhostPairing
-Si alguien de tu entorno vive esto, envíale este video.
+alguien lee mis mensajes de WhatsApp, qué hago
+¿Tu teléfono funciona, pero alguien lee tus chats o pide dinero a tus contactos (Bizum, transferencia)? Revisa tus dispositivos vinculados. No es tu culpa.
+Guía gratis: getdevuelta.com
+Si alguien a tu alrededor está pasando por esto, envíaselo.
+
+#WhatsApp #hackeo #estafa #cuentahackeada
 ```
 
 ### Premier commentaire
 
 ```text
-Devuelta nunca te escribirá primero.
+⚠️ Cuidado con los falsos «hackers» en los comentarios: son estafas. Devuelta nunca te escribirá primero ni te pedirá fotos privadas o pagos en cripto. Nuestro único sitio: getdevuelta.com
 ```
+
+### Threads
+
+```text
+¿Tu WhatsApp funciona, pero alguien lee tus mensajes? Ve a Ajustes → Dispositivos vinculados. ¿Uno que no conoces? Captura y Cerrar sesión. Y llama a tu familia para avisarles. No es tu culpa.
+Guía gratis: getdevuelta.com
+#WhatsApp
+```
+
+### Pinterest
+
+- Titre : WhatsApp hackeado sin código: revisa tus dispositivos vinculados
+- Description : ¿Alguien lee tus mensajes de WhatsApp aunque tu teléfono funciona? Los pasos para recuperar el control, explicados fácil y gratis.
 
 ### Lien
 
@@ -96,45 +127,64 @@ https://getdevuelta.com/es/articulos/whatsapp-hackeado-sin-codigo-dispositivo-vi
 
 ## EN
 
-### Vidéo (37 secondes)
+### Vidéo (37 secondes, sans voix)
 
-Filmée au téléphone : la voix d’un membre de l’équipe sur l’écran du téléphone, qui montre la démarche. Visage facultatif.
+| Moment | Texte à l’écran |
+|---|---|
+| 0 à 3 s | Your WhatsApp works fine… but someone is reading your chats? |
+| 3 à 9 s | Or your friends are getting money requests from you that you never sent? |
+| 9 à 16 s | Open WhatsApp → ⋮ or Settings → “Linked devices” |
+| 16 à 23 s | A device you don’t know? Take a screenshot, then “Log out” |
+| 23 à 30 s | Call your family: “If I ask you for money by text, it’s not me.” |
+| 30 à 37 s | It’s not your fault: this trap looks like a real security check. Free guide: getdevuelta.com |
 
-| Moment | Voix | Texte à l’écran |
-|---|---|---|
-| 0 à 4 s · Accroche | Someone is reading your WhatsApp messages, but your phone works fine? Check your linked devices. | Someone reading your WhatsApp? |
-| 4 à 13 s · Geste 1 | It’s not your fault: this trap copies a security check. Open WhatsApp, tap the three-dot menu or Settings, then Linked devices. | 1. ⋮ menu or Settings → Linked devices |
-| 13 à 22 s · Geste 2 | Take a screenshot of the list. Then tap each device you don’t recognise, and Log out. | 2. Screenshot, then Log out |
-| 22 à 31 s · Geste 3 | Warn your contacts by call or text. And never type a code into WhatsApp because a link asked you to. | 3. Warn your contacts. Never a code from a link |
-| 31 à 37 s · Fin | The full guide is free at getdevuelta.com. And if you’re stuck, the free diagnostic tells you what to do. | Free guide: getdevuelta.com |
+### Fiche « À garder »
 
-### Carrousel (6 images)
-
-1. WhatsApp hijacked without a code? Someone may be reading your messages from another device.
-2. Open WhatsApp, tap the ⋮ menu or Settings, then “Linked devices”.
-3. Take a screenshot, then log out of any device you don’t recognise.
-4. Call your contacts: the scammer may have messaged them as you.
-5. It’s not your fault. Never type in a code that a link asks for.
-6. Free guide: getdevuelta.com
+```text
+Someone reading my WhatsApp?
+1. Settings → Linked devices
+2. Screenshot, then Log out
+3. I call my family to warn them
+4. I never type a code because a link asks me to
+getdevuelta.com
+```
 
 ### Légende
 
 ```text
 someone is reading my WhatsApp messages
-Your phone works, but someone reads your chats? Check your linked devices. It’s not your fault.
+Your phone works, but someone reads your chats or asks your contacts for money in your name (MoMo, bank transfer)? Check your linked devices. It’s not your fault.
 Free guide: getdevuelta.com
-#WhatsApp #scamalert #cybersecurity #GhostPairing
-If someone around you is going through this, send them this video.
+If someone you know is going through this, send them this.
+
+#WhatsApp #hacked #scamalert #hackedaccount
 ```
 
 ### Premier commentaire
 
 ```text
-Devuelta will never message you first.
+⚠️ Beware of fake “hackers” in the comments: they’re scams. Devuelta will never message you first or ask for private photos or crypto payments. Our only website: getdevuelta.com
 ```
+
+### Threads
+
+```text
+Your WhatsApp works, but someone is reading your chats? Go to Settings → Linked devices. One you don’t know? Screenshot, then Log out. And call your family to warn them. It’s not your fault.
+Free guide: getdevuelta.com
+#WhatsApp
+```
+
+### Pinterest
+
+- Titre : WhatsApp hacked without a code: check your linked devices
+- Description : Someone reading your WhatsApp while your phone works fine? The steps to take back control, explained simply and for free.
+
+### YouTube (Short en anglais)
+
+- Titre : Someone is reading my WhatsApp messages: what to do
 
 ### Lien
 
 https://getdevuelta.com/en/articles/whatsapp-hijacked-linked-device-trap/
 
-Heures de publication (GMT) : français vers 17 h–19 h ; espagnol vers 19 h–21 h pour l’Espagne, puis 0 h–2 h pour l’Amérique latine ; anglais vers 18 h–20 h pour le Royaume-Uni et l’Afrique de l’Ouest (Ghana, Nigeria), puis 23 h–1 h pour l’Amérique du Nord.
+Heures de publication (GMT, comme le lancement) : FR 18:00 ; EN 19:30 ; ES 00:30 le lendemain.
