@@ -185,32 +185,6 @@
    "statut": "a-faire"
   },
   {
-   "semaine": 14,
-   "id": "deepfake-plateforme-dit-pas-reel",
-   "situation": "deepfake",
-   "plateformes": [],
-   "titre": {
-    "fr": "Deepfake : la plateforme dit que ce n'est pas réel",
-    "es": "Deepfake: la plataforma dice que no es una foto real",
-    "en": "Deepfake: the platform says it isn't a real photo"
-   },
-   "angle": "Catégories « image intime synthétique » (Meta, Google) au lieu du signalement standard ; plainte.",
-   "statut": "a-faire"
-  },
-  {
-   "semaine": 15,
-   "id": "plateforme-ignore-signalement-recours",
-   "situation": "contenu-intime",
-   "plateformes": [],
-   "titre": {
-    "fr": "La plateforme ignore votre signalement : délais et recours",
-    "es": "La plataforma ignora tu denuncia: plazos y recursos",
-    "en": "Platform ignored your TAKE IT DOWN request? Report it"
-   },
-   "angle": "Délais DSA (Europe) ; plainte FTC si pas de retrait en 48 h (États-Unis) ; Ley Olimpia (Mexique).",
-   "statut": "a-faire"
-  },
-  {
    "semaine": null,
    "id": "royaume-uni-image-intime-48-heures",
    "situation": "contenu-intime",
@@ -239,6 +213,32 @@
    "angle": "Piège « GhostPairing » (Gen Digital, décembre 2025 ; INCIBE, juin 2026 ; NCSC, 2026) : un message d’un contact (« j’ai trouvé ta photo »), une fausse page qui demande le numéro et affiche le code de huit caractères de WhatsApp, la victime le tape et relie l’appareil du pirate, qui lit et écrit à sa place sans couper son téléphone. Vérifier « Appareils connectés » et déconnecter l’inconnu, prévenir ses proches par un autre moyen, vérification en deux étapes, signaler, où porter plainte (France, Espagne, Royaume-Uni, États-Unis, Ghana), ne jamais taper un code venu d’un lien. Différent de l’arnaque au code SMS à 6 chiffres (sujet de la semaine 4).",
    "note": "actualité : arnaque signalée par l’INCIBE (juin 2026) et le NCSC (2026)",
    "statut": "a-valider"
+  },
+  {
+   "semaine": 14,
+   "id": "deepfake-plateforme-dit-pas-reel",
+   "situation": "deepfake",
+   "plateformes": [],
+   "titre": {
+    "fr": "Deepfake : la plateforme dit que ce n'est pas réel",
+    "es": "Deepfake: la plataforma dice que no es una foto real",
+    "en": "Deepfake: the platform says it isn't a real photo"
+   },
+   "angle": "Catégories « image intime synthétique » (Meta, Google) au lieu du signalement standard ; plainte.",
+   "statut": "a-faire"
+  },
+  {
+   "semaine": 15,
+   "id": "plateforme-ignore-signalement-recours",
+   "situation": "contenu-intime",
+   "plateformes": [],
+   "titre": {
+    "fr": "La plateforme ignore votre signalement : délais et recours",
+    "es": "La plataforma ignora tu denuncia: plazos y recursos",
+    "en": "Platform ignored your TAKE IT DOWN request? Report it"
+   },
+   "angle": "Délais DSA (Europe) ; plainte FTC si pas de retrait en 48 h (États-Unis) ; Ley Olimpia (Mexique).",
+   "statut": "a-faire"
   }
  ]
 }
