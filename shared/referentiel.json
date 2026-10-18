@@ -415,7 +415,7 @@
    "cout": "gratuit pour la notification ; voie judiciaire et constat d'huissier payants",
    "delai_couperet": "PRESCRIPTION DE 3 MOIS (art. 65), 1 AN si les propos sont racistes ou discriminatoires (art. 65-3). Point de départ : la première mise en ligne, pas la découverte (Cass. crim., 11 juin 2024, n° 23-86.920) ; renommer la page ne relance pas le délai. Avant les poursuites, seules les réquisitions d'enquête du procureur interrompent le délai : une simple plainte ne suffit pas toujours (la règle d'interruption de l'art. 65 al. 2 ne s'applique pas à l'art. 65-3).",
    "action_immediate": "Première question à poser au dossier : quelle est la date de première publication ? Si elle dépasse 3 mois, le terrain de la diffamation est fermé — basculer sur usurpation, RGPD art. 17, droit à l'image ou DSA.",
-   "limites_connues": "Formalisme procédural strict, sanctionné par la nullité. La frontière diffamation / injure / libre critique est jurisprudentielle. Un avis négatif sincère n'est pas diffamatoire.",
+   "limites_connues": "Formalisme procédural strict, sanctionné par la nullité. La frontière diffamation / injure / libre critique est jurisprudentielle. Un avis négatif sincère n'est pas diffamatoire. La voie judiciaire se fait avec un avocat : Devuelta s'arrête à la notification art. 16 du DSA et remet le dossier de passation au client.",
    "module_courrier_associe": "dsa-art16",
    "niveau_urgence": "prioritaire",
    "date_derniere_verification": "2026-10-15",

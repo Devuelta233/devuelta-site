@@ -44,18 +44,21 @@ export const C = {
       "Rien n'est envoyé sans votre accord",
       'Nous travaillons à partir des liens, pas de vos images',
       'Un humain valide chaque étape',
+      'On vous dit où notre rôle s’arrête, et on vous remet un dossier prêt pour l’avocat',
     ],
     es: [
       'Sin rastreadores, sin cookies',
       'No se envía nada sin tu permiso',
       'Trabajamos a partir de los enlaces, no de tus imágenes',
       'Una persona revisa cada paso',
+      'Te decimos dónde termina nuestro papel, y te entregamos un expediente listo para el abogado',
     ],
     en: [
       'No trackers, no cookies',
       'Nothing is sent without your consent',
       'We work from links, not from your images',
       'A human reviews every step',
+      'We tell you where our role ends, and hand you a file ready for a lawyer',
     ],
   } as L3,
   urgence: {

@@ -37,6 +37,7 @@ const { lang } = Astro.props;
     <ol class="echelle">
       {ACCUEIL.echelle[lang].map((m) => <li>{m}</li>)}
     </ol>
+    <p class="petit">{ACCUEIL.echelleFin[lang]}</p>
 
     <h2>{METHODE.reglesTitre[lang]}</h2>
     <ul class="coche">
@@ -48,6 +49,9 @@ const { lang } = Astro.props;
 
     <h2>{METHODE.pasTitre[lang]}</h2>
     <p>{METHODE.pas[lang]}</p>
+
+    <h2>{METHODE.limiteTitre[lang]}</h2>
+    {METHODE.limite[lang].map((p) => <p>{p}</p>)}
 
     <h2>{METHODE.refusTitre[lang]}</h2>
     <ul class="coche refus">

@@ -15,6 +15,7 @@ const { lang } = Astro.props;
   <ol class="echelle">
     {ACCUEIL.echelle[lang].map((m) => <li>{m}</li>)}
   </ol>
+  <p class="petit">{ACCUEIL.echelleFin[lang]}</p>
   <div class="actions">
     <a class="bouton principal" href={page('confier', lang)}>
       {C.ctaConfier[lang]}
