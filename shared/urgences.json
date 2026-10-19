@@ -1706,6 +1706,198 @@
           "source": "https://www.autoritedeprotection.ci/espace-plaintes/"
         }
       ]
+    },
+    {
+      "code": "NG",
+      "nom": {
+        "fr": "Nigeria",
+        "es": "Nigeria",
+        "en": "Nigeria"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "112 – National emergency number",
+          "telephone": "112",
+          "sms_ou_chat": null,
+          "url": "https://ncc.gov.ng/node/3132",
+          "horaires": null,
+          "gratuit": true,
+          "public": "everyone",
+          "description": {
+            "fr": "Si vous êtes en danger immédiat, appelez le 112, gratuitement. Le centre d'appel alerte la police, les pompiers ou une ambulance. Le service est encore en cours de déploiement dans certains États.",
+            "es": "Si estás en peligro inmediato, llama gratis al 112. La central avisa a la policía, a los bomberos o a una ambulancia. El servicio todavía se está extendiendo a algunos estados.",
+            "en": "If you are in immediate danger, call 112 for free. The call centre alerts the police, fire service or an ambulance. The service is still being rolled out in some states."
+          },
+          "verifie": true,
+          "source": "https://ncc.gov.ng/node/3132",
+          "note": "Page de la Nigerian Communications Commission (mise à jour du 25/02/2025, lue le 18/10/2026) : « dedicated three-digit toll free number, 112 », appels routés vers le centre d'urgence de l'État, qui alerte police, pompiers, FRSC, ambulance. Communiqué de la présidence du 09/07/2026 (statehouse.gov.ng/?p=64900) : généralisation à tout le pays en cours de finalisation avec les États. Site de la police (npf.gov.ng) inaccessible depuis nos outils le 18/10/2026 : aucun autre numéro de police publié ici."
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "NPF-NCCC – Nigeria Police Force National Cybercrime Centre (e-reporting portal)",
+          "telephone": null,
+          "sms_ou_chat": "Online report after creating an account (the portal mentions NIN/BVN identity verification) · email info@nccc.npf.gov.ng",
+          "url": "https://nccc.npf.gov.ng/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "everyone in Nigeria",
+          "description": {
+            "fr": "Le portail officiel de la police nigériane pour signaler un délit en ligne. Il traite notamment le harcèlement en ligne et la diffusion d'images intimes sans accord.",
+            "es": "El portal oficial de la policía de Nigeria para denunciar un delito en línea. Atiende, entre otros, el acoso en línea y la difusión de imágenes íntimas sin consentimiento.",
+            "en": "The Nigeria Police's official portal to report an online crime. It handles online harassment, stalking and intimate images shared without consent."
+          },
+          "verifie": true,
+          "source": "https://nccc.npf.gov.ng/contact",
+          "note": "Lu sur nccc.npf.gov.ng le 18/10/2026 : rubrique « Cyberstalking & Harassment – Confidential handling of online harassment, stalking, and revenge pornography cases » ; étapes « Create Account – Register securely with BVN/NIN verification », puis « Submit Report ». E-mail affiché sur la page Contact : info@nccc.npf.gov.ng. Aucun numéro de téléphone publié (champ vide sur le site)."
+        },
+        {
+          "type": "violences-femmes",
+          "nom": "NAPTIP – 627 (trafficking and violence against persons)",
+          "telephone": "627",
+          "sms_ou_chat": "Also USSD *627#, toll-free line 0800 CALL NAPTIP (0800 2255 627874), phone 0703 000 0203 · email info@naptip.gov.ng",
+          "url": "https://naptip.gov.ng/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "victims and witnesses of trafficking or violence against persons (women, men and children)",
+          "description": {
+            "fr": "L'agence fédérale qui reçoit les signalements de traite et de violences contre les personnes, y compris sexuelles. L'appel au 627 est gratuit.",
+            "es": "La agencia federal que recibe denuncias de trata y de violencia contra las personas, también sexual. La llamada al 627 es gratis.",
+            "en": "The federal agency that takes reports of human trafficking and violence against persons, including sexual violence. Calling 627 is free."
+          },
+          "verifie": true,
+          "source": "https://naptip.gov.ng/",
+          "note": "Site officiel lu le 18/10/2026 : « Report Cases of Human Trafficking and Violence Against Persons: CALL 627 or DIAL *627# & 234 703 0000 203 – TOLL FREE » ; pied de page : « TOLL FREE LINES 0800CALLNAPTIP (08002255627874) SHORT CODE: 627 Email: info@naptip.gov.ng Phone: 07030000203 ». La NAPTIP est chargée de la loi VAPP (Violence Against Persons Prohibition)."
+        },
+        {
+          "type": "mineurs",
+          "nom": "Cece Yara Child Helpline – 0800 800 8001",
+          "telephone": "0800 800 8001",
+          "sms_ou_chat": null,
+          "url": "https://ceceyara.org/",
+          "horaires": "24 hours a day",
+          "gratuit": true,
+          "public": "children, and adults worried about a child",
+          "description": {
+            "fr": "Ligne gratuite, jour et nuit, pour signaler un abus sexuel sur un enfant et obtenir de l'aide. Une association la gère, avec des centres à Lagos et Abuja.",
+            "es": "Línea gratuita, día y noche, para denunciar un abuso sexual contra un niño o niña y pedir ayuda. La gestiona una asociación con centros en Lagos y Abuya.",
+            "en": "Free line, day and night, to report sexual abuse of a child and get help. A charity runs it, with centres in Lagos and Abuja."
+          },
+          "verifie": true,
+          "source": "https://ceceyara.org/",
+          "note": "Site de l'association lu le 18/10/2026 : « Child Helpline – 0800 800 8001 (Call is free) », « 24-hour free child helpline ». Ligne membre du réseau Child Helpline International (fiche « Nigeria: Cece Yara Child Helpline »)."
+        }
+      ]
+    },
+    {
+      "code": "SN",
+      "nom": {
+        "fr": "Sénégal",
+        "es": "Senegal",
+        "en": "Senegal"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "17 – Police secours",
+          "telephone": "17",
+          "sms_ou_chat": "Sapeurs-pompiers : 18 · Numéro vert indiqué par le ministère de l'Intérieur : 800 00 20 20",
+          "url": "https://www.policenationale.gouv.sn/contact/",
+          "horaires": "24h/24",
+          "gratuit": null,
+          "public": "tout le monde",
+          "description": {
+            "fr": "Si vous êtes en danger immédiat ou menacé·e, appelez la police au 17.",
+            "es": "Si estás en peligro inmediato o te amenazan, llama a la policía al 17.",
+            "en": "If you are in immediate danger or being threatened, call the police on 17."
+          },
+          "verifie": true,
+          "source": "https://www.policenationale.gouv.sn/contact/",
+          "note": "Police nationale, page Contact (18/10/2026) : « En cas d'urgence appelez le 17 ». Ministère de l'Intérieur (interieur.gouv.sn, accueil) : « Urgences 24h/24 – Police Secours 17 – Sapeurs-Pompiers 18 – Numéro vert 800 00 20 20 ». Gratuité non indiquée sur ces pages."
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "Plateforme de signalement des infractions cybercriminelles (Police nationale)",
+          "telephone": null,
+          "sms_ou_chat": "Signalement en ligne, anonyme ou identifié, avec pièces jointes ; suivi du dossier sur la plateforme (« Vérifier l'état de mon signalement »).",
+          "url": "https://signalementcyber.dgpn.sn/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "tout le monde",
+          "description": {
+            "fr": "La plateforme officielle de la police pour signaler un délit en ligne, même anonymement. Elle couvre le chantage, le harcèlement, l'usurpation d'identité et la diffusion non autorisée de contenus.",
+            "es": "La plataforma oficial de la policía para denunciar un delito en línea, incluso de forma anónima. Cubre el chantaje, el acoso, la suplantación de identidad y la difusión no autorizada de contenidos.",
+            "en": "The police's official platform to report an online crime, even anonymously. It covers blackmail, harassment, impersonation and content shared without permission."
+          },
+          "verifie": true,
+          "source": "https://signalementcyber.dgpn.sn/signalement",
+          "note": "Plateforme de la Direction générale de la Police nationale, « une initiative de la Division spéciale de lutte contre la cybercriminalité », lancée le 12/02/2026. Infractions lues sur le formulaire le 18/10/2026 : chantage ou extorsion numérique, harcèlement en ligne, usurpation d'identité, piratage de compte, diffamation, diffusion non autorisée de contenus, cyberpédopornographie… Aucun téléphone ni e-mail de la division publié sur une source officielle : aucun n'est indiqué."
+        }
+      ]
+    },
+    {
+      "code": "CM",
+      "nom": {
+        "fr": "Cameroun",
+        "es": "Camerún",
+        "en": "Cameroon"
+      },
+      "ressources": [
+        {
+          "type": "urgence",
+          "nom": "117 – Police (ou 17)",
+          "telephone": "117",
+          "sms_ou_chat": "Numéro d'utilité publique de la Sûreté nationale (DGSN) : 1500 · Gendarmerie : 113 ou 1501 · Sapeurs-pompiers : 118",
+          "url": "https://www.dgsn.cm/index.php/contacts/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "tout le monde",
+          "description": {
+            "fr": "Si vous êtes en danger immédiat, appelez la police au 117. Le 1500 de la Sûreté nationale sert aussi à demander de l'aide.",
+            "es": "Si estás en peligro inmediato, llama a la policía al 117. El 1500 de la Seguridad Nacional también sirve para pedir ayuda.",
+            "en": "If you are in immediate danger, call the police on 117. The National Security line 1500 can also help."
+          },
+          "verifie": true,
+          "source": "https://www.dgsn.cm/index.php/contacts/",
+          "note": "DGSN, page Contacts (18/10/2026) : « Équipes Spéciales d'interventions Rapides (ESIR) : 117 ou 17 » ; « Numéro d'utilité publique de la DGSN : 1 500 » (accueil : « Appelez le 1500 pour : Dénoncer les tracasseries policières, Renseigner utile, Solliciter une aide… »). Confirmé par le pied de page de minproff.gov.cm : « Police: 117 ou 1500 – Gendarmerie: 113 ou 1501 – Pompier: 118 ». La page Contacts de la DGSN renvoyait un code HTTP 500 mais affichait bien son contenu. Gratuité non indiquée."
+        },
+        {
+          "type": "police-en-ligne",
+          "nom": "ANTIC / CIRT Cameroun – numéro vert 8202 (cybercriminalité)",
+          "telephone": "8202",
+          "sms_ou_chat": "Aussi +237 222 207 909 · e-mail : alerts@cirt.antic.cm · formulaire « Signaler un incident » sur cirt.cm · accueil à la Direction générale de l'ANTIC (Yaoundé) et dans ses agences régionales",
+          "url": "https://cirt.cm/report-incident/",
+          "horaires": null,
+          "gratuit": true,
+          "public": "tout le monde",
+          "description": {
+            "fr": "L'agence nationale de cybersécurité reçoit les plaintes si vos images ou vidéos sont publiées en ligne. Elle aide aussi à récupérer un compte piraté.",
+            "es": "La agencia nacional de ciberseguridad recibe denuncias si publican tus imágenes o vídeos en internet. También ayuda a recuperar una cuenta hackeada.",
+            "en": "The national cybersecurity agency takes complaints if your images or videos are posted online. It also helps recover hacked accounts."
+          },
+          "verifie": true,
+          "source": "https://cirt.cm/",
+          "note": "FAQ de cirt.cm (18/10/2026) : « Quelqu'un a publié mes images ou mes vidéos sur internet : Portez plainte auprès de l'ANTIC » ; compte piraté : « vous rendre à l'une des agences de l'ANTIC ou à la Direction Générale ». Bandeau « NUMERO VERT 82 02 » sur antic.cm ; « Numéro vert: 8202 », +237 222 207 909 et alerts@cirt.antic.cm sur cirt.cm ; « Cybercriminalité: 8202 » sur minproff.gov.cm. Gratuité : appellation officielle « numéro vert »."
+        },
+        {
+          "type": "mineurs",
+          "nom": "116 – Ligne d'assistance aux enfants (ministère de la Promotion de la Femme et de la Famille)",
+          "telephone": "116",
+          "sms_ou_chat": null,
+          "url": "https://minproff.gov.cm/fr/accueil/",
+          "horaires": null,
+          "gratuit": null,
+          "public": "enfants et adolescents, et adultes inquiets pour un enfant",
+          "description": {
+            "fr": "Pour signaler la maltraitance d'un enfant ou d'un adolescent, appelez le 116, la ligne d'assistance aux enfants du ministère.",
+            "es": "Si un niño, niña o adolescente sufre maltrato, llama al 116, la línea de ayuda a la infancia del ministerio.",
+            "en": "To report abuse of a child or teenager, call 116, the ministry's child helpline."
+          },
+          "verifie": true,
+          "source": "https://minproff.gov.cm/fr/accueil/",
+          "note": "Pied de page de minproff.gov.cm (18/10/2026) : « Numéros utiles : ligne d'assistance aux enfants: 116 ». Communiqué du MINPROFF du 23/07/2026 (« ligne verte 116 », relayé par la presse). Horaires et gratuité non publiés sur une source officielle (fiche Child Helpline International de 2022 : lun-ven 7h30-15h30) : laissés vides."
+        }
+      ]
     }
   ],
   "international": [
