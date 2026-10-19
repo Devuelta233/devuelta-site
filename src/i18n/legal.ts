@@ -303,6 +303,14 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
         ],
       },
       {
+        titre: 'La limite du service',
+        paras: [
+          'Nous faisons tout ce qui peut se faire sans avocat : signalements aux plateformes, demandes aux hébergeurs, aux registrars et aux moteurs de recherche, demandes de protection des données, plaintes auprès d’une autorité de protection des données, courriers formels en votre nom, relances et suivi des délais.',
+          'Dès qu’un avocat ou un tribunal devient nécessaire, notre travail s’arrête. Nous vous remettons alors un dossier de passation : chronologie, preuves, démarches faites, réponses reçues et fiches de recours utiles. Ce dossier est compris dans le prix. Nous ne vous représentons jamais devant un tribunal ni devant une autorité.',
+          'Vous choisissez librement votre avocat, ou de continuer seul·e. Nous ne recommandons aucun avocat en particulier et nous ne recevons aucune commission ni aucun paiement d’un avocat. Si votre avocat souhaite que nous poursuivions les démarches techniques sous sa direction, c’est possible : vous restez notre seul client et le seul payeur.',
+        ],
+      },
+      {
         titre: 'Notre engagement',
         paras: [
           'Nous faisons tout ce qui est raisonnablement possible, uniquement par des moyens légaux. La décision de retirer un contenu appartient à la plateforme, à l’hébergeur, au moteur de recherche ou à l’autorité concernée : personne ne peut promettre un résultat, et nous ne le faisons pas.',
@@ -379,6 +387,14 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
         ],
       },
       {
+        titre: 'El límite del servicio',
+        paras: [
+          'Hacemos todo lo que se puede hacer sin abogado: denuncias a las plataformas, solicitudes a los proveedores de alojamiento, a los registradores de dominio y a los buscadores, solicitudes de protección de datos, reclamaciones ante una autoridad de protección de datos, escritos formales en tu nombre, recordatorios y seguimiento de los plazos.',
+          'En cuanto hace falta un abogado o un tribunal, nuestro trabajo se detiene. Entonces te entregamos un expediente de traspaso: cronología, pruebas, gestiones hechas, respuestas recibidas y fichas de recursos útiles. Este expediente está incluido en el precio. Nunca te representamos ante un tribunal ni ante una autoridad.',
+          'Eliges libremente a tu abogado, o seguir por tu cuenta. No recomendamos a ningún abogado en particular y no recibimos ninguna comisión ni ningún pago de un abogado. Si tu abogado quiere que sigamos con las gestiones técnicas bajo su dirección, es posible: tú sigues siendo nuestro único cliente y quien paga.',
+        ],
+      },
+      {
         titre: 'Nuestro compromiso',
         paras: [
           'Hacemos todo lo razonablemente posible, solo por vías legales. La decisión de retirar un contenido corresponde a la plataforma, al proveedor de alojamiento, al buscador o a la autoridad: nadie puede prometer un resultado, y nosotros no lo hacemos.',
@@ -452,6 +468,14 @@ export const CONDITIONS: { seo: T3; meta: T3; h1: T3; sections: Record<'fr' | 'e
         paras: [
           'Devuelta provides technical and administrative assistance to get online content about you removed or delisted: finding who hosts each link, showing you the official procedures, preparing the requests from standard templates, sending them after your approval, following up and tracking the answers.',
           'Devuelta is not a law firm. We give no opinion on your chances, we do not represent you in court and we do not file police reports for you.',
+        ],
+      },
+      {
+        titre: 'Where the service stops',
+        paras: [
+          'We do everything that can be done without a lawyer: reports to platforms, requests to hosts, domain registrars and search engines, data protection requests, complaints to a data protection authority, formal letters in your name, reminders and tracking deadlines.',
+          'As soon as a lawyer or a court becomes necessary, our work stops. We then hand you a handover file: timeline, evidence, steps taken, answers received and the relevant recourse sheets. This file is included in the price. We never represent you before a court or an authority.',
+          'You are free to choose your lawyer, or to carry on alone. We never recommend one lawyer in particular and we receive no commission or payment from a lawyer. If your lawyer wants us to keep doing the technical steps under their direction, that is possible: you remain our only client and the only one who pays.',
         ],
       },
       {

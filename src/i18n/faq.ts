@@ -166,10 +166,19 @@ export const FAQ: GroupeFaq[] = [
       {
         q: { fr: 'Êtes-vous des avocats ?', es: '¿Son abogados?', en: 'Are you lawyers?' },
         r: {
-          fr: 'Non. Nous faisons les démarches pratiques : trouver qui héberge un contenu, remplir les formulaires officiels, envoyer les demandes que vous avez validées, suivre les délais. Si une action en justice devient utile, nous vous orientons vers un avocat.',
-          es: 'No. Hacemos las gestiones prácticas: averiguar quién aloja un contenido, rellenar los formularios oficiales, enviar las solicitudes que has validado y seguir los plazos. Si hace falta ir a juicio, te orientamos hacia un abogado.',
-          en: 'No. We do the practical work: finding who hosts the content, filling in official forms, sending the requests you have approved and keeping track of deadlines. If going to court becomes useful, we point you to a lawyer.',
+          fr: 'Non. Nous faisons les démarches pratiques : trouver qui héberge un contenu, remplir les formulaires officiels, envoyer les demandes que vous avez validées, suivre les délais. Si une action en justice devient utile, nous nous arrêtons là et nous vous remettons un dossier prêt pour l’avocat de votre choix.',
+          es: 'No. Hacemos las gestiones prácticas: averiguar quién aloja un contenido, rellenar los formularios oficiales, enviar las solicitudes que has validado y seguir los plazos. Si hace falta ir a juicio, nos detenemos ahí y te entregamos un expediente listo para el abogado que tú elijas.',
+          en: 'No. We do the practical work: finding who hosts the content, filling in official forms, sending the requests you have approved and keeping track of deadlines. If going to court becomes useful, we stop there and hand you a file ready for the lawyer of your choice.',
         },
+      },
+      {
+        q: { fr: 'Et s’il faut un avocat ?', es: '¿Y si hace falta un abogado?', en: 'What if I need a lawyer?' },
+        r: {
+          fr: 'Nous faisons tout ce qui peut se faire sans avocat, y compris les plaintes auprès de l’autorité de protection des données. Dès qu’il faut un avocat ou un tribunal, nous nous arrêtons et nous vous remettons un dossier de passation : chronologie, preuves, démarches faites, réponses reçues. Il est compris dans le prix. Vous continuez seul·e ou avec l’avocat de votre choix : nous n’en recommandons aucun et nous ne touchons aucune commission. Si votre avocat le souhaite, nous pouvons continuer les démarches techniques sous sa direction, toujours payées par vous.',
+          es: 'Hacemos todo lo que se puede hacer sin abogado, incluidas las reclamaciones ante la autoridad de protección de datos. En cuanto hace falta un abogado o un tribunal, nos detenemos y te entregamos un expediente de traspaso: cronología, pruebas, gestiones hechas, respuestas recibidas. Está incluido en el precio. Sigues por tu cuenta o con el abogado que tú elijas: no recomendamos a ninguno y no cobramos ninguna comisión. Si tu abogado lo desea, podemos seguir con las gestiones técnicas bajo su dirección, siempre pagadas por ti.',
+          en: 'We do everything that can be done without a lawyer, including complaints to the data protection authority. As soon as a lawyer or a court is needed, we stop and hand you a handover file: timeline, evidence, steps taken, answers received. It is included in the price. You carry on alone or with the lawyer of your choice: we recommend none and we take no commission. If your lawyer wishes, we can keep doing the technical steps under their direction, always paid by you.',
+        },
+        lien: 'methode',
       },
     ],
   },
