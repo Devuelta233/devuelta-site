@@ -68,10 +68,15 @@ export const ACCUEIL = {
     en: 'We always start with the simplest door. If there is no answer in time, we go one step up.',
   } as T3,
   echelle: {
-    fr: ['Le signalement à la plateforme', 'La demande écrite à l’éditeur du site', 'Le registrar du nom de domaine', 'L’hébergeur du site', 'Les moteurs de recherche', 'L’autorité ou la justice'],
-    es: ['La denuncia a la plataforma', 'La solicitud escrita al editor del sitio', 'El registrador del dominio', 'El proveedor de alojamiento', 'Los buscadores', 'La autoridad o la justicia'],
-    en: ['Reporting to the platform', 'A written request to the site owner', 'The domain name registrar', 'The hosting company', 'Search engines', 'The authority or the courts'],
+    fr: ['Le signalement à la plateforme', 'La demande écrite à l’éditeur du site', 'Le registrar du nom de domaine', 'L’hébergeur du site', 'Les moteurs de recherche', 'L’autorité de protection des données', 'La passation : plainte, avocat ou justice'],
+    es: ['La denuncia a la plataforma', 'La solicitud escrita al editor del sitio', 'El registrador del dominio', 'El proveedor de alojamiento', 'Los buscadores', 'La autoridad de protección de datos', 'El traspaso: denuncia, abogado o justicia'],
+    en: ['Reporting to the platform', 'A written request to the site owner', 'The domain name registrar', 'The hosting company', 'Search engines', 'The data protection authority', 'The handover: complaint, lawyer or court'],
   } as L3,
+  echelleFin: {
+    fr: 'Dès qu’il faut un avocat ou un tribunal, nous préparons votre dossier de passation et nous vous le remettons. Nous ne vous représentons pas.',
+    es: 'En cuanto hace falta un abogado o un tribunal, preparamos tu expediente de traspaso y te lo entregamos. No te representamos.',
+    en: 'As soon as a lawyer or a court is needed, we prepare your handover file and give it to you. We do not represent you.',
+  } as T3,
   articlesTitre: {
     fr: 'Le formulaire n’a pas marché ? Nos derniers articles',
     es: '¿El formulario no funcionó? Nuestros últimos artículos',
@@ -159,10 +164,28 @@ export const METHODE = {
   voirTarifs: { fr: 'Voir les tarifs', es: 'Ver los precios', en: 'See pricing' } as T3,
   pasTitre: { fr: 'Ce que nous ne sommes pas', es: 'Lo que no somos', en: 'What we are not' } as T3,
   pas: {
-    fr: 'Nous ne sommes pas un cabinet d’avocats et ne donnons pas de conseil juridique. Notre travail est une assistance technique et administrative : repérer les liens et les hébergeurs, remplir les formulaires officiels, envoyer les demandes que vous avez choisies et approuvées, suivre les délais. Si une action en justice devient utile, nous vous orientons vers un avocat, avec qui vous traitez directement.',
-    es: 'No somos un despacho de abogados y no damos asesoría jurídica. Nuestro trabajo es una asistencia técnica y administrativa: localizar los enlaces y los alojamientos, rellenar los formularios oficiales, enviar las solicitudes que elegiste y aprobaste, vigilar los plazos. Si una acción judicial resulta útil, te orientamos hacia un abogado o abogada, con quien tratas directamente.',
-    en: 'We are not a law firm and we don’t give legal advice. Our work is technical and administrative assistance: finding the links and hosts, filling in the official forms, sending the requests you chose and approved, and tracking deadlines. If legal action becomes useful, we refer you to a lawyer, whom you deal with directly.',
+    fr: 'Nous ne sommes pas un cabinet d’avocats et ne donnons pas de conseil juridique. Notre travail est une assistance technique et administrative : repérer les liens et les hébergeurs, remplir les formulaires officiels, envoyer les demandes que vous avez choisies et approuvées, suivre les délais. Si une action en justice devient utile, nous nous arrêtons là et nous vous remettons un dossier de passation, prêt pour l’avocat de votre choix.',
+    es: 'No somos un despacho de abogados y no damos asesoría jurídica. Nuestro trabajo es una asistencia técnica y administrativa: localizar los enlaces y los alojamientos, rellenar los formularios oficiales, enviar las solicitudes que elegiste y aprobaste, vigilar los plazos. Si una acción judicial resulta útil, nos detenemos ahí y te entregamos un expediente de traspaso, listo para el abogado o la abogada que tú elijas.',
+    en: 'We are not a law firm and we don’t give legal advice. Our work is technical and administrative assistance: finding the links and hosts, filling in the official forms, sending the requests you chose and approved, and tracking deadlines. If legal action becomes useful, we stop there and hand you a handover file, ready for the lawyer of your choice.',
   } as T3,
+  limiteTitre: { fr: 'Jusqu’où nous allons', es: 'Hasta dónde llegamos', en: 'How far we go' } as T3,
+  limite: {
+    fr: [
+      'Nous faisons tout ce qui peut se faire sans avocat. Les signalements aux plateformes. Les demandes aux hébergeurs, aux registrars et aux moteurs de recherche. Les demandes de protection des données, et les plaintes auprès de l’autorité qui les protège, comme la CNIL ou l’AEPD. Les courriers formels en votre nom, les relances, le suivi des délais.',
+      'Dès qu’il faut un avocat ou un tribunal, nous nous arrêtons : plainte avec avocat, procédure d’urgence, procès, mise en demeure d’avocat. Nous vous remettons alors un dossier de passation : la chronologie, les preuves (liens, captures, dates), chaque démarche faite, chaque réponse reçue, et les fiches de recours utiles. Il est compris dans le prix, sans supplément.',
+      'Vous continuez seul·e, ou avec l’avocat de votre choix. Nous ne recommandons aucun avocat en particulier et nous ne recevons jamais de commission. Si votre avocat souhaite que nous poursuivions les démarches techniques sous sa direction, c’est possible : c’est toujours vous qui payez, jamais l’avocat. Nous ne vous représentons jamais devant un tribunal ni devant une autorité : vous restez l’auteur de chaque demande.',
+    ],
+    es: [
+      'Hacemos todo lo que se puede hacer sin abogado. Las denuncias a las plataformas. Las solicitudes a los proveedores de alojamiento, a los registradores de dominio y a los buscadores. Las solicitudes de protección de datos, y las reclamaciones ante la autoridad que los protege, como la AEPD o la CNIL. Los escritos formales en tu nombre, los recordatorios, el seguimiento de los plazos.',
+      'En cuanto hace falta un abogado o un tribunal, nos detenemos: denuncia con abogado, medida urgente, juicio, requerimiento de abogado. Entonces te entregamos un expediente de traspaso: la cronología, las pruebas (enlaces, capturas, fechas), cada gestión hecha, cada respuesta recibida y las fichas de recursos útiles. Está incluido en el precio, sin coste extra.',
+      'Sigues por tu cuenta, o con el abogado o la abogada que tú elijas. No recomendamos a ningún abogado en particular y nunca recibimos comisiones. Si tu abogado quiere que sigamos con las gestiones técnicas bajo su dirección, es posible: siempre pagas tú, nunca el abogado. Nunca te representamos ante un tribunal ni ante una autoridad: tú sigues siendo el autor de cada solicitud.',
+    ],
+    en: [
+      'We do everything that can be done without a lawyer. Reports to platforms. Requests to hosts, domain registrars and search engines. Data protection requests, and complaints to the authority that protects them, such as the CNIL or the AEPD. Formal letters in your name, reminders, and tracking deadlines.',
+      'As soon as a lawyer or a court is needed, we stop: a complaint filed with a lawyer, an urgent court order, a lawsuit, a lawyer’s formal notice. We then hand you a handover file: the timeline, the evidence (links, screenshots, dates), every step taken, every answer received, and the relevant recourse sheets. It is included in the price, at no extra cost.',
+      'You carry on alone, or with the lawyer of your choice. We never recommend one lawyer in particular and we never receive a commission. If your lawyer wants us to keep doing the technical steps under their direction, that is possible: you always pay, never the lawyer. We never represent you before a court or an authority: you remain the author of every request.',
+    ],
+  } as L3,
   refusTitre: { fr: 'Les demandes que nous refusons', es: 'Las solicitudes que rechazamos', en: 'Requests we turn down' } as T3,
   refus: {
     fr: [
@@ -364,18 +387,21 @@ export const TARIFS = {
       'Vous choisissez les démarches ; nous préparons les demandes à partir de modèles types, et vous validez chaque texte avant l’envoi.',
       'Nous envoyons, nous relançons, et en cas de refus nous préparons la contestation prévue (recours du DSA en Europe, hébergeur, nom de domaine).',
       'Vous savez où en est votre dossier ; vos données sont effacées après sa clôture.',
+      'S’il faut un avocat ou un tribunal, nous vous remettons un dossier de passation complet, compris dans le prix. Nous n’agissons pas devant les tribunaux.',
     ],
     es: [
       'Encontramos quién aloja cada enlace y te presentamos las gestiones oficiales posibles.',
       'Tú eliges las gestiones; preparamos las solicitudes a partir de modelos tipo y validas cada texto antes del envío.',
       'Enviamos, insistimos y, si hay un rechazo, preparamos la impugnación prevista (recursos del DSA en Europa, proveedor de alojamiento, nombre de dominio).',
       'Sabes en qué punto está tu caso; tus datos se borran después de cerrarlo.',
+      'Si hace falta un abogado o un tribunal, te entregamos un expediente de traspaso completo, incluido en el precio. No actuamos ante los tribunales.',
     ],
     en: [
       'We find who hosts each link and show you the official options.',
       'You choose the requests; we prepare them from standard templates and you approve each text before it is sent.',
       'We send, we follow up, and if a request is refused we prepare the available challenge (DSA remedies in Europe, the host, the domain name).',
       'You know where your case stands; your data is deleted after it closes.',
+      'If a lawyer or a court is needed, we hand you a complete handover file, included in the price. We do not act before the courts.',
     ],
   } as L3,
   gratuitTitre: { fr: 'Ce qui reste gratuit', es: 'Lo que sigue siendo gratis', en: 'What stays free' } as T3,
@@ -784,6 +810,7 @@ export const FAUX_SAUVETEURS = {
       ['Une personne valide chaque étape.', 'Chaque courrier est relu par une personne de l’équipe. Rien ne part sans votre accord.'],
       ['Des liens, jamais vos images.', 'Nous travaillons à partir des liens. Nous ne vous demanderons jamais d’envoyer un contenu intime.'],
       ['Moins de 18 ans : l’aide officielle gratuite.', 'Pour une personne mineure, nous orientons vers les services officiels gratuits. Nous ne faisons jamais rien payer.'],
+      ['Nous vous disons où notre rôle s’arrête.', 'Nous ne vous représentons jamais devant un tribunal. Quand il faut un avocat, nous vous le disons et nous vous remettons un dossier complet : chronologie, preuves, démarches faites. Nous ne touchons aucune commission d’un avocat.'],
     ],
     es: [
       ['Un precio visible antes de empezar.', 'Nuestros precios son públicos y dependen del número de enlaces. Empiezan en 40 €, a mitad de precio en África y América Latina. No pagas nada antes de aceptar nuestro presupuesto por escrito. Después, pagas la mitad para empezar, y el resto solo por los enlaces retirados.'],
@@ -794,6 +821,7 @@ export const FAUX_SAUVETEURS = {
       ['Una persona valida cada paso.', 'Una persona del equipo revisa cada escrito. Nada se envía sin tu acuerdo.'],
       ['Enlaces, nunca tus imágenes.', 'Trabajamos a partir de los enlaces. Nunca te pediremos que envíes un contenido íntimo.'],
       ['Menores de 18 años: la ayuda oficial gratuita.', 'Para una persona menor de edad, orientamos hacia los servicios oficiales gratuitos. Nunca cobramos nada.'],
+      ['Te decimos dónde termina nuestro papel.', 'Nunca te representamos ante un tribunal. Cuando hace falta un abogado, te lo decimos y te entregamos un expediente completo: cronología, pruebas, trámites hechos. No cobramos ninguna comisión de un abogado.'],
     ],
     en: [
       ['A price you see before anything starts.', 'Our prices are public and depend on the number of links. They start at €40, half price in Africa and Latin America. You pay nothing before accepting our written quote. Then you pay half to start, and the rest only for the links removed.'],
@@ -804,6 +832,7 @@ export const FAUX_SAUVETEURS = {
       ['A person approves every step.', 'A person on our team reviews every letter. Nothing goes out without your agreement.'],
       ['Links, never your images.', 'We work from links. We will never ask you to send intimate content.'],
       ['Under 18: free official help.', 'For a minor, we point to official free services. We never charge anything.'],
+      ['We tell you where our role ends.', 'We never represent you in court. When a lawyer is needed, we tell you and hand you a complete file: timeline, evidence, steps taken. We take no commission from any lawyer.'],
     ],
   } as Record<'fr' | 'es' | 'en', Array<[string, string]>>,
   reglesDetail: { fr: 'Nos règles en détail :', es: 'Nuestras reglas en detalle:', en: 'Our rules in detail:' } as T3,

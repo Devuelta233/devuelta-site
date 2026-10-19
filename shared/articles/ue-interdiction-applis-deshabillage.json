@@ -1,0 +1,343 @@
+{
+ "id": "ue-interdiction-applis-deshabillage",
+ "publie_le": "2026-10-17",
+ "verifie_le": "2026-10-17",
+ "situation": "deepfake",
+ "plateformes": [],
+ "slug": {
+  "fr": "applis-deshabillage-ia-interdites-ue",
+  "es": "apps-desnudar-ia-prohibidas-ue",
+  "en": "eu-ban-ai-nudify-apps"
+ },
+ "titre": {
+  "fr": "Applis de « déshabillage » : l’UE les interdit le 2 décembre",
+  "es": "La UE prohíbe las apps que «desnudan» con IA: qué cambia",
+  "en": "EU bans AI “nudify” apps from 2 December: what it means"
+ },
+ "meta_description": {
+  "fr": "Dès le 2 décembre 2026, l’UE interdit les outils d’IA qui fabriquent de fausses images intimes. Ce qui change, et quoi faire si une image de vous circule.",
+  "es": "Desde el 2 de diciembre de 2026, la UE prohíbe las IA que crean imágenes íntimas falsas. Qué cambia y qué hacer si circula una imagen falsa tuya.",
+  "en": "From 2 December 2026, the EU bans AI tools that make fake intimate images. What changes, and what to do if a fake image of you is online."
+ },
+ "chapo": {
+  "fr": "Dès le 2 décembre 2026, l’Union européenne interdit les outils d’IA qui fabriquent de fausses images intimes de vraies personnes, sans leur accord. Cette règle vise les applis et les entreprises qui les proposent. Elle ne retire pas une image déjà en ligne. Voici ce qui change, et ce que vous pouvez faire dès aujourd’hui.",
+  "es": "Desde el 2 de diciembre de 2026, la UE prohíbe las IA que crean imágenes íntimas falsas de personas reales sin su consentimiento. La norma apunta a las apps y a las empresas que las ofrecen. No borra una imagen que ya está en internet. Esto es lo que cambia, y lo que puedes hacer desde hoy.",
+  "en": "From 2 December 2026, the European Union bans AI tools that create fake intimate images of real people without their consent. The rule targets the apps and the companies behind them. It does not remove an image that is already online. Here is what changes, and what you can do today."
+ },
+ "essentiel": {
+  "fr": [
+   "Ne partagez pas l’image, même pour prévenir un proche : envoyez plutôt le lien.",
+   "Gardez des preuves : les liens exacts, des captures d’écran, les dates et le nom des comptes.",
+   "Signalez l’image à chaque plateforme, puis demandez à Google et à Bing de la retirer de leurs résultats.",
+   "Portez plainte si c’est possible : en France, diffuser ce type d’image sans accord est un délit."
+  ],
+  "es": [
+   "No compartas la imagen, ni siquiera para avisar a alguien: envía mejor el enlace.",
+   "Guarda pruebas: los enlaces exactos, capturas de pantalla, las fechas y el nombre de las cuentas.",
+   "Denuncia la imagen en cada plataforma y pide a Google y a Bing que la quiten de sus resultados.",
+   "Acude a la policía o a una línea oficial de ayuda: te dirán qué ley te protege en tu país."
+  ],
+  "en": [
+   "Don’t share the image, not even to warn someone: send the link instead.",
+   "Keep evidence: the exact links, screenshots, the dates and the account names.",
+   "Report the image on each platform, then ask Google and Bing to remove it from their results.",
+   "Contact the police: in France and in England and Wales, for example, the law now covers fake intimate images."
+  ]
+ },
+ "sections": [
+  {
+   "titre": {
+    "fr": "Ce qui change le 2 décembre 2026",
+    "es": "Qué cambia el 2 de diciembre de 2026",
+    "en": "What changes on 2 December 2026"
+   },
+   "paragraphes": {
+    "fr": [
+     "D’abord, si une fausse image intime de vous circule, ce n’est pas votre faute. La faute revient à la personne qui l’a fabriquée ou diffusée.",
+     "Le 2 décembre 2026, une nouvelle interdiction s’applique dans toute l’Union européenne. Elle vise les systèmes d’intelligence artificielle (IA) qui fabriquent de fausses images intimes.",
+     "Concrètement, une entreprise ne peut plus proposer dans l’UE un outil qui « déshabille » une vraie personne. Ni un outil qui la place dans une scène sexuelle.",
+     "La règle couvre les images, les vidéos et les sons réalistes d’une personne reconnaissable. Elle s’applique dès que cette personne n’a pas donné son accord explicite.",
+     "Sont visées les applis faites pour ça, souvent appelées applis de « déshabillage » ou « nudify ». Sont visés aussi les autres outils d’IA qui produisent facilement ces images, faute de protections suffisantes.",
+     "L’interdiction touche aussi les entreprises installées hors de l’Union, dès qu’elles proposent leur outil dans l’UE.",
+     "Le même jour, une seconde interdiction vise les outils d’IA qui fabriquent des contenus d’abus sexuels sur enfants."
+    ],
+    "es": [
+     "Primero: si circula una imagen íntima falsa de ti, no es tu culpa. La culpa es de quien la creó o la difundió.",
+     "El 2 de diciembre de 2026 empieza a aplicarse una nueva prohibición en toda la Unión Europea. Afecta a los sistemas de inteligencia artificial (IA) que crean imágenes íntimas falsas.",
+     "En concreto, una empresa ya no puede ofrecer en la UE una herramienta que «desnude» a una persona real. Tampoco una herramienta que la muestre en una escena sexual.",
+     "La norma cubre imágenes, videos y audios realistas de una persona reconocible. Se aplica cuando esa persona no dio su consentimiento explícito.",
+     "Alcanza a las apps creadas para eso, a menudo llamadas «nudify» o apps para «desnudar». También a otras herramientas de IA que crean estas imágenes con facilidad, por falta de protecciones suficientes.",
+     "La prohibición afecta además a las empresas instaladas fuera de la UE, si ofrecen su herramienta en la UE.",
+     "Ese mismo día, una segunda prohibición apunta a las IA que crean material de abuso sexual infantil."
+    ],
+    "en": [
+     "First, if a fake intimate image of you is out there, it is not your fault. The blame lies with whoever made or shared it.",
+     "On 2 December 2026, a new ban starts to apply across the European Union. It targets artificial intelligence (AI) systems that create fake intimate images.",
+     "In practice, a company can no longer offer a tool in the EU that “undresses” a real person. The same goes for a tool that puts someone in a sexual scene.",
+     "The rule covers realistic images, videos and audio of a person who can be identified. It applies whenever that person has not given explicit consent.",
+     "It covers apps built for this, often called “nudify” apps. It also covers other AI tools that easily produce these images because they lack proper safeguards.",
+     "The ban also applies to companies based outside the EU, as soon as they offer their tool in the EU.",
+     "On the same day, a second ban targets AI tools that create child sexual abuse material."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Qui contrôle, et ce que la règle ne fait pas",
+    "es": "Quién controla, y lo que la norma no hace",
+    "en": "Who enforces it, and what it doesn’t do"
+   },
+   "paragraphes": {
+    "fr": [
+     "Cette interdiction vient du règlement (UE) 2026/1744, publié au Journal officiel de l’UE le 24 juillet 2026. Il modifie le règlement européen sur l’IA, souvent appelé « AI Act ».",
+     "Dans chaque pays de l’UE, des autorités nationales font respecter cette interdiction. Pour certains grands services, c’est le Bureau de l’IA de la Commission européenne.",
+     "Une entreprise en infraction risque une forte amende. Elle peut atteindre 35 millions d’euros, ou 7 % de son chiffre d’affaires mondial annuel si ce montant est plus élevé.",
+     "Mais cette règle vise les outils et les entreprises. À elle seule, elle ne supprime pas une image déjà publiée.",
+     "Une image déjà en ligne se retire autrement : par la plateforme, les moteurs de recherche et, si besoin, la plainte. Ces démarches sont possibles dès maintenant.",
+     "Depuis le 2 août 2026, les deepfakes faits avec l’IA doivent aussi être étiquetés comme tels. Mais une mention « fait par IA » ne change rien à l’interdiction."
+    ],
+    "es": [
+     "La prohibición viene del Reglamento (UE) 2026/1744. Se publicó en el Diario Oficial de la UE el 24 de julio de 2026. Modifica la Ley de Inteligencia Artificial de la UE, conocida como «AI Act».",
+     "En cada país de la UE, unas autoridades nacionales se encargan de hacer cumplir esta prohibición. Para algunos grandes servicios, lo hace la Oficina de IA de la Comisión Europea.",
+     "Una empresa que no respete estas prohibiciones se expone a multas muy altas. Pueden llegar a 35 millones de euros, o al 7 % de su facturación mundial si esa cifra es mayor.",
+     "Pero esta norma apunta a las herramientas y a las empresas. Por sí sola, no borra una imagen ya publicada.",
+     "Una imagen que ya circula se retira por otras vías: la plataforma, los buscadores y, si hace falta, la policía. Esas vías ya existen y puedes usarlas desde ahora.",
+     "Desde el 2 de agosto de 2026, los deepfakes hechos con IA también deben indicar que son artificiales. Pero una etiqueta «hecho con IA» no cambia en nada la prohibición."
+    ],
+    "en": [
+     "The ban comes from Regulation (EU) 2026/1744, published in the EU’s Official Journal on 24 July 2026. It amends the EU’s law on artificial intelligence, known as the AI Act.",
+     "In each EU country, national authorities are in charge of enforcing this ban. For some large services, the European Commission’s AI Office does this job.",
+     "A company that breaks these bans faces heavy fines. They can reach €35 million, or 7% of its worldwide annual turnover if that is higher.",
+     "But this rule targets tools and companies. On its own, it does not delete an image that is already online.",
+     "An image already online is removed in other ways: through the platform, search engines and, if needed, the police. These routes already exist, and you can use them now.",
+     "Since 2 August 2026, deepfakes made with AI must also be labelled as such. But an “AI-generated” label changes nothing about the ban."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Si une fausse image de vous circule déjà",
+    "es": "Si ya circula una imagen falsa de ti",
+    "en": "If a fake image of you is already online"
+   },
+   "paragraphes": {
+    "fr": [
+     "Ces gestes valent avant comme après le 2 décembre. Ils sont gratuits, et vous pouvez les faire vous-même.",
+     "Dans l’UE, le DSA, la loi européenne sur les services numériques, oblige les plateformes à examiner votre signalement. Elles doivent aussi vous informer de leur décision.",
+     "Les liens « À lire aussi », en bas de cette page, donnent la démarche plateforme par plateforme."
+    ],
+    "es": [
+     "Estos pasos sirven antes y después del 2 de diciembre. Son gratuitos y puedes darlos tú.",
+     "En la UE, la DSA, la ley europea de servicios digitales, obliga a las plataformas a examinar tu aviso. También deben informarte de su decisión.",
+     "Los enlaces de «Para leer también», al final de esta página, explican el proceso plataforma por plataforma."
+    ],
+    "en": [
+     "These steps work before and after 2 December. They are free, and you can take them yourself.",
+     "In the EU, the Digital Services Act (DSA), the EU law on online services, requires platforms to examine your report. They must also tell you their decision.",
+     "The “Read next” links at the bottom of this page give the steps for each platform."
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Ne partagez pas l’image, même pour prévenir vos proches. Envoyez plutôt le lien.",
+     "Gardez des preuves : les liens exacts, des captures d’écran datées, le nom des comptes et les messages reçus.",
+     "Signalez l’image sur chaque plateforme. Choisissez « contenu intime non consenti » ou « image manipulée par IA » quand ce choix existe.",
+     "Demandez à Google de la retirer de ses résultats : il a une démarche pour les faux contenus sexuels. Faites de même pour Bing, via le formulaire de Microsoft.",
+     "Vous êtes majeur·e et avez le fichier ? StopNCII.org peut aider à bloquer sa rediffusion sur les plateformes partenaires."
+    ],
+    "es": [
+     "No compartas la imagen, ni siquiera para avisar a tus cercanos. Envía mejor el enlace.",
+     "Guarda pruebas: los enlaces exactos, capturas de pantalla con fecha, el nombre de las cuentas y los mensajes recibidos.",
+     "Denuncia la imagen en cada plataforma. Elige «contenido íntimo sin consentimiento» o «imagen manipulada con IA» cuando exista esa opción.",
+     "Pide a Google que la quite de sus resultados: tiene un proceso para el contenido sexual falso. Haz lo mismo con Bing, mediante el formulario de Microsoft.",
+     "¿Eres mayor de edad y tienes el archivo? StopNCII.org puede ayudar a frenar su difusión en las plataformas asociadas."
+    ],
+    "en": [
+     "Don’t share the image, not even to warn people close to you. Send the link instead.",
+     "Keep evidence: the exact links, dated screenshots, account names and any messages you received.",
+     "Report the image on each platform. Choose “non-consensual intimate content” or “AI-manipulated image” when that option exists.",
+     "Ask Google to remove it from its results: it has a process for fake sexual content. Do the same for Bing, through Microsoft’s reporting form.",
+     "Are you an adult with the file? StopNCII.org can help stop it being shared again on partner platforms."
+    ]
+   }
+  },
+  {
+   "titre": {
+    "fr": "Porter plainte, en France et ailleurs",
+    "es": "Denunciar, en Europa y en otros países",
+    "en": "Going to the police, in the EU and beyond"
+   },
+   "paragraphes": {
+    "fr": [
+     "L’interdiction européenne vise les outils. Les personnes qui fabriquent ou diffusent ces images relèvent, elles, des lois de chaque pays.",
+     "En France, diffuser sans accord un montage sexuel ou une image sexuelle fabriquée par IA est un délit. Cette règle existe depuis mai 2024 (article 226-8-1 du Code pénal).",
+     "La loi s’applique même si l’image est présentée comme un montage. Les peines vont jusqu’à 3 ans de prison et 75 000 € d’amende quand la diffusion a lieu en ligne.",
+     "Vous pouvez porter plainte au commissariat, à la gendarmerie ou par courrier au procureur de la République. Apportez vos preuves : liens, captures d’écran, dates.",
+     "Hors de l’UE, cette interdiction ne s’applique pas. D’autres lois peuvent vous protéger, par exemple au Royaume-Uni et aux États-Unis.",
+     "En Angleterre et au pays de Galles, la loi a changé en 2026. Depuis février, créer une fausse image intime d’un adulte sans son accord est un délit. Depuis juin, fabriquer ou fournir un outil de « déshabillage » l’est aussi.",
+     "Aux États-Unis, depuis le 19 mai 2026, la loi TAKE IT DOWN oblige les plateformes concernées à agir vite. Elles doivent retirer une image intime, vraie ou fausse, sous 48 heures après une demande valable.",
+     "Si la personne visée a moins de 18 ans, tournez-vous vers l’aide officielle et gratuite. Par exemple : le 3018 en France, le service Take It Down, ou la page « Aide urgente » de ce site. Take It Down aide aussi pour les images fabriquées par IA."
+    ],
+    "es": [
+     "La prohibición europea apunta a las herramientas. Quien crea o difunde estas imágenes responde ante las leyes de cada país.",
+     "En Francia, por ejemplo, difundir sin consentimiento una imagen sexual creada con IA es delito desde mayo de 2024. La ley se aplica aunque la imagen se presente como un montaje.",
+     "En España, puedes presentar una denuncia ante la Policía Nacional, la Guardia Civil o la policía de tu comunidad. La línea gratuita 017 de INCIBE te orienta antes de dar el paso.",
+     "Fuera de la UE, esta prohibición no se aplica. En América Latina, acude a la policía o a la fiscalía de tu país: te dirán qué ley te protege.",
+     "En Estados Unidos, la ley TAKE IT DOWN obliga a las plataformas cubiertas a actuar rápido. Esta obligación rige desde el 19 de mayo de 2026. Deben retirar una imagen íntima, real o falsa, en 48 horas tras una solicitud válida.",
+     "Si la persona afectada es menor de 18 años, busca ayuda oficial y gratuita. Por ejemplo: el 017 de INCIBE en España, Take It Down o la página «Ayuda urgente» de este sitio. Take It Down también ayuda con imágenes creadas con IA."
+    ],
+    "en": [
+     "The EU ban targets the tools. The people who make or share these images answer to each country’s own laws.",
+     "In France, for example, sharing an AI-made sexual image of someone without consent has been a crime since May 2024. The law applies even when the image is presented as fake.",
+     "Outside the EU, this ban does not apply. Other laws may protect you, for example in the UK and the US.",
+     "In England and Wales, the law changed in 2026. Since February, it has been an offence to create a fake intimate image of an adult without consent. Since June, making or supplying a “nudify” tool has been an offence too.",
+     "In the US, the TAKE IT DOWN Act has required covered platforms to act fast since 19 May 2026. They must remove an intimate image, real or fake, within 48 hours of a valid request.",
+     "Elsewhere, for example in Ghana or Nigeria, report the image to the platform and contact the police. The “Helplines by country” link at the top of this page lists official numbers for several countries, including Ghana.",
+     "If the person in the image is under 18, turn to free, official help. For example: the Take It Down service, or the “Urgent help” page on this site. Take It Down also helps with images made by AI."
+    ]
+   },
+   "etapes": null
+  },
+  {
+   "titre": {
+    "fr": "Pour que ça ne recommence pas",
+    "es": "Para que no vuelva a pasar",
+    "en": "So it doesn’t happen again"
+   },
+   "paragraphes": {
+    "fr": [
+     "Ce n’est jamais à vous d’empêcher un abus. Mais quelques habitudes limitent les risques et vous alertent plus vite :"
+    ],
+    "es": [
+     "Nunca te toca a ti impedir un abuso. Aun así, algunos hábitos reducen los riesgos y te avisan antes:"
+    ],
+    "en": [
+     "Preventing abuse is never your job. Still, a few habits can lower the risk and alert you sooner:"
+    ]
+   },
+   "etapes": {
+    "fr": [
+     "Réglez vos comptes en privé, ou limitez qui peut voir vos photos.",
+     "Tapez votre nom de temps en temps dans Google et Bing, pour repérer vite un nouveau lien.",
+     "Méfiez-vous des services qui promettent de « tout effacer » en 24 heures contre paiement.",
+     "Si quelqu’un menace de publier une fausse image de vous, ne payez pas et gardez les messages."
+    ],
+    "es": [
+     "Pon tus cuentas en privado, o limita quién puede ver tus fotos.",
+     "Busca tu nombre de vez en cuando en Google y Bing, para detectar pronto un enlace nuevo.",
+     "Desconfía de los servicios que prometen «borrarlo todo» en 24 horas a cambio de dinero.",
+     "Si alguien amenaza con publicar una imagen falsa tuya, no pagues y guarda los mensajes."
+    ],
+    "en": [
+     "Set your accounts to private, or limit who can see your photos.",
+     "Search your name in Google and Bing from time to time, to spot a new link quickly.",
+     "Be wary of services that promise to “erase everything” in 24 hours for a fee.",
+     "If someone threatens to post a fake image of you, don’t pay and keep the messages."
+    ]
+   }
+  }
+ ],
+ "si_rien_ne_marche": {
+  "fr": "La plateforme refuse, ou l’image revient ailleurs ? Le diagnostic gratuit du site vous indique les démarches qui restent. Devuelta peut aussi reprendre le dossier avec vous, à partir des liens, jamais des images. Une personne valide chaque étape, sans promesse de résultat.",
+  "es": "¿La plataforma se niega, o la imagen vuelve a aparecer en otro sitio? El diagnóstico gratuito del sitio te indica los pasos que quedan. Devuelta también puede retomar el caso contigo, a partir de los enlaces, nunca de las imágenes. Una persona valida cada paso, sin prometer resultados.",
+  "en": "Is the platform refusing, or does the image keep coming back elsewhere? The site’s free diagnostic shows you the steps still open. Devuelta can also take on the case with you, working from links, never from images. A person checks every step, with no promise of results."
+ },
+ "sources": [
+  {
+   "url": "https://eur-lex.europa.eu/eli/reg/2026/1744/oj",
+   "titre": "EUR-Lex : règlement (UE) 2026/1744 « omnibus numérique sur l’IA », JO du 24 juillet 2026 (nouvel article 5, points ba et bb ; application au 2 décembre 2026)"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-5",
+   "titre": "Commission européenne, AI Act Service Desk : article 5, pratiques d’IA interdites"
+  },
+  {
+   "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-99",
+   "titre": "Commission européenne, AI Act Service Desk : article 99, sanctions"
+  },
+  {
+   "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/artificial-intelligence-council-gives-final-green-light-to-simplify-and-streamline-rules/",
+   "titre": "Conseil de l’UE : feu vert final au règlement omnibus sur l’IA (29 juin 2026)"
+  },
+  {
+   "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714",
+   "titre": "Commission européenne : communiqué IP/26/1714 du 31 juillet 2026 (transparence au 2 août, nouvelles interdictions au 2 décembre 2026)"
+  },
+  {
+   "url": "https://eur-lex.europa.eu/eli/reg/2022/2065/oj",
+   "titre": "EUR-Lex : règlement (UE) 2022/2065 sur les services numériques (DSA), article 16"
+  },
+  {
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049567458",
+   "titre": "Légifrance : article 226-8-1 du Code pénal"
+  },
+  {
+   "url": "https://www.justice.gouv.fr/sites/default/files/2024-12/JUSD2434603C.pdf",
+   "titre": "Ministère de la Justice : circulaire du 19 décembre 2024 sur les dispositions pénales de la loi SREN (article 226-8-1)"
+  },
+  {
+   "url": "https://www.assemblee-nationale.fr/dyn/17/questions/QANR5L17QE10117",
+   "titre": "Assemblée nationale : réponse ministérielle du 21 avril 2026 sur les montages pornographiques réalisés par IA"
+  },
+  {
+   "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F1435",
+   "titre": "Service-Public.fr : porter plainte"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2003/42/section/66E",
+   "titre": "legislation.gov.uk : Sexual Offences Act 2003, section 66E (en vigueur depuis le 6 février 2026)"
+  },
+  {
+   "url": "https://www.legislation.gov.uk/ukpga/2003/42/section/66I",
+   "titre": "legislation.gov.uk : Sexual Offences Act 2003, section 66I (en vigueur depuis le 29 juin 2026)"
+  },
+  {
+   "url": "https://consumer.ftc.gov/consumer-alerts/2026/05/what-will-ftcs-enforcement-take-it-down-act-mean-you",
+   "titre": "FTC : l’application du TAKE IT DOWN Act (19 mai 2026)"
+  },
+  {
+   "url": "https://support.google.com/websearch/answer/16305143",
+   "titre": "Google : retirer des contenus sexuels personnels, réels ou faux, de la recherche"
+  },
+  {
+   "url": "https://blogs.microsoft.com/on-the-issues/2026/05/27/strengthening-our-approach-to-tackling-non-consensual-intimate-imagery/",
+   "titre": "Microsoft : signaler des images intimes non consenties, réelles ou générées par IA (27 mai 2026)"
+  },
+  {
+   "url": "https://stopncii.org/faq/",
+   "titre": "StopNCII : questions fréquentes (deepfakes acceptés)"
+  },
+  {
+   "url": "https://www.missingkids.org/blog/2026/back-to-school-checklist-talk-about-ai-nudify-apps",
+   "titre": "NCMEC : applis « nudify » et service Take It Down (11 août 2026)"
+  },
+  {
+   "url": "https://e-enfance.org/besoin-daide/",
+   "titre": "e-Enfance : le 3018, gratuit, anonyme et confidentiel"
+  },
+  {
+   "url": "https://www.incibe.es/menores/ayuda",
+   "titre": "INCIBE : le 017, ligne gratuite et confidentielle (Espagne)"
+  }
+ ],
+ "liens_internes": [
+  {
+   "type": "situation",
+   "id": "deepfake"
+  },
+  {
+   "type": "guide",
+   "id": "fr-deepfake-sexuel-sren"
+  },
+  {
+   "type": "guide",
+   "id": "ue-dsa-notification-art16"
+  },
+  {
+   "type": "guide",
+   "id": "us-takeitdown-act"
+  }
+ ]
+}
