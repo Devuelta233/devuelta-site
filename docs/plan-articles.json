@@ -185,6 +185,36 @@
    "statut": "a-faire"
   },
   {
+   "semaine": null,
+   "id": "royaume-uni-image-intime-48-heures",
+   "situation": "contenu-intime",
+   "plateformes": [],
+   "titre": {
+    "fr": "Royaume-Uni : 48 heures pour retirer une image intime",
+    "es": "Reino Unido: 48 horas para retirar una imagen íntima",
+    "en": "UK: platforms must remove intimate images within 48 hours"
+   },
+   "angle": "Online Safety Act 2023, sections 10(3A)-(3B), 20A, 21(2A) et 27(3A), ajoutées par le Crime and Policing Act 2026 (section 100), en vigueur le 29/06/2026 (SI 2026/689) : retrait d’une image intime signalée par la personne visée (ou quelqu’un qui agit pour elle) au plus tard 48 h après le signalement, copies et moteurs de recherche compris. Comment signaler pour que le délai s’applique, que faire après 48 h (plainte accélérée auprès de la plateforme, Ofcom, police, Revenge Porn Helpline), délits en Angleterre et au pays de Galles (Sexual Offences Act 2003, sections 66B, 66E, 66I). FR et ES : francophones et hispanophones vivant au Royaume-Uni, avec le renvoi vers le DSA dans l’UE.",
+   "note": "actualité : règle britannique en vigueur depuis le 29/06/2026",
+   "statut": "a-valider"
+  },
+  {
+   "semaine": null,
+   "id": "whatsapp-pirate-appareil-connecte",
+   "situation": "piratage-compte",
+   "plateformes": [
+    "whatsapp"
+   ],
+   "titre": {
+    "fr": "WhatsApp piraté sans code : le piège de l’appareil connecté",
+    "es": "Te hackearon WhatsApp sin código: el dispositivo vinculado",
+    "en": "WhatsApp hijacked without a code: the linked device trap"
+   },
+   "angle": "Piège « GhostPairing » (Gen Digital, décembre 2025 ; INCIBE, juin 2026 ; NCSC, 2026) : un message d’un contact (« j’ai trouvé ta photo »), une fausse page qui demande le numéro et affiche le code de huit caractères de WhatsApp, la victime le tape et relie l’appareil du pirate, qui lit et écrit à sa place sans couper son téléphone. Vérifier « Appareils connectés » et déconnecter l’inconnu, prévenir ses proches par un autre moyen, vérification en deux étapes, signaler, où porter plainte (France, Espagne, Royaume-Uni, États-Unis, Ghana), ne jamais taper un code venu d’un lien. Différent de l’arnaque au code SMS à 6 chiffres (sujet de la semaine 4).",
+   "note": "actualité : arnaque signalée par l’INCIBE (juin 2026) et le NCSC (2026)",
+   "statut": "a-valider"
+  },
+  {
    "semaine": 14,
    "id": "deepfake-plateforme-dit-pas-reel",
    "situation": "deepfake",
@@ -198,6 +228,20 @@
    "statut": "a-faire"
   },
   {
+   "semaine": null,
+   "id": "ue-interdiction-applis-deshabillage",
+   "situation": "deepfake",
+   "plateformes": [],
+   "titre": {
+    "fr": "Applis de « déshabillage » : l’UE les interdit le 2 décembre",
+    "es": "La UE prohíbe las apps que «desnudan» con IA: qué cambia",
+    "en": "EU bans AI “nudify” apps from 2 December: what it means"
+   },
+   "angle": "Règlement (UE) 2026/1744 (omnibus IA, JO du 24/07/2026) : à partir du 2/12/2026, l’UE interdit les systèmes d’IA qui fabriquent des images intimes de vraies personnes sans leur accord. Ce qui change (outils et entreprises, sanctions), ce qui ne change pas (une image déjà en ligne se retire par la plateforme, les moteurs et la plainte), gestes à faire tout de suite, hors UE (Royaume-Uni, États-Unis).",
+   "note": "actualité : interdiction applicable le 2/12/2026, à publier avant le 15/11/2026",
+   "statut": "a-valider"
+  },
+  {
    "semaine": 15,
    "id": "plateforme-ignore-signalement-recours",
    "situation": "contenu-intime",
@@ -209,6 +253,20 @@
    },
    "angle": "Délais DSA (Europe) ; plainte FTC si pas de retrait en 48 h (États-Unis) ; Ley Olimpia (Mexique).",
    "statut": "a-faire"
+  },
+  {
+   "semaine": null,
+   "id": "sextorsion-faux-services-aide-payants",
+   "situation": "chantage",
+   "plateformes": [],
+   "titre": {
+    "fr": "Sextorsion : attention aux faux services d’aide payants",
+    "es": "Sextorsión: cuidado con los falsos servicios de ayuda",
+    "en": "Sextortion: beware of fake paid “help” services"
+   },
+   "angle": "Plainte de la FTC contre un service d’« aide » aux victimes de sextorsion ; bons réflexes gratuits, aides officielles, signaux d’un faux service.",
+   "note": "actualité du 13/10/2026",
+   "statut": "a-valider"
   }
  ]
 }

@@ -108,7 +108,7 @@ describe('pages de confiance : contenu', () => {
       expect(FAUX_SAUVETEURS.signaux[l]).toHaveLength(5);
       for (const [, detail] of FAUX_SAUVETEURS.signaux[l]) expect(detail).toMatch(/FTC/);
       expect(FAUX_SAUVETEURS.ftc[l].join(' ')).toMatch(/accusations|acusaciones|allegations/);
-      expect(FAUX_SAUVETEURS.engagements[l]).toHaveLength(8);
+      expect(FAUX_SAUVETEURS.engagements[l]).toHaveLength(9);
     }
     const urls = FAUX_SAUVETEURS.sources.map((s) => s.url);
     expect(urls.some((u) => u.startsWith('https://www.ftc.gov/news-events/news/press-releases/2026/10/'))).toBe(true);
