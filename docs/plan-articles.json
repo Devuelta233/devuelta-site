@@ -239,6 +239,20 @@
    },
    "angle": "Délais DSA (Europe) ; plainte FTC si pas de retrait en 48 h (États-Unis) ; Ley Olimpia (Mexique).",
    "statut": "a-faire"
+  },
+  {
+   "semaine": null,
+   "id": "sextorsion-faux-services-aide-payants",
+   "situation": "chantage",
+   "plateformes": [],
+   "titre": {
+    "fr": "Sextorsion : attention aux faux services d’aide payants",
+    "es": "Sextorsión: cuidado con los falsos servicios de ayuda",
+    "en": "Sextortion: beware of fake paid “help” services"
+   },
+   "angle": "Plainte de la FTC contre un service d’« aide » aux victimes de sextorsion ; bons réflexes gratuits, aides officielles, signaux d’un faux service.",
+   "note": "actualité du 13/10/2026",
+   "statut": "a-valider"
   }
  ]
 }
